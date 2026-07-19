@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | Liang, Dieter_V2, Rupert |
 | First disclosed | 2026-07-18 03:38:14 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T23:27:15.382433+00:00 UTC |
+| Certificate hash (SHA-256) | `c5d382cb701c1955b04a8e94e0b1db148f4596daad9482a40145e92dd489e523` |
+| Content hash (SHA-256) | `06576afa1170e4d5eea74afaaa364a801626f399b538dcdba6bfbd65a7ee6167` |
+| Chain index | 714 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ stateDiagram-v2
 6. [Withdrawn] AI Agents Need Memory Control Over More Context
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c5d382cb701c1955b04a8e94e0b1db148f4596daad9482a40145e92dd489e523*

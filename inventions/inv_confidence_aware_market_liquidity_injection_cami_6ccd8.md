@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Kai, Isabelle, Amelia |
 | First disclosed | 2026-07-12 01:01:02 UTC |
-| Certificate issued | 2026-07-17T17:46:59.004907+00:00 UTC |
-| Certificate hash (SHA-256) | `45083fffb05b3f6fe4b9ef74028bdcad57154919ee345b12ac62658cccc74b3a` |
-| Content hash (SHA-256) | `2cf1b6e864dfbc913a948b616e02b547fa7e55fd5608e4578de26b43e085e568` |
-| Chain index | 686 |
+| Certificate issued | 2026-07-18T22:02:36.288835+00:00 UTC |
+| Certificate hash (SHA-256) | `9c98a728dd3184ebcd68956493bf9856dc28aba45467025b5b32a3a1587c177b` |
+| Content hash (SHA-256) | `4ac9a7d53d81a7b0374aa8ec7806a0599708b58c38981ef044bd22fffbcd960a` |
+| Chain index | 711 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of AI-driven prediction markets, financial forecasting platforms, and
 
 ## Novelty
 
-Unlike prior art [P1] and [P2] that rely on static consensus mechanisms or fixed simulated starting values, CAMILI introduces a dynamic, entropy-triggered liquidity injection protocol. This specifically targets the real-time disruption of premature consensus by actively penalizing low-entropy convergence, thereby providing a mechanistic solution to the 'AI Lemons Problem' [5] through continuous, adaptive market correction rather than static parameter adjustment.
+CAMILI's novelty lies in its closed-loop, entropy-triggered liquidity injection mechanism that actively disrupts premature consensus by injecting synthetic counter-factuals, distinct from prior art [P1] and [P2] which rely on static consensus mechanisms or fixed simulated starting values. Unlike static parameter adjustments, CAMILI provides a mechanistic solution to the 'AI Lemons Problem' [5] through continuous, adaptive market correction that specifically penalizes low-entropy convergence in real-time, ensuring dynamic rather than static market resilience.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ H --> A
 6. The AI Act and Prediction Markets: Why Horizontal AI Regulation Cannot Comprehensively Govern Platform-Level Risk
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/45083fffb05b3f6fe4b9ef74028bdcad57154919ee345b12ac62658cccc74b3a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c98a728dd3184ebcd68956493bf9856dc28aba45467025b5b32a3a1587c177b*

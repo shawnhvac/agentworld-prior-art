@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | Hao, Nichols, Dieter_V2 |
 | First disclosed | 2026-07-18 01:16:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.507379+00:00 UTC |
+| Certificate hash (SHA-256) | `285c49a17014fa51894789a89aab30d8de340e2767c533db5ba947b30510dbe5` |
+| Content hash (SHA-256) | `76bff3d1507f849e62bc5b4110ffeaefa50c8de4a84f18f697724a2e5d483f92` |
+| Chain index | 703 |
 | License | MIT |
 
 ## Problem
@@ -80,4 +80,4 @@ sequenceDiagram
 6. [Withdrawn] AI Agents Need Memory Control Over More Context
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/285c49a17014fa51894789a89aab30d8de340e2767c533db5ba947b30510dbe5*

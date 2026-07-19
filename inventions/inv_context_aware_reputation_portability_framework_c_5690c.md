@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Diane, Maya, Aria |
 | First disclosed | 2026-07-08 07:21:25 UTC |
-| Certificate issued | 2026-07-08T07:25:17.599305+00:00 UTC |
-| Certificate hash (SHA-256) | `0fad89a66f0a669ca5336e385483da099291ccca5e576f625916d83d73ced12c` |
-| Content hash (SHA-256) | `32a7a5f35ba8be9a9a3d50ccca7be297b1daea6881062939aca53c8309703f96` |
-| Chain index | 232 |
+| Certificate issued | 2026-07-18T23:02:03.239315+00:00 UTC |
+| Certificate hash (SHA-256) | `1343216aafafcbf232c1f4602efe6f72d534c7f3d8f5900fe792f0965bf6cd12` |
+| Content hash (SHA-256) | `e06ed59ecba23fbb4fcc1edde8259bedaaa7674f7a11d263b400af8f9df4aa15` |
+| Chain index | 712 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,49 @@ CARPF employs defeasible logic to dynamically adjust reputation scores based on 
 
 ## Materials / steps
 
-Implement a defeasible logic engine (e.g., using Jena or OWL), integrate domain-specific ontologies (e.g., medical, legal, or industrial), and normalize reputation scores using GenIR’s normalization functions. Use a blockchain or distributed ledger to store portable reputation tokens.
+Implement a defeasible logic engine (e.g., using Jena or OWL) with the following pseudocode for rule evaluation:
+
+```
+def evaluate_reputation(agent_id, context_ontology, behavior_log):
+    # 1. Retrieve relevant rules from context_ontology
+    rules = context_ontology.get_rules(behavior_log.domain)
+    
+    # 2. Apply defeasible logic to resolve conflicts
+    score_delta = 0
+    for rule in rules:
+        if rule.antecedent.match(behavior_log):
+            # Defeasible inference: higher priority rules override lower ones
+            if not rule.consequent.defeated_by(rules):
+                score_delta += rule.consequent.weight
+                
+    # 3. Normalize using GenIR framework
+    normalized_score = GenIR.normalize(score_delta, bounds=(-1.0, 1.0))
+    
+    # 4. Mint reputation token on blockchain
+    token = Blockchain.mint_token(
+        agent_id=agent_id,
+        score=normalized_score,
+        context_hash=context_ontology.hash(),
+        timestamp=now()
+    )
+    return token
+```
+
+Integrate domain-specific ontologies (e.g., medical, legal, or industrial) and normalize reputation scores using GenIR’s normalization functions. Use a blockchain or distributed ledger to store portable reputation tokens with the following schema:
+
+```json
+{
+  "ReputationToken": {
+    "token_id": "UUID",
+    "agent_id": "string",
+    "score": "float [-1.0, 1.0]",
+    "context_ontology_hash": "SHA-256",
+    "timestamp": "ISO-8601",
+    "proof_of_behavior": "Merkle-root of behavior log",
+    "issuer_signature": "ECDSA"
+  }
+}
+```
 
 ## Who it's for
 
@@ -64,4 +106,4 @@ F --> G[Portable Reputation Token]
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0fad89a66f0a669ca5336e385483da099291ccca5e576f625916d83d73ced12c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1343216aafafcbf232c1f4602efe6f72d534c7f3d8f5900fe792f0965bf6cd12*

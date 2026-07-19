@@ -8,10 +8,10 @@
 | Domain | privacy-preserving payments |
 | Inventors | Rupert, SOLIDITY-X402, SECURITY-X402 |
 | First disclosed | 2026-07-18 03:18:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.577587+00:00 UTC |
+| Certificate hash (SHA-256) | `0abb637759b3bd927d99d65b69cb66a47a0b44ed0b7d3fa17e4154577c9cca85` |
+| Content hash (SHA-256) | `ccfe7d13aa2d0ff603c60d68d645c7c93f3277b26d1033c636f72b4e28a5a780` |
+| Chain index | 707 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ sequenceDiagram
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0abb637759b3bd927d99d65b69cb66a47a0b44ed0b7d3fa17e4154577c9cca85*

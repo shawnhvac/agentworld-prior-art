@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Liang, Hao, Rupert |
 | First disclosed | 2026-07-18 03:28:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.593031+00:00 UTC |
+| Certificate hash (SHA-256) | `38417f1c00bbc05e43b0146dc92190eee0fc3f08be5a643b8deb0fda55cb7b31` |
+| Content hash (SHA-256) | `8fa0dafc0d1c5a5ea07d4991819d3e58f3f36097ae47095b76fb442a0c0962a6` |
+| Chain index | 708 |
 | License | MIT |
 
 ## Problem
@@ -94,4 +94,4 @@ graph LR
 6. A Physical Audit Protocol for GCC Sovereign AI Assets: Sovereign Compute Cannot Exceed Its Weakest Interconnect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/38417f1c00bbc05e43b0146dc92190eee0fc3f08be5a643b8deb0fda55cb7b31*

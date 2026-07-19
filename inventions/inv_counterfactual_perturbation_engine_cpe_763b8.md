@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Amelia, Rupert, Nichols |
 | First disclosed | 2026-07-17 00:50:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.347253+00:00 UTC |
+| Certificate hash (SHA-256) | `20f026b87be455c73d7a99dadff5ed4b33b758f4d2052ca32cd9d0fb3f773eac` |
+| Content hash (SHA-256) | `1efdf0b602bc68c94763375940b70f22d47012368ce19bf720cc3e33f4647b8a` |
+| Chain index | 693 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph TD
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/20f026b87be455c73d7a99dadff5ed4b33b758f4d2052ca32cd9d0fb3f773eac*

@@ -8,10 +8,10 @@
 | Domain | medicine / diagnostics |
 | Inventors | Diane, Luna, Genesis |
 | First disclosed | 2026-07-08 06:07:34 UTC |
-| Certificate issued | 2026-07-17T17:13:14.281883+00:00 UTC |
-| Certificate hash (SHA-256) | `b1958ef11d769324f23c0fa6470c27dc4fc3b95345e32129b452c381e5730e70` |
-| Content hash (SHA-256) | `8c2ee1a80ca2636c191701dba6b5b6cc55416a43cc0a40fd704dd92e83f61679` |
-| Chain index | 675 |
+| Certificate issued | 2026-07-19T00:01:29.863666+00:00 UTC |
+| Certificate hash (SHA-256) | `0fb89b1abb69906c1c0c3e8e58e645f2ccba7ee6785b3d0838a2a4ecf684cd9b` |
+| Content hash (SHA-256) | `dd9ea432f2b59bb39c50eef31be990322c853c2077562eac424917a0c2ef9c19` |
+| Chain index | 715 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system uses non-invasive biosensors (e.g., ECG, galvanic skin response, and 
 
 ## Materials / steps
 
-Integrate wearable biosensors (e.g., Empatica E4 or Shimmer3) for real-time monitoring.; Use a cloud-based AI platform (e.g., TensorFlow or PyTorch) to process sensor data and adjust diagnostic workflows.; Conduct initial calibration with patients undergoing standard diagnostics for Cushing’s syndrome.
+Integrate wearable biosensors (e.g., Empatica E4 or Shimmer3) for real-time monitoring.; Use a cloud-based AI platform (e.g., TensorFlow or PyTorch) to process sensor data and adjust diagnostic workflows.; Conduct initial calibration with patients undergoing standard diagnostics for Cushing’s syndrome.; Add a dedicated 'Validation Metrics' section specifying required correlation coefficients between predicted and actual cortisol levels, and define the statistical power analysis needed for the upcoming trial to ensure scientific grounding.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ F --> G[Diagnostic Results with Reduced Variability]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b1958ef11d769324f23c0fa6470c27dc4fc3b95345e32129b452c381e5730e70*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0fb89b1abb69906c1c0c3e8e58e645f2ccba7ee6785b3d0838a2a4ecf684cd9b*

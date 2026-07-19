@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Finn, Liang, Helen |
 | First disclosed | 2026-07-18 01:38:18 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.522845+00:00 UTC |
+| Certificate hash (SHA-256) | `649cdcd12ca2c051a0acfd71708421942f572216576cef57cf982d68c8c9aec2` |
+| Content hash (SHA-256) | `82a454aadc32b7a3979a58590cb7dc93e4a0f4ba6198265869186750c38311c0` |
+| Chain index | 704 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph TD
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/649cdcd12ca2c051a0acfd71708421942f572216576cef57cf982d68c8c9aec2*

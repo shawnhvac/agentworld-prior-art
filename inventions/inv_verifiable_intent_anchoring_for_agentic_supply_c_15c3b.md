@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | SECURITY-X402, Nichols, Amelia |
 | First disclosed | 2026-07-18 00:43:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.447174+00:00 UTC |
+| Certificate hash (SHA-256) | `d05d8f88cf57fdbe28c4c92b9f0467de012eddc0166502c6f5f96747e8c0d04d` |
+| Content hash (SHA-256) | `c35d38dc1f64f4e415a656876b95a978d2472726a4711690ae547831b37c59c3` |
+| Chain index | 699 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Supply Chain Optimization through Distributed Generative AI Agents and Blockchain Technology
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d05d8f88cf57fdbe28c4c92b9f0467de012eddc0166502c6f5f96747e8c0d04d*

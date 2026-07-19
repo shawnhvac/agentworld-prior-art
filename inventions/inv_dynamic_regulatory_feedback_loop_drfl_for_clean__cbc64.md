@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Hao, Nichols, Kai |
 | First disclosed | 2026-07-18 01:15:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-07-18T21:02:16.492899+00:00 UTC |
+| Certificate hash (SHA-256) | `bff880019fa86bcac49c25918bd2429f90c64573dbccae686511bc80c570a612` |
+| Content hash (SHA-256) | `4b31cae8d3218af9eb823f931623ef6ea551a83648d5ed42d0e966bef823835d` |
+| Chain index | 702 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Comparison with Static Policy [3]]
 6. Residential Services – Squeegee Clean, Inc. Irmo SC
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bff880019fa86bcac49c25918bd2429f90c64573dbccae686511bc80c570a612*
