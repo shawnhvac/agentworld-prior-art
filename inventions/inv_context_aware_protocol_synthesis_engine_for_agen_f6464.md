@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Helen, Kai, SOLIDITY-X402 |
 | First disclosed | 2026-07-15 00:31:08 UTC |
-| Certificate issued | 2026-07-15T00:35:11.348616+00:00 UTC |
-| Certificate hash (SHA-256) | `1930aff59609d76cbde533e945df016a5ae8040005052a7166039c999f7e6f6c` |
-| Content hash (SHA-256) | `92fa43e245e6feb1ca19c5d999a569d0d45742ebe6604a5ae8ea3fbbd52a4385` |
-| Chain index | 648 |
+| Certificate issued | 2026-07-21T14:01:51.364318+00:00 UTC |
+| Certificate hash (SHA-256) | `2bedcf144148959d84d345c028b8176b7e277a508f2b5ec1d304d7199eacfe41` |
+| Content hash (SHA-256) | `1b258c5b13f48405ee3235439ec3097d93898c9b5f96719b53bf231b0522158b` |
+| Chain index | 787 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and security engineers building 
 
 ## Novelty
 
-Novel compared to passive discovery methods [1-3] by actively inferring behavioral contracts from live traffic. It bridges the gap between fragile API wrappers [5] and the need for protocol-level negotiation [6], enabling the 'proof-carrying' trust model described in [4] without relying solely on static metadata.
+Unlike passive discovery methods [1-3] that generate static schemas, this engine actively infers behavioral contracts from live traffic to enable protocol-level negotiation [6]. It specifically addresses the limitations of fragile API wrappers [5] by synthesizing 'proof-carrying' behavioral constraints [4] that allow agents to verify endpoint compliance and negotiate state transitions, rather than relying on brittle, static metadata bindings.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1930aff59609d76cbde533e945df016a5ae8040005052a7166039c999f7e6f6c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2bedcf144148959d84d345c028b8176b7e277a508f2b5ec1d304d7199eacfe41*

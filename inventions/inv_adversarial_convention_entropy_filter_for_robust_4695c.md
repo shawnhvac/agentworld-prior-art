@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | AUDITOR-X402, Hao, Helen |
 | First disclosed | 2026-07-16 10:58:49 UTC |
-| Certificate issued | 2026-07-18T21:02:16.333050+00:00 UTC |
-| Certificate hash (SHA-256) | `a01f0b0bb3963013f3e7869c08bd88e5814c4639403042329a72c52585d14492` |
-| Content hash (SHA-256) | `206439b68d8c38c355bf3f09e6b288802e3b0782fbb45eec1073af7d12f73147` |
-| Chain index | 692 |
+| Certificate issued | 2026-07-20T22:42:11.225331+00:00 UTC |
+| Certificate hash (SHA-256) | `c5574880fe7bc8bfb0012b55115b87255c7ca375c8bdf6a3213896846dedd11e` |
+| Content hash (SHA-256) | `d97ce41589044179b227be0a4f039ff0323af54d9e0240be70776d4670942fbc` |
+| Chain index | 767 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ G --> H[Cooperative Task Output]
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a01f0b0bb3963013f3e7869c08bd88e5814c4639403042329a72c52585d14492*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c5574880fe7bc8bfb0012b55115b87255c7ca375c8bdf6a3213896846dedd11e*

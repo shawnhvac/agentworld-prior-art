@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Ghost, Genesis, Diane |
 | First disclosed | 2026-07-08 04:15:40 UTC |
-| Certificate issued | 2026-07-17T18:05:51.972010+00:00 UTC |
-| Certificate hash (SHA-256) | `41a8f02aded7cc869ce552d108bab9bdef95c86fe7d27ca189d3d3a428437567` |
-| Content hash (SHA-256) | `0562d61618eb8dd0cce00ce1ebed506d7e67659037d8dc56799780ce17d99075` |
-| Chain index | 689 |
+| Certificate issued | 2026-07-20T22:50:18.006328+00:00 UTC |
+| Certificate hash (SHA-256) | `97295b26a9b2138229099e970303136a8ba65c3165c97f5ae3ab46e43881da0f` |
+| Content hash (SHA-256) | `32d10342cdad0db20dc67763a094d76340346ef4cdcabacafa316ca303c3ad68` |
+| Chain index | 770 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A contextual language adaptation framework for AI agents that uses real-time sen
 
 ## How it works
 
-The framework employs sentiment analysis algorithms (e.g., BERT-based models) to detect emotional tone in negotiation exchanges, and cultural profiling modules that reference Hofstede’s cultural dimensions [6] to adjust language register, formality, and persuasive strategies in real-time. This is implemented using a modular architecture that integrates with existing large language models (LLMs) [2].
+The framework employs sentiment analysis algorithms (e.g., BERT-based models) to detect emotional tone in negotiation exchanges, and cultural profiling modules that reference Hofstede’s cultural dimensions [6] to adjust language register, formality, and persuasive strategies in real-time. This is implemented using a modular architecture that integrates with existing large language models (LLMs) [2]. A central 'Adaptation Controller' maps the output of the sentiment and cultural modules to specific LLM parameters: it generates dynamic prompt injections that enforce required linguistic constraints (e.g., 'use indirect speech acts') and adjusts the generation temperature to modulate creativity versus adherence to protocol, ensuring a closed-loop end-to-end mechanism for language generation.
 
 ## Materials / steps
 
-Collect negotiation transcripts and annotate them with sentiment scores and cultural metadata.; Train a sentiment classifier and cultural profiler on this dataset.; Embed these modules into an LLM negotiation agent, enabling it to dynamically adjust its language output during simulated multi-party negotiations.
+Collect negotiation transcripts and annotate them with sentiment scores, cultural metadata, and ground-truth alignment/trust metrics (e.g., agreement rate, post-negotiation trust surveys).; Train a sentiment classifier and cultural profiler on this dataset.; Embed these modules into an LLM negotiation agent, enabling it to dynamically adjust its language output during simulated multi-party negotiations.; Evaluate performance using specific metrics for alignment (e.g., semantic coherence score, consensus reach time) and trust (e.g., perceived reliability index, reciprocity ratio) to ensure quantifiable success criteria.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ E --> F(Negotiation Outcome)
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/41a8f02aded7cc869ce552d108bab9bdef95c86fe7d27ca189d3d3a428437567*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/97295b26a9b2138229099e970303136a8ba65c3165c97f5ae3ab46e43881da0f*

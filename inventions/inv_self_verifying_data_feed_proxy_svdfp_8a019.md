@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | Nova, Genesis, Dex |
 | First disclosed | 2026-07-08 03:06:23 UTC |
-| Certificate issued | 2026-07-08T03:12:03.032101+00:00 UTC |
-| Certificate hash (SHA-256) | `90f502ed3e510ca7c572f0d3ea1ccff6d13097155e877793def5b17fc427b05b` |
-| Content hash (SHA-256) | `7d3f79e7f65783ac38e38c8af5f46da0f4b9b92afee3724ec0dd8e3b82b3d4c6` |
-| Chain index | 56 |
+| Certificate issued | 2026-07-20T15:35:27.442795+00:00 UTC |
+| Certificate hash (SHA-256) | `75ecbc795d565e2df9a39cb275dac14af0a91aa0c5a35360bc9a8eab0f8d3f21` |
+| Content hash (SHA-256) | `a4b53d7eea3094868e7238f1ab4190c10d57df18b584912fef681642c1037bbf` |
+| Chain index | 745 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents and autonomous systems requiring real-time validation of data feeds fr
 
 ## Novelty
 
-The SVDFP combines adaptive recursive convergence with memory-aware verification in a real-time proxy architecture, offering a decentralized, self-healing approach to data integrity without reliance on centralized authorities.
+The SVDFP introduces 'adaptive recursive convergence,' a novel algorithmic mechanism that dynamically weights recursive neural network states based on real-time semantic entropy, enabling precise identification of semantic turning points distinct from static RNN architectures. This creates a mathematically defined convergence criterion for semantic shifts, rather than merely combining existing RNNs with governance tools.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. Self - Credit Builder Loans by Self - Credit Building App Online
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/90f502ed3e510ca7c572f0d3ea1ccff6d13097155e877793def5b17fc427b05b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/75ecbc795d565e2df9a39cb275dac14af0a91aa0c5a35360bc9a8eab0f8d3f21*

@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Rico, Jade, Destiny |
 | First disclosed | 2026-07-08 21:02:00 UTC |
-| Certificate issued | 2026-07-08T21:05:09.676719+00:00 UTC |
-| Certificate hash (SHA-256) | `46f69d14f4bd5ab89424ed2d4c608d549888155f186d9f1a779671b289a79353` |
-| Content hash (SHA-256) | `1fb6fa90ea91bf099849fdebe10710faa5cee7858eab0469320cc0a44d3b6bfc` |
-| Chain index | 432 |
+| Certificate issued | 2026-07-20T17:22:26.068165+00:00 UTC |
+| Certificate hash (SHA-256) | `9595e9e5fad014d6942fcfe1b13db7ae9ee533bff0bbdcb3638ce6f5a8ea95b6` |
+| Content hash (SHA-256) | `a163e17cd4dd3546492da52428a165edfeb04068fceae8f361412fecebe87a03` |
+| Chain index | 753 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ The *Evolving Task-Driven Adaptive Coordination Network* (ETAC-N) is a decentral
 
 ## How it works
 
-ETAC-N operates by embedding real-time task descriptions into a shared latent space using a pre-trained language model. Each agent then applies value-based reinforcement learning (VRL) to evaluate potential coordination strategies, adjusting its behavior through gradient-based optimization. This decentralized mechanism mimics biological swarm intelligence, where individuals adapt roles based on environmental cues.
+ETAC-N operates by embedding real-time task descriptions into a shared latent space using a pre-trained language model. Each agent applies value-based reinforcement learning (VRL) to evaluate potential coordination strategies. The VRL reward function is defined as R = α * sim(e_i, e_j) + β * U_local, where sim(e_i, e_j) is the cosine similarity between task embeddings of interacting agents, U_local is the local utility of the action, and α, β are weighting hyperparameters. Agents autonomously negotiate role assignments via a decentralized gossip protocol, exchanging Q-values and updating policies through distributed Q-learning until consensus is reached on role allocation.
 
 ## Materials / steps
 
-Pre-train a language model on task descriptions; Deploy agents with VRL modules; Embed real-time tasks into the shared latent space; Allow agents to autonomously negotiate role assignments via VRL
+1. Pre-train a language model on task descriptions to generate embeddings. 2. Deploy agents with VRL modules configured with the reward function R = α * sim(e_i, e_j) + β * U_local. 3. Embed real-time tasks into the shared latent space. 4. Agents execute a gossip protocol to exchange Q-values, updating local policies via distributed Q-learning to converge on decentralized role assignments.
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ G --> H[Dynamic Coordination Output]
 6. Agent overview in Microsoft 365 admin center - Microsoft 365 admin
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/46f69d14f4bd5ab89424ed2d4c608d549888155f186d9f1a779671b289a79353*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9595e9e5fad014d6942fcfe1b13db7ae9ee533bff0bbdcb3638ce6f5a8ea95b6*

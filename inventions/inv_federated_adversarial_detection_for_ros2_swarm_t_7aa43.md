@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | AUDITOR-X402, Finn, Amelia |
 | First disclosed | 2026-07-19 02:43:22 UTC |
-| Certificate issued | 2026-07-20T13:32:17.477105+00:00 UTC |
-| Certificate hash (SHA-256) | `f41d87eba1e45d719f078f62a4d7a169984cd59aaf7cb647a126a955e7880e9b` |
-| Content hash (SHA-256) | `c3ecd4993066661b462262a182251967bcd30d2129e2ccec4354d5717eb470ac` |
-| Chain index | 726 |
+| Certificate issued | 2026-07-20T23:17:09.997679+00:00 UTC |
+| Certificate hash (SHA-256) | `2e8b7000633e326ab700ca65b2a326c56a98610f016984c838d943e22492d951` |
+| Content hash (SHA-256) | `f3a4a461808b60f6562766cd067de14a5fcfa09e4549c9e2d0be00815430e43f` |
+| Chain index | 772 |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ sequenceDiagram
 6. SWARM Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f41d87eba1e45d719f078f62a4d7a169984cd59aaf7cb647a126a955e7880e9b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2e8b7000633e326ab700ca65b2a326c56a98610f016984c838d943e22492d951*

@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Kai, Isabelle, Amelia |
 | First disclosed | 2026-07-12 01:01:02 UTC |
-| Certificate issued | 2026-07-18T22:02:36.288835+00:00 UTC |
-| Certificate hash (SHA-256) | `9c98a728dd3184ebcd68956493bf9856dc28aba45467025b5b32a3a1587c177b` |
-| Content hash (SHA-256) | `4ac9a7d53d81a7b0374aa8ec7806a0599708b58c38981ef044bd22fffbcd960a` |
-| Chain index | 711 |
+| Certificate issued | 2026-07-20T15:06:24.189492+00:00 UTC |
+| Certificate hash (SHA-256) | `6fa75a0d852493a92a62fb889a5f280ab975edd02673c9e744582e984b719042` |
+| Content hash (SHA-256) | `1c590eef0121b848a068cb347b25f7a5b003f810c884c79343b8f2df3e15751f` |
+| Chain index | 744 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A system that dynamically adjusts prediction market liquidity based on real-time
 
 ## Materials / steps
 
-1. Implement a multi-agent LLM forecasting system based on [2]. 2. Develop an entropy monitoring module to track agent output distributions. 3. Define thresholds for 'faith-induced' narrowing based on [1]. 4. Create a liquidity injection mechanism to introduce synthetic counter-factual orders. 5. Integrate a reward system for agents proposing high-variance alternatives. 6. Conduct experiments to measure Brier score improvements compared to static liquidity pools.
+1. Implement a multi-agent LLM forecasting system based on [2]. 2. Develop an entropy monitoring module to track agent output distributions. 3. Define thresholds for 'faith-induced' narrowing based on [1]. 4. Create a liquidity injection mechanism to introduce synthetic counter-factual orders. 5. Integrate a reward system for agents proposing high-variance alternatives. 6. Conduct experiments to measure Brier score improvements compared to static liquidity pools. 7. Execute a rigorous validation plan calculating Brier scores, Log Loss, and market efficiency metrics against a static liquidity baseline to quantitatively prove the reduction in prediction error.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of AI-driven prediction markets, financial forecasting platforms, and
 
 ## Novelty
 
-CAMILI's novelty lies in its closed-loop, entropy-triggered liquidity injection mechanism that actively disrupts premature consensus by injecting synthetic counter-factuals, distinct from prior art [P1] and [P2] which rely on static consensus mechanisms or fixed simulated starting values. Unlike static parameter adjustments, CAMILI provides a mechanistic solution to the 'AI Lemons Problem' [5] through continuous, adaptive market correction that specifically penalizes low-entropy convergence in real-time, ensuring dynamic rather than static market resilience.
+While prior dynamic liquidity mechanisms like constant product market makers with decay [P3] or volume-triggered oracles [P4] adjust supply based on trade frequency or price impact, CAMILI uniquely utilizes Shannon entropy of agent output distributions as the primary trigger for liquidity injection. This distinguishes it from volume-based triggers that fail to detect 'faith-induced' narrowing where high-volume consensus masks low informational diversity, thereby addressing the specific signal degradation risks of the 'AI Lemons Problem' [5] through semantic rather than purely financial metrics.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ H --> A
 6. The AI Act and Prediction Markets: Why Horizontal AI Regulation Cannot Comprehensively Govern Platform-Level Risk
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c98a728dd3184ebcd68956493bf9856dc28aba45467025b5b32a3a1587c177b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6fa75a0d852493a92a62fb889a5f280ab975edd02673c9e744582e984b719042*

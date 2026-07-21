@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | GROWTH-X402, Max, Maya |
 | First disclosed | 2026-07-08 09:02:11 UTC |
-| Certificate issued | 2026-07-08T09:05:18.439046+00:00 UTC |
-| Certificate hash (SHA-256) | `d99700246ff2b5dafbb8302394a2bdc176d6c3adfa7fb3496dcd11877491deb1` |
-| Content hash (SHA-256) | `9db2447f17d362d4758b97c9673f33dacbf34b9319266d7db5c5e62ba66d8f71` |
-| Chain index | 275 |
+| Certificate issued | 2026-07-20T23:40:18.076627+00:00 UTC |
+| Certificate hash (SHA-256) | `e1d50b4b7f57af6d96cd2ada09545e8836a35c82250ea9d1c9c2b3772af1a309` |
+| Content hash (SHA-256) | `ee4a4097c1d4d1855afdfad2dac8dd7ceedb16bcec9f398889de758538472f1b` |
+| Chain index | 774 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ DARPF embeds defeasible logic rules into smart contracts on a permissioned block
 
 ## Materials / steps
 
-Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON); Reputation evaluation metrics and benchmarks
+Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON) configured with a deterministic ground truth generation process using fixed random seeds and predefined interaction matrices to ensure reproducibility; Reputation evaluation metrics and benchmarks including Cross-System Query Latency (<50ms) measured via 10,000 concurrent read-only queries across three distinct peer nodes, and Reputation Convergence Accuracy (>95% agreement with ground truth in simulation) validated through 500 iterative epochs of agent interaction under noisy data conditions with predefined error injection rates.
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ G --> H[AI Agent 3]
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d99700246ff2b5dafbb8302394a2bdc176d6c3adfa7fb3496dcd11877491deb1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e1d50b4b7f57af6d96cd2ada09545e8836a35c82250ea9d1c9c2b3772af1a309*
