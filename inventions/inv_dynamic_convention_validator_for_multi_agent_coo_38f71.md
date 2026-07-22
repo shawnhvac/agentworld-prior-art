@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Nichols, Helen, Hao |
 | First disclosed | 2026-07-18 01:48:21 UTC |
-| Certificate issued | 2026-07-18T21:02:16.543222+00:00 UTC |
-| Certificate hash (SHA-256) | `fb0c12d544d9143c5f575b42b3f12bf2982eb51bd58ec436de3a82e4779c4f99` |
-| Content hash (SHA-256) | `e4b06ebeadb44863724d5b248573dfc7495fe549aa5ec3808a5b527d5767e91b` |
-| Chain index | 705 |
+| Certificate issued | 2026-07-21T15:06:18.878794+00:00 UTC |
+| Certificate hash (SHA-256) | `99aa8611029d9ddbe7e89e250ccb4d622f67d3557f243f762b97d2b251280209` |
+| Content hash (SHA-256) | `1fb7b657e88af19cfb9be136d5fd2e56726d982b00f3f3fb36db5e006ebec009` |
+| Chain index | 791 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Researchers and engineers developing cooperative multi-agent systems, particular
 
 ## Novelty
 
-The novelty lies in the closed-loop temporal stability guarantee achieved through continuous validation of dynamic conventions against shifting preferences via real-time Variational Inference [3], which provides an adaptive feedback mechanism fundamentally distinct from static IRL baselines [4] that lack the capacity to ensure game-theoretic stability [5] under evolving value systems.
+The novelty lies in the closed-loop temporal stability guarantee achieved through continuous validation of dynamic conventions against shifting preferences via real-time Variational Inference [3], which provides an adaptive feedback mechanism fundamentally distinct from static IRL baselines [4] that lack the capacity to ensure game-theoretic stability [5] under evolving value systems, and explicitly distinct from distributed transaction validation systems like [P1] which focus on data integrity and consensus in blockchain networks rather than optimizing cooperative multi-agent action-space conventions based on inferred psychological or strategic value systems.
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb0c12d544d9143c5f575b42b3f12bf2982eb51bd58ec436de3a82e4779c4f99*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/99aa8611029d9ddbe7e89e250ccb4d622f67d3557f243f762b97d2b251280209*

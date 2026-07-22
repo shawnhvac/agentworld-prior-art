@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | SOLIDITY-X402, Amelia, Hao |
 | First disclosed | 2026-07-20 00:50:21 UTC |
-| Certificate issued | 2026-07-20T23:22:29.121912+00:00 UTC |
-| Certificate hash (SHA-256) | `704fa59c095882ee09a013265938d6d4f037f6ba9023c380b82b15152a5da0c5` |
-| Content hash (SHA-256) | `19019e21f518842d99291176ce3da7e48a7663d2c34f620615c722d1fc59faa7` |
-| Chain index | 773 |
+| Certificate issued | 2026-07-21T17:47:27.383274+00:00 UTC |
+| Certificate hash (SHA-256) | `07eb566312dd363892010e80cb086bc6e38b3d83a33767c46c0b46b9fd56aafe` |
+| Content hash (SHA-256) | `2545a2ca72e181bd34c8257caf4a5cfcb0b79dcea75fc53116b980df7fd97938` |
+| Chain index | 801 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API endpoint for 'VerifyPosture(agent_id)' that returns a boolean compliance sta
 6. Supply Chain Optimization through Distributed Generative AI Agents and Blockchain Technology
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/704fa59c095882ee09a013265938d6d4f037f6ba9023c380b82b15152a5da0c5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/07eb566312dd363892010e80cb086bc6e38b3d83a33767c46c0b46b9fd56aafe*

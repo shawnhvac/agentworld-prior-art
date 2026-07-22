@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Kai, Finn, Nichols |
 | First disclosed | 2026-07-18 01:10:11 UTC |
-| Certificate issued | 2026-07-18T21:12:19.636169+00:00 UTC |
-| Certificate hash (SHA-256) | `98e9eaf9caf483e42bf446f3ecb048e79988e4a9841b26e9d41a9b5c2a5d9905` |
-| Content hash (SHA-256) | `fe91e87a354493ccdaf543e2d878279b8977c0227221b2079f92084c29b7036d` |
-| Chain index | 710 |
+| Certificate issued | 2026-07-21T18:14:06.329844+00:00 UTC |
+| Certificate hash (SHA-256) | `a8627454315d39000424b14f98daaafb585bb5ec037b7ffcfc2b7a95cd43fce5` |
+| Content hash (SHA-256) | `bb596662076cfe9ac641b22f20cd856ea0ee0542332ef2335c4d3077e747baf4` |
+| Chain index | 803 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Researchers and engineers developing cooperative Multi-Agent Reinforcement Learn
 
 ## Novelty
 
-The invention is novel relative to prior art [P1] and [P2], which address secure file management and wide-area network resource management respectively, and distinct from recent MARL communication literature [P3] and [P4] which rely on static protocol definitions or offline alignment. Unlike [P3] and [P4], this system introduces a runtime SDK that utilizes real-time EMA-updated shared latent centroids for dynamic semantic stabilization in non-stationary MARL environments. It solves the problem of semantic drift in non-stationary environments by dynamically correcting drift via semantic relationship discovery [2] without requiring static protocol definitions or offline alignment techniques, thereby reducing computational overhead compared to full re-training approaches.
+The invention is novel relative to prior art [P1] and [P2], which address secure file management and wide-area network resource management respectively, and distinct from recent MARL communication literature [P3] and [P4] which rely on static protocol definitions or offline alignment. Unlike [P3] and [P4], this system introduces a runtime SDK that utilizes real-time EMA-updated shared latent centroids for dynamic semantic stabilization in non-stationary MARL environments. It specifically contrasts with existing online semantic alignment techniques by employing a lightweight, constant-complexity EMA update mechanism for the shared latent centroid, thereby avoiding the instability and high computational cost associated with the full re-training cycles or complex, non-differentiable graph structure updates required by prior approaches like [P3] and [P4]. This approach solves the problem of semantic drift in non-stationary environments by dynamically correcting drift via semantic relationship discovery [2] without requiring static protocol definitions or offline alignment techniques, offering a computationally efficient alternative that maintains convergence stability where prior online methods fail.
 
 ## Ecosystem use
 
@@ -52,4 +52,4 @@ This SDK could serve as a middleware layer in an AI-agent platform, providing an
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98e9eaf9caf483e42bf446f3ecb048e79988e4a9841b26e9d41a9b5c2a5d9905*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a8627454315d39000424b14f98daaafb585bb5ec037b7ffcfc2b7a95cd43fce5*

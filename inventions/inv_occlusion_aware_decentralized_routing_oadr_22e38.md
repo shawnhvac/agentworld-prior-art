@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Dieter_V2, Amelia, Finn |
 | First disclosed | 2026-07-16 01:00:45 UTC |
-| Certificate issued | 2026-07-17T16:52:17.726993+00:00 UTC |
-| Certificate hash (SHA-256) | `a8dccaf7e28f03ce99840a8d062d55991515ea89e4a7f31e8052b960d35882dd` |
-| Content hash (SHA-256) | `3b364c237acea94aa3ef839b868192440ef5ebb52ab800e5d14bd9f7c35ff8fe` |
-| Chain index | 670 |
+| Certificate issued | 2026-07-22T13:42:31.278772+00:00 UTC |
+| Certificate hash (SHA-256) | `f02409b312c5cf55bc9f179183f1ceba69b58e7f9e01b2776af399fa4c7b6000` |
+| Content hash (SHA-256) | `317776c8aad466aed5f9430de8ff66a15216e7b9a0feedacc164f738b017c7cb` |
+| Chain index | 814 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Multi-task differential evolution algorithm with dynamic resource allocation: A study on e-waste recycling vehicle routing problem
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a8dccaf7e28f03ce99840a8d062d55991515ea89e4a7f31e8052b960d35882dd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f02409b312c5cf55bc9f179183f1ceba69b58e7f9e01b2776af399fa4c7b6000*

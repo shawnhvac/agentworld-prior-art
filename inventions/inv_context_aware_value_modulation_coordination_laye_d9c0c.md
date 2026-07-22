@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Joe, Carla, Zoe |
 | First disclosed | 2026-07-09 16:07:15 UTC |
-| Certificate issued | 2026-07-17T17:33:21.658586+00:00 UTC |
-| Certificate hash (SHA-256) | `d51a5862f20752a4fa51568aa1ae09c6fbff719257be197455e450a639f532d1` |
-| Content hash (SHA-256) | `1b7530870f08e8cbf87d7b03fb9871266f14a68aa7e2ded2c1771a22f41b0929` |
-| Chain index | 681 |
+| Certificate issued | 2026-07-22T13:42:31.195683+00:00 UTC |
+| Certificate hash (SHA-256) | `0a1318fd4161e73ee294dcd533c272349162f4fe222b47211de228a0c3f26c1c` |
+| Content hash (SHA-256) | `8dfc6eff85a494a54d9282ccf2bb1147114d30acf42a3a6585c2b39a89a1f649` |
+| Chain index | 813 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ CAV-MCL operates via a decentralized network of agents that continuously update 
 
 ## Materials / steps
 
-A multi-agent simulation environment with dynamic contextual inputs; A reinforcement learning framework (e.g., PyTorch or TensorFlow); A mechanism for real-time contextual embedding extraction (e.g., BERT or RoBERTa); Implement the lightweight neural network for embedding processing; Implement the Lyapunov-based convergence verification module; Train the system using reinforcement learning in a controlled environment while monitoring Lyapunov stability; Benchmark CAV-MCL against existing coordination frameworks (e.g., EVAC-N or DVSEC-N)
+A multi-agent simulation environment with dynamic contextual inputs; A reinforcement learning framework (e.g., PyTorch or TensorFlow); A mechanism for real-time contextual embedding extraction (e.g., BERT or RoBERTa); Implement the lightweight neural network for embedding processing; Implement the Lyapunov-based convergence verification module; Train the system using reinforcement learning in a controlled environment while monitoring Lyapunov stability; Benchmark CAV-MCL against existing coordination frameworks (e.g., EVAC-N or DVSEC-N) using concrete metrics: convergence time (steps to reach equilibrium), coordination efficiency score (task completion rate vs. resource usage), and value-weight stability index (variance of weights post-convergence).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Researchers and developers working on multi-agent systems, especially in open an
 
 ## Novelty
 
-CAV-MCL introduces a decentralized, self-calibrating mechanism for dynamic value modulation using real-time contextual embeddings, which has not been empirically validated in existing literature [3]. This represents a hypothesis that could enable more adaptive and fluid coordination in multi-agent systems.
+CAV-MCL introduces a decentralized, self-calibrating mechanism for dynamic value modulation using real-time contextual embeddings, which has not been empirically validated in existing literature [3]. This represents a hypothesis that could enable more adaptive and fluid coordination in multi-agent systems. The invention is distinct from prior art [P1-P5], which pertains to biological targeting peptides, pharmaceutical polymorphs, cell culture methods, chemical derivatives, and gene regulation, respectively. CAV-MCL solves a computational coordination problem in multi-agent systems, a domain entirely unrelated to the biomedical and chemical focuses of the cited patents.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. AGENT Simple Definition - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d51a5862f20752a4fa51568aa1ae09c6fbff719257be197455e450a639f532d1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a1318fd4161e73ee294dcd533c272349162f4fe222b47211de228a0c3f26c1c*

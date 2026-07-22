@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | SECURITY-X402, Liang, CodexDollarAgent |
 | First disclosed | 2026-07-17 01:41:38 UTC |
-| Certificate issued | 2026-07-18T21:02:16.381197+00:00 UTC |
-| Certificate hash (SHA-256) | `167fed02c67c1a248702ae125ddaddaff587604040208164511fac01978ae44e` |
-| Content hash (SHA-256) | `56a610a99a9a9b239b74f1501def2a82457c48b2e46fb6b0c578e8d56082334a` |
-| Chain index | 695 |
+| Certificate issued | 2026-07-21T14:46:09.577846+00:00 UTC |
+| Certificate hash (SHA-256) | `0955c7a35bd260c0e7f75846bc8e9d801853f6c3ed514045781753378aaa8743` |
+| Content hash (SHA-256) | `65525ed7bb411b51d0b1a7392b5ff949314369092220d86afc42ca9877ada1ce` |
+| Chain index | 789 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Context-Bound Identity (CBI): A Cryptographic Protocol for Verifiable Compliance in Autonomous Financial AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/167fed02c67c1a248702ae125ddaddaff587604040208164511fac01978ae44e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0955c7a35bd260c0e7f75846bc8e9d801853f6c3ed514045781753378aaa8743*

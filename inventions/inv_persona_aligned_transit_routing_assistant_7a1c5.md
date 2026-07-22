@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Finn, Rupert, Hao |
 | First disclosed | 2026-07-17 07:15:17 UTC |
-| Certificate issued | 2026-07-18T21:02:16.415387+00:00 UTC |
-| Certificate hash (SHA-256) | `1907c9d00d7b62380c206dfa2e3f3483ad30b2ca59547d86898656da995d10d8` |
-| Content hash (SHA-256) | `6d5e1f4f051b71d31772b5c4475f4efd9706b30278deeb82a7bf0b58b7a2e3d3` |
-| Chain index | 697 |
+| Certificate issued | 2026-07-22T14:02:12.051638+00:00 UTC |
+| Certificate hash (SHA-256) | `994a82b02669ca9c1bfa61718302b6518b0aeffa0b99408ac16b91b34ff705d0` |
+| Content hash (SHA-256) | `553a86ffe476f38e619aa65877e66e2ae25e9a8f3ef2348be8859d1f0d35cd39` |
+| Chain index | 815 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system uses persona-based embedding learning [3] to create vector representa
 
 ## Materials / steps
 
-1. Collect user travel history and preference surveys. 2. Apply persona-based embedding learning [3] to generate user vectors. 3. Integrate vectors into an LLM routing interface. 4. Cross-reference route options with crowd-density forecasts derived from standard models [2]. 5. Output personalized route recommendations that balance speed and perceived safety. 6. Execute validation protocol: (a) Conduct a pre-registered power analysis to determine the minimum sample size required for the validation metrics; (b) Collect Post-Trip Comfort Ratings (1-5 scale) immediately upon trip completion to serve as the primary immediate validation metric for psychological comfort; (c) Collect objective physiological data (specifically Heart Rate Variability and Galvanic Skin Response) during transit as a longitudinal study component, while simultaneously recording environmental confounders (e.g., ambient temperature, physical exertion) to statistically control for their effects on HRV/GSR readings; (d) Calculate objective route adherence rates compared to standard GPS recommendations; (e) Conduct A/B testing to measure user retention and satisfaction against baseline logistical-only routing systems; (f) Correlate the system's predicted discomfort score $D(r)$ with the collected Post-Trip Comfort Ratings and longitudinal physiological data to refine the model, treating the target Pearson correlation coefficient > 0.7 as a performance benchmark for iterative model refinement rather than a binary gate for initial system success.
+1. Collect user travel history and preference surveys. 2. Apply persona-based embedding learning [3] to generate user vectors. 3. Integrate vectors into an LLM routing interface. 4. Cross-reference route options with crowd-density forecasts derived from standard models [2]. 5. Output personalized route recommendations that balance speed and perceived safety. 6. Execute validation protocol: (a) Conduct a pre-registered power analysis to determine the minimum sample size required for the validation metrics; (b) Collect Post-Trip Comfort Ratings (1-5 scale) immediately upon trip completion to serve as the primary immediate validation metric for psychological comfort; (c) Collect objective physiological data (specifically Heart Rate Variability and Galvanic Skin Response) during transit as a longitudinal study component, while simultaneously recording environmental confounders (e.g., ambient temperature, physical exertion) to statistically control for their effects on HRV/GSR readings; (d) Calculate objective route adherence rates compared to standard shortest-path solver recommendations (e.g., Dijkstra or A*); (e) Conduct A/B testing to measure user retention and satisfaction against baseline logistical-only routing systems; (f) Correlate the system's predicted discomfort score $D(r)$ with the collected Post-Trip Comfort Ratings and longitudinal physiological data to refine the model, treating the target Pearson correlation coefficient > 0.7 as a performance benchmark for iterative model refinement rather than a binary gate for initial system success.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ F --> G[User Decision]
 6. Rural Transit - Area 10 Agency on Aging
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1907c9d00d7b62380c206dfa2e3f3483ad30b2ca59547d86898656da995d10d8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/994a82b02669ca9c1bfa61718302b6518b0aeffa0b99408ac16b91b34ff705d0*
