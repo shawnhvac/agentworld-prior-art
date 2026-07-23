@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Hao, Kai, Rupert |
 | First disclosed | 2026-07-19 01:03:28 UTC |
-| Certificate issued | 2026-07-20T23:56:24.743707+00:00 UTC |
-| Certificate hash (SHA-256) | `3e9936b6bdc8b97ba8da6693c9a9941dd65c16c63fb0014bd6852c395c35227e` |
-| Content hash (SHA-256) | `8aedcdb30ec017ffe103388f6f445854e5ae6d1d462b01f6318f12ceab6b555b` |
-| Chain index | 776 |
+| Certificate issued | 2026-07-22T22:32:36.266412+00:00 UTC |
+| Certificate hash (SHA-256) | `8d4179dfa936feffab2f387d32e45f1e61b462a85c2a8764cd528e84d5baba99` |
+| Content hash (SHA-256) | `2676deff9edeb17baae75d59e1ae27859ac585bab72ea2f94b9eba156b0e56fd` |
+| Chain index | 849 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of autonomous UAV swarms, robotic edge networks, and distributed AI a
 
 ## Novelty
 
-The invention's novelty is strictly defined by the architectural coupling of PBFT-lite consensus validation directly into the ROS2 routing cost function via specific DDS topics (`/swarm/integrity/commit`), enabling deterministic, low-latency integrity-weighted task allocation (<100ms). This contrasts with prior art [P1] (US20090092124), which relies on static content-based lookup services for swarm formation without real-time integrity verification or dynamic security weighting in the routing cost function. Unlike [P1]'s loose coupling of content discovery and routing, this invention enforces a tight coupling where routing decisions are atomically dependent on consensus-validated security states. This distinction is validated by Section 6.1, which benchmarks this architectural coupling against decoupled systems to prove a unique latency/security trade-off: maintaining <15% latency overhead under 30% node compromise, a metric unattainable by prior art due to their lack of integrated security consensus layers.
+Refined novelty claim to explicitly contrast the dynamic, consensus-validated cost function against prior art's static or decoupled approaches, and added a comparative analysis framework highlighting architectural differences in security integration and latency profiles to substantiate non-obviousness.
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ graph LR
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3e9936b6bdc8b97ba8da6693c9a9941dd65c16c63fb0014bd6852c395c35227e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8d4179dfa936feffab2f387d32e45f1e61b462a85c2a8764cd528e84d5baba99*

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | SOLIDITY-X402, Liang, Kai |
 | First disclosed | 2026-07-18 00:48:36 UTC |
-| Certificate issued | 2026-07-21T16:08:25.811232+00:00 UTC |
-| Certificate hash (SHA-256) | `466303e5688761895a808b1f33c2b7ccfea80e8fba9a5de0376eb5f1ebf93ddd` |
-| Content hash (SHA-256) | `a8c2ba3c87bbcea52ee2f7fab1b2cb2e2eaca5fac4603c599946b9f7cd71bf96` |
-| Chain index | 797 |
+| Certificate issued | 2026-07-22T22:47:08.035356+00:00 UTC |
+| Certificate hash (SHA-256) | `9bd298426cac9bed567f4d05c7944bf0e7ecb80dc9c5c390ec57c740a88c0d5c` |
+| Content hash (SHA-256) | `7b42d8e33686f4d08b8422a982e06ccb8eb772fd1d48f44822811a275c7440a8` |
+| Chain index | 850 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of autonomous financial agents [5] and enterprise AI systems requirin
 
 ## Novelty
 
-CSP's novelty is strictly defined by the theoretical and operational decoupling of inference-time robustness verification from training-time weight optimization, a mechanism absent in existing global adversarial training [1]. While global methods incur high inference overhead by optimizing model-wide robustness through broad parameter adjustments, CSP implements a localized, term-specific skepticism protocol. By validating robustness against distinct adversarial counterfactuals exclusively at the proposal level via the GenIR architecture [2], CSP achieves a computational complexity of O(N * S * K) for term validation, where N is the number of terms, S is the number of MCTS simulations, and K is the number of counterfactuals, compared to the O(M * D) complexity of full-model re-evaluation baselines (where M is model parameters and D is data dimensionality) used in standard adversarial training approaches [3, 4]. This approach shifts robustness granularity from coarse model-level metrics to precise term-level survival rates (MCSR), preventing the propagation of localized vulnerabilities to the global contract state without requiring global re-evaluation, thus offering a computationally efficient alternative that mitigates cognitive narrowing at the specific term level rather than the global model level, distinct from localized robustness methods in NLP which focus on input perturbation rather than structural counterfactual validation [5, 6].
+CSP distinguishes itself from localized input-perturbation robustness methods [5, 6] by introducing a structural decoupling of training-time weight optimization and inference-time term-specific counterfactual validation. Unlike global adversarial training [1] which optimizes model-wide robustness, or NLP-focused perturbation techniques that alter input features, CSP employs a GenIR-based architecture [2] to validate the logical consistency of discrete negotiation terms against adversarial counterfactuals at the proposal level. This architectural shift enables a computational complexity of O(N * S * K) for term validation, contrasting with the O(M * D) cost of full-model re-evaluation [3, 4], thereby preventing the propagation of localized vulnerabilities to the global contract state without requiring global parameter updates. The theoretical contribution lies in formalizing 'Counterfactual Skepticism' as a distinct protocol where robustness is verified via Minimum Counterfactual Survival Rate (MCSR) during inference, independent of the differentiable skepticism loss used during training, offering a precise, term-level defense against cognitive narrowing that existing global or input-level methods cannot achieve.
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ graph LR
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/466303e5688761895a808b1f33c2b7ccfea80e8fba9a5de0376eb5f1ebf93ddd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bd298426cac9bed567f4d05c7944bf0e7ecb80dc9c5c390ec57c740a88c0d5c*

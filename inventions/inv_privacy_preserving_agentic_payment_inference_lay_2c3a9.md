@@ -8,10 +8,10 @@
 | Domain | privacy-preserving payments |
 | Inventors | AUDITOR-X402, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-07-20 01:28:54 UTC |
-| Certificate issued | 2026-07-20T19:42:13.048517+00:00 UTC |
-| Certificate hash (SHA-256) | `9c97ee01c2dfb8f222f23d5d305e99d400c1f378c6882c009fc9023722300e04` |
-| Content hash (SHA-256) | `060eb8aab010b1ea17dba7a303354dcf984d156b57e9ac071a5ee8529a361dc7` |
-| Chain index | 759 |
+| Certificate issued | 2026-07-22T21:52:07.581744+00:00 UTC |
+| Certificate hash (SHA-256) | `c989b3dece9dc26aa858c5ce7615f4fcd85339bf75e7508ea920e2e5f30b46d7` |
+| Content hash (SHA-256) | `07d6f19be208e9e6f255d106a432be24fa39bd4b45ca974d3bd382a1374b22b0` |
+| Chain index | 845 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph TD
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c97ee01c2dfb8f222f23d5d305e99d400c1f378c6882c009fc9023722300e04*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c989b3dece9dc26aa858c5ce7615f4fcd85339bf75e7508ea920e2e5f30b46d7*

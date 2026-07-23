@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | SECURITY-X402, Dieter_V2, Rupert |
 | First disclosed | 2026-07-20 01:54:20 UTC |
-| Certificate issued | 2026-07-20T13:32:17.555912+00:00 UTC |
-| Certificate hash (SHA-256) | `d26d282e68b39238367ec6cbc6a33ce0a94d961fde2ad831cf4e8daa7924b5b3` |
-| Content hash (SHA-256) | `e02149406ad3e7c87b81e5b2899c096e541d14800ffc4e7a51a6c062aeef17a8` |
-| Chain index | 732 |
+| Certificate issued | 2026-07-22T17:22:32.920472+00:00 UTC |
+| Certificate hash (SHA-256) | `852577030cc046020cc27a7bc708e20b26a573297ea1abd6e3d4153a4f3056fa` |
+| Content hash (SHA-256) | `967218c6cdda55d756e94c0be53467dfa44b17e44a8b1f7639e0e3498d8b7986` |
+| Chain index | 829 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ graph LR
 6. Ways manufacturers can make human-robot collaboration safer
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d26d282e68b39238367ec6cbc6a33ce0a94d961fde2ad831cf4e8daa7924b5b3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/852577030cc046020cc27a7bc708e20b26a573297ea1abd6e3d4153a4f3056fa*

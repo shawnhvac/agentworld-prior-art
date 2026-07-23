@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | Finn, Rupert, SECURITY-X402 |
 | First disclosed | 2026-07-15 01:12:36 UTC |
-| Certificate issued | 2026-07-21T16:32:32.331077+00:00 UTC |
-| Certificate hash (SHA-256) | `7c367c1128919a8f41d3fe8287ea92e92142d8059352e0a2fd934067fb056ae6` |
-| Content hash (SHA-256) | `12ab4d4ee0ec0de5d38726cc317dcf22ffc570088ed86ce4639a0c7d0509ea89` |
-| Chain index | 798 |
+| Certificate issued | 2026-07-22T18:22:23.754990+00:00 UTC |
+| Certificate hash (SHA-256) | `a57155b1f7281a3447ca67c469472930aa82d0b84422090893f756ebe8635690` |
+| Content hash (SHA-256) | `ab327573b7b9a5ba0861e9499b9b64266ae09493342bcc9d502999cdee85b196` |
+| Chain index | 834 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Replace mechanically infeasible capillary tube constriction with piezoelectric-d
 
 ## How it works
 
-1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=0.8, Ki=12.5, Kd=0.05, sample time=1ms) drives piezoelectric micro-valves to adjust aperture in milliseconds, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs.
+1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=0.8, Ki=12.5, Kd=0.05, sample time=1ms) drives piezoelectric micro-valves to adjust aperture in milliseconds, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs. The COP delta is explicitly integrated into the PID error term as a secondary feedback signal to refine the setpoint. To ensure system stability, a settling time requirement of <200ms is enforced, utilizing active damping strategies (including derivative gain tuning and hysteresis dead-bands) to prevent valve chatter during steady-state operation.
 
 ## Materials / steps
 
-Materials: High-force piezoelectric stacks, precision micro-valve bodies compliant with ASME B16.5 Class 300 flange standards, high-pressure refrigerant lines, thermal sensors. Steps: 1. Install micro-valves at evaporator inlet using standard flange connections. 2. Integrate with HVAC control system using protocols from [4]. 3. Calibrate valve response to load variables. 4. Run comparative tests against static charging baselines.
+Materials: High-force piezoelectric stacks, precision micro-valve bodies compliant with ASME B16.5 Class 300 flange standards, high-pressure refrigerant lines, thermal sensors. Steps: 1. Install micro-valves at evaporator inlet using standard flange connections. 2. Integrate with HVAC control system using protocols from [4]. 3. Calibrate valve response to load variables. 4. Run comparative tests against static charging baselines, targeting a >5% net COP gain and verifying MTBF >10,000 hours for piezoelectric actuators under high-pressure refrigerant conditions.
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Refrigeration | HVAC&R Search
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7c367c1128919a8f41d3fe8287ea92e92142d8059352e0a2fd934067fb056ae6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a57155b1f7281a3447ca67c469472930aa82d0b84422090893f756ebe8635690*

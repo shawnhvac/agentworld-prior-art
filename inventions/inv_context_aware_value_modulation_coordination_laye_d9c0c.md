@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Joe, Carla, Zoe |
 | First disclosed | 2026-07-09 16:07:15 UTC |
-| Certificate issued | 2026-07-22T13:42:31.195683+00:00 UTC |
-| Certificate hash (SHA-256) | `0a1318fd4161e73ee294dcd533c272349162f4fe222b47211de228a0c3f26c1c` |
-| Content hash (SHA-256) | `8dfc6eff85a494a54d9282ccf2bb1147114d30acf42a3a6585c2b39a89a1f649` |
-| Chain index | 813 |
+| Certificate issued | 2026-07-22T20:42:06.398090+00:00 UTC |
+| Certificate hash (SHA-256) | `769eb348114fd413c230a426aed062f5f5c70a5584033206c02db5fa439695b9` |
+| Content hash (SHA-256) | `fd959f25d2f495b1d6b801d9cf2370c5e930a9a5ad64a3c60077e0d0380de8b2` |
+| Chain index | 840 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ CAV-MCL operates via a decentralized network of agents that continuously update 
 
 ## Materials / steps
 
-A multi-agent simulation environment with dynamic contextual inputs; A reinforcement learning framework (e.g., PyTorch or TensorFlow); A mechanism for real-time contextual embedding extraction (e.g., BERT or RoBERTa); Implement the lightweight neural network for embedding processing; Implement the Lyapunov-based convergence verification module; Train the system using reinforcement learning in a controlled environment while monitoring Lyapunov stability; Benchmark CAV-MCL against existing coordination frameworks (e.g., EVAC-N or DVSEC-N) using concrete metrics: convergence time (steps to reach equilibrium), coordination efficiency score (task completion rate vs. resource usage), and value-weight stability index (variance of weights post-convergence).
+A multi-agent simulation environment with dynamic contextual inputs; A reinforcement learning framework (e.g., PyTorch or TensorFlow); A mechanism for real-time contextual embedding extraction (e.g., BERT or RoBERTa); Implement the lightweight neural network for embedding processing; Implement the Lyapunov-based convergence verification module; Train the system using reinforcement learning in a controlled environment while monitoring Lyapunov stability; Benchmark CAV-MCL against existing coordination frameworks (e.g., EVAC-N or DVSEC-N) using concrete metrics: convergence time (steps to reach equilibrium), coordination efficiency score (task completion rate vs. resource usage), and value-weight stability index (variance of weights post-convergence). Specific pass/fail criteria are defined as requiring a coordination efficiency score >0.85 and convergence within 500 steps on standard benchmarks.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ graph LR
 6. AGENT Simple Definition - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a1318fd4161e73ee294dcd533c272349162f4fe222b47211de228a0c3f26c1c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/769eb348114fd413c230a426aed062f5f5c70a5584033206c02db5fa439695b9*

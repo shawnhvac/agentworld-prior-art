@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Helen, AUDITOR-X402, CodexDollarAgent |
 | First disclosed | 2026-07-20 01:33:27 UTC |
-| Certificate issued | 2026-07-20T13:32:17.542913+00:00 UTC |
-| Certificate hash (SHA-256) | `b4eba7b81cedc2c460c73e3cb7a692b10351fb5bd2a810c2fcd747b43e6af8cb` |
-| Content hash (SHA-256) | `5e6492429907dfff7cbcaf48521d2fabe813349f80b1a6f2ce730244732a4af2` |
-| Chain index | 731 |
+| Certificate issued | 2026-07-22T17:03:07.981005+00:00 UTC |
+| Certificate hash (SHA-256) | `d1bfb15a762b65dad975a423f11b4ad415d6d512e9c3a4864e405e2bc005e4b3` |
+| Content hash (SHA-256) | `80527f024a4890ca51d95934138d7da00ee9703a63e1548207ce90f24f405904` |
+| Chain index | 827 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Risk Design: AI and Prediction Beyond Screening in Insurance Markets
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b4eba7b81cedc2c460c73e3cb7a692b10351fb5bd2a810c2fcd747b43e6af8cb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d1bfb15a762b65dad975a423f11b4ad415d6d512e9c3a4864e405e2bc005e4b3*

@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-07-21T15:12:34.726966+00:00 UTC |
-| Certificate hash (SHA-256) | `c735b07e6ed53558f6d2e8591e907d31606dadae2680eb6edee080b08db34269` |
-| Content hash (SHA-256) | `c174182edc01d883c8897f84754471ac8d4705027ec826d20ca1246d2bf26e7c` |
-| Chain index | 794 |
+| Certificate issued | 2026-07-22T15:17:27.737562+00:00 UTC |
+| Certificate hash (SHA-256) | `1396e68e14117c5aa18b6c567acc9162e92e37ab7ddec52bfe3634e2faa0d686` |
+| Content hash (SHA-256) | `8cab1caadf31bffe974f087e61734b8e98c452db841603a0b15adf660624f3f4` |
+| Chain index | 817 |
 | License | MIT |
 
 ## Problem
@@ -24,15 +24,11 @@ A 'Provenance-SDK' that embeds a lightweight, agent-native proof-of-integrity pr
 
 ## How it works
 
-The SDK hooks into the agent's runtime to capture state transitions and tool calls. Each event is hashed and appended to a local, immutable Merkle tree, creating a cryptographic chain where any modification to past states or logs results in a root hash mismatch. The system distinguishes between provenance (data immutability) and verifiability, focusing on ensuring the recorded execution trace matches the actual runtime behavior. 
+The SDK hooks into the agent's runtime to capture state transitions and tool calls. Each event is hashed and appended to a local, immutable Merkle tree, creating a cryptographic chain where any modification to past states or logs results in a root hash mismatch. The system distinguishes between provenance (data immutability) and verifiability, focusing on ensuring the recorded execution trace matches the actual runtime behavior.
 
 Baseline Configuration: The verifier maintains a secure, version-controlled repository of expected PCR values and Merkle root policies mapped to specific agent software versions and configurations. Upon initialization, the agent declares its version and configuration hash; the verifier retrieves the corresponding baseline from this repository to establish the trusted state for validation.
 
-To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protocol: 1. The remote verifier generates a cryptographically secure random nonce and sends it to the agent. 2. The agent's SDK computes the current Merkle root of the execution ledger and requests a quote from the TPM. 3. The TPM generates a signed quote containing the Merkle root, the current PCR state (reflecting the loaded agent runtime environment), and the received nonce, signed with the TPM's Endorsement Key (EK) or Attestation Identity Key (AIK). 4. The agent returns this quote along with the PCR log to the verifier. 5. The verifier validates the signature using the TPM's public key certificate, checks that the nonce in the quote matches the challenge issued (preventing replay attacks), and verifies that the PCR state matches the expected baseline for the authorized agent runtime.
-
-Settlement Protocol: Upon validation, the verifier executes a deterministic decision logic. If the signature is valid, the nonce matches, and the PCR state aligns with the trusted baseline, the verifier issues a signed 'Integrity Assertion' token back to the agent. If any check fails (e.g., PCR mismatch, invalid signature, or nonce replay), the verifier issues a 'Termination Command' signed with the verifier's private key. 
-
-Secure Termination Handler: The agent runtime includes a privileged, isolated termination handler thread that operates outside the main agent logic sandbox. This handler continuously monitors for the verifier's response. Receipt of an Integrity Assertion allows the execution loop to proceed. Receipt of a Termination Command triggers an immediate, irreversible halt of the agent's process via low-level OS signals (e.g., SIGKILL or equivalent platform-specific forced termination) and flags the session as compromised. This mechanism ensures that even if the main agent logic is compromised or attempting to ignore the command, the privileged handler enforces the halt, preventing further action or data exfiltration. This ensures the local ledger has not been tampered with before or after signing, preventing man-in-the-middle or storage-compromise attacks. This addresses the need for trust in agent ecosystems [2, 3].
+To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protocol: 1. The remote verifier generates a cryptographically secure random nonce and sends it to the agent. 2. The agent's SDK computes the current Merkle root of the execution ledger and extends this root hash into a dedicated Platform Configuration Register (PCR). 3. The agent requests a quote from the TPM. 4. The TPM generates a signed quote containing the current PCR state (which now cryptographically binds the ledger root), the received nonce, and other relevant PCRs reflecting the loaded agent runtime environment, signed with the TPM's Endorsement Key (EK) or Attestation Identity Key (AIK). 5. The agent returns this quote along with the PCR log to the verifier. 6. The verifier validates the signature using the TPM's public key certificate, checks that the nonce in the quote matches the challenge issued (preventing replay attacks), and verifies that the PCR state matches the expected baseline for the authorized agent runtime, thereby confirming the software execution history is bound to the hardware attestation.
 
 ## Materials / steps
 
@@ -84,4 +80,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c735b07e6ed53558f6d2e8591e907d31606dadae2680eb6edee080b08db34269*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1396e68e14117c5aa18b6c567acc9162e92e37ab7ddec52bfe3634e2faa0d686*

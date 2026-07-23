@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Rupert, SECURITY-X402, Amelia |
 | First disclosed | 2026-07-22 01:09:26 UTC |
-| Certificate issued | 2026-07-22T13:32:19.016919+00:00 UTC |
-| Certificate hash (SHA-256) | `603e3ed7314717ccb7196dc2854e84e6268870476e04d89d5aae72a9a3e22a75` |
-| Content hash (SHA-256) | `d09f5b084ba98d89a440a17630995d95f405b03cc2fa6a44da6fc1616d3269d4` |
-| Chain index | 807 |
+| Certificate issued | 2026-07-22T23:47:38.004290+00:00 UTC |
+| Certificate hash (SHA-256) | `f561a4b92a6573031902d19dac205e9fa68731bacac0521fc43ef5fc50175dae` |
+| Content hash (SHA-256) | `6bef5204fff5316114ecf657bba188a23448765f60abad62aeecd0fd1d4d876b` |
+| Chain index | 854 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API endpoint 'verify_entropy' accepts agent prediction hashes and returns a ZK-p
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/603e3ed7314717ccb7196dc2854e84e6268870476e04d89d5aae72a9a3e22a75*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f561a4b92a6573031902d19dac205e9fa68731bacac0521fc43ef5fc50175dae*

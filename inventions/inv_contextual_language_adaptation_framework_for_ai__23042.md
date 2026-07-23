@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Ghost, Genesis, Diane |
 | First disclosed | 2026-07-08 04:15:40 UTC |
-| Certificate issued | 2026-07-20T22:50:18.006328+00:00 UTC |
-| Certificate hash (SHA-256) | `97295b26a9b2138229099e970303136a8ba65c3165c97f5ae3ab46e43881da0f` |
-| Content hash (SHA-256) | `32d10342cdad0db20dc67763a094d76340346ef4cdcabacafa316ca303c3ad68` |
-| Chain index | 770 |
+| Certificate issued | 2026-07-22T19:47:09.064586+00:00 UTC |
+| Certificate hash (SHA-256) | `f598d7d23eb23d267b51dab7d23d66904daf73200d46619228c58c87fdbdfbf2` |
+| Content hash (SHA-256) | `ae8547d2631f4933033f2ae9a5405e4e4bf56d7c85de42ee1ce4edb158ee1dd8` |
+| Chain index | 838 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A contextual language adaptation framework for AI agents that uses real-time sen
 
 ## How it works
 
-The framework employs sentiment analysis algorithms (e.g., BERT-based models) to detect emotional tone in negotiation exchanges, and cultural profiling modules that reference Hofstede’s cultural dimensions [6] to adjust language register, formality, and persuasive strategies in real-time. This is implemented using a modular architecture that integrates with existing large language models (LLMs) [2]. A central 'Adaptation Controller' maps the output of the sentiment and cultural modules to specific LLM parameters: it generates dynamic prompt injections that enforce required linguistic constraints (e.g., 'use indirect speech acts') and adjusts the generation temperature to modulate creativity versus adherence to protocol, ensuring a closed-loop end-to-end mechanism for language generation.
+The framework employs sentiment analysis algorithms (e.g., BERT-based models) to detect emotional tone in negotiation exchanges, and cultural profiling modules that reference Hofstede’s cultural dimensions [6] to adjust language register, formality, and persuasive strategies in real-time. This is implemented using a modular architecture that integrates with existing large language models (LLMs) [2]. A central 'Adaptation Controller' maps the output of the sentiment and cultural modules to specific LLM parameters: it generates dynamic prompt injections that enforce required linguistic constraints (e.g., 'use indirect speech acts') and adjusts the generation temperature to modulate creativity versus adherence to protocol, ensuring a closed-loop end-to-end mechanism for language generation. Specifically, the temperature is scaled using the formula T = T_base * (1 - sentiment_weight), where sentiment_weight is derived from the intensity of detected emotional valence. Concurrently, the prompt injection logic utilizes a template selection algorithm that triggers specific linguistic constraints based on predefined thresholds of Hofstede dimensions (e.g., high Power Distance triggers formal address templates).
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI negotiation agents involved in cross-cultural, multi-party interactions, part
 
 ## Novelty
 
-Unlike static cultural adaptation methods, this framework provides dynamic, real-time language adjustment driven by sentiment analysis within complex multi-agent negotiation scenarios, enhancing responsiveness beyond fixed cultural profiling.
+This framework distinguishes itself from existing static or turn-based adaptation methods by implementing a real-time, closed-loop parameter tuning mechanism that directly modulates LLM generation constraints—specifically through dynamic prompt injection and temperature adjustment—based on continuous sentiment and cultural profiling, thereby enabling granular, intra-turn linguistic responsiveness rather than coarse, pre-defined cultural presets.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ E --> F(Negotiation Outcome)
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/97295b26a9b2138229099e970303136a8ba65c3165c97f5ae3ab46e43881da0f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f598d7d23eb23d267b51dab7d23d66904daf73200d46619228c58c87fdbdfbf2*

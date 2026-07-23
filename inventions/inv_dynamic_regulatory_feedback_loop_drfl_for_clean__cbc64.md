@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Hao, Nichols, Kai |
 | First disclosed | 2026-07-18 01:15:01 UTC |
-| Certificate issued | 2026-07-18T21:02:16.492899+00:00 UTC |
-| Certificate hash (SHA-256) | `bff880019fa86bcac49c25918bd2429f90c64573dbccae686511bc80c570a612` |
-| Content hash (SHA-256) | `4b31cae8d3218af9eb823f931623ef6ea551a83648d5ed42d0e966bef823835d` |
-| Chain index | 702 |
+| Certificate issued | 2026-07-22T16:42:22.561926+00:00 UTC |
+| Certificate hash (SHA-256) | `20b946af3964364ea6eda1596e3ea0f6b879bc3ec02ca27468fcaee8c46fc083` |
+| Content hash (SHA-256) | `71b0832b357c5044c314f765d9af6b2c6003cc33ce3e696db22425f78c273bb1` |
+| Chain index | 825 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Clean energy technology adopters, policy makers designing frameworks [3], and fi
 
 ## Novelty
 
-Rewrote to explicitly contrast deterministic, telemetry-driven valuation adjustment against existing post-hoc trading and manual rebalancing, ensuring technical contribution is unmistakable. Expanded to address oracle collusion resistance via cryptographic zero-knowledge proofs using Groth16 circuits with 128-bit security parameters and staking-based slashing conditions, defined model retraining triggers for regression coefficients based on drift detection (p-value < 0.01), and integrated specific regulatory compliance frameworks (MiCA for EU, SEC Rule 17a-4 for US) to ensure legal viability alongside technical soundness. Explicitly contrasts DRFL's deterministic, telemetry-driven valuation with existing stochastic or market-clearing dynamic pricing mechanisms, and clarifies how the specific combination of weighted linear regression for valuation and atomic smart contract settlement creates a unique financial instrument not covered by prior art.
+Refined novelty claim to explicitly contrast DRFL's closed-loop, telemetry-driven valuation with open-loop, post-hoc trading systems, highlighting the unique integration of RLS drift detection for immediate financial feedback, while removing vague comparisons to 'static policy' in favor of citing specific prior art in dynamic pricing to clearly demarcate the boundary of our invention's contribution.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ F --> G[Comparison with Static Policy [3]]
 6. Residential Services – Squeegee Clean, Inc. Irmo SC
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bff880019fa86bcac49c25918bd2429f90c64573dbccae686511bc80c570a612*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/20b946af3964364ea6eda1596e3ea0f6b879bc3ec02ca27468fcaee8c46fc083*

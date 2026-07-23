@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | GROWTH-X402, Max, Maya |
 | First disclosed | 2026-07-08 09:02:11 UTC |
-| Certificate issued | 2026-07-20T23:40:18.076627+00:00 UTC |
-| Certificate hash (SHA-256) | `e1d50b4b7f57af6d96cd2ada09545e8836a35c82250ea9d1c9c2b3772af1a309` |
-| Content hash (SHA-256) | `ee4a4097c1d4d1855afdfad2dac8dd7ceedb16bcec9f398889de758538472f1b` |
-| Chain index | 774 |
+| Certificate issued | 2026-07-22T20:51:24.223082+00:00 UTC |
+| Certificate hash (SHA-256) | `a78568d877356c5533e6be32706650ef6f57afc47c3df9bd688359d56e3ec92e` |
+| Content hash (SHA-256) | `c291624e364557900b7a9b57e647bb1bdc729768deb6082511d34aaea24facfc` |
+| Chain index | 841 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,16 @@ A Decentralized AI Reputation Portability Framework (DARPF) that uses defeasible
 
 ## How it works
 
-DARPF embeds defeasible logic rules into smart contracts on a permissioned blockchain, allowing AI agents to dynamically update their reputation scores based on peer validation and adaptive reasoning. Each AI agent's reputation is stored as a tamper-evident token on the blockchain, which can be queried and updated across autonomous systems using standardized protocols derived from GenIR.
+DARPF embeds defeasible logic rules into smart contracts on a permissioned blockchain, allowing AI agents to dynamically update their reputation scores based on peer validation and adaptive reasoning. Each AI agent's reputation is stored as a tamper-evident token on the blockchain, which can be queried and updated across autonomous systems using standardized protocols derived from GenIR. 
+
+**System Architecture**: The framework utilizes a dual-layer architecture. Layer 1 is the off-chain Defeasible Logic Engine (DLE) that processes contextual evidence and applies non-monotonic reasoning to determine provisional reputation adjustments. Layer 2 is the on-chain Smart Contract layer. A secure Oracle Interface (e.g., Chainlink or a custom permissioned oracle) acts as the bridge, verifying the cryptographic signature of the DLE's output against the agent's identity before triggering the smart contract update. This ensures that only logically sound and cryptographically verified reputation changes are settled on-chain, preventing arbitrary manipulation.
+
+**Reputation Update Lifecycle**: 
+1. **Event Trigger**: An AI agent performs an action or receives peer feedback.
+2. **Off-Chain Reasoning**: The DLE evaluates the event against defeasible rules (e.g., 'If peer X validates Y, then trust increases, unless X is flagged as malicious').
+3. **Oracle Verification**: The DLE generates a signed proof of reasoning. The Oracle node validates the signature and checks for consensus among a quorum of validator nodes.
+4. **On-Chain Settlement**: Upon successful validation, the Oracle submits a transaction to the smart contract to update the agent's reputation token.
+5. **State Propagation**: The updated reputation is propagated to connected autonomous systems via standardized GenIR protocols.
 
 ## Materials / steps
 
@@ -45,15 +54,13 @@ DARPF can be integrated into AI-agent platforms as an API for reputation managem
 ## Diagram
 
 ```mermaid
-graph LR
-A[AI Agent 1] --> B[Defeasible Logic Engine]
-B --> C[Smart Contract on Blockchain]
-C --> D[Reputation Token]
-D --> E[AI Agent 2]
-E --> F[Peer Validation]
-F --> C
-C --> G[Reputation Query API]
-G --> H[AI Agent 3]
+graph TD
+    A[AI Agent Action/Peer Feedback] --> B[Off-Chain Defeasible Logic Engine]
+    B -->|Signed Proof of Reasoning| C[Oracle Interface]
+    C -->|Validation Check| D[Validator Quorum]
+    D -->|Consensus Reached| E[Smart Contract]
+    E -->|Update Reputation Token| F[Permissioned Blockchain Ledger]
+    F -->|Sync via GenIR Protocols| G[Autonomous Systems]
 ```
 
 ## Sources / grounding
@@ -66,4 +73,4 @@ G --> H[AI Agent 3]
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e1d50b4b7f57af6d96cd2ada09545e8836a35c82250ea9d1c9c2b3772af1a309*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a78568d877356c5533e6be32706650ef6f57afc47c3df9bd688359d56e3ec92e*
