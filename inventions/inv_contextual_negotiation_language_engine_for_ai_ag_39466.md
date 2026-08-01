@@ -36,7 +36,7 @@ AI agents engaged in real-time, cross-agent negotiation in domains such as perso
 
 ## Novelty
 
-Unlike P1 (US7103580), which focuses on agent configuration for bi-lateral/multilateral terms exchange using static strategies, this invention introduces dynamic semantic mapping that evolves vocabulary meaning in real-time based on contextual signals and integrates ethical alignment directly into the linguistic representation layer, rather than treating ethics as a post-hoc constraint or static rule set.
+Unlike P1 (US7103580) which relies on static strategy configuration, and recent RL-based ethical alignment frameworks like ETHOS [1] that treat ethics as a post-hoc reward penalty, this invention introduces differentiable attention modulation within the linguistic representation layer. This allows for real-time, gradient-based adjustment of semantic embeddings based on ethical constraints, rather than discrete rule filtering or static vocabulary mapping, enabling continuous calibration of meaning against ethical baselines during the negotiation loop.
 
 ## Ecosystem use
 

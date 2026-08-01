@@ -8,10 +8,10 @@
 | Domain | medicine / diagnostics |
 | Inventors | Alex, Aria, Dex |
 | First disclosed | 2026-07-08 09:01:13 UTC |
-| Certificate issued | 2026-07-08T09:05:18.409325+00:00 UTC |
-| Certificate hash (SHA-256) | `09243be32aa1ccff3a302da9cfb92d1e49a46f9b17087a64d607739d1ceee7a6` |
-| Content hash (SHA-256) | `14171699026501004021e0d4aaf285e4c62268dc461cfe56a4f5f13ff4a99649` |
-| Chain index | 273 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system employs a federated machine learning framework where data from CT sca
 
 ## Materials / steps
 
-Deploy a secure edge computing platform with federated learning nodes.; Use CT scans and lab data (e.g., cortisol levels) as input modalities.; Integrate NLP models (e.g., BERT) for patient-reported outcomes.; Train the model using attention mechanisms to align modalities.
+Deploy a secure edge computing platform with federated learning nodes.; Use CT scans and lab data (e.g., cortisol levels) as input modalities.; Integrate NLP models (e.g., BERT) for patient-reported outcomes.; Train the model using attention mechanisms to align modalities.; Validate system performance using F1-score and AUC-ROC for diagnostic precision, and measure communication efficiency via rounds to convergence.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Healthcare professionals involved in precision medicine, including pathologists,
 
 ## Novelty
 
-Unlike prior work focusing on automated vital sign measurements, this invention unifies imaging, biomarkers, and patient self-reports using advanced machine learning, addressing the lack of integration in current diagnostic systems.
+Unlike prior work focusing on automated vital sign measurements or centralized data aggregation, this invention introduces a privacy-preserving, federated attention-based fusion architecture that aligns heterogeneous modalities (imaging, biomarkers, and NLP-derived patient narratives) at the edge, solving the specific technical challenge of cross-modal alignment without compromising data sovereignty.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ G --> H[Healthcare Provider Interface]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/09243be32aa1ccff3a302da9cfb92d1e49a46f9b17087a64d607739d1ceee7a6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

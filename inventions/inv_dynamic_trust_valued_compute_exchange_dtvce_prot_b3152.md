@@ -24,11 +24,11 @@ The Dynamic Trust-Valued Compute Exchange (DTVCE) protocol introduces a weighted
 
 ## How it works
 
-DTVCE operates by integrating verifiable credentials [4] into a decentralized identifier (DID) system, which is then weighted against real-time governance scores derived from a dynamic capability framework [5]. These weights are applied to compute transactions in a blockchain-based ledger, adjusting the 'value' of compute units based on the trustworthiness of the agent offering them. The protocol finalizes execution through a smart contract that calculates the final token transfer amount by multiplying the base compute unit cost by the agent's dynamic trust-weight, then atomically transfers the agreed tokens from the requester to the provider and updates the ledger to reflect the completed, trust-verified transaction state.
+DTVCE operates by integrating verifiable credentials [4] into a decentralized identifier (DID) system, which is then weighted against real-time governance scores derived from a dynamic capability framework [5]. These weights are applied to compute transactions in a blockchain-based ledger. The protocol finalizes execution through a smart contract that employs a volatility dampening algorithm to smooth trust-weight fluctuations, preventing price oscillations from rapid updates. The contract calculates the final token transfer amount by multiplying the base compute unit cost by the stabilized dynamic trust-weight, then atomically transfers the agreed tokens from the requester to the provider within a defined timeout window to ensure reliability, updating the ledger to reflect the completed, trust-verified transaction state.
 
 ## Materials / steps
 
-Implement a decentralized identifier (DID) system with support for verifiable credentials [4]. Integrate a dynamic governance scoring system [5] to assess agent trustworthiness in real time. Design a blockchain-based ledger to record compute transactions with trust-weighted values. Develop a smart contract module that executes the settlement logic: calculating the trust-adjusted price (Base_Price * Trust_Weight) and performing the atomic token swap and state update. Develop a simulation environment to test trust-based compute allocation and settlement patterns, specifically including stress-testing scenarios for high-frequency trust-weight updates and edge cases in atomic swaps to guarantee trial reliability.
+Implement a decentralized identifier (DID) system with support for verifiable credentials [4]. Integrate a dynamic governance scoring system [5] to assess agent trustworthiness in real time. Design a blockchain-based ledger to record compute transactions with trust-weighted values. Develop a smart contract module that executes the settlement logic: applying a volatility dampening algorithm to trust weights, calculating the trust-adjusted price (Base_Price * Stabilized_Trust_Weight), and performing the atomic token swap with explicit timeout parameters to guarantee completion or revert. Develop a simulation environment to test trust-based compute allocation and settlement patterns, specifically including stress-testing scenarios for high-frequency trust-weight updates and edge cases in atomic swaps to guarantee trial reliability.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents participating in compute-bartering networks, particularly those requir
 
 ## Novelty
 
-Unlike static trust domain extensions [P1] or policy-based protocol construction [P3], DTVCE introduces a continuous, real-time economic adjustment mechanism where compute unit pricing is dynamically modulated by a composite trust-weight (Verifiable Credentials + Governance Scores) at the moment of atomic settlement, creating a fluid market value for compute rather than a binary access control or static policy assertion.
+Refined novelty claim to focus on the specific technical solution of volatility dampening and atomic timeouts, distinguishing DTVCE from static trust models [P1] and policy-based routing [P3] by addressing the instability of real-time economic adjustments.
 
 ## Ecosystem use
 

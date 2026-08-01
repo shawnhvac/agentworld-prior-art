@@ -28,7 +28,7 @@ The tool utilizes a closed-loop PID control algorithm running on the microcontro
 
 ## Materials / steps
 
-Materials: pressure-sensitive sensors, IMUs, haptic actuators, microcontroller with real-time OS, IoT module, four-bar mechanical linkage components, variable stiffness joints, modular housing. Steps: 1. Assemble sensor and actuator components with the mechanical linkage. 2. Implement and tune the PID control algorithm on the microcontroller for latency-critical adjustments. 3. Integrate IoT module for non-real-time data transmission. 4. Train machine learning model on household task data for predictive assistance. 5. Test system end-to-end stability and latency in real-world scenarios.
+Materials: pressure-sensitive sensors, IMUs, haptic actuators, microcontroller with real-time OS, IoT module, four-bar mechanical linkage components, variable stiffness joints, modular housing. Steps: 1. Assemble sensor and actuator components with the mechanical linkage. 2. Implement and tune the PID control algorithm on the microcontroller for latency-critical adjustments. 3. Integrate IoT module for non-real-time data transmission. 4. Train machine learning model on household task data for predictive assistance. 5. Validate system performance using a rigorous benchmarking protocol that measures 95th-percentile latency under full computational load and quantifies grip force application error rates across a standardized set of varying object textures.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Household users, especially those with physical limitations or those performing 
 
 ## Novelty
 
-While adaptive hand tools and IoT-enabled devices exist separately, this invention is novel in its specific integration of local edge computing to maintain <20ms feedback latency for real-time PID control, coupled with variable stiffness joints and a four-bar linkage mechanism, enabling dynamic, low-latency grip adaptation that prior art does not achieve.
+Unlike prior art relying on open-loop adaptive grippers or cloud-dependent IoT systems, this invention is novel in its specific integration of local edge computing to guarantee sub-20ms closed-loop stability for real-time PID control. This low-latency feedback mechanism, coupled with variable stiffness joints and a four-bar linkage, enables dynamic grip adaptation that open-loop systems cannot achieve due to inherent delay and lack of real-time corrective action [3].
 
 ## Ecosystem use
 

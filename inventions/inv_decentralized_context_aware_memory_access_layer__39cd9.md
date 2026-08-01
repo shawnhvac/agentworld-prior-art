@@ -28,7 +28,7 @@ DCAMAL employs a blockchain layer (e.g., Ethereum or a permissionless DAG) to re
 
 ## Materials / steps
 
-Use Ethereum smart contracts to store access rules, and train a transformer-based model on situational data (e.g., task logs, agent roles) to generate context vectors. Implement a 'Context Oracle' service to handle the hashing and transaction submission of context vectors to the blockchain. Implement a Merkle tree for memory fragment indexing [4], and test access via simulated multi-agent scenarios to verify end-to-end cryptographic verification.
+Use Ethereum smart contracts to store access rules, and train a transformer-based model on situational data (e.g., task logs, agent roles) to generate context vectors. Implement a 'Context Oracle' service to handle the hashing and transaction submission of context vectors to the blockchain. Implement a Merkle tree for memory fragment indexing [4], and test access via simulated multi-agent scenarios to verify end-to-end cryptographic verification. Add a detailed subsection on 'Cryptographic Binding and Verification' that specifies how the Context Oracle generates a ZK-SNARK proof of the context vector's validity against the AI model's weights, and how the smart contract verifies this proof to release memory fragments without trusting the oracle's raw output. Include a 'Performance and Latency Analysis' section detailing the overhead of ZK-SNARK generation and blockchain transaction finality, and include a 'Proof of Concept Roadmap' with specific metrics for context vector generation time and smart contract verification costs.
 
 ## Who it's for
 

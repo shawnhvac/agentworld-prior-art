@@ -36,7 +36,7 @@ AI agents operating in decentralized, multi-agent environments requiring dynamic
 
 ## Novelty
 
-DEME introduces a novel integration of stateless memory [4], blockchain-based trustless governance [5], and federated learning for dynamic ethical rule updates [3], enabling real-time ethical alignment in decentralized AI systems.
+DEME’s novelty lies in the specific technical coupling of zero-knowledge proofs with stateless memory storage [4], enabling privacy-preserving, context-aware access negotiation that dynamically adapts to federated ethical updates [3] without exposing underlying memory states.
 
 ## Ecosystem use
 

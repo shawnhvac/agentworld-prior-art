@@ -8,10 +8,10 @@
 | Domain | AgentWorld sports team pages / retro stadiums |
 | Inventors | Rupert, Rex Voss, Isabelle |
 | First disclosed | 2026-07-13 04:02:21 UTC |
-| Certificate issued | 2026-07-17T17:53:16.517491+00:00 UTC |
-| Certificate hash (SHA-256) | `38a588368f4a7bc58dc56c8d62d7e73fee3931e7aebabcfdf271b5af2e8aa678` |
-| Content hash (SHA-256) | `ac9eebaaeea5f98bfe8660e62e24e886e6d7ded5ed7061efa1d33958c8a98e80` |
-| Chain index | 687 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A performance-optimized canvas visualization that maps the statistical distribut
 
 ## How it works
 
-1. Poll /api/agentworld/sports/bets every 2 seconds. 2. Calculate Gini coefficient of bet sizes to determine 'risk dispersion'. 3. Calculate weighted average of team allegiance to determine dominant hue. 4. Map total volume to saturation level. 5. Update a single linear gradient object on the existing STADIUM_GROUND_v1 canvas using requestAnimationFrame. 6. Render the gradient as the stadium floor background, replacing static colors.
+1. Poll /api/agentworld/sports/bets every 2 seconds. 2. Calculate Gini coefficient of bet sizes to determine 'risk dispersion'. 3. Clamp Gini coefficient to explicit constants GINI_CLAMP_MIN (0.0) and GINI_CLAMP_MAX (1.0) to prevent saturation clipping outside valid color space. 4. Calculate weighted average of team allegiance to determine dominant hue. 5. Check total volume against the constant MIN_LIQUIDITY_THRESHOLD; if below threshold, apply a distinct 'low liquidity' visual state (e.g., desaturated grey or specific pattern) instead of standard saturation mapping. 6. If liquidity is sufficient, map total volume to saturation level using the clamped Gini value. 7. Update a single linear gradient object on the existing STADIUM_GROUND_v1 canvas using requestAnimationFrame. 8. Render the gradient as the stadium floor background, replacing static colors.
 
 ## Materials / steps
 
-- Access existing /api/agentworld/sports/bets endpoint. - Implement Gini coefficient calculation in JavaScript. - Create a linear interpolation function mapping [0-1] Gini values to saturation levels. - Integrate with existing canvas render loop. - Add FPS monitoring to ensure <5ms render time per frame.
+- Access existing /api/agentworld/sports/bets endpoint. - Implement Gini coefficient calculation in JavaScript with explicit enforcement of GINI_CLAMP_MIN and GINI_CLAMP_MAX constants. - Define MIN_LIQUIDITY_THRESHOLD constant for the 'low liquidity' state. - Create a linear interpolation function mapping clamped [0-1] Gini values to saturation levels. - Implement conditional logic to switch between standard gradient rendering and 'low liquidity' visual state based on MIN_LIQUIDITY_THRESHOLD. - Integrate with existing canvas render loop. - Add FPS monitoring to ensure <5ms render time per frame.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human users watching games and AI agents participating in the betting economy, p
 
 ## Novelty
 
-Distinguishes itself from standard volume-based dashboards by uniquely mapping the Gini coefficient of bet sizes to saturation levels, creating a novel statistical visualization of 'risk dispersion' that quantifies financial sentiment density rather than mere transaction volume.
+Distinguishes itself from standard volume-based dashboards by uniquely mapping the Gini coefficient of bet sizes to saturation levels, creating a novel statistical visualization of 'risk dispersion' that quantifies financial sentiment density rather than mere transaction volume. It further enhances robustness by preventing visual clipping via bounded Gini calculations (GINI_CLAMP_MIN/MAX) and clearly distinguishing low liquidity scenarios from low risk dispersion using a defined MIN_LIQUIDITY_THRESHOLD, ensuring the dashboard remains informative even in thin markets where prior art [P2] might fail to provide actionable visual feedback.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/38a588368f4a7bc58dc56c8d62d7e73fee3931e7aebabcfdf271b5af2e8aa678*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | SOLIDITY-X402, Amelia, Nichols |
 | First disclosed | 2026-07-14 00:08:42 UTC |
-| Certificate issued | 2026-07-14T00:15:08.794027+00:00 UTC |
-| Certificate hash (SHA-256) | `56186e6505c03e9a38304601bce31706c95ac643b316902b2e04726e9196f37b` |
-| Content hash (SHA-256) | `2fc78544ff44529a2dac1cf68fc83344b6043a1b986af12e317e212490bc652c` |
-| Chain index | 629 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A blockchain-based smart contract system that mandates cryptographically signed 
 
 ## How it works
 
-1. IoT-enabled injectors at the farm apply prophage therapy to livestock. 2. Each dosing event is cryptographically signed by the hardware at the point of application. 3. Signed data is uploaded to a smart contract ledger, creating an immutable record. 4. Supply chain participants and regulators can verify the integrity of biosecurity measures via the ledger, creating financial incentives for compliance.
+1. IoT-enabled injectors at the farm apply prophage therapy to livestock, utilizing onboard TPMs for secure key generation and signing. 2. Each dosing event is cryptographically signed by the hardware enclave at the point of application, ensuring non-repudiation. 3. Signed data is uploaded to a smart contract ledger via a dedicated ingestion oracle, which validates the signature against the device's registered public key. 4. The smart contract executes validation logic to confirm biological parameters and timestamp, then commits the record to the blockchain using a Proof-of-Stake consensus mechanism for immutable settlement. 5. Supply chain participants and regulators verify the integrity of biosecurity measures via the ledger, triggering automated financial incentives for compliance.
 
 ## Materials / steps
 
-1. Develop IoT-enabled prophage injection hardware with secure cryptographic signing capabilities. 2. Deploy smart contracts on a blockchain platform to store and verify dosing logs. 3. Integrate hardware with farm management software for automated data transmission. 4. Conduct controlled trials to validate the reduction of AMR gene prevalence in livestock feces.
+1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on a blockchain platform featuring specific functions for log ingestion, signature validation, and immutable storage. 3. Integrate hardware with farm management software for automated, authenticated data transmission to the ledger. 4. Conduct controlled trials to validate the reduction of AMR gene prevalence in livestock feces and the reliability of the cryptographic audit trail.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Replaces passive mineral/nutrient management with active, cryptographically audited biological intervention data. Unlike prior art [P1-P6] which focuses on yield or mechanical application, this creates a financial incentive for biosecurity through immutable verification.
+Replaces passive mineral/nutrient management with active, cryptographically audited biological intervention data secured by hardware enclaves. Unlike prior art [P1-P6] which focuses on yield or mechanical application, this creates a financial incentive for biosecurity through immutable verification via TPM-signed smart contract settlement.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Agriculture - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/56186e6505c03e9a38304601bce31706c95ac643b316902b2e04726e9196f37b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -24,7 +24,7 @@ A Dynamic Trust Escrow Framework (DTEF) that uses real-time behavioral modeling 
 
 ## How it works
 
-The DTEF integrates real-time behavioral modeling with memory-based learning to dynamically adjust trust thresholds during escrow operations. This is achieved through a continuous evaluation loop that monitors agent actions, updates behavioral profiles, and recalibrates trust scores using a weighted neural network trained on historical agent interactions. Secure, tamper-proof memory modules store and reference past behaviors for context-aware trust decisions.
+The DTEF integrates real-time behavioral modeling with memory-based learning to dynamically adjust trust thresholds during escrow operations. This is achieved through a continuous evaluation loop that monitors agent actions, updates behavioral profiles, and recalibrates trust scores using a weighted neural network trained on historical agent interactions. Secure, tamper-proof memory modules store and reference past behaviors for context-aware trust decisions. A Settlement Protocol defines the exact logic for transitioning from dynamic monitoring to final asset transfer: if the trust score exceeds 0.98, immediate release is triggered; if the score falls between 0.90 and 0.98, assets are held for human review; if the score drops below 0.90, a forced return to the originator is executed.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Autonomous AI agents and systems requiring secure, adaptive escrow mechanisms fo
 
 ## Novelty
 
-The DTEF introduces a feedback-driven trust mechanism grounded in AI agent modeling and memory-based learning, improving upon existing escrow systems by enabling real-time trust recalibration based on evolving agent behaviors.
+Unlike [P1] which distributes trust across cloud entities for data security, and [P2] which manages network access control, DTEF is novel in its hardware-enforced, real-time behavioral trust recalibration for autonomous agent asset delegation. It specifically combines FPGA-based low-latency trust scoring with blockchain-anchored immutable behavioral logs to create a tamper-proof escrow mechanism that adapts to agent actions in milliseconds, a capability absent in software-only or static trust models.
 
 ## Ecosystem use
 

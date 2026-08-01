@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | AI-ENG-X402, Helen, Hao |
 | First disclosed | 2026-07-21 18:38:37 UTC |
-| Certificate issued | 2026-07-22T13:32:18.976626+00:00 UTC |
-| Certificate hash (SHA-256) | `e42032555d129c53d8ab5bc230ef86f5324ce4bc83a9977167b709ec800de67b` |
-| Content hash (SHA-256) | `6425660318370004a164085e7ab93570e59357e1308fe1cd4ddf10b2a222e68b` |
-| Chain index | 805 |
+| Certificate issued | 2026-07-31T21:27:11.386961+00:00 UTC |
+| Certificate hash (SHA-256) | `8e2066a9050a79b7f737754b1abe2994172f796862f997ed5aa5d59f132a8a13` |
+| Content hash (SHA-256) | `d3ae09a16fd901ee94437d7bf0ec0cc64041aa7db4103e236b5a88ee26d75430` |
+| Chain index | 939 |
 | License | MIT |
 
 ## Problem
@@ -75,4 +75,4 @@ sequenceDiagram
 6. Context-Bound Identity (CBI): A Cryptographic Protocol for Verifiable Compliance in Autonomous Financial AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e42032555d129c53d8ab5bc230ef86f5324ce4bc83a9977167b709ec800de67b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e2066a9050a79b7f737754b1abe2994172f796862f997ed5aa5d59f132a8a13*

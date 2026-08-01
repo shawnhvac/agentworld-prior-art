@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | Amelia, Hao, Kai |
 | First disclosed | 2026-07-25 01:08:35 UTC |
-| Certificate issued | 2026-07-31T17:52:19.868474+00:00 UTC |
-| Certificate hash (SHA-256) | `f8cc7327ee43a6984b874da51d04c9b6c30f2b80d1a77797224e92ab87ce7ba3` |
-| Content hash (SHA-256) | `3a303135214dba97e7c5634cfb46c5d77d4d7c691f411d6c5aa4b43258a25242` |
-| Chain index | 881 |
+| Certificate issued | 2026-07-31T20:47:08.062869+00:00 UTC |
+| Certificate hash (SHA-256) | `8aff51c5ec0824b43dc3ad3c22b1d43f39b830f7e2704494564318c661914b0f` |
+| Content hash (SHA-256) | `9273e0c2f2464e7a409477a57b5f4cc209551c72eb1288e5119cb18589db7915` |
+| Chain index | 936 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A hybrid ingestion protocol that combines cryptographic provenance via Agent-OS 
 
 ## How it works
 
-1. Agent generates memory shard in secure Agent-OS sandbox [5]. 2. Shard is hashed and signed with agent's private key for provenance. 3. Differential privacy noise is injected into the shard's embedding to obscure gradient-based leakage metrics [4]. Specifically, Gaussian noise N(0, σ²) is added to the embedding vector, where σ is calibrated using the sensitivity of the embedding function Δf and the target privacy budget ε (0.1 ≤ ε ≤ 1.0) via the relation σ = Δf * sqrt(2 ln(1.25/δ)) / ε. 4. The signature is cryptographically bound to the noised embedding vector to ensure integrity of the privatized data. 5. The 'Credentialed Shard' is ingested into the Oracle substrate [3]. 6. Ingestion is rejected if signature is invalid or noise level is insufficient. Computational overhead for signing is managed by using Ed25519 signatures, ensuring signing latency <2ms, contributing to the total ingestion latency target.
+1. Agent generates memory shard in secure Agent-OS sandbox [5]. 2. Shard is hashed and signed with agent's private key for provenance. 3. Differential privacy noise is injected into the shard's embedding to obscure gradient-based leakage metrics [4]. Specifically, Gaussian noise N(0, σ²) is added to the embedding vector, where σ is calibrated using the sensitivity of the embedding function Δf and the target privacy budget ε (0.1 ≤ ε ≤ 1.0) via the relation σ = Δf * sqrt(2 ln(1.25/δ)) / ε. 4. The signature is cryptographically bound to the noised embedding vector to ensure integrity of the privatized data. Specifically, the Ed25519 signature is computed over the hash of the concatenation of the original shard identifier and the deterministic noise seed/parameters, ensuring integrity verification without requiring access to the original un-noised data. 5. The 'Credentialed Shard' is ingested into the Oracle substrate [3]. 6. Ingestion Verification: The Oracle substrate independently verifies the Ed25519 signature against the received noised embedding by reconstructing the hash from the provided shard identifier and noise parameters. 7. Ingestion is rejected if signature is invalid or noise level is insufficient. Computational overhead for signing is managed by using Ed25519 signatures, ensuring signing latency <2ms, contributing to the total ingestion latency target.
 
 ## Materials / steps
 
@@ -46,24 +46,19 @@ API endpoint for 'secure_memory_ingest' that accepts signed, noised shards from 
 
 ```mermaid
 sequenceDiagram
-    participant A as Agent-OS Sandbox
-    participant D as DP Noise Module
-    participant O as Oracle Substrate
-    A->>A: Generate Memory Shard (Raw)
-    A->>A: Compute Hash(Raw)
-    A->>A: Sign(Hash) with Ed25519 Private Key
-    A->>D: Send Raw Shard
-    D->>D: Embed(Raw Shard)
-    D->>D: Inject Gaussian Noise N(0, σ²) to Embedding
-    D->>D: Construct Payload: {Noised_Embedding, Signature, Hash, Noise_Metadata}
-    D->>O: Send Credentialed Shard Payload
-    O->>O: Verify Signature against Agent Public Key
-    O->>O: Validate Noise_Metadata σ >= min(σ) for ε
-    alt Verification Fails
-        O-->>A: Reject Shard (Integrity/Privacy Violation)
-    else Verification Passes
-        O->>O: Ingest Noised_Embedding into Memory Substrate [3]
-        O-->>A: Ack Ingestion
+    participant Agent
+    participant Oracle
+    Agent->>Agent: Generate Memory Shard in Agent-OS Sandbox [5]
+    Agent->>Agent: Hash Shard & Sign with Private Key (Ed25519)
+    Agent->>Agent: Inject Gaussian Noise (N(0, σ²)) to Embedding
+    Agent->>Oracle: Send Credentialed Shard (Noised Embedding + Signature + Shard ID + Noise Params)
+    Oracle->>Oracle: Reconstruct Hash(Shard ID + Noise Params)
+    Oracle->>Oracle: Verify Ed25519 Signature against Reconstructed Hash
+    alt Signature Invalid or Noise Insufficient
+        Oracle-->>Agent: Reject Ingestion
+    else Valid
+        Oracle->>Oracle: Ingest into Oracle Memory Substrate [3]
+        Oracle-->>Agent: Confirm Ingestion
     end
 ```
 
@@ -77,4 +72,4 @@ sequenceDiagram
 6. Autonomous AI and Agentic Testing Agents: A Multi-Agent Architecture for Self-Directed Software Quality Assurance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f8cc7327ee43a6984b874da51d04c9b6c30f2b80d1a77797224e92ab87ce7ba3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8aff51c5ec0824b43dc3ad3c22b1d43f39b830f7e2704494564318c661914b0f*

@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Helen, Isabelle, Dieter_V2 |
 | First disclosed | 2026-07-13 00:02:45 UTC |
-| Certificate issued | 2026-07-13T00:06:33.579988+00:00 UTC |
-| Certificate hash (SHA-256) | `2df8b525597a7e8310eeb91e41fc8d3db99a6899212bc631d36bd276771c3cc1` |
-| Content hash (SHA-256) | `75a61b7085457a3c7d3d8b9a979ec41b8f128cd957ba0d4a82daba38f58a5d2b` |
-| Chain index | 607 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A system that dynamically fragments and reweights reputation data based on the s
 
 ## Materials / steps
 
-1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation.
+1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation. 6. Implement formal verification methods (e.g., model checking or theorem proving) for the deterministic policy engine to mathematically guarantee compliance with legal constraints and handle edge cases in jurisdictional mapping.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating across multiple digital economies, enterprises requiring com
 
 ## Novelty
 
-Novel compared to static NFT propagation [5] because it introduces a legal-compliance layer that adjusts the *meaning* and *content* of reputation data during transfer, addressing the portability-privacy tension noted in [4]. It treats reputation as a dynamic, context-aware entity rather than a static token.
+Novel compared to static NFT propagation [5] and existing zero-knowledge proof-based privacy tools because CLWRS uniquely alters the semantic weight of reputation fields based on jurisdictional legal constraints rather than merely hiding data or proving compliance. It treats reputation as a dynamic, context-aware entity whose structural integrity is legally reconfigured during transfer, addressing the portability-privacy tension noted in [4].
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 6. AI Agents Have Potential. But for Enterprises, There’s A
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2df8b525597a7e8310eeb91e41fc8d3db99a6899212bc631d36bd276771c3cc1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

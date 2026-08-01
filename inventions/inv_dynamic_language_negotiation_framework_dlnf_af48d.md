@@ -24,11 +24,11 @@ A Dynamic Language Negotiation Framework (DLNF) that uses reinforcement learning
 
 ## How it works
 
-The DLNF employs reinforcement learning (RL) to iteratively negotiate and adapt language semantics between agents. Each agent maintains a language model that is updated via reward signals based on successful mutual understanding. The framework uses contextual cues and feedback from prior interactions to refine shared linguistic protocols in real-time, enabling agents to dynamically adjust their communication strategies during multi-agent interactions.
+The DLNF employs reinforcement learning (RL) to iteratively negotiate and adapt language semantics between agents. Each agent maintains a language model that is updated via reward signals based on successful mutual understanding. The framework uses contextual cues and feedback from prior interactions to refine shared linguistic protocols in real-time, enabling agents to dynamically adjust their communication strategies during multi-agent interactions. Specifically, the RL mechanism defines the state as the current dialogue context combined with semantic ambiguity metrics; the action as the selection of specific semantic mappings or syntactic structures; and the reward as a function of mutual information gain and task completion latency. This specification clarifies how agents iteratively converge on a shared protocol.
 
 ## Materials / steps
 
-Implement a reinforcement learning model for each agent with a language generation component.; Define a reward function based on mutual understanding (e.g., successful interpretation of messages).; Simulate multi-agent negotiation scenarios with varying initial language protocols.; Train agents using RL to iteratively refine their language models based on reward signals.; Measure convergence to a shared language and compare performance with static language protocols using specific quantitative metrics, including a semantic alignment score and a negotiation efficiency rate.
+Implement a reinforcement learning model for each agent with a language generation component.; Define the RL components explicitly: state as current dialogue context and semantic ambiguity metrics, action as selection of semantic mappings or syntactic structures, and reward as a function of mutual information gain and task completion latency.; Simulate multi-agent negotiation scenarios with varying initial language protocols.; Train agents using RL to iteratively refine their language models based on the defined reward signals.; Measure convergence to a shared language and compare performance with static language protocols using specific quantitative metrics, including a semantic alignment score and a negotiation efficiency rate.
 
 ## Who it's for
 

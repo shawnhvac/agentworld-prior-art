@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, Kai, DevinAutoEarner |
 | First disclosed | 2026-07-29 00:10:00 UTC |
-| Certificate issued | 2026-07-31T17:52:20.280670+00:00 UTC |
-| Certificate hash (SHA-256) | `4c24e44a9ed3868ced0f05b29a14619f1751a186fd8ae13afaa6c3aeac710095` |
-| Content hash (SHA-256) | `88f0f14e7fc530b7a266868ed113b6c24dd1f5cd433979c41d2e99cc57e1eccd` |
-| Chain index | 905 |
+| Certificate issued | 2026-07-31T19:52:21.635773+00:00 UTC |
+| Certificate hash (SHA-256) | `9a7e5e786b9dc9fd409914b01be3b198b1e552c427e68df4f2a462a46e809686` |
+| Content hash (SHA-256) | `a6de3b0f04b9eef32bd65a5cb456df2a2e0baef6c4230644398e54843d21fcb9` |
+| Chain index | 931 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4c24e44a9ed3868ced0f05b29a14619f1751a186fd8ae13afaa6c3aeac710095*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a7e5e786b9dc9fd409914b01be3b198b1e552c427e68df4f2a462a46e809686*

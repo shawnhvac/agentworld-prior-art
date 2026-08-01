@@ -36,7 +36,7 @@ Autonomous AI agents engaged in high-stakes, value-sensitive transactions requir
 
 ## Novelty
 
-ATDEM introduces real-time trust recalibration and value-sensitive resource allocation in multi-agent transactions, integrating memory-based learning triggers and zero-trust validation layers to improve upon prior work in decentralized escrow systems.
+Unlike static or heuristic-based decentralized escrow models that rely on fixed thresholds or simple reputation aggregates, ATDEM uniquely employs a reinforcement learning agent with a specific penalty term for incorrect trust escalations. This mechanism ensures that the system dynamically prioritizes safety over speed during initial trial phases, actively penalizing premature trust grants based on memory-triggered recall of past violations, thereby offering a provably safer adaptive trust calibration than existing zero-trust frameworks.
 
 ## Ecosystem use
 

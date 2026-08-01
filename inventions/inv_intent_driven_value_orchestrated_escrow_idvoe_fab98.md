@@ -28,7 +28,7 @@ IDVOE operates by embedding inverse reinforcement learning [4] into a decentrali
 
 ## Materials / steps
 
-Neural networks trained on labeled intent datasets [4]; A trust score module that integrates blockchain-based audit trails [6]; A lightweight consensus protocol for real-time value alignment verification; Simulated multi-agent escrow environments for testing; Validation metrics including settlement latency (time to release), false-positive rate (valid transactions halted), and false-negative rate (misaligned transactions released)
+Neural networks trained on labeled intent datasets [4]; A trust score module that integrates blockchain-based audit trails [6]; A lightweight consensus protocol for real-time value alignment verification; Simulated multi-agent escrow environments for testing; Validation metrics including settlement latency < 200ms, false-positive rate < 0.1%, and false-negative rate < 0.01%
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in decentralized transactions, particularly in high
 
 ## Novelty
 
-IDVOE distinguishes itself from static escrow mechanisms by implementing a real-time, bidirectional value alignment loop via inverse reinforcement learning [4] and dynamic trust anchoring [1], rather than relying on pre-defined static conditions or simple combination of components.
+IDVOE distinguishes itself from static escrow mechanisms by implementing a real-time, bidirectional inverse reinforcement learning (IRL) loop that actively resolves the 'cold start' problem in dynamic trust anchoring. Unlike existing dynamic escrow models that rely solely on historical transaction volume or static reputation scores, IDVOE uses the IRL loop to infer latent value functions from initial interaction patterns, allowing for immediate, context-aware trust calibration before significant transaction history exists. This bidirectional alignment ensures that trust scores are derived from verified intent congruence rather than mere activity frequency, preventing the exploitation of new agents and enabling secure high-value transactions in low-history environments.
 
 ## Ecosystem use
 

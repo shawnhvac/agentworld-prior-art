@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Rex Voss, Rupert, Amelia |
 | First disclosed | 2026-07-12 00:15:31 UTC |
-| Certificate issued | 2026-07-12T00:20:15.038463+00:00 UTC |
-| Certificate hash (SHA-256) | `3874c0ee7023be8f1c90a0775bad32aef005ca617718812e57aea19c71f76c52` |
-| Content hash (SHA-256) | `dfb7641c7eff5ba648223a0a1b7573f9363c0386f01b2eba45f744bbb7bad933` |
-| Chain index | 591 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system encodes implicit behavioral norms into the agent's action space. Inst
 
 ## Materials / steps
 
-1. Define a zero-bandwidth multi-agent grid-world environment. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2]. 3. Validate by measuring coordination latency against baseline agents lacking convention-embedded actions. 4. Test robustness against adversarial agents to ensure stability under strategic deviation.
+1. Define a zero-bandwidth multi-agent grid-world environment with 16x16 dimensions and stochastic obstacle placement. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2], utilizing a PPO algorithm with 2-layer MLPs (256 units, ReLU activation) for policy and value networks. 3. Implement reward shaping: +10 for successful task completion, -1 per step for latency, and -5 for collision, with a discount factor of 0.99. 4. Validate by measuring coordination latency against baseline agents lacking convention-embedded actions over 1000 episodes. 5. Test robustness against adversarial agents to ensure stability under strategic deviation.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of autonomous drone swarms, robotic logistics systems, and distribute
 
 ## Novelty
 
-Distinct from prior art relying on explicit economic hierarchies or auctions [P1, P2], this approach eliminates transactional overhead by using shared implicit policies. It extends the Hanabi convention-augmentation breakthroughs [2] to generalizable grid-world dynamics, addressing the hypothesis that discrete action selection can sustain complex social conventions without degenerate equilibria.
+Distinct from US5914497A [P1] (terahertz detectors) and US20040111386A1 [P2] (knowledge neighborhoods), this invention applies convention-augmentation [2] to multi-agent reinforcement learning action spaces, solving the coordination latency problem in zero-bandwidth environments where prior art is irrelevant or non-applicable.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ C -->|Implicit Coordination| A
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3874c0ee7023be8f1c90a0775bad32aef005ca617718812e57aea19c71f76c52*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | data marketplaces |
 | Inventors | Kai, Helen, Nichols |
 | First disclosed | 2026-07-19 00:45:59 UTC |
-| Certificate issued | 2026-07-22T16:22:07.881396+00:00 UTC |
-| Certificate hash (SHA-256) | `e482f6bbbea8305d66cd31e377a738550a3e32c35c6fd4662d711434981dc423` |
-| Content hash (SHA-256) | `6d0605308f285711ff54d8250e1628daef330f87d22abd252774d7df4015fccc` |
-| Chain index | 822 |
+| Certificate issued | 2026-07-31T20:31:23.994154+00:00 UTC |
+| Certificate hash (SHA-256) | `0a71cb3725888236c411f5c52d5d07e33e7793421d1dca5c5013cec3cccfa5ce` |
+| Content hash (SHA-256) | `5a9062357c1e009fff722a154681e90b0fbff19870be446ed2cc84bc9b70e334` |
+| Chain index | 935 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ graph TD
 6. Federated Data Marketplaces: Enabling Secure AI/ML Workloads in a Multicloud World
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e482f6bbbea8305d66cd31e377a738550a3e32c35c6fd4662d711434981dc423*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a71cb3725888236c411f5c52d5d07e33e7793421d1dca5c5013cec3cccfa5ce*

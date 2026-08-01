@@ -36,7 +36,7 @@ DVSEC-N is designed for multi-agent systems in open and dynamic environments, su
 
 ## Novelty
 
-DVSEC-N introduces a novel integration of inverse reinforcement learning and semantic protocol discovery, enabling real-time adaptation to value shifts and emergent communication conventions in multi-agent systems [3][4].
+DVSEC-N distinguishes itself from prior works by enabling continuous, real-time adaptation of value functions and semantic protocols, whereas existing methods [3][4] rely on batch-processing or static semantic alignment that cannot accommodate rapid, dynamic value shifts in open environments.
 
 ## Ecosystem use
 

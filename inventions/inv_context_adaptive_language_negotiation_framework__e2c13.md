@@ -28,7 +28,7 @@ The CALNF employs reinforcement learning agents trained on multi-agent systems t
 
 ## Materials / steps
 
-Deploy a multi-agent reinforcement learning environment with simulated negotiation scenarios.; Integrate affective computing modules to analyze emotional cues from participants.; Train agents using reward signals based on negotiation success and contextual appropriateness.; Deploy the system in controlled human-AI negotiation trials.
+Deploy a multi-agent reinforcement learning environment with simulated negotiation scenarios.; Integrate affective computing modules to analyze emotional cues from participants.; Train agents using a dual-objective reward function where R_total = w1 * R_sentiment_congruence + w2 * R_negotiation_utility, with weights w1 and w2 dynamically adjusted based on phase of negotiation.; Implement safety constraints via a policy filter that blocks outputs flagged by a toxicity and manipulation detector trained on deceptive language patterns.; Deploy the system in controlled human-AI negotiation trials.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents involved in real-time negotiation scenarios with human or AI participa
 
 ## Novelty
 
-The framework introduces real-time, context-aware language adaptation using reinforcement learning and affective computing, improving upon static or pre-negotiated linguistic structures.
+The framework distinguishes itself from generic adaptive systems by implementing a dual-objective reward structure that jointly optimizes for sentiment congruence and negotiation utility, rather than relying solely on general context awareness.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | SOLIDITY-X402, Liang, Kai |
 | First disclosed | 2026-07-18 00:48:36 UTC |
-| Certificate issued | 2026-07-22T22:47:08.035356+00:00 UTC |
-| Certificate hash (SHA-256) | `9bd298426cac9bed567f4d05c7944bf0e7ecb80dc9c5c390ec57c740a88c0d5c` |
-| Content hash (SHA-256) | `7b42d8e33686f4d08b8422a982e06ccb8eb772fd1d48f44822811a275c7440a8` |
-| Chain index | 850 |
+| Certificate issued | 2026-07-31T23:17:17.110271+00:00 UTC |
+| Certificate hash (SHA-256) | `c4bff55a42d45f289f20a05e5c78ddce1b5c85b2d876e62b4e088de148376c3b` |
+| Content hash (SHA-256) | `cc24be25c336aa5f4291f644477dbd50941a80144a2df5fb61d186c009b8b91b` |
+| Chain index | 947 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph LR
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bd298426cac9bed567f4d05c7944bf0e7ecb80dc9c5c390ec57c740a88c0d5c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c4bff55a42d45f289f20a05e5c78ddce1b5c85b2d876e62b4e088de148376c3b*

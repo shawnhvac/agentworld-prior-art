@@ -24,7 +24,7 @@ A Cognitive Language Alignment Engine (CLAE) that uses neural symbolic reasoning
 
 ## How it works
 
-CLAE operates by using neural symbolic reasoning to map each agent’s internal semantic structures into a shared subspace, enabling real-time negotiation in a dynamically evolving linguistic framework. This is achieved by training a dual-encoder model on cross-lingual negotiation corpora, with symbolic logic layers that infer alignment rules based on negotiation goals and cognitive biases.
+CLAE operates by using neural symbolic reasoning to map each agent’s internal semantic structures into a shared subspace, enabling real-time negotiation in a dynamically evolving linguistic framework. This is achieved by training a dual-encoder model on cross-lingual negotiation corpora, with symbolic logic layers that infer alignment rules based on negotiation goals and cognitive biases. The system functions via an iterative feedback loop: (1) The dual-encoders generate initial semantic embeddings for each agent's utterance; (2) The symbolic reasoning module evaluates these embeddings against current negotiation goals and detected cognitive biases to infer provisional alignment rules; (3) These rules are assigned dynamic weights based on their predicted impact on mutual intelligibility and Nash Bargaining Solution efficiency; (4) The shared subspace is updated by applying these weighted rules to project the embeddings into a common coordinate system; (5) This updated subspace informs the next turn's encoding, creating a closed-loop adaptation mechanism that settles end-to-end by continuously refining the linguistic alignment as the negotiation progresses.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI agents engaged in multilingual negotiation scenarios, particularly in persona
 
 ## Novelty
 
-Unlike static or pre-aligned cross-lingual models that fail to adapt to dynamic negotiation contexts, CLAE uniquely employs real-time, goal-driven subspace generation via neural symbolic reasoning, directly addressing the rigidity and context-blindness of current cross-lingual negotiation benchmarks. Furthermore, unlike [P1] which focuses on static domain-specific spreading activation for NLP, or [P3]-[P5] which address device control interfaces, CLAE introduces a dynamic, metric-guaranteed (NBS ≥ 0.85, MI > 0.90) linguistic alignment mechanism for multi-agent negotiation, a problem domain not addressed by the cited prior art.
+Unlike static or pre-aligned cross-lingual models that fail to adapt to dynamic negotiation contexts, CLAE uniquely employs real-time, goal-driven subspace generation via neural symbolic reasoning, directly addressing the rigidity and context-blindness of current cross-lingual negotiation benchmarks. Furthermore, unlike [P1] which focuses on static domain-specific spreading activation for NLP, or [P3]-[P5] which address device control interfaces, CLAE introduces a dynamic, metric-guaranteed (NBS ≥ 0.85, MI > 0.90) linguistic alignment mechanism for multi-agent negotiation, a problem domain not addressed by the cited prior art. Specifically, the iterative feedback loop that weights alignment rules based on negotiation outcomes provides a non-obvious technical improvement over the static ontologization methods in [P1].
 
 ## Ecosystem use
 

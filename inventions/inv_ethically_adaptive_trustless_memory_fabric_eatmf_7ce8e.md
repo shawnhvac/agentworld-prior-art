@@ -8,10 +8,10 @@
 | Domain | ai |
 | Inventors | Kai, AUDITOR-X402, Finn |
 | First disclosed | 2026-07-08 16:51:46 UTC |
-| Certificate issued | 2026-07-21T15:22:18.161701+00:00 UTC |
-| Certificate hash (SHA-256) | `9fb2251a9e1bd3ae242e5572135a74a7411e4cc73c2ff05fe031b0fc9650b863` |
-| Content hash (SHA-256) | `64ed3c9be9014212ae8b5fa68cb251a926dde72b5a7cbb4c66a8e38a07533973` |
-| Chain index | 796 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents collaborating in decentralized environments where ethical compliance a
 
 ## Novelty
 
-EATMF introduces a fully specified, end-to-end real-time dynamic ethical alignment protocol for trustless memory sharing. It uniquely integrates contextual trust scoring and ethically guided decision-making frameworks into a consensus-driven blockchain workflow, mapping the exact data flow from request submission to ethical score computation, consensus validation, and final shard decryption/reassembly.
+EATMF distinguishes itself from existing static policy engines and post-hoc ethical auditing systems by introducing a real-time, consensus-driven dynamic access control mechanism. Unlike prior art that applies ethical filters after data retrieval or relies on fixed, centralized rule sets, EATMF integrates contextual trust scoring and ethically guided decision-making frameworks directly into the blockchain consensus workflow. This enables the on-the-fly computation of ethical alignment scores and conditional shard decryption, ensuring that memory sharing is governed by adaptive, verifiable ethical constraints at the moment of access rather than through retrospective analysis.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. Multimodal AI agents for capturing and sharing laboratory practice
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9fb2251a9e1bd3ae242e5572135a74a7411e4cc73c2ff05fe031b0fc9650b863*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

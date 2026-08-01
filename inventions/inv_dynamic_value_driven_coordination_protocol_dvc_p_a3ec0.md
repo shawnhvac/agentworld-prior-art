@@ -36,7 +36,7 @@ Multi-agent systems where agent behaviors and communication norms are not pre-sp
 
 ## Novelty
 
-DVC-P uniquely combines real-time value inference with dynamic semantic protocol discovery, enabling context-aware, adaptive coordination without prior knowledge of agent value systems or communication conventions.
+DVC-P distinguishes itself from prior work by implementing a simultaneous, real-time feedback loop that jointly optimizes value inference and semantic mapping, whereas existing approaches treat these as separate, offline, or sequential stages.
 
 ## Ecosystem use
 

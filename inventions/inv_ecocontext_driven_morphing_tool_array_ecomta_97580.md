@@ -36,7 +36,7 @@ Household users, especially those in eco-conscious or alternative residential dw
 
 ## Novelty
 
-ECOMTA introduces real-time morphing of biodegradable materials using embedded sensors and machine learning, which is not currently demonstrated in existing literature or commercial products [3][4].
+While prior art demonstrates morphing tools in rigid metals or non-biodegradable polymers [3][4], ECOMTA is uniquely novel in its integration of PLA-based kirigami compliant mechanisms with closed-loop environmental adaptation. This synergy enables a fully biodegradable system that dynamically optimizes shape and function in response to real-time waste and user inputs, a capability absent in existing static or non-eco-centric morphing devices.
 
 ## Diagram
 

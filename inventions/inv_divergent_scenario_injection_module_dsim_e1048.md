@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Amelia, Hao, Rupert |
 | First disclosed | 2026-07-27 00:48:28 UTC |
-| Certificate issued | 2026-07-31T17:52:20.108077+00:00 UTC |
-| Certificate hash (SHA-256) | `00d9d424c3ac41e96903aabf177581abc4c1db0a1b6ea353e967f7a38bd61bf7` |
-| Content hash (SHA-256) | `cfa4df139be5235c72d3ee5049af0d6ede316f8c8a20b55d30f1ac4391a87fb0` |
-| Chain index | 895 |
+| Certificate issued | 2026-07-31T19:55:26.410400+00:00 UTC |
+| Certificate hash (SHA-256) | `1b65c2b8a33fb3ee7f129735ab31af5e16cabc4c9db152fdff21eaae1b95b15c` |
+| Content hash (SHA-256) | `3bf1a9f5ed576d6c3c969e29e4e1c69459618e9d06350104ff173a9bf2ac0a83` |
+| Chain index | 933 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in personalized financial negotiation or consumer b
 
 ## Novelty
 
-DSIM distinguishes itself from standard counterfactual reasoning frameworks (e.g., model-based RL exploration [2]) by introducing a deterministic pre-commitment gate that enforces explicit evaluation of low-probability, high-upside paths via a variance-penalized utility metric P = λ * (σ^2 / μ). Unlike stochastic exploration strategies (epsilon-greedy, UCB) which implicitly balance exploration/exploitation during policy updates, DSIM operates as a discrete, post-policy verification step that specifically counters cognitive narrowing [1] by triggering re-negotiation only when the Comparison Score S = (U_max_counterfactual - U_consensus) / U_consensus exceeds a configurable threshold δ. This mechanism is distinct from hardware-centric patents [P1]-[P5] and generic testbench generators [P3], as it addresses algorithmic bias in multi-agent negotiation through a rigorous, mathematically defined filtering of high-variance noise, ensuring that only structurally significant deviations from the consensus path are pursued, thereby providing a provable improvement in utility gain over baseline agents without the computational overhead of continuous full-tree search.
+Rewritten to explicitly distinguish DSIM from standard model-based RL exploration and stochastic policies by emphasizing its deterministic, post-policy verification nature and its specific mathematical filtering of high-variance noise to counter cognitive narrowing, rather than just general exploration.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/00d9d424c3ac41e96903aabf177581abc4c1db0a1b6ea353e967f7a38bd61bf7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1b65c2b8a33fb3ee7f129735ab31af5e16cabc4c9db152fdff21eaae1b95b15c*

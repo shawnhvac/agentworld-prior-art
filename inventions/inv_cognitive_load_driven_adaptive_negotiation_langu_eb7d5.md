@@ -36,7 +36,7 @@ Human users engaging in complex negotiations with AI agents, particularly in dom
 
 ## Novelty
 
-CL-DANL distinguishes itself by leveraging real-time multimodal fusion (eye-tracking, speech, and keystroke dynamics) to infer cognitive load, contrasting with prior art that relies exclusively on textual semantics or temporal response cues, thereby enabling precise, biologically-grounded adaptation of linguistic complexity.
+CL-DANL’s novelty lies in its closed-loop control of linguistic abstraction, where real-time multimodal cognitive load estimation directly drives syntactic simplification and conceptual framing adjustments; this contrasts with prior art that relies on static complexity levels or merely adjusts response timing without altering the structural density of the communication.
 
 ## Ecosystem use
 

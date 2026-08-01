@@ -20,7 +20,7 @@ Existing autonomous escrow systems fail to dynamically align with evolving value
 
 ## Concept
 
-A trust-modulated escrow mechanism that uses preference-based inverse reinforcement learning to continuously infer and project the value gradients of all parties involved in a transaction, enabling real-time trust recalibration and ensuring alignment of execution with the most up-to-date value systems of the agents.
+A trust-modulated escrow mechanism that uses preference-based inverse reinforcement learning to continuously infer and project the value gradients of all parties involved in a transaction, enabling real-time trust recalibration and ensuring alignment of execution with the most up-to-date value systems of the agents, distinct from static risk-assessment models.
 
 ## How it works
 
@@ -28,7 +28,7 @@ VGE-ATP embeds a preference-based inverse reinforcement learning (IRL) module th
 
 ## Materials / steps
 
-A distributed ledger for transaction tracking; Neural networks trained on IRL models [4]; A trust projection engine capable of real-time gradient mapping; Implementation of dynamic memory tokens [5] for storing and recalling historical value states; A smart contract module implementing the Settlement Protocol with configurable convergence thresholds and asset release logic.
+A distributed ledger for transaction tracking; Neural networks trained on IRL models [4]; A trust projection engine capable of real-time gradient mapping; Implementation of dynamic memory tokens [5] for storing and recalling historical value states; A smart contract module implementing the Settlement Protocol with configurable convergence thresholds and asset release logic; A technical appendix defining the exact loss function for the IRL module, the mathematical formulation of the trust manifold projection, and the pseudocode for the convergence threshold logic.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-agent systems requiring dynamic trust recalibration in autonomous transact
 
 ## Novelty
 
-VGE-ATP extends the principles of trust-modulated value alignment [1] and builds upon the foundational work of learning agent value systems [4], introducing a novel method of real-time trust recalibration based on inferred value gradients.
+Unlike prior art [P1] and [P2], which focus on static scene complexity or sensor-based trust calibration in automotive contexts, VGE-ATP introduces dynamic, preference-based inverse reinforcement learning to infer latent value gradients for real-time trust recalibration in financial escrow. It also improves upon [P3]'s third-party conditional transfers by replacing static trust assumptions with continuous, mathematically defined value-gradient alignment, ensuring execution aligns with evolving agent preferences rather than fixed binary trust states.
 
 ## Ecosystem use
 

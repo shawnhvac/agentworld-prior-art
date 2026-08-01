@@ -36,7 +36,7 @@ AI agents involved in high-stakes, real-time negotiations, particularly in domai
 
 ## Novelty
 
-NFDANL introduces real-time neuro-feedback integration into negotiation language, enabling dynamic adaptation to emotional and cognitive states of multiple agents, which is not currently supported by static negotiation languages.
+NFDANL distinguishes itself from static negotiation protocols and general affective computing systems by uniquely integrating a Reinforcement Learning policy optimized via the specific reward function R = w1 * JointGainRatio - w2 * ParticipantStressIndex. This mechanism directly couples linguistic adaptation to the dual objectives of maximizing mutual economic benefit while minimizing individual psychological load, a capability absent in existing static frameworks or general emotion-recognition tools that lack this specific multi-agent negotiation theory grounding.
 
 ## Ecosystem use
 

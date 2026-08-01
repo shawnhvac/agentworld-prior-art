@@ -36,7 +36,7 @@ Autonomous AI agents operating in distributed, adversarial environments such as 
 
 ## Novelty
 
-VCE-ATA distinguishes itself from prior art by replacing static reputation scores and decoupled trust mechanisms with a unified, closed-loop system where inverse reinforcement learning continuously infers dynamic value functions that directly drive real-time zero-trust verification, thereby eliminating the contextual drift inherent in systems that treat trust and value alignment as separate processes.
+VCE-ATA distinguishes itself from prior art by introducing a differentiable trust-update rule derived directly from IRL residuals, creating a unified gradient-based optimization loop that eliminates the contextual drift and latency inherent in prior work that merely chains separate trust and learning modules.
 
 ## Ecosystem use
 

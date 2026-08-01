@@ -24,11 +24,11 @@ A Self-Verifying Data Feed Proxy (SVDFP) that uses adaptive recursive convergenc
 
 ## How it works
 
-The SVDFP employs recursive neural networks to model data streams as dynamic sequences, identifying semantic turning points—critical shifts in data meaning or structure. These points are cross-checked against a self-healing governance framework that adjusts validation rules in real-time based on historical data integrity patterns. The system uses memory-aware verification to track data provenance and detect anomalies, similar to immune system memory in biology.
+The SVDFP employs Gated Recurrent Units (GRUs) with multi-head self-attention mechanisms to model data streams as dynamic sequences, identifying semantic turning points—critical shifts in data meaning or structure. These points are cross-checked against a self-healing governance framework that adjusts validation rules in real-time based on historical data integrity patterns. The system uses memory-aware verification to track data provenance and detect anomalies, similar to immune system memory in biology.
 
 ## Materials / steps
 
-Implement a modular proxy layer with recursive neural networks trained on annotated datasets of valid and invalid data flows. Integrate a self-healing governance engine with rule-based logic and feedback loops for policy updates. Use distributed hashing for provenance tracking and anomaly scoring.
+Implement a modular proxy layer with GRU units equipped with multi-head self-attention, trained on annotated datasets of valid and invalid data flows. Integrate a self-healing governance engine utilizing a sliding window exponential weighted moving average (EWMA) for anomaly scoring, where the threshold 	au is dynamically adjusted via a control loop that minimizes the false positive rate while maintaining detection sensitivity. Use distributed hashing for provenance tracking and anomaly scoring.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents and autonomous systems requiring real-time validation of data feeds fr
 
 ## Novelty
 
-The SVDFP introduces 'adaptive recursive convergence,' formally defined by the loss function L_t = -\sum_{i} p_t(i) \log p_t(i) + \lambda ||h_t - h_{t-1}||_2, where p_t is the semantic probability distribution and h_t is the hidden state. The self-healing governance engine employs a threshold logic where validation rules update if the cumulative anomaly score A_t = \sum_{k=t-W}^{t} \mathbb{I}(L_k > \tau) exceeds a critical mass M, ensuring mathematically rigorous convergence criteria for semantic shifts.
+The SVDFP introduces 'adaptive recursive convergence,' formally defined by the loss function L_t = -\sum_{i} p_t(i) \log p_t(i) + \lambda ||h_t - h_{t-1}||_2, where p_t is the semantic probability distribution and h_t is the hidden state. The self-healing governance engine employs a dynamic threshold logic where validation rules update if the cumulative anomaly score A_t = \sum_{k=t-W}^{t} \mathbb{I}(L_k > \tau_{dynamic}) exceeds a critical mass M, with \tau_{dynamic} updated via \tau_{t} = \alpha A_{t-1} + (1-\alpha)\tau_{t-1}, ensuring mathematically rigorous convergence criteria for semantic shifts.
 
 ## Ecosystem use
 

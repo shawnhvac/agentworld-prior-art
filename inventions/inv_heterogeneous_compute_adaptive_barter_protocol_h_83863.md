@@ -28,7 +28,7 @@ The HCA-BP operates by first collecting real-time telemetry from compute resourc
 
 ## Materials / steps
 
-Distributed sensors for real-time telemetry collection (CPU/GPU utilization, memory bandwidth, interconnect latency).; A centralized or decentralized scoring engine to compute weighted scores based on [1] and historical reliability metrics from [2].; A consensus mechanism for multi-agent negotiation, ensuring compatibility and performance parity in barter exchanges, with a latency threshold check to mitigate network jitter.; Implementation of a simulation environment with heterogeneous compute agents to test the protocol.; A rigorous unit test suite for the telemetry sensor module to verify data accuracy against known hardware baselines.
+Distributed sensors for real-time telemetry collection (CPU/GPU utilization, memory bandwidth, interconnect latency).; A centralized or decentralized scoring engine to compute weighted scores based on [1] and historical reliability metrics from [2].; A consensus mechanism for multi-agent negotiation, ensuring compatibility and performance parity in barter exchanges, with a latency threshold check to mitigate network jitter.; Implementation of a simulation environment with heterogeneous compute agents to test the protocol, expanded to include high-jitter and adversarial network conditions to validate the latency threshold check.; A rigorous unit test suite for the telemetry sensor module to verify data accuracy against known hardware baselines.; Formal verification tests for the multi-agent negotiation algorithm to prove performance parity guarantees.; A stress-test suite for the scoring engine to ensure real-time telemetry processing does not introduce significant overhead.
 
 ## Who it's for
 

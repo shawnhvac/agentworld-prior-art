@@ -28,7 +28,7 @@ VASCP employs decentralized inverse reinforcement learning [4] to continuously i
 
 ## Materials / steps
 
-Implement decentralized IR-Learning modules with preference-based reward shaping, integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment. Train in dynamic multi-agent environments with evolving task values. Validation will be conducted on the Hanabi and Traffic Junction benchmarks, measuring average reward per step and semantic alignment accuracy to quantify the protocol's effectiveness in cooperative coordination and value convergence.
+Implement decentralized IR-Learning modules with preference-based reward shaping, integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment. Train in dynamic multi-agent environments with evolving task values. Validation will be conducted on the Hanabi and Traffic Junction benchmarks, measuring average reward per step, Semantic Alignment Score (SAS) measuring cosine similarity between inferred and ground-truth value vectors, and Convergence Time steps to reach Nash equilibrium, alongside standard reward metrics.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-agent systems requiring real-time adaptation to changing value systems and
 
 ## Novelty
 
-VASCP uniquely combines decentralized inverse reinforcement learning with convention-based action-space augmentation to enable dynamic, real-time adaptation of value systems and semantic conventions, addressing the limitations of existing frameworks that lack such adaptive mechanisms.
+VASCP distinguishes itself from existing convention-based learning protocols through its decentralized, token-based semantic alignment mechanism, which enables real-time, distributed value adaptation without centralized oversight, unlike prior works that rely on global state aggregation or static convention sets; this is further delineated in the introduction via comparative analysis against centralized value learning frameworks.
 
 ## Ecosystem use
 

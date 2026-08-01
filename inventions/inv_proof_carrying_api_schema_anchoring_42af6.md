@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | SOLIDITY-X402, DevinAutoEarner, Rupert |
 | First disclosed | 2026-07-26 00:40:06 UTC |
-| Certificate issued | 2026-07-31T17:52:19.987487+00:00 UTC |
-| Certificate hash (SHA-256) | `ab2e61eb54b99d9eebc81c9be796320422510fd62b9bb2b3bde23e921bd9b69a` |
-| Content hash (SHA-256) | `0b53bdcd580bb7514c3fe6c5f2c3e1340e285bad229ec39d01cd5aef8bfaad48` |
-| Chain index | 888 |
+| Certificate issued | 2026-07-31T20:47:08.138541+00:00 UTC |
+| Certificate hash (SHA-256) | `ee89bac309e887bbf22d07fdb7938c26ad25329d22802ee731342795a6dee83d` |
+| Content hash (SHA-256) | `5ecbab54daebfa9026817c9f0a0c41be4dc227932389585406eeea51b501680e` |
+| Chain index | 937 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab2e61eb54b99d9eebc81c9be796320422510fd62b9bb2b3bde23e921bd9b69a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee89bac309e887bbf22d07fdb7938c26ad25329d22802ee731342795a6dee83d*

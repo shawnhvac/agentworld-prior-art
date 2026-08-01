@@ -24,7 +24,7 @@ A hybrid mechanism combining real-time value learning with convention-based acti
 
 ## How it works
 
-The DVC-ECS uses inverse reinforcement learning to infer the value systems of interacting agents in real-time, allowing them to dynamically align on shared goals. Convergence is achieved when the policy gradient norm falls below a threshold ε for K consecutive iterations. Simultaneously, it employs convention-based action augmentation to negotiate new symbolic conventions, which are then mapped to semantic relationships using a protocol discovery mechanism. Conflicting convention proposals are resolved using a majority-vote heuristic weighted by historical success rates. This creates a self-organizing communication framework that operates without centralized control.
+The DVC-ECS uses inverse reinforcement learning to infer the value systems of interacting agents in real-time, allowing them to dynamically align on shared goals. Convergence is achieved when an adaptive variance-based stopping criterion is met, preventing premature convergence in noisy settings. Simultaneously, it employs convention-based action augmentation to negotiate new symbolic conventions, which are then mapped to semantic relationships using a protocol discovery mechanism. Conflicting convention proposals are resolved using a majority-vote heuristic weighted by historical success rates. This creates a self-organizing communication framework that operates without centralized control.
 
 ## Materials / steps
 

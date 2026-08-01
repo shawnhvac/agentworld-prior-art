@@ -28,7 +28,7 @@ The system inoculates the rhizosphere with engineered bacterial consortia that m
 
 ## Materials / steps
 
-1. Isolate and engineer bacterial consortia based on *Attini* ant symbiont models [2]. 1.5. Engineer the bacterial consortia with a synthetic auxotrophy or conditional kill switch to ensure complete elimination of the engineered microbes post-treatment, preventing unintended ecological integration. 2. Construct suicide plasmids integrating CRISPR-Cas modules and guide RNAs targeting conserved regions of *bla*CTX-M identified in livestock waste [1]. 3. Inoculate soil microcosms with the consortium. 4. Monitor persistence and Cas protein expression over 30 days. 5. Verify the absence of free plasmids in the soil matrix after 30 days to confirm end-to-end closure and safety. 6. Measure reduction in qPCR-detected AMR gene copies. 7. Conduct field trial in 10x10m plots (n=5) with untreated controls and standard manure-only plots. 8. Implement long-term monitoring (6 months) of soil biodiversity indices, non-target microbial community shifts via 16S rRNA sequencing, and hydrological leaching of AMR genes to groundwater.
+1. Isolate and engineer bacterial consortia based on *Attini* ant symbiont models [2]. 1.5. Engineer the bacterial consortia with a synthetic auxotrophy or conditional kill switch to ensure complete elimination of the engineered microbes post-treatment, preventing unintended ecological integration. 2. Construct suicide plasmids integrating CRISPR-Cas modules and guide RNAs targeting conserved regions of *bla*CTX-M identified in livestock waste [1]. 3. Inoculate soil microcosms with the consortium. 4. Monitor persistence and Cas protein expression over 30 days. 5. Verify the absence of free plasmids in the soil matrix after 30 days to confirm end-to-end closure and safety. 6. Measure reduction in qPCR-detected AMR gene copies. 7. Conduct field trial in 10x10m plots (n=5) with untreated controls and standard manure-only plots. 8. Implement long-term monitoring (6 months) of soil biodiversity indices, non-target microbial community shifts via 16S rRNA sequencing, and hydrological leaching of AMR genes to groundwater. **Acceptance Criteria**: A >99% reduction in target AMR gene copies relative to controls, zero detectable engineered bacterial persistence at 30 days, and no statistically significant deviation in non-target microbial diversity indices (Shannon index) compared to baseline.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Livestock farmers and agricultural producers seeking to mitigate AMR spread in s
 
 ## Novelty
 
-Distinct from physical application methods [P3-P5] and mineral-focused solutions [P1], this approach actively degrades genetic resistance using a synthetic symbiosis model. Unlike prior art that relies on passive sequestration or dilution of AMR genes, Symbio-Soil employs targeted enzymatic cleavage via CRISPR-Cas modules to permanently remove resistance determinants from the soil metagenome.
+Distinguishes from prior art by leveraging an *Attini*-inspired obligate symbiosis model to enable targeted, self-limiting delivery of CRISPR-Cas modules, rather than relying on CRISPR-mediated degradation alone.
 
 ## Diagram
 

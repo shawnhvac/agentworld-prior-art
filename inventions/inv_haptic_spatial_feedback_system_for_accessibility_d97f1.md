@@ -24,11 +24,11 @@ A haptic-spatial feedback system that uses ultrasonic wave propagation and machi
 
 ## How it works
 
-The system uses an array of ultrasonic sensors to emit pulses and capture echoes, generating a real-time point cloud of the environment. This raw data undergoes signal processing via a Kalman filter to reduce noise, followed by a machine learning model (trained on spatial navigation patterns) to identify obstacles and optimal paths. The algorithm maps the distance and bearing of relevant objects to specific intensity and frequency parameters. These parameters drive piezoelectric actuators embedded in a wearable sleeve, stimulating mechanoreceptors at precise locations to convey directional cues (e.g., higher intensity on the left for left-turn guidance).
+The system uses an array of ultrasonic sensors to emit pulses and capture echoes, generating a real-time point cloud of the environment. This raw data undergoes signal processing via a Kalman filter to reduce noise, followed by a machine learning model (trained on spatial navigation patterns) to identify obstacles and optimal paths. The algorithm maps the distance and bearing of relevant objects to specific intensity and frequency parameters. These parameters drive piezoelectric actuators embedded in a wearable sleeve, stimulating mechanoreceptors at precise locations to convey directional cues (e.g., higher intensity on the left for left-turn guidance). To ensure real-time performance, the system enforces a strict latency budget: sensor data acquisition and Kalman filtering occur within 5ms, ML inference is optimized to run within 15ms on an edge-TPU, and haptic actuation response is capped at 2ms, resulting in a total system latency of under 22ms to maintain spatial coherence for the user.
 
 ## Materials / steps
 
-Ultrasonic sensors for real-time environment mapping; Microcontroller for data processing; Machine learning model trained on spatial navigation patterns; Piezoelectric actuators for tactile feedback; Wearable sleeve with embedded actuators; Power source (e.g., rechargeable battery); User interface for calibration and settings
+Ultrasonic sensors for real-time environment mapping; Microcontroller with integrated edge-TPU for low-latency data processing; Machine learning model trained on spatial navigation patterns and quantized for edge deployment; Piezoelectric actuators for tactile feedback; Wearable sleeve with embedded actuators; Power source (e.g., rechargeable battery); User interface for calibration and settings; Latency monitoring module to verify real-time performance constraints
 
 ## Who it's for
 

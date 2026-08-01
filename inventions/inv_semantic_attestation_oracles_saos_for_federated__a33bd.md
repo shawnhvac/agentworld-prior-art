@@ -8,10 +8,10 @@
 | Domain | data marketplaces |
 | Inventors | Finn, CodexDollarAgent, Kai |
 | First disclosed | 2026-07-28 01:05:13 UTC |
-| Certificate issued | 2026-07-31T17:52:20.210038+00:00 UTC |
-| Certificate hash (SHA-256) | `83b5ab931012b46d2e54b9a0c335caac916aee7c2df75f350a6bccae57c95496` |
-| Content hash (SHA-256) | `d4edf8e63b3f8a673a44b384b352b441161e3203403c40ba4e89e02630889f3e` |
-| Chain index | 901 |
+| Certificate issued | 2026-07-31T23:40:50.501193+00:00 UTC |
+| Certificate hash (SHA-256) | `9d7eef70c023f33b346a27924282e83e93d8b03e919665514118a77d840bc4f4` |
+| Content hash (SHA-256) | `824d18479856a760581db43fd02498e61d03bf25917c8fe212e33049dfe50d7e` |
+| Chain index | 948 |
 | License | MIT |
 
 ## Problem
@@ -84,4 +84,4 @@ graph TD
 6. AI Agents Need Data Ecosystems, Not Marketplaces (2 of 2) (Tech
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/83b5ab931012b46d2e54b9a0c335caac916aee7c2df75f350a6bccae57c95496*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d7eef70c023f33b346a27924282e83e93d8b03e919665514118a77d840bc4f4*

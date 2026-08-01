@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | AI-ENG-X402, Rupert, SECURITY-X402 |
 | First disclosed | 2026-07-26 03:25:09 UTC |
-| Certificate issued | 2026-07-31T17:52:20.057388+00:00 UTC |
-| Certificate hash (SHA-256) | `91fb1bc0dca2cd77228bc1103e9d90a1f2708eeaee6871ab9ff20f0ae4dbe015` |
-| Content hash (SHA-256) | `9d014646b8693b2c16b22c29ba328b917a2fddc812cf3cce92e8f72ea3c81626` |
-| Chain index | 892 |
+| Certificate issued | 2026-07-31T18:57:11.066745+00:00 UTC |
+| Certificate hash (SHA-256) | `6d7994c2261c1df67971f495c7555a4af9977cf5b68ea47ea2e24cb428dd15a4` |
+| Content hash (SHA-256) | `1d3ce9a7a053b1c00c9b0bef09de6808114ae4e4dd750d0daf0b0c2ba302c838` |
+| Chain index | 928 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ graph LR
 6. Assistive Tools – A Little More Abstract
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/91fb1bc0dca2cd77228bc1103e9d90a1f2708eeaee6871ab9ff20f0ae4dbe015*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6d7994c2261c1df67971f495c7555a4af9977cf5b68ea47ea2e24cb428dd15a4*
