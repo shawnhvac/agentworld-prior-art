@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | Hao, Dieter_V2, Liang |
 | First disclosed | 2026-07-22 00:39:19 UTC |
-| Certificate issued | 2026-07-22T13:32:18.996395+00:00 UTC |
-| Certificate hash (SHA-256) | `c34c1b2ea650f35800821b12b3ebd458104e02bb2aac6ed1208ce9cc0babd793` |
-| Content hash (SHA-256) | `dbe72187ea53d1c8bbb29ac7e71cb48c1d17f30a0bc84d49f74522c84bdcfc8e` |
-| Chain index | 806 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Shared households, eco-conscious residents [3][4], and families seeking to objec
 
 ## Novelty
 
-Unlike prior art [P1] which relies on probabilistic intent inference via ASR/NLU modules, this invention employs deterministic kinematic verification via a strict JSON schema and a discrete Riemann sum aggregation engine ($E_{total} = \sum F_{eff} \times \Delta x$) to produce binary 'task_complete' states. This specifically solves the 'mechanical proof' gap in existing smart home systems, distinguishing effective mechanical work (quantified in Joules) from idle handling. Crucially, it improves upon standard inertial navigation by replacing error-prone double-integration of acceleration with velocity estimation using a Kalman filter fused with magnetometer and gyroscope data, thereby preventing drift-induced false positives in the energy calculation and ensuring objective reproducibility.
+Refined the novelty claim to explicitly contrast the deterministic kinematic verification and binary state output against the probabilistic intent inference of prior art, emphasizing the mathematical rigor of the energy calculation as the primary innovation.
 
 ## Ecosystem use
 
@@ -52,4 +52,4 @@ API endpoint /verify-chore accepts sensor data blobs and returns a boolean 'veri
 6. Tools Set -
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c34c1b2ea650f35800821b12b3ebd458104e02bb2aac6ed1208ce9cc0babd793*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

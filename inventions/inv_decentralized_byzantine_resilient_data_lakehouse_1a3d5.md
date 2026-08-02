@@ -36,7 +36,7 @@ AI agents operating in decentralized, heterogeneous environments requiring robus
 
 ## Novelty
 
-This system uniquely combines verifiable credentials, proof-carrying AI agents, and Byzantine-resilient optimization to create a self-verifying, decentralized data lakehouse that is both secure and scalable.
+Unlike existing decentralized lakehouses that rely on static verifiable credentials for provenance, DR-DL uniquely integrates proof-carrying AI agents that embed formal proofs directly into the Byzantine-resilient optimization loop, enabling dynamic, real-time verification of data integrity during consensus rather than post-hoc validation.
 
 ## Ecosystem use
 

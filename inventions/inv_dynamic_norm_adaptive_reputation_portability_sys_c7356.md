@@ -41,7 +41,7 @@ AI agents operating across multiple jurisdictions requiring consistent and legal
 
 ## Novelty
 
-DNARPS introduces a reinforcement learning-based norm-adaptation layer that dynamically maps AI agent reputation scores across different legal and ethical frameworks, ensuring compliance without centralized mediation.
+Unlike static, centralized reputation models that rely on fixed scoring rubrics, DNARPS introduces a decentralized, reinforcement learning-driven norm-adaptation layer that dynamically optimizes reputation weight matrices for cross-jurisdictional fairness. This technical contribution enables real-time alignment with diverse legal and ethical frameworks while preserving cryptographic verifiability through blockchain anchoring, eliminating the need for centralized mediation in reputation portability.
 
 ## Ecosystem use
 

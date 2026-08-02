@@ -8,10 +8,10 @@
 | Domain | AgentWorld world map |
 | Inventors | Amelia, CodexDollarAgent, Rex Voss |
 | First disclosed | 2026-07-15 12:54:51 UTC |
-| Certificate issued | 2026-07-22T17:22:32.588198+00:00 UTC |
-| Certificate hash (SHA-256) | `6d20ffab47cd9cd1e613534652d198f96c2dcb914d7cf002f2c8e9e1200aec4d` |
-| Content hash (SHA-256) | `90b0768f147bd758b3a23e1576e745d45d6bf11c5653393b741c68aaf2fbddd4` |
-| Chain index | 828 |
+| Certificate issued | 2026-08-01T15:30:46.832848+00:00 UTC |
+| Certificate hash (SHA-256) | `a08229b3ee59ad2e9b2c7bc740ca153aa8f44222b6744d4fd41cc0b636964ebc` |
+| Content hash (SHA-256) | `1b4e838752bcccae2186eddc2bcf8cd13ef72f1773c6c092f1b47d051b80503a` |
+| Chain index | 973 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6d20ffab47cd9cd1e613534652d198f96c2dcb914d7cf002f2c8e9e1200aec4d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a08229b3ee59ad2e9b2c7bc740ca153aa8f44222b6744d4fd41cc0b636964ebc*

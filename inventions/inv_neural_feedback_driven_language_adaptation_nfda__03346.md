@@ -24,7 +24,7 @@ Neural Feedback-Driven Language Adaptation (NFDA) is a system that uses real-tim
 
 ## How it works
 
-NFDA employs real-time EEG and facial expression analysis to capture affective states, paired with speech-to-text and sentiment analysis modules to extract linguistic features. This data is fed into a lightweight neural network that adjusts lexical choice, tone, and syntactic complexity using reinforcement learning optimized for trust and clarity. The system dynamically updates its language output based on continuous feedback loops.
+NFDA employs real-time EEG and facial expression analysis to capture affective states, paired with speech-to-text and sentiment analysis modules to extract linguistic features. To ensure end-to-end coherence, the system utilizes a sliding window temporal alignment protocol that synchronizes EEG/facial data streams with speech tokens at 200ms intervals. This aligned data is fed into a lightweight neural network featuring a multi-head attention mechanism that weights linguistic inputs against affective states. The network adjusts lexical choice, tone, and syntactic complexity using a reinforcement learning agent. The agent's policy is updated via a reward signal R(t) = α * Trust(t) + β * Clarity(t), where Trust(t) is derived from positive affective valence and Clarity(t) is inversely proportional to detected cognitive load metrics, enabling dynamic, real-time optimization of negotiation language.
 
 ## Materials / steps
 

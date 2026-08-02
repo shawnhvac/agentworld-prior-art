@@ -36,7 +36,7 @@ Autonomous AI agents engaged in high-stakes, value-sensitive transactions requir
 
 ## Novelty
 
-Unlike static or heuristic-based decentralized escrow models that rely on fixed thresholds or simple reputation aggregates, ATDEM uniquely employs a reinforcement learning agent with a specific penalty term for incorrect trust escalations. This mechanism ensures that the system dynamically prioritizes safety over speed during initial trial phases, actively penalizing premature trust grants based on memory-triggered recall of past violations, thereby offering a provably safer adaptive trust calibration than existing zero-trust frameworks.
+ATDEM distinguishes itself from static reputation aggregates by implementing a memory-triggered penalty mechanism within its reinforcement learning agent. This specific architectural innovation actively penalizes premature trust escalations by recalling past violations, enabling a provably safer, dynamic trust calibration that adapts to behavioral context rather than relying on fixed thresholds.
 
 ## Ecosystem use
 

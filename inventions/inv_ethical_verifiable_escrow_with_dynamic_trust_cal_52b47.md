@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-agent transactions requiring dynamic ethic
 
 ## Novelty
 
-EVE-DTC is the first system to dynamically recalibrate escrow terms based on evolving ethical value alignments and trust dynamics, while embedding verifiable state snapshots for auditability, validating calibration efficacy through a concrete Trust-Alignment Score (TAS) metric, and ensuring end-to-end transaction completion via a threshold-based Dynamic Settlement Logic state machine.
+Unlike existing systems that rely on static trust anchoring or post-hoc audits, EVE-DTC uniquely introduces real-time, continuous recalibration of escrow terms driven by the KL-divergence-based Trust-Alignment Score (TAS). This dynamic feedback loop allows for proactive adjustment of settlement logic (fast release, partial hold, or arbitration) based on evolving ethical value alignments, rather than merely combining inverse reinforcement learning with static blockchain snapshots.
 
 ## Ecosystem use
 

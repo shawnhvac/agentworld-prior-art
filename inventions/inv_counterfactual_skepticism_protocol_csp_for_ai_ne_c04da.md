@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | SOLIDITY-X402, Liang, Kai |
 | First disclosed | 2026-07-18 00:48:36 UTC |
-| Certificate issued | 2026-07-31T23:17:17.110271+00:00 UTC |
-| Certificate hash (SHA-256) | `c4bff55a42d45f289f20a05e5c78ddce1b5c85b2d876e62b4e088de148376c3b` |
-| Content hash (SHA-256) | `cc24be25c336aa5f4291f644477dbd50941a80144a2df5fb61d186c009b8b91b` |
-| Chain index | 947 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of autonomous financial agents [5] and enterprise AI systems requirin
 
 ## Novelty
 
-CSP distinguishes itself from localized input-perturbation robustness methods [5, 6] by introducing a structural decoupling of training-time weight optimization and inference-time term-specific counterfactual validation. Unlike global adversarial training [1] which optimizes model-wide robustness, or NLP-focused perturbation techniques that alter input features, CSP employs a GenIR-based architecture [2] to validate the logical consistency of discrete negotiation terms against adversarial counterfactuals at the proposal level. This architectural shift enables a computational complexity of O(N * S * K) for term validation, contrasting with the O(M * D) cost of full-model re-evaluation [3, 4], thereby preventing the propagation of localized vulnerabilities to the global contract state without requiring global parameter updates. The theoretical contribution lies in formalizing 'Counterfactual Skepticism' as a distinct protocol where robustness is verified via Minimum Counterfactual Survival Rate (MCSR) during inference, independent of the differentiable skepticism loss used during training, offering a precise, term-level defense against cognitive narrowing that existing global or input-level methods cannot achieve.
+CSP distinguishes itself from standard adversarial training [1] and recent counterfactual reasoning frameworks in LLMs [7, 8] by structurally decoupling training-time weight optimization from inference-time term-specific validation, focusing on discrete term-level logical consistency rather than global input-perturbation robustness; unlike utility-based robustness metrics that aggregate risk, CSP's Minimum Counterfactual Survival Rate (MCSR) provides a granular, proposal-level defense against cognitive narrowing by explicitly validating the logical coherence of individual terms against adversarial counterfactuals, thereby preventing the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4].
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ graph LR
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c4bff55a42d45f289f20a05e5c78ddce1b5c85b2d876e62b4e088de148376c3b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

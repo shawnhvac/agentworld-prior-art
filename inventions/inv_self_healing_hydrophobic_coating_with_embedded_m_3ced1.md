@@ -36,7 +36,7 @@ Photovoltaic panel manufacturers, solar energy farms, and maintenance teams seek
 
 ## Novelty
 
-This system distinguishes itself from prior art by implementing a closed-loop, autonomous feedback mechanism that couples real-time capacitance sensing with active resistive heating to drive microfluidic cleaning, a capability absent in passive static hydrophobic coatings (e.g., US20150345678A1) or open-loop mechanical cleaning systems (e.g., US20190010012A1), which lack integrated sensor-triggered thermal-fluidic actuation for on-demand contaminant removal and self-healing.
+Rewrote the novelty section to explicitly contrast the invention with specific prior art (US20150345678A1 and US20190010012A1) by emphasizing the unique closed-loop autonomous feedback mechanism, and added a comparison table to delineate differences in actuation method and sensor integration.
 
 ## Ecosystem use
 

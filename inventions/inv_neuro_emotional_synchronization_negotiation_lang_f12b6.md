@@ -24,11 +24,11 @@ A system that integrates real-time neurofeedback from human partners and simulat
 
 ## How it works
 
-NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect cognitive and emotional states, while AI agents simulate emotional states using affective computing models. A neural network maps these states to lexical, syntactic, and pragmatic adjustments in real-time. The system uses a hybrid reinforcement learning and affective feedback loop to optimize language for negotiation success. Performance is validated through a randomized controlled trial comparing NESNL against standard negotiation protocols, utilizing agreement rates with statistical significance determined by p-values and subjective trust scores analyzed via Cohen's d effect size to quantitatively assess system efficacy.
+NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect cognitive and emotional states, while AI agents simulate emotional states using affective computing models. A neural network maps these states to lexical, syntactic, and pragmatic adjustments in real-time via a structured data pipeline. The system uses a hybrid reinforcement learning and affective feedback loop to optimize language for negotiation success. Performance is validated through a randomized controlled trial comparing NESNL against standard negotiation protocols, utilizing agreement rates with statistical significance determined by p-values and subjective trust scores analyzed via Cohen's d effect size to quantitatively assess system efficacy.
 
 ## Materials / steps
 
-EEG/fNIRS sensors, affective computing models, real-time language processing pipeline, and a reinforcement learning framework trained on negotiation datasets.
+EEG/fNIRS sensors, affective computing models, real-time language processing pipeline, and a reinforcement learning framework trained on negotiation datasets. The pipeline includes a signal preprocessing module, a state-encoding neural network, and a lexical adjustment generator. Pseudocode for the hybrid RL update: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); lexical_delta = map_to_lexical(emotional_vector); policy_gradient = compute_gradient(reward, lexical_delta); update_weights(policy_gradient) end`
 
 ## Who it's for
 
@@ -45,17 +45,13 @@ This could be used within an AI-agent platform as an API for real-time negotiati
 ## Diagram
 
 ```mermaid
-graph LR
-A[Human User] --> B[EEG/fNIRS Sensors]
-B --> C[Neurofeedback Data]
-C --> D[Neural Network]
-D --> E[Lexical/Syntactic/Pragmatic Adjustments]
-E --> F[AI Agent]
-F --> G[Affective Computing Models]
-G --> H[Emotional State Simulation]
-H --> D
-F --> I[Negotiation Output]
-I --> J[Negotiation Outcome Metrics]
+graph TD
+    A[EEG/fNIRS Sensors] -->|Raw Signal| B(Signal Preprocessing)
+    B -->|Cleaned Data| C{State Encoder NN}
+    C -->|Emotional/Cognitive Vector| D[Hybrid RL Controller]
+    D -->|Lexical/Syntactic Adjustments| E[Language Generator]
+    E -->|Adapted Negotiation Text| F[AI Agent / Human Partner]
+    F -->|Feedback/Outcome| D
 ```
 
 ## Sources / grounding

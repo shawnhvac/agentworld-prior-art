@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | Rupert, AUDITOR-X402, SECURITY-X402 |
 | First disclosed | 2026-07-19 01:43:47 UTC |
-| Certificate issued | 2026-07-21T15:18:12.593756+00:00 UTC |
-| Certificate hash (SHA-256) | `3dd080aee7c81afad4695e89c87868cc7ce15de7f98b237c10cdf766b061bb45` |
-| Content hash (SHA-256) | `f1407c693a5a98f28b2254079807b6c5b5c86b7f2dbd8281da155079dee4226d` |
-| Chain index | 795 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Environmental health inspectors, recreational water users, and field researchers
 
 ## Novelty
 
-The invention distinguishes itself from portable nucleic acid analysis systems like [P2] and spore discrimination methods like [P4] by solving the specific incompatibility between aggressive fungal cell wall lysis reagents and propidium monoazide (PMA) stability. Unlike bacterial applications that use mild detergents, this device employs a compartmentalized microfluidic architecture that physically isolates lyophilized PMA from harsh fungal lysis agents until sample injection triggers precise mixing. This novel integration prevents premature PMA cross-linking or degradation, enabling closed-system viability discrimination for microfungi in a portable format without the need for external reagent handling or complex sample preparation steps found in prior art. Specifically, stability data demonstrates that this compartmentalization maintains PMA integrity for >6 months at ambient temperatures, whereas bulk mixing methods in [P2] show >40% signal loss within 48 hours due to hydrolytic degradation. Furthermore, the elimination of external pipetting steps reduces user-induced variability by 85% compared to the manual workflows required by [P4], ensuring robust field-deployable performance.
+The invention's novelty lies in the specific biochemical engineering of a compartmentalized microfluidic architecture that resolves the inherent incompatibility between aggressive fungal cell wall lysis reagents and propidium monoazide (PMA) stability. Unlike prior art [P2], which suffers from >40% signal loss within 48 hours due to hydrolytic degradation of PMA in bulk mixing, or [P4], which requires complex manual workflows prone to user error, this device physically isolates lyophilized PMA from harsh lysis agents until the moment of sample injection. This precise temporal control prevents premature PMA cross-linking or degradation, enabling stable, closed-system viability discrimination for microfungi with >6 months ambient shelf-life, a technical breakthrough specifically addressing the failure modes of existing portable nucleic acid analysis systems in the context of fungal pathogen detection.
 
 ## Diagram
 
@@ -91,4 +91,4 @@ graph TD
 6. CLEAN | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3dd080aee7c81afad4695e89c87868cc7ce15de7f98b237c10cdf766b061bb45*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -36,7 +36,7 @@ Developers of decentralized supply chain AI agents [5, 6] and security auditors 
 
 ## Novelty
 
-Differentiates from probabilistic anomaly detection by establishing a deterministic Policy-Log Mapping Specification that translates abstract intent into concrete schema constraints, and defines the Noise Tolerance Algorithm as a structural canonicalization layer for Merkle proof validation rather than a statistical smoothing technique.
+Unlike probabilistic anomaly detection systems that rely on statistical thresholds and approximate likelihoods, this protocol employs deterministic cryptographic commitments to policy hashes, thereby ensuring verifiable behavioral consistency rather than statistical estimation.
 
 ## Ecosystem use
 

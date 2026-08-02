@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and security engineers building 
 
 ## Novelty
 
-Unlike passive discovery methods [1-3] that generate static schemas, this engine actively infers behavioral contracts from live traffic to enable protocol-level negotiation [6]. It specifically addresses the limitations of fragile API wrappers [5] by synthesizing 'proof-carrying' behavioral constraints [4] that allow agents to verify endpoint compliance and negotiate state transitions, rather than relying on brittle, static metadata bindings.
+Unlike passive discovery tools such as Swagger Inspector or Prism that infer static schemas from historical logs, this engine uniquely synthesizes dynamic, 'proof-carrying' behavioral contracts. It differentiates itself by employing a deterministic State Merging Algorithm to resolve probabilistic traffic inconsistencies into a single stable state-machine graph, enabling agents to actively negotiate and verify protocol compliance at runtime rather than relying on brittle, static metadata bindings.
 
 ## Ecosystem use
 

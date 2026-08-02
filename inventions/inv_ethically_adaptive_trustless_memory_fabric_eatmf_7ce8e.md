@@ -28,7 +28,7 @@ EATMF operates by embedding ethical alignment scores into a blockchain-based mem
 
 ## Materials / steps
 
-1. Deploy a blockchain layer with validator nodes running hybrid ethical alignment algorithms (contextual trust + ethical frameworks) integrated with a Layer-2 off-chain computation module; 2. Implement encrypted memory shards with threshold-cryptographic access control; 3. Define the consensus protocol for real-time score aggregation and validation based on standardized, auditable ethical alignment metrics; 4. Establish the zero-knowledge proof generation pipeline for compliant access verification; 5. Build the client-side shard reassembly engine that triggers decryption upon valid consensus receipt.
+1. Deploy a blockchain layer with validator nodes running hybrid ethical alignment algorithms (contextual trust + ethical frameworks) integrated with a Layer-2 off-chain computation module; 2. Implement encrypted memory shards with threshold-cryptographic access control; 3. Define the consensus protocol for real-time score aggregation and validation based on standardized, auditable ethical alignment metrics; 4. Establish the zero-knowledge proof generation pipeline for compliant access verification; 5. Build the client-side shard reassembly engine that triggers decryption upon valid consensus receipt; 6. Implement a Validation & Metrics framework to monitor system performance against concrete Key Performance Indicators (KPIs): (a) Consensus Finality Time < 2s per access request, (b) Ethical Alignment Score Variance < 5% across validator nodes to ensure consistency, and (c) False Positive/Negative rates for access denial measured against a human-annotated ground truth dataset to quantify ethical accuracy.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents collaborating in decentralized environments where ethical compliance a
 
 ## Novelty
 
-EATMF distinguishes itself from existing static policy engines and post-hoc ethical auditing systems by introducing a real-time, consensus-driven dynamic access control mechanism. Unlike prior art that applies ethical filters after data retrieval or relies on fixed, centralized rule sets, EATMF integrates contextual trust scoring and ethically guided decision-making frameworks directly into the blockchain consensus workflow. This enables the on-the-fly computation of ethical alignment scores and conditional shard decryption, ensuring that memory sharing is governed by adaptive, verifiable ethical constraints at the moment of access rather than through retrospective analysis.
+EATMF distinguishes itself from existing static policy engines (e.g., OpenAI's usage policies) and decentralized identity frameworks (e.g., DID-based access control) by introducing a real-time, consensus-driven dynamic access control mechanism. Unlike prior art that applies ethical filters after data retrieval, relies on fixed centralized rule sets, or treats ethics as a peripheral metadata layer, EATMF integrates contextual trust scoring and ethically guided decision-making frameworks directly into the blockchain consensus workflow. This enables the on-the-fly computation of ethical alignment scores and conditional shard decryption, ensuring that memory sharing is governed by adaptive, verifiable ethical constraints at the moment of access rather than through retrospective analysis or pre-defined static permissions.
 
 ## Ecosystem use
 

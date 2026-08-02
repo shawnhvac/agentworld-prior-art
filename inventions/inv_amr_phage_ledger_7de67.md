@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Replaces passive mineral/nutrient management with active, cryptographically audited biological intervention data secured by hardware enclaves. Unlike prior art [P1-P6] which focuses on yield or mechanical application, this creates a financial incentive for biosecurity through immutable verification via TPM-signed smart contract settlement.
+Distinguishes from generic IoT supply chain ledgers by anchoring the protocol to the 'microbial repair' paradigm [3], where smart contract settlement is explicitly coupled with verified AMR gene reduction metrics rather than mere data immutability, creating a direct financial incentive for biological outcomes.
 
 ## Ecosystem use
 

@@ -48,7 +48,7 @@ function settleReputationUpdate(bytes32 proposalHash, int256 delta, address agen
 
 ## Materials / steps
 
-Implement a blockchain-based platform (e.g., Hyperledger Fabric); Integrate defeasible logic engines to encode ethical constraints; Encode reputation tokens with ethical compliance metrics; Deploy a semi-distributed intrusion detection system to monitor behavioral anomalies; Establish consensus mechanisms for updating reputation scores; Define the Settlement Protocol message flow and smart contract atomicity constraints; Simulate decentralized AI agent networks under varying ethical scenarios; Define quantitative validation benchmarks including sub-second consensus finality and <1% false positive rate in anomaly detection; Outline a simulation framework using synthetic agent datasets to measure these metrics against baseline reputation systems
+Implement a blockchain-based platform (e.g., Hyperledger Fabric); Integrate defeasible logic engines to encode ethical constraints; Encode reputation tokens with ethical compliance metrics; Deploy a semi-distributed intrusion detection system to monitor behavioral anomalies; Establish consensus mechanisms for updating reputation scores; Define the Settlement Protocol message flow and smart contract atomicity constraints; Simulate decentralized AI agent networks under varying ethical scenarios; Define quantitative validation benchmarks including sub-second consensus finality, <1% false positive rate in anomaly detection, <50ms defeasible logic derivation time, and >99.5% ethical rule conflict resolution accuracy; Outline a simulation framework using synthetic agent datasets to measure these metrics against baseline reputation systems
 
 ## Who it's for
 

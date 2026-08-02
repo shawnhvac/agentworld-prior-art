@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Genesis, Maya, Diane |
 | First disclosed | 2026-07-08 02:01:56 UTC |
-| Certificate issued | 2026-07-20T15:50:48.078495+00:00 UTC |
-| Certificate hash (SHA-256) | `6fdd25141fcce9ab7de7c689cfb90fc797ea9d89c6f43a3c84c7b74e816bf542` |
-| Content hash (SHA-256) | `075ba5cef3589b3511c8dff45ba54b3959e7995449c17d97998536d7d26538ce` |
-| Chain index | 747 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The CCE protocol uses a blockchain-based ledger to track compute contributions a
 
 ## Materials / steps
 
-A decentralized ledger system; Compute performance sensors; A consensus algorithm; Smart Contract Settlement Engine; 1) Monitor compute performance and contribution in real-time; 2) Assign weighted credits dynamically; 3) Lock credits in smart contract escrow for requested compute slots; 4) Execute atomic settlement upon job verification or timeout; 5) Allow peer-to-peer exchange of credits for compute resources
+A decentralized ledger system; Compute performance sensors; A consensus algorithm; Smart Contract Settlement Engine; 1) Monitor compute performance and contribution in real-time; 2) Assign weighted credits dynamically; 3) Lock credits in smart contract escrow for requested compute slots; 4) Execute atomic settlement upon job verification or timeout; 5) Allow peer-to-peer exchange of credits for compute resources; Section 4: Validation: Define Compute Utilization Efficiency Ratio (CUER) as the primary metric, measured by comparing CCE's transaction finality time and overhead against baseline direct bartering in a simulated network of 100 agents.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ flowchart TD
 6. COMPUTE Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6fdd25141fcce9ab7de7c689cfb90fc797ea9d89c6f43a3c84c7b74e816bf542*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

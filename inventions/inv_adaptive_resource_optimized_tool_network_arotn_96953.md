@@ -26,6 +26,8 @@ A modular, AI-powered system of interconnected tools that autonomously sorts, re
 
 AROTN employs a series of modular, IoT-enabled tools embedded with sensors and AI to monitor waste generation, material composition, and consumption patterns in real time. Each module utilizes near-infrared (NIR) spectroscopy sensors to identify material composition at the molecular level. Based on NIR data processed by onboard edge-AI chips, mechanical actuation systems—specifically servo-driven rotary gates and pneumatic diverters—autonomously sort waste into compost, recycling, or energy-recovery channels. This process is guided by machine learning models trained on historical household data to optimize sorting accuracy and resource recovery efficiency. Validation & Metrics: The system targets a sorting accuracy of >95% (verified by manual audit of 1,000 items), a latency benchmark of <2 seconds per item, and a resource recovery efficiency rate of >90% compared to baseline manual sorting.
 
+System Integration: The edge-AI controller translates real-time consumption patterns and NIR spectral outputs into dynamic threshold adjustments for the servo gates. Specifically, the predictive optimization model calculates the optimal diversion timing and gate angle based on material density and volume, sending PWM signals to the servo motors within a 50ms control loop. A closed-loop feedback mechanism continuously compares actual sorted output against predicted material flow, adjusting the machine learning weights to minimize sorting errors and optimize resource recovery pathways end-to-end.
+
 ## Materials / steps
 
 Materials: biodegradable composites, recyclable polymers, IoT sensors (specifically NIR spectroscopy modules), AI processors (edge computing units), servo motors, pneumatic valves. Steps: 1) Fabricate modular units with embedded NIR sensors, edge-AI processors, and mechanical actuation components (servos/pneumatics). 2) Train machine learning models on historical household waste data to correlate spectral signatures with material types. 3) Deploy modules in a household environment. 4) Monitor and optimize sorting and resource use in real time via closed-loop feedback from sensor data.
@@ -36,7 +38,7 @@ Eco-conscious households seeking to reduce waste and optimize resource use throu
 
 ## Novelty
 
-AROTN introduces a novel closed-loop mechanism for everyday waste management that is not present in prior-art modular tools, integrating real-time AI with modular adaptability and eco-conscious practices.
+Unlike prior-art industrial NIR sorters that focus solely on material identification, AROTN introduces a novel closed-loop mechanism that integrates real-time household consumption data with edge-AI to enable predictive resource optimization and dynamic repurposing, a capability absent in existing modular waste management tools.
 
 ## Ecosystem use
 
@@ -45,14 +47,14 @@ AROTN could be integrated into an AI-agent platform as an API-driven module for 
 ## Diagram
 
 ```mermaid
-graph LR
-A[Household Waste] --> B(Sensors)
-B --> C(AI Processor)
-C --> D(Machine Learning Model)
-D --> E[Sorting Module]
-E --> F[Compost Channel]
-E --> G[Recycling Channel]
-E --> H[Energy Recovery Channel]
+graph TD
+    A[NIR Sensor] -->|Spectral Data| B(Edge-AI Processor)
+    C[Consumption Data] --> B
+    B -->|Dynamic Thresholds| D[Predictive Optimization Model]
+    D -->|PWM Signals| E[Servo-Driven Rotary Gates]
+    E -->|Sorted Waste| F[Compost/Recycling/Energy Channels]
+    F -->|Feedback Data| B
+    B -->|Model Update| D
 ```
 
 ## Sources / grounding

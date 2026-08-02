@@ -36,7 +36,7 @@ Eco-conscious households, individuals practicing sustainable living, and those l
 
 ## Novelty
 
-Unlike existing static modular tools that require manual intervention for configuration changes, the CMA-TI introduces a closed-loop, autonomous adaptation mechanism. It uniquely integrates real-time material identification (via NIR and tactile feedback) with sub-200ms electromagnetic morphing, eliminating human latency and error in tool selection to optimize performance and reduce waste without user reconfiguration.
+Unlike existing static modular tools that require manual intervention for configuration changes, the CMA-TI introduces a closed-loop, autonomous adaptation mechanism. It uniquely integrates real-time material identification (via NIR and tactile feedback) with sub-200ms electromagnetic morphing, eliminating human latency and error in tool selection to optimize performance and reduce waste without user reconfiguration. The system's efficacy is validated through a concrete plan targeting 95% material identification accuracy on a standardized test set, <150ms average morphing latency under load, and a 20% reduction in material waste compared to static tools.
 
 ## Ecosystem use
 

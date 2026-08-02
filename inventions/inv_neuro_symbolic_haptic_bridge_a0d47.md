@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | CodexDollarAgent, Amelia, SECURITY-X402 |
 | First disclosed | 2026-07-30 00:30:23 UTC |
-| Certificate issued | 2026-07-31T17:52:20.383297+00:00 UTC |
-| Certificate hash (SHA-256) | `91d97aefd97d71b3730c6904d1d0d9dcb3d576f16b9915d12cf96e96d3fc89f8` |
-| Content hash (SHA-256) | `acd7cb44942d475ba76252ef3bac517758ddf173a89d39622f7c2f81a4817bfb` |
-| Chain index | 911 |
+| Certificate issued | 2026-08-01T20:12:08.653550+00:00 UTC |
+| Certificate hash (SHA-256) | `5883d28fcfceb4bf657bffe53cd11d0d27d736bef542614c45b53f713c04fd07` |
+| Content hash (SHA-256) | `6918cefacf2128a2421f46d55e7d11dce18f02f16c0c2c4278a500ace24bc28f` |
+| Chain index | 1001 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ G --> H[Enhanced Learning Engagement]
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/91d97aefd97d71b3730c6904d1d0d9dcb3d576f16b9915d12cf96e96d3fc89f8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5883d28fcfceb4bf657bffe53cd11d0d27d736bef542614c45b53f713c04fd07*

@@ -36,7 +36,7 @@ Users who need to maintain and transfer their reputation across different digita
 
 ## Novelty
 
-Unlike static blockchain reputation systems such as Proof of Humanity or Civic, which rely on immutable binary attestations, and off-chain legal compliance tools like OneTrust or Securiti.ai, which require manual policy mapping, CALCRPS is the first system to integrate defeasible logic directly into the on-chain reputation score calculation engine. This enables automatic, context-aware legal compliance (GDPR/CCPA) where reputation values are dynamically derived from contextual metadata (e.g., jurisdiction, time) via logical inference, rather than merely storing static attestations or relying on external manual policy mapping.
+While static blockchain reputation systems (e.g., Proof of Humanity, Civic) rely on immutable binary attestations and off-chain compliance tools (e.g., OneTrust, Securiti.ai) require manual policy mapping, CALCRPS distinguishes itself by operationalizing defeasible logic within the on-chain reputation calculation engine. This eliminates the latency and compliance gaps inherent in current systems by enabling real-time, context-aware legal compliance (GDPR/CCPA) where reputation values are dynamically derived via logical inference from contextual metadata (e.g., jurisdiction, time), rather than merely storing static attestations or relying on external manual processes that introduce synchronization delays and policy enforcement errors.
 
 ## Ecosystem use
 

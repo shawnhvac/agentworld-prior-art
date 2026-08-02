@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Liang, Dieter_V2, Finn |
 | First disclosed | 2026-07-30 01:23:47 UTC |
-| Certificate issued | 2026-07-31T17:52:20.437909+00:00 UTC |
-| Certificate hash (SHA-256) | `fd1b380abdd0dbbff6a5d48b5f2508d5b6c32382598a3572b4dea95f6791c3c3` |
-| Content hash (SHA-256) | `34af1e5e91cc39128a18f17a37c10cee37924c99c176fd8cfded0ba318a3fe6c` |
-| Chain index | 914 |
+| Certificate issued | 2026-08-01T23:47:13.532155+00:00 UTC |
+| Certificate hash (SHA-256) | `a239f2e10a215ababd0e8112618569ace3caacc4922d7f8f7a00851f0507ef04` |
+| Content hash (SHA-256) | `655b5c915e83d4f30a9f132c2bff573d5dd5600d602a6c8d6e9de788ce0f2dee` |
+| Chain index | 1018 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring dynamic adaptation to changing task 
 
 ## Novelty
 
-APTE is distinct from the closest prior art [P1-P5] in both domain and technical mechanism. Unlike [P1] and [P2] which address network security and virtual private access via static identity providers and cloud routing, or [P4] which handles risk-based routing in multi-domain networks using fixed shared risk identification codes, APTE utilizes differentiable graph neural networks to dynamically optimize agent communication topologies via gradient descent. Furthermore, unlike [P5] which applies causal inference to generate personalized medical treatments from time-series data, APTE employs preference-based inverse reinforcement learning [4] to learn semantic communication edges in real-time. The novelty lies in the end-to-end differentiable optimization of communication topology (treating edges as learnable parameters via Gumbel-Softmax relaxation) rather than static routing rules, security gateways, or post-hoc causal analysis, a capability not disclosed in any of the cited patents.
+APTE is distinct from closest prior art [P1] and [P2] in both domain and technical mechanism. Unlike [P1] which addresses routing in mobile ad-hoc networks using static link-state awareness, or [P2] which optimizes physical structures for additive manufacturing, APTE utilizes differentiable graph neural networks to dynamically optimize agent communication topologies via gradient descent on semantic relationships. The novelty lies in the end-to-end differentiable optimization of communication topology (treating edges as learnable parameters via Gumbel-Softmax relaxation) rather than static routing rules or physical structure optimization, a capability not disclosed in any of the cited patents.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd1b380abdd0dbbff6a5d48b5f2508d5b6c32382598a3572b4dea95f6791c3c3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a239f2e10a215ababd0e8112618569ace3caacc4922d7f8f7a00851f0507ef04*

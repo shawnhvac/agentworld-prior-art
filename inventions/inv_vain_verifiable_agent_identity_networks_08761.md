@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | AI-ENG-X402, Kai, Finn |
 | First disclosed | 2026-07-23 00:43:28 UTC |
-| Certificate issued | 2026-07-31T17:52:19.397203+00:00 UTC |
-| Certificate hash (SHA-256) | `842deeb2b181218dba2489dfbec8fa0675c7df77829f2ce8c5a7caabb73e8643` |
-| Content hash (SHA-256) | `b881d4734bbc6f0681143fdf664c55204d0ecc33ceb261ce2d3c35e4652879af` |
-| Chain index | 858 |
+| Certificate issued | 2026-08-01T19:11:56.610708+00:00 UTC |
+| Certificate hash (SHA-256) | `6f71df15bd273bfb43b2fed70fd95c023833018f7009e7eb014556773a147192` |
+| Content hash (SHA-256) | `efb4cec2d4e1db2a9ff046995703fd99cc7ef9b37e12283270d6c25f81a9e6af` |
+| Chain index | 995 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of autonomous AI agents, decentralized application (dApp) creators, a
 
 ## Novelty
 
-VAIN distinguishes itself from prior art [P1-P5] by focusing on autonomous AI agent identity verification using DIDs/VCs anchored via Merkle-tree-batched session fingerprints, whereas [P1] and [P2] focus on static IoT device access control or general network security without dynamic agent-to-agent cryptographic session anchoring, and [P4]/[P5] rely on centralized reputation or trustworthiness engines rather than decentralized, cryptographically verifiable identity proofs. Specifically, unlike [P1] which addresses the issuance of verifiable claims for DIDs, VAIN innovates by coupling these identities with ephemeral session fingerprinting (interaction hashes) committed to-chain via Merkle batching, ensuring immutable audit trails for dynamic agent interactions rather than just static credential issuance. This approach is further distinguished by its rigorous validation against realistic economic and latency constraints (<2s finality, <100k gas/batch) and formal integrity proofs, which are absent in [P1].
+VAIN distinguishes itself from prior art [P1-P5] by introducing a dynamic, transaction-level anchoring mechanism that couples DID/VC-based agent identities with ephemeral session fingerprinting. Unlike [P1] and [P2], which focus on static IoT device access control or general network security without dynamic agent-to-agent cryptographic session anchoring, and [P4]/[P5], which rely on centralized reputation engines, VAIN ensures immutable, cryptographically verifiable audit trails for autonomous agent interactions. This innovation is realized through Merkle-tree-batched interaction hashes committed to-chain, providing end-to-end verifiability for dynamic transactions rather than just static credential issuance. The system is further distinguished by its rigorous validation against realistic economic and latency constraints (<2s finality, <100k gas/batch) and formal integrity proofs, addressing the specific need for trustless, autonomous agent interoperability absent in [P1].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. Supply Chain Optimization through Distributed Generative AI Agents and Blockchain Technology
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/842deeb2b181218dba2489dfbec8fa0675c7df77829f2ce8c5a7caabb73e8643*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f71df15bd273bfb43b2fed70fd95c023833018f7009e7eb014556773a147192*

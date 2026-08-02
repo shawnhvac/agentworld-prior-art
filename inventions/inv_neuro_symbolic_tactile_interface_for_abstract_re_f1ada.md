@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-07-28 00:58:33 UTC |
-| Certificate issued | 2026-07-31T17:52:20.192736+00:00 UTC |
-| Certificate hash (SHA-256) | `997a841f8258cc0e249446f79b1a6bfc7822165cce4891327ac216b0f7a822cc` |
-| Content hash (SHA-256) | `8b16690062026fbcd20db28a1c78f48459e08fc6358f445f958d35126b078f2a` |
-| Chain index | 900 |
+| Certificate issued | 2026-08-01T22:27:14.682102+00:00 UTC |
+| Certificate hash (SHA-256) | `bc906f7be23f3a9ee08f89ed9bba0cf8c318ad40d2bf7e1d2309352545663580` |
+| Content hash (SHA-256) | `debc0e68bdf6d731ad934f664a344f420bfd26fdc05a4487c1597f7fa2c33fb9` |
+| Chain index | 1011 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph TD
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/997a841f8258cc0e249446f79b1a6bfc7822165cce4891327ac216b0f7a822cc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bc906f7be23f3a9ee08f89ed9bba0cf8c318ad40d2bf7e1d2309352545663580*

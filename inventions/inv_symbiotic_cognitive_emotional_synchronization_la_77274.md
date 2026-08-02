@@ -28,7 +28,7 @@ SCESL embeds real-time affective and cognitive state tracking via biometric feed
 
 ## Materials / steps
 
-Integrate biometric sensors and language models with affective analysis capabilities; Implement the weighted Euclidean distance algorithm for real-time valence scoring; Deploy decentralized reinforcement learning with the specified reward function (R = α * Alignment + β * Convergence - γ * Latency) to dynamically adjust language semantics; Simulate high-stakes negotiation scenarios with heterogeneous agents having divergent internal models; Validate using BLEU/ROUGE scores for semantic alignment, Pearson correlation for valence convergence, mean time-to-agreement for latency, Negotiation Success Rate, and Subjective Empathy Rating (via post-interaction surveys), requiring statistical significance at p<0.05
+Integrate biometric sensors and language models with affective analysis capabilities; Implement the weighted Euclidean distance algorithm for real-time valence scoring; Deploy decentralized reinforcement learning with the specified reward function (R = α * Alignment + β * Convergence - γ * Latency) to dynamically adjust language semantics; Simulate high-stakes negotiation scenarios with heterogeneous agents having divergent internal models; Validate using Nash Bargaining Efficiency and Affective Congruence Index as primary metrics, alongside mean time-to-agreement for latency, Negotiation Success Rate, and Subjective Empathy Rating (via post-interaction surveys); Include a baseline comparison against standard non-affective negotiation protocols to demonstrate the efficacy of the closed-loop feedback mechanism, requiring statistical significance at p<0.05
 
 ## Who it's for
 

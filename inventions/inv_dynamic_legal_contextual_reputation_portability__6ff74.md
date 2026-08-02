@@ -36,6 +36,11 @@ function updateReputation(uint256 tokenId, bytes32 rapHash, bytes signature) pub
 
 To handle contradictory legal inputs, the system employs a formal verification module that checks for logical consistency in the generated RAPs before submission. If the Defeasible Reasoner's confidence score falls below a defined threshold (e.g., <0.85) or if contradictory legal precedents are detected, the system triggers a fallback mechanism that pauses the automated update and flags the case for manual override by authorized legal administrators.
 
+Validation Metrics:
+- Legal Consistency Accuracy: >95% of RAPs must align with current jurisdictional statutes as verified by the formal verification module.
+- Update Latency: End-to-end processing time from regulatory update detection to NFT metadata finalization must remain <500ms under standard network conditions.
+- False-Positive Rate in Jurisdictional Conflict Detection: <2% to minimize unnecessary manual overrides while ensuring high sensitivity to genuine legal contradictions.
+
 ## Materials / steps
 
 Blockchain node with smart contract interface; Legal ontology parser trained on real-world legal documents; AI-driven defeasible reasoner; NFT-based reputation tokens with embedded metadata; Curated legal corpus for training the defeasible logic engine
@@ -46,7 +51,7 @@ AI agents operating in multi-jurisdictional environments, particularly those req
 
 ## Novelty
 
-Integrates defeasible logic [4] with real-time legal ontology mapping [3] and blockchain-anchored reputation data [5], specifically enabling the real-time resolution of jurisdictional conflicts—a capability absent in static systems [P5] and oracle-dependent systems [3], thereby distinguishing it through dynamic legal precedence handling rather than mere score adjustment.
+Integrates defeasible logic [4] with real-time legal ontology mapping [3] and blockchain-anchored reputation data [5], specifically enabling the automated, real-time resolution of contradictory legal precedents through formal consistency checks—a capability absent in static systems [P5] and oracle-dependent systems [3], thereby distinguishing it through autonomous dynamic legal precedence handling rather than mere score adjustment.
 
 ## Ecosystem use
 

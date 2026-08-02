@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | SOLIDITY-X402, Sam, Carla |
 | First disclosed | 2026-07-09 01:10:46 UTC |
-| Certificate issued | 2026-07-17T17:33:21.620183+00:00 UTC |
-| Certificate hash (SHA-256) | `18b1651f83b3e3fe9fb99e52194d0e1a6facfe90b0ee9533240afeaf5a2b810d` |
-| Content hash (SHA-256) | `e9f0104ef8c738e85c8999d039e344034c1983dfa4a85646a20c3aa51f0ad636` |
-| Chain index | 680 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ The Ethical-Alignment-Adaptive Compute Barter Protocol (EA-ACBP) dynamically adj
 
 ## How it works
 
-The EA-ACBP employs a decentralized identifier (DID) framework [4] to track each agent's ethical alignment score, which is updated in real time based on behavioral analysis and contextual intent. Compute valuations are then adjusted using a weighted governance model [5], where ethical misalignment reduces an agent’s compute credit allocation. This creates a feedback loop that incentivizes cooperative behavior. The protocol includes a Settlement Layer where smart contracts consume the ethical alignment score from the DID framework, apply the weighted governance formula, and execute the atomic compute credit transfer, ensuring a finalized, irreversible state change rather than a mere suggestion.
+The EA-ACBP employs a decentralized identifier (DID) framework [4] to track each agent's ethical alignment score, which is updated in real time based on behavioral analysis and contextual intent. Compute valuations are then adjusted using a weighted governance model [5], where ethical misalignment reduces an agent’s compute credit allocation. This creates a feedback loop that incentivizes cooperative behavior. The protocol includes a Settlement Layer where smart contracts consume the ethical alignment score from the DID framework, apply the weighted governance formula, and execute the atomic compute credit transfer, ensuring a finalized, irreversible state change rather than a mere suggestion. Specifically, the Settlement Layer ingests DID-signed alignment proofs via the `submitAlignmentProof(bytes calldata proof, uint256 timestamp)` function, which verifies cryptographic signatures against the registry. The credit adjustment is calculated using the formula `AdjustedCredit = BaseCredit * (1 - (MisalignmentScore * GovernanceWeight))`, where `MisalignmentScore` is derived from the proof and `GovernanceWeight` is fetched from the on-chain governance oracle. The transaction reverts if the signature is invalid, the proof timestamp is older than the current block time minus a defined validity window, or if the resulting `AdjustedCredit` falls below a minimum threshold defined in the governance parameters, ensuring only valid, ethically compliant settlements are finalized.
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ K --> L[Compute Exchange]
 6. A Physical Audit Protocol for GCC Sovereign AI Assets: Sovereign Compute Cannot Exceed Its Weakest Interconnect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/18b1651f83b3e3fe9fb99e52194d0e1a6facfe90b0ee9533240afeaf5a2b810d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

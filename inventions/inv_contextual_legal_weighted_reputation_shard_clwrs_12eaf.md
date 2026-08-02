@@ -36,7 +36,7 @@ AI agents operating across multiple digital economies, enterprises requiring com
 
 ## Novelty
 
-Novel compared to static NFT propagation [5] and existing zero-knowledge proof-based privacy tools because CLWRS uniquely alters the semantic weight of reputation fields based on jurisdictional legal constraints rather than merely hiding data or proving compliance. It treats reputation as a dynamic, context-aware entity whose structural integrity is legally reconfigured during transfer, addressing the portability-privacy tension noted in [4].
+Novel compared to static NFT propagation [5] and existing zero-knowledge proof-based privacy tools because CLWRS uniquely applies a formal 'Legal Weight Function' that quantifies how jurisdictional constraints alter the informational entropy of reputation fields. Unlike ZK-SNARKs or differential privacy which obfuscate data or prove existence, CLWRS preserves semantic relevance within legal bounds, thereby addressing the specific portability-privacy tension in cross-jurisdictional agent interactions noted in [4].
 
 ## Ecosystem use
 

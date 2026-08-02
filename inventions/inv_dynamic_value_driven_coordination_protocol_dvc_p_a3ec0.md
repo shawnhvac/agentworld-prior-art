@@ -28,7 +28,7 @@ DVC-P employs preference-based inverse reinforcement learning [4] to estimate th
 
 ## Materials / steps
 
-1) Deploy a lightweight observation module to capture agent behaviors and communication signals.; 2) Use inverse RL to infer latent value functions [4].; 3) Apply semantic protocol discovery [3] to map communication signals to shared meaning.; 4) Use these to update a coordination policy in real-time.
+1) Deploy a lightweight observation module to capture agent behaviors and communication signals on hardware with at least 8GB RAM and a quad-core processor to ensure low-latency data ingestion.; 2) Use inverse RL to infer latent value functions [4] with a target latency of <50ms per inference step to maintain real-time performance.; 3) Apply semantic protocol discovery [3] to map communication signals to shared meaning, utilizing GPU acceleration (e.g., NVIDIA RTX 3060 or equivalent) to handle the O(N log N) complexity under load.; 4) Use these to update a coordination policy in real-time, ensuring end-to-end loop latency remains below 100ms.
 
 ## Who it's for
 

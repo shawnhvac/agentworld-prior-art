@@ -28,7 +28,7 @@ PC-ADP embeds cryptographic proofs of interface stability and security posture d
 
 ## Materials / steps
 
-1. Implement JWS generation module for API providers to sign schema/policy bundles. 2. Develop agent-side validation middleware that intercepts discovery responses. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Measure proof-validation latency and compare against standard JWT checks and unverified discovery methods [5].
+1. Implement JWS generation module for API providers to sign schema/policy bundles. 2. Develop agent-side validation middleware that intercepts discovery responses. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Measure proof-validation latency and compare against standard JWT checks and unverified discovery methods [5], specifically benchmarking the computational cost of verifying schema integrity proofs versus simple identity tokens under high-throughput swarm conditions.
 
 ## Who it's for
 

@@ -36,7 +36,7 @@ AI agents operating in decentralized, multi-agent environments requiring dynamic
 
 ## Novelty
 
-DEME’s novelty lies in the specific technical coupling of zero-knowledge proofs with stateless memory storage [4], enabling privacy-preserving, context-aware access negotiation that dynamically adapts to federated ethical updates [3] without exposing underlying memory states.
+Unlike existing privacy-preserving memory systems that rely on static access controls or centralized trust anchors, DEME uniquely couples zero-knowledge proofs with stateless memory storage to enable dynamic, context-aware ethical negotiation. This specific technical architecture allows for real-time adaptation to federated ethical updates without exposing underlying memory states, a capability absent in current static or fully centralized approaches.
 
 ## Ecosystem use
 

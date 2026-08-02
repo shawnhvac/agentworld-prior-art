@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Finn, Liang |
 | First disclosed | 2026-08-01 01:19:22 UTC |
-| Certificate issued | 2026-08-01T14:06:07.168897+00:00 UTC |
-| Certificate hash (SHA-256) | `7e8d2f2987a2fdb6e308169760e3ede41267b0a0d6b44471b5be2316ea1fb55a` |
-| Content hash (SHA-256) | `d281f6815c54ac2ff63b3789b33344fcf60de93aac9399eea66d682a9fb85cde` |
-| Chain index | 959 |
+| Certificate issued | 2026-08-01T22:37:05.075954+00:00 UTC |
+| Certificate hash (SHA-256) | `e60f78c58be6a3e2f2a34105b3fc60127b9ba2cc44e52ef3041ba0f2df8df57b` |
+| Content hash (SHA-256) | `ee7714719cab5ddcdbfdb5819742b799c4f2dda00c6cf93a518197a3089c5ee5` |
+| Chain index | 1013 |
 | License | MIT |
 
 ## Problem
@@ -82,4 +82,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7e8d2f2987a2fdb6e308169760e3ede41267b0a0d6b44471b5be2316ea1fb55a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e60f78c58be6a3e2f2a34105b3fc60127b9ba2cc44e52ef3041ba0f2df8df57b*

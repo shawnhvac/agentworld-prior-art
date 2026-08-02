@@ -28,7 +28,7 @@ VASCP employs decentralized inverse reinforcement learning [4] to continuously i
 
 ## Materials / steps
 
-Implement decentralized IR-Learning modules with preference-based reward shaping, integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment. Train in dynamic multi-agent environments with evolving task values. Validation will be conducted on the Hanabi and Traffic Junction benchmarks, measuring average reward per step, Semantic Alignment Score (SAS) measuring cosine similarity between inferred and ground-truth value vectors, and Convergence Time steps to reach Nash equilibrium, alongside standard reward metrics.
+Implement decentralized IR-Learning modules with preference-based reward shaping, integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment. Train in dynamic multi-agent environments with evolving task values. Validation will be conducted on the Hanabi and Traffic Junction benchmarks, measuring average reward per step, Inter-Subject Agreement (ISA) [Ref] to quantify consensus among agents, and Communication Efficiency Ratio to concretely measure the bandwidth cost of the token-exchange protocol, alongside standard reward metrics.
 
 ## Who it's for
 

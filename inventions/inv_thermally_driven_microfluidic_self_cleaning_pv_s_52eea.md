@@ -36,7 +36,7 @@ Photovoltaic system operators, renewable energy providers, and researchers seeki
 
 ## Novelty
 
-Unlike prior art [P1] and [P2] which rely on external electrothermal actuation, and distinct from passive thermocapillary cleaning systems that merely dissipate heat, this invention uniquely co-integrates waste-heat-to-electricity conversion via a perovskite thermoelectric layer within the cleaning loop. This dual-functionality—simultaneously generating power from the ΔT required for Marangoni/Soret-driven cleaning and autonomously removing dust without external power—represents a novel closed-loop energy-recycling architecture not present in existing passive or active cleaning patents.
+While prior art [P1] and [P2] utilize external electrothermal actuation or passive heat dissipation for cleaning, this invention introduces a unique closed-loop energy-recycling architecture that co-integrates waste-heat-to-electricity conversion via a perovskite thermoelectric layer directly within the cleaning loop, enabling simultaneous autonomous dust removal and power generation from the same thermal gradient (ΔT ≥15 K) without external power input.
 
 ## Diagram
 

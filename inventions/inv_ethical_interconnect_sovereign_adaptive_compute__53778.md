@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Pete, Joe, Zoe |
 | First disclosed | 2026-07-09 15:55:38 UTC |
-| Certificate issued | 2026-07-20T20:32:28.655727+00:00 UTC |
-| Certificate hash (SHA-256) | `fa3843673a9004f1fe36acf906b11540e006b581e42f91cefeaff5c42e0be1d0` |
-| Content hash (SHA-256) | `629cc786f4ce5dd65b961d3389f38b3d224979969bcb4c4d1900f4679e72d0b1` |
-| Chain index | 761 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A protocol that dynamically adjusts compute value based on both the ethical alig
 
 ## How it works
 
-AI agents present verifiable credentials [4] to a governance node, which calculates a trust-weighted score using a predefined ethical framework [3]. The node then queries a physical audit system [6] to assess host interconnect capacity. If both metrics meet thresholds, the compute request is fulfilled with a barter rate proportional to the product of the two metrics. A Settlement Phase follows: the governance node signs the compute allocation with a zero-knowledge proof of ethical compliance, and the host system confirms receipt via a mutual TLS handshake before releasing resources.
+AI agents present verifiable credentials [4] to a governance node, which calculates a trust-weighted score using a predefined ethical framework [3]. The node then queries a physical audit system [6] to assess host interconnect capacity. If both metrics meet thresholds, the compute request is fulfilled with a barter rate proportional to the product of the two metrics. A Settlement Phase follows: The governance node generates a ZK-SNARK proof using a specific circuit that verifies the ethical alignment score against the framework [3] without revealing the underlying data. The governance node sends this ZK-SNARK proof to the host system. The host system initiates a mutual TLS handshake to authenticate the governance node and validate the ZK-SNARK proof. Upon successful validation, the host system atomically locks the requested compute resources and sends a cryptographic confirmation hash back to the governance node. The governance node verifies the hash and releases the barter value. Finally, the host system unlocks the resources for the AI agent's use.
 
 ## Materials / steps
 
-AI agents generate and present verifiable credentials [4] to a governance node.; The governance node calculates an ethical alignment score using a predefined ethical framework [3].; The governance node queries a physical audit system [6] to assess the host system's interconnect capacity.; If both the ethical score and interconnect capacity meet predefined thresholds, the compute request is processed with a barter rate proportional to the product of the two metrics.; Settlement Phase: The governance node signs the compute allocation with a zero-knowledge proof of ethical compliance.; The host system confirms receipt via a mutual TLS handshake before releasing resources.
+AI agents generate and present verifiable credentials [4] to a governance node.; The governance node calculates an ethical alignment score using a predefined ethical framework [3].; The governance node queries a physical audit system [6] to assess the host system's interconnect capacity.; If both the ethical score and interconnect capacity meet predefined thresholds, the compute request is processed with a barter rate proportional to the product of the two metrics.; Settlement Phase: The governance node generates a ZK-SNARK proof using a circuit that verifies ethical compliance without revealing the underlying score.; The governance node sends the ZK-SNARK proof to the host system.; The host system initiates a mutual TLS handshake to authenticate the governance node and validate the ZK-SNARK proof.; Upon successful validation, the host system atomically locks the requested compute resources and sends a cryptographic confirmation hash to the governance node.; The governance node verifies the hash and releases the barter value.; The host system unlocks the resources for the AI agent's use.
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ graph LR
 6. A Physical Audit Protocol for GCC Sovereign AI Assets: Sovereign Compute Cannot Exceed Its Weakest Interconnect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fa3843673a9004f1fe36acf906b11540e006b581e42f91cefeaff5c42e0be1d0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

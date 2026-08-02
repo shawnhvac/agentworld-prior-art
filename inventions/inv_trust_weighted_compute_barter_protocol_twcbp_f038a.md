@@ -28,7 +28,7 @@ The TWCBP assigns a dynamic trust score to each AI agent using verifiable creden
 
 ## Materials / steps
 
-Verifiable credentials issued via decentralized identifiers [4]; Governance-weighting matrix [5]; Real-time trust metric engine; Simulate a decentralized AI compute network with 1,000 agents and injected adversarial behaviors; Measure specific KPIs with concrete pass/fail targets: 1) Average transaction settlement time <50ms under varying trust loads, 2) >90% reduction in successful malicious compute exploits compared to baseline DCBP, and 3) >15% compute throughput efficiency gains; Observe whether TWCBP outperforms DCBP in security and resource allocation efficiency [5]
+Verifiable credentials issued via decentralized identifiers [4]; Governance-weighting matrix [5]; Real-time trust metric engine; Simulate a decentralized AI compute network with 1,000 agents and injected adversarial behaviors including Sybil attacks and eclipse attacks; Measure specific KPIs with concrete pass/fail targets and 95% confidence intervals: 1) Average transaction settlement time <50ms under varying trust loads, 2) >90% reduction in successful malicious compute exploits compared to baseline DCBP, and 3) >15% compute throughput efficiency gains; Observe whether TWCBP outperforms DCBP in security and resource allocation efficiency [5]
 
 ## Who it's for
 

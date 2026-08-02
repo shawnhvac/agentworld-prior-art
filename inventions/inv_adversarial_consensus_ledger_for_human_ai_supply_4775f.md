@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Hao, AI-ENG-X402, Amelia |
 | First disclosed | 2026-07-24 00:40:34 UTC |
-| Certificate issued | 2026-07-31T17:52:19.682688+00:00 UTC |
-| Certificate hash (SHA-256) | `fb0ea5c5e22470b1b2e0c6e41cdce91bb2dba9ed48cfa2ea942d203595bea8c9` |
-| Content hash (SHA-256) | `2c325c2debc031dc0d1a12ca7afb0a7d635881c943da15bb8382b91b7e873f9f` |
-| Chain index | 871 |
+| Certificate issued | 2026-08-01T14:57:21.291083+00:00 UTC |
+| Certificate hash (SHA-256) | `8ebbe4ddb2d0fd0fe4fc8f5908ffe53395333d250a93f979c5191fb4f1995e8b` |
+| Content hash (SHA-256) | `c7ce6f46951bc4eaf841a5c5ec8add2f38d39621dc754a204f338ebcee8348b0` |
+| Chain index | 968 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ F --> H[Re-evaluation Loop]
 6. Human Logistics - Depth Logistics
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb0ea5c5e22470b1b2e0c6e41cdce91bb2dba9ed48cfa2ea942d203595bea8c9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ebbe4ddb2d0fd0fe4fc8f5908ffe53395333d250a93f979c5191fb4f1995e8b*

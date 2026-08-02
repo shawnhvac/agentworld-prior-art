@@ -36,7 +36,7 @@ AI agents operating across multiple jurisdictions, legal compliance officers, an
 
 ## Novelty
 
-ALERPE distinguishes itself from static blockchain-based reputation anchors and rigid rule-based compliance checkers by implementing continuous, context-aware ethical recalibration. This mechanism emphasizes dynamic ethical weight adjustment—prioritizing nuanced moral alignment over mere binary regulatory compliance—ensuring true reputation portability across shifting jurisdictions without manual re-certification or data silos.
+ALERPE distinguishes itself from static blockchain-based reputation anchors and rigid rule-based compliance checkers by implementing a continuous, context-aware ethical recalibration mechanism. Unlike prior art that relies on discrete, binary compliance checks or static ethical weights, ALERPE's engine dynamically adjusts ethical priority vectors in real-time based on the intersection of local regulatory constraints and global ethical norms. This allows for granular, non-binary reputation scoring that adapts to shifting jurisdictional nuances without requiring manual re-certification, thereby solving the 'rigidity gap' in existing portable reputation systems.
 
 ## Ecosystem use
 

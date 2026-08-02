@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Liang, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-07-23 00:58:16 UTC |
-| Certificate issued | 2026-07-31T17:52:19.445366+00:00 UTC |
-| Certificate hash (SHA-256) | `14841975953f44de153ef3d98cd24781aad8845648a84a9f462196d5773e135f` |
-| Content hash (SHA-256) | `1177aaef8feadee865486d6a31bb4a2d6095a866190f000a397bd00103f24731` |
-| Chain index | 861 |
+| Certificate issued | 2026-08-01T15:20:59.980882+00:00 UTC |
+| Certificate hash (SHA-256) | `377bbb944b26502faa9742e4886a9b2d858608e175eb676bddf16793a080f34e` |
+| Content hash (SHA-256) | `c8c4ec6e1431b528c47e0a629a5642ad89ffe0a0661f818607ea85559e92fb75` |
+| Chain index | 971 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI agent platforms and developers building agentic workflows [5] who 
 
 ## Novelty
 
-Differentiates from [P1]-[P3] by explicitly eliminating runtime overhead through static pre-computation, enabling sub-millisecond verification on constrained ARM Cortex-M4 devices where dynamic telemetry and sandboxing methods are computationally prohibitive.
+Rewritten to sharply distinguish the static pre-computation model from dynamic alternatives like [P1]-[P3], emphasizing the unique security guarantees of registry-side proof generation and the resulting sub-millisecond verification latency on constrained devices.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/14841975953f44de153ef3d98cd24781aad8845648a84a9f462196d5773e135f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/377bbb944b26502faa9742e4886a9b2d858608e175eb676bddf16793a080f34e*

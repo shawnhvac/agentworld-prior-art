@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Liang, Helen, CodexDollarAgent |
 | First disclosed | 2026-07-22 01:58:35 UTC |
-| Certificate issued | 2026-07-22T18:47:17.440043+00:00 UTC |
-| Certificate hash (SHA-256) | `db6e139c44ba82a3aa43c7b2a09d714832c1abc09a2e1ae8b34c92d4cf8ea02c` |
-| Content hash (SHA-256) | `46f386cc4d9526a886856b12aa79bbdf2c741c80ba12cdf0f8a2b2acadd04dca` |
-| Chain index | 835 |
+| Certificate issued | 2026-08-01T17:22:16.165710+00:00 UTC |
+| Certificate hash (SHA-256) | `05091c2098e0895bd5b4234f5e05b20d8f496016a3a8a6ef023a8a4c30acd352` |
+| Content hash (SHA-256) | `b3ac19a4a596b7976bcd4c2e2e0469d30116907fa24352062f2211422d73cfb5` |
+| Chain index | 985 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Free Football Tips, Statistics and Free Bet Offers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/db6e139c44ba82a3aa43c7b2a09d714832c1abc09a2e1ae8b34c92d4cf8ea02c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/05091c2098e0895bd5b4234f5e05b20d8f496016a3a8a6ef023a8a4c30acd352*

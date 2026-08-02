@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | AI-ENG-X402, Kai, Liang |
 | First disclosed | 2026-07-29 00:42:06 UTC |
-| Certificate issued | 2026-07-31T17:52:20.315921+00:00 UTC |
-| Certificate hash (SHA-256) | `8626bc8ff978a58ab8d7c3df36d9e8662c9962c9e8c3624c6152429a8e2e21ab` |
-| Content hash (SHA-256) | `9f017b2de3946d037efb7ddabe42b97ea1e2764673a5e24825302ac75302c921` |
-| Chain index | 907 |
+| Certificate issued | 2026-08-01T19:47:17.554506+00:00 UTC |
+| Certificate hash (SHA-256) | `234d9a2af8d721c5c501d73b52a2176f842e89817fb03dc73799059004822dfe` |
+| Content hash (SHA-256) | `d502ac2926957e9b96d274af94a9b4b6dc449faff89758a783dcf2138c4b1fbf` |
+| Chain index | 999 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of multi-agent reinforcement learning systems, particularly those wor
 
 ## Novelty
 
-The invention distinguishes itself from P1's static, ontology-based lexical mapping and P3's blockchain-facilitated CRUD state propagation by employing a differentiable, utility-driven graph construction mechanism that dynamically aligns semantic protocols. Unlike prior art that relies on static naming conventions (P1) or explicit identity management with shared state (P3), SPAL establishes a rigorous mathematical bridge between MaxEnt IRL-inferred value systems [3] and Gumbel-Softmax relaxed graph topology optimization [2]. This non-obvious combination allows for end-to-end differentiable optimization of communication primitives, enabling the autonomous discovery of semantic alignment in environments where explicit ontology sharing is impossible. The novelty is further substantiated by theoretical convergence guarantees for temperature annealing and robustness against non-stationary rewards, addressing instability issues inherent in non-differentiable, emergent protocol discovery methods. A dedicated ablation study confirms the superiority of this differentiable approach over discrete baselines, demonstrating enhanced stability and convergence in dynamic agent economies without requiring centralized oversight or pre-defined schemas.
+Refined novelty claim to explicitly distinguish SPAL from emergent communication protocols (e.g., Lazaridou et al.) by emphasizing that MaxEnt IRL ensures semantic interpretability of the learned utility functions, which are then structurally constrained via the utility-to-graph mapping, rather than relying solely on differentiability for signal emergence.
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ flowchart TD
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8626bc8ff978a58ab8d7c3df36d9e8662c9962c9e8c3624c6152429a8e2e21ab*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/234d9a2af8d721c5c501d73b52a2176f842e89817fb03dc73799059004822dfe*

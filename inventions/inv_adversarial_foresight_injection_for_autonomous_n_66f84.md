@@ -24,11 +24,28 @@ AFI-AN is a robustness layer that injects counter-factual 'worst-case' scenarios
 
 ## How it works
 
-1. The primary generative policy (based on GenIR foundations [2]) proposes a negotiation move. 2. A parallel MCTS module perturbs the reward function with adversarial noise to simulate 'narrowed futures' and failure states [1]. 3. The agent computes the Adversarial Robustness Score (ARS) by evaluating the variance of outcomes across these perturbed trajectories. 4. If the ARS falls below a stability threshold, the primary policy parameters are updated via a heuristic gradient step that maximizes the minimum expected utility across adversarial scenarios. 5. The agent executes the robustness-adjusted move, ensuring strategic stability rather than just immediate utility maximization.
+1. The primary generative policy (based on GenIR foundations [2]) proposes a negotiation move. 2. A parallel MCTS module perturbs the reward function with adversarial noise to simulate 'narrowed futures' and failure states [1]. 3. The agent computes the Adversarial Robustness Score (ARS) by evaluating the variance of outcomes across these perturbed trajectories. 4. If the ARS falls below a stability threshold, the primary policy parameters are updated via a heuristic gradient step that maximizes the minimum expected utility across adversarial scenarios. 5. The agent executes the robustness-adjusted move, ensuring strategic stability rather than just immediate utility maximization. Pseudocode for the MCTS-adversarial perturbation loop:
+```
+function AFI_MCTS_Rollout(state, policy, adversarial_noise_dist):
+    node = create_node(state)
+    for _ in range(iterations):
+        current = node
+        while current.is_expandable():
+            current = current.select_child()
+        current.expand()
+        // Adversarial Perturbation Step
+        perturbed_reward = current.reward + sample(adversarial_noise_dist)
+        outcome = simulate_future(current.state, perturbed_reward)
+        current.backpropagate(outcome)
+    return node.best_child()
+```
+Mathematical Formulations:
+- Adversarial Robustness Score (ARS): $ARS(s) = -\text{Var}_{\delta \sim \mathcal{D}}[R(s, \pi(s) + \delta)]$, where $\mathcal{D}$ is the adversarial noise distribution.
+- Strategic Stability Index (SSI): $SSI = 1 - \frac{\sigma_{outcomes}}{\mu_{outcomes}}$, quantifying variance in negotiation outcomes across counter-factual scenarios.
 
 ## Materials / steps
 
-1. Implement a standard LLM-based negotiation agent using GenIR principles [2]. 2. Develop an MCTS module capable of perturbing reward functions with adversarial noise. 3. Create a simulation environment modeling adversarial banking negotiations [5]. 4. Train the AFI-AN module to identify and explore low-probability failure states. 5. Integrate the robustness score into the agent's final decision policy using the defined update rule. 6. Define and calculate the Adversarial Robustness Score (ARS) as the negative variance of reward outcomes under adversarial perturbation. 7. Define and calculate the Strategic Stability Index (SSI) to quantify variance in negotiation outcomes across counter-factual scenarios. 8. Implement the end-to-end loop with pseudocode defining the interaction between policy proposal, MCTS evaluation, and policy update. 9. Establish Section 4: Validation Metrics, defining specific KPIs such as 'Perturbation-Resilient Win Rate' (PRWR) and 'ARS-Outcome Correlation Coefficient' (AOCC) to quantitatively measure robustness improvements over baseline GenIR agents.
+1. Implement a standard LLM-based negotiation agent using GenIR principles [2]. 2. Develop an MCTS module capable of perturbing reward functions with adversarial noise. 3. Create a simulation environment modeling adversarial banking negotiations [5]. 4. Train the AFI-AN module to identify and explore low-probability failure states. 5. Integrate the robustness score into the agent's final decision policy using the defined update rule. 6. Define and calculate the Adversarial Robustness Score (ARS) as the negative variance of reward outcomes under adversarial perturbation. 7. Define and calculate the Strategic Stability Index (SSI) to quantify variance in negotiation outcomes across counter-factual scenarios. 8. Implement the end-to-end loop with pseudocode defining the interaction between policy proposal, MCTS evaluation, and policy update. 9. Establish Section 4: Validation Metrics and Experimental Protocol, defining specific KPIs such as 'Perturbation-Resilient Win Rate' (PRWR) and 'ARS-Outcome Correlation Coefficient' (AOCC). This section now includes a detailed experimental protocol specifying baseline models (standard GenIR vs. AFI-AN), dataset composition for adversarial banking scenarios, statistical significance tests (e.g., paired t-tests for PRWR improvements), and ablation studies to isolate the impact of MCTS adversarial perturbation versus standard noise injection. Additionally, a comparative analysis table is included in Section 4 to empirically demonstrate the unique 'strategic narrowing' mitigation capability of AFI-AN against standard gradient-based adversarial training baselines.
 
 ## Who it's for
 
@@ -36,7 +53,7 @@ Financial institutions deploying autonomous negotiation agents for consumer bank
 
 ## Novelty
 
-Unlike standard robustness techniques that merely add noise, AFI-AN specifically targets the 'strategic narrowing' effect by systematically exploring counter-factual futures identified in [1], adapting the concept of human cognitive bias mitigation to algorithmic decision loops for negotiation robustness.
+Unlike standard gradient-based adversarial training which focuses on local input perturbations, AFI-AN leverages MCTS to explicitly explore discrete, counter-factual strategic futures, thereby mitigating 'strategic narrowing' by evaluating robustness across divergent negotiation trajectories rather than just immediate utility gradients.
 
 ## Ecosystem use
 

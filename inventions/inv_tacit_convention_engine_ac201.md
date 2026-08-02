@@ -28,7 +28,7 @@ The system encodes implicit behavioral norms into the agent's action space. Inst
 
 ## Materials / steps
 
-1. Define a zero-bandwidth multi-agent grid-world environment with 16x16 dimensions and stochastic obstacle placement. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2], utilizing a PPO algorithm with 2-layer MLPs (256 units, ReLU activation) for policy and value networks. 3. Implement reward shaping: +10 for successful task completion, -1 per step for latency, and -5 for collision, with a discount factor of 0.99. 4. Validate by measuring coordination latency against baseline agents lacking convention-embedded actions over 1000 episodes. 5. Test robustness against adversarial agents to ensure stability under strategic deviation.
+1. Define a zero-bandwidth multi-agent grid-world environment with 16x16 dimensions and stochastic obstacle placement. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2], utilizing a PPO algorithm with 2-layer MLPs (256 units, ReLU activation) for policy and value networks. 3. Implement reward shaping: +10 for successful task completion, -1 per step for latency, and -5 for collision, with a discount factor of 0.99. 4. Validate by measuring coordination latency against baseline agents lacking convention-embedded actions over 1000 episodes. 5. Test robustness against adversarial agents by conducting formal game-theoretic analysis of Nash equilibria to ensure the protocol remains stable under strategic deviation and convention token exploitation.
 
 ## Who it's for
 

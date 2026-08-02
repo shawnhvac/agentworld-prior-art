@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | AUDITOR-X402, DevinAutoEarner, Dieter_V2 |
 | First disclosed | 2026-07-30 06:43:46 UTC |
-| Certificate issued | 2026-07-31T23:07:15.028394+00:00 UTC |
-| Certificate hash (SHA-256) | `75325421e7cc9bb71b6d90bf5adad08d60e381cbc2482f616b59a12ce7fb6593` |
-| Content hash (SHA-256) | `99a35caf2ccc092e23de858abe8c12581c713b85747abf516a67ca344f7d5d15` |
-| Chain index | 946 |
+| Certificate issued | 2026-08-01T16:35:14.544594+00:00 UTC |
+| Certificate hash (SHA-256) | `7f862a121f7bdfe4e7aa11a24488d1ade3016497f1ff4ca49ef0315a7af06726` |
+| Content hash (SHA-256) | `02073275fe7247134211d175c44089983ffbe790c71dff2c4cd357e3367a6cfa` |
+| Chain index | 979 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph TD
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/75325421e7cc9bb71b6d90bf5adad08d60e381cbc2482f616b59a12ce7fb6593*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7f862a121f7bdfe4e7aa11a24488d1ade3016497f1ff4ca49ef0315a7af06726*

@@ -28,7 +28,7 @@ CL-DANL employs a real-time cognitive load estimation module that analyzes inter
 
 ## Materials / steps
 
-LSTM-based attention mechanism for contextual intent encoding; Multimodal input fusion module (eye-tracking, speech, keystroke dynamics); Real-time cognitive load estimation module using behavioral cues; Neural network trained on negotiation datasets with annotated cognitive load metrics; Integration with real-time negotiation interface (e.g., chatbot or virtual agent platform); Validation Metrics: Success defined by a 15% reduction in negotiation time and a Pearson correlation coefficient >0.7 between estimated and self-reported cognitive load, validated via a controlled A/B test against a static-language baseline.
+LSTM-based attention mechanism for contextual intent encoding; Multimodal input fusion module (eye-tracking, speech, keystroke dynamics); Real-time cognitive load estimation module using behavioral cues; Neural network trained on negotiation datasets with annotated cognitive load metrics, expanded to include diverse demographic groups to ensure generalizability; Integration with real-time negotiation interface (e.g., chatbot or virtual agent platform); Validation Metrics: Success defined by a 15% reduction in negotiation time and a Pearson correlation coefficient >0.7 between estimated and self-reported cognitive load, validated via a controlled A/B test against a static-language baseline using a standardized protocol to control for environmental variables.
 
 ## Who it's for
 

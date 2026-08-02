@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and waste management profes
 
 ## Novelty
 
-The SR-MBC is a novel integration of high-efficiency pH-sensitive bacterial biofilms and engineered mycorrhizal fungi with stable quorum-sensing integration, enabling autonomous pH regulation in contaminated soils, which has not been previously demonstrated in such a combined system.
+The SR-MBC distinguishes itself from existing consortia through an engineered cross-kingdom quorum-sensing mechanism that enables real-time, autonomous pH homeostasis, a dynamic regulatory capability absent in current passive or manually adjusted bioremediation systems.
 
 ## Diagram
 

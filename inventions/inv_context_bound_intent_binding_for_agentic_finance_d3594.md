@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | AI-ENG-X402, Helen, Hao |
 | First disclosed | 2026-07-21 18:38:37 UTC |
-| Certificate issued | 2026-07-31T21:27:11.386961+00:00 UTC |
-| Certificate hash (SHA-256) | `8e2066a9050a79b7f737754b1abe2994172f796862f997ed5aa5d59f132a8a13` |
-| Content hash (SHA-256) | `d3ae09a16fd901ee94437d7bf0ec0cc64041aa7db4103e236b5a88ee26d75430` |
-| Chain index | 939 |
+| Certificate issued | 2026-08-01T17:17:26.840724+00:00 UTC |
+| Certificate hash (SHA-256) | `c8a70e4b6da0ea14fec253ac3e92bf7916ca1cc505e3c30e5aa747c2e5e38b31` |
+| Content hash (SHA-256) | `c37e7800304512aa77dc35da64f00230c26440a85ef3b8e7861c7e1d5ebd26a9` |
+| Chain index | 984 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Financial institutions, insurers, and regulators requiring finance-grade assuran
 
 ## Novelty
 
-Unlike ZK-proofs of computation (e.g., zk-Rollups) or standard smart contract execution which verify the deterministic correctness of code execution ('how' the code runs), this protocol verifies the semantic alignment of the outcome with the declared high-level goal ('what' was achieved). While [P4] focuses on internal model reasoning refinement via contextual weighting, it lacks an external, cryptographically binding mechanism to lock intent to execution outcomes. This invention uniquely solves the 'semantic drift' problem by binding a Verifiable Credential (VC) of the agent's goal state to a specific execution window using Context-Bound Identity [6], creating a cryptographic anchor for semantic intent. The specific point of novelty is the integration of a dynamic, risk-adjusted semantic threshold (derived from ROC curve analysis) with this VC binding to mathematically validate that the semantic hash of the output (H_o) aligns with the pre-signed intent hash (H_s) within a strict tolerance (cosine similarity > 0.95). This mechanism ensures deterministic settlement finality by rejecting transactions that are computationally valid but semantically divergent from the agent's declared intent—a gap not addressed by [P4]'s internal reasoning or the execution-only verification of standard blockchain protocols. The novelty is further strengthened by a detailed technical assessment of the SHA256(Embed) mechanism's sensitivity to linguistic variations and the robustness of the dynamic threshold against adversarial distribution shifts, ensuring viability for high-stakes financial environments where semantic intent, not just code correctness, determines settlement validity.
+Unlike general semantic similarity checks or ZK-proofs of computation (e.g., zk-Rollups) which verify deterministic code execution or internal model reasoning [P4], this protocol uniquely binds a cryptographic Verifiable Credential (VC) of an agent's goal state to a specific execution window via Context-Bound Identity [6]. The core novelty lies in the integration of a dynamic, risk-adjusted semantic threshold—derived from rigorous ROC curve analysis on adversarial datasets—with this VC binding to mathematically validate that the semantic hash of the output (H_o) aligns with the pre-signed intent hash (H_s) within a strict tolerance (cosine similarity > 0.95). This mechanism ensures deterministic settlement finality by rejecting transactions that are computationally valid but semantically divergent, a gap not addressed by standard blockchain protocols or internal reasoning refinements. The invention is further distinguished by a detailed technical assessment of the SHA256(Embed) mechanism's sensitivity to linguistic variations and the robustness of the dynamic threshold against adversarial distribution shifts, ensuring viability for high-stakes financial environments where semantic intent, not just code correctness, determines settlement validity.
 
 ## Ecosystem use
 
@@ -75,4 +75,4 @@ sequenceDiagram
 6. Context-Bound Identity (CBI): A Cryptographic Protocol for Verifiable Compliance in Autonomous Financial AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e2066a9050a79b7f737754b1abe2994172f796862f997ed5aa5d59f132a8a13*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c8a70e4b6da0ea14fec253ac3e92bf7916ca1cc505e3c30e5aa747c2e5e38b31*
