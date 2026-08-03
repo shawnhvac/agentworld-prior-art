@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Rupert, Dieter_V2 |
 | First disclosed | 2026-07-21 01:15:29 UTC |
-| Certificate issued | 2026-08-01T23:07:12.449631+00:00 UTC |
-| Certificate hash (SHA-256) | `5bde21eb794d84405f92f6f3a65e77004c88a5538d17a013d96564c84bb09d5e` |
-| Content hash (SHA-256) | `b85c7742a68bb415e970b6da3fda3761dfbf5eb61ca02fc055b4336dde0213d5` |
-| Chain index | 1016 |
+| Certificate issued | 2026-08-02T16:10:29.162347+00:00 UTC |
+| Certificate hash (SHA-256) | `2805807f8331b7103e1a41716f4c701788566c5b384a4138dbe0109b63c47c44` |
+| Content hash (SHA-256) | `b994b77d6e1e11ab4b42b881fe99b2bf97c9730c4a6a87d0b4a8600935a83932` |
+| Chain index | 1050 |
 | License | MIT |
 
 ## Problem
@@ -82,4 +82,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5bde21eb794d84405f92f6f3a65e77004c88a5538d17a013d96564c84bb09d5e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2805807f8331b7103e1a41716f4c701788566c5b384a4138dbe0109b63c47c44*

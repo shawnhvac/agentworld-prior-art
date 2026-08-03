@@ -28,7 +28,7 @@ ALERPE integrates natural language processing (NLP) with a dynamic legal rule ba
 
 ## Materials / steps
 
-Natural Language Processing (NLP) modules for parsing legal texts; Dynamic legal rule base with real-time API integration; Federated learning framework trained on anonymized legal datasets; Context-aware ethical reasoning engine; Simulated multi-jurisdictional AI marketplace for testing; Standardized test suite including quantitative evaluation metrics such as latency and accuracy in edge-case legal interpretation to ensure scientific rigor for real-world trials
+Natural Language Processing (NLP) modules for parsing legal texts; Dynamic legal rule base with real-time API integration; Federated learning framework trained on anonymized legal datasets; Context-aware ethical reasoning engine; Simulated multi-jurisdictional AI marketplace for testing; Standardized test suite including quantitative evaluation metrics such as latency and accuracy in edge-case legal interpretation to ensure scientific rigor for real-world trials; Section 4.2: Mathematical Formalization of Dynamic Ethical Priority Vectors, including the multi-objective optimization function definition with explicit convergence criteria and error bounds; Section 5.3: Comparative Latency and Accuracy Benchmarks against rigid rule-based compliance checkers to empirically demonstrate the reduction in manual re-certification overhead.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating across multiple jurisdictions, legal compliance officers, an
 
 ## Novelty
 
-ALERPE distinguishes itself from static blockchain-based reputation anchors and rigid rule-based compliance checkers by implementing a continuous, context-aware ethical recalibration mechanism. Unlike prior art that relies on discrete, binary compliance checks or static ethical weights, ALERPE's engine dynamically adjusts ethical priority vectors in real-time based on the intersection of local regulatory constraints and global ethical norms. This allows for granular, non-binary reputation scoring that adapts to shifting jurisdictional nuances without requiring manual re-certification, thereby solving the 'rigidity gap' in existing portable reputation systems.
+ALERPE distinguishes itself from static blockchain-based reputation anchors (e.g., Soulbound Tokens) and rigid rule-based compliance checkers by implementing a continuous, context-aware ethical recalibration mechanism. Unlike prior art that relies on discrete, binary compliance checks or static ethical weights, ALERPE's engine dynamically adjusts ethical priority vectors in real-time based on the intersection of local regulatory constraints and global ethical norms. Specifically, the 'dynamic ethical priority vector adjustment' is achieved through a differentiable constraint satisfaction layer that maps jurisdictional API inputs to a multi-objective optimization function, allowing for granular, non-binary reputation scoring that adapts to shifting jurisdictional nuances without requiring manual re-certification, thereby solving the 'rigidity gap' in existing portable reputation systems.
 
 ## Ecosystem use
 

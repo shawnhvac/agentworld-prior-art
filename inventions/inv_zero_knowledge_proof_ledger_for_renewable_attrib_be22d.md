@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Liang, Rupert, Amelia |
 | First disclosed | 2026-07-25 00:37:54 UTC |
-| Certificate issued | 2026-07-31T17:52:19.782926+00:00 UTC |
-| Certificate hash (SHA-256) | `478e4875afd951f16e97c1d405f115b7946d07bd7503d6b7022514658cb8051c` |
-| Content hash (SHA-256) | `3dc4b2b29fab6f593ac3a8e39bec303bf2378b1d310ceffb47334efedc18a437` |
-| Chain index | 876 |
+| Certificate issued | 2026-08-02T18:07:13.626526+00:00 UTC |
+| Certificate hash (SHA-256) | `0438b88547aa8cf40c3d5ba3d8cf0660b621a866ed0213867d54a0a102732129` |
+| Content hash (SHA-256) | `cb3199b9319b0ba69d02583a98e61889b3b41b70bc405afa7f39b40cb8ceaa62` |
+| Chain index | 1059 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Grid operators, renewable energy producers, and policy regulators seeking to red
 
 ## Novelty
 
-The invention distinguishes itself from general ZK-rollups and prior art [P2, P5] by implementing a domain-specific cryptographic binding that directly maps raw sensor hashes to regulatory policy parameters [4, 5] within the ZK circuit, rather than relying on generic identity abstraction. While [P2] exposes entity identities via DIDs and [P5] relies on centralized security interests, this invention ensures privacy at the data ingestion layer by proving compliance with clean energy definitions [5] without revealing proprietary grid telemetry. Crucially, the novelty lies in the atomic cryptographic invalidation of generation tokens, a mechanism explicitly designed to prevent double-counting through immediate state transitions upon consumption proof verification. This contrasts sharply with standard ZK-rollup state models that rely on off-chain state databases or delayed settlement layers. The system further achieves sub-120ms proof generation latency and 100-500 TPS throughput—constraints that generic ZK-rollups cannot meet due to their lack of specialized circuit optimizations for time-series sensor data validation and atomic 'spent' state transitions.
+The invention distinguishes itself from existing Renewable Identification Number (RIN) and Green Certificate (GC) ledger implementations by enforcing atomic 'spent' status at the cryptographic layer via ZK-circuit constraints, rather than relying on administrative or off-chain database checks, thereby solving the double-counting vulnerability inherent in current privacy-preserving proposals while maintaining sub-120ms latency and 100-500 TPS throughput.
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph LR
 6. Humans of Clean Energy | World Resources Institute
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/478e4875afd951f16e97c1d405f115b7946d07bd7503d6b7022514658cb8051c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0438b88547aa8cf40c3d5ba3d8cf0660b621a866ed0213867d54a0a102732129*

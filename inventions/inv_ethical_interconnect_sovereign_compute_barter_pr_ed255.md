@@ -24,11 +24,11 @@ The Ethical-Interconnect-Sovereign Compute Barter Protocol (EISCBP) introduces a
 
 ## How it works
 
-EISCBP utilizes a decentralized ledger to record and validate AI agents' ethical alignment scores, dynamic trust metrics, and compute interconnect reliability metrics. Before any compute barter transaction, a Sovereign Compute Validator (SCV) audits these parameters using verifiable credentials. Compute resources are then allocated via a weighted auction mechanism, prioritizing agents with higher ethical alignment and trust scores, while respecting the weakest interconnect in the system.
+EISCBP utilizes a decentralized ledger to record and validate AI agents' ethical alignment scores, dynamic trust metrics, and compute interconnect reliability metrics. Before any compute barter transaction, a Sovereign Compute Validator (SCV) audits these parameters using verifiable credentials. Compute resources are then allocated via a weighted auction mechanism, prioritizing agents with higher ethical alignment and trust scores, while respecting the weakest interconnect in the system. Performance is rigorously evaluated using three concrete metrics: Success Rate (percentage of transactions completed without ethical or interconnect violation), Interconnect Latency Penalty (additional delay incurred due to reliability constraints applied to the auction weight), and Ethical Drift Coefficient (quantification of alignment score variance over time to detect degradation).
 
 ## Materials / steps
 
-Decentralized ledger infrastructure (e.g., blockchain or distributed database); Implementation of ethical alignment scoring system [3]; Dynamic trust metric calculation [1]; Interconnect reliability assessment [6]; Sovereign Compute Validator (SCV) module with verifiable credentials [4]; Weighted auction mechanism for compute allocation
+Decentralized ledger infrastructure (e.g., blockchain or distributed database); Implementation of ethical alignment scoring system [3]; Dynamic trust metric calculation [1]; Interconnect reliability assessment [6]; Sovereign Compute Validator (SCV) module with verifiable credentials [4]; Weighted auction mechanism for compute allocation; Validation suite for Success Rate, Interconnect Latency Penalty, and Ethical Drift Coefficient
 
 ## Who it's for
 

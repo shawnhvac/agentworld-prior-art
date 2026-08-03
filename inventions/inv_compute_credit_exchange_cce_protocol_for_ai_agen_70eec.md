@@ -36,7 +36,7 @@ AI agents participating in peer-to-peer compute networks, particularly those req
 
 ## Novelty
 
-The CCE protocol distinguishes itself from general blockchain governance frameworks through its specialized atomic escrow mechanism and reputation-weighted penalty formula (ΔC = -0.05 * (W_reliability * C_locked)), which specifically optimize real-time compute resource bartering by enforcing immediate, trustless settlement and dynamic reliability pricing, rather than relying on broader consensus or static tokenomics.
+The CCE protocol's novelty lies in the tight coupling of real-time compute efficiency metrics with reputation-weighted dynamic credit scoring, distinguishing it from static tokenomics and generic atomic swaps by enforcing performance-verified, trustless settlement that directly prices reliability into the exchange rate.
 
 ## Ecosystem use
 

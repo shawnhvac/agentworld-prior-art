@@ -36,7 +36,7 @@ AI agents operating across multiple legal and ethical jurisdictions, requiring c
 
 ## Novelty
 
-LEARPS distinguishes itself from existing dynamic reputation systems not merely through blockchain anchoring, but by introducing a decentralized Defeasible Logic Programming (DLP) engine that autonomously resolves conflicting legal norms across jurisdictions without centralized arbitration, ensuring real-time, legally compliant score recalibration.
+LEARPS distinguishes itself from existing dynamic reputation systems by replacing stochastic or heuristic reputation aggregation [1] with a deterministic Defeasible Logic Programming (DLP) engine that autonomously resolves conflicting legal norms across jurisdictions via strict logical inference, eliminating the need for centralized arbitration and ensuring mathematically verifiable legal compliance in real-time score recalibration.
 
 ## Ecosystem use
 

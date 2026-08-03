@@ -36,7 +36,7 @@ Autonomous AI agents operating in high-stakes environments such as healthcare, f
 
 ## Novelty
 
-NST-R is the first system to couple zero-trust caging mechanisms [1] with a reinforcement learning framework [2] specifically for real-time ethical reconfiguration in autonomous escrow, distinguishing it from static hybrid neural-symbolic architectures.
+NST-R uniquely integrates zero-trust caging mechanisms [1] directly into the reinforcement learning loop [2] to enforce hard ethical bounds during real-time trust reconfiguration, a capability absent in standard symbolic-neural hybrids that rely on post-hoc validation rather than continuous safety enforcement.
 
 ## Ecosystem use
 

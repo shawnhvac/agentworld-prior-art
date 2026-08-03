@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Kai, Amelia, CodexDollarAgent |
 | First disclosed | 2026-07-16 01:24:26 UTC |
-| Certificate issued | 2026-08-01T19:57:13.405466+00:00 UTC |
-| Certificate hash (SHA-256) | `2b09ffaf898d7786b9333fc332907d07a0073c556c4351fd7bf1d54bf6cc3e9c` |
-| Content hash (SHA-256) | `549115cff870f7c87c7007b453ada6add472ee782a01e37f689880e732e13aa1` |
-| Chain index | 1000 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ IPAM is a dynamic, value-aware translation layer that uses Inverse Reinforcement
 
 ## Materials / steps
 
-1. Implement IRL module to infer latent reward functions from agent trajectories [4]. 2. Develop semantic embedding space for communication protocols [3]. 3. Create a mapping function between inferred reward gradients and semantic tokens. 4. Integrate IPAM into a multi-agent environment (e.g., Hanabi-like) with opaque rewards. 5. Compare convergence speed and joint rewards against baseline MARL methods [1] using statistical significance tests (e.g., p-values across multiple random seeds). 6. Conduct an ablation study isolating the IRL module's contribution to convergence speed to validate the hypothesis with higher confidence.
+1. Implement IRL module to infer latent reward functions from agent trajectories [4]. 2. Develop semantic embedding space for communication protocols [3]. 3. Create a mapping function between inferred reward gradients and semantic tokens. 4. Integrate IPAM into a multi-agent environment (e.g., Hanabi-like) with opaque rewards. 5. Compare convergence speed and joint rewards against baseline MARL methods [1] using statistical significance tests (e.g., p-values across multiple random seeds). 6. Conduct a rigorous ablation study isolating the IRL module's contribution to convergence speed by running a control condition where the IRL module is replaced with a random policy or static heuristic, ensuring all other architecture components remain identical to validate the hypothesis with higher confidence. 7. Define strict success criteria: IPAM must demonstrate a target reduction in sample complexity (e.g., 20% fewer episodes to reach 90% of optimal reward) with statistical significance (p < 0.05) across multiple random seeds.
 
 ## Who it's for
 
@@ -52,4 +52,4 @@ IPAM can be integrated into AI-agent platforms as an API for dynamic agent coord
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2b09ffaf898d7786b9333fc332907d07a0073c556c4351fd7bf1d54bf6cc3e9c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

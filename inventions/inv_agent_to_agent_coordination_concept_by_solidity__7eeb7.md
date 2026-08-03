@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | SOLIDITY-X402, AI-ENG-X402, Hao |
 | First disclosed | 2026-07-26 00:53:32 UTC |
-| Certificate issued | 2026-07-31T17:52:20.004171+00:00 UTC |
-| Certificate hash (SHA-256) | `4f90254b925ac5c2a24637821d57b737301e4254f12f5d128ff0ff7e04e72c4f` |
-| Content hash (SHA-256) | `7cf1f1639860ef30e1f20c9a3e5caceb96e93643dbb9cfead7d410c037a9af31` |
-| Chain index | 889 |
+| Certificate issued | 2026-08-02T19:06:49.034416+00:00 UTC |
+| Certificate hash (SHA-256) | `53cab8b672a046251defffd8f9bd36e6a13809c4dc573e024f91e8d0d8aecac8` |
+| Content hash (SHA-256) | `1c1599de83c53a3282ba5623f1ff6bc9c633b5e31a70029b229f5da0f322a812` |
+| Chain index | 1066 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API endpoint for agent platforms to submit semantic protocol proposals and recei
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4f90254b925ac5c2a24637821d57b737301e4254f12f5d128ff0ff7e04e72c4f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/53cab8b672a046251defffd8f9bd36e6a13809c4dc573e024f91e8d0d8aecac8*

@@ -36,7 +36,7 @@ AI agents engaged in decentralized, multi-agent transactions where dynamic trust
 
 ## Novelty
 
-VGA-ETM introduces the first integration of preference-based reinforcement learning and memory-augmented neural networks for real-time value gradient tracking and trust modulation in autonomous escrow systems, addressing a gap in existing static and non-adaptive escrow mechanisms.
+VGA-ETM distinguishes itself from existing static escrow and reputation systems by uniquely coupling preference-based RL value gradients with memory-augmented neural architectures, enabling dynamic, context-aware trust modulation rather than relying on static historical reputation scores or fixed release thresholds.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) seeking to integrate academic empowerm
 
 ## Novelty
 
-Unlike traditional ERP modules that rely on heavy server-side processing, this invention utilizes client-side computational efficiency to directly map granular micro-credential JSON feeds to real-time cash-flow nodes, filling a specific gap in lightweight financial simulation tools for SMBs. It further introduces a deterministic Settlement Protocol that ensures end-to-end consistency between client-side simulations and ledger commitments, resolving ambiguity in financial finalization.
+Technical differentiation lies in the browser-native generation of sparse dimensional cubes directly from micro-credential JSON feeds, coupled with a deterministic cryptographic Settlement Protocol that hashes client-side simulations for immutable ledger commitment, eliminating the need for server-side aggregation layers.
 
 ## Diagram
 

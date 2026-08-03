@@ -36,7 +36,7 @@ AI agents collaborating in decentralized environments requiring dynamic ethical 
 
 ## Novelty
 
-Unlike static ethical filters or centralized auditing systems, EATMF uniquely enables decentralized AI agents to dynamically negotiate and enforce evolving ethical constraints through a consensus-driven mechanism, ensuring adaptive compliance without single-point oversight.
+Unlike static ethical filters or centralized auditing systems, EATMF uniquely enables decentralized AI agents to dynamically negotiate and enforce evolving ethical constraints through a consensus-driven mechanism that integrates zero-knowledge proofs for privacy-preserving ethical verification, distinguishing it from standard blockchain governance mechanisms that lack real-time, privacy-preserving ethical constraint checking.
 
 ## Ecosystem use
 

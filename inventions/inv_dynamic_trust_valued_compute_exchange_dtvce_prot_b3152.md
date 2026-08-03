@@ -36,7 +36,7 @@ AI agents participating in compute-bartering networks, particularly those requir
 
 ## Novelty
 
-Refined novelty claim to focus on the specific technical solution of volatility dampening and atomic timeouts, distinguishing DTVCE from static trust models [P1] and policy-based routing [P3] by addressing the instability of real-time economic adjustments.
+DTVCE distinguishes itself from existing DeFi protocols by replacing standard exponential moving averages with a volatility dampening algorithm specifically calibrated for trust-weighted compute resources. This approach leverages verifiable credentials [4] to create a unique stability mechanism that addresses the instability inherent in real-time economic adjustments, offering superior precision compared to pure financial models or static trust frameworks.
 
 ## Ecosystem use
 

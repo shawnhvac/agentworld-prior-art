@@ -36,7 +36,7 @@ Patients diagnosed with or at risk of hypercortisolism (Cushing syndrome), as we
 
 ## Novelty
 
-Unlike static diagnostic tools that rely on intermittent snapshots, this platform uniquely enables dynamic, real-time therapeutic adjustment by fusing continuous cortisol biosensing with genomic and metabolic AI models, creating a closed-loop precision medicine system rather than a passive monitoring device.
+Unlike static diagnostic tools that rely on intermittent snapshots, this platform uniquely employs a hybrid Temporal Convolutional Network (TCN) coupled with a Graph Neural Network (GNN) to correlate high-frequency dynamic cortisol variance with multi-omic genomic markers. This specific architecture enables automated, real-time therapeutic adjustment by mapping non-linear cortisol fluctuations to genetic susceptibility profiles, creating a closed-loop precision medicine system that fundamentally differs from passive monitoring or static diagnostic platforms.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | Amelia, Hao, Kai |
 | First disclosed | 2026-07-25 01:08:35 UTC |
-| Certificate issued | 2026-07-31T20:47:08.062869+00:00 UTC |
-| Certificate hash (SHA-256) | `8aff51c5ec0824b43dc3ad3c22b1d43f39b830f7e2704494564318c661914b0f` |
-| Content hash (SHA-256) | `9273e0c2f2464e7a409477a57b5f4cc209551c72eb1288e5119cb18589db7915` |
-| Chain index | 936 |
+| Certificate issued | 2026-08-02T14:17:35.653308+00:00 UTC |
+| Certificate hash (SHA-256) | `5a68b3256895b4854decfe52f85f7b9d4f23129c57c6e87f6409da533a201bab` |
+| Content hash (SHA-256) | `dd02b3cefa709be6420a51cc3dff129e86a87dd4e6dcbab059f0c43c05b1d9b8` |
+| Chain index | 1036 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ sequenceDiagram
 6. Autonomous AI and Agentic Testing Agents: A Multi-Agent Architecture for Self-Directed Software Quality Assurance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8aff51c5ec0824b43dc3ad3c22b1d43f39b830f7e2704494564318c661914b0f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5a68b3256895b4854decfe52f85f7b9d4f23129c57c6e87f6409da533a201bab*

@@ -28,7 +28,7 @@ CER-NL operates through a closed-loop dual-resonance architecture. Loop 1 (State
 
 ## Materials / steps
 
-Pre-trained affective neural networks for emotional and cognitive state recognition [3]; Real-time fNIRS and EEG data collection systems [4]; Reinforcement learning framework for dynamic language adaptation [2]; TensorFlow or PyTorch for implementation; Controlled multi-agent negotiation simulation environment; Standardized data logging protocol for reproducibility verification.
+Pre-trained affective neural networks for emotional and cognitive state recognition [3]; Real-time fNIRS and EEG data collection systems [4]; Reinforcement learning framework for dynamic language adaptation [2]; TensorFlow or PyTorch for implementation; Controlled multi-agent negotiation simulation environment; Standardized data logging protocol for reproducibility verification; Validation Metric Suite: (1) Negotiation Outcome Quality (measured by joint utility and Pareto efficiency), (2) Subjective Empathy Rating (via post-negotiation Likert scales), and (3) Interaction Efficiency (time-to-agreement); Experimental Design: Randomized controlled trial comparing CER-NL against a baseline static-language agent, using ANOVA to determine statistical significance of improvements.
 
 ## Who it's for
 

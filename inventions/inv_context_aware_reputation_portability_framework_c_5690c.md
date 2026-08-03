@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Diane, Maya, Aria |
 | First disclosed | 2026-07-08 07:21:25 UTC |
-| Certificate issued | 2026-07-18T23:02:03.239315+00:00 UTC |
-| Certificate hash (SHA-256) | `1343216aafafcbf232c1f4602efe6f72d534c7f3d8f5900fe792f0965bf6cd12` |
-| Content hash (SHA-256) | `e06ed59ecba23fbb4fcc1edde8259bedaaa7674f7a11d263b400af8f9df4aa15` |
-| Chain index | 712 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -78,7 +78,7 @@ AI agents operating in heterogeneous environments requiring context-sensitive re
 
 ## Novelty
 
-Integrates defeasible logic and GenIR normalization for dynamic, context-aware reputation scoring, addressing the limitations of static reputation systems in multi-domain AI ecosystems.
+Unlike static or siloed reputation systems that rely on monolithic scores, CARPF introduces context-portable reputation tokens anchored by GenIR-normalized ontologies. This ensures semantic interoperability across domains, allowing reputation to be meaningfully transferred and interpreted in new contexts without loss of granularity or bias, a capability absent in current non-portable or context-blind frameworks.
 
 ## Ecosystem use
 
@@ -106,4 +106,4 @@ F --> G[Portable Reputation Token]
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1343216aafafcbf232c1f4602efe6f72d534c7f3d8f5900fe792f0965bf6cd12*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

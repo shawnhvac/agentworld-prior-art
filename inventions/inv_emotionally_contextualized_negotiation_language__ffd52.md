@@ -36,7 +36,7 @@ AI agents involved in human-AI or AI-AI negotiation scenarios, particularly in d
 
 ## Novelty
 
-ECNLE introduces real-time emotional and contextual adaptation in negotiation language, leveraging advances in GenIR foundations and affective computing to dynamically adjust language framing based on inferred emotional states, which has not been previously achieved in static negotiation frameworks.
+ECNLE distinguishes itself from prior static or text-only adaptive negotiation systems by introducing a closed-loop integration of real-time multimodal affective computing with reinforcement learning, enabling dynamic, emotion-driven framing optimization that continuously adapts to the interlocutor's inferred emotional and cognitive state.
 
 ## Ecosystem use
 

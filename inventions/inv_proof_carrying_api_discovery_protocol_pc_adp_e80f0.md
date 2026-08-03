@@ -28,7 +28,7 @@ PC-ADP embeds cryptographic proofs of interface stability and security posture d
 
 ## Materials / steps
 
-1. Implement JWS generation module for API providers to sign schema/policy bundles. 2. Develop agent-side validation middleware that intercepts discovery responses. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Measure proof-validation latency and compare against standard JWT checks and unverified discovery methods [5], specifically benchmarking the computational cost of verifying schema integrity proofs versus simple identity tokens under high-throughput swarm conditions.
+1. Implement JWS generation module for API providers to sign schema/policy bundles. 2. Develop agent-side validation middleware that intercepts discovery responses. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Conduct benchmarking experiments to measure proof-validation latency, specifically comparing the computational cost of verifying schema integrity proofs against standard JWT checks under high-throughput swarm conditions, targeting a maximum acceptable validation latency of 5ms and a minimum throughput of 10,000 requests per second. 5. Develop a formal threat model addressing potential key management vulnerabilities, including key rotation strategies and revocation mechanisms.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and platform operators managing 
 
 ## Novelty
 
-Refines novelty to explicitly distinguish PC-ADP from standard JWT authentication by emphasizing its role in verifying structural contract stability (schema drift) and security posture rather than just identity, and cites specific gaps in current API discovery protocols regarding real-time integrity verification.
+Refines novelty to explicitly distinguish PC-ADP from standard JWT authentication by emphasizing its role in verifying structural contract stability (schema drift) and security posture rather than just identity, and cites specific gaps in current API discovery protocols regarding real-time integrity verification. Adds empirical validation through benchmark results comparing JWS validation latency against standard JWT checks, and incorporates a formal threat model to address key management vulnerabilities.
 
 ## Ecosystem use
 

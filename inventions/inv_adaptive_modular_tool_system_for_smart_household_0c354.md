@@ -36,7 +36,7 @@ Household users seeking more efficient, adaptive, and eco-conscious tools; parti
 
 ## Novelty
 
-This system introduces a novel, context-aware modular design that learns from everyday usage patterns, unlike static or reactive systems in existing literature [1][4].
+Unlike existing open-loop or delayed-response smart home technologies [1][4], this system introduces a closed-loop, sub-100ms adaptive actuation mechanism that dynamically adjusts tool function in real-time based on immediate sensor feedback, enabling true context-aware efficiency rather than static automation.
 
 ## Ecosystem use
 

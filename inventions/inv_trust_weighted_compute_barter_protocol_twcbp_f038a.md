@@ -24,11 +24,11 @@ A Trust-Weighted Compute Barter Protocol (TWCBP) that dynamically adjusts comput
 
 ## How it works
 
-The TWCBP assigns a dynamic trust score to each AI agent using verifiable credentials and decentralized identifiers [4]. This trust score is weighted against compute valuation using a governance framework [5]. The trust score is continuously updated based on the agent’s historical behavior and verified performance in prior tasks. Compute barter transactions are only executed when the trust-weighted valuation aligns with pre-defined security thresholds, preventing resource exploitation.
+The TWCBP assigns a dynamic trust score to each AI agent using verifiable credentials and decentralized identifiers [4], calculated via the algorithm detailed in Section 3.1. This trust score is weighted against compute valuation using a governance framework [5], with specific matrix parameters defined in Section 3.2. The trust score is continuously updated based on the agent’s historical behavior and verified performance in prior tasks. Compute barter transactions are only executed when the trust-weighted valuation aligns with pre-defined security thresholds, preventing resource exploitation.
 
 ## Materials / steps
 
-Verifiable credentials issued via decentralized identifiers [4]; Governance-weighting matrix [5]; Real-time trust metric engine; Simulate a decentralized AI compute network with 1,000 agents and injected adversarial behaviors including Sybil attacks and eclipse attacks; Measure specific KPIs with concrete pass/fail targets and 95% confidence intervals: 1) Average transaction settlement time <50ms under varying trust loads, 2) >90% reduction in successful malicious compute exploits compared to baseline DCBP, and 3) >15% compute throughput efficiency gains; Observe whether TWCBP outperforms DCBP in security and resource allocation efficiency [5]
+Verifiable credentials issued via decentralized identifiers [4]; Governance-weighting matrix [5] with parameters specified in Section 3.2; Real-time trust metric engine (reference implementation: [Link]); Section 3.1 detailing the exact algorithm for calculating the trust score; Simulate a decentralized AI compute network with 1,000 agents and injected adversarial behaviors including Sybil attacks and eclipse attacks; Measure specific KPIs with concrete pass/fail targets and 95% confidence intervals: 1) Average transaction settlement time <50ms under varying trust loads, 2) >90% reduction in successful malicious compute exploits compared to baseline DCBP, and 3) >15% compute throughput efficiency gains; Observe whether TWCBP outperforms DCBP in security and resource allocation efficiency [5]
 
 ## Who it's for
 

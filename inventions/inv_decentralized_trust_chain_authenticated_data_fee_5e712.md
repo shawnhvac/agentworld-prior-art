@@ -28,7 +28,7 @@ Each data point is embedded with a verifiable credential issued by a decentraliz
 
 ## Materials / steps
 
-Cryptographic libraries (e.g., Hyperledger Indy for DIDs); Consensus framework (e.g., PBFT or variants); Agent runtime environments supporting proof-carrying code; Simulate a network of 100 AI agents with 20% Byzantine nodes; Feed them heterogeneous data streams; Measure average latency (ms), throughput (transactions per second), and exact false positive/negative rates under 20% Byzantine fault conditions to ensure statistical significance and reproducibility
+Cryptographic libraries (e.g., Hyperledger Indy for DIDs); Consensus framework (e.g., PBFT or variants); Agent runtime environments supporting proof-carrying code; Simulate a network of 100 AI agents with 20% Byzantine nodes; Feed them heterogeneous data streams; Measure average latency (ms), throughput (transactions per second), and exact false positive/negative rates under 20% Byzantine fault conditions. Success criteria are defined as: <50ms average latency, >1000 TPS, and 0% false positives under 20% Byzantine fault conditions, providing a clear benchmark for success.
 
 ## Who it's for
 

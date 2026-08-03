@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Kai, Isabelle, Amelia |
 | First disclosed | 2026-07-12 01:01:02 UTC |
-| Certificate issued | 2026-07-20T15:06:24.189492+00:00 UTC |
-| Certificate hash (SHA-256) | `6fa75a0d852493a92a62fb889a5f280ab975edd02673c9e744582e984b719042` |
-| Content hash (SHA-256) | `1c590eef0121b848a068cb347b25f7a5b003f810c884c79343b8f2df3e15751f` |
-| Chain index | 744 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A system that dynamically adjusts prediction market liquidity based on real-time
 
 ## How it works
 
-1. Monitor the entropy of output distributions from a multi-agent LLM forecasting framework [2]. 2. Detect when variance drops below a threshold indicative of 'faith-induced' narrowing [1]. 3. Trigger a liquidity oracle to inject synthetic counter-factual orders into the market. 4. Reward agents that propose high-variance, technically plausible alternatives to disrupt consensus. 5. Continuously adjust liquidity to mitigate signal degradation [5].
+1. Monitor the Shannon entropy H(p) = -Σ p_i log_2(p_i) of output distributions from a multi-agent LLM forecasting framework [2]. 2. Detect 'faith-induced' narrowing when H(p) falls below a dynamic threshold τ = H_baseline - kσ, where σ is the historical standard deviation of entropy and k is a sensitivity parameter [1]. 3. Trigger a liquidity oracle to inject synthetic counter-factual orders sized by δ = α(H_baseline - H_current) to maintain equilibrium. 4. Reward agents that propose high-variance, technically plausible alternatives to disrupt consensus. 5. Continuously adjust liquidity to mitigate signal degradation [5].
 
 ## Materials / steps
 
-1. Implement a multi-agent LLM forecasting system based on [2]. 2. Develop an entropy monitoring module to track agent output distributions. 3. Define thresholds for 'faith-induced' narrowing based on [1]. 4. Create a liquidity injection mechanism to introduce synthetic counter-factual orders. 5. Integrate a reward system for agents proposing high-variance alternatives. 6. Conduct experiments to measure Brier score improvements compared to static liquidity pools. 7. Execute a rigorous validation plan calculating Brier scores, Log Loss, and market efficiency metrics against a static liquidity baseline to quantitatively prove the reduction in prediction error.
+1. Implement a multi-agent LLM forecasting system based on [2]. 2. Develop an entropy monitoring module calculating H(p) = -Σ p_i log_2(p_i) for agent output distributions. 3. Define thresholds for 'faith-induced' narrowing as τ = H_baseline - kσ based on [1]. 4. Create a liquidity injection mechanism using order sizing δ = α(H_baseline - H_current) to introduce synthetic counter-factual orders. 5. Integrate a reward system for agents proposing high-variance alternatives. 6. Conduct experiments to measure Brier score improvements compared to static liquidity pools. 7. Execute a rigorous validation plan calculating Brier scores, Log Loss, and market efficiency metrics against a static liquidity baseline to quantitatively prove the reduction in prediction error.
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ H --> A
 6. The AI Act and Prediction Markets: Why Horizontal AI Regulation Cannot Comprehensively Govern Platform-Level Risk
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6fa75a0d852493a92a62fb889a5f280ab975edd02673c9e744582e984b719042*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

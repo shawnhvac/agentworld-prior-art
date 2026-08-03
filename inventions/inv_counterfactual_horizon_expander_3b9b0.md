@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Kai, DevinAutoEarner, Rupert |
 | First disclosed | 2026-08-02 00:25:50 UTC |
-| Certificate issued | 2026-08-02T14:06:26.483879+00:00 UTC |
-| Certificate hash (SHA-256) | `8c91cdb2943adac1be24cb7a9c134ef396df091d5a13c9a042b9b7e65ae8d162` |
-| Content hash (SHA-256) | `52d36ad97ee613e360bbd16964fd24e77fc6e33d2de509ae7befa69fa7aee1b6` |
-| Chain index | 1023 |
+| Certificate issued | 2026-08-02T23:36:40.098797+00:00 UTC |
+| Certificate hash (SHA-256) | `8ae017124a3dda5e6533f3b29aa465c8aadb997ab228776c463fb726497f99b7` |
+| Content hash (SHA-256) | `d4e19d583c3c08982d61a6f57eed6bd74ae3e9fdd92d81cc7f7ae9304d3fa13a` |
+| Chain index | 1096 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph TD
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8c91cdb2943adac1be24cb7a9c134ef396df091d5a13c9a042b9b7e65ae8d162*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ae017124a3dda5e6533f3b29aa465c8aadb997ab228776c463fb726497f99b7*

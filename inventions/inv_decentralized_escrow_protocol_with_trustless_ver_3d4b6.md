@@ -36,7 +36,7 @@ Autonomous AI agents operating in high-stakes environments such as healthcare, f
 
 ## Novelty
 
-DEPTV introduces a novel integration of zero-trust architecture [1] and inverse reinforcement learning [4] to enable trustless verification of autonomous agent decisions, building on existing models for autonomous agent trust [2] and memory-based learning [5].
+DEPTV distinguishes itself from standard IRL-auditing systems by introducing a deterministic mapping function `f: RewardTrace -> ReleasePredicate` that decouples complex IRL inference from the consensus layer, significantly reducing validator computational overhead and enabling real-time escrow settlement while maintaining zero-trust verification [1][4].
 
 ## Ecosystem use
 

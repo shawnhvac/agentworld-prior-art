@@ -36,7 +36,7 @@ Construction workers performing high-heat, high-noise, and physically demanding 
 
 ## Novelty
 
-Unlike current exosuits that rely on pre-programmed kinematics or single-source actuation, the NPEACEx utilizes a closed-loop, multi-modal feedback system integrating piezoelectric, microfluidic, and environmental sensors to dynamically adjust support in real-time, yielding a 40% reduction in metabolic cost and 25% improvement in stability metrics on variable terrain compared to static-support benchmarks.
+Unlike existing exosuits that rely on single-modal kinematic or EMG data, the NPEACEx introduces a closed-loop multi-modal sensor fusion architecture that simultaneously integrates microfluidic thermal data with piezoelectric force feedback to dynamically adjust support, yielding a 40% reduction in metabolic cost and 25% improvement in stability metrics on variable terrain compared to static-support benchmarks.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Photovoltaic panel manufacturers, renewable energy installations, and solar farm
 
 ## Novelty
 
-This system distinguishes itself from passive photothermal coatings by implementing an active, autonomous feedback loop that dynamically couples real-time dust accumulation detection with localized vapor jet generation and simultaneous thermal management, rather than relying solely on static material integration for passive heating or cleaning.
+Unlike standard electrostatic repulsion systems that only address particulate adhesion or water-based cleaning that incurs high resource costs, HEPMS uniquely leverages perovskite-fluid photothermal conversion to simultaneously generate high-velocity vapor jets for active dust removal and induce evaporative cooling for thermal regulation, creating a self-sustaining, zero-water dual-function maintenance cycle.
 
 ## Diagram
 

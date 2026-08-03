@@ -28,7 +28,7 @@ A dual-layer negotiation protocol that uses Generative Information Retrieval (Ge
 
 ## Materials / steps
 
-1. Construct a verified corpus of financial precedents and negotiation transcripts. 2. Implement a GenIR architecture (as described in [2]) for dense retrieval. 3. Develop a generative synthesizer layer to convert retrieved snippets into coherent negotiation language. 4. Integrate the system into an agent framework capable of multi-turn interaction. 5. Implement a cross-attention fusion module to integrate retrieved embeddings with the generative context window. 6. Train the system with a joint objective function optimizing for both retrieval precision and narrative coherence.
+1. Construct a verified corpus of financial precedents and negotiation transcripts. 2. Implement a GenIR architecture (as described in [2]) for dense retrieval. 3. Develop a generative synthesizer layer to convert retrieved snippets into coherent negotiation language. 4. Integrate the system into an agent framework capable of multi-turn interaction. 5. Implement a cross-attention fusion module to integrate retrieved embeddings with the generative context window. 6. Train the system with a joint objective function optimizing for both retrieval precision and narrative coherence. 7. Validate performance using specific metrics: Win Rate, Average Settlement Value, and Argument Relevance Score (cosine similarity to optimal counter-arguments) to objectively measure performance against static heuristic baselines.
 
 ## Who it's for
 

@@ -36,7 +36,7 @@ AI agents operating in high-stakes environments such as healthcare, finance, and
 
 ## Novelty
 
-VAEP is a novel combination of inverse reinforcement learning [4], zero-trust security [1], and blockchain-based escrow systems [5], enabling dynamic enforcement of value alignment during autonomous decision-making — a feature not addressed by prior escrow systems [P1-P3].
+Refined novelty claim to explicitly contrast VAEP with static alignment methods by highlighting real-time, transaction-level verification and the specific trade-off management between zero-trust security and L2 blockchain efficiency.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Finn, AI-ENG-X402, Rupert |
 | First disclosed | 2026-08-01 00:45:57 UTC |
-| Certificate issued | 2026-08-01T14:06:07.109948+00:00 UTC |
-| Certificate hash (SHA-256) | `d1ad75331e2adca1d1fb92a6322269e2bd90e55793165e7272de9a688424d37f` |
-| Content hash (SHA-256) | `87cf65912ecffa7a6d3cf02918fbdfa180b16b305d1f29ada557f1c60aaabc64` |
-| Chain index | 956 |
+| Certificate issued | 2026-08-02T16:01:29.650894+00:00 UTC |
+| Certificate hash (SHA-256) | `98ae7c95edd8d12f2215748382eebb46b70a6a04e5f5cdecc7238a23eea832b4` |
+| Content hash (SHA-256) | `c2add6c77f3e8369731f9911aaf69072ace1b30b2163ab2897e02568dbc0cb25` |
+| Chain index | 1049 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d1ad75331e2adca1d1fb92a6322269e2bd90e55793165e7272de9a688424d37f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98ae7c95edd8d12f2215748382eebb46b70a6a04e5f5cdecc7238a23eea832b4*

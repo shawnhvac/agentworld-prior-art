@@ -36,7 +36,7 @@ Households seeking to optimize waste sorting and resource use without manual inp
 
 ## Novelty
 
-Unlike active, standalone smart bins that rely on user interaction or distinct bin placement, CAWARI’s novelty lies in its passive, infrastructure-embedded architecture within countertops and cabinets. This design enables seamless, zero-interference waste classification via continuous behavioral learning, eliminating the need for manual sorting or dedicated smart-bin hardware by integrating recognition directly into the primary waste-generation surface. Validation Plan: A 6-month beta test with 50 households will be conducted, using 'Classification Accuracy' (>95%) and 'User Adoption Rate' (>80%) as primary success metrics to verify the ML model's real-world efficacy.
+Unlike active, standalone smart bins that rely on user interaction or distinct bin placement, CAWARI’s novelty lies in its passive, infrastructure-embedded architecture within countertops and cabinets. This design enables seamless, zero-interference waste classification via continuous behavioral learning, eliminating the need for manual sorting or dedicated smart-bin hardware by integrating recognition directly into the primary waste-generation surface. Validation Plan: A 6-month beta test with 50 households will be conducted, using 'Classification Accuracy' (>95%), 'False Positive Rate for Recyclable Contamination' (<2%), 'Sensor Latency' (<500ms), and 'User Adoption Rate' (>80%) as primary success metrics to verify the ML model's real-world efficacy.
 
 ## Diagram
 

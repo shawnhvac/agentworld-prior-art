@@ -28,7 +28,7 @@ The DCTMV employs a decentralized network of multimodal AI agents that analyze t
 
 ## Materials / steps
 
-Deploy a network of multimodal AI agents trained on scientific and technical literature.; Embed memory entries with metadata using stateless decision memory.; Validate entries using consensus from AI agents, with results stored in a trustless blockchain.; Performance Metrics: Benchmark contextual validation accuracy to exceed 95%, measure consensus latency under load, and track false-positive rates to ensure system reliability.
+Deploy a network of multimodal AI agents trained on scientific and technical literature.; Embed memory entries with metadata using stateless decision memory.; Validate entries using consensus from AI agents, with results stored in a trustless blockchain.; Performance Metrics: Benchmark contextual validation accuracy to exceed 95% using synthetic multimodal logs and real-world agent traces, defining 'ground truth' via expert-annotated relevance labels; measure consensus latency under load; and track false-positive rates, reporting 95% confidence intervals and p-values (α < 0.05) to statistically validate reliability claims.
 
 ## Who it's for
 

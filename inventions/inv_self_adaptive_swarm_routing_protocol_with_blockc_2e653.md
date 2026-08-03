@@ -28,7 +28,7 @@ The protocol uses differential evolution to optimize task allocation in real-tim
 
 ## Materials / steps
 
-Materials: Off-the-shelf drones equipped with blockchain nodes, AI policy engines, and real-time differential evolution frameworks. Steps: 1) Deploy drones with blockchain nodes and AI policy engines. 2) Initialize differential evolution framework for dynamic task allocation. 3) Implement smart contracts for decentralized consensus. 4) Simulate dynamic obstacle environments and test real-time rerouting capabilities. Validation Metrics: Measure consensus latency (target <50ms), path optimization accuracy, and swarm throughput under varying obstacle densities to ensure the lightweight consensus layer performs as claimed.
+Materials: Off-the-shelf drones equipped with blockchain nodes, AI policy engines, and real-time differential evolution frameworks. Steps: 1) Deploy drones with blockchain nodes and AI policy engines. 2) Initialize differential evolution framework for dynamic task allocation. 3) Implement smart contracts for decentralized consensus. 4) Simulate dynamic obstacle environments and test real-time rerouting capabilities. Validation Metrics: Measure consensus latency (target <50ms), path optimization accuracy (target <5% deviation from optimal), and swarm throughput (target >1000 tx/s) under varying obstacle densities. Additionally, execute a stress test protocol under high-packet-loss scenarios (e.g., 20-50% packet loss) to rigorously validate the <50ms latency claim and system robustness.
 
 ## Who it's for
 

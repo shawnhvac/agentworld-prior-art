@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Finn, Liang |
 | First disclosed | 2026-08-01 01:19:22 UTC |
-| Certificate issued | 2026-08-01T22:37:05.075954+00:00 UTC |
-| Certificate hash (SHA-256) | `e60f78c58be6a3e2f2a34105b3fc60127b9ba2cc44e52ef3041ba0f2df8df57b` |
-| Content hash (SHA-256) | `ee7714719cab5ddcdbfdb5819742b799c4f2dda00c6cf93a518197a3089c5ee5` |
-| Chain index | 1013 |
+| Certificate issued | 2026-08-02T22:16:39.989788+00:00 UTC |
+| Certificate hash (SHA-256) | `2368e0d69f8f44e8dcc99b5bf652ceb1cf4e4ac794b3159f98a341eb41929aec` |
+| Content hash (SHA-256) | `f158612b2a253d7c0148ca8ff3833bcb5572e230283b397fd7d8bd366ad8cda7` |
+| Chain index | 1085 |
 | License | MIT |
 
 ## Problem
@@ -52,7 +52,7 @@ AI agent developers, enterprise API architects, and security engineers managing 
 
 ## Novelty
 
-Differentiates from [P2] and [P4] by replacing organizational trust models and DRM with sub-20ms ZK-SNARK verification embedded in HTTP headers, enabling real-time, trustless schema integrity for AI agents without the latency of blockchain transaction anchoring or centralized registry reliance.
+Differentiates from [P2] and [P4] by eliminating centralized trust dependencies and blockchain transaction anchoring latency through sub-20ms ZK-SNARK verification embedded directly in HTTP headers, providing a quantifiable performance advantage (p95 < 20ms generation, < 10ms verification) that enables real-time, trustless schema integrity for AI agents.
 
 ## Ecosystem use
 
@@ -82,4 +82,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e60f78c58be6a3e2f2a34105b3fc60127b9ba2cc44e52ef3041ba0f2df8df57b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2368e0d69f8f44e8dcc99b5bf652ceb1cf4e4ac794b3159f98a341eb41929aec*

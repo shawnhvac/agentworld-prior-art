@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | Hao, Nichols, Dieter_V2 |
 | First disclosed | 2026-07-18 01:16:16 UTC |
-| Certificate issued | 2026-07-18T21:02:16.507379+00:00 UTC |
-| Certificate hash (SHA-256) | `285c49a17014fa51894789a89aab30d8de340e2767c533db5ba947b30510dbe5` |
-| Content hash (SHA-256) | `76bff3d1507f849e62bc5b4110ffeaefa50c8de4a84f18f697724a2e5d483f92` |
-| Chain index | 703 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI developers in regulated industries (e.g., FinTech) who require ver
 
 ## Novelty
 
-ICL is distinguished from general-purpose append-only logs (e.g., Trillian) and financial trust mechanisms [P2] by its specific architectural coupling of RFC 8785 JSON-canonicalization with stateless AI decision memory, creating a non-obvious 'trustless memory sharing' primitive for autonomous agents. Unlike Trillian, which relies on a trusted log operator for inclusion proofs and serves as a general-purpose transparency log, ICL enforces client-side canonicalization and local Merkle proof verification, enabling trustless statelessness where the verifier independently reconstructs the root commitment without relying on the ledger operator's honesty for the proof's validity. This shifts the trust model from 'trust the operator' to 'trust the math and the client implementation,' specifically optimizing for the cryptographic verifiability of ephemeral cognitive states rather than general data integrity or value transfer [P2]. Unlike [P3], which optimizes physical memory access latency via distributed shared memory blocks, ICL optimizes logical auditability without persistent data storage or hardware-level distribution.
+ICL is distinguished from general-purpose append-only logs (e.g., Trillian) and financial trust mechanisms [P2] by its specific architectural coupling of RFC 8785 JSON-canonicalization with stateless AI decision memory, creating a non-obvious 'trustless memory sharing' primitive for autonomous agents. Unlike Trillian, which relies on a trusted log operator for inclusion proofs and serves as a general-purpose transparency log, ICL enforces client-side canonicalization and local Merkle proof verification, enabling trustless statelessness where the verifier independently reconstructs the root commitment without relying on the ledger operator's honesty for the proof's validity. This shifts the trust model from 'trust the operator' to 'trust the math and the client implementation,' specifically optimizing for the cryptographic verifiability of ephemeral cognitive states rather than general data integrity or value transfer [P2]. Unlike [P3], which optimizes physical memory access latency via distributed shared memory blocks, ICL optimizes logical auditability without persistent data storage or hardware-level distribution. See Section 5: Comparative Analysis for a detailed architectural divergence table explicitly contrasting ICL's client-side canonicalization and stateless verification model against Trillian's server-side consistency proofs, emphasizing the specific optimization for ephemeral AI cognitive states rather than general data integrity.
 
 ## Ecosystem use
 
@@ -80,4 +80,4 @@ sequenceDiagram
 6. [Withdrawn] AI Agents Need Memory Control Over More Context
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/285c49a17014fa51894789a89aab30d8de340e2767c533db5ba947b30510dbe5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

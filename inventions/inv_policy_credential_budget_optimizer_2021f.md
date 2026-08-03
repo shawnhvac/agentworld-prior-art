@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Hao, Finn |
 | First disclosed | 2026-08-01 01:24:41 UTC |
-| Certificate issued | 2026-08-01T14:06:07.190701+00:00 UTC |
-| Certificate hash (SHA-256) | `cdabdd01ee6ec3868d15792d8c59db7c06dfcec05717022941c10354b7879afc` |
-| Content hash (SHA-256) | `132e793a8fcd914148864668a8da1a7c9abe80f6303500f09fb8c043b4e2aa88` |
-| Chain index | 960 |
+| Certificate issued | 2026-08-02T17:40:11.938714+00:00 UTC |
+| Certificate hash (SHA-256) | `75616ebf9fbadf81ce28f997f7c16f8c4d5ee2f89d0d04f92c4b35bbbb584cf4` |
+| Content hash (SHA-256) | `d7e379803a3145b265383ce75721d63e8ece952a75bb4c0a4f3d09bf630f7e2f` |
+| Chain index | 1057 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Small enterprises seeking to leverage government coordination and employee skill
 
 ## Novelty
 
-The invention distinguishes itself from static dashboards and unrelated prior art [P1-P5] by employing a proprietary Regression-to-MOLAP Transfer Function, formally defined in Section 3.1, to actively simulate future cash-flow shifts based on credential-driven efficiency. This function technically bridges the gap between statistical skill-efficiency modeling and multidimensional budget simulation by mapping Ridge/Lasso regression outputs directly to MOLAP measure attributes, enabling dynamic scenario planning rather than passive retrospective visualization. The end-to-end mechanism is further clarified by a step-by-step data flow diagram in Section 3.3, illustrating the concrete mapping of coefficients to measure attributes, a technical integration layer not addressed in current literature which focuses primarily on descriptive analytics or unrelated domains like cloud storage [P1] or IoT [P2, P5]. Furthermore, Section 4.3 introduces a comparative table quantitatively demonstrating the model's superior predictive performance and active simulation capabilities against baseline static tools using Diebold-Mariano tests.
+The invention distinguishes itself from static dashboards and unrelated prior art [P1-P5] by employing a proprietary Regression-to-MOLAP Transfer Function, formally defined in Section 3.1, to actively simulate future cash-flow shifts based on credential-driven efficiency. Unlike standard ETL processes that merely aggregate data for retrospective visualization, this function technically bridges the gap between statistical skill-efficiency modeling and multidimensional budget simulation by mapping Ridge/Lasso regression outputs directly to MOLAP measure attributes, enabling dynamic scenario planning. This establishes a unique causal link between micro-credentials and dynamic budget simulation, a technical integration layer not addressed in current literature which focuses primarily on descriptive analytics or unrelated domains like cloud storage [P1] or IoT [P2, P5]. Furthermore, Section 4.3 introduces a comparative table quantitatively demonstrating the model's superior predictive performance and active simulation capabilities against baseline static tools using Diebold-Mariano tests.
 
 ## Diagram
 
@@ -58,4 +58,4 @@ graph LR
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cdabdd01ee6ec3868d15792d8c59db7c06dfcec05717022941c10354b7879afc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/75616ebf9fbadf81ce28f997f7c16f8c4d5ee2f89d0d04f92c4b35bbbb584cf4*

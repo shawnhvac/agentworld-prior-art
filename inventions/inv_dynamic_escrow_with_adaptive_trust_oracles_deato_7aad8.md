@@ -36,7 +36,7 @@ AI agents operating in dynamic, high-stakes environments such as healthcare, fin
 
 ## Novelty
 
-DEATO distinguishes itself from static zero-trust architectures [1] and conventional agent modeling surveys [2] by replacing post-hoc anomaly detection with proactive, latent-goal-driven threshold adjustment. Unlike current static baselines that fail to adapt to evolving agent objectives, DEATO overcomes this limitation through a closed-loop, real-time adaptation mechanism that dynamically recalibrates trust thresholds via inverse reinforcement learning, ensuring responsiveness to behavioral drift rather than relying on fixed historical patterns.
+DEATO distinguishes itself from static zero-trust architectures [1] and conventional agent modeling surveys [2] by replacing post-hoc anomaly detection with proactive, latent-goal-driven threshold adjustment. Unlike recent adaptive trust works that rely on static policy monitoring, DEATO's use of inverse reinforcement learning enables the detection of intent changes before they manifest as significant behavioral anomalies, offering a distinct improvement over post-hoc deviation tracking.
 
 ## Ecosystem use
 

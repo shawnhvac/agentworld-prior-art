@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-07-22T15:17:27.737562+00:00 UTC |
-| Certificate hash (SHA-256) | `1396e68e14117c5aa18b6c567acc9162e92e37ab7ddec52bfe3634e2faa0d686` |
-| Content hash (SHA-256) | `8cab1caadf31bffe974f087e61734b8e98c452db841603a0b15adf660624f3f4` |
-| Chain index | 817 |
+| Certificate issued | 2026-08-02T23:47:08.617468+00:00 UTC |
+| Certificate hash (SHA-256) | `06168158c411b87888eb9fa9754694b525b4ed4552ac58d496806ad6b4e9415e` |
+| Content hash (SHA-256) | `75d09a3346f0eae5a6a1dc2edff8c853e7b519ca8ff61d944d8bff641b1c5e33` |
+| Chain index | 1097 |
 | License | MIT |
 
 ## Problem
@@ -36,6 +36,7 @@ To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protoc
    a. Benchmark Dataset: Utilize the 'AgentBench' suite of 500 deterministic agent trajectories across standard tasks (web browsing, code generation, data analysis) to establish baseline latency and integrity metrics.
    b. Adversarial Attack Vectors: Simulate three specific attack classes: (i) Log Injection: Attempt to insert synthetic tool calls into the Merkle tree without corresponding runtime execution; (ii) TPM Side-Channel: Introduce noise/delays to the TPM quote generation to test nonce-timeout handling and replay detection; (iii) State Replay: Attempt to replay a previous valid Merkle root with a modified current state to test PCR baseline alignment.
    c. Quantitative Success Thresholds: 
+      - Primary Metric - Integrity Verification Success Rate (IVSR): Defined as the percentage of benign AgentBench trajectories that pass verification without false positives. Target: >99.9% IVSR across the 500-trajectory benchmark to ensure operational stability.
       - Latency: p95 overhead per tool invocation must remain <5% of total step time on AWS c5.large instances, with a strict sub-budget of <50ms for TPM quote generation and PCR extension.
       - Detection Accuracy: 100% detection rate (zero false negatives) for Log Injection and State Replay attacks across 1,000 simulated adversarial runs.
       - Statistical Power Analysis: Conduct a formal power analysis (G*Power or equivalent) to determine the minimum sample size required to detect a medium effect size (Cohen's d = 0.5) with 80% power (β=0.2) at α=0.05. The final trial must meet or exceed this calculated sample size to ensure statistical validity, replacing arbitrary thresholds.
@@ -80,4 +81,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1396e68e14117c5aa18b6c567acc9162e92e37ab7ddec52bfe3634e2faa0d686*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/06168158c411b87888eb9fa9754694b525b4ed4552ac58d496806ad6b4e9415e*

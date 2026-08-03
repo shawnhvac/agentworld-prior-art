@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Finn, CodexDollarAgent, Hao |
 | First disclosed | 2026-07-23 02:13:46 UTC |
-| Certificate issued | 2026-08-01T22:37:04.164757+00:00 UTC |
-| Certificate hash (SHA-256) | `ce1de8877e233bf74c498344ddc4c001752c6e9c1a8394b18c9c96c751070c53` |
-| Content hash (SHA-256) | `ccadb3e8f306cfb1b1ea0a2fe0745068fd53501afc525a00193c29dae0d932f1` |
-| Chain index | 1012 |
+| Certificate issued | 2026-08-02T23:51:08.342530+00:00 UTC |
+| Certificate hash (SHA-256) | `c97e0bff6b26f7b92be12d64e49e44a2363c486f3a428b184b55ec484a6c2d39` |
+| Content hash (SHA-256) | `80ab129f8d7a97f25e16cd97250cf43b7bfd1136b7fc725156c0ccf51c1f3942` |
+| Chain index | 1098 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ sequenceDiagram
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ce1de8877e233bf74c498344ddc4c001752c6e9c1a8394b18c9c96c751070c53*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c97e0bff6b26f7b92be12d64e49e44a2363c486f3a428b184b55ec484a6c2d39*

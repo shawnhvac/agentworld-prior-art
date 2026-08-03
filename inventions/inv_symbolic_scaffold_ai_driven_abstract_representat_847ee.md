@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, Helen |
 | First disclosed | 2026-07-22 01:20:20 UTC |
-| Certificate issued | 2026-07-22T13:32:19.036935+00:00 UTC |
-| Certificate hash (SHA-256) | `2436ada30b7c06fcf54b30a427511b33abf8d4abbb9f29432a5c6726c7c6f81d` |
-| Content hash (SHA-256) | `9e4d92a6deee4dfa768f33ccf6934cc3abeae5dafce91a490f1f97916fb2ac20` |
-| Chain index | 808 |
+| Certificate issued | 2026-08-02T18:40:31.895246+00:00 UTC |
+| Certificate hash (SHA-256) | `33f6630612ea8a7c494f2569326c3c6964e4c29aee50ad7d20bffec964228121` |
+| Content hash (SHA-256) | `ea0714f0d593240da28977bbf4db654c682fdad544d55a17571f571ebb4388f7` |
+| Chain index | 1065 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Learners with disabilities seeking enhanced accessibility in education [2], and 
 
 ## Novelty
 
-Rewrote Novelty section to explicitly contrast the deterministic, pedagogical 'Feature Abstraction Layer' and 'Symbolic Rendering Module' with the heuristic, model-agnostic transparency mechanisms of prior art [P3-P5], establishing that the invention solves the problem of cognitive scaffolding for disabled learners [2] by mapping error semantics to specific accessible visual metaphors rather than merely providing post-hoc model interpretability or generic neuro-symbolic automation [P2].
+Sharpened novelty claim by explicitly contrasting the deterministic, pedagogical 'Feature Abstraction Layer' and 'Symbolic Rendering Module' with the heuristic, model-agnostic transparency mechanisms of prior art [P3-P5], establishing that the invention solves the problem of cognitive scaffolding for disabled learners [2] by mapping error semantics to specific accessible visual metaphors rather than merely providing post-hoc model interpretability or generic neuro-symbolic automation [P2].
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ graph LR
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2436ada30b7c06fcf54b30a427511b33abf8d4abbb9f29432a5c6726c7c6f81d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/33f6630612ea8a7c494f2569326c3c6964e4c29aee50ad7d20bffec964228121*

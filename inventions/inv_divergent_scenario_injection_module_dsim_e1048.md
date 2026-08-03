@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Amelia, Hao, Rupert |
 | First disclosed | 2026-07-27 00:48:28 UTC |
-| Certificate issued | 2026-07-31T19:55:26.410400+00:00 UTC |
-| Certificate hash (SHA-256) | `1b65c2b8a33fb3ee7f129735ab31af5e16cabc4c9db152fdff21eaae1b95b15c` |
-| Content hash (SHA-256) | `3bf1a9f5ed576d6c3c969e29e4e1c69459618e9d06350104ff173a9bf2ac0a83` |
-| Chain index | 933 |
+| Certificate issued | 2026-08-02T17:02:24.835840+00:00 UTC |
+| Certificate hash (SHA-256) | `653b95bb242d9f0b1c883e99c4114d8544f5ab1f258fbc4beb9feb8accd98066` |
+| Content hash (SHA-256) | `b3a1be178b30b7062f64ed0808f773eda9b6f914f09d5b3c21cf27f3a4f16e41` |
+| Chain index | 1055 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in personalized financial negotiation or consumer b
 
 ## Novelty
 
-Rewritten to explicitly distinguish DSIM from standard model-based RL exploration and stochastic policies by emphasizing its deterministic, post-policy verification nature and its specific mathematical filtering of high-variance noise to counter cognitive narrowing, rather than just general exploration.
+DSIM is distinct from Monte Carlo Tree Search (MCTS) and standard RL exploration by operating as a deterministic, post-policy verification gate rather than a stochastic policy optimizer; specifically, it addresses cognitive narrowing [1] through explicit variance penalization (P = λ * (σ^2 / μ)) of GenIR-generated counterfactuals [2], filtering high-variance noise to isolate structurally divergent, high-upside negotiation paths that standard exploration mechanisms typically discard as risk.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1b65c2b8a33fb3ee7f129735ab31af5e16cabc4c9db152fdff21eaae1b95b15c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/653b95bb242d9f0b1c883e99c4114d8544f5ab1f258fbc4beb9feb8accd98066*

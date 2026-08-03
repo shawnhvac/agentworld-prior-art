@@ -36,7 +36,7 @@ Heterogeneous AI agents operating in dynamic environments with shifting goals an
 
 ## Novelty
 
-Unlike prior work that relies on static protocols [5], ANCF enables continuous adaptation by re-evaluating and redefining norms as agent objectives evolve, improving both flexibility and long-term cooperative performance, which is rigorously quantified via Task Completion Rate and Norm Convergence Time.
+Unlike prior work that relies on static protocols [5] or offline learning methods, ANCF uniquely integrates real-time inverse reinforcement learning for dynamic value inference with decentralized Raft-based consensus to achieve sub-500ms norm synchronization, enabling continuous adaptation as agent objectives evolve.
 
 ## Ecosystem use
 

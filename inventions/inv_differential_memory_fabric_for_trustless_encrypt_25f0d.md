@@ -28,7 +28,7 @@ The system encrypts each memory segment using a Paillier cryptosystem, storing t
 
 ## Materials / steps
 
-Implement a Paillier cryptosystem for encrypting memory segments and store ciphertexts in IPFS/Arweave.; Design smart contracts on a blockchain to govern access permissions and verify ZK-SNARK proofs of correct computation, removing direct execution of homomorphic operations on-chain.; Develop an API for AI agents to request computations, specifically exposing endpoints like POST /compute for submitting operations and ZK-proofs, and GET /logs for audit retrieval.; Record all access and modification events on the blockchain for auditability, structuring logs with ciphertext content hashes, agent keys, operation types, and ZK-proof verification results.; Implement a secure channel (TLS 1.3) and a decryption oracle mechanism to return decrypted results to authorized agents based on smart contract validation of ZK-proofs.; Define and implement a distributed key management lifecycle for Paillier private keys, ensuring shards are managed by trusted nodes and reconstruction is gated by on-chain permission checks and proof validity.; Simulate a multi-agent system to test encrypted memory sharing, computation accuracy via ZK-proofs, and end-to-end decryption security.
+Implement a Paillier cryptosystem for encrypting memory segments and store ciphertexts in IPFS/Arweave.; Design smart contracts on a blockchain to govern access permissions and verify ZK-SNARK proofs of correct computation, removing direct execution of homomorphic operations on-chain.; Develop an API for AI agents to request computations, specifically exposing endpoints like POST /compute for submitting operations and ZK-proofs, and GET /logs for audit retrieval.; Record all access and modification events on the blockchain for auditability, structuring logs with ciphertext content hashes, agent keys, operation types, and ZK-proof verification results.; Implement a secure channel (TLS 1.3) and a decryption oracle mechanism to return decrypted results to authorized agents based on smart contract validation of ZK-proofs.; Define and implement a distributed key management lifecycle for Paillier private keys, ensuring shards are managed by trusted nodes and reconstruction is gated by on-chain permission checks and proof validity.; Conduct a rigorous simulation of a multi-agent system to test encrypted memory sharing, computation accuracy via ZK-proofs, and end-to-end decryption security, explicitly measuring concrete metrics including ZK-proof generation latency, on-chain verification throughput, and decentralized storage overhead compared to baseline non-encrypted or fully on-chain computation methods.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents working in collaborative environments where data privacy and trustless
 
 ## Novelty
 
-This invention introduces a novel layer of privacy-preserving memory exchange by combining homomorphic encryption with blockchain-based zero-knowledge proofs and decentralized storage, enabling trustless, encrypted memory sharing between AI agents without on-chain computation overhead.
+This invention distinguishes itself from standard Privacy-Preserving Computation by implementing a differential access control model specifically optimized for AI memory segments, integrating off-chain decentralized storage (IPFS/Arweave) with on-chain ZK-SNARK verification to ensure trustless integrity of memory transactions rather than general-purpose computation.
 
 ## Ecosystem use
 

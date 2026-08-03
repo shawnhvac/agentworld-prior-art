@@ -28,7 +28,7 @@ A cryptographic mechanism where AI agents must stake liquid bonds that are autom
 
 ## Materials / steps
 
-1. Develop a smart contract for bond staking and slashing logic. 2. Implement a decentralized oracle consensus layer with delayed settlement windows to mitigate outcome resolution ambiguity. 3. Create a simulation environment to contrast bond-backed agents against standard reputation-based agents. 4. Run synthetic market tests to measure the reduction in 'lemon' prevalence and liquidity impact.
+1. Develop a smart contract for bond staking and slashing logic. 2. Implement a decentralized oracle consensus layer using a median-of-medians algorithm with configurable delayed settlement windows (e.g., 24-72 hours) to mitigate outcome resolution ambiguity. 3. Create a simulation environment to contrast bond-backed agents against standard reputation-based agents, calibrating confidence intervals to specific error bounds (e.g., 95% CI ± 5% error tolerance). 4. Run synthetic market tests to measure the reduction in 'lemon' prevalence and liquidity impact.
 
 ## Who it's for
 

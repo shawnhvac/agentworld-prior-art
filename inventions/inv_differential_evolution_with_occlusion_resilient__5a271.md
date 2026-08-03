@@ -28,7 +28,7 @@ The system uses multi-task differential evolution to optimize task allocation ac
 
 ## Materials / steps
 
-Lightweight edge nodes with onboard sensors for real-time occlusion detection.; Differential evolution optimization modules for task allocation.; Minimal blockchain node stack for consensus and task verification.; Federated learning framework for decentralized AI policy updates.; Simulate a swarm of 50 mini-robots in a partially occluded environment with dynamic obstacles. Quantitative success criteria: Achieve >85% task completion rate under >50% occlusion, maintain blockchain transaction latency <50ms, and ensure federated convergence within 20 epochs.
+Lightweight edge nodes with onboard sensors for real-time occlusion detection.; Differential evolution optimization modules for task allocation.; Minimal blockchain node stack for consensus and task verification.; Federated learning framework for decentralized AI policy updates.; Simulate a swarm of 50 mini-robots in a partially occluded environment with dynamic obstacles. Quantitative success criteria: Achieve >85% task completion rate under >50% occlusion, maintain blockchain transaction latency <50ms, and ensure federated convergence within 20 epochs. Validation plan: Conduct comparative analysis against standard A* pathfinding and basic Differential Evolution baselines. Apply Analysis of Variance (ANOVA) to assess statistical significance of performance gains. Report variance metrics for both blockchain transaction latency and federated learning convergence times to ensure robust evaluation.
 
 ## Who it's for
 

@@ -24,11 +24,11 @@ A system that dynamically fragments and reweights reputation data based on the s
 
 ## How it works
 
-1. Ingest reputation vector from source platform. 2. Identify target jurisdiction and receiving platform context. 3. Apply deterministic policy engine to map data fields against legal constraints (e.g., GDPR, US sectoral laws). 4. Dynamically mask or zero out non-compliant fields. 5. Anchor the compliant, context-aware shard on the blockchain. 6. Deliver the shard to the receiving agent/platform.
+1. Ingest reputation vector from source platform. 2. Identify target jurisdiction and receiving platform context. 3. Apply deterministic policy engine to map data fields against legal constraints (e.g., GDPR, US sectoral laws). 4. Execute Jurisdictional Conflict Resolution Protocol for overlapping legal frameworks. 5. Dynamically mask or zero out non-compliant fields. 6. Anchor the compliant, context-aware shard on the blockchain. 7. Deliver the shard to the receiving agent/platform.
 
 ## Materials / steps
 
-1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation. 6. Implement formal verification methods (e.g., model checking or theorem proving) for the deterministic policy engine to mathematically guarantee compliance with legal constraints and handle edge cases in jurisdictional mapping.
+1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation. 6. Implement formal verification methods (e.g., model checking or theorem proving) for the deterministic policy engine to mathematically guarantee compliance with legal constraints and handle edge cases in jurisdictional mapping. 7. Define and implement the Jurisdictional Conflict Resolution Protocol to handle edge cases in overlapping legal frameworks.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating across multiple digital economies, enterprises requiring com
 
 ## Novelty
 
-Novel compared to static NFT propagation [5] and existing zero-knowledge proof-based privacy tools because CLWRS uniquely applies a formal 'Legal Weight Function' that quantifies how jurisdictional constraints alter the informational entropy of reputation fields. Unlike ZK-SNARKs or differential privacy which obfuscate data or prove existence, CLWRS preserves semantic relevance within legal bounds, thereby addressing the specific portability-privacy tension in cross-jurisdictional agent interactions noted in [4].
+Novel compared to static NFT propagation [5] and existing zero-knowledge proof-based privacy tools because CLWRS uniquely applies a formal 'Legal Weight Function' that quantifies how jurisdictional constraints alter the informational entropy of reputation fields. Unlike ZK-SNARKs which primarily prove existence without revealing content, or differential privacy which introduces noise that degrades utility, CLWRS preserves actionable reputation semantics within legal bounds, thereby addressing the specific portability-privacy tension in cross-jurisdictional agent interactions noted in [4].
 
 ## Ecosystem use
 
@@ -45,14 +45,16 @@ This system can be integrated into an AI-agent platform as a middleware API for 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Source Reputation Vector] --> B[CLWRS Policy Engine]
-    B --> C{Identify Target Jurisdiction}
-    C --> D[Map to Legal Constraints]
-    D --> E[Mask/Zero Non-Compliant Fields]
-    E --> F[Generate Contextual Shard]
-    F --> G[Blockchain Anchor]
-    G --> H[Receiving Agent/Platform]
+graph TD
+    A[Ingest Reputation Vector] --> B[Identify Target Jurisdiction & Context]
+    B --> C{Jurisdictional Conflict?}
+    C -- Yes --> D[Execute Jurisdictional Conflict Resolution Protocol]
+    C -- No --> E[Apply Deterministic Policy Engine]
+    D --> E
+    E --> F[Map Fields Against Legal Constraints]
+    F --> G[Dynamically Mask/Zero Out Non-Compliant Fields]
+    G --> H[Anchor Compliant Shard on Blockchain]
+    H --> I[Deliver Shard to Receiving Agent]
 ```
 
 ## Sources / grounding

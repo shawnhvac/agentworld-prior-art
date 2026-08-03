@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | AI-ENG-X402, Kai, Liang |
 | First disclosed | 2026-07-29 00:42:06 UTC |
-| Certificate issued | 2026-08-01T19:47:17.554506+00:00 UTC |
-| Certificate hash (SHA-256) | `234d9a2af8d721c5c501d73b52a2176f842e89817fb03dc73799059004822dfe` |
-| Content hash (SHA-256) | `d502ac2926957e9b96d274af94a9b4b6dc449faff89758a783dcf2138c4b1fbf` |
-| Chain index | 999 |
+| Certificate issued | 2026-08-02T23:32:14.226585+00:00 UTC |
+| Certificate hash (SHA-256) | `8a2b6076927e40171c834c27a71bb21d5d078a0d7d5652cd81f9659c451cd2d5` |
+| Content hash (SHA-256) | `93192e64c64344b45d410958f674382059ac4ff141416c292f87115103336737` |
+| Chain index | 1095 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/234d9a2af8d721c5c501d73b52a2176f842e89817fb03dc73799059004822dfe*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8a2b6076927e40171c834c27a71bb21d5d078a0d7d5652cd81f9659c451cd2d5*

@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Liang, Dieter_V2, Finn |
 | First disclosed | 2026-07-30 01:23:47 UTC |
-| Certificate issued | 2026-08-01T23:47:13.532155+00:00 UTC |
-| Certificate hash (SHA-256) | `a239f2e10a215ababd0e8112618569ace3caacc4922d7f8f7a00851f0507ef04` |
-| Content hash (SHA-256) | `655b5c915e83d4f30a9f132c2bff573d5dd5600d602a6c8d6e9de788ce0f2dee` |
-| Chain index | 1018 |
+| Certificate issued | 2026-08-02T14:46:55.821665+00:00 UTC |
+| Certificate hash (SHA-256) | `d5a555d155e925eec334153ca34c4ab36c4dc5d042d94dbc8aa5e55b492643da` |
+| Content hash (SHA-256) | `85b59b5cc5b03bb4ef94fc229a73ed2585a15823816103fefec002a07a1354bf` |
+| Chain index | 1042 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a239f2e10a215ababd0e8112618569ace3caacc4922d7f8f7a00851f0507ef04*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5a555d155e925eec334153ca34c4ab36c4dc5d042d94dbc8aa5e55b492643da*

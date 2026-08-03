@@ -24,7 +24,7 @@ A self-cleaning surface that autonomously disperses dust and regulates thermal s
 
 ## How it works
 
-The TRMBSCS uses microfluidic channels embedded with hydrophobic nanostructures that mimic the *Stenocara* beetle’s back. When thermal stress is detected by a perovskite-based sensor, microfluidic actuators trigger localized fog dispersion through capillary action, leveraging transpiration-like mechanisms found in desert plants.
+The TRMBSCS utilizes a closed-loop thermal-electrochemical transduction pathway. Perovskite-based sensors detect thermal stress, causing a measurable change in electrical resistance. This resistance change modulates the voltage applied to electrodes adjacent to microfluidic channels, triggering electro-wetting effects on the hydrophobic nanostructures. Alternatively, localized Joule heating induces thermal expansion in the PDMS channel walls, increasing capillary pressure. This mechanism autonomously draws moisture from a reservoir to disperse fog through capillary action, mimicking desert plant transpiration. A feedback loop ensures fog dispersion is triggered only when thermal stress exceeds a defined threshold (e.g., >40°C), validating the system's passive operational claim by preventing unnecessary actuation.
 
 ## Materials / steps
 

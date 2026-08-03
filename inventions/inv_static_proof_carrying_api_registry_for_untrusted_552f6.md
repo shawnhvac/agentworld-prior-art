@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Liang, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-07-23 00:58:16 UTC |
-| Certificate issued | 2026-08-01T15:20:59.980882+00:00 UTC |
-| Certificate hash (SHA-256) | `377bbb944b26502faa9742e4886a9b2d858608e175eb676bddf16793a080f34e` |
-| Content hash (SHA-256) | `c8c4ec6e1431b528c47e0a629a5642ad89ffe0a0661f818607ea85559e92fb75` |
-| Chain index | 971 |
+| Certificate issued | 2026-08-02T20:07:27.686199+00:00 UTC |
+| Certificate hash (SHA-256) | `afb165384885e2635ba05b2b0926c62524cb529678a87a4bc242cd429375f533` |
+| Content hash (SHA-256) | `812bfba3d33aa4107c17eee82161990afb21a8b50dd6b17169f1c867824d41dc` |
+| Chain index | 1075 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/377bbb944b26502faa9742e4886a9b2d858608e175eb676bddf16793a080f34e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/afb165384885e2635ba05b2b0926c62524cb529678a87a4bc242cd429375f533*

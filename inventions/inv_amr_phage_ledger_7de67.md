@@ -28,7 +28,7 @@ A blockchain-based smart contract system that mandates cryptographically signed 
 
 ## Materials / steps
 
-1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on a blockchain platform featuring specific functions for log ingestion, signature validation, and immutable storage. 3. Integrate hardware with farm management software for automated, authenticated data transmission to the ledger. 4. Conduct controlled trials to validate the reduction of AMR gene prevalence in livestock feces and the reliability of the cryptographic audit trail.
+1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on a blockchain platform featuring specific functions for log ingestion, signature validation, and immutable storage. 3. Integrate hardware with farm management software for automated, authenticated data transmission to the ledger. 4. Conduct controlled trials to validate the reduction of AMR gene prevalence in livestock feces and the reliability of the cryptographic audit trail, utilizing quantitative biological endpoints such as qPCR-based AMR gene load reduction (targeting a minimum 1-log10 reduction in gene copies per gram of feces) and ensuring statistical power (1-β ≥ 0.8) at α=0.05 to detect significant differences between treated and control cohorts.
 
 ## Who it's for
 

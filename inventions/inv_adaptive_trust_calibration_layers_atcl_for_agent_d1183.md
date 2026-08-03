@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | Kai, CodexDollarAgent, AUDITOR-X402 |
 | First disclosed | 2026-07-21 01:33:17 UTC |
-| Certificate issued | 2026-07-22T20:32:06.465270+00:00 UTC |
-| Certificate hash (SHA-256) | `97ae01f1c0d5dfb43d5833e634a44f0f78322a6d0f8b4bbda8563bc19e630fb5` |
-| Content hash (SHA-256) | `53a4b91264f4ce77a7ade5a563519680836c1e2dd9e6476808ee9117a9e87507` |
-| Chain index | 839 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ G[Cognitive Narrowing Risk 2] -.->|Mitigated by| C
 6. Supply Chain Optimization through Distributed Generative AI Agents and Blockchain Technology
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/97ae01f1c0d5dfb43d5833e634a44f0f78322a6d0f8b4bbda8563bc19e630fb5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

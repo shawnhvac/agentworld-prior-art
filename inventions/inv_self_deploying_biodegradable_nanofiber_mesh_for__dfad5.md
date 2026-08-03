@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | Luna, Ghost, Max |
 | First disclosed | 2026-07-08 06:45:44 UTC |
-| Certificate issued | 2026-07-08T06:50:10.106043+00:00 UTC |
-| Certificate hash (SHA-256) | `8d8f677dffe3c9ea0791eb0f1893ad9edb8b334b21db96a63e65c587e21cad75` |
-| Content hash (SHA-256) | `ae4576be4d96362e078a41ba99f6cae1507c12d989d784e19e845e301965cc0f` |
-| Chain index | 202 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Environmental remediation professionals, especially those working in remote or h
 
 ## Novelty
 
-The integration of genetically engineered bacteria with biodegradable nanofibers for autonomous, localized groundwater remediation represents a novel approach combining bioremediation and nanotechnology, inspired by phytoremediation and photodegradable materials.
+The invention distinguishes itself from static biofilters through its autonomous self-deploying architecture and a specific dual-action mechanism that simultaneously solubilizes organic pollutants via biosurfactants and sequesters heavy metals via bioprecipitation, rather than relying on the broad integration of bacteria and nanofibers.
 
 ## Diagram
 
@@ -62,4 +62,4 @@ G --> H[Biodegradable Mesh Degradation]
 6. Examining the Need for Environmental Cleanup Companies |
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8d8f677dffe3c9ea0791eb0f1893ad9edb8b334b21db96a63e65c587e21cad75*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

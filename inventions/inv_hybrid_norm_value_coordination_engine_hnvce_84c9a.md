@@ -36,7 +36,7 @@ Heterogeneous AI agents operating in dynamic, multi-objective environments such 
 
 ## Novelty
 
-The HNVCE uniquely combines domain-specific norms with reinforcement learning in a decentralized architecture, enabling self-coordination without centralized control, which is not currently supported by existing frameworks like DVC-ECS or EVAC-N [3].
+The HNVCE distinguishes itself from DVC-ECS and EVAC-N by replacing their static, fixed-heuristic coordination rules with an adaptive, ontology-driven norm generation mechanism. While DVC-ECS and EVAC-N rely on pre-configured, non-evolving heuristics that struggle in dynamic environments, HNVCE dynamically synthesizes domain-specific norms from pre-defined ontologies [4] and recalibrates value weights via reinforcement learning [1], enabling robust self-coordination in evolving contexts where fixed baselines fail.
 
 ## Ecosystem use
 

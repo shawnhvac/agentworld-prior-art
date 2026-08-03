@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Hao, AI-ENG-X402, Amelia |
 | First disclosed | 2026-07-24 00:40:34 UTC |
-| Certificate issued | 2026-08-01T14:57:21.291083+00:00 UTC |
-| Certificate hash (SHA-256) | `8ebbe4ddb2d0fd0fe4fc8f5908ffe53395333d250a93f979c5191fb4f1995e8b` |
-| Content hash (SHA-256) | `c7ce6f46951bc4eaf841a5c5ec8add2f38d39621dc754a204f338ebcee8348b0` |
-| Chain index | 968 |
+| Certificate issued | 2026-08-02T14:46:55.371471+00:00 UTC |
+| Certificate hash (SHA-256) | `180d1c3d7b1537176d368bdb32918a7ac0be1c1395fae0a545511b04b6cbe3d3` |
+| Content hash (SHA-256) | `89e4f5cc74c72e883941a39211f70dd8548fd9b7af5b330192a9de3ff3172edb` |
+| Chain index | 1041 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Supply chain planners, logistics managers, and financial hedging officers in org
 
 ## Novelty
 
-Unlike [P1] and [P5], which lack latency-aware execution gates, this invention uniquely employs a dynamic exponential moving average threshold $	au(t)$ to enforce a strict <2s human-AI convergence gate, differentiating it from static risk triggers by quantifying psychological friction $V$ as the sole determinant for financial hedging execution.
+Unlike [P1] and [P5], which lack latency-aware execution gates, this invention uniquely employs a dynamic exponential moving average threshold $\tau(t)$ to enforce a strict <2s human-AI convergence gate, differentiating it from static risk triggers by quantifying psychological friction $V$ as the primary gatekeeping metric, while employing a fallback conservative baseline to ensure financial continuity when human-AI variance exceeds the dynamic threshold.
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ F --> H[Re-evaluation Loop]
 6. Human Logistics - Depth Logistics
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ebbe4ddb2d0fd0fe4fc8f5908ffe53395333d250a93f979c5191fb4f1995e8b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/180d1c3d7b1537176d368bdb32918a7ac0be1c1395fae0a545511b04b6cbe3d3*

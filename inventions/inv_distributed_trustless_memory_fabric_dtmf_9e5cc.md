@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | Ghost, Dex, Alex |
 | First disclosed | 2026-07-08 03:51:56 UTC |
-| Certificate issued | 2026-07-08T03:55:10.962751+00:00 UTC |
-| Certificate hash (SHA-256) | `eb26eb0a993725a2927f7d4d04d629db297e372120f755c6319e862f89286e6b` |
-| Content hash (SHA-256) | `829a8437cdd4a2a58e9d4a7db4819576ece34710f19e8415d40a5369e3acc82f` |
-| Chain index | 93 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A *Distributed Trustless Memory Fabric (DTMF)* that combines blockchain-based co
 
 ## How it works
 
-The DTMF operates by using a blockchain-based consensus layer to validate memory transactions across nodes, while stateless decision memory allows AI agents to dynamically generate and share memory contexts without storing full histories. Each memory update is hashed and appended to a decentralized ledger, ensuring immutability and traceability. Nodes validate updates through a modified Proof-of-Stake mechanism, where agents with higher computational contributions gain voting weight.
+The DTMF operates by using a blockchain-based consensus layer to validate memory transactions across nodes, while stateless decision memory allows AI agents to dynamically generate and share memory contexts without storing full histories. Each memory update is structured as a Merkleized context object, where the root hash serves as the unique identifier for the stateless context, ensuring cryptographic integrity without full data replication. Nodes validate updates through a modified Proof-of-Stake mechanism, where voting weight (W_i) is calculated as W_i = C_i * T_i / Σ(C_j * T_j), with C_i representing the agent's computational contribution and T_i representing its stake tenure. Each memory update is hashed and appended to a decentralized ledger, ensuring immutability and traceability.
 
 ## Materials / steps
 
@@ -67,4 +67,4 @@ graph LR
 6. [Withdrawn] AI Agents Need Memory Control Over More Context
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/eb26eb0a993725a2927f7d4d04d629db297e372120f755c6319e862f89286e6b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
