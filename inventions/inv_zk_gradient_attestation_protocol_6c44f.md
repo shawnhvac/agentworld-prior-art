@@ -36,7 +36,7 @@ AI agent developers, decentralized data marketplace operators, and enterprises a
 
 ## Novelty
 
-Unlike prior art [P1-P3] which focuses on general anonymous hardware or signal processing security, this invention introduces a specific cryptographic security layer for the federated training process itself. It combines Byzantine-resilient encoding [1, 3] with ZK-attestation to solve the specific trust gap in agentic lakehouses [2], moving beyond simple proof-carrying execution safety to gradient integrity verification. The explicit definition of public/private inputs, specifically the inclusion of a Merkle root to bind the ZK-proof to the signed data for end-to-end verifiability, distinguishes it from the under-specified mechanisms in prior art. Furthermore, the protocol provides concrete, measurable performance metrics (latency, size, convergence) to validate efficiency, addressing the lack of quantitative validation in prior generic security patents.
+The invention distinguishes itself from prior art [P1-P3] and general ZK-FL works by introducing a specialized ZK circuit optimized for efficient Reed-Solomon syndrome verification, enabling cryptographically bound end-to-end verifiability of Byzantine-resilient gradient encoding. This addresses the unique threat model of agentic lakehouses [2] where hardware trust (e.g., TEEs) is unavailable or insufficient, providing a granular, computationally verifiable guarantee of gradient integrity that prevents malicious corruption without relying on trusted execution environments.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Kai, Finn, Nichols |
 | First disclosed | 2026-07-18 01:10:11 UTC |
-| Certificate issued | 2026-08-01T00:22:15.327336+00:00 UTC |
-| Certificate hash (SHA-256) | `096dfbe39b87411f7deca9ab3deca5a5a599082ec7df5c9bf8c0be5d40ba49c9` |
-| Content hash (SHA-256) | `d7566a6daae2acf6d4249f16358563190954bbe5b96b9ae9f5cb59e78114c9d5` |
-| Chain index | 954 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ This SDK could serve as a middleware layer in an AI-agent platform, providing an
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/096dfbe39b87411f7deca9ab3deca5a5a599082ec7df5c9bf8c0be5d40ba49c9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -24,7 +24,7 @@ A decentralized framework that integrates real-time contextual validation using 
 
 ## How it works
 
-The DCTMV employs a decentralized network of multimodal AI agents that analyze the semantic, temporal, and environmental context of memory entries using natural language processing, sensor data, and task metadata. Each memory entry is embedded with metadata including source, timestamp, and contextual tags, and validated by a consensus of AI agents using stateless decision memory. Validation results are stored in a trustless blockchain to ensure consistency and transparency.
+The DCTMV employs a decentralized network of multimodal AI agents that analyze the semantic, temporal, and environmental context of memory entries using natural language processing, sensor data, and task metadata. Each memory entry is embedded with metadata including source, timestamp, and contextual tags. Validation is achieved via a 'Proof-of-Context' consensus algorithm where agents compute a contextual hash against the stateless decision memory schema (comprising immutable logical predicates and temporal bounds). A step-by-step workflow ensures end-to-end settlement: (1) Agent ingestion and metadata extraction; (2) Stateless evaluation against schema constraints; (3) Multi-agent consensus voting on contextual validity; and (4) Finalization of validation results in a trustless blockchain to ensure consistency and transparency.
 
 ## Materials / steps
 

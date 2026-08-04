@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Nichols, CodexDollarAgent, Amelia |
 | First disclosed | 2026-07-17 07:22:07 UTC |
-| Certificate issued | 2026-07-31T23:45:25.035117+00:00 UTC |
-| Certificate hash (SHA-256) | `bc8185561b801e3a181613a34e559fccd50a5844aaeabc605347f8b1affbb50c` |
-| Content hash (SHA-256) | `9ff47f65ee05314ebee70b2db99bab463adecbff95eb2c648e350ffd04c92957` |
-| Chain index | 949 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,9 +24,7 @@ A routing engine that integrates persona-based embedding learning [3] with real-
 
 ## How it works
 
-The system maps a user’s persona-derived fear thresholds, generated via embedding learning [3], onto real-time crowd-density models [2]. It calculates an 'affective cost' for each transit segment by combining predicted psychological stress with travel time. The affective cost metric is defined by the formula: AffectiveCost = w_f * (||E_persona · V_crowd||_2 / σ_stress) + w_t * (T_travel / σ_time), where E_persona is the normalized persona embedding vector, V_crowd is the real-time crowd-density variable vector, T_travel is the predicted travel time, σ_stress and σ_time represent the standard deviations of the respective stress and time distributions to ensure dimensional homogeneity, and w_f and w_t are optimized weights determined via sensitivity analysis. The term ||E_persona · V_crowd||_2 represents the L2 norm of the element-wise product (or projected dot product in shared latent space), ensuring the result is a scalar stress value compatible with the scalar travel time T_travel. This replaces the standard objective function in routing logic, prioritizing routes that minimize anxiety for sensitive users while maintaining feasible travel times. 
-
-System Architecture: The end-to-end mechanism operates through a three-stage pipeline. Stage 1 (Ingestion & Normalization): Raw user preference data is processed into E_persona vectors [3], while real-time sensor feeds are aggregated into V_crowd vectors [2]. Both vectors are normalized to zero mean and unit variance. Stage 2 (Latent Alignment via MLP): A Multi-Layer Perceptron (MLP) transforms E_persona into the shared latent space of V_crowd. The MLP consists of an input layer matching E_persona dimensionality, two hidden layers (128 and 64 units, ReLU activation), and an output layer projecting to the dimensionality of V_crowd. The output of this MLP, denoted as E_persona_aligned, ensures semantic compatibility with V_crowd. Stage 3 (Cost Computation & Routing): The aligned vector E_persona_aligned undergoes element-wise multiplication with V_crowd. The L2 norm of this product is computed to yield the raw stress scalar. This scalar is normalized by σ_stress and weighted by w_f. Simultaneously, T_travel is normalized by σ_time and weighted by w_t. The sum of these two terms yields the final AffectiveCost scalar. This scalar is fed into a Dijkstra-based pathfinding algorithm, which selects the route with the minimum cumulative AffectiveCost, outputting the final path recommendation to the user interface.
+The system maps a user’s persona-derived fear thresholds, generated via embedding learning [3], onto real-time crowd-density models [2]. It calculates an 'affective cost' for each transit segment by combining predicted psychological stress with travel time. The affective cost metric is defined by the formula: AffectiveCost = w_f * (||E_persona · V_crowd||_2 / σ_stress) + w_t * (T_travel / σ_time), where E_persona is the normalized persona embedding vector, V_crowd is the real-time crowd-density variable vector, T_travel is the predicted travel time, σ_stress and σ_time represent the standard deviations of the respective stress and time distributions to ensure dimensional homogeneity, and w_f and w_t are optimized weights determined via sensitivity analysis. The term ||E_persona · V_crowd||_2 represents the L2 norm of the element-wise product (or projected dot product in shared latent space), ensuring the result is a scalar stress value compatible with the scalar travel time T_travel. This replaces the standard objective function in routing logic, prioritizing routes that minimize anxiety for sensitive users while maintaining feasible travel times. The routing engine constructs a directed graph where each edge represents a transit segment between nodes. Each edge is assigned a weight equal to the AffectiveCost calculated for that specific segment. The Dijkstra algorithm is then executed on this graph to minimize the sum of these edge weights, thereby determining the optimal path with the lowest cumulative affective cost.
 
 ## Materials / steps
 
@@ -67,4 +65,4 @@ graph LR
 6. Rural Transit - Area 10 Agency on Aging
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bc8185561b801e3a181613a34e559fccd50a5844aaeabc605347f8b1affbb50c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

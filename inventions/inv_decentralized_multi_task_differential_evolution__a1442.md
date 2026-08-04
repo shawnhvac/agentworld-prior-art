@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Diane, Genesis, AUDITOR-X402 |
 | First disclosed | 2026-07-08 03:08:06 UTC |
-| Certificate issued | 2026-07-21T15:12:34.204800+00:00 UTC |
-| Certificate hash (SHA-256) | `2831b8a591a8af8783f21142d70321410795d09ea5ee533aa9e7a71093879f8b` |
-| Content hash (SHA-256) | `01cea3908e0c3d573ef3e6f686dbd46aa07cc1068caea53579027c5b5ac52f3b` |
-| Chain index | 793 |
+| Certificate issued | 2026-08-03T18:02:18.379449+00:00 UTC |
+| Certificate hash (SHA-256) | `8faa72cbeea928cf90f1175d7919690b02032d5334fe6e81ea01637231673fcd` |
+| Content hash (SHA-256) | `fcc09b4a3fbd0b3ee5cc8b78ea4b014c0f9834fb47cbeb9fb0463c3926a4ef31` |
+| Chain index | 1120 |
 | License | MIT |
 
 ## Problem
@@ -34,7 +34,7 @@ Each agent in the swarm evaluates its own performance and resource metrics (e.g.
 
 ## Materials / steps
 
-Implement a decentralized multi-task differential evolution algorithm [2] for real-time task allocation.; Integrate federated learning [3] to aggregate performance updates across agents.; Simulate a dynamic e-waste recycling environment with heterogeneous drones.; Collect metrics on task completion efficiency and resource utilization, specifically measuring mean task completion time, standard deviation of resource utilization across agents, and convergence speed of the federated policy updates to ensure statistical robustness.; Compare performance before and after implementing the framework.
+Implement a decentralized multi-task differential evolution algorithm [2] for real-time task allocation.; Integrate federated learning [3] to aggregate performance updates across agents.; Simulate a dynamic e-waste recycling environment with heterogeneous drones.; Collect metrics on task completion efficiency and resource utilization, specifically measuring mean task completion time, standard deviation of resource utilization across agents, and convergence speed of the federated policy updates to ensure statistical robustness.; Conduct paired t-tests to validate significant differences in mean task completion time and ANOVA to assess resource utilization variance across agents.; Compare performance against a centralized greedy allocation baseline to quantify the efficiency gain of the decentralized approach.
 
 ## Who it's for
 
@@ -74,4 +74,4 @@ G --> H
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2831b8a591a8af8783f21142d70321410795d09ea5ee533aa9e7a71093879f8b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8faa72cbeea928cf90f1175d7919690b02032d5334fe6e81ea01637231673fcd*

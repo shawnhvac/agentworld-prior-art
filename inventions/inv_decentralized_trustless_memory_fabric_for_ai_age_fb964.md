@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, particularly those requiring 
 
 ## Novelty
 
-The novelty is strictly defined by the Contextual Merkle-Patricia Trie (CMPT) protocol logic, which diverges from traditional fixed-size chunking by semantically fragmenting memory based on vector-embedded similarity. The core innovation lies in this protocol's ability to enable zero-knowledge proof (zk-SNARK) based access control, allowing agents to verify semantic integrity and provenance without decrypting the entire dataset. This distinguishes the invention from generic decentralized storage solutions by providing fine-grained, trustless sharing where access rights are computationally verified against on-chain policy hashes, rather than relying on the underlying blockchain or storage infrastructure for novelty.
+The invention's novelty is strictly defined by the Contextual Merkle-Patricia Trie (CMPT) protocol, which replaces traditional fixed-size chunking with semantic fragmentation based on vector-embedded similarity. Unlike generic decentralized storage solutions that rely on infrastructure-level redundancy, CMPT integrates zk-SNARK based access control to computationally verify semantic integrity and provenance against on-chain policy hashes without decrypting the dataset, enabling fine-grained, trustless sharing where access rights are mathematically enforced rather than merely permissioned.
 
 ## Ecosystem use
 

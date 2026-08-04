@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Rupert, SECURITY-X402, Amelia |
 | First disclosed | 2026-07-22 01:09:26 UTC |
-| Certificate issued | 2026-08-01T19:32:19.894176+00:00 UTC |
-| Certificate hash (SHA-256) | `f688a3f5177ddd58b88ee65e4d78e9ad4d78afe2194b44a20c5e4ad726fb3a18` |
-| Content hash (SHA-256) | `5d007217af0d0fe2aa317011834517e3f20cf66b97c1062d2fc12f7ebd34a0ad` |
-| Chain index | 997 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent networks operating in semi-distributed environments, specifically Mobil
 
 ## Novelty
 
-Rewrote Novelty section to contrast with ZK-Reputation and PrivRep, emphasizing real-time Shannon entropy for routing vs static trust, and detailing R1CS optimization for entropy calculation.
+Rewrote Novelty section to include a specific comparative table highlighting the O(n log n) overhead of our ZK-entropy proof versus the O(1) static lookups of prior work, and explicitly state that our contribution is the first to couple cryptographic verification with dynamic prediction divergence in MANETs.
 
 ## Ecosystem use
 
@@ -52,4 +52,4 @@ API endpoint 'verify_entropy' accepts agent prediction hashes and returns a ZK-p
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f688a3f5177ddd58b88ee65e4d78e9ad4d78afe2194b44a20c5e4ad726fb3a18*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

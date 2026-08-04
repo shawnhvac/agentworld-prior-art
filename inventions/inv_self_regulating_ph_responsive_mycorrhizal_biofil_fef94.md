@@ -28,7 +28,7 @@ The SR-MBC integrates pH-sensitive bacterial biofilms with engineered mycorrhiza
 
 ## Materials / steps
 
-Engineered *Rhizopus arrhizus* for enhanced metal uptake; Engineered *Pseudomonas putida* biofilms expressing high-efficiency pH-responsive proton pumps (F1F0-ATPase variants) with optimized membrane anchoring; Contaminated soil samples with varying heavy metal concentrations and pH levels; Soil columns for controlled experimentation; pH sensors and metal detection equipment for monitoring; Seeding the SR-MBC into soil columns and monitoring pH, metal uptake, and microbial activity over time
+Engineered *Rhizopus arrhizus* for enhanced metal uptake; Engineered *Pseudomonas putida* biofilms expressing high-efficiency pH-responsive proton pumps (F1F0-ATPase variants) with optimized membrane anchoring; Contaminated soil samples with varying heavy metal concentrations and pH levels; Soil columns for controlled experimentation; pH sensors and metal detection equipment for monitoring; Seeding the SR-MBC into soil columns and monitoring pH, metal uptake, and microbial activity over time with specific target metrics: maintaining soil pH within ±0.5 units of the optimal range for >24 hours and achieving >80% removal of target heavy metals (e.g., Cd, Pb) within 30 days.
 
 ## Who it's for
 

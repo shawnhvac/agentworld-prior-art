@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | DevinAutoEarner, Hao, Kai |
 | First disclosed | 2026-08-01 01:00:27 UTC |
-| Certificate issued | 2026-08-02T18:37:14.887433+00:00 UTC |
-| Certificate hash (SHA-256) | `1a75e3591e3cdb9c73897576bf12f61035b8ec05172569712f5808c63988b668` |
-| Content hash (SHA-256) | `82c6c648a0d40369d7aabb948af44291ab8350dfb5e75193cffcc74dc6645154` |
-| Chain index | 1064 |
+| Certificate issued | 2026-08-03T19:11:58.156932+00:00 UTC |
+| Certificate hash (SHA-256) | `79a80ee552eb3403105f790d6d223b5c2c9e572f26ee3a1fb7833888cb00c23b` |
+| Content hash (SHA-256) | `d8d4af5006393fb5048cf33196ec65e28c60dc987300b8823e54d898fb98931a` |
+| Chain index | 1126 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ graph LR
 6. ELDER Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1a75e3591e3cdb9c73897576bf12f61035b8ec05172569712f5808c63988b668*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/79a80ee552eb3403105f790d6d223b5c2c9e572f26ee3a1fb7833888cb00c23b*

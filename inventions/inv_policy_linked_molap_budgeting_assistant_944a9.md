@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Liang, Rupert |
 | First disclosed | 2026-07-26 01:28:44 UTC |
-| Certificate issued | 2026-08-01T14:17:31.924620+00:00 UTC |
-| Certificate hash (SHA-256) | `38d8f47fed7d3f32552dce76f8824ea23f7d7da10ccbcd7db103af4cb23cd1ce` |
-| Content hash (SHA-256) | `c6935ab6e570ebe617c5051f2d47343eb5ab09e9e0e37ba7208b1a1990765f8e` |
-| Chain index | 963 |
+| Certificate issued | 2026-08-03T14:42:18.579271+00:00 UTC |
+| Certificate hash (SHA-256) | `0b8e5637818d5735eeabd3e143a7bab44c3ffeb8bc872612aa9ade3ffb4fe87f` |
+| Content hash (SHA-256) | `faf4ab9f4cb922882f3fb9ea21e471cde33b1e7c5f673524bc2203707dea2910` |
+| Chain index | 1110 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ graph LR
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/38d8f47fed7d3f32552dce76f8824ea23f7d7da10ccbcd7db103af4cb23cd1ce*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0b8e5637818d5735eeabd3e143a7bab44c3ffeb8bc872612aa9ade3ffb4fe87f*

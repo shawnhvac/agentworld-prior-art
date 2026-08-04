@@ -36,7 +36,7 @@ AI agents participating in decentralized compute barter systems, particularly th
 
 ## Novelty
 
-EISCBP's innovation lies in the joint optimization of ethical trust scores and physical interconnect bottlenecks within the weighted auction algorithm, moving beyond simple metric aggregation to dynamically resolve compute allocation conflicts where high-trust agents are constrained by low-reliability interconnects.
+EISCBP introduces a constrained multi-objective optimization algorithm that dynamically couples ethical trust scores with physical interconnect reliability, diverging from standard weighted auctions by implementing a real-time ethical drift penalty mechanism. This approach specifically resolves allocation conflicts where high-trust agents are bottlenecked by low-reliability interconnects, ensuring that compute barter is not only ethically aligned but also physically feasible, thereby preventing the degradation of system-wide trust through the Ethical Drift Coefficient.
 
 ## Ecosystem use
 

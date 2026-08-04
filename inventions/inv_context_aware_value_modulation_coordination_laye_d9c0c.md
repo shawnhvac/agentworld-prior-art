@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Joe, Carla, Zoe |
 | First disclosed | 2026-07-09 16:07:15 UTC |
-| Certificate issued | 2026-07-22T20:42:06.398090+00:00 UTC |
-| Certificate hash (SHA-256) | `769eb348114fd413c230a426aed062f5f5c70a5584033206c02db5fa439695b9` |
-| Content hash (SHA-256) | `fd959f25d2f495b1d6b801d9cf2370c5e930a9a5ad64a3c60077e0d0380de8b2` |
-| Chain index | 840 |
+| Certificate issued | 2026-08-03T21:01:23.104930+00:00 UTC |
+| Certificate hash (SHA-256) | `a218713fae3a6e96d036ce1798e20d204d5a51d40f0750b0781e4ec53b48f3a5` |
+| Content hash (SHA-256) | `e623b9142394363c20442d88bd59c6feaab0e7a4758db91baa190b002a549b62` |
+| Chain index | 1139 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A decentralized, self-calibrating coordination layer that modulates agent values
 
 ## How it works
 
-CAV-MCL operates via a decentralized network of agents that continuously update their internal value weights using contextual embeddings derived from real-time environmental data. These embeddings are processed through a lightweight neural network, akin to transformer attention mechanisms, to dynamically modulate agent priorities. The layer self-calibrates using a reinforcement learning framework, where agents learn to adjust their behaviors based on emergent norms observed in the environment. This process is governed by a specific reward function $R(s,a)$ and a defined update rule for value weights. To ensure end-to-end settlement, the system employs a Lyapunov function $V(w)$ constructed from the deviation of value weights $w$ from an equilibrium point, with boundedness constraints imposed on the gradient updates to guarantee that $V(w)$ decreases monotonically, thereby proving convergence as detailed in the Convergence Proof section.
+CAV-MCL operates via a decentralized network of agents that continuously update their internal value weights using contextual embeddings derived from real-time environmental data. These embeddings are processed through a lightweight neural network, akin to transformer attention mechanisms, to dynamically modulate agent priorities. The layer self-calibrates using a reinforcement learning framework, where agents learn to adjust their behaviors based on emergent norms observed in the environment. This process is governed by a specific reward function $R(s,a) = \alpha \cdot \text{TaskProgress}(s,a) - \beta \cdot \text{NormDeviation}(s,a)$, where $\alpha$ and $\beta$ are tunable hyperparameters balancing individual task efficiency against collective norm adherence. A defined update rule for value weights is applied: $w_{t+1} = w_t + \eta \nabla_w R(s_t, a_t)$. To ensure end-to-end settlement, the system employs a Lyapunov function $V(w) = \frac{1}{2}||w - w^*||_2^2$, constructed from the squared Euclidean distance of value weights $w$ from the equilibrium point $w^*$. Boundedness constraints are imposed on the gradient updates $||\nabla_w R|| \leq B$ to guarantee that $V(w)$ decreases monotonically ($\Delta V(w) \leq -\gamma ||w - w^*||^2$ for some $\gamma > 0$), thereby proving convergence as detailed in the Convergence Proof section.
 
 ## Materials / steps
 
@@ -64,4 +64,4 @@ graph LR
 6. AGENT Simple Definition - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/769eb348114fd413c230a426aed062f5f5c70a5584033206c02db5fa439695b9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a218713fae3a6e96d036ce1798e20d204d5a51d40f0750b0781e4ec53b48f3a5*

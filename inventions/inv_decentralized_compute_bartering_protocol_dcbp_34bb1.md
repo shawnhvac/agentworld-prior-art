@@ -28,7 +28,7 @@ Each AI agent presents its DID and verifiable credentials [4] to a blockchain-ba
 
 ## Materials / steps
 
-A blockchain platform supporting DIDs and smart contracts; A compute resource monitoring system for AI agents; A governance-weighting algorithm [5] to assign resource exchange scores; Implementation of verifiable credentials [4] for AI agents; Simulation environment for multi-agent compute bartering
+A blockchain platform supporting DIDs and smart contracts; A compute resource monitoring system for AI agents; A governance-weighting algorithm [5] to assign resource exchange scores; Implementation of verifiable credentials [4] for AI agents; Simulation environment for multi-agent compute bartering configured with specific success criteria (e.g., >95% transaction finality within 2 blocks) and latency thresholds (e.g., <50ms peer-to-peer handshake); Detailed simulation methodology defining valid trials through randomized agent stress tests over 10,000 iterations to verify congestion mitigation on weak interconnects [6], explicitly requiring that >95% of transactions achieve finality within 2 blocks and peer-to-peer handshake latency remains under 50ms during peak stress conditions.
 
 ## Who it's for
 

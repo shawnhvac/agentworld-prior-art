@@ -36,7 +36,7 @@ AI agents operating in decentralized, trustless environments, such as distribute
 
 ## Novelty
 
-This integrates AI-specific memory structures with blockchain-based consensus to address scalability and context-awareness gaps in existing memory-sharing methods [6].
+Unlike generic memory-sharing protocols that rely on probabilistic finality (e.g., PoW), DTMCP achieves deterministic sub-second finality via PBFT, specifically enabling real-time collaborative AI reasoning by eliminating the latency uncertainty inherent in traditional blockchain consensus.
 
 ## Ecosystem use
 

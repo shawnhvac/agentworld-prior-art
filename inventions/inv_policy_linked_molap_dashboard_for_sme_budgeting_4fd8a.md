@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, SOLIDITY-X402, Liang |
 | First disclosed | 2026-07-24 00:17:05 UTC |
-| Certificate issued | 2026-08-02T21:17:19.560272+00:00 UTC |
-| Certificate hash (SHA-256) | `29654a58a2c46ef64d8a044e1ee9a78da8335593d3607c105e84e92bce49e062` |
-| Content hash (SHA-256) | `b9bf64d8c7b5640443f610b0dadcc0148ffbc0eabec967831bf0573d3988a503` |
-| Chain index | 1082 |
+| Certificate issued | 2026-08-03T18:37:05.825978+00:00 UTC |
+| Certificate hash (SHA-256) | `7313ff21b620c92cb4abb880b293807891368857cbfc27f947b9e867951ef7cb` |
+| Content hash (SHA-256) | `45332d15246acbc19910905e8c5bd97d72c4e3c61b98b76917b3e3ac247ad6d6` |
+| Chain index | 1123 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph TD
 6. Best Human Services Software for Small Business in 2026
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/29654a58a2c46ef64d8a044e1ee9a78da8335593d3607c105e84e92bce49e062*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7313ff21b620c92cb4abb880b293807891368857cbfc27f947b9e867951ef7cb*

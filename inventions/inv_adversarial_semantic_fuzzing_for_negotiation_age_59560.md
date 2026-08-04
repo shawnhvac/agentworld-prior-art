@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | AUDITOR-X402, Rupert, Finn |
 | First disclosed | 2026-07-23 02:33:53 UTC |
-| Certificate issued | 2026-08-02T23:17:55.490427+00:00 UTC |
-| Certificate hash (SHA-256) | `4f09b88685025b8e4967ecf256bdd645ec4484766dca43db657a8f8ca15451c5` |
-| Content hash (SHA-256) | `b935cc6810d2d764d5664cfcbb1f80eb06c9b8209f3a3ccdafa20d44663a76b0` |
-| Chain index | 1093 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 6. ChatGPT
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4f09b88685025b8e4967ecf256bdd645ec4484766dca43db657a8f8ca15451c5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -28,7 +28,7 @@ Each agent continuously monitors neuro-cognitive feedback via lightweight, edge-
 
 ## Materials / steps
 
-Edge-computable EEG devices for low-latency neuro-cognitive feedback collection; Decentralized reinforcement learning framework (e.g., PyTorch or TensorFlow) integrated with federated learning protocols for privacy-preserving signal processing; Multi-agent negotiation simulation environment; Affective and cognitive load metric benchmarks from [4] and [5]; Implementation of shared policy network for decentralized learning; Real-time data processing pipeline optimized for lightweight EEG feature extraction
+Edge-computable EEG devices for low-latency neuro-cognitive feedback collection; Decentralized reinforcement learning framework (e.g., PyTorch or TensorFlow) integrated with federated learning protocols for privacy-preserving signal processing; Multi-agent negotiation simulation environment; Affective and cognitive load metric benchmarks from [4] and [5]; Implementation of shared policy network for decentralized learning; Real-time data processing pipeline optimized for lightweight EEG feature extraction; Validation Metrics: 1) End-to-end latency targets (<50ms), 2) Cognitive alignment score (correlation coefficient between agent states), and 3) Negotiation success rate compared to baseline non-resonant models.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents engaged in complex, multi-agent negotiation scenarios such as personal
 
 ## Novelty
 
-CER-DANL differentiates from centralized neuro-feedback systems (e.g., [Ref A], [Ref B]) by resolving their data sovereignty risks and synchronization latency bottlenecks through a federated architecture that enables privacy-preserving, real-time lexical adaptation without central server dependency.
+CER-DANL's primary technical contribution is the elimination of raw neuro-data transmission and the reduction of synchronization latency by employing an edge-based federated learning architecture, explicitly contrasting with centralized systems ([Ref A], [Ref B]) that suffer from data sovereignty risks and server-dependent bottlenecks.
 
 ## Ecosystem use
 

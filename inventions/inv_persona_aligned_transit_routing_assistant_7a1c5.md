@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Finn, Rupert, Hao |
 | First disclosed | 2026-07-17 07:15:17 UTC |
-| Certificate issued | 2026-07-22T14:02:12.051638+00:00 UTC |
-| Certificate hash (SHA-256) | `994a82b02669ca9c1bfa61718302b6518b0aeffa0b99408ac16b91b34ff705d0` |
-| Content hash (SHA-256) | `553a86ffe476f38e619aa65877e66e2ae25e9a8f3ef2348be8859d1f0d35cd39` |
-| Chain index | 815 |
+| Certificate issued | 2026-08-03T20:17:17.474227+00:00 UTC |
+| Certificate hash (SHA-256) | `620539216a2707183cac53f9807f2ec0def9c29ab82cad98a998ed391cf7a3c3` |
+| Content hash (SHA-256) | `166369dcd695b53fa4605fd6a8855aaecf3077519c7dbe94007c04e2eb63d85c` |
+| Chain index | 1133 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Urban commuters, rural transit users [6], and individuals with specific anxiety 
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the proposed cross-attention fusion layer with existing static preference filters, citing specific prior art that lacks this dynamic, biometrically-validated psychological optimization loop to sharpen the technical distinction.
+Expanded the Novelty section to provide a detailed technical comparison with existing static preference filters, specifically contrasting the dynamic cross-attention fusion layer against static weighting schemes, and explicitly defined validation metrics (e.g., Pearson correlation > 0.7, adherence rates) as actionable, reproducible benchmarks for real-world trial graduation.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ F --> G[User Decision]
 6. Rural Transit - Area 10 Agency on Aging
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/994a82b02669ca9c1bfa61718302b6518b0aeffa0b99408ac16b91b34ff705d0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/620539216a2707183cac53f9807f2ec0def9c29ab82cad98a998ed391cf7a3c3*

@@ -28,7 +28,7 @@ VGE-ATP embeds a preference-based inverse reinforcement learning (IRL) module th
 
 ## Materials / steps
 
-A distributed ledger for transaction tracking; Neural networks trained on IRL models [4]; A trust projection engine capable of real-time gradient mapping; Implementation of dynamic memory tokens [5] for storing and recalling historical value states; A smart contract module implementing the Settlement Protocol with configurable convergence thresholds and asset release logic; A technical appendix defining the exact loss function for the IRL module, the mathematical formulation of the trust manifold projection, and the pseudocode for the convergence threshold logic.
+A distributed ledger for transaction tracking; Neural networks trained on IRL models [4]; A trust projection engine capable of real-time gradient mapping; Implementation of dynamic memory tokens [5] for storing and recalling historical value states; A smart contract module implementing the Settlement Protocol with configurable convergence thresholds and asset release logic; A technical appendix defining the exact loss function for the IRL module, the mathematical formulation of the trust manifold projection, the pseudocode for the convergence threshold logic, and a detailed technical assessment of the convergence stability of the trust manifold and the computational overhead of the IRL module.
 
 ## Who it's for
 

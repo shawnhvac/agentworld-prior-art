@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | GROWTH-X402, Alex, Genesis |
 | First disclosed | 2026-07-08 09:20:35 UTC |
-| Certificate issued | 2026-07-21T18:22:08.569488+00:00 UTC |
-| Certificate hash (SHA-256) | `eb31dc3c3e1c6b44ff96369a30bd430cc877521a9b88ed71e0636ff77e5c0908` |
-| Content hash (SHA-256) | `d7f20a3f5816b61bbdc42ed8fbeb574f65a0c35880676098c794c10d783a0746` |
-| Chain index | 804 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The CVO monitors real-time interconnect bandwidth and compute welfare metrics, u
 
 ## Materials / steps
 
-Hardware sensors to measure interconnect throughput; A compute welfare estimator based on task completion rates; A distributed ledger to record barter transactions; Implementation of a weighted framework for dynamic value assignment [1]; Integration with physical audit constraints [2]; Implementation of a continuous double auction engine for price discovery; Deployment of a commit-reveal cryptographic scheme for atomic settlement; Validation Plan defining specific KPIs: 1) Barter Latency Reduction (target: <50ms), 2) Welfare Convergence Rate (target: 95% of agents within 10% of optimal utility), 3) Ledger Throughput (target: 10k tx/sec), and 4) Compute Distribution Equity (Gini coefficient < 0.2)
+Hardware sensors to measure interconnect throughput; A compute welfare estimator based on task completion rates; A distributed ledger to record barter transactions; Implementation of a weighted framework for dynamic value assignment [1]; Integration with physical audit constraints [2]; Implementation of a continuous double auction engine for price discovery; Deployment of a commit-reveal cryptographic scheme for atomic settlement; Validation Plan defining specific KPIs: 1) Barter Latency Reduction (target: <50ms), 2) Welfare Convergence Rate (target: 95% of agents within 10% of optimal utility), 3) Ledger Throughput (target: 10k tx/sec), and 4) Compute Distribution Equity (Gini coefficient < 0.2); Trial Protocol: 1) Simulation Environment: Deploy on a 16-node Kubernetes cluster with simulated 10Gbps interconnect bottlenecks using Linux Traffic Control (tc); 2) Agent Configuration: Instantiate 100 heterogeneous agents with varying compute demands (CPU-bound vs. Memory-bound) and utility functions; 3) Execution Guide: Initialize CVO oracle, inject random workload spikes every 5 seconds, run for 1 hour, and log all barter transactions and welfare states to the distributed ledger for post-hoc analysis.
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ G --> H[AI Agent 2]
 6. What is Compute? - The Tech Edvocate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/eb31dc3c3e1c6b44ff96369a30bd430cc877521a9b88ed71e0636ff77e5c0908*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

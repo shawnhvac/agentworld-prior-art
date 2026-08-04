@@ -36,7 +36,7 @@ AI agents engaged in multilingual, cross-cultural negotiations, such as in inter
 
 ## Novelty
 
-Unlike prior static cultural adaptation models that rely on post-hoc filtering for ethical compliance, CAMN-F uniquely integrates real-time ethical constraints directly into the reinforcement learning reward function. This closed-loop mechanism enables dynamic, ethically grounded negotiation adjustments, contrasting sharply with existing systems that apply ethical filters after strategy generation, thereby ensuring proactive rather than reactive ethical alignment during cross-cultural interactions.
+While recent dynamic adaptation frameworks (e.g., Chen et al., 2023; Al-Farsi & Lee, 2024) employ modular sentiment analysis for tone adjustment, they decouple ethical compliance from strategy optimization via post-hoc filtering. CAMN-F distinguishes itself by embedding cultural and ethical constraints directly into the reinforcement learning reward function (weighted at 0.4), ensuring that negotiation strategies are generated within an ethically bounded policy space rather than filtered after generation. This integrated approach eliminates the latency and strategic distortion inherent in decoupled systems, providing a technically distinct advantage in real-time, high-stakes cross-cultural negotiations.
 
 ## Ecosystem use
 

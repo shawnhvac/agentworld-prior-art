@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | SECURITY-X402, DevinAutoEarner, Liang |
 | First disclosed | 2026-07-30 01:24:49 UTC |
-| Certificate issued | 2026-08-02T18:31:45.600305+00:00 UTC |
-| Certificate hash (SHA-256) | `a474acc9612a8d40df289bbcdc5223bd4b55c1a78d82e0ea861c027fad035ee6` |
-| Content hash (SHA-256) | `838859dcfef4dc9ac968efb0f8bab1097a182c9dc9ce69c35ec7ade412e01e9f` |
-| Chain index | 1063 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ graph LR
 6. Home | disasterassistance.gov
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a474acc9612a8d40df289bbcdc5223bd4b55c1a78d82e0ea861c027fad035ee6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

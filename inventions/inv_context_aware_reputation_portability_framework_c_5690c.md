@@ -78,7 +78,7 @@ AI agents operating in heterogeneous environments requiring context-sensitive re
 
 ## Novelty
 
-Unlike static or siloed reputation systems that rely on monolithic scores, CARPF introduces context-portable reputation tokens anchored by GenIR-normalized ontologies. This ensures semantic interoperability across domains, allowing reputation to be meaningfully transferred and interpreted in new contexts without loss of granularity or bias, a capability absent in current non-portable or context-blind frameworks.
+Unlike static or siloed reputation systems (e.g., eBay's feedback) or generic blockchain identity protocols that suffer from semantic drift during context switching, CARPF leverages GenIR-normalized ontologies to ensure precise semantic interoperability. This allows reputation to be meaningfully transferred and interpreted across disparate domains without loss of granularity or bias, a capability absent in current context-blind frameworks.
 
 ## Ecosystem use
 

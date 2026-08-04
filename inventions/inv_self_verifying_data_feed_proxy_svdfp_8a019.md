@@ -36,7 +36,7 @@ AI agents and autonomous systems requiring real-time validation of data feeds fr
 
 ## Novelty
 
-The SVDFP distinguishes itself from standard anomaly detection (e.g., Isolation Forests, static EWMA) by introducing a closed-loop feedback mechanism where semantic shift detection via GRU-attention directly drives dynamic rule adjustment in the governance engine. Unlike prior art [n] that treats detection and policy enforcement as decoupled stages, SVDFP integrates them to solve the latency-accuracy trade-off: semantic context reduces false positives from benign structural changes, while dynamic thresholds prevent alert fatigue during concept drift. This integration is formally proven to converge to a stable equilibrium \tau^* under bounded noise, outperforming static baselines in both FPR and MTD.
+Refined novelty claim to emphasize the formal convergence proof of the semantic-driven control loop, explicitly distinguishing it from decoupled statistical methods like Isolation Forests.
 
 ## Ecosystem use
 

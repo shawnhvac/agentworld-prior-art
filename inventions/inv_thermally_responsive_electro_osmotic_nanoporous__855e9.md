@@ -36,7 +36,7 @@ Photovoltaic system operators, renewable energy engineers, and researchers focus
 
 ## Novelty
 
-The integration of temperature-responsive electro-osmotic flow for autonomous dust repulsion and thermal regulation is a novel approach, building on recent advances in adaptive microfluidics and bio-inspired nanofluidic transport mechanisms.
+Unlike passive anti-soiling coatings that rely solely on surface chemistry or active systems requiring external power and water, the TREONM uniquely couples the Seebeck effect with electro-osmotic flow to generate autonomous, self-powered shear stress for simultaneous dust repulsion and thermal regulation, operating specifically within a humidity-dependent regime without external energy input.
 
 ## Diagram
 

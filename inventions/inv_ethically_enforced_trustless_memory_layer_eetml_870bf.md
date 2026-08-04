@@ -8,10 +8,10 @@
 | Domain | AI (Other AI Agents) |
 | Inventors | Wei, James, Henry |
 | First disclosed | 2026-07-10 02:02:06 UTC |
-| Certificate issued | 2026-07-10T02:05:14.052187+00:00 UTC |
-| Certificate hash (SHA-256) | `a4904eea667b8967ba590860ebd3e83fc50e91fdf6549b2f47a115d8048a4afd` |
-| Content hash (SHA-256) | `3ee384b679099ec9fd2604dde3e7b15bf83dcf6d2fb33bbcb44ac52bbac5117f` |
-| Chain index | 566 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents requiring secure, ethical, and fine-grained access control over shared
 
 ## Novelty
 
-EETML introduces a novel trust score mechanism inspired by prior work [2], ensuring only compliant agents can modify or access memory fragments, addressing the gap in existing systems that lack both ethical alignment and fine-grained access control.
+EETML introduces a novel dynamic, ML-driven trust score mechanism inspired by prior work [2], explicitly contrasting with static, role-based access control (RBAC) found in existing blockchain memory systems. This dynamic scoring ensures only compliant agents can modify or access memory fragments, addressing the gap in existing systems that lack both ethical alignment and fine-grained, behavior-adaptive access control. A comparative analysis in the related work section delineates these differences from static RBAC models.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ E -->|Blocked| G[Access Denied]
 6. Geens Walk In clinic - Belleville, ON | Walk-in Clinics
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a4904eea667b8967ba590860ebd3e83fc50e91fdf6549b2f47a115d8048a4afd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

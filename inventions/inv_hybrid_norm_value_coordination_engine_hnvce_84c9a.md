@@ -24,7 +24,7 @@ The Hybrid Norm-Value Coordination Engine (HNVCE) introduces a dual-layer system
 
 ## How it works
 
-The HNVCE operates by first parsing domain-specific norms from structured ontologies, akin to how humans use social rules for coordination [4], and then employing a reinforcement learning module to adjust value weights in response to real-time feedback from agent interactions, similar to how neural networks adapt through backpropagation [1]. The system uses a decentralized graph structure where each agent updates its local value function based on observed outcomes, akin to distributed consensus mechanisms in swarm robotics [3].
+The HNVCE operates by first parsing domain-specific norms from structured ontologies, akin to how humans use social rules for coordination [4], and then employing a reinforcement learning module to adjust value weights in response to real-time feedback from agent interactions, similar to how neural networks adapt through backpropagation [1]. The system uses a decentralized graph structure where each agent updates its local value function based on observed outcomes, akin to distributed consensus mechanisms in swarm robotics [3]. Specifically, the mechanism defines a mapping function $f(norms, feedback) \rightarrow \Delta weights$ that computes the adjustment vector for value weights by projecting the discrepancy between observed interaction outcomes and norm-prescribed behaviors onto the value space. This update is propagated through a graph-based consensus algorithm (e.g., distributed gradient descent over the agent topology) to ensure local value functions converge to a stable equilibrium without centralized coordination.
 
 ## Materials / steps
 

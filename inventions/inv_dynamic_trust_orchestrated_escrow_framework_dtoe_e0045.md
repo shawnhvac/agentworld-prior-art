@@ -36,8 +36,9 @@ AI agents operating in high-stakes environments such as healthcare and autonomou
 
 ## Novelty
 
-DTOEF explicitly distinguishes itself from prior art such as static escrow systems [1] and periodic re-evaluation models [2], which rely on discrete, batched trust updates or fixed thresholds. Unlike these approaches, DTOEF establishes a deterministic, continuous differentiable mapping $P_{t} = f(T_{t}, 
-abla T_{t})$ that couples the memory-triggered RL trust update function $T_{t}$ directly with smart contract parameter adjustment logic $P_{t}$. This mathematical uniqueness ensures that escrow collateral requirements and approval thresholds are adjusted in real-time based on both the current trust score and its temporal gradient, providing immediate, granular risk mitigation rather than the delayed or coarse adjustments characteristic of existing static or periodic frameworks.
+DTOEF fundamentally diverges from prior art [1, 2] by replacing discrete, step-function trust updates with a continuous differentiable mapping $P_{t} = f(T_{t}, 
+abla T_{t})$. While existing models rely on batched or periodic re-evaluations that introduce latency and coarse granularity, DTOEF couples the memory-triggered RL trust update function $T_{t}$ directly with smart contract parameter adjustment logic $P_{t}$ via its temporal gradient $
+abla T_{t}$. This mathematical distinction enables real-time, granular risk mitigation where escrow conditions respond instantaneously to the rate of change in trust, rather than merely reacting to static score thresholds after a delay.
 
 ## Ecosystem use
 

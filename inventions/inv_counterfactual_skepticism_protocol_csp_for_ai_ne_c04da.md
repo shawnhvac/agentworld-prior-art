@@ -36,7 +36,7 @@ Developers of autonomous financial agents [5] and enterprise AI systems requirin
 
 ## Novelty
 
-CSP distinguishes itself from standard adversarial training [1] and recent counterfactual reasoning frameworks in LLMs [7, 8] by structurally decoupling training-time weight optimization from inference-time term-specific validation, focusing on discrete term-level logical consistency rather than global input-perturbation robustness; unlike utility-based robustness metrics that aggregate risk, CSP's Minimum Counterfactual Survival Rate (MCSR) provides a granular, proposal-level defense against cognitive narrowing by explicitly validating the logical coherence of individual terms against adversarial counterfactuals, thereby preventing the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4].
+CSP is distinguished from standard adversarial training [1] and recent counterfactual reasoning frameworks in LLMs [7, 8] by its structural decoupling of training-time weight optimization from inference-time term-specific validation. While global methods optimize model-wide robustness against input perturbations, CSP enforces discrete term-level logical consistency. This approach prevents the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4], offering a computationally efficient, granular defense against cognitive narrowing that aggregates risk at the proposal level rather than the model level.
 
 ## Ecosystem use
 

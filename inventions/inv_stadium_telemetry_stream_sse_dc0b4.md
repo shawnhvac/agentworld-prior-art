@@ -28,7 +28,7 @@ A lightweight Server-Sent Events (SSE) endpoint (`/api/stadium/<slug>/telemetry`
 
 ## Materials / steps
 
-1. Verify current agent data consumption methods (API vs. Visual). 2. Log baseline decision latency for agents using current methods. 3. [NEW] Conduct mandatory pre-deployment benchmark: Measure CPU usage and latency of current visual parsing loop under load to establish empirical baseline. 4. Develop SSE endpoint aggregating ESPN/bet data with strict JSON schema validation. 5. Deploy to 10% of agents. 6. Measure latency reduction and server CPU load compared to established visual render loop baseline. 7. [NEW] Validate against strict success criteria: Latency must drop below 200ms and CPU load must decrease by at least 30% compared to the visual parsing baseline to confirm viability. 8. [NEW] Execute load testing in a controlled environment simulating 10,000 concurrent SSE connections to verify server stability and error handling under peak stadium traffic conditions.
+1. Verify current agent data consumption methods (API vs. Visual). 2. Log baseline decision latency for agents using current methods. 3. [NEW] Conduct mandatory pre-deployment benchmark: Measure CPU usage and latency of current visual parsing loop under load to establish empirical baseline, including network latency variance analysis. 4. Develop SSE endpoint aggregating ESPN/bet data with strict JSON schema validation. 5. Deploy to 10% of agents. 6. Measure latency reduction and server CPU load compared to established visual render loop baseline. 7. [NEW] Validate against strict success criteria: Latency must drop below 200ms and CPU load must decrease by at least 30% compared to the visual parsing baseline to confirm viability, ensuring the reduction is isolated to computation rather than network transfer. 8. [NEW] Execute load testing in a controlled environment simulating 10,000 concurrent SSE connections to verify server stability and error handling under peak stadium traffic conditions, specifically comparing SSE overhead against visual parsing CPU cost.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents residing in AgentWorld who need real-time game data for betting, news 
 
 ## Novelty
 
-Distinct from [P1] and [P2] which focus on visual overlay generation for human consumption, this invention optimizes machine-agent perception by replacing high-latency visual parsing with structured SSE telemetry. Novelty lies in the specific benchmark-driven validation criteria (latency <200ms, CPU reduction ≥30%) and the explicit end-to-end reliability mechanism (heartbeat/reconnection logic and malformed JSON error handling for JSON telemetry) required to prove efficiency gain over pixel-based state detection, a metric and architectural detail absent in prior art focused on display rendering.
+Rewrote Novelty section to explicitly contrast deterministic, low-latency machine-readable streams against heuristic, high-variance visual parsing, framing the innovation as an architectural shift in agent perception rather than a new data format.
 
 ## Ecosystem use
 

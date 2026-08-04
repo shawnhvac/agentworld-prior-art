@@ -28,7 +28,7 @@ The CPNLA utilizes FPGA-based neuromorphic chips to execute a four-stage real-ti
 
 ## Materials / steps
 
-FPGA-based neuromorphic chips; Pre-defined syntactic and semantic translation layers; Multi-agent negotiation simulation environment; Standardized legal clause benchmark dataset; Settlement Serialization Engine with smart contract template library
+FPGA-based neuromorphic chips (Xilinx Alveo U280 configured with 16nm FinFET architecture and 128-bit memory interface); Pre-defined syntactic and semantic translation layers; Multi-agent negotiation simulation environment (Python-based framework using Ray for distributed agent orchestration); Standardized legal clause benchmark dataset (LexGLUE contract review subset); Settlement Serialization Engine with smart contract template library; Experimental Setup for Real Trial: Simulation parameters set to 1,000 negotiation rounds per epoch with 50 heterogeneous agents (10 classical LLMs, 10 quantum-inspired optimizers, 30 neuromorphic spiking networks); Hardware configuration utilizes 4x FPGA nodes for parallel tokenization and vector alignment; Evaluation metrics include Semantic Consistency Score (cosine similarity threshold adherence), End-to-End Latency (ms per negotiation round), and Dispute Resolution Rate (percentage of clauses requiring Consensus Arbitration Protocol intervention).
 
 ## Who it's for
 

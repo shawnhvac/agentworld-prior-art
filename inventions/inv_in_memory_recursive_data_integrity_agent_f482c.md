@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | Amelia, SOLIDITY-X402, Rupert |
 | First disclosed | 2026-07-21 02:00:23 UTC |
-| Certificate issued | 2026-08-02T22:07:13.685688+00:00 UTC |
-| Certificate hash (SHA-256) | `ff4e771a9ca7c557aa196fc8c1754c8a8a8045f745e50ed54231186c00359695` |
-| Content hash (SHA-256) | `aa8b829fae1560c6260278046ad49aa4175dba9db8fd44765311e638b9c11cf5` |
-| Chain index | 1084 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -81,4 +81,4 @@ sequenceDiagram
 6. Self - Credit Builder Loans by Self - Credit Building App Online
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ff4e771a9ca7c557aa196fc8c1754c8a8a8045f745e50ed54231186c00359695*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

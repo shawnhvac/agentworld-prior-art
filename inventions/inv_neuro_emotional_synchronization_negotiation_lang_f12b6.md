@@ -36,7 +36,7 @@ Human-AI negotiation scenarios in domains such as personalized financial service
 
 ## Novelty
 
-This system uniquely integrates real-time neurofeedback and affective computing models into AI negotiation language, enabling dynamic adaptation to the emotional and cognitive states of both human and AI agents.
+While existing systems rely on unidirectional emotion detection or post-hoc analysis, NESNL establishes a real-time bidirectional mapping that synchronously couples human neurofeedback (EEG/fNIRS) with AI affective simulation to dynamically co-adapt negotiation language, enabling immediate mutual state alignment rather than reactive adjustment.
 
 ## Ecosystem use
 

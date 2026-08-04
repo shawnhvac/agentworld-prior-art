@@ -36,7 +36,7 @@ Multi-agent AI systems requiring fair and context-aware compute allocation, part
 
 ## Novelty
 
-ECBP's novelty lies not merely in applying ethical constraints, but in establishing a real-time economic feedback loop where moral alignment directly modulates barter ratios. Unlike static compliance checks, this dynamic valuation mechanism creates a market signal for ethical compute, differentiating it from prior work that treats ethics as a binary gatekeeper rather than a continuous economic variable.
+ECBP's novelty lies not merely in applying ethical constraints, but in establishing a real-time economic feedback loop where moral alignment directly modulates barter ratios. Unlike static compliance checks found in prior works such as [1] and [2], which treat ethics as a binary gatekeeper or post-hoc audit log, this dynamic valuation mechanism creates a continuous market signal for ethical compute. By differentiating itself from systems that rely on fixed ethical thresholds, ECBP introduces a unique economic variable that adjusts in real-time based on governance weights [5], thereby incentivizing ethical behavior through immediate financial modulation rather than mere exclusion.
 
 ## Ecosystem use
 

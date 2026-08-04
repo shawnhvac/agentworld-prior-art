@@ -24,11 +24,11 @@ A decentralized, self-optimizing language negotiation protocol for AI agents tha
 
 ## How it works
 
-The protocol initializes RL agents with pre-trained language models and deploys them in simulated multilingual negotiation scenarios. Contextual embeddings and sentiment analysis generate reward signals based on speaker intent, cultural norms, and negotiation outcomes. Negotiation strategies are updated on a decentralized ledger using blockchain-inspired consensus algorithms, ensuring transparency and self-optimization without centralized control.
+The protocol initializes RL agents with pre-trained language models and deploys them in simulated multilingual negotiation scenarios. Contextual embeddings and sentiment analysis generate reward signals based on speaker intent, cultural norms, and negotiation outcomes. Negotiation strategies are updated on a decentralized ledger using blockchain-inspired consensus algorithms, ensuring transparency and self-optimization without centralized control. For real-world deployment, the system incorporates specific evaluation metrics to measure context-aware adaptation and ethical compliance, transitioning from simulated validation to live operational assessment.
 
 ## Materials / steps
 
-Pre-trained neural language models from [2]; Simulated multilingual negotiation scenarios; Contextual embeddings and sentiment analysis tools; Blockchain-inspired consensus algorithms for decentralized ledger updates
+Pre-trained neural language models from [2]; Simulated multilingual negotiation scenarios; Contextual embeddings and sentiment analysis tools; Blockchain-inspired consensus algorithms for decentralized ledger updates; Evaluation framework for real-world context-aware adaptation and ethical compliance metrics
 
 ## Who it's for
 

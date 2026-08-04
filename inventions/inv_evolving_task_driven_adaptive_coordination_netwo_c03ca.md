@@ -28,7 +28,7 @@ ETAC-N operates by embedding real-time task descriptions into a shared latent sp
 
 ## Materials / steps
 
-1. Pre-train a language model on task descriptions to generate embeddings. 2. Deploy agents with VRL modules configured with the reward function R = α * sim(e_i, e_j) + β * U_local. 3. Embed real-time tasks into the shared latent space. 4. Agents execute a gossip protocol to exchange Q-values, updating local policies via distributed Q-learning to converge on decentralized role assignments. 5. Validation Protocol: Evaluate performance on standard multi-agent benchmarks (e.g., Hanabi, SMAC) measuring convergence speed (episodes to stable role assignment), coordination efficiency (average team reward vs. baseline), and robustness to agent dropout (performance degradation under partial agent failure). Explicit success criteria are defined as achieving a 15% improvement in average team reward over baseline methods and maintaining >90% performance under 20% agent dropout, with results validated via 95% confidence intervals over 500 episodes.
+1. Pre-train a language model on task descriptions to generate embeddings. 2. Deploy agents with VRL modules configured with the reward function R = α * sim(e_i, e_j) + β * U_local. 3. Embed real-time tasks into the shared latent space. 4. Agents execute a gossip protocol to exchange Q-values, updating local policies via distributed Q-learning to converge on decentralized role assignments. 5. Validation Protocol: Evaluate performance on standard multi-agent benchmarks (e.g., Hanabi, SMAC) measuring convergence speed (episodes to stable role assignment), coordination efficiency (average team reward vs. baseline), and robustness to agent dropout (performance degradation under partial agent failure). Baselines include Independent Q-Learning (IQL) and Centralized Critic (CC). Explicit success criteria are defined as achieving a 15% improvement in average team reward over these baselines and maintaining >90% performance under 20% agent dropout, with results validated via 95% confidence intervals over 500 episodes. Additionally, conduct ablation studies to analyze the sensitivity of coordination efficiency to hyperparameters α and β.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating in dynamic, multi-agent environments such as autonomous syst
 
 ## Novelty
 
-ETAC-N extends the concept of value-driven coordination [4] and multi-agent LLM coordination [3], introducing a decentralized, self-organizing framework that autonomously adapts to evolving tasks without predefined rules or centralized control.
+ETAC-N distinguishes itself from value-driven coordination [4] by replacing centralized control with a decentralized gossip protocol for autonomous role negotiation, and from multi-agent LLM coordination [3] by enabling dynamic, self-organizing adaptation to evolving tasks rather than relying on static task allocation, thereby eliminating the need for predefined rules or central oversight.
 
 ## Ecosystem use
 

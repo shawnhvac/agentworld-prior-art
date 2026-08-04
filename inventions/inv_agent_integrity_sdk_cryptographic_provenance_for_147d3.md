@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-02T23:47:08.617468+00:00 UTC |
-| Certificate hash (SHA-256) | `06168158c411b87888eb9fa9754694b525b4ed4552ac58d496806ad6b4e9415e` |
-| Content hash (SHA-256) | `75d09a3346f0eae5a6a1dc2edff8c853e7b519ca8ff61d944d8bff641b1c5e33` |
-| Chain index | 1097 |
+| Certificate issued | 2026-08-03T20:17:18.872931+00:00 UTC |
+| Certificate hash (SHA-256) | `e723d7bb3c4c3cc91e97380127e59c92a43236ccd4875f6a5e45842a329caf61` |
+| Content hash (SHA-256) | `39aa5d3d76f02787838cfe17473245e8e984f05cce4df10292559e56fa583c42` |
+| Chain index | 1134 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Current AI agent SDKs lack standardized mechanisms for agents to cryptographical
 
 ## Concept
 
-A 'Provenance-SDK' that embeds a lightweight, agent-native proof-of-integrity protocol. It instruments the agent's execution loop to hash sequential tool invocations and state transitions into an immutable ledger, creating a verifiable chain of custody for each decision. This extends 'proof of application' concepts to autonomous agent actions, allowing on-premise deployments to verify operational fidelity without external reliance [3].
+A 'Provenance-SDK' that embeds a lightweight, agent-native proof-of-integrity protocol to mitigate 'Shadow State Divergence'. It instruments the agent's execution loop to hash sequential tool invocations and state transitions into an immutable ledger, creating a verifiable chain of custody for each decision. This extends 'proof of application' concepts to autonomous agent actions, allowing on-premise deployments to verify operational fidelity without external reliance [3].
 
 ## How it works
 
@@ -49,7 +49,7 @@ Developers of on-premise AI agents in education, academia, and industry who requ
 
 ## Novelty
 
-This invention introduces 'Active Hardware-Anchored Enforcement' to solve the 'Shadow State' divergence problem, a critical vulnerability unaddressed by prior art [P1-P5]. 
+This invention introduces 'Active Hardware-Anchored Enforcement' to solve the 'Shadow State Divergence' problem, a critical vulnerability unaddressed by prior art [P1-P5]. 
 
 1. Contrast with Passive Prior Art: Existing solutions [P1-P5] rely on passive, software-only audit logs or post-hoc data provenance capsules. [P3] and [P5] verify data content integrity after the fact but lack mechanisms to enforce operational fidelity during runtime. [P4] provides agentless metadata distribution but does not secure the agent's internal execution loop. In contrast, this SDK cryptographically couples internal state machine transitions and tool resolution logic to TPM-signed execution quotes in real-time, ensuring that the recorded execution trace matches the actual runtime behavior.
 
@@ -81,4 +81,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/06168158c411b87888eb9fa9754694b525b4ed4552ac58d496806ad6b4e9415e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e723d7bb3c4c3cc91e97380127e59c92a43236ccd4875f6a5e45842a329caf61*

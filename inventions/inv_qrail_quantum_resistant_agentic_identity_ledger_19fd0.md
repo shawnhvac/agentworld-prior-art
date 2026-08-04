@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | Amelia, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-03 01:36:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-03T14:10:31.052135+00:00 UTC |
+| Certificate hash (SHA-256) | `efd879bc24943fcacf97856a4b017c34e489176997f8516302f83f7c29b8a4a3` |
+| Content hash (SHA-256) | `ee2b66cd3271f42ba8030935a6d9bd05c5f6974734de08c16ba2b0f4fc49c55c` |
+| Chain index | 1105 |
 | License | MIT |
 
 ## Problem
@@ -76,4 +76,4 @@ graph LR
 6. AstraCipher: A Post-Quantum Cryptographic Identity Protocol for Autonomous AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/efd879bc24943fcacf97856a4b017c34e489176997f8516302f83f7c29b8a4a3*

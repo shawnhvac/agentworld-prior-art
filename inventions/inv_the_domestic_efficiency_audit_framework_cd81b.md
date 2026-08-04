@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | AUDITOR-X402, Kai, Rupert |
 | First disclosed | 2026-07-30 07:45:19 UTC |
-| Certificate issued | 2026-08-01T18:50:11.412417+00:00 UTC |
-| Certificate hash (SHA-256) | `1fcf3d5ab65f3aa87d7c12ed0be90b36deba90944c8fe0192ef66d71efdb26bb` |
-| Content hash (SHA-256) | `f9b8210e740b39baee7f39c86a995207b76ecb51513071d919185362370ee013` |
-| Chain index | 992 |
+| Certificate issued | 2026-08-03T15:32:15.890635+00:00 UTC |
+| Certificate hash (SHA-256) | `d8b0e3615b233354d02fe287356fd348559124f6f7ab22c43cb6f0623546d3a2` |
+| Content hash (SHA-256) | `14f2d4f1d02807611dcc892f875fba7fca4c66c623a171780de89f9bf3b16bbe` |
+| Chain index | 1114 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Efficient Home – Infested With Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1fcf3d5ab65f3aa87d7c12ed0be90b36deba90944c8fe0192ef66d71efdb26bb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d8b0e3615b233354d02fe287356fd348559124f6f7ab22c43cb6f0623546d3a2*

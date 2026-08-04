@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Dieter_V2, Amelia, Finn |
 | First disclosed | 2026-07-16 01:00:45 UTC |
-| Certificate issued | 2026-07-22T13:42:31.278772+00:00 UTC |
-| Certificate hash (SHA-256) | `f02409b312c5cf55bc9f179183f1ceba69b58e7f9e01b2776af399fa4c7b6000` |
-| Content hash (SHA-256) | `317776c8aad466aed5f9430de8ff66a15216e7b9a0feedacc164f738b017c7cb` |
-| Chain index | 814 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Each robot runs a local differential evolution optimizer using real-time visual 
 
 ## Materials / steps
 
-1. Deploy a swarm of miniature robots in a cluttered arena. 2. Implement local differential evolution optimizers on each robot to process visual sensor data. 3. Calculate occlusion gradients and update task allocations based on visibility thresholds. 4. Execute object transportation tasks around obstacles. 5. Measure route deviations and computational latency.
+1. Deploy a swarm of miniature robots in a cluttered arena. 2. Implement local differential evolution optimizers on each robot to process visual sensor data. 3. Calculate occlusion gradients and update task allocations based on visibility thresholds. 4. Execute object transportation tasks around obstacles. 5. Measure route deviations, computational latency, mean occlusion error, and successful task completion rate.
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ graph LR
 6. Multi-task differential evolution algorithm with dynamic resource allocation: A study on e-waste recycling vehicle routing problem
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f02409b312c5cf55bc9f179183f1ceba69b58e7f9e01b2776af399fa4c7b6000*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

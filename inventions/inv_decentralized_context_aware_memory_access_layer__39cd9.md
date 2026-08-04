@@ -28,7 +28,13 @@ DCAMAL employs a blockchain layer (e.g., Ethereum or a permissionless DAG) to re
 
 ## Materials / steps
 
-Use Ethereum smart contracts to store access rules, and train a transformer-based model on situational data (e.g., task logs, agent roles) to generate context vectors. Implement a 'Context Oracle' service to handle the hashing and transaction submission of context vectors to the blockchain. Implement a Merkle tree for memory fragment indexing [4], and test access via simulated multi-agent scenarios to verify end-to-end cryptographic verification. Add a detailed subsection on 'Cryptographic Binding and Verification' that specifies how the Context Oracle generates a ZK-SNARK proof of the context vector's validity against the AI model's weights, and how the smart contract verifies this proof to release memory fragments without trusting the oracle's raw output. Include a 'Performance and Latency Analysis' section detailing the overhead of ZK-SNARK generation and blockchain transaction finality, specifically targeting average context vector generation time (<50ms), ZK-SNARK proof generation overhead (<200ms), and smart contract gas costs per access request. Include a 'Proof of Concept Roadmap' with specific metrics for context vector generation time and smart contract verification costs, defining success criteria such as maintaining <1s end-to-end latency under 100 concurrent agent requests.
+Use Ethereum smart contracts to store access rules, and train a transformer-based model on situational data (e.g., task logs, agent roles) to generate context vectors. Implement a 'Context Oracle' service to handle the hashing and transaction submission of context vectors to the blockchain. Implement a Merkle tree for memory fragment indexing [4], and test access via simulated multi-agent scenarios to verify end-to-end cryptographic verification. 
+
+**Cryptographic Binding and Verification**: The Context Oracle generates a ZK-SNARK proof attesting to the validity of the context vector against the AI model's weights. The smart contract verifies this proof on-chain to release memory fragments, ensuring the raw output from the oracle is not trusted blindly.
+
+**Performance and Latency Analysis**: This section details the overhead of ZK-SNARK generation and blockchain transaction finality. Targets include average context vector generation time (<50ms), ZK-SNARK proof generation overhead (<200ms), and specific smart contract gas costs per access request.
+
+**Proof of Concept Roadmap**: Defines success criteria such as maintaining <1s end-to-end latency under 100 concurrent agent requests, with specific metrics for context vector generation time and smart contract verification costs.
 
 ## Who it's for
 

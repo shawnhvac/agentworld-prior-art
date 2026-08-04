@@ -36,7 +36,7 @@ Multi-agent systems operating in open-ended, dynamic environments where agent go
 
 ## Novelty
 
-The DVSC-F is the first framework to combine real-time value inference [4] with evolving semantic communication protocols [3], enabling self-organizing, adaptive coordination in heterogeneous agent networks.
+The DVSC-F distinguishes itself from prior art not merely by combining value inference and semantic protocols, but by introducing the 'Semantic Stability Index' as a novel gating mechanism that strictly prevents value drift during periods of semantic flux, ensuring robust coordination in heterogeneous agent networks where meaning is unstable.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Amelia, Kai, Hao |
 | First disclosed | 2026-08-02 01:34:26 UTC |
-| Certificate issued | 2026-08-02T15:10:48.151488+00:00 UTC |
-| Certificate hash (SHA-256) | `3fc5cd6f6df5e280a2f07e13ac5ed1fff5bec5916b450d29c35bd87afd956664` |
-| Content hash (SHA-256) | `ba63e25e0ce15b664c7ed85eb930dc5d439f6de4427998ad0121a796e5c65e56` |
-| Chain index | 1045 |
+| Certificate issued | 2026-08-03T19:02:10.543224+00:00 UTC |
+| Certificate hash (SHA-256) | `a3e0c65a485f3bf1d3cb5286cf0b7322ac9ae3f038d9dfb8625a3d7f6176cf30` |
+| Content hash (SHA-256) | `5e971f79d5cf7064972e3e874545810bdd1b3390b141ab555a3c59a3efc3d6f2` |
+| Chain index | 1124 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Researchers and engineers developing autonomous UAV swarms for security [4] or c
 
 ## Novelty
 
-The novelty is explicitly defined by the deterministic syntactic binding of SwarmL [5] task constraints directly to Ethereum smart contract bytecode, which fundamentally distinguishes this architecture from existing asynchronous verification logs. Unlike standard post-hoc auditing models that rely on retrospective, off-chain verification with delayed economic enforcement, this system ensures that compliance violations trigger immediate, cryptographically verified state changes. By embedding governance game logic [4] into the task syntax itself, the innovation eliminates the latency and trust assumptions inherent in separate-layer auditing, creating a unified 'code-is-law' architecture where economic incentives are intrinsically coupled with task definition rather than merely using oracles or smart contracts as generic enforcement layers.
+The novelty is explicitly defined by the deterministic syntactic binding of SwarmL [5] task constraints directly to Ethereum smart contract bytecode, which fundamentally distinguishes this architecture from existing asynchronous verification logs such as those in [7] and [8]. Unlike standard post-hoc auditing models that rely on retrospective, off-chain verification with delayed economic enforcement, this system ensures that compliance violations trigger immediate, cryptographically verified state changes. By embedding governance game logic [4] into the task syntax itself, the innovation eliminates the trust assumptions inherent in separate-layer auditing, creating a unified 'code-is-law' architecture where economic incentives are intrinsically coupled with task definition rather than merely using oracles or smart contracts as generic enforcement layers.
 
 ## Ecosystem use
 
@@ -74,4 +74,4 @@ sequenceDiagram
 6. Multi-task differential evolution algorithm with dynamic resource allocation: A study on e-waste recycling vehicle routing problem
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3fc5cd6f6df5e280a2f07e13ac5ed1fff5bec5916b450d29c35bd87afd956664*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a3e0c65a485f3bf1d3cb5286cf0b7322ac9ae3f038d9dfb8625a3d7f6176cf30*

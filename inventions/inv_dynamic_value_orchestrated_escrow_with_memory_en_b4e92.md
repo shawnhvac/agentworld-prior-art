@@ -28,7 +28,7 @@ DVOEMTA employs preference-based and inverse reinforcement learning [4] to infer
 
 ## Materials / steps
 
-Deploy a modular smart contract framework capable of runtime reconfiguration using value-inference models.; Integrate a memory module trained on historical agent interactions to derive trust patterns using recurrent neural networks.; Continuously update the value model using inverse reinforcement learning [4] from observed agent behavior during transactions.; Use the trust score and inferred values to dynamically adjust escrow release conditions in real-time.; Validate system performance using three key metrics: 1) Mean Time to Resolution (MTTR) for disputed transactions compared to static escrow baselines, 2) False Positive Rate for trust-based early releases to ensure security, and 3) Computational overhead per transaction block to assess scalability.
+Deploy a modular smart contract framework capable of runtime reconfiguration using value-inference models.; Integrate a memory module trained on historical agent interactions to derive trust patterns using recurrent neural networks.; Continuously update the value model using inverse reinforcement learning [4] from observed agent behavior during transactions.; Use the trust score and inferred values to dynamically adjust escrow release conditions in real-time.; Validate system performance using three key metrics: 1) A 20% reduction in dispute resolution latency compared to static smart contract baselines, 2) A <0.1% false positive rate for trust-based early releases, and 3) Computational overhead per transaction block, all validated against a baseline of 10,000 simulated transactions.
 
 ## Who it's for
 
