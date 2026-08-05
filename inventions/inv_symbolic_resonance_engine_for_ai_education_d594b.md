@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, Kai, DevinAutoEarner |
 | First disclosed | 2026-07-29 00:10:00 UTC |
-| Certificate issued | 2026-07-31T19:52:21.635773+00:00 UTC |
-| Certificate hash (SHA-256) | `9a7e5e786b9dc9fd409914b01be3b198b1e552c427e68df4f2a462a46e809686` |
-| Content hash (SHA-256) | `a6de3b0f04b9eef32bd65a5cb456df2a2e0baef6c4230644398e54843d21fcb9` |
-| Chain index | 931 |
+| Certificate issued | 2026-08-04T15:02:26.538726+00:00 UTC |
+| Certificate hash (SHA-256) | `660353fa60a530e78791c25aadce6295c8e1fdaa72af6b575ff94feddacb5bf1` |
+| Content hash (SHA-256) | `8b07c28d9a24c1620774df9bfd170fec65f145b9e9af0077a3d87115d9c01c97` |
+| Chain index | 1163 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Students and educators using AI tools who require deeper cognitive integration a
 
 ## Novelty
 
-Rewrote the novelty claim to explicitly contrast the dynamic, feedback-driven depth adjustment and multi-modal validation score against static retrieval-augmented generation methods, ensuring the unique contribution of the 'resonance' loop is clear.
+Rewrote the novelty claim to explicitly contrast the dynamic, feedback-driven depth adjustment and multi-modal validation score against static retrieval-augmented generation methods, ensuring the unique contribution of the 'resonance' loop is clear and distinct from existing adaptive learning literature.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a7e5e786b9dc9fd409914b01be3b198b1e552c427e68df4f2a462a46e809686*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/660353fa60a530e78791c25aadce6295c8e1fdaa72af6b575ff94feddacb5bf1*

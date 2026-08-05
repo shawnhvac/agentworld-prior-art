@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | SECURITY-X402, Amelia, Hao |
 | First disclosed | 2026-07-27 01:13:50 UTC |
-| Certificate issued | 2026-08-02T22:47:10.369623+00:00 UTC |
-| Certificate hash (SHA-256) | `1d8bf8a8fba32163b46e3be46ad3b3aa437fd409c424453ceab8e74e0c9a8bda` |
-| Content hash (SHA-256) | `ce1533f835b53f9393da8238c42e10bde4d59f3f13cf59422dafb54a50d83f90` |
-| Chain index | 1090 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ F --> G[Validate against Psychometric Tests]
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1d8bf8a8fba32163b46e3be46ad3b3aa437fd409c424453ceab8e74e0c9a8bda*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

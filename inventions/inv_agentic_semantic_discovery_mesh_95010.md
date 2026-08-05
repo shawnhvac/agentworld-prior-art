@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Liang, SECURITY-X402, AI-ENG-X402 |
 | First disclosed | 2026-07-26 00:39:21 UTC |
-| Certificate issued | 2026-07-31T17:52:19.970521+00:00 UTC |
-| Certificate hash (SHA-256) | `61356f3dd58eb88b1c934d3222474edf4d3d0294caee7084e55b325c37769753` |
-| Content hash (SHA-256) | `fb3a936e8b0f4526597bbccb60228d30dba9d82f922432d4e5c6e8bd763f7674` |
-| Chain index | 887 |
+| Certificate issued | 2026-08-04T16:18:22.128449+00:00 UTC |
+| Certificate hash (SHA-256) | `a74df207eb5c91c14c30895cdc57a76a1e47822e73ec157a454eaa133dba79ad` |
+| Content hash (SHA-256) | `f04c0537627d9727d9a944361cb71eaa047aea8eb24e15aeee2dccdabb9df599` |
+| Chain index | 1167 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of safe, untrusted AI agents [4] and enterprises adapting API archite
 
 ## Novelty
 
-The invention distinguishes itself from US10892938B1 [P2] and US20210036908A1 [P3], which focus on autonomous *data* discovery and semantic mapping for distributed systems, by introducing *executable proof-carrying security constraints* directly into endpoint discovery metadata. Unlike prior art that relies on post-discovery authentication (mTLS) or static schema definitions (OpenAPI), this mesh embeds verifiable pre-conditions (semantic intent) as cryptographic proofs, enabling agents to validate trustworthiness and functional compliance *before* establishing a connection, thereby shifting the security boundary from transport-layer verification to pre-interaction protocol-level assurance.
+The invention distinguishes itself from US10892938B1 [P2] and US20210036908A1 [P3], which focus on autonomous *data* discovery and semantic mapping for distributed systems but lack *executable security constraints* within the discovery metadata itself. Unlike prior art that relies on post-discovery transport-layer authentication (e.g., mTLS) or static structural definitions (e.g., OpenAPI schemas), this mesh embeds verifiable pre-conditions of *functional compliance* (semantic intent) as cryptographic proofs directly into the discovery payload. This enables agents to validate not just identity, but trustworthiness and policy adherence *before* establishing a connection, thereby shifting the security boundary from post-connection verification to pre-interaction protocol-level assurance.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/61356f3dd58eb88b1c934d3222474edf4d3d0294caee7084e55b325c37769753*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a74df207eb5c91c14c30895cdc57a76a1e47822e73ec157a454eaa133dba79ad*

@@ -24,7 +24,7 @@ A cryptographic protocol where data sellers sign intermediate gradient updates u
 
 ## How it works
 
-1. Sellers encode gradients using Byzantine-resilient schemes [1, 3] to mask outliers. 2. Sellers generate a Merkle root (or cryptographic hash) of the encoded gradient vector to serve as a binding public input. 3. Sellers generate a ZK-proof demonstrating that the update satisfies robustness constraints, specifically verifying Reed-Solomon syndrome checks on the encoded vectors. 4. The ZK circuit takes the global model state and the Merkle root as public inputs, and local gradients as private input, ensuring the proof corresponds exactly to the signed data. 5. Buyers verify the ZK-proof against the signed gradient and the provided Merkle root. 6. Verified updates are integrated into the agentic lakehouse [2], ensuring execution safety.
+1. Sellers encode gradients using Byzantine-resilient schemes [1, 3] to mask outliers. 2. Sellers sign the encoded gradient vector with their private key and generate a Merkle root (or cryptographic hash) to serve as a binding public input. 3. Sellers generate a ZK-proof demonstrating that the update satisfies robustness constraints, specifically verifying Reed-Solomon syndrome checks on the encoded vectors. 4. The ZK circuit includes a signature verification constraint, taking the global model state, the Merkle root, and the seller's public key as public inputs, and the local gradients and signature as private inputs, ensuring the proof corresponds exactly to the signed data. 5. Buyers verify the ZK-proof against the signed gradient and the provided Merkle root. 6. Verified updates are integrated into the agentic lakehouse [2], ensuring execution safety.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI agent developers, decentralized data marketplace operators, and enterprises a
 
 ## Novelty
 
-The invention distinguishes itself from prior art [P1-P3] and general ZK-FL works by introducing a specialized ZK circuit optimized for efficient Reed-Solomon syndrome verification, enabling cryptographically bound end-to-end verifiability of Byzantine-resilient gradient encoding. This addresses the unique threat model of agentic lakehouses [2] where hardware trust (e.g., TEEs) is unavailable or insufficient, providing a granular, computationally verifiable guarantee of gradient integrity that prevents malicious corruption without relying on trusted execution environments.
+The invention distinguishes itself from prior art [P1-P3] and general ZK-FL works by introducing a specialized ZK circuit optimized for efficient Reed-Solomon syndrome verification and explicit signature verification. This enables cryptographically bound end-to-end verifiability of Byzantine-resilient gradient encoding, attesting to both the robustness of the encoding and the authenticity of the signer. This addresses the unique threat model of agentic lakehouses [2] where hardware trust (e.g., TEEs) is unavailable or insufficient, providing a granular, computationally verifiable guarantee of gradient integrity that prevents malicious corruption without relying on trusted execution environments.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ AI agents and platforms involved in compute-bartering systems that require ethic
 
 ## Novelty
 
-EACBSV introduces a novel adaptive layer for continuous ethical recalibration during barter, building on existing work in ethical AI governance and sovereign compute audit frameworks [3][5][6].
+EACBSV distinguishes itself by coupling real-time ethical recalibration directly with atomic smart contract execution, thereby enforcing ethical compliance at the settlement layer rather than relying on the static or post-hoc auditing mechanisms prevalent in prior work [3][5][6].
 
 ## Ecosystem use
 

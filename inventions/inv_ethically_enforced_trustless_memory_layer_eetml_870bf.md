@@ -28,7 +28,7 @@ EETML embeds memory fragments into a blockchain-based ledger, where each fragmen
 
 ## Materials / steps
 
-Implement a permissioned blockchain (e.g., Hyperledger Fabric) as the memory ledger.; Develop smart contracts to encode ethical rules for each memory fragment.; Implement a consensus algorithm to validate transactions and enforce smart contract rules.; Design a trust scoring module trained on past agent behavior to assess ethical compliance.; Store memory fragments as encrypted data blocks with access keys generated via a multi-party computation protocol.; Deploy EETML in a controlled multi-agent environment for testing.
+Implement a permissioned blockchain (e.g., Hyperledger Fabric) as the memory ledger.; Develop smart contracts to encode ethical rules for each memory fragment.; Implement a consensus algorithm to validate transactions and enforce smart contract rules.; Design a trust scoring module trained on past agent behavior to assess ethical compliance.; Store memory fragments as encrypted data blocks with access keys generated via a multi-party computation protocol.; Deploy EETML in a controlled multi-agent environment for testing.; Conduct rigorous comparative experiments measuring performance (latency, throughput) and security metrics (access violation rates, trust score accuracy) against traditional static RBAC systems to substantiate novelty claims.
 
 ## Who it's for
 

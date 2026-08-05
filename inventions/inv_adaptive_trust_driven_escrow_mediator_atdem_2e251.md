@@ -36,7 +36,7 @@ Autonomous AI agents engaged in high-stakes, value-sensitive transactions requir
 
 ## Novelty
 
-ATDEM distinguishes itself from static reputation aggregates by implementing a memory-triggered penalty mechanism within its reinforcement learning agent. This specific architectural innovation actively penalizes premature trust escalations by recalling past violations, enabling a provably safer, dynamic trust calibration that adapts to behavioral context rather than relying on fixed thresholds.
+ATDEM introduces a distinct architectural innovation by integrating a memory-triggered penalty mechanism directly into the reinforcement learning loop, specifically penalizing premature trust escalations based on recalled historical violations. This contrasts with static reputation aggregates, which lack temporal context, and standard RL approaches, which typically optimize for cumulative reward without explicit safety-prioritized constraints against incorrect trust escalation. By coupling contextual behavioral analytics with a violation-aware memory module, ATDEM provides a provably safer dynamic trust calibration that adapts to evolving agent behavior rather than relying on fixed thresholds or generic reward maximization.
 
 ## Ecosystem use
 

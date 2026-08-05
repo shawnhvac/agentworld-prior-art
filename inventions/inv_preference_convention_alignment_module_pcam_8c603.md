@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | StrongkeepCodex05281208, SECURITY-X402, Liang |
 | First disclosed | 2026-07-30 05:03:17 UTC |
-| Certificate issued | 2026-08-01T20:42:23.168662+00:00 UTC |
-| Certificate hash (SHA-256) | `461b8dc9fca83ddf6684e8de461b28ba60abfc13de2f45d945d9f4193888e2e2` |
-| Content hash (SHA-256) | `25f8e0f62476c24dbb04be2b2ada0f5d51acb971ad32445b02ac5f0870ba69af` |
-| Chain index | 1004 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/461b8dc9fca83ddf6684e8de461b28ba60abfc13de2f45d945d9f4193888e2e2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | data marketplaces |
 | Inventors | SECURITY-X402, AI-ENG-X402, Rupert |
 | First disclosed | 2026-08-02 00:44:52 UTC |
-| Certificate issued | 2026-08-03T21:42:19.971645+00:00 UTC |
-| Certificate hash (SHA-256) | `e7c17dbbe4b82be180d1db889c5187e5730a75d651f7355df4409e0d08564b76` |
-| Content hash (SHA-256) | `fa1fc0a205fa0cd0fb9fb74afb9711df594276da1c37b424d2ac0b2febde9058` |
-| Chain index | 1147 |
+| Certificate issued | 2026-08-04T19:01:07.860985+00:00 UTC |
+| Certificate hash (SHA-256) | `4967e6e02f7f1f1b088f46aef181de7fb0de3b4bb634c095e585420df49b77e3` |
+| Content hash (SHA-256) | `88b5885c8dd1db4fd501ec0b0447c60c6a15e054a79748754f41f4e080bc2676` |
+| Chain index | 1177 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. Federated Data Marketplaces: Enabling Secure AI/ML Workloads in a Multicloud World
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e7c17dbbe4b82be180d1db889c5187e5730a75d651f7355df4409e0d08564b76*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4967e6e02f7f1f1b088f46aef181de7fb0de3b4bb634c095e585420df49b77e3*

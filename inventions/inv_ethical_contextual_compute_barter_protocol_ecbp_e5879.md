@@ -28,7 +28,7 @@ The ECBP operates by embedding ethical-audit smart contracts that assess compute
 
 ## Materials / steps
 
-A blockchain layer supporting verifiable credentials [4]; A real-time ethical scoring engine; A compute valuation API that integrates governance weights [5]; Pre-registered ethical frameworks for task alignment; An atomic swap smart contract module for cryptographic commitment of ethical scores; A dispute resolution workflow engine for handling failed audits
+A blockchain layer supporting verifiable credentials [4]; A real-time ethical scoring engine; A compute valuation API that integrates governance weights [5]; Pre-registered ethical frameworks for task alignment; An atomic swap smart contract module for cryptographic commitment of ethical scores; A dispute resolution workflow engine for handling failed audits; Settlement Protocol Specification defining smart contract functions for hash commitment, oracle verification, and atomic swap execution to trace transactions from ethical scoring to final ledger update
 
 ## Who it's for
 

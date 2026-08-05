@@ -41,7 +41,7 @@ AI agents operating across multiple jurisdictions requiring consistent and legal
 
 ## Novelty
 
-Unlike static, centralized reputation models that rely on fixed scoring rubrics, DNARPS introduces a decentralized, reinforcement learning-driven norm-adaptation layer that dynamically optimizes reputation weight matrices for cross-jurisdictional fairness. This technical contribution enables real-time alignment with diverse legal and ethical frameworks while preserving cryptographic verifiability through blockchain anchoring, eliminating the need for centralized mediation in reputation portability.
+DNARPS's core novelty lies in the RL-driven resolution of conflicting legal embeddings, distinguishing it from existing systems that merely combine blockchain and ML; this mechanism dynamically optimizes reputation weight matrices to reconcile divergent jurisdictional norms, whereas prior art relies on static mapping or centralized arbitration.
 
 ## Ecosystem use
 

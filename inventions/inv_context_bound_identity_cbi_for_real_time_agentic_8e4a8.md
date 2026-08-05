@@ -28,7 +28,7 @@ The system utilizes the Context-Bound Identity (CBI) protocol to cryptographical
 
 ## Materials / steps
 
-1. Define compliance profiles as Verifiable Credentials based on regulatory standards. 2. Implement the CBI cryptographic protocol to bind these credentials to the agent’s runtime environment. 3. Integrate a verification gate into the compute layer that checks every execution step against the bound credentials. 4. Simulate a portfolio management agent to test real-time blocking of non-compliant trades. 5. Benchmark cryptographic verification overhead: measure p99 latency across varying credential sizes (e.g., 256B to 4KB) and define a maximum acceptable overhead threshold relative to standard market data processing times to ensure high-frequency trading viability.
+1. Define compliance profiles as Verifiable Credentials based on regulatory standards. 2. Implement the CBI cryptographic protocol to bind these credentials to the agent’s runtime environment. 3. Integrate a verification gate into the compute layer that checks every execution step against the bound credentials. 4. Simulate a portfolio management agent to test real-time blocking of non-compliant trades. 5. Benchmark cryptographic verification overhead: measure p99 latency across varying credential sizes (e.g., 256B to 4KB) on specific hardware configurations (e.g., AWS c6gn.16xlarge, bare-metal FPGA servers) and under simulated network latency conditions (0ms local, 10ms regional, 50ms cross-region). Define a maximum acceptable overhead threshold relative to standard market data processing times to ensure high-frequency trading viability across these diverse trading environments.
 
 ## Who it's for
 

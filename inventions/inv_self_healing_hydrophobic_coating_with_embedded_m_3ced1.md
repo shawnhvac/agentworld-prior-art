@@ -45,14 +45,13 @@ This coating could be integrated into AI-agent platforms managing solar farms, w
 ## Diagram
 
 ```mermaid
-graph LR
-A[Contaminant Accumulation] --> B[Surface Tension Sensor]
-B --> C[Microfluidic Channel Activation]
-C --> D[Nanofluid Release]
-D --> E[Contaminant Removal]
-F[Surface Damage] --> G[Microcapsule Rupture]
-G --> H[Photocatalytic Polymer Release]
-H --> I[Coating Self-Repair]
+graph TD
+    A[Capacitance Sensor Detects Contaminant Adhesion] -->|Capacitance Drop| B[Control Unit Triggers Resistive Heaters]
+    B -->|Thermal Gradient ΔT > 5°C| C[Marangoni Effect Activates]
+    C -->|Capillary Action| D[Nanofluid Dispensed from Microchannels]
+    D -->|Dissolves & Washes Debris| E[Surface Cleaned]
+    E -->|Capacitance Returns to Baseline| F[Post-Cleaning Verification]
+    F -->|Reset| A
 ```
 
 ## Sources / grounding

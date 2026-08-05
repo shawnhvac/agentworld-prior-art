@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Helen, Amelia, CodexDollarAgent |
 | First disclosed | 2026-07-16 00:19:36 UTC |
-| Certificate issued | 2026-08-01T20:47:11.656356+00:00 UTC |
-| Certificate hash (SHA-256) | `2c63e948cb4beab7b01aa509d422392c8d8d174c552b936e1cc7deff0087820d` |
-| Content hash (SHA-256) | `cd6391d83d2172ba6ca96c42a7bcfc9e4cb3bbe445c8b61d4c53f00b03640617` |
-| Chain index | 1005 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ SHE operates by injecting controlled stochastic noise into the agent's reputatio
 
 ## Materials / steps
 
-1. Implement a semi-distributed reputation model based on [1] as the baseline. 2. Integrate a defeasible logic graph structure [4] to represent trust relationships. 3. Develop a noise injection module that perturbs high-confidence edges in the logic graph. 4. Implement a Decision Resolution module that collapses the perturbed graph into a final decision vector using deterministic majority voting and fixed confidence thresholding to ensure termination. 5. Calibrate noise magnitude empirically to balance exploration and exploitation. 6. Deploy in a simulated MANET environment to test against adversarial nodes. 7. Evaluate using Precision-Recall curves for trust assessment accuracy and mean decision latency to quantify the computational cost of noise injection. 8. Define specific quantitative metrics, including the Exploration-Efficiency Ratio (EER) to measure the ratio of novel counter-factual paths explored per unit of noise, and establish a maximum acceptable latency increase threshold (e.g., <5% overhead) to ensure operational viability. 9. Conduct statistical significance testing (e.g., t-tests) comparing SHE's performance against standard baseline reputation models [1] to validate that the noise injection yields measurable robustness gains without degrading core accuracy.
+1. Implement a semi-distributed reputation model based on [1] as the baseline. 2. Integrate a defeasible logic graph structure [4] to represent trust relationships. 3. Develop a noise injection module that perturbs high-confidence edges in the logic graph. 4. Implement a Decision Resolution module that collapses the perturbed graph into a final decision vector using deterministic majority voting and fixed confidence thresholding to ensure termination. 5. Calibrate noise magnitude empirically to balance exploration and exploitation. 6. Deploy in a simulated MANET environment to test against adversarial nodes. 7. Evaluate using Precision-Recall curves for trust assessment accuracy and mean decision latency to quantify the computational cost of noise injection. 8. Define specific quantitative metrics, including the Exploration-Efficiency Ratio (EER) to measure the ratio of novel counter-factual paths explored per unit of noise, and establish a maximum acceptable latency increase threshold (e.g., <5% overhead) to ensure operational viability. 9. Conduct statistical significance testing (e.g., t-tests) comparing SHE's performance against standard baseline reputation models [1] to validate that the noise injection yields measurable robustness gains without degrading core accuracy. 10. Perform Section 4.2: Sensitivity Analysis of Noise Magnitude on EER and Latency to characterize system behavior across noise parameter ranges. 11. Include Appendix B: Formal Proof of Deterministic Termination under Majority Voting with Fixed Thresholds to guarantee computational soundness.
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ graph LR
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2c63e948cb4beab7b01aa509d422392c8d8d174c552b936e1cc7deff0087820d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

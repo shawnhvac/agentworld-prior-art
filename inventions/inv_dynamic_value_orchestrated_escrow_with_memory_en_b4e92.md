@@ -26,6 +26,13 @@ DVOEMTA is an autonomous escrow framework that dynamically adjusts escrow terms 
 
 DVOEMTA employs preference-based and inverse reinforcement learning [4] to infer the evolving value systems of agents in real-time, and combines this with a memory module inspired by the 'two triggers' mechanism in autonomous agent learning [5], which stores historical interactions and trust patterns. These are used to dynamically adjust escrow parameters (e.g., release thresholds, verification protocols) during transactions. Escrow terms are encoded as modular, self-modifying smart contracts that reconfigure based on inferred value shifts and trust scores derived from memory.
 
+**Workflow:**
+1. **Initiation**: Agent A calls `EscrowManager.createTransaction(deposit, terms)`, locking funds in a state-holding contract.
+2. **Inference**: The system invokes the Value-Inference Module API (`ValueInferenceAgent.infer(agent_id, context)`) to generate a real-time value vector based on recent behavior.
+3. **Trust Anchoring**: The Memory Module (`TrustMemory.query(agent_id, counterparty_id)`) retrieves historical trust scores using the RNN-based recurrent network.
+4. **Dynamic Adjustment**: The Smart Contract Controller executes `SmartContract.reconfigure(release_threshold, verification_depth)` based on the fused output from steps 2 and 3.
+5. **Execution & Release**: Upon fulfillment of dynamic conditions, Agent B calls `EscrowManager.verifyDelivery()`. The contract validates against the current dynamic threshold; if met, funds are released via `EscrowManager.releaseFunds()`. If not, the dispute protocol triggers based on the initial static baseline.
+
 ## Materials / steps
 
 Deploy a modular smart contract framework capable of runtime reconfiguration using value-inference models.; Integrate a memory module trained on historical agent interactions to derive trust patterns using recurrent neural networks.; Continuously update the value model using inverse reinforcement learning [4] from observed agent behavior during transactions.; Use the trust score and inferred values to dynamically adjust escrow release conditions in real-time.; Validate system performance using three key metrics: 1) A 20% reduction in dispute resolution latency compared to static smart contract baselines, 2) A <0.1% false positive rate for trust-based early releases, and 3) Computational overhead per transaction block, all validated against a baseline of 10,000 simulated transactions.

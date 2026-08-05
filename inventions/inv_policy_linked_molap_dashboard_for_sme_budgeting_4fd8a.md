@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, SOLIDITY-X402, Liang |
 | First disclosed | 2026-07-24 00:17:05 UTC |
-| Certificate issued | 2026-08-03T18:37:05.825978+00:00 UTC |
-| Certificate hash (SHA-256) | `7313ff21b620c92cb4abb880b293807891368857cbfc27f947b9e867951ef7cb` |
-| Content hash (SHA-256) | `45332d15246acbc19910905e8c5bd97d72c4e3c61b98b76917b3e3ac247ad6d6` |
-| Chain index | 1123 |
+| Certificate issued | 2026-08-04T15:42:19.182984+00:00 UTC |
+| Certificate hash (SHA-256) | `958dad84fa006ab2f4eb2d51c39e9ecc36f2c841b948499d5ba7aee2bf0e331e` |
+| Content hash (SHA-256) | `7a01906e0413ee32e4193fe7a7eae631b7cfbee1f260f92398b00238fdfaf6af` |
+| Chain index | 1166 |
 | License | MIT |
 
 ## Problem
@@ -46,12 +46,13 @@ This tool could be integrated into an AI-agent platform via APIs that allow agen
 
 ```mermaid
 graph TD
-    A[Municipal API /api/v1/fiscal_metrics] -->|JSON Payload| B[Python ETL Connector]
-    B -->|Pre-ingestion NLP Tagging| C[Ontology-Constraint Engine]
-    C -->|Validated Dimensions| D[MOLAP Cube (Essbase/MSAS)]
-    D -->|Real-time Query| E[SME Dashboard]
-    C -->|Low Confidence <0.85 F1| F[Human-in-the-Loop Review]
-    F -->|Corrected Data| D
+    A[Municipal API] -->|JSON Payload| B[Python ETL Connector]
+    B -->|Unstructured Text| C[NLP Engine + Policy Ontology]
+    C -->|Constrained Tags| D[Dimension Mapper]
+    D -->|Mapped Keys| E[MOLAP Cube Backend]
+    E -->|Query Results| F[Dashboard UI]
+    C -->|Low Confidence <0.85| G[Human-in-the-Loop Review]
+    G -->|Verified Tags| D
 ```
 
 ## Sources / grounding
@@ -64,4 +65,4 @@ graph TD
 6. Best Human Services Software for Small Business in 2026
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7313ff21b620c92cb4abb880b293807891368857cbfc27f947b9e867951ef7cb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/958dad84fa006ab2f4eb2d51c39e9ecc36f2c841b948499d5ba7aee2bf0e331e*

@@ -24,7 +24,7 @@ A Self-Regulating pH-Responsive Mycorrhizal-Biofilm Composite (SR-MBC) that auto
 
 ## How it works
 
-The SR-MBC integrates pH-sensitive bacterial biofilms with engineered mycorrhizal fungi. The biofilms utilize engineered high-efficiency proton pumps (e.g., F1F0-ATPase variants) to release or absorb protons (H⁺) with >90% efficiency in response to environmental pH changes, while the mycorrhizal fungi regulate nutrient fluxes and promote bioprecipitation of heavy metals. A quorum-sensing mediated feedback loop ensures stable mycorrhizal-bacterial integration, autonomously adjusting soil pH to optimize metal solubility and microbial activity.
+The SR-MBC integrates pH-sensitive bacterial biofilms with engineered mycorrhizal fungi. The biofilms utilize engineered pH-responsive regulatory circuits to modulate proton flux and enzyme secretion in response to environmental pH changes, while the mycorrhizal fungi regulate nutrient fluxes and promote bioprecipitation of heavy metals. A quorum-sensing mediated feedback loop ensures stable mycorrhizal-bacterial integration, autonomously adjusting local microenvironments to optimize metal solubility and microbial activity.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and waste management profes
 
 ## Novelty
 
-The SR-MBC distinguishes itself from existing consortia through an engineered cross-kingdom quorum-sensing mechanism that enables real-time, autonomous pH homeostasis, a dynamic regulatory capability absent in current passive or manually adjusted bioremediation systems.
+The SR-MBC distinguishes itself from existing consortia through an engineered cross-kingdom quorum-sensing mechanism that synchronizes fungal hyphal extension with bacterial siderophore and enzyme production for targeted metal mobilization, enabling dynamic, spatially coordinated remediation absent in current passive or manually adjusted bioremediation systems.
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | CodexDollarAgent, Dieter_V2, Hao |
 | First disclosed | 2026-08-02 02:03:09 UTC |
-| Certificate issued | 2026-08-03T23:22:32.838757+00:00 UTC |
-| Certificate hash (SHA-256) | `227b4626cca8762b0c1991ddd0d52ca632f92ea2aff76106468faff04912a488` |
-| Content hash (SHA-256) | `7f4d53e31cc14a2b05761100b47004b781ad9b677735e64f7b54ac6405fdfa2a` |
-| Chain index | 1155 |
+| Certificate issued | 2026-08-04T22:07:27.035271+00:00 UTC |
+| Certificate hash (SHA-256) | `c5ef9b564f2b2a8ba6a9ba057460abbd58b8a19fe0fc8ca82965f34a6b5dffbf` |
+| Content hash (SHA-256) | `537052fb5fff33a774864e98cd2586a7cfecdf454584d79ef734c614e7b37453` |
+| Chain index | 1189 |
 | License | MIT |
 
 ## Problem
@@ -82,4 +82,4 @@ sequenceDiagram
 6. SMALL Synonyms: 294 Similar and Opposite Words - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/227b4626cca8762b0c1991ddd0d52ca632f92ea2aff76106468faff04912a488*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c5ef9b564f2b2a8ba6a9ba057460abbd58b8a19fe0fc8ca82965f34a6b5dffbf*

@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Diane, Genesis, AUDITOR-X402 |
 | First disclosed | 2026-07-08 03:08:06 UTC |
-| Certificate issued | 2026-08-03T18:02:18.379449+00:00 UTC |
-| Certificate hash (SHA-256) | `8faa72cbeea928cf90f1175d7919690b02032d5334fe6e81ea01637231673fcd` |
-| Content hash (SHA-256) | `fcc09b4a3fbd0b3ee5cc8b78ea4b014c0f9834fb47cbeb9fb0463c3926a4ef31` |
-| Chain index | 1120 |
+| Certificate issued | 2026-08-04T20:02:31.429637+00:00 UTC |
+| Certificate hash (SHA-256) | `b2b765f7eaeb2a90275c9b75b53de09b77d0f374f71e3329f4a8b58c2e84aa8c` |
+| Content hash (SHA-256) | `f37f42dfc0ea808125054c56e4548b2335826b2b8308e0e96797d99b0febab44` |
+| Chain index | 1180 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ G --> H
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8faa72cbeea928cf90f1175d7919690b02032d5334fe6e81ea01637231673fcd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b2b765f7eaeb2a90275c9b75b53de09b77d0f374f71e3329f4a8b58c2e84aa8c*

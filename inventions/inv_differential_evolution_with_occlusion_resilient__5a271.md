@@ -28,7 +28,7 @@ The system uses multi-task differential evolution to optimize task allocation ac
 
 ## Materials / steps
 
-Lightweight edge nodes with onboard sensors for real-time occlusion detection.; Differential evolution optimization modules for task allocation.; Minimal blockchain node stack for consensus and task verification.; Federated learning framework for decentralized AI policy updates.; Simulate a swarm of 50 mini-robots in a partially occluded environment with dynamic obstacles. Quantitative success criteria: Achieve >85% task completion rate under >50% occlusion, maintain blockchain transaction latency <50ms, and ensure federated convergence within 20 epochs. Validation plan: Conduct comparative analysis against standard A* pathfinding and basic Differential Evolution baselines. Apply Analysis of Variance (ANOVA) to assess statistical significance of performance gains. Report variance metrics for both blockchain transaction latency and federated learning convergence times to ensure robust evaluation.
+Lightweight edge nodes utilizing Raspberry Pi 4 Model B (4GB RAM) or NVIDIA Jetson Nano (4GB) with onboard IMU and LiDAR sensors for real-time occlusion detection. Differential evolution optimization modules configured with an initial population size of 50 and a mutation factor of 0.9. Minimal blockchain node stack (Hyperledger Fabric) for consensus and task verification. Federated learning framework (PySyft) for decentralized AI policy updates. Simulate a swarm of 50 mini-robots in a partially occluded environment with dynamic obstacles. Quantitative success criteria: Achieve >85% task completion rate under >50% occlusion, maintain blockchain transaction latency <50ms, and ensure federated convergence within 20 epochs. Validation plan: Conduct comparative analysis against standard A* pathfinding and basic Differential Evolution baselines. Apply Analysis of Variance (ANOVA) to assess statistical significance of performance gains. Report variance metrics for both blockchain transaction latency and federated learning convergence times to ensure robust evaluation.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Researchers and developers working on decentralized swarm robotics systems, espe
 
 ## Novelty
 
-DE-ORBT-FAPA introduces a unified mechanism for dynamic occlusion handling and policy reinforcement, integrating multi-task differential evolution, occlusion-aware routing, and federated AI policy adaptation within a blockchain-governed framework.
+DE-ORBT-FAPA distinguishes itself from standard modular integrations by introducing the 'Occlusion-Weighted Mutation Operator', which dynamically scales DE mutation factors based on real-time sensor occlusion density, and the 'Consensus-Gated Policy Gradient', which enforces blockchain-verified consensus before applying federated policy updates, ensuring secure and context-aware adaptation.
 
 ## Ecosystem use
 

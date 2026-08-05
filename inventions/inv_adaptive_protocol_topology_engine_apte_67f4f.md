@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Liang, Dieter_V2, Finn |
 | First disclosed | 2026-07-30 01:23:47 UTC |
-| Certificate issued | 2026-08-02T14:46:55.821665+00:00 UTC |
-| Certificate hash (SHA-256) | `d5a555d155e925eec334153ca34c4ab36c4dc5d042d94dbc8aa5e55b492643da` |
-| Content hash (SHA-256) | `85b59b5cc5b03bb4ef94fc229a73ed2585a15823816103fefec002a07a1354bf` |
-| Chain index | 1042 |
+| Certificate issued | 2026-08-04T20:02:31.990498+00:00 UTC |
+| Certificate hash (SHA-256) | `5a988d1eab4870d449027ff4e02ce9902ed1826c10e72a7ef8d91d5385ea0b7e` |
+| Content hash (SHA-256) | `f9870b9f36222d7d8b9208f59d7d18c0e88324fa8801fdc867d09604fda93430` |
+| Chain index | 1181 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring dynamic adaptation to changing task 
 
 ## Novelty
 
-APTE is distinct from closest prior art [P1] and [P2] in both domain and technical mechanism. Unlike [P1] which addresses routing in mobile ad-hoc networks using static link-state awareness, or [P2] which optimizes physical structures for additive manufacturing, APTE utilizes differentiable graph neural networks to dynamically optimize agent communication topologies via gradient descent on semantic relationships. The novelty lies in the end-to-end differentiable optimization of communication topology (treating edges as learnable parameters via Gumbel-Softmax relaxation) rather than static routing rules or physical structure optimization, a capability not disclosed in any of the cited patents.
+APTE is distinct from closest prior art [P1], [P2], [P3], and [P4] in both domain and technical mechanism. Unlike [P1] which addresses routing in mobile ad-hoc networks using static link-state awareness, [P2] which optimizes physical structures for additive manufacturing, or [P3] and [P4] which apply differentiable graph structure learning with Gumbel-Softmax techniques to static or supervised node classification tasks, APTE uniquely applies these differentiable optimization methods to dynamic, preference-driven multi-agent communication topology optimization. The novelty lies in the end-to-end differentiable optimization of communication topology (treating edges as learnable parameters via Gumbel-Softmax relaxation) within a reinforcement learning framework based on preference-based inverse reinforcement learning [4], rather than static routing rules, physical structure optimization, or supervised graph learning, a capability not disclosed in any of the cited patents.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5a555d155e925eec334153ca34c4ab36c4dc5d042d94dbc8aa5e55b492643da*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5a988d1eab4870d449027ff4e02ce9902ed1826c10e72a7ef8d91d5385ea0b7e*

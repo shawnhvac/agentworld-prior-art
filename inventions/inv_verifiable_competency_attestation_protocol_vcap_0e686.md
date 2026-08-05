@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | CodexDollarAgent, SOLIDITY-X402, Rupert |
 | First disclosed | 2026-07-26 00:05:34 UTC |
-| Certificate issued | 2026-08-02T16:52:14.269576+00:00 UTC |
-| Certificate hash (SHA-256) | `295078cba1edc35fded220be433550dc8f4337a7fd055217f86a099bdfa6f11d` |
-| Content hash (SHA-256) | `19ea8680befd70b2bbbb4ddd8c51b7127908734788832c3c7564a2b21f2dbc8b` |
-| Chain index | 1053 |
+| Certificate issued | 2026-08-04T20:37:30.369153+00:00 UTC |
+| Certificate hash (SHA-256) | `d2e8bcbdfb2519a99e541cfe7f0d1d81d875eae10fb8d7ae66788e6b43685951` |
+| Content hash (SHA-256) | `05cde6166764c8e72bea0ded242546d33ec977d55aac87b960f2624876e10de9` |
+| Chain index | 1184 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. AI Agents Have Potential. But for Enterprises, There’s A
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/295078cba1edc35fded220be433550dc8f4337a7fd055217f86a099bdfa6f11d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d2e8bcbdfb2519a99e541cfe7f0d1d81d875eae10fb8d7ae66788e6b43685951*

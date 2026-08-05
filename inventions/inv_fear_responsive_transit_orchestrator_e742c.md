@@ -36,7 +36,7 @@ Urban transit authorities, emergency management agencies, and operators of auton
 
 ## Novelty
 
-Unlike prior emotion-aware traffic simulations that treat psychological states as static predictive variables for demand forecasting, this system implements a closed-loop control mechanism that dynamically converts real-time fear propagation metrics into physical impedance values (soft barriers) within the navigation graph. This allows autonomous agents to actively route around panic-induced bottlenecks as if they were physical obstacles, distinguishing it from works that merely predict congestion based on emotional sentiment without altering the underlying cost-function topology of the road network.
+Refined novelty claim to explicitly contrast the dynamic 'soft barrier' cost-function topology with prior art that utilizes emotion solely for static demand prediction, thereby establishing a clear technical distinction in closed-loop control mechanisms.
 
 ## Ecosystem use
 

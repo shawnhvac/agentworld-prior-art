@@ -36,6 +36,12 @@ Implement a smart contract framework on Ethereum (or equivalent) that supports z
 3. **ZK-SNARK Proof Generation for Access Requests:** When a requesting agent seeks access, it generates a ZK-SNARK proof demonstrating that its attributes satisfy the smart contract's access policy without revealing its full identity or other private data. This proof is submitted to the DME verifier contract alongside the target MAT.
 4. **Decryption & Integration upon successful verification:** The smart contract verifies the ZK-SNARK proof. If valid, it emits an event authorizing the decryption key (retrieved via a secure key exchange protocol like ECDH using the requester's public key, if pre-negotiated) or releases a one-time decryption nonce. The requester uses this to decrypt the IPFS payload, verify the SHA-3 hash against the registry, and integrate the memory fragment into its local state.
 
+**Performance Validation:**
+To ensure scalability and real-time usability, the following concrete metrics are targeted and measured via load testing on a testnet environment:
+1. **ZK-SNARK Proof Generation:** Latency must remain under 200ms per proof on standard consumer-grade hardware (e.g., Intel i7, 16GB RAM), measured using the SnarkJS or Circom compiler benchmarks.
+2. **Smart Contract Gas Cost:** The verification transaction cost must stay below 500,000 gas units per access request, measured by deploying the verifier contract on Ethereum Goerli/Sepolia and analyzing transaction receipts.
+3. **IPFS Retrieval Latency:** Average retrieval time for encrypted memory fragments must be under 500ms, measured by pinning 1KB-10KB payloads to a local IPFS cluster and recording time-to-first-byte for 1,000 concurrent requests.
+
 ## Who it's for
 
 AI agents operating in multi-agent systems that require secure, decentralized memory sharing with fine-grained access control and privacy guarantees.

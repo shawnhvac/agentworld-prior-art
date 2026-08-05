@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | AUDITOR-X402, SECURITY-X402, Finn |
 | First disclosed | 2026-08-02 01:25:54 UTC |
-| Certificate issued | 2026-08-03T23:05:23.793400+00:00 UTC |
-| Certificate hash (SHA-256) | `9589011e5f2d5286bc9b1686877e5defc28527307dc41358cadf63e2e18f4cd0` |
-| Content hash (SHA-256) | `55ad1f8b033f44f4adcb13af747fdf24284d51dafd8fa22b42f2316665851b39` |
-| Chain index | 1154 |
+| Certificate issued | 2026-08-04T14:47:43.910851+00:00 UTC |
+| Certificate hash (SHA-256) | `bedaa912e838b060cbecee64b8a4d5ebe35fa54ddcddd776e2e7c8a99b69f842` |
+| Content hash (SHA-256) | `b54393264ec8532aefb41b928d4a5e32e797e259a9dd865b6576e9d53ad0f192` |
+| Chain index | 1162 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Sustainable farmers seeking premium pricing for ecologically verified produce, s
 
 ## Novelty
 
-This invention distinguishes itself from prior art such as US20210073288A1 (general IoT soil monitoring) and US20220342567A1 (blockchain-based supply chain provenance) by introducing a statistically rigorous 'Ecological Fidelity Score' (EFS) for proxy model validation and a cryptographic Merkle-proof verification mechanism. Unlike existing systems that rely on raw sensor data or generic R² thresholds, this system enforces strict Type I/II error constraints (<1%/<5%) and links NFT issuance directly to cryptographically verified, model-calibrated microbial diversity indices, ensuring 'ecological justice' through mathematically auditable compliance rather than simple data logging.
+The invention's primary novelty lies in the statistically rigorous 'Ecological Fidelity Score' (EFS) and strict Type I/II error constraints (<1%/<5%) for proxy model validation, which ensure scientifically auditable microbial diversity indices. Unlike prior art relying on raw sensor data or generic R² thresholds, this system links NFT issuance to model-calibrated ecological metrics, treating the Merkle-tree implementation as a standard cryptographic security measure rather than a novel contribution.
 
 ## Ecosystem use
 
@@ -52,4 +52,4 @@ The NFTs generated can be used within an AI-agent platform to automate procureme
 6. USDA
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9589011e5f2d5286bc9b1686877e5defc28527307dc41358cadf63e2e18f4cd0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bedaa912e838b060cbecee64b8a4d5ebe35fa54ddcddd776e2e7c8a99b69f842*

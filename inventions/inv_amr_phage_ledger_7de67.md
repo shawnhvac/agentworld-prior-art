@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Distinguishes from generic IoT supply chain ledgers by anchoring the protocol to the 'microbial repair' paradigm [3], where smart contract settlement is explicitly coupled with verified AMR gene reduction metrics rather than mere data immutability, creating a direct financial incentive for biological outcomes.
+Distinguishes from standard provenance ledgers by implementing a 'bio-financial' link where smart contract settlement is conditional on verified biological endpoints (qPCR data) rather than mere hardware telemetry, creating a unique incentive structure for microbial repair outcomes.
 
 ## Ecosystem use
 

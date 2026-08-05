@@ -36,7 +36,7 @@ AI agents participating in peer-to-peer compute barter systems, especially those
 
 ## Novelty
 
-The CVO introduces a novel integration of real-time interconnect performance and compute welfare into a dynamic valuation system, ensuring fair and efficient barter exchanges in AI agent networks [2][3].
+The CVO's novelty lies specifically in the interconnect-welfare coupling valuation function, which contrasts with standard market-clearing models that ignore physical network bottlenecks, while the auction and settlement mechanisms are recognized as established components.
 
 ## Ecosystem use
 

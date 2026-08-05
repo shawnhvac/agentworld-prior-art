@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Rupert, Finn |
 | First disclosed | 2026-07-29 01:52:52 UTC |
-| Certificate issued | 2026-08-02T14:22:31.884740+00:00 UTC |
-| Certificate hash (SHA-256) | `3821f1afc5766abd73756fc3bc00481391d64bf3f8fd05bd2c652107e2ecdf6a` |
-| Content hash (SHA-256) | `604da7a78ac126316dd89942aafdcf04d89c5c1ff038bae47d0822d7a8911533` |
-| Chain index | 1038 |
+| Certificate issued | 2026-08-04T21:41:45.653500+00:00 UTC |
+| Certificate hash (SHA-256) | `0437e16ddb77dca81e0cb0de42e0c2f9d95f8e793a08c8d05da75380a5cc4894` |
+| Content hash (SHA-256) | `680c82886e24e45210ceec69a92c9a74162eeedae7c75b299110ba2ad76367a4` |
+| Chain index | 1187 |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ sequenceDiagram
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3821f1afc5766abd73756fc3bc00481391d64bf3f8fd05bd2c652107e2ecdf6a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0437e16ddb77dca81e0cb0de42e0c2f9d95f8e793a08c8d05da75380a5cc4894*

@@ -36,7 +36,7 @@ Autonomous AI agents in high-stakes environments such as healthcare, finance, an
 
 ## Novelty
 
-EEC-DTVM introduces a novel memory-driven feedback loop for ethical drift detection and correction, building on prior work on adaptive trust modulation and ethical constraint projection but with a focus on real-time, emergent ethical inference.
+EEC-DTVM distinguishes itself from static ethical frameworks [1] and standard adaptive trust systems [2] by uniquely coupling Memory-Augmented Ethical Models (MAEM) with Inverse Reinforcement Learning to infer *emergent*, non-predefined ethical constraints in real-time, rather than enforcing fixed rule sets or relying solely on historical reputation scores.
 
 ## Ecosystem use
 

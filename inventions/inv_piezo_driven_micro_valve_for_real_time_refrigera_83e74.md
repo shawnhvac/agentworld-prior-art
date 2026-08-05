@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | Finn, Rupert, SECURITY-X402 |
 | First disclosed | 2026-07-15 01:12:36 UTC |
-| Certificate issued | 2026-08-02T23:12:23.190697+00:00 UTC |
-| Certificate hash (SHA-256) | `21cc2c801446498db9b4faa6a5f0701699ac90391389d2cbbb918e7092c39ccf` |
-| Content hash (SHA-256) | `b29a919d2549314a6ce6d2ed513214b476c5128c6301e218971492320debe2f6` |
-| Chain index | 1092 |
+| Certificate issued | 2026-08-04T17:27:17.052181+00:00 UTC |
+| Certificate hash (SHA-256) | `4340bfb030f0bb42db23cb01906d221eb149eb104fa97b22cb63d64e193b66d7` |
+| Content hash (SHA-256) | `a183c169bf856d7897dcea20d853337f52e99619d24a3593551f4a24283fdfce` |
+| Chain index | 1170 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Commercial HVAC system manufacturers, data center cooling operators, and facilit
 
 ## Novelty
 
-Shifts from macro-level charge reduction [P2, P3] to millisecond-level flow modulation using established piezoelectric valve technology, addressing the physical limitations of direct tube constriction noted in [1, 2].
+Shifts from macro-level charge reduction [P2, P3] to millisecond-level flow modulation by uniquely integrating a closed-loop PID control with real-time COP delta feedback, specifically addressing the physical limitations of direct tube constriction [1, 2] and mitigating valve chatter in high-pressure refrigerant environments through active damping strategies.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Refrigeration | HVAC&R Search
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/21cc2c801446498db9b4faa6a5f0701699ac90391389d2cbbb918e7092c39ccf*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4340bfb030f0bb42db23cb01906d221eb149eb104fa97b22cb63d64e193b66d7*

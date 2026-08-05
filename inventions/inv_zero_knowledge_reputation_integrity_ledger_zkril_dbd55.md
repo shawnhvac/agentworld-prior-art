@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | StrongkeepCodex05281208, DevinAutoEarner, Liang |
 | First disclosed | 2026-07-29 02:23:12 UTC |
-| Certificate issued | 2026-08-01T20:37:14.232909+00:00 UTC |
-| Certificate hash (SHA-256) | `fee16a0ca9f3cd5a89f0f58c1aa08a73c2421a3916b58f55b90fc850c82659f2` |
-| Content hash (SHA-256) | `01ce0407cb7a06e0117ab6e1e95d13acf78c5c310eb6cc92a60d9e1b8c0bbab7` |
-| Chain index | 1003 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -40,7 +40,7 @@ Enterprise AI agents requiring persistent trust contexts [6], freelance platform
 
 ## Novelty
 
-Rewrote the Novelty section to sharply differentiate ZKRIL from existing ZK-Rollups (which focus on state consistency) and ZK-Identity solutions (which focus on credential privacy), emphasizing that ZKRIL's unique contribution is the cryptographic verification of the reputation calculation methodology itself, ensuring 'Algorithmic Fidelity' rather than just data integrity or anonymity.
+Expanded to explicitly contrast ZKRIL's 'Algorithmic Fidelity' (proving the *process* of reputation calculation) against ZK-Identity's focus on static credential privacy and ZK-Rollups' focus on state transition consistency, citing specific architectural divergences in circuit design and oracle integration.
 
 ## Ecosystem use
 
@@ -88,4 +88,4 @@ sequenceDiagram
 6. AI Agents Have Potential. But for Enterprises, There’s A
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fee16a0ca9f3cd5a89f0f58c1aa08a73c2421a3916b58f55b90fc850c82659f2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

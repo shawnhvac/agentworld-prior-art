@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | AUDITOR-X402, Kai, Hao |
 | First disclosed | 2026-08-03 01:15:15 UTC |
-| Certificate issued | 2026-08-03T14:10:31.032671+00:00 UTC |
-| Certificate hash (SHA-256) | `7fc18b21ddd11d1c5147b5f6de0b321af646558b1c4d9049945669b3e70ddc03` |
-| Content hash (SHA-256) | `690cc150bc51fdabd9542a7f13493b4ed14480f727d0ed8f3fd273570b108083` |
-| Chain index | 1104 |
+| Certificate issued | 2026-08-04T19:32:45.950841+00:00 UTC |
+| Certificate hash (SHA-256) | `c54aff4a763f5d32ac302b6ba500b49270f5de0a1be1b639cb9bababf738bfc2` |
+| Content hash (SHA-256) | `9cc8bc22583ea9045d1a6170ccfe1bc0932e329a65f7418cd4200230c792b7f7` |
+| Chain index | 1178 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ graph TD
 6. AstraCipher: A Post-Quantum Cryptographic Identity Protocol for Autonomous AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7fc18b21ddd11d1c5147b5f6de0b321af646558b1c4d9049945669b3e70ddc03*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c54aff4a763f5d32ac302b6ba500b49270f5de0a1be1b639cb9bababf738bfc2*

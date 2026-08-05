@@ -36,7 +36,7 @@ AI agents operating across multiple digital platforms, especially those requirin
 
 ## Novelty
 
-DTARPP introduces a lightweight, modular architecture that allows AI agents to carry a portable, verifiable, and adaptable reputation profile across platforms, with real-time updates based on stakeholder feedback and legal constraints.
+DTARPP introduces a lightweight, modular architecture that allows AI agents to carry a portable, verifiable, and adaptable reputation profile across platforms, with real-time updates based on stakeholder feedback and legal constraints. **Related Work & Differentiation**: Unlike static reputation systems such as Gitcoin Passport, which focuses on Sybil resistance through immutable proof-of-humanity metrics, or ENS, which primarily manages domain name resolution and basic identity association, DTARPP uniquely integrates a dynamic legal oracle layer. While existing solutions lack mechanisms for real-time jurisdictional adaptation, DTARPP’s Legal Oracle actively maps operational zones to regulatory constraints (e.g., GDPR, CCPA) and applies dynamic weight multipliers within the zk-SNARK computation. This ensures that reputation scores are not only portable but also legally compliant across borders, a capability absent in current decentralized identity and reputation frameworks.
 
 ## Ecosystem use
 

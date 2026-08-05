@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-03T20:17:18.872931+00:00 UTC |
-| Certificate hash (SHA-256) | `e723d7bb3c4c3cc91e97380127e59c92a43236ccd4875f6a5e45842a329caf61` |
-| Content hash (SHA-256) | `39aa5d3d76f02787838cfe17473245e8e984f05cce4df10292559e56fa583c42` |
-| Chain index | 1134 |
+| Certificate issued | 2026-08-04T17:37:20.732286+00:00 UTC |
+| Certificate hash (SHA-256) | `3f469646979c8afe89bd3d9064df309f19c9f00e557f265833b0ba09bc8e0346` |
+| Content hash (SHA-256) | `38d7c07cc8be34b5b6b0fdae7030425dcb6483d360852ee44ababe6990f5d1dd` |
+| Chain index | 1172 |
 | License | MIT |
 
 ## Problem
@@ -49,11 +49,7 @@ Developers of on-premise AI agents in education, academia, and industry who requ
 
 ## Novelty
 
-This invention introduces 'Active Hardware-Anchored Enforcement' to solve the 'Shadow State Divergence' problem, a critical vulnerability unaddressed by prior art [P1-P5]. 
-
-1. Contrast with Passive Prior Art: Existing solutions [P1-P5] rely on passive, software-only audit logs or post-hoc data provenance capsules. [P3] and [P5] verify data content integrity after the fact but lack mechanisms to enforce operational fidelity during runtime. [P4] provides agentless metadata distribution but does not secure the agent's internal execution loop. In contrast, this SDK cryptographically couples internal state machine transitions and tool resolution logic to TPM-signed execution quotes in real-time, ensuring that the recorded execution trace matches the actual runtime behavior.
-
-2. Unique Threat Model - Shadow State Divergence: Current systems are vulnerable to 'shadow state' attacks where an agent's internal logic diverges from its logged outputs (e.g., via log injection or state replay) without immediate consequence. This SDK uniquely mitigates this by anchoring the dynamic computational path to a hardware root of trust (TPM). Unlike [P1-P5], which end at verification, this invention includes a privileged, isolated termination handler that acts as an automated, hardware-trusted circuit breaker. It enforces an immediate, irreversible halt (via low-level OS signals) upon integrity failure, preventing further action or data exfiltration. This active enforcement bridges the gap between cryptographic proof and operational consequence—a capability absent in the passive verification models of [P1-P5].
+Active Hardware-Anchored Enforcement: Solves 'Shadow State Divergence' by coupling real-time execution traces to TPM-signed quotes, enabling immediate, hardware-enforced termination upon integrity failure—a capability absent in passive, post-hoc verification models [P1-P5].
 
 ## Ecosystem use
 
@@ -81,4 +77,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e723d7bb3c4c3cc91e97380127e59c92a43236ccd4875f6a5e45842a329caf61*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f469646979c8afe89bd3d9064df309f19c9f00e557f265833b0ba09bc8e0346*

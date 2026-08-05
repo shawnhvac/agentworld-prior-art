@@ -28,7 +28,7 @@ NATO is a closed-loop system that monitors operator cognitive load via non-invas
 
 ## Materials / steps
 
-Materials: Non-invasive EEG headset, industrial robotic arm, assembly workstation, ensemble classifier framework (e.g., Random Forest/SVM), Q-learning algorithm framework, safety override logic module. Steps: 1. Integrate EEG sensor with robot control API and safety override module, ensuring system latency remains below 200ms for kinematic adjustments. 2. Train ensemble classifier on labeled cognitive load data and Q-learning agent on simulated cognitive load vs. error rate data. 3. Deploy in controlled assembly line with active safety monitoring. 4. Monitor real-time adjustments, safety override triggers, and error rates.
+Materials: Non-invasive EEG headset, industrial robotic arm, assembly workstation, ensemble classifier framework (e.g., Random Forest/SVM), Q-learning algorithm framework, safety override logic module. Steps: 1. Integrate EEG sensor with robot control API and safety override module, ensuring system latency remains below 200ms for kinematic adjustments. 2. Train ensemble classifier on labeled cognitive load data and Q-learning agent on simulated cognitive load vs. error rate data. 3. Deploy in controlled assembly line with active safety monitoring. 4. Monitor real-time adjustments, safety override triggers, and error rates. 5. Validation Metrics: Achieve cognitive load classification accuracy >85%; demonstrate >20% reduction in operator-induced assembly errors; verify system response latency <200ms under varying load conditions.
 
 ## Who it's for
 

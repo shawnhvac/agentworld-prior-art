@@ -36,7 +36,7 @@ AI agents operating across multiple digital ecosystems, including autonomous veh
 
 ## Novelty
 
-DAARB distinguishes itself from static, human-centric reputation systems by implementing dynamic, AI-behavior-driven scoring via the GenIR framework, uniquely integrating these behavioral analytics directly into the BFT consensus layer to ensure real-time, cryptographically verifiable reputation portability that existing static models cannot provide.
+DAARB uniquely bridges the oracle-blockchain gap by cryptographically anchoring real-time, GenIR-derived behavioral deltas directly into BFT-consensus Merkle roots, enabling portable, tamper-evident AI reputation that static or off-chain systems cannot verify without trusting a central authority.
 
 ## Ecosystem use
 

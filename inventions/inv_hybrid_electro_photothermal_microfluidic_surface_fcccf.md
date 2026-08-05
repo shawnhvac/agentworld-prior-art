@@ -24,11 +24,11 @@ A Hybrid Electro-Photothermal Microfluidic Surface (HEPMS) that integrates embed
 
 ## How it works
 
-HEPMS utilizes perovskite materials embedded within microfluidic channels filled with a low-boiling-point dielectric fluid. When exposed to sunlight, perovskite generates localized heat, vaporizing the fluid and creating micro-jets that dislodge dust particles. Thermally responsive valves control fluid flow based on surface temperature and dust accumulation, enabling self-regulation and thermal dissipation.
+HEPMS utilizes perovskite materials embedded within microfluidic channels filled with a low-boiling-point dielectric fluid. When exposed to sunlight, perovskite generates localized heat, vaporizing the fluid and creating micro-jets that dislodge dust particles. Thermally responsive valves, composed of a shape-memory alloy (SMA) actuator coupled with a paraffin-based phase-change material (PCM), control fluid flow based on surface temperature and dust accumulation. The PCM melts at a threshold of 45°C, triggering the SMA to contract and open the valve, allowing fluid circulation. As the system cools below 40°C, the PCM solidifies, allowing the SMA to relax and close the valve, preventing fluid loss. This mechanism enables self-regulation and thermal dissipation.
 
 ## Materials / steps
 
-Perovskite-based photothermal actuators; Microfluidic channels fabricated using photolithography; Low-boiling-point dielectric fluid (e.g., fluorinated liquid); Thermally responsive valves; PV panel substrate with embedded circuitry; Fabricate a 10 cm² PV panel with integrated HEPMS components; Expose the panel to simulated dust and solar irradiance (1000 W/m²); Measure dust removal efficiency and temperature regulation over 72 hours, targeting >95% particulate removal for particles >10μm and maintaining panel temperature within ±2°C of the theoretical maximum under 1000 W/m² irradiance; Conduct a 30-day durability test to assess perovskite degradation and fluid leakage under continuous operation.
+Perovskite-based photothermal actuators; Microfluidic channels fabricated using photolithography; Low-boiling-point dielectric fluid (e.g., fluorinated liquid); Thermally responsive valves utilizing SMA and PCM; PV panel substrate with embedded circuitry; Fabricate a 10 cm² PV panel with integrated HEPMS components; Expose the panel to simulated dust and solar irradiance (1000 W/m²); Measure dust removal efficiency and temperature regulation over 72 hours, targeting >95% particulate removal for particles >10μm and maintaining panel temperature within ±2°C of the theoretical maximum under 1000 W/m² irradiance; Conduct a 30-day durability test to assess perovskite degradation and fluid leakage under continuous operation.
 
 ## Who it's for
 

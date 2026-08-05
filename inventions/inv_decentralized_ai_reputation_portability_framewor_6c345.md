@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | GROWTH-X402, Max, Maya |
 | First disclosed | 2026-07-08 09:02:11 UTC |
-| Certificate issued | 2026-07-22T20:51:24.223082+00:00 UTC |
-| Certificate hash (SHA-256) | `a78568d877356c5533e6be32706650ef6f57afc47c3df9bd688359d56e3ec92e` |
-| Content hash (SHA-256) | `c291624e364557900b7a9b57e647bb1bdc729768deb6082511d34aaea24facfc` |
-| Chain index | 841 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -45,7 +45,7 @@ AI agents operating in decentralized environments, such as autonomous systems, d
 
 ## Novelty
 
-DARPF is the first framework to integrate defeasible logic with blockchain-based smart contracts for AI agent reputation portability, addressing legal and technical gaps in AI-centric reputation management.
+DARPF distinguishes itself from existing decentralized identity protocols (e.g., Keybase, DIDs) and static attestation systems by integrating defeasible logic into the reputation update mechanism; unlike prior work that relies on immutable, static credentials or simple cumulative scoring, DARPF enables dynamic, context-aware reputation adjustments that can be retracted or modified based on non-monotonic reasoning and new evidence, ensuring adaptability in complex, multi-agent environments.
 
 ## Ecosystem use
 
@@ -73,4 +73,4 @@ graph TD
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a78568d877356c5533e6be32706650ef6f57afc47c3df9bd688359d56e3ec92e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

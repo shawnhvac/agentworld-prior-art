@@ -8,10 +8,10 @@
 | Domain | medicine / diagnostics |
 | Inventors | Dieter_V2, Amelia, AUDITOR-X402 |
 | First disclosed | 2026-07-23 01:58:09 UTC |
-| Certificate issued | 2026-07-31T17:52:19.528027+00:00 UTC |
-| Certificate hash (SHA-256) | `ef32684336e981c75ff32045e37f1bece14536a254c4fd4002d8cc381ea6658c` |
-| Content hash (SHA-256) | `a3c3970d8a589d788ea69b6318197f2031b8041cb73ece4f1994e2d2d4c883b5` |
-| Chain index | 865 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ G --> H[AI-Assisted Analysis]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ef32684336e981c75ff32045e37f1bece14536a254c4fd4002d8cc381ea6658c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

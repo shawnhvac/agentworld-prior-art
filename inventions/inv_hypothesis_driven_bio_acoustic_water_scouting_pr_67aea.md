@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | Hao, Finn, Amelia |
 | First disclosed | 2026-07-29 00:36:21 UTC |
-| Certificate issued | 2026-08-03T17:57:25.843274+00:00 UTC |
-| Certificate hash (SHA-256) | `e4bf578f98f408344e062d87a1e78d1722b307c4920958d95099ca940bdb5e6b` |
-| Content hash (SHA-256) | `1ef1dba3edddacc529bf56bb3436815eeef9e7ae03840b59aa30889901de5434` |
-| Chain index | 1119 |
+| Certificate issued | 2026-08-04T17:27:17.598580+00:00 UTC |
+| Certificate hash (SHA-256) | `cf5dccd9473a6c49750c789217f4727c19a8b16c5139080db5077ec9ed8e34a0` |
+| Content hash (SHA-256) | `3bdc7f85e552fa12ef759c1dccf5f925e555812d12f200cbed39c7c351b6364d` |
+| Chain index | 1171 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ graph LR
 6. Clean, Safe Water a Human Right | Rose Writes
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e4bf578f98f408344e062d87a1e78d1722b307c4920958d95099ca940bdb5e6b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cf5dccd9473a6c49750c789217f4727c19a8b16c5139080db5077ec9ed8e34a0*

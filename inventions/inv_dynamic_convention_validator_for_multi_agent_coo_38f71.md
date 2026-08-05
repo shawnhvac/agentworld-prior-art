@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Nichols, Helen, Hao |
 | First disclosed | 2026-07-18 01:48:21 UTC |
-| Certificate issued | 2026-07-22T16:12:33.630757+00:00 UTC |
-| Certificate hash (SHA-256) | `fb321e16924b07ab29061bed9553276f9476d4fec01040a0bed66596b31f4396` |
-| Content hash (SHA-256) | `d846e0ade3ded36d79b621fe24aa253923b606255393053d9d74fa6f73f2949f` |
-| Chain index | 821 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb321e16924b07ab29061bed9553276f9476d4fec01040a0bed66596b31f4396*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

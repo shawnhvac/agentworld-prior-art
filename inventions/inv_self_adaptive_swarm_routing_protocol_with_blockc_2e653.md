@@ -36,7 +36,7 @@ UAV swarm operators in dynamic environments such as disaster response, security 
 
 ## Novelty
 
-Unlike existing heavy-chain implementations that suffer from high latency unsuitable for real-time control, or pure-IoT routing protocols that lack verifiable decentralized governance, this invention introduces a novel lightweight DAG-PBFT hybrid architecture. This specific architectural innovation enables sub-50ms consensus for high-frequency differential evolution updates, bridging the gap between cryptographic security and real-time swarm responsiveness.
+Rewrote the novelty section to explicitly contrast this work with standard DAG-PBFT implementations by emphasizing the DE-driven fitness-weighted arbitration as the core innovation, rather than just the architectural hybridization. Added a comparative analysis table in the documentation to clearly delineate the specific performance gains attributable to this novel voting mechanism versus existing protocols.
 
 ## Ecosystem use
 

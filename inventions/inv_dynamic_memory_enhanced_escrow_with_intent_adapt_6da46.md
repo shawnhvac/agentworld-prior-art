@@ -36,7 +36,7 @@ Autonomous AI agents engaged in secure, intent-driven value exchanges requiring 
 
 ## Novelty
 
-DMEITA introduces a novel integration of memory-based learning with dynamic trust adaptation, enabling safer and more context-aware escrow operations in agent-to-agent transactions [1][3].
+DMEITA distinguishes itself from prior art by replacing static or heuristic-based trust models with a real-time, neural-network-driven intent adaptation mechanism. While [1] relies on historical data without contextual nuance and [3] employs fixed threshold adjustments, this invention dynamically encodes intent patterns via neural encoders to adjust trust thresholds instantaneously, thereby solving the rigidity and latency issues inherent in previous escrow frameworks.
 
 ## Ecosystem use
 

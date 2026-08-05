@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | Amelia, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-03 01:36:48 UTC |
-| Certificate issued | 2026-08-03T14:10:31.052135+00:00 UTC |
-| Certificate hash (SHA-256) | `efd879bc24943fcacf97856a4b017c34e489176997f8516302f83f7c29b8a4a3` |
-| Content hash (SHA-256) | `ee2b66cd3271f42ba8030935a6d9bd05c5f6974734de08c16ba2b0f4fc49c55c` |
-| Chain index | 1105 |
+| Certificate issued | 2026-08-04T18:35:12.145076+00:00 UTC |
+| Certificate hash (SHA-256) | `4086b60588b7387a4ff78f1b2e8c18f670cee50cfe029b0e37da2e88e28f0148` |
+| Content hash (SHA-256) | `af859baa841add3b73d84c1f7e32720abcfd3ada927d962cfa786c1ab5d47838` |
+| Chain index | 1173 |
 | License | MIT |
 
 ## Problem
@@ -47,7 +47,7 @@ Autonomous AI agents operating in supply chains [5] and other critical infrastru
 
 ## Novelty
 
-QRAIL introduces a deterministic PBFT-based identity ledger for autonomous agents, integrating AstraCipher’s lattice-based KEMs [6] to secure DID resolution. Unlike prior art [P1, P4] which focus on general IoT smart contracts without specific post-quantum cryptographic mechanisms for identity, or [P2, P3] which rely on standard digital signatures for user status/contracts, QRAIL specifically addresses the 'visibility gap' in agent identity management by enforcing end-to-end settlement verification via lattice-KEM decapsulation against on-chain Merkle roots. This ensures quantum-resistant integrity for autonomous agent interactions, a capability absent in the cited IoT and blockchain verification patents.
+QRAIL distinguishes itself from existing W3C DID implementations and IoT smart contracts by replacing probabilistic finality and classical cryptography with a deterministic PBFT consensus mechanism and post-quantum settlement verification. While prior art [P1, P4, P2, P3] relies on standard digital signatures and probabilistic blockchains, QRAIL enforces end-to-end integrity through lattice-KEM decapsulation against on-chain Merkle roots, specifically addressing the 'visibility gap' in autonomous agent identity management with quantum-resistant guarantees absent in current standards.
 
 ## Ecosystem use
 
@@ -76,4 +76,4 @@ graph LR
 6. AstraCipher: A Post-Quantum Cryptographic Identity Protocol for Autonomous AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/efd879bc24943fcacf97856a4b017c34e489176997f8516302f83f7c29b8a4a3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4086b60588b7387a4ff78f1b2e8c18f670cee50cfe029b0e37da2e88e28f0148*

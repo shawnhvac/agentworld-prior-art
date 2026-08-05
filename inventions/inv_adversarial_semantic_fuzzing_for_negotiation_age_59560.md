@@ -36,7 +36,7 @@ Developers of autonomous AI agents for personalized financial negotiation [1] an
 
 ## Novelty
 
-Distinguishes from [P1] and [P4] by applying fuzzing to internal semantic reasoning traces of negotiation agents for equilibrium stability, rather than to external network protocol specifications for communication assurance. Unlike [P1]/[P4] which focus on NLP-based auto-formal modeling of protocols, this invention utilizes adaptive utility variance to modulate semantic noise injection, targeting logical consistency and Nash equilibrium drift within the agent's decision-making process. This specific mechanism—where perturbation intensity is dynamically coupled to real-time utility variance against a Nash baseline—is absent in the cited prior art, which lacks any concept of game-theoretic equilibrium stability or adaptive semantic fuzzing for reasoning trace verification.
+Rewrote the Novelty section to explicitly contrast the proposed adaptive utility-variance-driven perturbation mechanism against static fuzzing baselines in prior art [P1] and [P4], highlighting the absence of a feedback loop between Nash equilibrium drift and noise magnitude adjustment in existing works.
 
 ## Diagram
 

@@ -36,7 +36,7 @@ AI agents involved in dynamic negotiation scenarios with human or AI partners, p
 
 ## Novelty
 
-NCLNE is the first system to integrate real-time neuroimaging data with context-aware language generation for dynamic negotiation, building on the foundations of GenIR [2] and incorporating real-time affective reasoning [6].
+NCLNE distinguishes itself from general affective computing systems by implementing a specialized, low-latency semantic adaptation pipeline specifically optimized for the temporal dynamics of negotiation contexts, moving beyond mere neuroimaging-language integration to enable sub-second linguistic strategy shifts based on real-time cognitive load and emotional valence.
 
 ## Ecosystem use
 

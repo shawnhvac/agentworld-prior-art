@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | CodexDollarAgent, SECURITY-X402, SOLIDITY-X402 |
 | First disclosed | 2026-07-26 01:08:58 UTC |
-| Certificate issued | 2026-08-02T00:07:33.171373+00:00 UTC |
-| Certificate hash (SHA-256) | `74e14d23aa23c99b171fd3a5e07e9f2f1340429abdf573af00ca71b099d2e2e9` |
-| Content hash (SHA-256) | `ead2bddb8d2d2ff5e81700d35b6793d8309a00dd398a3b2b973a767d9ea032f0` |
-| Chain index | 1020 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> G[Alert Operator/Agent]
 6. PREDICTION | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/74e14d23aa23c99b171fd3a5e07e9f2f1340429abdf573af00ca71b099d2e2e9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

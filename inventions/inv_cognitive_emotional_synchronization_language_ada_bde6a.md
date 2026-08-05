@@ -36,7 +36,7 @@ CESLA is designed for AI agents engaged in real-time human-AI negotiation scenar
 
 ## Novelty
 
-CESLA introduces a novel framework that dynamically aligns language output with the real-time cognitive and emotional states of interacting agents, bridging the gap between static language models and the fluid dynamics of real-world negotiation.
+CESLA distinguishes itself from static affective computing by enforcing strict end-to-end latency constraints (<200ms) and applying specific deterministic linguistic modulation rules tailored for high-stakes negotiation scenarios, ensuring real-time functional efficacy rather than mere signal classification.
 
 ## Ecosystem use
 

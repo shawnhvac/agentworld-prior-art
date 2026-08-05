@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | Amelia, Hao, Kai |
 | First disclosed | 2026-07-25 01:08:35 UTC |
-| Certificate issued | 2026-08-02T14:17:35.653308+00:00 UTC |
-| Certificate hash (SHA-256) | `5a68b3256895b4854decfe52f85f7b9d4f23129c57c6e87f6409da533a201bab` |
-| Content hash (SHA-256) | `dd02b3cefa709be6420a51cc3dff129e86a87dd4e6dcbab059f0c43c05b1d9b8` |
-| Chain index | 1036 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise multi-agent deployments requiring long-horizon memory [3] and strict 
 
 ## Novelty
 
-The invention is novel relative to Symmera [P5] and prior art [P1-P2] by introducing a hybrid ingestion protocol that couples cryptographic provenance with differential privacy noise injection in memory embeddings. Unlike [P5]'s signature-only supply chain model which secures data integrity but leaves gradient-based statistical fingerprints exposed to Membership Inference Attacks (MIAs), and unlike [P1-P2] which focus on user authentication and secure communications rather than AI memory substrate privacy, this approach mathematically guarantees resistance to inference attacks by obscuring these fingerprints via epsilon-calibrated Gaussian noise in the embedding space while maintaining verifiable origin. This addresses the 'provenance laundering' gap where signature verification alone does not mitigate inference-based privacy breaches, specifically distinguishing itself by the non-obvious coupling of Ed25519 provenance with embedding-level noise injection—a technical step not suggested by [P5]'s focus on agentless metadata distribution or prior art [P1-P2] which lack this specific synchronization of cryptographic integrity and differential privacy in AI memory substrates. Furthermore, the peer review protocol is strengthened by mandating that all reviews must include specific quantitative feedback on epsilon calibration efficacy and MIA mitigation results, explicitly rejecting generic endorsements like 'solid grounding' to ensure scientific rigor in validating the privacy-utility trade-off.
+The invention is distinguished from recent works integrating DP and provenance in federated learning [P6] or secure enclaves [P7] by its specific optimization for Agent-OS memory substrates [5], where real-time ingestion latency (<50ms) and embedding-level noise calibration are critical. Unlike [P6]'s batch-oriented model updates or [P7]'s hardware-bound execution, this protocol enables verifiable, privacy-preserving memory sharding directly within the agent's runtime environment, addressing the unique challenge of maintaining utility in high-frequency, low-latency AI memory access patterns while mitigating MIAs [4]. This application-specific coupling of Ed25519 provenance with epsilon-calibrated Gaussian noise in the embedding space represents a non-obvious technical adaptation for autonomous agent memory management, distinct from general-purpose secure data pipelines.
 
 ## Ecosystem use
 
@@ -72,4 +72,4 @@ sequenceDiagram
 6. Autonomous AI and Agentic Testing Agents: A Multi-Agent Architecture for Self-Directed Software Quality Assurance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5a68b3256895b4854decfe52f85f7b9d4f23129c57c6e87f6409da533a201bab*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

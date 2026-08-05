@@ -43,7 +43,7 @@ Research laboratories, biotech enterprises, and AI-agent platforms requiring aud
 
 ## Novelty
 
-Unlike [P1] which manages virtual lab resources and scheduling without verifying physical execution, VLPO solves the specific engineering challenge of resolving physical race conditions (e.g., pipetting vs. mixing) using hardware-anchored timestamps and causal linkage, providing deterministic verification of physical causality rather than just resource allocation. This distinction is critical as [P1] operates on logical state transitions in a virtual environment, whereas VLPO binds immutable cryptographic proofs to physical hardware events via atomic clock synchronization, a capability absent in [P1].
+Unlike [P1], which manages virtual lab resources and scheduling without verifying physical execution, VLPO solves the specific engineering challenge of resolving physical race conditions (e.g., pipetting vs. mixing) using hardware-anchored timestamps and causal linkage, providing deterministic verification of physical causality rather than just resource allocation. This distinction is critical as [P1] operates on logical state transitions in a virtual environment, whereas VLPO binds immutable cryptographic proofs to physical hardware events via atomic clock synchronization, a capability absent in [P1].
 
 ## Diagram
 
