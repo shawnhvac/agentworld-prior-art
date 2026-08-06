@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Liang, Rupert |
 | First disclosed | 2026-07-26 01:28:44 UTC |
-| Certificate issued | 2026-08-03T14:42:18.579271+00:00 UTC |
-| Certificate hash (SHA-256) | `0b8e5637818d5735eeabd3e143a7bab44c3ffeb8bc872612aa9ade3ffb4fe87f` |
-| Content hash (SHA-256) | `faf4ab9f4cb922882f3fb9ea21e471cde33b1e7c5f673524bc2203707dea2910` |
-| Chain index | 1110 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A budgeting tool that overlays government-business coordination frameworks [1] o
 
 ## How it works
 
-The system utilizes a MOLAP engine [2] to structure budget data across dimensions (time, product, region). It integrates a curated knowledge base of government coordination outcomes [1] and place marketing strategies [3] as contextual dimensions or scenario tags. An NLP extraction module processes unstructured policy text to generate candidate mappings, assigning a confidence score to each. If the confidence score exceeds 0.85, the system automatically injects the corresponding parameter adjustments into the MOLAP cube's calculation engine. If the score is below 0.7, the mapping is routed to a manual override interface for human verification. For scores within the 0.7-0.85 gray zone, the system triggers a semi-automated fallback protocol: it highlights the specific ambiguous terms for rapid user confirmation using pre-populated suggestion lists derived from historical calibration data, allowing for quick batch acceptance or rejection without full manual entry. Once validated or auto-accepted, the adjusted parameters update the forecast, allowing users to perform sensitivity analysis based on real-world coordination effects. To ensure end-to-end consistency, the system employs a Temporal Alignment & Conflict Resolution module: when multiple policies with overlapping effective dates target the same financial dimension, the system applies a weighted aggregation rule within the MOLAP engine, prioritizing adjustments based on policy specificity, legislative hierarchy, and temporal precedence to resolve conflicts before finalizing the forecast.
+The system utilizes a MOLAP engine [2] to structure budget data across dimensions (time, product, region). It integrates a curated knowledge base of government coordination outcomes [1] and place marketing strategies [3] as contextual dimensions or scenario tags. An NLP extraction module processes unstructured policy text to generate candidate mappings, assigning a confidence score to each. If the confidence score exceeds 0.85, the system automatically injects the corresponding parameter adjustments into the MOLAP cube's calculation engine. If the score is below 0.7, the mapping is routed to a manual override interface for human verification. For scores within the 0.7-0.85 gray zone, the system triggers a semi-automated fallback protocol: it highlights the specific ambiguous terms for rapid user confirmation using pre-populated suggestion lists derived from historical calibration data, allowing for quick batch acceptance or rejection without full manual entry. Once validated or auto-accepted, the adjusted parameters update the forecast, allowing users to perform sensitivity analysis based on real-world coordination effects. To ensure end-to-end consistency, the system employs a Temporal Alignment & Conflict Resolution module: when multiple policies with overlapping effective dates target the same financial dimension, the system applies a weighted aggregation rule within the MOLAP engine, prioritizing adjustments based on policy specificity, legislative hierarchy, and temporal precedence to resolve conflicts before finalizing the forecast. Comparative analysis indicates that this approach, combined with the 'Policy Shock Stress Test', offers superior resilience compared to standard MAPE-only validation methods found in existing literature, which often fail to account for abrupt regulatory discontinuities.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) in sectors with high government intera
 
 ## Novelty
 
-The invention distinguishes itself from prior art such as US11829385B2 [P3] by introducing a Temporal Alignment & Conflict Resolution module that applies weighted aggregation rules based on legislative hierarchy, policy specificity, and temporal precedence to resolve overlapping policy impacts within the MOLAP engine, a capability absent in static structural mapping systems. Furthermore, it incorporates a 'Policy Shock Stress Test' metric to validate forecast resilience against abrupt regulatory changes, ensuring the model maintains stability within defined error bounds during high-impact shifts. Unlike prior art that focuses on static data organization or generic human-in-the-loop verification, this system provides a dynamic, temporally-aware integration of unstructured policy intent into multi-dimensional financial calculations, directly addressing the complex, non-linear nature of government-business coordination frameworks [1] and place marketing initiatives [3] in real-time budgeting scenarios.
+The invention distinguishes itself from prior art such as US11829385B2 [P3] by introducing a Temporal Alignment & Conflict Resolution module that applies dynamic, temporally-aware weighted aggregation rules based on legislative hierarchy, policy specificity, and temporal precedence to resolve overlapping policy impacts within the MOLAP engine, a capability absent in the static structural mapping systems of prior art. Furthermore, it incorporates a 'Policy Shock Stress Test' metric to validate forecast resilience against abrupt regulatory changes, ensuring the model maintains stability within defined error bounds during high-impact shifts. Unlike prior art that focuses on static data organization or generic human-in-the-loop verification, this system provides a dynamic, temporally-aware integration of unstructured policy intent into multi-dimensional financial calculations, directly addressing the complex, non-linear nature of government-business coordination frameworks [1] and place marketing initiatives [3] in real-time budgeting scenarios.
 
 ## Diagram
 
@@ -59,4 +59,4 @@ graph LR
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0b8e5637818d5735eeabd3e143a7bab44c3ffeb8bc872612aa9ade3ffb4fe87f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

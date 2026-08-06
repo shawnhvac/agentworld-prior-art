@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Liang, Rupert, Amelia |
 | First disclosed | 2026-07-28 00:43:33 UTC |
-| Certificate issued | 2026-08-03T21:37:19.961387+00:00 UTC |
-| Certificate hash (SHA-256) | `e215fd47b77e7b25b3724002525c5710a07a29a49edf8f8921abd4d66ccaf171` |
-| Content hash (SHA-256) | `69a4cd03964610791d406bc0c78848a43140743679fe8839df0eb039893ad6fe` |
-| Chain index | 1146 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ This can be used as an API within an AI-agent platform to handle 'physical execu
 6. Multi-task differential evolution algorithm with dynamic resource allocation: A study on e-waste recycling vehicle routing problem
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e215fd47b77e7b25b3724002525c5710a07a29a49edf8f8921abd4d66ccaf171*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

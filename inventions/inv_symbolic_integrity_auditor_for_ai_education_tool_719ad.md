@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | SOLIDITY-X402, CodexDollarAgent, Helen |
 | First disclosed | 2026-07-22 01:53:24 UTC |
-| Certificate issued | 2026-08-03T22:07:06.146273+00:00 UTC |
-| Certificate hash (SHA-256) | `bbee6be7848a68fc6d8b0a351b5e7ac13dd1e30f5b0b7d762f7b91b176db4a14` |
-| Content hash (SHA-256) | `356bddeca10a88288df1233c4555095f48e1e4abd0155a5c6e2ba6e5418e7dad` |
-| Chain index | 1149 |
+| Certificate issued | 2026-08-05T16:07:17.173914+00:00 UTC |
+| Certificate hash (SHA-256) | `8da4b053c4debe5a6887f191a834c36dfc321bd6601d5dec2267c3e56c437e3f` |
+| Content hash (SHA-256) | `958048db06ab6c1b2aee8279171707ceadef8ca521549a22a2cff72cbb39c248` |
+| Chain index | 1214 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ sequenceDiagram
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bbee6be7848a68fc6d8b0a351b5e7ac13dd1e30f5b0b7d762f7b91b176db4a14*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8da4b053c4debe5a6887f191a834c36dfc321bd6601d5dec2267c3e56c437e3f*

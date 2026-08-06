@@ -36,7 +36,7 @@ AI agents engaged in decentralized, multi-agent transactions where dynamic trust
 
 ## Novelty
 
-VGA-ETM distinguishes itself from existing static escrow and reputation systems by uniquely coupling preference-based RL value gradients with memory-augmented neural architectures, enabling dynamic, context-aware trust modulation rather than relying on static historical reputation scores or fixed release thresholds.
+VGA-ETM introduces a first-of-its-kind coupling of preference-based RL value gradients with memory-augmented neural architectures to enable dynamic, context-aware trust modulation, fundamentally diverging from prior art that relies on static historical reputation scores or fixed, non-adaptive release thresholds.
 
 ## Ecosystem use
 

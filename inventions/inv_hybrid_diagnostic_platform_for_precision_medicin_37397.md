@@ -36,7 +36,7 @@ Patients undergoing diagnostic procedures in precision medicine, particularly th
 
 ## Novelty
 
-This system uniquely integrates real-time physiological data with static genomic data through adaptive machine learning, allowing for dynamic adjustments in diagnostic protocols during the procedure.
+Unlike static multimodal models that merely aggregate disparate data sources, this platform establishes a closed-loop diagnostic system characterized by <100ms temporal synchronization latency, enabling real-time, dynamic adjustment of biopsy protocols based on instantaneous physiological feedback rather than post-hoc analysis.
 
 ## Ecosystem use
 

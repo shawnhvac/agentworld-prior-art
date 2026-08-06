@@ -36,7 +36,16 @@ Autonomous AI agents and systems requiring secure, adaptive escrow mechanisms fo
 
 ## Novelty
 
-Unlike [P1] which distributes trust across cloud entities for data security, and [P2] which manages network access control, DTEF is novel in its hardware-enforced, real-time behavioral trust recalibration for autonomous agent asset delegation. It specifically combines FPGA-based low-latency trust scoring with blockchain-anchored immutable behavioral logs to create a tamper-proof escrow mechanism that adapts to agent actions in milliseconds, a capability absent in software-only or static trust models.
+DTEF distinguishes itself from [P1] and [P2] by uniquely coupling hardware-enforced FPGA latency (<10ms) with blockchain-anchored immutability for real-time behavioral trust recalibration. While [P1] focuses on distributed cloud data security and [P2] on static network access control, neither supports millisecond-level, tamper-proof adaptation of trust scores during active asset delegation. The following table quantifies this gap:
+
+| Feature | P1 (Cloud Trust) | P2 (Network ACL) | DTEF (Dynamic Escrow) |
+| :--- | :---: | :---: | :---: |
+| Real-time Behavioral Recalibration | No | No | Yes (FPGA <10ms) |
+| Immutable Behavior Logging | Partial (Cloud Logs) | No | Yes (Blockchain) |
+| Adaptive Asset Delegation | No | No | Yes |
+| Latency Sensitivity | High (Cloud) | Medium | Ultra-Low (Hardware) |
+
+This combination ensures a tamper-proof escrow mechanism that adapts to agent actions in milliseconds, a capability absent in software-only or static models.
 
 ## Ecosystem use
 

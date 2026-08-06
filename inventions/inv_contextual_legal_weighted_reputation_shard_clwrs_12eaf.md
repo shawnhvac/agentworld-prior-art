@@ -24,11 +24,11 @@ A system that dynamically fragments and reweights reputation data based on the s
 
 ## How it works
 
-1. Ingest reputation vector from source platform. 2. Identify target jurisdiction and receiving platform context. 3. Apply deterministic policy engine to map data fields against legal constraints (e.g., GDPR, US sectoral laws). 4. Execute Jurisdictional Conflict Resolution Protocol for overlapping legal frameworks. 5. Dynamically mask or zero out non-compliant fields. 6. Anchor the compliant, context-aware shard on the blockchain. 7. Deliver the shard to the receiving agent/platform.
+1. Ingest reputation vector from source platform. 2. Identify target jurisdiction and receiving platform context. 3. Apply deterministic policy engine to map data fields against legal constraints (e.g., GDPR, US sectoral laws). 4. Execute Jurisdictional Conflict Resolution Protocol for overlapping legal frameworks. 5. Dynamically mask non-compliant fields using a Sparse Merkle Tree (SMT) structure, generating a zk-SNARK proof that the masked fields satisfy jurisdictional predicates without revealing their values. 6. Anchor the compliant, context-aware shard and its accompanying validity proof on the blockchain. 7. Deliver the shard to the receiving agent/platform via the API.
 
 ## Materials / steps
 
-1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation. 6. Implement formal verification methods (e.g., model checking or theorem proving) for the deterministic policy engine to mathematically guarantee compliance with legal constraints and handle edge cases in jurisdictional mapping. 7. Define and implement the Jurisdictional Conflict Resolution Protocol to handle edge cases in overlapping legal frameworks.
+1. Develop a deterministic policy engine capable of parsing legal rule sets. 2. Create a mapping database linking reputation data fields to jurisdiction-specific privacy constraints. 3. Implement a blockchain anchoring mechanism for the processed shards. 4. Build an API for cross-jurisdictional transfer requests. 5. Construct a ground-truth dataset of manually reviewed cross-jurisdictional data transfers for validation. 6. Implement formal verification methods (e.g., model checking or theorem proving) for the deterministic policy engine to mathematically guarantee compliance with legal constraints and handle edge cases in jurisdictional mapping. 7. Define and implement the Jurisdictional Conflict Resolution Protocol to handle edge cases in overlapping legal frameworks. 8. Integrate a zk-SNARK circuit generator to create proofs for masked fields, ensuring that the proof verification cost is linear relative to the number of masked attributes. 9. Establish a quantitative validation framework measuring proof generation latency, verification cost relative to masked attributes, and a utility loss score comparing CLWRS output against ground-truth reputation vectors to scientifically validate the trade-off between privacy and utility.
 
 ## Who it's for
 
@@ -45,16 +45,19 @@ This system can be integrated into an AI-agent platform as a middleware API for 
 ## Diagram
 
 ```mermaid
-graph TD
-    A[Ingest Reputation Vector] --> B[Identify Target Jurisdiction & Context]
-    B --> C{Jurisdictional Conflict?}
-    C -- Yes --> D[Execute Jurisdictional Conflict Resolution Protocol]
-    C -- No --> E[Apply Deterministic Policy Engine]
-    D --> E
-    E --> F[Map Fields Against Legal Constraints]
-    F --> G[Dynamically Mask/Zero Out Non-Compliant Fields]
-    G --> H[Anchor Compliant Shard on Blockchain]
-    H --> I[Deliver Shard to Receiving Agent]
+sequenceDiagram
+    participant Source as Source Platform
+    participant Engine as CLWRS Policy Engine
+    participant Blockchain as Blockchain Anchor
+    participant Receiver as Receiving Platform
+    Source->>Engine: Send Reputation Vector & Target Context
+    Engine->>Engine: Apply Legal Weight Function & Mask Fields
+    Engine->>Engine: Generate zk-SNARK Proof for Masked Fields
+    Engine->>Blockchain: Anchor Shard + Proof
+    Blockchain-->>Engine: Transaction Hash
+    Engine->>Receiver: Deliver Shard + Proof via API
+    Receiver->>Blockchain: Verify Proof & Anchor
+    Receiver-->>Receiver: Reconstruct Valid Reputation Data
 ```
 
 ## Sources / grounding

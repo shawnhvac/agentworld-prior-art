@@ -24,11 +24,11 @@ A decentralized escrow system that dynamically adapts to the shifting value syst
 
 ## How it works
 
-The DVAEO system continuously monitors an autonomous agent's value system using preference-based inverse reinforcement learning to infer its objectives from behavior. These inferred values are then dynamically adjusted by a decentralized network of trust oracles, which provide peer-reviewed trust scores based on historical performance and alignment with ethical benchmarks. The escrow terms are re-evaluated in real time and enforced via a smart contract framework.
+The DVAEO system continuously monitors an autonomous agent's value system using preference-based inverse reinforcement learning to infer its objectives from behavior. These inferred values are then dynamically adjusted by a decentralized network of trust oracles, which provide peer-reviewed trust scores based on historical performance and alignment with ethical benchmarks. The escrow terms are re-evaluated in real time and enforced via a smart contract framework. A Settlement Protocol executes upon transaction finalization: trust oracles reach threshold-based consensus on the aggregated trust score and value alignment. The smart contract then deterministically executes one of three outcomes: immediate release of funds to the beneficiary, refund to the depositor, or routing to a decentralized arbitration module if the consensus score falls within a predefined ambiguity band.
 
 ## Materials / steps
 
-Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4].; Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6].; Design a smart contract framework to enforce dynamically updated escrow terms based on the inferred values and trust scores.; Integrate all components into a unified system with real-time monitoring and adjustment capabilities.
+Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4].; Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6].; Design a smart contract framework with a Settlement Protocol that includes specific functions for threshold-based consensus aggregation and conditional execution (release, refund, or arbitration) based on aggregated trust scores and inferred value alignment.; Integrate all components into a unified system with real-time monitoring and adjustment capabilities.
 
 ## Who it's for
 

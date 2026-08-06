@@ -46,7 +46,7 @@ AI agents participating in peer-to-peer compute networks, particularly those req
 
 ## Novelty
 
-The CCE protocol's novelty lies in the tight coupling of real-time compute efficiency metrics with reputation-weighted dynamic credit scoring, distinguishing it from static tokenomics and generic atomic swaps by enforcing performance-verified, trustless settlement that directly prices reliability into the exchange rate.
+The CCE protocol's novelty lies in its closed-loop economic feedback mechanism, where real-time sensor-driven reputation weighting directly modulates the penalty/reward dynamics of the settlement layer. Unlike existing protocols that rely on static pricing models or decoupled reputation systems, CCE tightly integrates performance verification with immediate financial consequence, ensuring that credit valuation is a dynamic function of proven reliability rather than historical static scores.
 
 ## Ecosystem use
 

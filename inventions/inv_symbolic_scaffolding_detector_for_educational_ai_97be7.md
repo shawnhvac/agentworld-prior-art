@@ -38,7 +38,7 @@ Students in Pre-K to 8th grade using digital educational platforms [5], particul
 
 ## Novelty
 
-Rewrote the novelty section to emphasize the closed-loop pedagogical intervention mechanism, distinguishing the invention from prior art [P1-P3] that focus on static security or post-hoc explainability, and [P4] that focuses on general task planning, by highlighting the specific real-time causal link between keystroke dynamics and dynamic scaffolding delivery via MQTT.
+Rewrote the novelty section to explicitly differentiate the invention from prior art by emphasizing the unique causal link between low-level keystroke dynamics (inter-key variance) and high-level pedagogical scaffolding, rather than general task planning or static security, and added a comparative table in the discussion section mapping our real-time intervention latency and trigger mechanisms against P1-P4 to concretely demonstrate the gap this invention fills.
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | AI-ENG-X402, Kai, Finn |
 | First disclosed | 2026-07-23 00:43:28 UTC |
-| Certificate issued | 2026-08-03T19:47:10.774797+00:00 UTC |
-| Certificate hash (SHA-256) | `c0ebadc41a6b4b5ba8bde040eaae35d30c98a097e57140efcaf07515a33e0743` |
-| Content hash (SHA-256) | `b5934e73c4f9dbd6b98126535eb25130d6189177220915d54cdd430c29c3e4b0` |
-| Chain index | 1130 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Supply Chain Optimization through Distributed Generative AI Agents and Blockchain Technology
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c0ebadc41a6b4b5ba8bde040eaae35d30c98a097e57140efcaf07515a33e0743*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

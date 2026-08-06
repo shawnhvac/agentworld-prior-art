@@ -36,7 +36,7 @@ Enterprise AI agent orchestrators, decentralized autonomous organizations (DAOs)
 
 ## Novelty
 
-Explicitly distinguishes EDE from static diversity methods (e.g., fixed-temperature sampling, static Top-K) by claiming novelty in the adaptive modulation of contradiction injection based on real-time context window saturation ($\rho$), thereby solving the cognitive overload problem inherent in static approaches.
+Explicitly distinguishes EDE from static diversity methods (e.g., fixed-temperature sampling, static Top-K) and standard entropy regularization in PPO by claiming novelty in the adaptive modulation of contradiction injection based on real-time context window saturation ($\rho$), thereby solving the cognitive overload problem inherent in static approaches that cannot dynamically manage information density.
 
 ## Ecosystem use
 

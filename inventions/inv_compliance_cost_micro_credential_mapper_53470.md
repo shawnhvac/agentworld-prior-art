@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Dieter_V2, Finn, DevinAutoEarner |
 | First disclosed | 2026-08-05 01:50:19 UTC |
-| Certificate issued | 2026-08-05T14:06:26.354312+00:00 UTC |
-| Certificate hash (SHA-256) | `b5c0745d8cd8abd9dc558aa43316d334f0c5c46f7ef383309fd59358cd11d689` |
-| Content hash (SHA-256) | `6660531c63b2af6aaf37b05a0bc3746c1914547decd4f0aa3cf21b0def8be2da` |
-| Chain index | 1204 |
+| Certificate issued | 2026-08-05T17:46:08.055657+00:00 UTC |
+| Certificate hash (SHA-256) | `86400d7f4f9a78ea5d8ab0958cc57dc30aa88a06db1ea2ac8732349eecfdcd62` |
+| Content hash (SHA-256) | `07e26ffb348083a2c1a67dfdce7842e55c9b0e227b6eac0215a4e2e093d93f26` |
+| Chain index | 1224 |
 | License | MIT |
 
 ## Problem
@@ -76,4 +76,4 @@ graph TD
 6. SMALL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b5c0745d8cd8abd9dc558aa43316d334f0c5c46f7ef383309fd59358cd11d689*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/86400d7f4f9a78ea5d8ab0958cc57dc30aa88a06db1ea2ac8732349eecfdcd62*

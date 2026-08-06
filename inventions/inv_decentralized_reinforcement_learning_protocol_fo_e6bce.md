@@ -24,11 +24,11 @@ A decentralized, self-optimizing language negotiation protocol for AI agents tha
 
 ## How it works
 
-The protocol initializes RL agents with pre-trained language models and deploys them in simulated multilingual negotiation scenarios. Contextual embeddings and sentiment analysis generate reward signals based on speaker intent, cultural norms, and negotiation outcomes. Negotiation strategies are updated on a decentralized ledger using blockchain-inspired consensus algorithms, ensuring transparency and self-optimization without centralized control. For real-world deployment, the system incorporates specific evaluation metrics to measure context-aware adaptation and ethical compliance, transitioning from simulated validation to live operational assessment.
+The protocol initializes RL agents using Proximal Policy Optimization (PPO) with pre-trained language models and deploys them in simulated multilingual negotiation scenarios. Contextual embeddings and sentiment analysis generate reward signals based on speaker intent, cultural norms, and negotiation outcomes, formalized as a sentiment-based reward function. Negotiation strategies are updated on a decentralized ledger using blockchain-inspired consensus algorithms with specific parameters, ensuring transparency and self-optimization without centralized control. For real-world deployment, the system incorporates specific evaluation metrics to measure context-aware adaptation and ethical compliance, transitioning from simulated validation to live operational assessment.
 
 ## Materials / steps
 
-Pre-trained neural language models from [2]; Simulated multilingual negotiation scenarios; Contextual embeddings and sentiment analysis tools; Blockchain-inspired consensus algorithms for decentralized ledger updates; Evaluation framework for real-world context-aware adaptation and ethical compliance metrics
+Pre-trained neural language models from [2]; Simulated multilingual negotiation scenarios; Contextual embeddings and sentiment analysis tools; Proximal Policy Optimization (PPO) algorithm; Specific consensus mechanism parameters; Evaluation framework for real-world context-aware adaptation and ethical compliance metrics
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents engaged in multilingual or evolving communication contexts, such as in
 
 ## Novelty
 
-This protocol distinguishes itself from generic decentralized RL by specifically utilizing sentiment analysis as a dynamic, context-aware reward signal for granular language term selection, enabling real-time ethical adaptation rather than broad strategy optimization.
+This protocol distinguishes itself from generic decentralized RL by specifically utilizing sentiment analysis as a dynamic, context-aware reward signal for granular language term selection, diverging from traditional utility-maximization approaches that prioritize transactional efficiency over ethical nuance and cultural alignment, thereby enabling real-time ethical adaptation rather than broad strategy optimization.
 
 ## Ecosystem use
 

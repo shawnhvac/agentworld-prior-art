@@ -32,6 +32,7 @@ DVOEMTA employs preference-based and inverse reinforcement learning [4] to infer
 3. **Trust Anchoring**: The Memory Module (`TrustMemory.query(agent_id, counterparty_id)`) retrieves historical trust scores using the RNN-based recurrent network.
 4. **Dynamic Adjustment**: The Smart Contract Controller executes `SmartContract.reconfigure(release_threshold, verification_depth)` based on the fused output from steps 2 and 3.
 5. **Execution & Release**: Upon fulfillment of dynamic conditions, Agent B calls `EscrowManager.verifyDelivery()`. The contract validates against the current dynamic threshold; if met, funds are released via `EscrowManager.releaseFunds()`. If not, the dispute protocol triggers based on the initial static baseline.
+6. **Conflict Resolution & Finalization**: If dynamic adjustments exceed predefined safety bounds, the system prioritizes immutable safety rules over inferred values, reverting to static baseline terms. A cryptographic finality step (`StateFinalizer.lockState(tx_hash)`) is executed to lock the final state hash on-chain, ensuring no further modifications can occur before the final fund release or dispute arbitration.
 
 ## Materials / steps
 

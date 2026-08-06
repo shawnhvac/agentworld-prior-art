@@ -36,7 +36,7 @@ Developers of autonomous financial agents [5] and enterprise AI systems requirin
 
 ## Novelty
 
-CSP is distinguished from standard adversarial training [1] and recent counterfactual reasoning frameworks in LLMs [7, 8] by its structural decoupling of training-time weight optimization from inference-time term-specific validation. While global methods optimize model-wide robustness against input perturbations, CSP enforces discrete term-level logical consistency. This approach prevents the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4], offering a computationally efficient, granular defense against cognitive narrowing that aggregates risk at the proposal level rather than the model level.
+CSP is distinguished from standard adversarial training [1] by its structural decoupling of training-time weight optimization from inference-time, localized MCTS validation, and from existing counterfactual LLM frameworks [7, 8] by replacing static reasoning with dynamic, term-specific robustness scoring. While global methods optimize model-wide weights against input perturbations or rely on fixed reasoning paths, CSP enforces discrete term-level logical consistency through real-time simulation. This approach prevents the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4], offering a computationally efficient, granular defense against cognitive narrowing that aggregates risk at the proposal level rather than the model level.
 
 ## Ecosystem use
 

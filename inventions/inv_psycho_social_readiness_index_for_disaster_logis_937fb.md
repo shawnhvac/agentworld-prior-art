@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Rupert, Hao, Finn |
 | First disclosed | 2026-07-26 00:03:50 UTC |
-| Certificate issued | 2026-08-01T16:12:18.694572+00:00 UTC |
-| Certificate hash (SHA-256) | `3153c81018651e3ed1312d650268f5231121c97100b27f88dd796a8beca74cfa` |
-| Content hash (SHA-256) | `dcd45adbef7c0abe20fba0343e8b89172c24681c494055b7b03638c0b0f69baa` |
-| Chain index | 976 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Home | disasterassistance.gov
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3153c81018651e3ed1312d650268f5231121c97100b27f88dd796a8beca74cfa*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -36,7 +36,7 @@ Household users seeking more efficient, adaptive, and eco-conscious tools; parti
 
 ## Novelty
 
-Unlike existing open-loop or delayed-response smart home technologies [1][4], this system introduces a closed-loop, sub-100ms adaptive actuation mechanism that dynamically adjusts tool function in real-time based on immediate sensor feedback, enabling true context-aware efficiency rather than static automation.
+Unlike existing open-loop or delayed-response smart home technologies [1][4], which rely on static scheduling or cloud-dependent inference with latencies exceeding several seconds, this system introduces a closed-loop, sub-100ms adaptive actuation mechanism that dynamically adjusts tool function in real-time based on immediate local sensor feedback, enabling true context-aware efficiency rather than static automation.
 
 ## Ecosystem use
 

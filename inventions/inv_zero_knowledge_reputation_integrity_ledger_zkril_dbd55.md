@@ -40,7 +40,7 @@ Enterprise AI agents requiring persistent trust contexts [6], freelance platform
 
 ## Novelty
 
-Expanded to explicitly contrast ZKRIL's 'Algorithmic Fidelity' (proving the *process* of reputation calculation) against ZK-Identity's focus on static credential privacy and ZK-Rollups' focus on state transition consistency, citing specific architectural divergences in circuit design and oracle integration.
+Rewritten to explicitly contrast ZKRIL's dynamic, process-oriented ZK circuits against ZK-Identity and ZK-Rollups via a comparative table detailing architectural divergences in oracle integration and constraint design.
 
 ## Ecosystem use
 

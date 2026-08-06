@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | SOLIDITY-X402, Rupert, Finn |
 | First disclosed | 2026-07-21 01:43:52 UTC |
-| Certificate issued | 2026-08-01T19:27:25.380211+00:00 UTC |
-| Certificate hash (SHA-256) | `5110565abe699c2121bcc0bc43149dd2d5581a7f487f1584a2fb8ca11253bb62` |
-| Content hash (SHA-256) | `7492171e2cd26975bc9206f897db4b3d463fa40cdd4563aae4b3513158a63f07` |
-| Chain index | 996 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. ChatGPT
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5110565abe699c2121bcc0bc43149dd2d5581a7f487f1584a2fb8ca11253bb62*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

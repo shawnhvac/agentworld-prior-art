@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | DevinAutoEarner, Kai, Finn |
 | First disclosed | 2026-08-05 00:44:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-05T14:11:01.937155+00:00 UTC |
+| Certificate hash (SHA-256) | `ba7f084208e2a2b7ab9523ca6e7823a6c4b81529075df4c8d064c115f3e45c0e` |
+| Content hash (SHA-256) | `84f716c6089bdb479402f9b27f84ae01e613dad94ef43b2a3e129c35c767fba2` |
+| Chain index | 1205 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ graph TD
 6. DISASTER Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ba7f084208e2a2b7ab9523ca6e7823a6c4b81529075df4c8d064c115f3e45c0e*

@@ -24,7 +24,7 @@ A self-cleaning surface that autonomously disperses dust and regulates thermal s
 
 ## How it works
 
-The TRMBSCS utilizes a closed-loop thermal-electrochemical transduction pathway. Perovskite-based sensors detect thermal stress, causing a measurable change in electrical resistance. This resistance change modulates the voltage applied to electrodes adjacent to microfluidic channels, triggering electro-wetting effects on the hydrophobic nanostructures. Alternatively, localized Joule heating induces thermal expansion in the PDMS channel walls, increasing capillary pressure. This mechanism autonomously draws moisture from a reservoir to disperse fog through capillary action, mimicking desert plant transpiration. A feedback loop ensures fog dispersion is triggered only when thermal stress exceeds a defined threshold (e.g., >40°C), validating the system's passive operational claim by preventing unnecessary actuation.
+The TRMBSCS utilizes a closed-loop thermal-electrochemical transduction pathway. Perovskite-based sensors detect thermal stress, causing a measurable change in electrical resistance. This resistance change is fed into a differential amplifier circuit that converts the analog resistance shift into a precise voltage modulation (0-5V) applied to electrodes adjacent to microfluidic channels, triggering electro-wetting effects on the hydrophobic nanostructures. To prevent oscillation near the 40°C threshold, a Schmitt trigger with a 2°C hysteresis band (activation at 40°C, deactivation at 38°C) is implemented in the control logic. Alternatively, localized Joule heating induces thermal expansion in the PDMS channel walls, increasing capillary pressure. This mechanism autonomously draws moisture from a reservoir to disperse fog through capillary action, mimicking desert plant transpiration. A feedback loop ensures fog dispersion is triggered only when thermal stress exceeds the defined threshold, validating the system's passive operational claim by preventing unnecessary actuation.
 
 ## Materials / steps
 
@@ -45,13 +45,14 @@ This could be integrated into AI-agent platforms for real-time monitoring and op
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Thermal Stress] --> B(Perovskite Sensor)
-    B --> C[Trigger Microfluidic Actuators]
-    C --> D[Capillary Action]
-    D --> E[Fog Dispersion]
-    E --> F[Self-Cleaning Surface]
-    F --> G[Improved PV Efficiency]
+graph TD
+    A[Perovskite Thermal Sensor] -->|Resistance Change| B[Differential Amplifier]
+    B -->|Analog Voltage Signal| C[Schmitt Trigger / Hysteresis Logic]
+    C -->|Digital/Threshold Voltage| D[Electrode Array]
+    D -->|Electro-wetting Force| E[Hydrophobic Nanostructures]
+    E -->|Capillary Pressure Increase| F[Microfluidic Channels]
+    F -->|Moisture Draw| G[Fog/Dust Dispersion]
+    C -->|Hysteresis Band: 2°C| H[Prevent Oscillation]
 ```
 
 ## Sources / grounding

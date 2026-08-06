@@ -28,7 +28,7 @@ CMAF embeds Decentralized Identifiers (DIDs) [1] directly into the memory write-
 
 ## Materials / steps
 
-1. Implement DID controller module for agent identity management [1]. 2. Integrate Verifiable Credential issuance engine for state transitions [3], defining the JSON-LD schema linking state hashes to agent identity. 3. Apply Byzantine-resilient encoding algorithms [2] (e.g., robust PCA with sparse recovery) to memory blocks, optimizing parameters for unstructured data to ensure reproducibility and bound semantic loss. 4. Develop aggregation layer that performs step-by-step verification: decoding, residual calculation, and threshold comparison to detect encoding anomalies. 5. Conduct bit-flip attack simulations to measure detection latency and precision against standard hash-chaining. 6. Evaluate semantic fidelity using a quantitative metric to measure and bound 'catastrophic semantic loss' during encoding.
+1. Implement DID controller module for agent identity management [1]. 2. Integrate Verifiable Credential issuance engine for state transitions [3], defining the JSON-LD schema linking state hashes to agent identity. 3. Apply Byzantine-resilient encoding algorithms [2] (e.g., robust PCA with sparse recovery) to memory blocks, optimizing parameters for unstructured data to ensure reproducibility and bound semantic loss. 4. Develop aggregation layer that performs step-by-step verification: decoding, residual calculation, and threshold comparison to detect encoding anomalies. 5. Conduct bit-flip attack simulations to measure detection latency and precision against standard hash-chaining, targeting a strict detection latency of <10ms. 6. Evaluate semantic fidelity using the 'Semantic Fidelity Score' (SFS), calculated via cosine similarity on embedding vectors, enforcing a strict threshold of >0.95 to bound 'catastrophic semantic loss' during encoding.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of decentralized AI agent ecosystems, autonomous data governance plat
 
 ## Novelty
 
-Distinct from behavioral anomaly detection [6] and post-hoc audit layers, CMAF embeds verification directly into the memory write-path. It hypothesizes that Byzantine-resilient encoding [2], originally for SGD weights [4], can be adapted for unstructured agent memory without catastrophic semantic loss, providing cryptographic certainty rather than statistical probability through a defined sparse recovery protocol.
+CMAF distinguishes itself from standard hash-chaining (which detects modification but not semantic corruption) and probabilistic behavioral anomaly detection by decoupling identity assurance from state integrity: while the DID/VC layer provides cryptographic guarantees for agent identity and data presence, the robust sparse recovery layer provides mathematically bounded semantic fidelity via residual error vectors, offering deterministic bounds on semantic loss rather than probabilistic anomaly detection.
 
 ## Ecosystem use
 

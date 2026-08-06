@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and waste management profes
 
 ## Novelty
 
-The SR-MBC distinguishes itself from existing consortia through an engineered cross-kingdom quorum-sensing mechanism that synchronizes fungal hyphal extension with bacterial siderophore and enzyme production for targeted metal mobilization, enabling dynamic, spatially coordinated remediation absent in current passive or manually adjusted bioremediation systems.
+Unlike US9469838B2, which focuses on static structural biofilm-mycelium composites, and US20150040629A1, which addresses biofertilizer formulations, the SR-MBC introduces a dynamic, self-regulating system driven by engineered cross-kingdom quorum sensing. This mechanism autonomously synchronizes fungal hyphal extension with bacterial pH-responsive enzyme secretion to actively modulate local soil pH for heavy metal solubility, a functional capability absent in the passive or nutrient-focused prior art.
 
 ## Diagram
 

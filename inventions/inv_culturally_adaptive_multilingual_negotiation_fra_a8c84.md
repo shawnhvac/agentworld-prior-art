@@ -26,6 +26,8 @@ A Culturally Adaptive Multilingual Negotiation Framework (CAMN-F) that uses real
 
 The CAMN-F employs real-time sentiment analysis via pre-trained emotion detection models [4], coupled with cultural embedding vectors derived from global negotiation datasets, to adjust lexical choices, tone, and framing during negotiations. These embeddings are trained on cross-cultural dialogue corpora and fine-tuned using reinforcement learning with ethical constraints from [3]. The system dynamically selects appropriate linguistic registers and metaphors based on the detected cultural and emotional context of the negotiation. Performance is validated through live multi-agent trials incorporating human-in-the-loop feedback, measuring real-world negotiation outcomes and user satisfaction surveys rather than relying solely on simulated environments.
 
+**System Architecture**: The framework operates through a sequential pipeline. First, input utterances are tokenized and processed by a multilingual encoder to extract semantic features. Concurrently, a sentiment analysis module [4] and a cultural embedding extractor [4] generate context vectors representing the interlocutor's emotional state and cultural background. These vectors are concatenated with the agent's current state representation and fed into the RL policy network. The policy network proposes a negotiation strategy, which is immediately evaluated by the ethical constraint layer. This layer applies explicit penalties for logical fallacies, cultural stereotyping, and aggressive framing, weighted at 0.4 of the total reward function, ensuring strategies remain within an ethically bounded policy space. The filtered strategy is then passed to a decoder model to generate the final linguistic output, adjusting lexical choices and tone according to the cultural and emotional context. This end-to-end flow ensures that ethical compliance is intrinsic to strategy generation rather than applied as post-hoc filtering.
+
 ## Materials / steps
 
 Pre-train a multilingual transformer model on cross-cultural negotiation data [4].; Integrate real-time sentiment analysis using pre-trained emotion detection layers [4].; Train cultural embedding vectors using cross-cultural negotiation corpora [3].; Apply reinforcement learning with ethical constraints defined by explicit penalties for logical fallacies, cultural stereotyping, and aggressive framing, weighted at 0.4 of the total reward function, to optimize negotiation strategies.; Conduct live multi-agent trials with human-in-the-loop feedback to validate framework performance using quantitative real-world negotiation outcomes including Mutual Gain Index (MGI), Time-to-Agreement (TTA), and post-negotiation Net Promoter Score (NPS) surveys.
@@ -45,12 +47,22 @@ This framework could be integrated into AI-agent platforms as an API for dynamic
 ## Diagram
 
 ```mermaid
-graph LR
-A[AI Agents] --> B[Real-time Sentiment Analysis]
-B --> C[Cultural Embedding Vectors]
-C --> D[Dynamic Language Adaptation]
-D --> E[Negotiation Output]
-E --> F[Agreement Reached/Fairness Metrics]
+graph TD
+    A[Input Utterance] --> B[Tokenization & Multilingual Encoder]
+    B --> C[Semantic Features]
+    C --> D[Sentiment Analysis Module [4]]
+    C --> E[Cultural Embedding Extractor [4]]
+    D --> F[Emotion Vector]
+    E --> G[Cultural Vector]
+    F --> H[State Concatenation]
+    G --> H
+    H --> I[RL Policy Network]
+    I --> J[Proposed Strategy]
+    J --> K[Ethical Constraint Layer]
+    K -->|Penalties: Fallacies, Stereotyping, Aggression (Weight: 0.4)| L[Reward Calculation]
+    L --> M[Optimized Strategy]
+    M --> N[Decoder Model]
+    N --> O[Final Text Output]
 ```
 
 ## Sources / grounding

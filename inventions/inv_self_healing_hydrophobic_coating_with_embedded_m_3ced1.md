@@ -36,7 +36,7 @@ Photovoltaic panel manufacturers, solar energy farms, and maintenance teams seek
 
 ## Novelty
 
-Rewrote the novelty section to explicitly contrast the invention with specific prior art (US20150345678A1 and US20190010012A1) by emphasizing the unique closed-loop autonomous feedback mechanism, and added a comparison table to delineate differences in actuation method and sensor integration.
+The invention distinguishes itself from US20150345678A1 (passive superhydrophobic surfaces) and US20190010012A1 (manual/external cleaning systems) by integrating a closed-loop autonomous feedback mechanism that couples capacitance-based contaminant sensing with localized resistive heating to trigger Marangoni-driven fluid dispensing, alongside a simultaneous photocatalytic self-healing capability for micro-crack repair, thereby addressing both soiling and structural degradation without external intervention.
 
 ## Ecosystem use
 

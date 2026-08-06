@@ -28,8 +28,6 @@ The DME protocol employs cryptographic hashing and zero-knowledge proofs to frag
 
 ## Materials / steps
 
-Implement a smart contract framework on Ethereum (or equivalent) that supports zero-knowledge proof verification for memory fragments. Use SHA-3 hashing for fragment integrity and IPFS for decentralized storage. Agents generate memory fragments and issue access tokens via ZK-SNARKs for verification.
-
 **Protocol Workflow:**
 1. **Fragment Generation & Hashing:** The source AI agent segments its memory into discrete fragments. Each fragment is encrypted using AES-256-GCM. A SHA-3-256 hash is computed for the ciphertext to ensure integrity, and the encrypted payload is pinned to IPFS, returning a Content Identifier (CID).
 2. **Smart Contract Registration & Policy Encoding:** The agent deploys a transaction to the DME smart contract registry. This transaction records the IPFS CID, the SHA-3 hash, and a dynamic access policy (e.g., `role: researcher`, `expiry: 24h`). The smart contract generates a unique `MemoryAccessToken` (MAT) linked to these parameters.
@@ -37,10 +35,11 @@ Implement a smart contract framework on Ethereum (or equivalent) that supports z
 4. **Decryption & Integration upon successful verification:** The smart contract verifies the ZK-SNARK proof. If valid, it emits an event authorizing the decryption key (retrieved via a secure key exchange protocol like ECDH using the requester's public key, if pre-negotiated) or releases a one-time decryption nonce. The requester uses this to decrypt the IPFS payload, verify the SHA-3 hash against the registry, and integrate the memory fragment into its local state.
 
 **Performance Validation:**
-To ensure scalability and real-time usability, the following concrete metrics are targeted and measured via load testing on a testnet environment:
-1. **ZK-SNARK Proof Generation:** Latency must remain under 200ms per proof on standard consumer-grade hardware (e.g., Intel i7, 16GB RAM), measured using the SnarkJS or Circom compiler benchmarks.
-2. **Smart Contract Gas Cost:** The verification transaction cost must stay below 500,000 gas units per access request, measured by deploying the verifier contract on Ethereum Goerli/Sepolia and analyzing transaction receipts.
-3. **IPFS Retrieval Latency:** Average retrieval time for encrypted memory fragments must be under 500ms, measured by pinning 1KB-10KB payloads to a local IPFS cluster and recording time-to-first-byte for 1,000 concurrent requests.
+To ensure scalability and near-real-time usability (implying batch processing rather than instantaneous interaction), the following concrete metrics are targeted and measured via load testing on a testnet environment:
+1. **End-to-End Latency:** The total time from access request initiation to successful decrypted memory integration must remain under 5 seconds, measured under concurrent load conditions, accounting for blockchain finality and IPFS retrieval.
+2. **ZK-SNARK Proof Generation:** Latency must remain under 2 seconds per proof on standard consumer-grade hardware (e.g., Intel i7, 16GB RAM), measured using the SnarkJS or Circom compiler benchmarks, reflecting the computational cost of current circuits.
+3. **Smart Contract Gas Cost:** The verification transaction cost must stay below 2-3 million gas units per access request, measured by deploying the verifier contract on Ethereum Goerli/Sepolia and analyzing transaction receipts, as ZK verification is computationally expensive.
+4. **IPFS Retrieval Latency:** Average retrieval time for encrypted memory fragments must be under 500ms, measured by pinning 1KB-10KB payloads to a local IPFS cluster and recording time-to-first-byte for 1,000 concurrent requests.
 
 ## Who it's for
 

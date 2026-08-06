@@ -36,7 +36,7 @@ Livestock farmers and agricultural producers seeking to mitigate AMR spread in s
 
 ## Novelty
 
-Distinguishes from prior art by leveraging an *Attini*-inspired obligate symbiosis model to enable targeted, self-limiting delivery of CRISPR-Cas modules, rather than relying on CRISPR-mediated degradation alone.
+Distinguishes from prior art by employing a transient, suicide-plasmid-based CRISPR-Cas delivery system that ensures self-limiting gene editing and prevents horizontal gene transfer, contrasting with existing persistent biocontrol agents that rely on long-term colonization or stable plasmid maintenance.
 
 ## Diagram
 

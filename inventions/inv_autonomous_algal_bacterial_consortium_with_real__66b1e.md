@@ -36,7 +36,7 @@ Environmental cleanup companies, industrial facilities, and regulatory agencies 
 
 ## Novelty
 
-Unlike static bioremediation benchmarks that rely on fixed nutrient inputs or passive sorption, this system employs a closed-loop, feedback-driven nutrient modulation mechanism. By dynamically adjusting remediation intensity in real-time based on microfluidic sensor data, the consortium achieves superior efficiency gains in heavy metal removal rates and prevents microbial overgrowth or nutrient waste, a capability absent in conventional open-loop systems [3][4].
+Distinct from standard PID-controlled bioreactors that merely adjust flow rates or passive sorption benchmarks [3][4], this invention integrates real-time sensor feedback with direct metabolic pathway modulation—specifically triggering polyphosphate accumulation in P. putida via dynamic phosphate delivery—thereby actively altering microbial metabolic states to optimize bioprecipitation efficiency rather than relying on static biomass capacity.
 
 ## Ecosystem use
 

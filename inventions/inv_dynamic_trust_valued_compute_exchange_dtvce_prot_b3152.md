@@ -28,7 +28,7 @@ DTVCE operates by integrating verifiable credentials [4] into a decentralized id
 
 ## Materials / steps
 
-Implement a decentralized identifier (DID) system with support for verifiable credentials [4]. Integrate a dynamic governance scoring system [5] to assess agent trustworthiness in real time. Design a blockchain-based ledger to record compute transactions with trust-weighted values. Develop a smart contract module that executes the settlement logic: applying a volatility dampening algorithm to trust weights, calculating the trust-adjusted price (Base_Price * Stabilized_Trust_Weight), and performing the atomic token swap with explicit timeout parameters to guarantee completion or revert. Develop a simulation environment to test trust-based compute allocation and settlement patterns, specifically including stress-testing scenarios for high-frequency trust-weight updates and edge cases in atomic swaps to guarantee trial reliability. Implement a dedicated Settlement Workflow detailing the sequence from off-chain compute verification to on-chain oracle attestation, including specific error handling for failed verifications and the exact smart contract function calls that finalize the atomic swap and update the DID credentials.
+Implement a decentralized identifier (DID) system with support for verifiable credentials [4]. Integrate a dynamic governance scoring system [5] to assess agent trustworthiness in real time. Design a blockchain-based ledger to record compute transactions with trust-weighted values. Develop a smart contract module that executes the settlement logic: applying a volatility dampening algorithm defined by the differential equation dW/dt = -k(W - W_target) where k is the damping coefficient, W is the current trust weight, and W_target is the moving average of recent governance scores, to stabilize trust weights; calculating the trust-adjusted price (Base_Price * Stabilized_Trust_Weight); and performing the atomic token swap with explicit timeout parameters to guarantee completion or revert. Develop a simulation environment to test trust-based compute allocation and settlement patterns, specifically including stress-testing scenarios for high-frequency trust-weight updates and edge cases in atomic swaps to guarantee trial reliability. Implement a dedicated Settlement Workflow detailing the sequence from off-chain compute verification to on-chain oracle attestation: 1) Off-chain validator computes proof-of-work; 2) Validator signs proof with DID private key; 3) Oracle node receives signed proof and verifies signature against DID registry; 4) Oracle publishes verified hash to blockchain; 5) Smart contract listens for oracle event, executes atomic swap, and updates DID credential status. Include specific error handling for failed verifications (revert with code 0x01) and the exact smart contract function calls (finalizeSwap(hash, signature)) that finalize the atomic swap and update the DID credentials.
 
 ## Who it's for
 
@@ -45,13 +45,25 @@ DTVCE could be used within an AI-agent platform as a trust-weighted compute API,
 ## Diagram
 
 ```mermaid
-graph LR
-A[Agent with Verifiable Credentials] --> B[DID System]
-B --> C[Real-Time Governance Score]
-C --> D[Trust-Value Metric]
-D --> E[Blockchain Ledger]
-E --> F[Compute Transaction with Weighted Value]
-F --> G[Resource Allocation Based on Trust]
+sequenceDiagram
+    participant Agent as Compute Agent
+    participant Validator as Off-Chain Validator
+    participant Oracle as On-Chain Oracle
+    participant Contract as Smart Contract
+    participant Ledger as Blockchain Ledger
+
+    Agent->>Validator: Submit Compute Result + DID Signature
+    Validator->>Validator: Verify Proof-of-Work & DID Signature
+    alt Verification Success
+        Validator->>Oracle: Send Signed Proof Hash
+        Oracle->>Contract: Emit VerifiedProof(hash)
+        Contract->>Contract: Calculate Stabilized Trust Weight (dW/dt = -k(W - W_target))
+        Contract->>Contract: Execute Atomic Swap (finalizeSwap)
+        Contract->>Ledger: Record Transaction & Update DID Status
+        Contract-->>Agent: Confirm Payment
+    else Verification Fail
+        Validator-->>Agent: Return Error 0x01
+    end
 ```
 
 ## Sources / grounding

@@ -28,7 +28,7 @@ CBATI employs a network of embedded IoT sensors and biometric feedback loops to 
 
 ## Materials / steps
 
-Embedded IoT sensors (e.g., motion, pressure, and posture sensors); Biometric feedback loops (e.g., heart rate, grip strength); Lightweight AI model trained on household behavior datasets; Modular tool components with adjustable configurations; Real-time data processing unit with actuator drivers; User interface for feedback and configuration adjustments; Normalization algorithms for biometric data; Standardized baseline calibration protocol; Quantitative KPIs for ergonomic improvement and task efficiency; Control logic for translating AI predictions into mechanical adjustments
+Embedded IoT sensors (e.g., motion, pressure, and posture sensors); Biometric feedback loops (e.g., heart rate, grip strength); Lightweight AI model trained on household behavior datasets; Modular tool components with adjustable configurations; Real-time data processing unit with actuator drivers; User interface for feedback and configuration adjustments; Normalization algorithms for biometric data; Standardized baseline calibration protocol; Quantitative KPIs for ergonomic improvement and task efficiency; Control logic for translating AI predictions into mechanical adjustments; End-to-end encryption protocols for data transmission; Local data processing architecture to prevent cloud leakage; Explicit user consent management system for biometric data collection
 
 ## Who it's for
 

@@ -38,7 +38,7 @@ Developers of autonomous AI agents requiring granular, millisecond-level tool in
 
 ## Novelty
 
-Rewrote Novelty and Comparative Analysis to specifically address the gap in active, runtime behavioral integrity verification for ephemeral agent reasoning, distinguishing from static code integrity [P1] and passive provenance [P5], while highlighting how dynamic Merkle depth optimization solves latency bottlenecks inherent in standard ZK-proof systems.
+Refined novelty claim to explicitly distinguish from passive provenance by detailing the cryptographic coupling of memory snapshots with reasoning traces, and quantifying how dynamic Merkle depth optimization achieves sub-50ms latency compared to standard ZK-proofs.
 
 ## Ecosystem use
 

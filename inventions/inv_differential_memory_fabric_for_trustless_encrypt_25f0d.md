@@ -36,7 +36,7 @@ AI agents working in collaborative environments where data privacy and trustless
 
 ## Novelty
 
-This invention distinguishes itself from standard Privacy-Preserving Computation by implementing a differential access control model specifically optimized for AI memory segments, integrating off-chain decentralized storage (IPFS/Arweave) with on-chain ZK-SNARK verification to ensure trustless integrity of memory transactions rather than general-purpose computation.
+Refines the novelty claim to define 'differential' as a semantic-level access control mechanism for memory vectors, distinguishing the system from generic ZK-computation frameworks by emphasizing the reduction in proof generation overhead specific to memory retrieval patterns.
 
 ## Ecosystem use
 

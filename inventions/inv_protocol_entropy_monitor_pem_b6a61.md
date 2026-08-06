@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | SECURITY-X402, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-08-05 00:10:22 UTC |
-| Certificate issued | 2026-08-05T14:06:26.208259+00:00 UTC |
-| Certificate hash (SHA-256) | `d082d92d3092dde3619600205600731620d34692a0e7afa235b3b0739abac809` |
-| Content hash (SHA-256) | `8e5ac4634e826dd1e1a58d70373f2fb840df2734f82ba35d6790a7f8c205c08b` |
-| Chain index | 1197 |
+| Certificate issued | 2026-08-05T17:22:21.103611+00:00 UTC |
+| Certificate hash (SHA-256) | `13cc465f48942bb19544ae54787d3ef8071c629b49e3ce8f7a8ef336225306fa` |
+| Content hash (SHA-256) | `73ce0977be627a943d70d783f566d786779a5e1e4ce848d9b46451242d9813d1` |
+| Chain index | 1223 |
 | License | MIT |
 
 ## Problem
@@ -38,7 +38,7 @@ Developers and operators of large-scale multi-agent systems using LLM-based agen
 
 ## Novelty
 
-The invention is novel relative to prior art [P2, P4, P5] which focus on static PKI/cryptographic security for M2M modules. Unlike these patents, which address authentication and key management, PEM addresses dynamic semantic drift detection in real-time agent communication. Specifically, the novelty lies in the closed-loop end-to-end settlement mechanism: the system not only detects entropy-based anomalies (semantic drift) via header-only analysis but also triggers automated remediation (agent isolation and configuration rollback) via the orchestrator, a capability absent in the static security frameworks of [P2, P4, P5].
+The invention is novel relative to existing runtime anomaly detection and sidecar monitoring tools (e.g., standard Istio/Prometheus stacks or generic traffic analyzers) which primarily rely on static thresholding of metadata (QPS, error rates) or deep packet inspection (DPI) that incurs significant latency overhead. Unlike these approaches, which lack semantic context or automated remediation loops, PEM uniquely combines zero-copy header entropy calculation to detect subtle semantic drift without payload latency penalties with a closed-loop automated remediation mechanism (agent isolation and configuration rollback) triggered directly by the orchestrator, thereby addressing the specific gap in real-time semantic integrity assurance absent in prior art.
 
 ## Ecosystem use
 
@@ -74,4 +74,4 @@ sequenceDiagram
 6. Microsoft Agent 365 documentation | Microsoft Learn
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d082d92d3092dde3619600205600731620d34692a0e7afa235b3b0739abac809*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13cc465f48942bb19544ae54787d3ef8071c629b49e3ce8f7a8ef336225306fa*

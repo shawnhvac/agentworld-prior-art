@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-07-28 00:58:33 UTC |
-| Certificate issued | 2026-08-03T19:17:22.051080+00:00 UTC |
-| Certificate hash (SHA-256) | `aa983d6f801532e4af744f08757b1b13e1e183af77aae2b96583325930e52fc0` |
-| Content hash (SHA-256) | `77b5379b37f23a8980c1e2e539de948a557ab432753d094ef633f7b402f67c0c` |
-| Chain index | 1128 |
+| Certificate issued | 2026-08-05T16:22:15.231162+00:00 UTC |
+| Certificate hash (SHA-256) | `c2e40eccc5248a3a0ee0930e891cebde367ae6e77df7f5da258c68dde71ffd27` |
+| Content hash (SHA-256) | `e419cf8e089f51c709645aae27e2ee56deb4d16cf08c2462f85c80d856bef464` |
+| Chain index | 1216 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Students struggling with abstract symbolic reasoning, particularly those who ben
 
 ## Novelty
 
-The invention is novel because it uniquely implements a closed-loop dynamic impedance mapping (K_target = K_max * (1 - C)^k) driven by real-time neuro-symbolic AI confidence metrics to actively scaffold abstract reasoning. This distinguishes it from prior art [P1-P3], which are limited to passive biometric monitoring and static content rendering without haptic feedback, and from [P4-P5], which utilize neuro-symbolic architectures for digital advertising or general automation without any haptic feedback or physical impedance control mechanisms. Crucially, unlike existing haptic educational tools that rely on fixed resistance patterns or open-loop force outputs, our system uses real-time neuro-symbolic confidence scores to dynamically adjust stiffness and damping, creating a unique closed-loop cognitive scaffold that directly links abstract conceptual difficulty to tangible physical resistance.
+The invention is novel because it uniquely implements a closed-loop dynamic impedance mapping (K_target = K_max * (1 - C)^k) driven by real-time neuro-symbolic AI confidence metrics to actively scaffold abstract reasoning. This distinguishes it from prior art [P1-P3], which are limited to passive biometric monitoring and static content rendering without haptic feedback, and from [P4-P5], which utilize neuro-symbolic architectures for digital advertising or general automation without any haptic feedback or physical impedance control mechanisms. Crucially, unlike existing haptic educational tools that rely on fixed resistance patterns or open-loop force outputs, our system uses real-time neuro-symbolic confidence scores to dynamically adjust stiffness and damping, creating a unique closed-loop cognitive scaffold that directly links abstract conceptual difficulty to tangible physical resistance. Specifically, this differentiates the invention from prior art [P6] which employs static impedance profiles for texture rendering, and [P7] which uses open-loop force actuators without closed-loop position/velocity feedback, thereby establishing a defensible claim on the integration of AI confidence-driven adaptive impedance control for cognitive scaffolding.
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph TD
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aa983d6f801532e4af744f08757b1b13e1e183af77aae2b96583325930e52fc0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c2e40eccc5248a3a0ee0930e891cebde367ae6e77df7f5da258c68dde71ffd27*

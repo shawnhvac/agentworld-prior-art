@@ -24,7 +24,7 @@ DE-ORBT-FAPA combines multi-task differential evolution, occlusion-aware routing
 
 ## How it works
 
-The system uses multi-task differential evolution to optimize task allocation across a swarm. Occlusion-aware routing strategies dynamically adjust paths based on real-time sensor data. Federated AI policy adaptation allows decentralized reinforcement learning across agents, ensuring policy updates remain secure and consensus-driven via a blockchain layer.
+The system uses multi-task differential evolution to optimize task allocation across a swarm. Occlusion-aware routing strategies dynamically adjust paths based on real-time sensor data. Federated AI policy adaptation allows decentralized reinforcement learning across agents, ensuring policy updates remain secure and consensus-driven via a blockchain layer. **Mathematical Formulation**: The Occlusion-Weighted Mutation Operator scales the mutation factor $F$ using the formula $F_t = F_{base} \cdot (1 + \alpha \cdot \frac{O_t}{O_{max}})$, where $O_t$ is the real-time occlusion density derived from LiDAR point cloud entropy, $O_{max}$ is the maximum observed density, and $\alpha$ is a sensitivity coefficient. The Consensus-Gated Policy Gradient is enforced via a Hyperledger Fabric chaincode function `VerifyAndApplyPolicy(policy_hash, gradient_update)`, which checks if the number of endorsing peers $N_{endorsers} \geq N_{threshold}$ (defined in channel configuration) before committing the gradient update to the global model state, ensuring only consensus-verified updates propagate.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Researchers and developers working on decentralized swarm robotics systems, espe
 
 ## Novelty
 
-DE-ORBT-FAPA distinguishes itself from standard modular integrations by introducing the 'Occlusion-Weighted Mutation Operator', which dynamically scales DE mutation factors based on real-time sensor occlusion density, and the 'Consensus-Gated Policy Gradient', which enforces blockchain-verified consensus before applying federated policy updates, ensuring secure and context-aware adaptation.
+DE-ORBT-FAPA distinguishes itself from standard modular integrations by introducing the 'Occlusion-Weighted Mutation Operator', which uniquely couples real-time LiDAR point cloud entropy directly to Differential Evolution mutation factors to dynamically escape local optima in sensor-deprived states—a mechanism absent in generic adaptive DE that relies on static or fitness-based heuristics. Furthermore, the 'Consensus-Gated Policy Gradient' addresses critical security gaps in existing federated routing protocols by enforcing Hyperledger Fabric-based endorsement thresholds before applying global policy updates, thereby preventing malicious gradient poisoning and ensuring that only consensus-verified, occlusion-resilient strategies propagate across the swarm, a level of cryptographic accountability not present in standard federated learning frameworks.
 
 ## Ecosystem use
 

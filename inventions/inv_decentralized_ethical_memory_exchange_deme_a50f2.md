@@ -26,6 +26,8 @@ A decentralized system that combines stateless decision memory with blockchain-b
 
 DEME uses a blockchain layer to validate memory access requests against evolving ethical rules encoded as smart contracts. These rules are updated via a federated learning model trained on ethical guidelines, ensuring real-time alignment with shifting constraints. Shared memory states are stored in a stateless format, allowing AI agents to negotiate access using zero-knowledge proofs, reducing the risk of biased or overly rigid recall. To validate system performance, we implement a dedicated Validation Methodology: the adversarial memory access test suite comprises 500 standardized scenarios including trolley-problem variants, data privacy boundary violations, and cultural bias injection tests. Ethical rule adherence is calculated as the ratio of compliant outcomes to total scenarios, verified via binomial confidence intervals (95% CI) to ensure the >99% compliance target is statistically significant and reproducible. We also benchmark ZKP verification times under a 1000 TPS load, enforcing a hard latency cap of <150ms p99 to guarantee real-time responsiveness for autonomous agent interactions.
 
+Section 3.2 Access Negotiation Protocol: The protocol defines a deterministic three-phase handshake to settle access end-to-end. Phase 1 (Request): The AI agent generates a ZKP witness containing the memory key hash and the current ethical context vector, submitting a transaction to the smart contract. Phase 2 (Verification): The smart contract executes a pre-compiled ZKP circuit (Groth16) that verifies two predicates: (a) the agent possesses a valid access token for the key hash, and (b) the access request does not violate the current ethical rule set encoded in the contract's state. Phase 3 (Settlement): Upon successful verification, the smart contract emits an event signed by the validator node. The memory node, listening for this event, decrypts the specific memory block using the session key derived from the ZKP proof and returns it to the agent. This ensures that no memory content is exposed during the negotiation phase, and access is cryptographically guaranteed to be ethically compliant before data transfer occurs.
+
 ## Materials / steps
 
 Blockchain platform supporting smart contracts (e.g., Ethereum); Stateless memory framework [4]; Federated learning system for ethical rule updates [3]; Implementation of zero-knowledge proofs for secure memory access negotiation
@@ -36,7 +38,7 @@ AI agents operating in decentralized, multi-agent environments requiring dynamic
 
 ## Novelty
 
-Unlike existing privacy-preserving memory systems that rely on static access controls or centralized trust anchors, DEME uniquely couples zero-knowledge proofs with stateless memory storage to enable dynamic, context-aware ethical negotiation. This specific technical architecture allows for real-time adaptation to federated ethical updates without exposing underlying memory states, a capability absent in current static or fully centralized approaches.
+Unlike [P1] which focuses on financial bid selection and [P2] which manages static organizational information distribution, DEME introduces a dynamic, cryptographic settlement mechanism for ethical compliance. The novelty lies in the specific integration of ZKP circuits within the smart contract to enforce real-time ethical constraints (Section 3.2) before memory access is granted, a capability absent in the static or financial-focused architectures of the prior art.
 
 ## Ecosystem use
 

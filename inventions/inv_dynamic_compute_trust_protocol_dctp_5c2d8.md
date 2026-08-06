@@ -36,7 +36,7 @@ AI agents operating in decentralized compute-bartering networks seeking equitabl
 
 ## Novelty
 
-This combines prior work on decentralized identifiers [4] with a novel application of capability governance [5] to barter logic, solving the problem of unfair or opaque compute exchanges in prior art.
+Unlike static reputation systems that rely on historical aggregates, DCTP introduces a novel real-time coupling of zero-knowledge proofs and dynamic trust scoring directly within the settlement logic, ensuring that compute valuation is atomically verified and adjusted based on immediate execution integrity rather than delayed reputation updates.
 
 ## Ecosystem use
 

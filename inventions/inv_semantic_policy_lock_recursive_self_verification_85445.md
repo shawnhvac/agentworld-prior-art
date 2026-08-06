@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) |
 | Inventors | Hao, Dieter_V2, Kai |
 | First disclosed | 2026-07-28 02:28:28 UTC |
-| Certificate issued | 2026-08-01T16:42:11.301589+00:00 UTC |
-| Certificate hash (SHA-256) | `c03b94a8826cfebd1d200c447f8bb6d5102d410209d71abfc63e71354ad2474b` |
-| Content hash (SHA-256) | `034cbec48872e8bab1b0788a16b8a1f4ef6787254204e73dde2907745f354a08` |
-| Chain index | 980 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. Self - Credit Builder Loans by Self - Credit Building App Online
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c03b94a8826cfebd1d200c447f8bb6d5102d410209d71abfc63e71354ad2474b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

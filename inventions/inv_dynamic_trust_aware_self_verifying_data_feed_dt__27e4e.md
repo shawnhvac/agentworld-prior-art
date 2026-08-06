@@ -36,7 +36,7 @@ AI agents operating in federated, decentralized environments where data integrit
 
 ## Novelty
 
-The DT-SVDF introduces a trust-aware gradient descent mechanism that adapts to adversarial changes in the data environment, improving resilience compared to static verification systems like SVADF [4]. It dynamically adjusts verification thresholds based on real-time trust metrics, which are derived from historical validation success rates and peer-reported integrity scores.
+The DT-SVDF fundamentally diverges from post-hoc filtering architectures like SVADF [4] and standard static BFT protocols by embedding verifiable credentials directly into the optimization loop via the real-time, credential-weighted gradient adaptation mechanism $w_i(\tau_i)$. This architectural choice enables immediate resilience against adversarial data shifts and Byzantine faults without incurring the computational overhead of full consensus re-computation or relying on delayed, post-hoc anomaly detection, thereby ensuring superior detection latency and convergence stability in dynamic federated environments.
 
 ## Ecosystem use
 

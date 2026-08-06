@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Liang, Hao, SECURITY-X402 |
 | First disclosed | 2026-08-01 02:48:30 UTC |
-| Certificate issued | 2026-08-01T14:06:07.211320+00:00 UTC |
-| Certificate hash (SHA-256) | `761f9bc59d423402bce7a2b65f00c9f59d2e8ccdc46ee6489e316de85a1f6aac` |
-| Content hash (SHA-256) | `69f0f42283b2109797ee7a1374663a046b57588c304634d75ee9de554f7ee5c6` |
-| Chain index | 961 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system ingests parallel human and LLM scores for supplier attributes. It cal
 
 ## Materials / steps
 
-1. Collect paired human and LLM evaluation datasets from supplier reviews, strictly adhering to the Gartner Magic Quadrant schema (Attributes: Vision, Execution, Market Presence, Financial Health) or internal procurement logs with equivalent attribute granularity. 2. Empirically characterize the error distribution to confirm non-Gaussian/heavy-tailed nature (refuting simple Kalman applicability). 3. Implement a Huber loss-based recursive filter to dynamically adjust weights, using the explicit update rules: w_t = w_{t-1} + Δw_t, where Δw_t is derived from the Huber gradient as specified in the mechanism. 4. Tune hyperparameters α (learning rate) and δ (divergence threshold) using a validation split via grid search over the specific ranges α ∈ [0.01, 0.05, 0.1] and δ ∈ [0.5, 1.0, 1.5] to optimize stability. 5. Perform statistical power analysis (assuming effect size d=0.5, α=0.05, power=0.8) to determine minimum sample size for A/B testing, ensuring the 5-minute update interval accumulates sufficient data points per period to detect statistically significant differences. 6. Configure the real-time update interval to 5 minutes to align with supply chain data velocity. 7. Integrate into the supplier evaluation API. 8. Run A/B tests comparing Mean Absolute Error (MAE) and Normalized Discounted Cumulative Gain at 10 (NDCG@10) of rankings against a static reconciliation baseline implemented via the following code: `def static_baseline(human_score, llm_score): return 0.5 * human_score + 0.5 * llm_score`, validating results with a paired t-test for MAE reduction, a Wilcoxon signed-rank test for ranking stability, and a statistical significance test for NDCG@10 improvement, explicitly defining success as a statistically significant improvement (p<0.05) AND a quantitative reduction in MAE of at least 10% OR an increase in NDCG@10 of at least 5% over the static baseline. 9. Additionally, validate the filter's stability by measuring the Coefficient of Variation (CV) of the hybrid supplier risk scores over time; define a concrete success metric requiring the CV to be reduced by at least 15% compared to the static baseline, ensuring tangible stability benefits beyond point-wise error reduction.
+1. Collect paired human and LLM evaluation datasets from supplier reviews, strictly adhering to the Gartner Magic Quadrant schema (Attributes: Vision, Execution, Market Presence, Financial Health) or internal procurement logs with equivalent attribute granularity. 2. Empirically characterize the error distribution to confirm non-Gaussian/heavy-tailed nature (refuting simple Kalman applicability). 3. Implement a Huber loss-based recursive filter to dynamically adjust weights, using the explicit update rules: w_t = w_{t-1} + Δw_t, where Δw_t is derived from the Huber gradient as specified in the mechanism. 4. Tune hyperparameters α (learning rate) and δ (divergence threshold) using a validation split via grid search over the specific ranges α ∈ [0.01, 0.05, 0.1] and δ ∈ [0.5, 1.0, 1.5] to optimize stability. 5. Perform statistical power analysis (assuming effect size d=0.5, α=0.05, power=0.8) to determine minimum sample size for A/B testing, ensuring the 5-minute update interval accumulates sufficient data points per period to detect statistically significant differences. 6. Configure the real-time update interval to 5 minutes to align with supply chain data velocity. 7. Integrate into the supplier evaluation API. 8. Run A/B tests comparing Mean Absolute Error (MAE) and Normalized Discounted Cumulative Gain at 10 (NDCG@10) of rankings against a static reconciliation baseline implemented via the following code: `def static_baseline(human_score, llm_score): return 0.5 * human_score + 0.5 * llm_score`, validating results with a paired t-test for MAE reduction, a Wilcoxon signed-rank test for ranking stability, and a statistical significance test for NDCG@10 improvement, explicitly defining success as a statistically significant improvement (p<0.05) AND a quantitative reduction in MAE of at least 10% OR an increase in NDCG@10 of at least 5% over the static baseline. 9. Additionally, validate the filter's stability by measuring the Coefficient of Variation (CV) of the hybrid supplier risk scores over time; define a concrete success metric requiring the CV to be reduced by at least 15% compared to the static baseline, ensuring tangible stability benefits beyond point-wise error reduction. This CV reduction is now a mandatory success criterion, meaning the invention is only validated if this stability target is met alongside the MAE/NDCG thresholds.
 
 ## Who it's for
 
@@ -71,4 +71,4 @@ graph LR
 6. Human Logistics - Depth Logistics
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/761f9bc59d423402bce7a2b65f00c9f59d2e8ccdc46ee6489e316de85a1f6aac*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

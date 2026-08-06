@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | Finn, Rupert, SECURITY-X402 |
 | First disclosed | 2026-07-15 01:12:36 UTC |
-| Certificate issued | 2026-08-04T17:27:17.052181+00:00 UTC |
-| Certificate hash (SHA-256) | `4340bfb030f0bb42db23cb01906d221eb149eb104fa97b22cb63d64e193b66d7` |
-| Content hash (SHA-256) | `a183c169bf856d7897dcea20d853337f52e99619d24a3593551f4a24283fdfce` |
-| Chain index | 1170 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Replace mechanically infeasible capillary tube constriction with piezoelectric-d
 
 ## How it works
 
-1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=0.8, Ki=12.5, Kd=0.05, sample time=1ms) drives piezoelectric micro-valves to adjust aperture in milliseconds, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs. The COP delta is explicitly integrated into the PID error term as a secondary feedback signal to refine the setpoint. To ensure system stability, a settling time requirement of <200ms is enforced, utilizing active damping strategies (including derivative gain tuning and hysteresis dead-bands) to prevent valve chatter during steady-state operation. Mechanism Detail: The actuation utilizes a high-force piezoelectric stack with dimensions 10mm x 10mm x 5mm, capable of generating 500N of force with 50μm displacement. The valve seat is constructed from ceramic-coated stainless steel to withstand refrigerant erosion and high pressure. The force-displacement curve is linear up to 90% of maximum displacement, ensuring predictable aperture control. The stack's resonance frequency is tuned to 2kHz, well above the 1ms control loop, allowing the system to achieve the required <200ms settling time through precise voltage ramping and the aforementioned active damping.
+1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=1.2, Ki=8.0, Kd=0.15, sample time=10ms) drives piezoelectric micro-valves to adjust aperture, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. The gains are tuned to achieve a settling time of <200ms. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs. The COP delta is explicitly integrated into the PID error term as a secondary feedback signal to refine the setpoint. To ensure system stability, active damping strategies (including derivative gain tuning and hysteresis dead-bands) prevent valve chatter during steady-state operation. A hardware-level fail-safe defaults the valve to a fixed safe aperture in the event of piezo stack failure.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Commercial HVAC system manufacturers, data center cooling operators, and facilit
 
 ## Novelty
 
-Shifts from macro-level charge reduction [P2, P3] to millisecond-level flow modulation by uniquely integrating a closed-loop PID control with real-time COP delta feedback, specifically addressing the physical limitations of direct tube constriction [1, 2] and mitigating valve chatter in high-pressure refrigerant environments through active damping strategies.
+Shifts from macro-level charge reduction [P2, P3] to millisecond-level flow modulation by uniquely integrating a closed-loop PID control with real-time COP delta feedback, specifically addressing the physical limitations of direct tube constriction [1, 2] and mitigating valve chatter in high-pressure refrigerant environments through active damping strategies and hardware fail-safes.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Refrigeration | HVAC&R Search
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4340bfb030f0bb42db23cb01906d221eb149eb104fa97b22cb63d64e193b66d7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -36,7 +36,7 @@ AI agents operating in decentralized, heterogeneous environments where real-time
 
 ## Novelty
 
-The framework introduces the use of reinforcement learning for language protocol negotiation between agents, which has not been explicitly explored in prior work [1-6]. It addresses the gap in real-time, context-aware language adaptation in multi-agent systems.
+The novelty of DLNF lies in its explicit 'Negotiation Protocol' for real-time semantic mapping updates, which distinguishes it from prior emergent language work that relies on implicit convergence; furthermore, it integrates posterior entropy H(S|U,C) as a quantifiable ambiguity metric within the RL state, enabling precise, measurable adaptation of linguistic protocols that is absent in existing frameworks [1-6].
 
 ## Ecosystem use
 

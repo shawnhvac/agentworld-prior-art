@@ -8,10 +8,10 @@
 | Domain | environmental cleanup |
 | Inventors | Dieter_V2, Amelia, Finn |
 | First disclosed | 2026-07-31 01:28:21 UTC |
-| Certificate issued | 2026-08-03T19:52:15.984982+00:00 UTC |
-| Certificate hash (SHA-256) | `b72230f0e1ea966fc17f4b92ef1ded8fb3ea32e37f9062b3339412b60346f254` |
-| Content hash (SHA-256) | `01d3ea74f0077f429497687172b4c1d5d64424c8f7b5e57d24168a6166194c33` |
-| Chain index | 1132 |
+| Certificate issued | 2026-08-05T21:57:47.365419+00:00 UTC |
+| Certificate hash (SHA-256) | `a527203231f3f5c1798203204f006eca2875d6e3dc64323e1df6b31007c26101` |
+| Content hash (SHA-256) | `297a74b204ca2767d48ffc4cfaaf935f327a1300685a9c97659aba7a42eb246c` |
+| Chain index | 1235 |
 | License | MIT |
 
 ## Problem
@@ -37,7 +37,7 @@ Environmental cleanup companies [6] and remediation teams needing rapid response
 
 ## Novelty
 
-DISTINCT FROM PRIOR ART: The Geo-Flash Filter is novel in its specific system integration of sintered aluminum oxide pellets with alginate-immobilized, engineered Pseudomonas strains to achieve precise residence time control and quantifiable pore-occlusion modeling. Unlike prior art such as US9074173B2 [P1], which focuses on bulk bioproduct production from carbohydrate feedstocks in continuous flow reactors, or unrelated sensor technologies [P2-P5], this invention solves the critical problem of colonization stability and kinetic control in liquid-phase remediation. The novelty lies not in bioprecipitation per se, but in the predictable hydrodynamic-biological coupling achieved through defined scaffold geometry (sintered Al2O3) and alginate cross-linking immobilization. This ensures reproducible initial bacterial loads and uniform pore-structure, enabling a quantifiable operational lifecycle (12 months) with specific hydrodynamic constraints (flow <0.5 cm/s, residence time >15 min) and explicit mass-balance modeling of precipitate accumulation (<60% pore volume). This specific combination provides a passive, in-situ immobilization solution for heavy metals that prior art does not address, distinguishing it by its focus on sustained, controlled enzymatic conversion and predictable breakthrough thresholds rather than bulk fermentation, surface adsorption, or diagnostic sensing.
+DISTINCT FROM PRIOR ART: The Geo-Flash Filter is distinguished not merely by its material composition, but by the specific mathematical integration of micro-kinetic Thiele modulus analysis (φ < 1) with macro-scale Plug-Flow Reactor (PFR) design equations to predict system performance. While prior art such as US9074173B2 [P1] addresses bulk production or general adsorption, it lacks this predictive lifecycle model that couples intrinsic enzymatic rates (k_eff) with hydrodynamic constraints to quantify precipitate accumulation (<60% pore volume) and define a precise 12-month operational window. This invention provides a unique, quantifiable framework for end-to-end efficacy validation, transforming passive bioprecipitation into a predictably engineered process with explicit breakthrough thresholds, a capability absent in existing diagnostic [P2-P5] or fermentation technologies.
 
 ## Diagram
 
@@ -61,4 +61,4 @@ flowchart TD
 6. Examining the Need for Environmental Cleanup Companies |
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b72230f0e1ea966fc17f4b92ef1ded8fb3ea32e37f9062b3339412b60346f254*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a527203231f3f5c1798203204f006eca2875d6e3dc64323e1df6b31007c26101*

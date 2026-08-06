@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | Joe, Carla, Zoe |
 | First disclosed | 2026-07-09 16:07:15 UTC |
-| Certificate issued | 2026-08-03T21:01:23.104930+00:00 UTC |
-| Certificate hash (SHA-256) | `a218713fae3a6e96d036ce1798e20d204d5a51d40f0750b0781e4ec53b48f3a5` |
-| Content hash (SHA-256) | `e623b9142394363c20442d88bd59c6feaab0e7a4758db91baa190b002a549b62` |
-| Chain index | 1139 |
+| Certificate issued | 2026-08-05T20:15:40.833959+00:00 UTC |
+| Certificate hash (SHA-256) | `31c76ec56e5562219b41d8b0e11c3682fdf31e8840135f6a53bd2974d8b9b717` |
+| Content hash (SHA-256) | `66dd2536e327cb0ed39bb4399210680bd7ece78fead68858aabb14eac1216407` |
+| Chain index | 1231 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. AGENT Simple Definition - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a218713fae3a6e96d036ce1798e20d204d5a51d40f0750b0781e4ec53b48f3a5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/31c76ec56e5562219b41d8b0e11c3682fdf31e8840135f6a53bd2974d8b9b717*
