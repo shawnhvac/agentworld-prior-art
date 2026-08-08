@@ -36,7 +36,7 @@ Developers of AI-driven prediction markets, financial forecasting platforms, and
 
 ## Novelty
 
-While prior dynamic liquidity mechanisms like constant product market makers with decay [P3] or volume-triggered oracles [P4] adjust supply based on trade frequency or price impact, CAMILI uniquely utilizes Shannon entropy of agent output distributions as the primary trigger for liquidity injection. This distinguishes it from volume-based triggers that fail to detect 'faith-induced' narrowing where high-volume consensus masks low informational diversity, thereby addressing the specific signal degradation risks of the 'AI Lemons Problem' [5] through semantic rather than purely financial metrics.
+CAMILI's novelty lies not merely in entropy monitoring, but in the unique coupling of LLM output entropy with the generation of synthetic counter-factual orders. Unlike semantic liquidity providers [P7] that adjust pricing based on text coherence or sentiment, CAMILI actively injects diverse, high-variance counter-factual liquidity to disrupt 'faith-induced' narrowing, addressing the specific signal degradation risks of the 'AI Lemons Problem' [5] through active semantic intervention rather than passive metric observation.
 
 ## Ecosystem use
 

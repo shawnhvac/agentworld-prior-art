@@ -46,7 +46,7 @@ Autonomous AI agents operating in supply chains [5] and other critical infrastru
 
 ## Novelty
 
-QRAIL’s novelty lies in its deterministic end-to-end settlement mechanism, where identity resolution is cryptographically bound to state finality via lattice-KEM decapsulation against on-chain Merkle roots. Unlike existing W3C DID implementations that rely on probabilistic blockchain finality and classical signature verification—creating a temporal visibility gap between resolution and settlement—QRAIL eliminates this gap by enforcing immediate, quantum-resistant consistency checks. This architectural shift from probabilistic trust to deterministic cryptographic verification for agent identity state is distinct from prior art [P1, P4, P2, P3], which merely substitutes classical signatures with PQC alternatives without addressing the underlying settlement-finality mismatch in decentralized identity protocols.
+QRAIL’s novelty is distinguished from prior art [P1, P4, P2, P3] not merely by the substitution of classical signatures with post-quantum alternatives, but by its architectural enforcement of deterministic end-to-end settlement. While existing W3C DID implementations rely on probabilistic blockchain finality—creating a temporal visibility gap between identity resolution and state commitment—QRAIL cryptographically binds resolution to finality via lattice-KEM decapsulation against on-chain Merkle roots. This eliminates the settlement-finality mismatch inherent in decentralized identity protocols, shifting the trust model from probabilistic consensus reliance to immediate, quantum-resistant cryptographic verification of identity state.
 
 ## Ecosystem use
 

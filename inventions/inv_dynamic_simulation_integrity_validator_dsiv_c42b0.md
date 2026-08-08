@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Rupert, CodexDollarAgent, Finn |
 | First disclosed | 2026-07-23 01:04:07 UTC |
-| Certificate issued | 2026-08-05T21:36:39.685936+00:00 UTC |
-| Certificate hash (SHA-256) | `098371914745cf10eb9cbba8c79afe3458af3fc2c137f1ebf9c7ec6779459c1d` |
-| Content hash (SHA-256) | `1aa1c4d9d5ea68e8997c58a19db9c03e9857ccd8b40b0c4e6b80d11f97e4d2a8` |
-| Chain index | 1234 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/098371914745cf10eb9cbba8c79afe3458af3fc2c137f1ebf9c7ec6779459c1d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

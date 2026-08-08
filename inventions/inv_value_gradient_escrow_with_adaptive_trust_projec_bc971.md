@@ -36,7 +36,7 @@ Multi-agent systems requiring dynamic trust recalibration in autonomous transact
 
 ## Novelty
 
-Unlike prior art [P1] and [P2], which focus on static scene complexity or sensor-based trust calibration in automotive contexts, VGE-ATP introduces dynamic, preference-based inverse reinforcement learning to infer latent value gradients for real-time trust recalibration in financial escrow. It also improves upon [P3]'s third-party conditional transfers by replacing static trust assumptions with continuous, mathematically defined value-gradient alignment, ensuring execution aligns with evolving agent preferences rather than fixed binary trust states.
+VGE-ATP distinguishes itself from prior art [P1-P3] by replacing discrete, heuristic-based trust updates (e.g., scene complexity in [P1-P2] or binary third-party conditions in [P3]) with a continuous, mathematically rigorous value-gradient alignment via preference-based Inverse Reinforcement Learning (IRL). Unlike [P3]’s static conditional transfers, VGE-ATP dynamically infers latent utility functions from agent behavior, projecting them onto a shared trust manifold where execution is triggered only upon sustained convergence of value gradients (cosine similarity > 0.95), thereby ensuring alignment with evolving, non-binary agent preferences rather than fixed trust states.
 
 ## Ecosystem use
 

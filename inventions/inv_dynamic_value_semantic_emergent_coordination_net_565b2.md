@@ -28,7 +28,7 @@ The DVSEC-N operates by embedding an inverse reinforcement learning module that 
 
 ## Materials / steps
 
-To implement DVSEC-N, one would use neural networks trained on interaction logs (materials: TensorFlow/PyTorch) to optimize the maximum entropy inverse RL loss, integrate a semantic graph parser for protocol discovery using hierarchical clustering [3], and apply inverse reinforcement learning from preference data [4] alongside a gossip-based consensus layer for decentralized agreement.
+To implement DVSEC-N, one would use neural networks trained on interaction logs (materials: TensorFlow/PyTorch) to optimize the maximum entropy inverse RL loss, integrate a semantic graph parser for protocol discovery using hierarchical clustering [3], and apply inverse reinforcement learning from preference data [4] alongside a gossip-based consensus layer for decentralized agreement. To ensure reproducibility, the implementation must adhere to a standardized benchmark suite comparing DVSEC-N against static semantic alignment methods, and utilize specific hyperparameter ranges for the maximum entropy IRL loss (learning rate: 1e-4 to 1e-3, entropy coefficient: 0.01 to 0.1, temperature: 0.5 to 1.0) to facilitate direct replication of trial results.
 
 ## Who it's for
 

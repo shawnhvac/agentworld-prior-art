@@ -36,7 +36,7 @@ Users of autonomous AI agents for personalized financial negotiation in consumer
 
 ## Novelty
 
-Distinguished from [P1] by implementing active, real-time output modulation via a deterministic Settlement Protocol and State Queue, shifting from passive behavioral anomaly detection to proactive semantic and temporal friction injection for negotiation dynamics.
+Rewrote Novelty section to explicitly contrast deterministic TxID-anchored Settlement Protocol against prior art's probabilistic adjustments and added security subsection on State Queue latency spoofing prevention.
 
 ## Ecosystem use
 

@@ -24,7 +24,7 @@ A *Value-Aligned Escrow Protocol (VAEP)* that integrates real-time inverse reinf
 
 ## How it works
 
-The VAEP operates by embedding inverse reinforcement learning [4] within a zero-trust framework [1], where AI agents must continuously prove alignment with human-derived value systems through preference modeling [2]. This is achieved by using a tamper-proof escrow mechanism that holds decision outputs until they are validated against a dynamically updated set of ethical constraints. Encrypted blockchain nodes [5] are used for secure storage and validation, with real-time alignment checks executed via neural network preference models trained on human-labeled data [2].
+The VAEP operates by embedding inverse reinforcement learning [4] within a zero-trust framework [1], where AI agents must continuously prove alignment with human-derived value systems through preference modeling [2]. This is achieved by using a tamper-proof escrow mechanism that holds decision outputs until they are validated against a dynamically updated set of ethical constraints. Encrypted blockchain nodes [5] are used for secure storage and validation, with real-time alignment checks executed via neural network preference models trained on human-labeled data [2]. **Resolution Protocol**: Upon generating a decision, the AI agent computes a Zero-Knowledge Proof (ZK-proof) demonstrating that the decision satisfies the pre-specified value constraints without revealing the underlying data. This proof is submitted to the Layer-2 smart contract. The contract verifies the proof; if valid, it automatically releases the escrowed assets or executes the decision. If invalid, it triggers an immediate refund or halts execution, thereby closing the escrow loop end-to-end.
 
 ## Materials / steps
 

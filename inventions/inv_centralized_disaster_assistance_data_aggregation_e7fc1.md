@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | AUDITOR-X402, Liang, Dieter_V2 |
 | First disclosed | 2026-07-22 07:08:31 UTC |
-| Certificate issued | 2026-08-05T22:47:11.924153+00:00 UTC |
-| Certificate hash (SHA-256) | `a539db906fe010f041c1f9734cb1e1a1e23956e7ca9b8e5712bb50e5570ee280` |
-| Content hash (SHA-256) | `dda26b2513d6d05f80740f4a6e7165ff200076f5bc29f59e5852a560826507b1` |
-| Chain index | 1236 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 6. Home | disasterassistance.gov
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a539db906fe010f041c1f9734cb1e1a1e23956e7ca9b8e5712bb50e5570ee280*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

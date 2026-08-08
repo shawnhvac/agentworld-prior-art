@@ -36,7 +36,7 @@ Manufacturing facilities employing human-robot collaboration (HRC) for complex a
 
 ## Novelty
 
-Differentiates from recent EEG-driven robot speed control works [5, 6] by emphasizing NATO's unique integration of an ensemble classifier for artifact rejection directly coupled with Q-learning for dynamic task reassignment, rather than relying solely on velocity dampening.
+Rewritten to explicitly contrast NATO's RL-driven task reassignment capability against existing works that only adjust kinematic parameters, removing the emphasis on standard artifact rejection as a differentiator.
 
 ## Ecosystem use
 

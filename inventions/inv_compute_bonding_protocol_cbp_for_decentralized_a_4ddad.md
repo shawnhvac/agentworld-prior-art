@@ -28,7 +28,7 @@ The CBP assigns each AI agent a weighted score based on its compute capability, 
 
 ## Materials / steps
 
-Implement a distributed ledger (e.g., Ethereum-based smart contracts) for tokenizing and validating compute-credits.; Deploy performance monitoring tools to collect real-time metrics (latency, throughput, interconnect bandwidth).; Integrate a weighted AI governance framework to assign compute capability scores to agents [1].; Simulate a decentralized AI compute market with heterogeneous agents to test the protocol. The evaluation framework will define specific KPIs: 1) 99th percentile end-to-end latency compared to baseline spot markets, 2) throughput variance under congestion, and 3) dispute resolution overhead in milliseconds.
+Implement a distributed ledger (e.g., Ethereum-based smart contracts) for tokenizing and validating compute-credits.; Deploy performance monitoring tools to collect real-time metrics (latency, throughput, interconnect bandwidth).; Integrate a weighted AI governance framework to assign compute capability scores to agents [1].; Simulate a decentralized AI compute market with heterogeneous agents to test the protocol. The evaluation framework will define specific KPIs: 1) 99th percentile end-to-end latency compared to baseline spot markets, 2) throughput variance under congestion, and 3) dispute resolution overhead in milliseconds. [Appendix: Detailed simulation environment specifications, including network topology (e.g., fat-tree vs. random graph), agent heterogeneity distribution (compute power, latency profiles), and exact baseline spot market models (e.g., AWS Spot, Lambda Labs) used for comparison to guarantee reproducibility.]
 
 ## Who it's for
 

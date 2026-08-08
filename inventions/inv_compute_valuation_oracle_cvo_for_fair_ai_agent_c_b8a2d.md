@@ -24,7 +24,7 @@ A Compute-Valuation Oracle (CVO) that dynamically evaluates the marginal utility
 
 ## How it works
 
-The CVO monitors real-time interconnect bandwidth and compute welfare metrics, using a weighted framework to assign dynamic value to compute resources. This value guides barter decisions in a multi-agent system, ensuring alignment with physical audit constraints and resource-rational decision-making [1][2][3]. Settlement is executed via a continuous double auction model for price discovery, coupled with a commit-reveal scheme to ensure atomic ledger updates and end-to-end consistency.
+The CVO monitors real-time interconnect bandwidth and compute welfare metrics, using a weighted framework to assign dynamic value to compute resources. This value guides barter decisions in a multi-agent system, ensuring alignment with physical audit constraints and resource-rational decision-making [1][2][3]. Settlement is executed via a continuous double auction model for price discovery, coupled with a three-phase commit-reveal scheme (Commit, Reveal, Finalize) to ensure atomic ledger updates and end-to-end consistency. In the Commit phase, agents hash their bid/ask intents and submit them to the ledger; in the Reveal phase, agents disclose the pre-images to validate intent; in the Finalize phase, the auction engine matches orders based on price discovery output, and the ledger atomically updates ownership states only if all revealed commitments are valid and consistent with the cleared prices.
 
 ## Materials / steps
 

@@ -24,7 +24,7 @@ A self-cleaning surface that autonomously disperses dust and regulates thermal s
 
 ## How it works
 
-The TRMBSCS utilizes a closed-loop thermal-electrochemical transduction pathway. Perovskite-based sensors detect thermal stress, causing a measurable change in electrical resistance. This resistance change is fed into a differential amplifier circuit that converts the analog resistance shift into a precise voltage modulation (0-5V) applied to electrodes adjacent to microfluidic channels, triggering electro-wetting effects on the hydrophobic nanostructures. To prevent oscillation near the 40°C threshold, a Schmitt trigger with a 2°C hysteresis band (activation at 40°C, deactivation at 38°C) is implemented in the control logic. Alternatively, localized Joule heating induces thermal expansion in the PDMS channel walls, increasing capillary pressure. This mechanism autonomously draws moisture from a reservoir to disperse fog through capillary action, mimicking desert plant transpiration. A feedback loop ensures fog dispersion is triggered only when thermal stress exceeds the defined threshold, validating the system's passive operational claim by preventing unnecessary actuation.
+The TRMBSCS utilizes a closed-loop thermal-electrochemical transduction pathway. Perovskite-based sensors detect thermal stress, causing a measurable change in electrical resistance. This resistance change is fed into a differential amplifier circuit that converts the analog resistance shift into a precise voltage modulation (0-5V) applied to electrodes adjacent to microfluidic channels, triggering electro-wetting effects on the hydrophobic nanostructures. To prevent oscillation near the 40°C threshold, a Schmitt trigger with a 2°C hysteresis band (activation at 40°C, deactivation at 38°C) is implemented in the control logic. The system follows a strict end-to-end logic flow: (1) Sensor detects T > 40°C; (2) Controller applies 3.5V to electro-wetting electrodes for 2 seconds to dislodge dust; (3) Optical proximity sensor checks surface clearance. If clearance is <90% after 2 seconds, the system engages a secondary fail-safe: localized Joule heating induces thermal expansion in the PDMS channel walls, increasing capillary pressure to draw moisture from a reservoir and disperse remaining particulates via fog-like capillary action, mimicking desert plant transpiration. A feedback loop ensures this secondary mechanism is only triggered if the primary electro-wetting cycle fails, validating the system's passive operational claim by preventing unnecessary actuation.
 
 ## Materials / steps
 
@@ -46,13 +46,14 @@ This could be integrated into AI-agent platforms for real-time monitoring and op
 
 ```mermaid
 graph TD
-    A[Perovskite Thermal Sensor] -->|Resistance Change| B[Differential Amplifier]
-    B -->|Analog Voltage Signal| C[Schmitt Trigger / Hysteresis Logic]
-    C -->|Digital/Threshold Voltage| D[Electrode Array]
-    D -->|Electro-wetting Force| E[Hydrophobic Nanostructures]
-    E -->|Capillary Pressure Increase| F[Microfluidic Channels]
-    F -->|Moisture Draw| G[Fog/Dust Dispersion]
-    C -->|Hysteresis Band: 2°C| H[Prevent Oscillation]
+    A[Perovskite Sensor] -->|Resistance Change| B[Differential Amplifier]
+    B -->|0-5V Signal| C[Schmitt Trigger Controller]
+    C -->|T > 40°C| D[Electro-Wetting Actuation 3.5V/2s]
+    D --> E[Optical Proximity Check]
+    E -->|Clearance >= 90%| F[Deactivate T < 38°C]
+    E -->|Clearance < 90%| G[Secondary Fail-Safe: Joule Heating]
+    G -->|Thermal Expansion| H[Capillary Moisture Draw & Fog Dispersion]
+    H --> F
 ```
 
 ## Sources / grounding

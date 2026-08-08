@@ -24,11 +24,11 @@ A decentralized, blockchain-backed memory fabric that enables AI agents to secur
 
 ## How it works
 
-AI agents generate encrypted memory fragments using AES-256. Public keys are stored on a blockchain smart contract [1] for verification, while private keys remain off-chain. Memory fragments are stored in a decentralized storage network (e.g., IPFS or Filecoin) for persistence and redundancy. Smart contracts manage access control and encryption key distribution, enabling trustless, tamper-proof sharing and retrieval of memory fragments across agents.
+AI agents generate encrypted memory fragments using AES-256. Public keys are stored on a blockchain smart contract [1] for verification, while private keys remain off-chain. To enable trustless retrieval, agents utilize an Elliptic-Curve Diffie-Hellman (ECDH) key exchange protocol to derive a shared session key without exposing private components. The smart contract validates access permissions via zk-SNARK proofs and releases a pointer to the encrypted fragment's location in the decentralized storage network (e.g., IPFS or Filecoin). The requesting agent uses the derived session key to decrypt the fragment locally, ensuring end-to-end confidentiality and integrity.
 
 ## Materials / steps
 
-Implement a smart contract on a blockchain platform (e.g., Ethereum) to manage encryption key access and memory fragment retrieval.; Develop AI agents capable of generating and encrypting memory fragments using AES-256.; Store encrypted memory fragments in a decentralized storage network (e.g., IPFS or Filecoin).; Simulate a network of AI agents performing collaborative tasks (e.g., lab practice [3]) to test memory sharing and retrieval.; Measure success rate, encryption integrity, and resistance to tampering under adversarial conditions.
+Implement a smart contract on a blockchain platform (e.g., Ethereum) to manage encryption key access and memory fragment retrieval, including logic for ECDH key derivation validation and zk-SNARK proof verification.; Develop AI agents capable of generating and encrypting memory fragments using AES-256 and implementing the ECDH key exchange protocol.; Store encrypted memory fragments in a decentralized storage network (e.g., IPFS or Filecoin).; Simulate a network of AI agents performing collaborative tasks (e.g., lab practice [3]) to test memory sharing and retrieval.; Measure success rate, encryption integrity, and resistance to tampering under adversarial conditions.
 
 ## Who it's for
 

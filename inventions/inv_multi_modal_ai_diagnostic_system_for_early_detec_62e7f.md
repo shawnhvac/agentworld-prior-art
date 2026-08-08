@@ -24,7 +24,7 @@ A multi-modal AI diagnostic system that integrates machine learning with biochem
 
 ## How it works
 
-The system employs a multi-stage pipeline: first, a data preprocessing module aligns longitudinal clinical records (cortisol, ACTH, urinary free cortisol) with discrete biochemical assay timestamps using interpolation and outlier detection. Second, a Transformer architecture processes these time-series inputs to capture temporal dependencies, generating temporal embeddings. These temporal embeddings are then fused with static biochemical features via a cross-attention mechanism to weigh the relevance of specific hormonal trends relative to baseline levels. Finally, the fused representation is passed through a fully connected layer with a sigmoid activation function to output a diagnostic probability score, which is compared against a calibrated threshold to determine hypercortisolism risk.
+The system employs a multi-stage pipeline: first, a data preprocessing module aligns longitudinal clinical records (cortisol, ACTH, urinary free cortisol) with discrete biochemical assay timestamps using interpolation and outlier detection. Second, a Transformer architecture processes these time-series inputs to capture temporal dependencies, generating temporal embeddings. These temporal embeddings are then fused with static biochemical features via a cross-attention mechanism to weigh the relevance of specific hormonal trends relative to baseline levels. Specifically, the temporal embeddings $E_t$ of dimension $d_{model}$ are projected to a key dimension $d_k$ and value dimension $d_v$, while static features $F_s$ are linearly projected to query dimension $d_q$. The cross-attention mechanism utilizes 8 attention heads to compute $Attention(Q, K, V) = softmax(\frac{QK^T}{\sqrt{d_k}})V$, where $Q$ derives from $F_s$ and $K, V$ derive from $E_t$. The resulting fused representation is concatenated with the original static features and passed through a fully connected layer with 128 hidden units and ReLU activation, followed by a final dense layer with a sigmoid activation function to output a diagnostic probability score, which is compared against a calibrated threshold to determine hypercortisolism risk.
 
 ## Materials / steps
 
@@ -32,9 +32,9 @@ The system employs a multi-stage pipeline: first, a data preprocessing module al
 2. Perform biochemical assays on blood and urine samples to measure cortisol and its metabolites.
 3. Preprocess data to align longitudinal clinical records with discrete biochemical assay timestamps, handling missing values and normalizing scales.
 4. Train a Transformer model on the aligned dataset to generate temporal embeddings, and fuse these with biochemical features using cross-attention.
-5. Validate the model using a blinded comparison against standard diagnostic protocols in a new patient cohort, optimizing the sigmoid output threshold for sensitivity and specificity.
+5. Validate the model using a blinded comparison against standard diagnostic protocols in a new patient cohort, optimizing the sigmoid output threshold for sensitivity and specificity, with explicit performance targets of AUC-ROC > 0.90 and sensitivity > 85%.
 6. Implement the system as a diagnostic tool for clinicians, providing real-time risk assessments based on dynamic hormonal trends.
-7. Conduct a comprehensive clinical trial with defined inclusion/exclusion criteria (e.g., age 18-75, BMI 18-40, exclusion of pregnancy and severe renal/hepatic impairment), calculate sample size based on anticipated effect size (e.g., 80% power, alpha 0.05), establish primary endpoints (sensitivity/specificity vs. gold standard dexamethasone suppression test), and execute a 24-month timeline for recruitment and data collection.
+7. Conduct a comprehensive clinical trial with defined inclusion/exclusion criteria (e.g., age 18-75, BMI 18-40, exclusion of pregnancy and severe renal/hepatic impairment), calculate sample size based on anticipated effect size (e.g., 80% power, alpha 0.05), establish primary endpoints (sensitivity/specificity vs. gold standard dexamethasone suppression test), execute a 24-month timeline for recruitment and data collection, and utilize DeLong's test for statistical comparison of ROC curves against the gold standard.
 
 ## Who it's for
 
@@ -42,7 +42,7 @@ Clinicians, particularly endocrinologists and diagnostic pathologists, who need 
 
 ## Novelty
 
-This system integrates longitudinal data analysis with biochemical assays and AI, building on advances in AI for diagnostic pathology [1] and machine learning in precision medicine [2], while addressing known diagnostic pitfalls [5].
+This system integrates longitudinal data analysis with biochemical assays and AI, building on advances in AI for diagnostic pathology [1] and machine learning in precision medicine [2], while addressing known diagnostic pitfalls [5]. Unlike prior art [P1] which focuses on pharmacological agents to inhibit cortisol production, this invention provides a computational diagnostic methodology leveraging temporal AI modeling for early detection, rather than treatment.
 
 ## Ecosystem use
 

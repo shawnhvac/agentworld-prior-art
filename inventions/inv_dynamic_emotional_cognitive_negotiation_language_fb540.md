@@ -36,7 +36,7 @@ DEC-NL is designed for use in multi-agent negotiation systems, particularly in c
 
 ## Novelty
 
-DEC-NL introduces a novel integration of real-time affective and cognitive feedback into language generation for negotiation, combining reinforcement learning with emotional and cognitive modeling. This addresses the limitations of static or context-insensitive negotiation frameworks.
+DEC-NL distinguishes itself from standard affective dialogue systems by uniquely integrating real-time physiological and cognitive feedback directly into the reinforcement learning reward function for dynamic strategy adaptation, moving beyond static sentiment analysis to enable closed-loop, biologically-informed negotiation optimization.
 
 ## Ecosystem use
 

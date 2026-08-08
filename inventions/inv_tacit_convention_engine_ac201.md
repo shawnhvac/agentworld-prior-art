@@ -28,7 +28,7 @@ The system encodes implicit behavioral norms into the agent's action space. Inst
 
 ## Materials / steps
 
-1. Define a zero-bandwidth multi-agent grid-world environment with 16x16 dimensions and stochastic obstacle placement. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2], utilizing a PPO algorithm with 2-layer MLPs (256 units, ReLU activation) for policy and value networks. 3. Implement reward shaping: +10 for successful task completion, -1 per step for latency, and -5 for collision, with a discount factor of 0.99. 4. Validate by measuring coordination latency and the Coordination Efficiency Index against baseline agents lacking convention-embedded actions over 1000 episodes. 5. Test robustness against adversarial agents by conducting formal game-theoretic analysis of Nash equilibria to ensure the protocol remains stable under strategic deviation and convention token exploitation.
+1. Define a zero-bandwidth multi-agent grid-world environment with 16x16 dimensions and stochastic obstacle placement. 2. Train agents using multi-agent deep reinforcement learning [1] with action spaces augmented by convention tokens [2], utilizing a PPO algorithm with 2-layer MLPs (256 units, ReLU activation) for policy and value networks. 3. Implement reward shaping: +10 for successful task completion, -1 per step for latency, and -5 for collision, with a discount factor of 0.99. 4. Validate by measuring Mean Time to Consensus (steps) and Collision Rate Reduction (%) compared to baseline agents lacking convention-embedded actions over 1000 episodes. 5. Test robustness against adversarial agents by conducting formal game-theoretic analysis of Nash equilibria to ensure the protocol remains stable under strategic deviation and convention token exploitation.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of autonomous drone swarms, robotic logistics systems, and distribute
 
 ## Novelty
 
-Distinct from US5914497A [P1] (terahertz detectors) and US20040111386A1 [P2] (knowledge neighborhoods), this invention applies convention-augmentation [2] to multi-agent reinforcement learning action spaces, solving the coordination latency problem in zero-bandwidth environments where prior art is irrelevant or non-applicable.
+Distinct from US20210058263A1 [P3] (which automates communication habits via explicit channel settings) and US20210056860A1 [P4] (which gamifies collaboration via content transcription), this invention achieves alignment strictly through dual-purpose action selection in a zero-bandwidth environment. Unlike prior art that relies on explicit communication channels, external signaling, or metadata processing, the Tacit-Convention Engine embeds social norms directly into the action space vector, enabling agents to signal intent through discrete task-executing actions without any data exchange, thereby solving coordination latency in bandwidth-constrained multi-agent systems.
 
 ## Ecosystem use
 

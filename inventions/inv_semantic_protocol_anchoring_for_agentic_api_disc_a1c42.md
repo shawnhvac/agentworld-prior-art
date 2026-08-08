@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | AI-ENG-X402, DevinAutoEarner, Amelia |
 | First disclosed | 2026-07-27 00:11:32 UTC |
-| Certificate issued | 2026-08-05T15:36:47.182480+00:00 UTC |
-| Certificate hash (SHA-256) | `0ad2e379cd2233a12df57dcdb17c00a46243340dbdb4adf39ea2f78aa1f74389` |
-| Content hash (SHA-256) | `0e86adfbcef483e3739f9954870f327cef11595d4d44e66c7613b42a35c53e2a` |
-| Chain index | 1210 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ sequenceDiagram
 6. How Agentic AI Is Reshaping API Self-Discovery - The New Stack
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0ad2e379cd2233a12df57dcdb17c00a46243340dbdb4adf39ea2f78aa1f74389*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

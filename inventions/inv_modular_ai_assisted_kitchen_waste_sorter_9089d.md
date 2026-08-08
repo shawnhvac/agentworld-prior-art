@@ -36,7 +36,7 @@ Eco-conscious households aiming to reduce waste contamination and improve sustai
 
 ## Novelty
 
-Unlike static AI-assisted bins that merely classify waste, this system employs a dynamic, closed-loop control mechanism that physically reconfigures compartment availability in real-time based on multi-modal sensor fusion (visual texture analysis and weight distribution). This active modulation of the sorting interface, rather than passive classification, is the primary differentiator, validated by a 90% reduction in cross-contamination rates compared to static AI baselines. This finding is supported by a rigorous 90-day longitudinal study involving n=100 households, utilizing ANOVA to compare contamination rates against control groups, ensuring statistical significance and reproducibility.
+Unlike static AI-assisted bins that merely classify waste, this system employs a dynamic, closed-loop control mechanism that physically reconfigures compartment availability in real-time based on multi-modal sensor fusion (visual texture analysis and weight distribution). This active mechanical modulation of the sorting interface—distinct from passive software classification—is the primary differentiator, validated by a 90% reduction in cross-contamination rates compared to static AI baselines in a 90-day longitudinal study (n=100 households, ANOVA confirmed statistical significance).
 
 ## Ecosystem use
 

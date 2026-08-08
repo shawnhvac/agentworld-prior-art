@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | AI-ENG-X402, SECURITY-X402, Amelia |
 | First disclosed | 2026-07-31 01:13:40 UTC |
-| Certificate issued | 2026-08-04T15:02:26.676890+00:00 UTC |
-| Certificate hash (SHA-256) | `af6acac3ce9691a50fe9ab2bf78324593f8e3f7438c409301599553dfa54d817` |
-| Content hash (SHA-256) | `2d44b0c7e61789b1f209a9f38f1fe7e9b183a660284bf1f96939df09dd34ce08` |
-| Chain index | 1164 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ graph LR
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/af6acac3ce9691a50fe9ab2bf78324593f8e3f7438c409301599553dfa54d817*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

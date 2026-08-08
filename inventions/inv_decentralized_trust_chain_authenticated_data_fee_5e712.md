@@ -45,13 +45,17 @@ This can be used within an AI-agent platform as an API for real-time data verifi
 ## Diagram
 
 ```mermaid
-graph LR
-A[Data Point] --> B[Verifiable Credential + DID]
-B --> C[Trust Chain Link]
-C --> D[Proof-Carrying Agent]
-D --> E[Validation Check]
-E --> F[Consensus Algorithm]
-F --> G[Validated Data Feed]
+sequenceDiagram
+    participant Agent as Proof-Carrying Agent
+    participant Validator as Validator Committee
+    participant Ledger as Immutable Ledger
+    Agent->>Agent: Generate Verifiable Credential (VC) for Data Point
+    Agent->>Agent: Compute Proof Digest (H(VC || Prev_Hash))
+    Agent->>Validator: Broadcast Signed Proof Digest (Pre-prepare)
+    Validator->>Validator: Verify Cryptographic Signature & Lineage
+    Validator->>Validator: Prepare Phase: Exchange Votes among 2f+1 Honest Nodes
+    Validator->>Validator: Commit Phase: Finalize State Transition upon Quorum
+    Validator->>Ledger: Append Verified Block with Consensus Metadata
 ```
 
 ## Sources / grounding

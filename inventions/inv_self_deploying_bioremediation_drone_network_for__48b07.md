@@ -36,7 +36,7 @@ Environmental cleanup agencies, urban development authorities, and industrial fa
 
 ## Novelty
 
-This invention combines autonomous drone technology with genetically engineered microbes featuring a quorum-sensing kill-switch for safe, targeted, in-situ remediation of mixed contaminants, integrating real-time monitoring and validated closed-containment protocols for optimized performance and environmental safety.
+This invention uniquely couples autonomous, closed-loop drone navigation with real-time, sensor-triggered dispensing of genetically engineered microbes, overcoming the spatial inefficiency of static bioaugmentation and the lack of remediation action in existing non-biological drone monitoring systems.
 
 ## Ecosystem use
 

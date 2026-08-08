@@ -28,7 +28,7 @@ NFDANL employs a closed-loop system architecture to adjust linguistic features i
 
 ## Materials / steps
 
-EEG and fNIRS neural monitoring devices; Low-latency signal processing hardware (<200ms end-to-end pipeline); Reinforcement learning model with defined reward function (R = w1*JGR - w2*PSI); Biometric feedback integration module; Real-time data processing pipeline; Multi-agent negotiation simulation environment
+EEG and fNIRS neural monitoring devices; FPGA-accelerated signal processing units to guarantee <200ms end-to-end latency; Reinforcement learning model with defined reward function (R = w1*JGR - w2*PSI); Biometric feedback integration module; Real-time data processing pipeline; Multi-agent negotiation simulation environment; Consent and Transparency Protocol for ethical real-time neural feedback influence
 
 ## Who it's for
 

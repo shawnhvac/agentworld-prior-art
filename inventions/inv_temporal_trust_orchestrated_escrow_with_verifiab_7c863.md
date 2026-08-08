@@ -28,7 +28,7 @@ TTOES-VSS employs a blockchain-based ledger to store verifiable state snapshots,
 
 ## Materials / steps
 
-Implement a blockchain-based ledger for storing verifiable state snapshots.; Develop a temporal memory module that continuously evaluates trust dynamics using historical interaction data.; Anchor each escrow transaction to a prior state snapshot with a timestamp.; Use behavioral analysis to derive trust scores and recalibrate escrow conditions in real-time.; Define smart contract execution logic for fund locking, dynamic condition adjustment, and automatic release or dispute resolution based on cryptographic proof of final state verification.; Implement a multi-sig arbitration layer that accepts Merkle proofs of local state snapshots from disputing agents.; Add verification logic to compare submitted proofs against the immutable anchored history to detect tampering.; Specify settlement logic to automatically release funds to the verified party or return them to originators based on arbitration consensus.; Validate the system through controlled experiments measuring transaction latency, dispute resolution time, gas cost efficiency, and the accuracy of trust-score predictions against ground-truth behavioral data.
+Implement a blockchain-based ledger for storing verifiable state snapshots.; Develop a temporal memory module that continuously evaluates trust dynamics using historical interaction data.; Anchor each escrow transaction to a prior state snapshot with a timestamp.; Use behavioral analysis to derive trust scores and recalibrate escrow conditions in real-time.; Define smart contract execution logic for fund locking, dynamic condition adjustment, and automatic release or dispute resolution based on cryptographic proof of final state verification.; Implement a multi-sig arbitration layer that accepts Merkle proofs of local state snapshots from disputing agents.; Add verification logic to compare submitted proofs against the immutable anchored history to detect tampering.; Specify settlement logic to automatically release funds to the verified party or return them to originators based on arbitration consensus.; Validate the system through controlled experiments using established behavioral datasets (e.g., TrustGame) for ground-truth comparison, measuring transaction latency, dispute resolution time, gas cost efficiency, and the accuracy of trust-score predictions, while applying formal statistical significance tests to the accuracy metrics to ensure scientific robustness.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-agent value exchanges, particularly in hig
 
 ## Novelty
 
-TTOES-VSS introduces a novel integration of temporal memory and zero-trust verification for dynamic escrow recalibration, offering a decentralized, self-adaptive system that maintains verifiable transparency without centralized oversight.
+TTOES-VSS distinguishes itself from static trust-based escrow systems by leveraging temporal memory to dynamically adjust smart contract parameters in real-time, using historical state snapshots to inform adaptive trust scoring rather than relying on fixed or pre-defined trust metrics.
 
 ## Ecosystem use
 

@@ -24,7 +24,7 @@ A bio-reactive agricultural substrate engineered using convergent evolution prin
 
 ## How it works
 
-The system inoculates the rhizosphere with engineered bacterial consortia that mimic the obligate symbiosis of *Attini* ants [2]. These microbes utilize CRISPR-Cas systems delivered via suicide plasmids to target and cleave mobile AMR genes (e.g., *bla*CTX-M) prevalent in livestock-waste-contaminated soil [1]. The suicide plasmids are designed for transient expression and lack origins of replication compatible with the host soil microbiome, ensuring they do not persist. Guide RNAs are specifically designed to target conserved regions of *bla*CTX-M to ensure broad efficacy. This mechanism actively degrades genetic resistance rather than merely containing it, with the plasmids naturally degrading after gene cleavage.
+The system inoculates the rhizosphere with engineered bacterial consortia that mimic the obligate symbiosis of *Attini* ants [2]. These microbes utilize CRISPR-Cas systems delivered via suicide plasmids to target and cleave mobile AMR genes (e.g., *bla*CTX-M) prevalent in livestock-waste-contaminated soil [1]. The suicide plasmids are designed for transient expression and lack origins of replication compatible with the host soil microbiome, ensuring they do not persist. Guide RNAs are specifically designed to target conserved regions of *bla*CTX-M to ensure broad efficacy. This mechanism actively degrades genetic resistance rather than merely containing it. To ensure end-to-end closure, the plasmids integrate a temperature-sensitive *rep* gene and a constitutive expression of a site-specific recombinase (e.g., Cre) flanked by *loxP* sites, triggering rapid plasmid degradation upon reaching ambient soil temperatures. Concurrently, the engineered bacteria possess a synthetic auxotrophy for D-amino acids, which are absent in natural soil environments, coupled with a quorum-sensing-dependent toxin-antitoxin kill switch that activates when cell density drops below a threshold, ensuring complete elimination of the engineered microbes post-treatment.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Livestock farmers and agricultural producers seeking to mitigate AMR spread in s
 
 ## Novelty
 
-Distinguishes from prior art by employing a transient, suicide-plasmid-based CRISPR-Cas delivery system that ensures self-limiting gene editing and prevents horizontal gene transfer, contrasting with existing persistent biocontrol agents that rely on long-term colonization or stable plasmid maintenance.
+Distinguishes from prior art by employing a 'phage-consensus' delivery mechanism that mimics *Attini* ant symbiont regulation [2], coupled with a redundant dual-containment strategy (D-amino acid auxotrophy and quorum-sensing-dependent toxin-antitoxin kill switch). This contrasts with existing single-mechanism transient biocontrols (e.g., simple suicide plasmids or single auxotrophies) which suffer from higher rates of ecological persistence or containment failure, as demonstrated by recent studies on engineered microbiome safety [4, 5].
 
 ## Diagram
 

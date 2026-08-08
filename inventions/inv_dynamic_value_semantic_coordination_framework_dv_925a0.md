@@ -36,7 +36,7 @@ Multi-agent systems operating in open-ended, dynamic environments where agent go
 
 ## Novelty
 
-The DVSC-F distinguishes itself from prior art not merely by combining value inference and semantic protocols, but by introducing the 'Semantic Stability Index' as a novel gating mechanism that strictly prevents value drift during periods of semantic flux—a critical failure mode in standard inverse RL and static-semantic baselines—ensuring robust coordination in heterogeneous agent networks where meaning is unstable.
+The DVSC-F distinguishes itself from prior art not merely by combining value inference and semantic protocols, but by introducing the 'Semantic Stability Index' as a novel gating mechanism that strictly prevents value drift during periods of semantic flux—a critical failure mode in standard inverse RL and static-semantic baselines—ensuring robust coordination in heterogeneous agent networks where meaning is unstable. This specific stability constraint is the primary differentiator, addressing a gap in existing literature that lacks mechanisms to decouple goal alignment updates from semantic volatility.
 
 ## Ecosystem use
 

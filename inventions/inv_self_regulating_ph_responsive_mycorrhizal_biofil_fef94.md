@@ -24,11 +24,11 @@ A Self-Regulating pH-Responsive Mycorrhizal-Biofilm Composite (SR-MBC) that auto
 
 ## How it works
 
-The SR-MBC integrates pH-sensitive bacterial biofilms with engineered mycorrhizal fungi. The biofilms utilize engineered pH-responsive regulatory circuits to modulate proton flux and enzyme secretion in response to environmental pH changes, while the mycorrhizal fungi regulate nutrient fluxes and promote bioprecipitation of heavy metals. A quorum-sensing mediated feedback loop ensures stable mycorrhizal-bacterial integration, autonomously adjusting local microenvironments to optimize metal solubility and microbial activity.
+The SR-MBC integrates pH-sensitive bacterial biofilms with engineered mycorrhizal fungi. The biofilms utilize a defined pH-responsive regulatory circuit: a sensor kinase (PhrS) detects local proton concentration, triggering a phosphorelay to a response regulator (PhrR) that activates the *atp* operon promoter. This drives the expression of F1F0-ATPase variants (specifically the A2B2C3D1E1F1 stoichiometry optimized for high-flux proton extrusion) to modulate proton flux and secrete siderophores/enzymes in response to environmental pH changes. Concurrently, engineered *Rhizopus arrhizus* regulates nutrient fluxes and promotes bioprecipitation. A quorum-sensing mediated feedback loop, modeled by the differential equation dp/dt = α·Q - β·p - γ·p² (where p is autoinducer concentration, Q is production rate linked to bacterial density, and β/γ are degradation/diffusion constants), ensures stable mycorrhizal-bacterial integration. This system autonomously adjusts local microenvironments to optimize metal solubility and microbial activity, converging to a stable equilibrium where pH oscillations are damped within ±0.5 units of the target range.
 
 ## Materials / steps
 
-Engineered *Rhizopus arrhizus* for enhanced metal uptake; Engineered *Pseudomonas putida* biofilms expressing high-efficiency pH-responsive proton pumps (F1F0-ATPase variants) with optimized membrane anchoring; Contaminated soil samples with varying heavy metal concentrations and pH levels; Soil columns for controlled experimentation; pH sensors and metal detection equipment for monitoring; Seeding the SR-MBC into soil columns and monitoring pH, metal uptake, and microbial activity over time with specific target metrics: maintaining soil pH within ±0.5 units of the optimal range for >24 hours and achieving >80% removal of target heavy metals (e.g., Cd, Pb) within 30 days.
+Engineered *Rhizopus arrhizus* for enhanced metal uptake; Engineered *Pseudomonas putida* biofilms expressing high-efficiency pH-responsive proton pumps (F1F0-ATPase variants with A2B2C3D1E1F1 stoichiometry) under the control of the PhrS-PhrR regulatory circuit; Contaminated soil samples with varying heavy metal concentrations and pH levels; Soil columns for controlled experimentation; pH sensors and metal detection equipment for monitoring; Seeding the SR-MBC into soil columns and monitoring pH, metal uptake, and microbial activity over time with specific target metrics: maintaining soil pH within ±0.5 units of the optimal range for >24 hours and achieving >80% removal of target heavy metals (e.g., Cd, Pb) within 30 days.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and waste management profes
 
 ## Novelty
 
-Unlike US9469838B2, which focuses on static structural biofilm-mycelium composites, and US20150040629A1, which addresses biofertilizer formulations, the SR-MBC introduces a dynamic, self-regulating system driven by engineered cross-kingdom quorum sensing. This mechanism autonomously synchronizes fungal hyphal extension with bacterial pH-responsive enzyme secretion to actively modulate local soil pH for heavy metal solubility, a functional capability absent in the passive or nutrient-focused prior art.
+Unlike US9469838B2, which focuses on static structural biofilm-mycelium composites, and US20150040629A1, which addresses biofertilizer formulations, the SR-MBC introduces a dynamic, self-regulating system driven by engineered cross-kingdom quorum sensing. This mechanism autonomously synchronizes fungal hyphal extension with bacterial pH-responsive enzyme secretion via a defined PhrS-PhrR circuit and F1F0-ATPase modulation to actively modulate local soil pH for heavy metal solubility, a functional capability absent in the passive or nutrient-focused prior art.
 
 ## Diagram
 

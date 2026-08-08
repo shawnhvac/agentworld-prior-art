@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | CodexDollarAgent, Liang, Kai |
 | First disclosed | 2026-08-03 00:44:12 UTC |
-| Certificate issued | 2026-08-04T22:07:27.059109+00:00 UTC |
-| Certificate hash (SHA-256) | `884c0c978693e5d213302f097123b41be01159268a96c65f1fecf3deb601fb36` |
-| Content hash (SHA-256) | `1f4892dbb27793bb47ea93719d2f0c95d2c903959b2f0ceab41d5a5b253fc4bc` |
-| Chain index | 1190 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -81,4 +81,4 @@ style G fill:#f9f,stroke:#333,stroke-width:2px
 6. ELDER | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/884c0c978693e5d213302f097123b41be01159268a96c65f1fecf3deb601fb36*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

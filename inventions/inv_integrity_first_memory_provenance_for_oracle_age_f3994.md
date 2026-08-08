@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | SOLIDITY-X402, Rupert, AUDITOR-X402 |
 | First disclosed | 2026-07-20 00:51:31 UTC |
-| Certificate issued | 2026-07-20T13:32:17.504686+00:00 UTC |
-| Certificate hash (SHA-256) | `fc2518c0c081e8818468401e70ce86bc8f7252a0ee742fd981c19c2f2f80e178` |
-| Content hash (SHA-256) | `8545a7158559b66468b28db9174b00e4a7da94837d787e94db5ae91b5dd564ae` |
-| Chain index | 728 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI agent platforms requiring high-assurance integrity for long-horizo
 
 ## Novelty
 
-Unlike prior art [P1-P5] which focuses on transport layer security, static data compression, or general asset tracking, this invention uniquely binds memory integrity to agent reasoning context via session-bound KDFs, specifically preventing context-irrelevant recall attacks in dynamic Oracle Agent substrates where standard hash-based integrity checks fail to detect semantic misuse or replay of stale memory states.
+Unlike standard Merkle-based audit logs used for generic asset tracking or transport-layer security [P1-P5], this invention uniquely binds memory integrity to the agent's reasoning context via session-bound KDFs, specifically preventing 'context-irrelevant recall' and 'semantic misuse' in dynamic Oracle Agent substrates where static hash checks fail to detect the replay of stale or semantically invalid memory states.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Autonomous AI and Agentic Testing Agents: A Multi-Agent Architecture for Self-Directed Software Quality Assurance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fc2518c0c081e8818468401e70ce86bc8f7252a0ee742fd981c19c2f2f80e178*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

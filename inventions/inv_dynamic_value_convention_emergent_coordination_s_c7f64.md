@@ -28,7 +28,7 @@ The DVC-ECS uses inverse reinforcement learning to infer the value systems of in
 
 ## Materials / steps
 
-Neural networks trained on multi-agent interaction logs; Symbolic reasoning module for generating and negotiating conventions; Inverse reinforcement learning framework [4] for real-time value inference; Protocol discovery mechanism [3] for mapping conventions to semantic relationships; Validation Protocol: Implementation of 'Convergence Stability Index' and 'Semantic Alignment Accuracy' as primary metrics, benchmarked against baseline MARL agents in noisy multi-agent environments
+Neural networks trained on multi-agent interaction logs; Symbolic reasoning module for generating and negotiating conventions; Inverse reinforcement learning framework [4] for real-time value inference; Protocol discovery mechanism [3] for mapping conventions to semantic relationships; Validation Protocol: Implementation of 'Convergence Stability Index' (CSI) defined as $CSI = 1 - \frac{\sigma(V_t)}{\mu(V_t)}$ where $V_t$ is the value distribution at time $t$, and 'Semantic Alignment Accuracy' (SAA) defined as the percentage of successfully negotiated conventions matching ground-truth semantic labels over $N$ episodes, benchmarked against baseline MARL agents (MADDPG with standard critic networks, QMIX with hypernetwork value decomposition) in noisy multi-agent environments including Hanabi and StarCraft II micromanagement tasks
 
 ## Who it's for
 

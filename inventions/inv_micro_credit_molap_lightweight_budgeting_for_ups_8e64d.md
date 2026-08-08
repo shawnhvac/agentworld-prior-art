@@ -24,11 +24,11 @@ A lightweight, browser-based multidimensional online analytical processing (MOLA
 
 ## How it works
 
-The system ingests verified micro-credential JSON feeds [4] to generate a sparse dimensional cube. Axes represent skill acquisition costs against projected productivity gains. It maps discrete educational outcomes to MOLAP budget nodes, allowing real-time simulation of workforce upskilling impacts on cash flow without requiring heavy server infrastructure, addressing computational constraints [2]. A Settlement Protocol commits these simulated projections to the ledger: client-side calculations are hashed and submitted to a lightweight consensus layer; discrepancies between client-side simulations and server-side validation trigger automatic rollback and error logging, ensuring final budget node updates are immutable and consistent. A Validation Protocol enforces accuracy by calculating Mean Absolute Percentage Error (MAPE) against actuals, requiring <5% deviation in pilot tests to certify model reliability.
+The system ingests verified micro-credential JSON feeds [4] to generate a sparse dimensional cube. Axes represent skill acquisition costs against projected productivity gains. It maps discrete educational outcomes to MOLAP budget nodes, allowing real-time simulation of workforce upskilling impacts on cash flow without requiring heavy server infrastructure, addressing computational constraints [2]. A Settlement Protocol commits these simulated projections to the ledger: the sparse cube is structured as a Merkle tree where leaf nodes represent individual budget items; client-side calculations generate a Merkle root hash which is submitted to a lightweight consensus layer via a smart contract. The smart contract logic validates the client-side Merkle root against a server-side validation hash; discrepancies between client-side simulations and server-side validation trigger automatic rollback and error logging, ensuring final budget node updates are immutable and consistent. A Validation Protocol enforces accuracy by calculating Mean Absolute Percentage Error (MAPE) against actuals, requiring <5% deviation in pilot tests to certify model reliability.
 
 ## Materials / steps
 
-1. Ingest verified micro-credential JSON feeds [4]. 2. Generate a sparse dimensional cube with axes for skill acquisition costs and projected productivity gains. 3. Map educational outcomes to MOLAP budget nodes. 4. Run real-time simulations of workforce upskilling impacts on cash flow in a browser-based environment. 5. Execute Settlement Protocol: hash client-side results, submit to consensus layer, handle discrepancies via rollback/error logging, and finalize immutable budget node updates.
+1. Ingest verified micro-credential JSON feeds [4]. 2. Generate a sparse dimensional cube with axes for skill acquisition costs and projected productivity gains. 3. Map educational outcomes to MOLAP budget nodes. 4. Run real-time simulations of workforce upskilling impacts on cash flow in a browser-based environment. 5. Execute Settlement Protocol: construct a Merkle tree from the sparse cube, hash client-side results to generate a Merkle root, submit to consensus layer smart contract, validate against server-side hash, handle discrepancies via rollback/error logging, and finalize immutable budget node updates.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) seeking to integrate academic empowerm
 
 ## Novelty
 
-Technical differentiation lies in the browser-native generation of sparse dimensional cubes directly from micro-credential JSON feeds, coupled with a deterministic cryptographic Settlement Protocol that hashes client-side simulations for immutable ledger commitment, eliminating the need for server-side aggregation layers.
+Technical differentiation lies in the browser-native generation of sparse dimensional cubes directly from micro-credential JSON feeds, coupled with a deterministic cryptographic Settlement Protocol that utilizes Merkle tree construction to hash client-side simulations for immutable ledger commitment, eliminating the need for server-side aggregation layers.
 
 ## Diagram
 

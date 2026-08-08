@@ -36,7 +36,7 @@ Multi-agent systems operating in heterogeneous or evolving environments, such as
 
 ## Novelty
 
-Unlike prior art that treats value alignment and semantic coordination as decoupled or static processes [2][4], VDASC-N introduces a tightly coupled, dynamic feedback loop where inferred value drift directly modulates the negotiation of communication conventions. This simultaneous adaptation resolves the 'semantic lag' inherent in static coordination mechanisms, enabling robust cooperation in non-stationary environments where reward structures evolve faster than communication protocols can be manually reconfigured.
+Unlike prior art that treats value alignment and semantic coordination as separate, decoupled modules [2][4], VDASC-N introduces a tightly coupled, dynamic feedback loop where inferred value drift directly modulates the negotiation of communication conventions. The primary innovation lies in the explicit mathematical coupling via the contraction mapping ΔC_t = κ * ∇V_t, which guarantees convergence to a unique fixed point under the k=4 regular graph topology. This simultaneous adaptation resolves the 'semantic lag' inherent in static or loosely coupled coordination mechanisms, enabling robust cooperation in non-stationary environments where reward structures evolve faster than communication protocols can be manually reconfigured.
 
 ## Ecosystem use
 
