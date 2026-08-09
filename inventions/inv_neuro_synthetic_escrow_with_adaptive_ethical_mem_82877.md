@@ -36,7 +36,7 @@ Autonomous AI agents operating in decentralized, multi-agent environments where 
 
 ## Novelty
 
-NSE-AEM's primary innovation is the deterministic 'Neural-to-Circuit' fixed-point mapping protocol, which explicitly eliminates the stochastic variance inherent in standard probabilistic ZK-ML methods by enforcing exact quantization of neural trust evaluations into immutable ZK-SNARK proofs, thereby providing cryptographic finality guarantees absent in systems relying on non-deterministic or approximate inference paths.
+The innovation lies not in the quantization technique itself, but in its specific application to enforce dynamic ethical constraints within a decentralized escrow framework, bridging the gap between probabilistic neural trust synthesis and deterministic ZK-SNARK verification where prior ZK-ML works [1][2] primarily focused on static model inference or generic privacy preservation without real-time ethical adaptability.
 
 ## Ecosystem use
 

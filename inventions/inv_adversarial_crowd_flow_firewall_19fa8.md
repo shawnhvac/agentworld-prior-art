@@ -36,7 +36,7 @@ Transit operators managing emergency evacuations or high-density crowd scenarios
 
 ## Novelty
 
-Distinct from [P1] (cyber adversary profiling) and [P2] (digital firewall config), this invention applies distributed consensus mechanisms to physical space reservation triggered by biometric anxiety states. It is the first system to use atomic, biometric-triggered physical space reservation to prevent fear-propagation cascades [2], contrasting with static signage or purely digital network security.
+Distinct from [P3] (reactive crowd flow optimization, which adjusts routes based on aggregate density without individual physiological context) and [P4] (biometric authentication, which uses biometrics for identity verification rather than dynamic safety routing), this invention is the first to combine differential privacy-preserving biometric inference with Raft-based atomic resource locking for physical safety. It introduces a novel mechanism where individual anxiety states, inferred via persona-embedding learning [3] under strict differential privacy constraints, trigger atomic, cryptographically secured reservations of physical corridor capacity. In the context of crowd dynamics, 'adversarial' is explicitly defined as 'panic-induced congestion' rather than malicious actors, preventing conceptual confusion. This contrasts with prior art that lacks either the granular, privacy-preserving physiological trigger or the distributed consensus mechanism required to prevent double-booking of safe zones during high-concurrency panic events.
 
 ## Ecosystem use
 

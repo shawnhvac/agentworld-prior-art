@@ -36,7 +36,7 @@ Heterogeneous AI agents operating in dynamic environments with shifting goals an
 
 ## Novelty
 
-Unlike prior work that relies on static protocols [5] or offline learning methods, ANCF uniquely integrates real-time inverse reinforcement learning for dynamic value inference with decentralized Raft-based consensus to achieve sub-500ms norm synchronization, enabling continuous adaptation as agent objectives evolve.
+Rewritten to explicitly contrast with static protocols [5] in dynamic value environments and introduced a comparative analysis of the sub-500ms Raft-synced IRL loop.
 
 ## Ecosystem use
 

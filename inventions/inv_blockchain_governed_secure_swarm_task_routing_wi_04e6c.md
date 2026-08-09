@@ -24,11 +24,11 @@ A blockchain-governed swarm task routing protocol that integrates adversarial ro
 
 ## How it works
 
-The system employs a decentralized blockchain-based governance layer to record and verify task assignments. Each swarm node runs a federated learning model to detect adversarial behavior in real-time. Task routing is described using SwarmL, an AI-enhanced task description language, allowing nodes to dynamically adjust their behavior based on learned policies. Nodes validate routing decisions via consensus, ensuring that no single entity can manipulate task allocation without cryptographic consensus.
+The system employs a decentralized blockchain-based governance layer to record and verify task assignments. Each swarm node runs a federated learning model to detect adversarial behavior in real-time. Task routing is described using SwarmL, an AI-enhanced task description language, allowing nodes to dynamically adjust their behavior based on learned policies. Nodes validate routing decisions via consensus, ensuring that no single entity can manipulate task allocation without cryptographic consensus. The end-to-end settlement is achieved through a specific handshake: (1) Node A proposes a SwarmL-encoded task via ROS2 DDS; (2) Local FL model validates intent; (3) Proposal is submitted to Hyperledger Fabric chaincode; (4) Chaincode executes consensus and returns a signed receipt; (5) Node A updates local state and triggers execution.
 
 ## Materials / steps
 
-Implement a ROS2-based edge swarm with blockchain nodes (e.g., Hyperledger Fabric) and federated learning modules. Nodes use SwarmL to encode tasks and policies, and each task assignment is recorded on-chain with a timestamp and node signature. Nodes periodically aggregate model updates from the swarm using federated learning.
+Implement a ROS2-based edge swarm with blockchain nodes (e.g., Hyperledger Fabric) and federated learning modules. Nodes use SwarmL to encode tasks and policies, and each task assignment is recorded on-chain with a timestamp and node signature. Nodes periodically aggregate model updates from the swarm using federated learning. The implementation includes a specific settlement handshake: ROS2 topics handle real-time task proposals, a bridge service serializes SwarmL payloads into chaincode invocations, and the chaincode validates cryptographic signatures before committing the transaction to the ledger, returning a confirmation to the ROS2 node for execution.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Researchers and developers working on secure, decentralized swarm robotics and m
 
 ## Novelty
 
-This invention distinguishes itself by introducing SwarmL, a dynamic AI policy language that enables real-time behavioral adaptation beyond the static execution constraints of standard smart contracts, and by integrating federated learning to detect and mitigate specific adversarial routing attacks (e.g., sybil-based resource starvation) that blockchain-only consensus mechanisms cannot address at the edge.
+This invention distinguishes itself by introducing SwarmL, a dynamic AI policy language that enables real-time behavioral adaptation beyond the static execution constraints of standard smart contracts, and by integrating federated learning to detect and mitigate specific adversarial routing attacks (e.g., sybil-based resource starvation) that blockchain-only consensus mechanisms cannot address at the edge. Validation Metrics: The system targets <50ms routing latency, >95% adversarial detection accuracy, and <1% false positive rate for Sybil attacks.
 
 ## Ecosystem use
 
@@ -45,14 +45,27 @@ This system could be integrated into an AI-agent platform as a secure task routi
 ## Diagram
 
 ```mermaid
-graph LR
-A[ROS2 Edge Nodes] --> B[Blockchain Nodes (Hyperledger Fabric)]
-A --> C[Federated Learning Module]
-C --> D[SwarmL Task Description]
-D --> E[Task Assignment]
-E --> B
-B --> F[Consensus Validation]
-F --> G[Secure Task Execution]
+sequenceDiagram
+    participant NodeA as ROS2 Node A
+    participant FL as Local FL Model
+    participant Bridge as Blockchain Bridge
+    participant Chaincode as Hyperledger Chaincode
+    participant Ledger as Blockchain Ledger
+    NodeA->>FL: 1. Propose SwarmL Task
+    FL->>FL: 2. Validate Intent (Adversarial Check)
+    alt Attack Detected
+        FL-->>NodeA: Reject/Alert
+    else Valid
+        FL->>NodeA: Approve
+        NodeA->>Bridge: 3. Submit Signed Proposal
+        Bridge->>Chaincode: 4. Invoke SetTask()
+        Chaincode->>Chaincode: 5. Consensus & Signature Verify
+        Chaincode->>Ledger: 6. Commit Transaction
+        Ledger-->>Chaincode: TxID
+        Chaincode-->>Bridge: 7. Return Receipt
+        Bridge-->>NodeA: 8. Notify Success
+        NodeA->>NodeA: 9. Execute Task
+    end
 ```
 
 ## Sources / grounding

@@ -24,7 +24,7 @@ A system that integrates real-time neurofeedback from human partners and simulat
 
 ## How it works
 
-NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect cognitive and emotional states, while AI agents simulate emotional states using affective computing models. A neural network maps these states to lexical, syntactic, and pragmatic adjustments in real-time via a structured data pipeline. The system uses a hybrid reinforcement learning and affective feedback loop to optimize language for negotiation success. Performance is validated through a randomized controlled trial comparing NESNL against standard negotiation protocols, utilizing agreement rates with statistical significance determined by p-values and subjective trust scores analyzed via Cohen's d effect size to quantitatively assess system efficacy.
+NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect cognitive and emotional states, while AI agents simulate emotional states using affective computing models. A neural network maps these states to lexical, syntactic, and pragmatic adjustments in real-time via a structured data pipeline. The system uses a hybrid reinforcement learning and affective feedback loop to optimize language for negotiation success. Performance is validated through a randomized controlled trial comparing NESNL against standard negotiation protocols, utilizing agreement rates with statistical significance determined by p-values, subjective trust scores analyzed via Cohen's d effect size, BLEU scores for linguistic coherence, average response latency in milliseconds, and a secondary metric for perceived empathy using post-session Likert scales to quantitatively assess system efficacy.
 
 ## Materials / steps
 

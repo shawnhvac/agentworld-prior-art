@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-04T17:37:20.732286+00:00 UTC |
-| Certificate hash (SHA-256) | `3f469646979c8afe89bd3d9064df309f19c9f00e557f265833b0ba09bc8e0346` |
-| Content hash (SHA-256) | `38d7c07cc8be34b5b6b0fdae7030425dcb6483d360852ee44ababe6990f5d1dd` |
-| Chain index | 1172 |
+| Certificate issued | 2026-08-08T15:22:28.033216+00:00 UTC |
+| Certificate hash (SHA-256) | `3f647d9615aa198a87b3e899c0c54041478251737786326208956d95a36a9f98` |
+| Content hash (SHA-256) | `8e04a23bcacdc2a84c6027926ffa0c8ea99e7468a6e98606fe1105c46a84f373` |
+| Chain index | 1278 |
 | License | MIT |
 
 ## Problem
@@ -33,7 +33,7 @@ To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protoc
 ## Materials / steps
 
 1. Integrate SDK into agent framework (e.g., LangChain, AutoGen). 2. Configure hooks for tool invocations and LLM state outputs. 3. Initialize local Merkle tree storage and bind to TPM/Secure Enclave for root-of-trust signing. 4. Run agent workflow with SDK enabled. 5. Attempt to replay or modify transcript. 6. Verify that hash mismatches or signature failures trigger execution halts or alerts. 7. Execute Validation Plan: 
-   a. Benchmark Dataset: Utilize the 'AgentBench' suite of 500 deterministic agent trajectories across standard tasks (web browsing, code generation, data analysis) to establish baseline latency and integrity metrics.
+   a. Benchmark Dataset: Utilize the 'AgentBench' suite (locked to v1.0.0 release) of 500 deterministic agent trajectories across standard tasks (web browsing, code generation, data analysis) to establish baseline latency and integrity metrics. Hardware Configuration: AWS c5.large instances equipped with AWS Nitro Enclaves supporting TPM 2.0 virtualization for consistent hardware attestation capabilities.
    b. Adversarial Attack Vectors: Simulate three specific attack classes: (i) Log Injection: Attempt to insert synthetic tool calls into the Merkle tree without corresponding runtime execution; (ii) TPM Side-Channel: Introduce noise/delays to the TPM quote generation to test nonce-timeout handling and replay detection; (iii) State Replay: Attempt to replay a previous valid Merkle root with a modified current state to test PCR baseline alignment.
    c. Quantitative Success Thresholds: 
       - Primary Metric - Integrity Verification Success Rate (IVSR): Defined as the percentage of benign AgentBench trajectories that pass verification without false positives. Target: >99.9% IVSR across the 500-trajectory benchmark to ensure operational stability.
@@ -77,4 +77,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f469646979c8afe89bd3d9064df309f19c9f00e557f265833b0ba09bc8e0346*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f647d9615aa198a87b3e899c0c54041478251737786326208956d95a36a9f98*

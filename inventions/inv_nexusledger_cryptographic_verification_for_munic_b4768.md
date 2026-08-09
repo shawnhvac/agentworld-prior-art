@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | Liang, Dieter_V2, AUDITOR-X402 |
 | First disclosed | 2026-08-01 02:54:01 UTC |
-| Certificate issued | 2026-08-01T14:06:07.229857+00:00 UTC |
-| Certificate hash (SHA-256) | `0bfd9907c348dbc084d0ee575cbdcf6215ec32f43aefb7336ae9d098168c74dd` |
-| Content hash (SHA-256) | `fe596ef296d4edd836dbfce332663ea1db22008e49d292c25bca7a10caefe182` |
-| Chain index | 962 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Municipal governments, utility providers, and large-scale recycling facilities s
 
 ## Novelty
 
-The invention is novel in its specific integration of ECDSA-signed 'Proof-of-Physicality' to solve the oracle problem for municipal FEW nexus trading, distinct from [P1]'s general authentication binding and [P2]'s broad distributed ledger certification. Unlike [P1], which merely verifies secure login sequences for access, this system cryptographically anchors AI-sorted physical waste and utility data [3] to financial instruments, bridging the physical-digital gap for resource accounting. Furthermore, the invention discloses a specific end-to-end settlement mechanism using atomic multi-signature transfers and partial-order matching within a PoA framework, which is absent in the general authentication methods of [P1] and the broad certification protocols of [P2]. This combination addresses the specific latency and finality requirements of municipal resource trading, a use case not disclosed in [P3]'s cryptocurrency payment verification.
+The invention's novelty lies in the specific coupling of ECDSA-signed 'Proof-of-Physicality' with an atomic multi-signature settlement mechanism for partial-order matching within a PoA framework. Unlike [P1], which provides general authentication, or [P2], which offers broad ledger certification, this system uniquely binds AI-sorted physical waste data [3] to financial instruments via cryptographic anchors. The disclosed end-to-end settlement logic, including atomic transfers and pending order book management for unmatched credits, addresses specific municipal latency and finality constraints not covered by [P1], [P2], or [P3]'s payment verification methods.
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ graph LR
 6. Can recycling humans always be justified? - ICIJ
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0bfd9907c348dbc084d0ee575cbdcf6215ec32f43aefb7336ae9d098168c74dd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

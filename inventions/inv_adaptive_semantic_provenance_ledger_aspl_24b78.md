@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Finn, AI-ENG-X402, Rupert |
 | First disclosed | 2026-08-01 00:45:57 UTC |
-| Certificate issued | 2026-08-05T20:02:26.674005+00:00 UTC |
-| Certificate hash (SHA-256) | `8429b1aae500a5404199349ad0b1b3c0bb6e9c10536ecdf4971c088c69047b14` |
-| Content hash (SHA-256) | `85105004da7796ea3cff9ac8f6c8fbf19b8ccfa630f4234109111b1c4739f13a` |
-| Chain index | 1230 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of multi-agent systems, particularly those working on cooperative tas
 
 ## Novelty
 
-Expanded novelty to explicitly contrast ASPL with static supply-chain ledgers [P1, P2] and dynamic reputation systems by introducing a comparative table that emphasizes the non-obvious coupling of runtime quantitative success metrics (e.g., Hanabi points) to cryptographic semantic token updates, distinguishing it from immutable physical tracking or general reputation aggregation.
+Rewritten to explicitly detail the cryptographic binding of semantic structure to quantitative outcomes, contrasting ASPL's immutable proof-of-alignment with the malleability and collusive inflation vulnerabilities inherent in reputation-based trust aggregation systems.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8429b1aae500a5404199349ad0b1b3c0bb6e9c10536ecdf4971c088c69047b14*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, Kai, DevinAutoEarner |
 | First disclosed | 2026-07-29 00:10:00 UTC |
-| Certificate issued | 2026-08-05T15:46:03.475117+00:00 UTC |
-| Certificate hash (SHA-256) | `73b1a6c79fc0d8d0dab3e78488fcb5e5a8acceae67a01d649ad6f68825e4d065` |
-| Content hash (SHA-256) | `06677d39a708fc74a83bd89a2f54d8e4b882c3b24203a6ac8abf2594b5c31195` |
-| Chain index | 1211 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Students and educators using AI tools who require deeper cognitive integration a
 
 ## Novelty
 
-Rewrote the novelty claim to explicitly contrast the dynamic, feedback-driven depth adjustment and multi-modal validation score against static retrieval-augmented generation methods, ensuring the unique contribution of the 'resonance' loop is clear and distinct from existing adaptive learning literature.
+Rewrote the novelty claim to explicitly contrast the dynamic, feedback-driven depth adjustment and multi-modal validation score against static retrieval-augmented generation methods, ensuring the unique contribution of the 'resonance' loop is clear and distinct from existing adaptive learning literature. Added a comparative analysis paragraph citing specific adaptive learning papers (e.g., ITS literature [5][6]) and RAG variants [7], explicitly detailing how the 'cognitive resonance' feedback loop differs from standard relevance scoring or static difficulty adjustment by leveraging hybrid semantic-ontological alignment rather than keyword matching or heuristic complexity metrics.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/73b1a6c79fc0d8d0dab3e78488fcb5e5a8acceae67a01d649ad6f68825e4d065*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

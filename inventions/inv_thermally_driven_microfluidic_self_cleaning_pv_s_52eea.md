@@ -36,7 +36,7 @@ Photovoltaic system operators, renewable energy providers, and researchers seeki
 
 ## Novelty
 
-While prior art [P1] and [P2] utilize external electrothermal actuation or passive heat dissipation for cleaning, this invention introduces a unique closed-loop energy-recycling architecture that co-integrates waste-heat-to-electricity conversion via a perovskite thermoelectric layer directly within the cleaning loop, enabling simultaneous autonomous dust removal and power generation from the same thermal gradient (ΔT ≥15 K) without external power input.
+While prior art [P1] and [P2] rely on external electrothermal actuation or passive heat dissipation—requiring auxiliary power or sacrificing thermal energy without recovery—this invention uniquely exploits the localized thermal gradient (ΔT ≥15 K) as the sole driving force for simultaneous Marangoni-based dust removal and perovskite thermoelectric power generation, achieving a self-sustaining closed-loop architecture with zero external energy input.
 
 ## Diagram
 

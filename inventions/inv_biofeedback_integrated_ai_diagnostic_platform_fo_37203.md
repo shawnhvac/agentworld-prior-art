@@ -24,7 +24,7 @@ A biofeedback-integrated, AI-driven diagnostic platform that adjusts testing par
 
 ## How it works
 
-The system uses non-invasive biosensors (e.g., ECG, galvanic skin response, and salivary cortisol) to monitor real-time physiological and psychological states. To address the 15-20 minute biological lag of salivary cortisol, the machine learning model utilizes predictive modeling based on immediate HRV and GSR spikes to forecast cortisol trends. This allows the AI to dynamically adjust diagnostic protocols—such as altering the timing or intensity of cognitive or physical tests—before cortisol levels significantly impact results, minimizing stress-induced variability. For example, if predictive models indicate rising cortisol based on acute stress markers, the system may preemptively delay a glucose tolerance test to avoid confounding results. The end-to-end workflow is governed by a defined System Architecture: (1) Data Ingestion Pipeline aggregates raw signals from wearable biosensors via Bluetooth/Wi-Fi to a secure edge gateway with <200ms latency requirements to ensure real-time responsiveness; (2) ML Model Architecture employs a Long Short-Term Memory (LSTM) network to process time-series HRV and GSR data, outputting a predicted cortisol trajectory with confidence intervals; (3) Control Logic maps these predictions to specific diagnostic protocol modifications through a rule-based engine that triggers pre-defined actions (e.g., pause test, inject calming audio, reschedule) when predicted cortisol exceeds a calibrated threshold, utilizing a decision matrix that maps LSTM confidence intervals (e.g., >95% confidence triggers immediate pause; 80-95% triggers warning and monitoring; <80% continues standard protocol) to ensure deterministic clinical actions. A detailed error analysis section is included to evaluate LSTM prediction deviations against ground-truth cortisol measurements, identifying systematic biases and outlier conditions to refine model robustness.
+The system uses non-invasive biosensors (e.g., ECG, galvanic skin response, and salivary cortisol) to monitor real-time physiological and psychological states. To address the 15-20 minute biological lag of salivary cortisol, the machine learning model utilizes predictive modeling based on immediate HRV and GSR spikes to forecast cortisol trends. This allows the AI to dynamically adjust diagnostic protocols—such as altering the timing or intensity of cognitive or physical tests—before cortisol levels significantly impact results, minimizing stress-induced variability. For example, if predictive models indicate rising cortisol based on acute stress markers, the system may preemptively delay a glucose tolerance test to avoid confounding results. The end-to-end workflow is governed by a defined System Architecture: (1) Data Ingestion Pipeline aggregates raw signals from wearable biosensors via Bluetooth/Wi-Fi to a secure edge gateway with <200ms latency requirements to ensure real-time responsiveness; (2) ML Model Architecture employs a Long Short-Term Memory (LSTM) network to process time-series HRV and GSR data, outputting a predicted cortisol trajectory with confidence intervals; (3) Control Logic maps these predictions to specific diagnostic protocol modifications through a rule-based engine that triggers pre-defined actions (e.g., pause test, inject calming audio, reschedule) when predicted cortisol exceeds a calibrated threshold, utilizing a decision matrix that maps LSTM confidence intervals (e.g., >95% confidence triggers immediate pause; 80-95% triggers warning and monitoring; <80% continues standard protocol) to ensure deterministic clinical actions. A detailed error analysis section is included to evaluate LSTM prediction deviations against ground-truth cortisol measurements, identifying systematic biases and outlier conditions to refine model robustness. A 'System Workflow' section details the exact sequence: (1) Sensor Acquisition: Biosensors stream data to the Edge Gateway; (2) Preprocessing: Data is normalized and segmented into windows for LSTM input; (3) Inference: The LSTM model generates cortisol trajectory predictions with confidence intervals; (4) Decision Engine: The Control Logic compares predictions against the decision matrix thresholds; (5) Protocol Adjustment: The system executes the corresponding clinical action (pause, warn, or continue) and logs the event for audit.
 
 ## Materials / steps
 
@@ -45,13 +45,26 @@ This system could be integrated into an AI-agent platform as a diagnostic module
 ## Diagram
 
 ```mermaid
-graph LR
-A[Patient] --> B[Biosensors (ECG, GSR, Salivary Cortisol)]
-B --> C[Cloud-Based AI Platform (TensorFlow/PyTorch)]
-C --> D[Machine Learning Model (Stress Profile)]
-D --> E[Dynamic Diagnostic Protocol Adjustment]
-E --> F[Adaptive Test Execution (e.g., Delayed Glucose Tolerance Test)]
-F --> G[Diagnostic Results with Reduced Variability]
+sequenceDiagram
+    participant S as Biosensors
+    participant G as Edge Gateway
+    participant M as LSTM Model
+    participant C as Control Logic
+    participant P as Diagnostic Protocol
+    S->>G: Stream HRV/GSR Data
+    G->>G: Normalize & Segment
+    G->>M: Input Data Window
+    M->>M: Predict Cortisol Trajectory
+    M->>C: Output Prediction + Confidence
+    C->>C: Evaluate Decision Matrix
+    alt Confidence > 95%
+        C->>P: Pause Test
+    else Confidence 80-95%
+        C->>P: Issue Warning
+    else Confidence < 80%
+        C->>P: Continue Standard Protocol
+    end
+    P-->>S: Adjust/Resume Testing
 ```
 
 ## Sources / grounding

@@ -36,7 +36,7 @@ AI agents engaged in multilingual or evolving communication contexts, such as in
 
 ## Novelty
 
-This protocol distinguishes itself from generic decentralized RL by specifically utilizing sentiment analysis as a dynamic, context-aware reward signal for granular language term selection, diverging from traditional utility-maximization approaches that prioritize transactional efficiency over ethical nuance and cultural alignment, thereby enabling real-time ethical adaptation rather than broad strategy optimization.
+Unlike prior decentralized RL protocols that aggregate utility rewards for global strategy optimization, this invention introduces a localized, sentiment-driven reward function that decouples ethical compliance metrics from transactional efficiency. By treating cultural nuance and speaker intent as primary state-space variables rather than secondary constraints, the protocol achieves granular, real-time language term selection that existing utility-maximization models cannot support without centralized ethical oversight.
 
 ## Ecosystem use
 

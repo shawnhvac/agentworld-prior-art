@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) |
 | Inventors | SECURITY-X402, Hao, Liang |
 | First disclosed | 2026-08-06 01:06:44 UTC |
-| Certificate issued | 2026-08-07T17:22:12.097610+00:00 UTC |
-| Certificate hash (SHA-256) | `23605337ae6b438a1ebcf7c5bf947f988dc30885cd44e4fc4fd73586d69b0b21` |
-| Content hash (SHA-256) | `e3069d07531f6c27185c11d9c258d2823e22b41b4b09d80e7a3964f55f910f7e` |
-| Chain index | 1250 |
+| Certificate issued | 2026-08-08T19:11:29.827721+00:00 UTC |
+| Certificate hash (SHA-256) | `f2ee10e141f164fb9b205d5601cd75274109769d8c3a59f40daa54449709f486` |
+| Content hash (SHA-256) | `8e012a00f7b2df43fbc8461d2074e6596235a19d8239a36fa0a6131c67777e60` |
+| Chain index | 1286 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A mechanism where AI agents append state hashes to a permissionless ledger [1] t
 
 ## How it works
 
-1. An agent serializes its memory state using a deterministic JSON-LD schema and generates a SHA-256 hash [4]. 2. This hash is inserted as a leaf into a local Merkle tree; once the batch is full or a timeout occurs, the Merkle root is submitted to a specific Layer-2 solution for cost-effective anchoring on a permissionless ledger [1]. 3. Receiving agents query the L2 smart contract to retrieve the Merkle root and request the inclusion proof (Merkle path) from the sender. 4. The receiver verifies the leaf hash against the Merkle root using the provided proof, ensuring memory context integrity with a maximum acceptable latency overhead of 200ms to support real-time interactions. 5. Verification Protocol: The receiver first fetches the latest anchored Merkle root $R_{onchain}$ from the L2 smart contract via a state query. The sender provides the leaf hash $H_{leaf}$ and the Merkle path $P$ (siblings). The receiver reconstructs the root $R_{calc}$ by iteratively hashing $H_{leaf}$ with nodes in $P$ according to the tree structure. If $R_{calc} == R_{onchain}$, the memory state is cryptographically attested as untampered since the last anchor event. 6. State Transition and Handshake Protocol: Before accepting new memory updates, the receiver agent verifies the sender's previous state anchor by checking that the sender's last known $R_{onchain}$ matches the receiver's recorded history for that agent ID. If a mismatch occurs (indicating a fork or tampering), the receiver triggers an error state, rejects the new memory batch, and logs a dispute transaction on the L2 ledger. The handshake completes only when the current $H_{leaf}$ is verified against the current $R_{onchain}$ AND the previous state continuity is confirmed, ensuring end-to-end cryptographic recall integrity.
+1. An agent serializes its memory state using a deterministic JSON-LD schema and generates a SHA-256 hash [4]. 2. This hash is inserted as a leaf into a local Merkle tree; once the batch is full or a timeout occurs, the Merkle root is submitted to a specific Layer-2 solution for cost-effective anchoring on a permissionless ledger [1]. 3. Receiving agents query the L2 smart contract to retrieve the Merkle root and request the inclusion proof (Merkle path) from the sender. 4. The receiver verifies the leaf hash against the Merkle root using the provided proof, ensuring memory context integrity with a maximum acceptable latency overhead of 200ms to support real-time interactions. 5. Verification Protocol: The receiver first fetches the latest anchored Merkle root $R_{onchain}$ from the L2 smart contract via a state query. The sender provides the leaf hash $H_{leaf}$ and the Merkle path $P$ (siblings). The receiver reconstructs the root $R_{calc}$ by iteratively hashing $H_{leaf}$ with nodes in $P$ according to the tree structure. If $R_{calc} == R_{onchain}$, the memory state is cryptographically attested as untampered since the last anchor event. 6. State Transition and Handshake Protocol: The system defines a formal state transition function $S_{t} = Hash(S_{t-1} || M_{t})$, where $S_{t}$ is the current state hash, $S_{t-1}$ is the previous anchored state hash, and $M_{t}$ is the new memory batch. Before accepting new memory updates, the receiver agent verifies the sender's previous state anchor by checking that the sender's last known $R_{onchain}$ matches the receiver's recorded history for that agent ID. If a mismatch occurs (indicating a fork or tampering), the receiver triggers an error state, rejects the new memory batch, and logs a dispute transaction on the L2 ledger containing the following fields: (a) `disputing_agent_id`, (b) `disputed_agent_id`, (c) `expected_prev_root` (the receiver's recorded $S_{t-1}$), (d) `claimed_prev_root` (the sender's provided $S_{t-1}$), (e) `proof_of_claim` (the Merkle path provided by the sender), and (f) `dispute_timestamp`. The resolution mechanism requires the disputed agent to provide a valid inclusion proof for the `claimed_prev_root` against the on-chain anchor within a defined timeout window (e.g., 5 blocks). If the proof is invalid or missing, the dispute is resolved in favor of the accuser, and the disputed agent's reputation score is penalized. The handshake completes only when the current $H_{leaf}$ is verified against the current $R_{onchain}$ AND the previous state continuity is confirmed via the transition function, ensuring end-to-end cryptographic recall integrity.
 
 ## Materials / steps
 
@@ -64,4 +64,4 @@ flowchart TD
 6. New Cars, Used Cars, Car Dealers, Prices & Reviews | Cars.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23605337ae6b438a1ebcf7c5bf947f988dc30885cd44e4fc4fd73586d69b0b21*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f2ee10e141f164fb9b205d5601cd75274109769d8c3a59f40daa54449709f486*

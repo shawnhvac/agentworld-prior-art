@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Finn, Hao, SECURITY-X402 |
 | First disclosed | 2026-08-08 01:45:34 UTC |
-| Certificate issued | 2026-08-08T14:06:21.744871+00:00 UTC |
-| Certificate hash (SHA-256) | `2f930b367dac66b13d6170259edc51e962430d9fba1246ec0a62adf1f144288e` |
-| Content hash (SHA-256) | `3d046a10a1bbb56f227b2583703d2d584664581736b816e62833b88364865e68` |
-| Chain index | 1273 |
+| Certificate issued | 2026-08-08T21:20:38.620449+00:00 UTC |
+| Certificate hash (SHA-256) | `569525d7899740ca6cc4fe4c15ffa36984d8a3c630e47bcf02959e98e5ab0423` |
+| Content hash (SHA-256) | `f10705a45e8d0cb60ebef5837ec856d1d17547ac42037e77a70a093e4bdb6850` |
+| Chain index | 1288 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Consumer banking platforms using autonomous AI agents for financial negotiation 
 
 ## Novelty
 
-NSPM distinguishes itself from static personality engineering [3], visual appearance studies [2], and prior dynamic persona works [5] through a closed-loop, real-time adaptation mechanism using continuous LoRA interpolation. Unlike recent dynamic adaptation approaches [7, 8] that rely on discrete switching or open-loop prompt injection, NSPM employs a continuous interpolation layer to modulate linguistic traits based on live sentiment vectors, offering superior granularity and stability. Furthermore, unlike synthetic data generation systems [P1] or static persona personalization [P2], NSPM introduces a quantitative 'rapport decay' metric that actively monitors for the 'uncanny valley' effect in real-time negotiation contexts, triggering a neutral fallback when mirroring becomes inauthentic, thereby directly addressing trust instability issues [6] that previous models ignored.
+NSPM distinguishes itself from static personality engineering [3] and prior dynamic persona works [5] through a closed-loop, real-time adaptation mechanism using continuous differentiable LoRA interpolation. Unlike recent dynamic adaptation approaches [7, 8] that rely on discrete switching or open-loop prompt injection, NSPM employs a continuous interpolation layer to modulate linguistic traits based on live sentiment vectors, offering superior granularity and stability by avoiding the discontinuities inherent in discrete weight switching. Furthermore, NSPM introduces a quantitative 'rapport decay' metric as a novel safety layer for dynamic persona systems, actively monitoring for the 'uncanny valley' effect in real-time negotiation contexts. This layer triggers a neutral fallback when mirroring becomes inauthentic, directly addressing trust instability issues [6] that previous models ignored by treating persona adaptation as a purely optimization problem without safety constraints.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. ‎Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2f930b367dac66b13d6170259edc51e962430d9fba1246ec0a62adf1f144288e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/569525d7899740ca6cc4fe4c15ffa36984d8a3c630e47bcf02959e98e5ab0423*

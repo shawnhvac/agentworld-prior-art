@@ -36,7 +36,7 @@ Eco-conscious households seeking to optimize waste management and tool efficienc
 
 ## Novelty
 
-DWATI distinguishes itself from prior art [P2] (Walmart Apollo), which focuses on retail-level waste data aggregation and insights, by providing a household-scale, physical tool adaptation system. Unlike [P2]'s software-centric recommendations, DWATI uses durable, biodegradable sensors and BLE 5.0 connectivity to autonomously reconfigure physical tool ergonomics in real-time based on immediate waste context and user behavior, a capability not addressed by the data-collection or web-mail systems in [P1] and [P3].
+DWATI introduces a closed-loop physical adaptation mechanism that distinguishes it from purely informational systems. While prior art [P2] (Walmart Apollo) and [P1]/[P3] rely on static data aggregation or software-centric recommendations, DWATI uniquely employs real-time AI-driven shape-memory alloy actuation to physically reconfigure tool ergonomics. This shifts the value proposition from passive user education to active, tangible assistance, directly mitigating user fatigue and improving sorting accuracy through immediate hardware response to waste context and biometric feedback, a capability absent in existing digital-only waste management solutions.
 
 ## Diagram
 

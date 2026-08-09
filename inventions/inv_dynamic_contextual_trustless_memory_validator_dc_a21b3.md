@@ -36,7 +36,7 @@ Collaborative AI environments requiring decentralized, real-time validation of s
 
 ## Novelty
 
-The DCTMV introduces a novel validation layer that checks contextual relevance in real-time, improving upon existing systems like the Decentralized Virtual Trustless Database by ensuring contextual coherence during memory exchange.
+The DCTMV distinguishes itself from prior decentralized validation systems by introducing the 'Proof-of-Context' consensus algorithm, which uniquely fuses multimodal semantic analysis with stateless decision memory to verify contextual integrity on-the-fly, rather than relying solely on cryptographic proof of existence or static metadata checks.
 
 ## Ecosystem use
 

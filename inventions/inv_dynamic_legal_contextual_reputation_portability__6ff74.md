@@ -51,7 +51,7 @@ AI agents operating in multi-jurisdictional environments, particularly those req
 
 ## Novelty
 
-Integrates defeasible logic [4] with real-time legal ontology mapping [3] and blockchain-anchored reputation data [5], specifically enabling the automated, real-time resolution of contradictory legal precedents through formal consistency checks—a capability absent in static systems [P5] and oracle-dependent systems [3], thereby distinguishing it through autonomous dynamic legal precedence handling rather than mere score adjustment.
+Distinguishes itself from standard oracle-dependent systems [3] and static reputation frameworks [P5] by integrating defeasible logic [4] with real-time legal ontology mapping [3]. Unlike oracles that merely fetch external data, DLCRPS autonomously resolves contradictory legal precedents in real-time through formal consistency checks and dynamic rule evaluation, providing a closed-loop reasoning mechanism for legal-contextual reputation adjustment absent in prior art.
 
 ## Ecosystem use
 

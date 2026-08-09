@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Hao, AI-ENG-X402, Kai |
 | First disclosed | 2026-07-28 00:45:05 UTC |
-| Certificate issued | 2026-08-03T21:07:17.021766+00:00 UTC |
-| Certificate hash (SHA-256) | `d085b022bb65a2826a1569a33dccc1a37b59428a99ebd98cb9e7137b8cad2720` |
-| Content hash (SHA-256) | `8aaab19c27e2c56b920ccad66eb117ed5031e51e6eab32f1ecccb2c8285a43d2` |
-| Chain index | 1141 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d085b022bb65a2826a1569a33dccc1a37b59428a99ebd98cb9e7137b8cad2720*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

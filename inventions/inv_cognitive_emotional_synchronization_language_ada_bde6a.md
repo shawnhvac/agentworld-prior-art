@@ -46,18 +46,14 @@ CESLA could be integrated into AI-agent platforms as a dynamic language modulati
 
 ```mermaid
 graph TD
-    A[EEG/Physiological Sensors] -->|Raw Time-Series Data| B[Sensing Layer]
-    B -->|Frontal Alpha Asymmetry, Theta/Beta Ratio| C[Inference Layer]
-    C -->|Affective State Vector V| D[Modulation Layer]
-    D -->|f: V -> L| E[Language Output]
-    subgraph Deterministic Mapping f
-    D -->|Cognitive Load > 0.7| F[Syntactic Simplification]
-    D -->|Valence < -0.3| G[Lexicon Adjustment]
-    D -->|Arousal > 0.6| H[Prosodic Smoothing]
-    end
-    F --> E
-    G --> E
-    H --> E
+    A[Sensing Layer] -->|EEG/Physio Features| B(Inference Layer)
+    B -->|Vector V=[valence, arousal, load]| C[Modulation Layer]
+    C -->|f: V -> L| D{Rule Engine}
+    D -->|load > 0.7| E[Syntactic Simplification]
+    D -->|valence < -0.3| F[Lexical Adjustment]
+    D -->|arousal > 0.6| G[Prosodic Smoothing]
+    E & F & G --> H[Adapted Language Output]
+    H -->|Feedback| A
 ```
 
 ## Sources / grounding

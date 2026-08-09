@@ -24,7 +24,7 @@ A Hybrid Electro-Photothermal Microfluidic Surface (HEPMS) that integrates embed
 
 ## How it works
 
-HEPMS utilizes perovskite materials embedded within microfluidic channels filled with a low-boiling-point dielectric fluid. When exposed to sunlight, perovskite generates localized heat, vaporizing the fluid and creating micro-jets that dislodge dust particles. Thermally responsive valves, composed of a shape-memory alloy (SMA) actuator coupled with a paraffin-based phase-change material (PCM), control fluid flow based on surface temperature and dust accumulation. The PCM melts at a threshold of 45°C, triggering the SMA to contract with a mechanical linkage ratio of 3:1, amplifying displacement to open the valve and allow fluid circulation. As the system cools below 40°C, the PCM solidifies, allowing the SMA to relax and close the valve, preventing fluid loss. Each cleaning cycle requires a fluid volume of 50 μL per channel segment. Upon valve opening, pressure builds up exponentially, reaching a peak of 0.4 MPa within 200 ms, which translates into sufficient kinetic energy (approx. 15 mJ per jet) to overcome the adhesion forces of dust particles (>10 μm). This mechanism enables self-regulation and thermal dissipation.
+HEPMS utilizes perovskite materials embedded within microfluidic channels filled with a low-boiling-point dielectric fluid. When exposed to sunlight, perovskite generates localized heat, vaporizing the fluid and creating micro-jets that dislodge dust particles. Thermally responsive valves, composed of a shape-memory alloy (SMA) actuator coupled with a paraffin-based phase-change material (PCM), control fluid flow based on surface temperature and dust accumulation. The PCM melts at a threshold of 45°C, triggering the SMA to contract with a mechanical linkage ratio of 3:1, amplifying displacement to open the valve and allow fluid circulation. As the system cools below 40°C, the PCM solidifies, allowing the SMA to relax and close the valve, preventing fluid loss. Each cleaning cycle requires a fluid volume of 50 μL per channel segment. Upon valve opening, pressure builds up exponentially, reaching a peak of 0.4 MPa within 200 ms, which translates into sufficient kinetic energy (approx. 15 mJ per jet) to overcome the adhesion forces of dust particles (>10 μm). This mechanism enables self-regulation and thermal dissipation. To ensure end-to-end functionality, the system operates as a closed-loop circuit: generated vapor is directed through a dedicated condensation manifold located at the panel's periphery, where heat exchange with the ambient air or a passive fin array condenses the vapor back into liquid form. The condensed fluid is then routed via capillary action and gravity-assisted channels back to the primary reservoir, ensuring zero net fluid depletion. The energy balance is maintained by the perovskite's photothermal conversion efficiency, which absorbs incident solar radiation (targeting the non-photovoltaic spectrum) to provide the latent heat of vaporization required for the 50 μL volume, with excess heat dissipated through the condensation manifold to assist in thermal regulation of the PV cells.
 
 ## Materials / steps
 
@@ -41,14 +41,21 @@ Unlike standard electrostatic repulsion systems that only address particulate ad
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Sunlight] --> B(Perovskite Actuator)
-    B --> C[Heat Generation]
-    C --> D[Dielectric Fluid Vaporization]
-    D --> E[Micro-Jet Formation]
-    E --> F[Dust Removal]
-    B --> G[Thermal Regulation]
-    G --> H[Thermally Responsive Valve Control]
+graph TD
+    A[Solar Irradiance] --> B[Perovskite Photothermal Layer]
+    B -->|Heat Generation| C[Microfluidic Channel with Dielectric Fluid]
+    C -->|Vaporization| D[High-Pressure Vapor Jet]
+    D -->|Dust Removal| E[Panel Surface]
+    D -->|Vapor Flow| F[Condensation Manifold]
+    F -->|Heat Dissipation| G[Ambient Air/Passive Fins]
+    F -->|Condensation| H[Liquid Reservoir]
+    H -->|Capillary/Gravity Return| C
+    subgraph Thermal Control
+    I[PCM/SMA Valve]
+    J[Temp > 45C] -->|Open| I
+    K[Temp < 40C] -->|Close| I
+    end
+    I -->|Regulate Flow| C
 ```
 
 ## Sources / grounding

@@ -24,7 +24,7 @@ OADR integrates occlusion-based transportation logic [1] with a dynamic resource
 
 ## How it works
 
-Each robot runs a local differential evolution optimizer using real-time visual sensor data to estimate occlusion gradients. The system dynamically weights robot assignments to minimize visibility blockage. Task allocations are updated when the predicted visibility drop exceeds a threshold, leveraging the efficiency of differential evolution for complex routing [6] and the verified occlusion handling capabilities of swarms [1].
+Each robot runs a local differential evolution optimizer using real-time visual sensor data to estimate occlusion gradients. The occlusion cost function is defined as C(o) = Σ(1 - v_i), where v_i is the normalized visibility coefficient for agent i. The DE mutation operator is tailored for visibility constraints by perturbing candidate paths only in directions that maintain v_i > 0.5, while crossover combines parent vectors based on minimal occlusion overlap. Task allocations are synchronized via a gossip protocol where agents exchange local occlusion maps every 100ms. Allocations are updated when the predicted visibility drop exceeds a threshold, leveraging the efficiency of differential evolution for complex routing [6] and the verified occlusion handling capabilities of swarms [1].
 
 ## Materials / steps
 

@@ -36,7 +36,7 @@ AI agents participating in peer-to-peer compute barter systems, especially those
 
 ## Novelty
 
-The CVO's novelty lies specifically in the interconnect-welfare coupling valuation function, which contrasts with standard market-clearing models that ignore physical network bottlenecks, while the auction and settlement mechanisms are recognized as established components.
+The CVO's novelty is strictly limited to the interconnect-welfare coupling valuation function, which dynamically prices compute based on real-time network topology and agent-specific utility, explicitly contrasting with existing models that treat compute as a homogeneous, topology-independent commodity; auction mechanics and settlement protocols are acknowledged as established components and are excluded from the novelty claim.
 
 ## Ecosystem use
 

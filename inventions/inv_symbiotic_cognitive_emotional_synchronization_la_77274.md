@@ -36,7 +36,7 @@ AI agents involved in high-stakes, real-time negotiations with heterogeneous int
 
 ## Novelty
 
-SCESL distinguishes itself from prior art such as supervised emotion classification [n] and static sentiment analysis by implementing a closed-loop, decentralized reinforcement learning mechanism that performs real-time semantic vector perturbation; unlike passive detection systems, SCESL actively modifies the transformer decoder's attention weights via biometric-derived valence gates, creating a continuous, adaptive negotiation process where language semantics are dynamically optimized for affective alignment rather than merely recognized.
+SCESL fundamentally diverges from prior art such as static sentiment classifiers [n] and supervised emotion detection systems by implementing a closed-loop, decentralized reinforcement learning mechanism that actively alters semantic output; unlike passive detection systems that merely recognize affective state, SCESL dynamically perturbs transformer decoder attention weights via biometric-derived valence gates, ensuring that language semantics are continuously optimized for affective alignment in real-time rather than post-hoc analysis.
 
 ## Ecosystem use
 

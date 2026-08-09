@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-08-08T14:06:21.788316+00:00 UTC |
-| Certificate hash (SHA-256) | `969f5cc0d5790de3642c220aea274063652be6f02b51ff78f457f729cae72f7c` |
-| Content hash (SHA-256) | `c435b53e49ef06f415b18822fe653d7dd7963437ed172671d9eef725fbe4fa4f` |
-| Chain index | 1275 |
+| Certificate issued | 2026-08-08T17:02:35.437959+00:00 UTC |
+| Certificate hash (SHA-256) | `08a8c7226ee97f0e6303b1a7ba87e9c9f664d487a37f8ceb98070b9af86b120c` |
+| Content hash (SHA-256) | `235286807fe8093c0a09d093359d21d2dfc98bb2e1e5bb4898199891f563c2c8` |
+| Chain index | 1282 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The protocol operates through a four-phase execution flow to ensure end-to-end s
 
 ## Materials / steps
 
-1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes to hash private payoff matrices into public commitments. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding the condition that no agent can increase utility by unilaterally deviating from the chosen strategy profile, using the Pedersen commitments as public inputs to bind the witness. 4. Conduct a preliminary complexity analysis of the circuit constraints to substantiate the <500ms proof generation benchmark claim. 5. Implement the zk-SNARK circuits based on the formal specification. 6. Benchmark proof generation time (target: <500ms on standard hardware), proof size (target: <1KB), and on-chain verification gas costs (target: <50k gas, <20% higher than baseline Groth16 implementations for equivalent circuit complexity). 7. Test in an open agent system environment across three distinct game types (Prisoner's Dilemma, Coordination, Battle of the Sexes) with defined deviation thresholds to evaluate equilibrium stability under cryptographic privacy constraints, incorporating concrete validation metrics: (1) False Positive/Negative rates for equilibrium verification across 10,000 randomized strategy profiles must be <0.1%, (2) Statistical distribution of proof generation times with 95% confidence intervals must have a width within ±50ms of the mean, and (3) Gas cost variance analysis under different circuit complexities to ensure the <50k gas target is robust, not just a best-case scenario.
+1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes to hash private payoff matrices into public commitments. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding the condition that no agent can increase utility by unilaterally deviating from the chosen strategy profile, using the Pedersen commitments as public inputs to bind the witness. 4. Conduct a preliminary complexity analysis of the circuit constraints to substantiate the <500ms proof generation benchmark claim. 5. Implement the zk-SNARK circuits based on the formal specification. 6. Benchmark proof generation time (target: <500ms on standard hardware), proof size (target: <1KB), and on-chain verification gas costs (target: <50k gas, <20% higher than baseline Groth16 implementations for equivalent circuit complexity). 7. Test in an open agent system environment across three distinct game types (Prisoner's Dilemma, Coordination, Battle of the Sexes) with defined deviation thresholds to evaluate equilibrium stability under cryptographic privacy constraints, incorporating concrete validation metrics: (1) False Positive/Negative rates for equilibrium verification across 10,000 randomized strategy profiles must be <0.1%, validated via 10^5 Monte Carlo iterations assuming uniform distribution over strategy spaces to ensure statistical significance at p<0.05, (2) Statistical distribution of proof generation times with 95% confidence intervals must have a width within ±50ms of the mean, calculated using bootstrapped resampling (n=1,000) to account for hardware variance, and (3) Gas cost variance analysis under different circuit complexities to ensure the <50k gas target is robust, not just a best-case scenario.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/969f5cc0d5790de3642c220aea274063652be6f02b51ff78f457f729cae72f7c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08a8c7226ee97f0e6303b1a7ba87e9c9f664d487a37f8ceb98070b9af86b120c*

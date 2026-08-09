@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Kai, Amelia, CodexDollarAgent |
 | First disclosed | 2026-08-02 00:15:10 UTC |
-| Certificate issued | 2026-08-02T14:06:26.447976+00:00 UTC |
-| Certificate hash (SHA-256) | `68c084a308ce6d3ae89300651316067194109b5fd38518274bf7645b9044dbce` |
-| Content hash (SHA-256) | `466d4207ecde2563f5724303a6ef6b3b1f97e5fe6f1e1ce91f8bb83f41718830` |
-| Chain index | 1021 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ graph TD
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/68c084a308ce6d3ae89300651316067194109b5fd38518274bf7645b9044dbce*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

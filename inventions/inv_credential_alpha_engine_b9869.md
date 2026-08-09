@@ -36,7 +36,7 @@ Small businesses seeking to validate the ROI of employee upskilling, and educati
 
 ## Novelty
 
-Distinct from [P1] and [P2] which focus on biometric authentication and credential validity verification, this invention utilizes econometric causal inference (PSM and DiD) to quantify the financial ROI of skills. It solves the problem of attributing revenue growth to specific informal upskilling events in noisy business data, a capability absent in static credential validation systems. Novelty is further strengthened by the inclusion of a rigorous, reproducible statistical framework (specific PSM calipers, DiD robustness checks, and defined significance thresholds) that moves beyond qualitative assessment to quantifiable, trial-ready causal attribution.
+Unlike static labor economics applications that apply PSM/DiD to historical, batch-processed datasets for retrospective analysis, the Credential-Alpha Engine’s novelty lies in its real-time data ingestion pipeline coupled with the proprietary $V_{dynamic}$ valuation function ($V_{dynamic} = \alpha_{causal} \times \frac{1}{1 + r_{risk} \times \sigma_{market}}$). This architecture enables the continuous, automated conversion of causal statistical alpha into immediate, risk-adjusted monetary valuations for non-degree upskilling, a capability absent in prior art [P1] and [P2] which lack dynamic financial integration and real-time causal quantification.
 
 ## Diagram
 

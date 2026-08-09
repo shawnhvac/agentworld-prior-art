@@ -24,7 +24,7 @@ Neural Feedback-Driven Language Adaptation (NFDA) is a system that uses real-tim
 
 ## How it works
 
-NFDA employs real-time EEG and facial expression analysis to capture affective states, paired with speech-to-text and sentiment analysis modules to extract linguistic features. Raw EEG signals undergo real-time artifact removal using Independent Component Analysis (ICA) to eliminate eye-blink and muscle noise, ensuring signal fidelity. To ensure end-to-end coherence, the system utilizes a sliding window temporal alignment protocol that synchronizes cleaned EEG/facial data streams with speech tokens at 200ms intervals, operating within a strict hardware latency budget of <150ms for signal processing and <50ms for inference. This aligned data is fed into a lightweight neural network featuring a multi-head attention mechanism that weights linguistic inputs against affective states. The network adjusts lexical choice, tone, and syntactic complexity using a reinforcement learning agent. The agent's policy is updated via a reward signal R(t) = α * Trust(t) + β * Clarity(t), where Trust(t) is derived from positive affective valence and Clarity(t) is inversely proportional to detected cognitive load metrics, enabling dynamic, real-time optimization of negotiation language.
+NFDA employs real-time EEG and facial expression analysis to capture affective states, paired with speech-to-text and sentiment analysis modules to extract linguistic features. Raw EEG signals undergo real-time artifact removal using Independent Component Analysis (ICA) to eliminate eye-blink and muscle noise, ensuring signal fidelity. To ensure end-to-end coherence, the system utilizes a sliding window temporal alignment protocol that synchronizes cleaned EEG/facial data streams with speech tokens at 200ms intervals, operating within a strict hardware latency budget of <150ms for signal processing and <50ms for inference. This aligned data is fed into a lightweight neural network featuring a multi-head attention mechanism that weights linguistic inputs against affective states. The network adjusts lexical choice, tone, and syntactic complexity using a reinforcement learning agent. The agent's policy is updated via a reward signal R(t) = α * Trust(t) + β * Clarity(t). Trust(t) is mathematically defined as the sigmoid transformation of the mean positive valence score from facial expression analysis (V_pos) and EEG alpha asymmetry (A_alpha): Trust(t) = σ(w1*V_pos + w2*A_alpha). Clarity(t) is defined as the inverse of the normalized cognitive load index (CLI), derived from EEG theta/beta ratio: Clarity(t) = 1 / (1 + γ*CLI). The RL agent utilizes a Proximal Policy Optimization (PPO) algorithm with hyperparameters: learning rate=3e-4, gamma=0.99, clip range=0.2, and entropy coefficient=0.01, enabling dynamic, real-time optimization of negotiation language.
 
 ## Materials / steps
 
@@ -45,15 +45,18 @@ NFDA could be integrated into an AI-agent platform as an API module for dynamic 
 ## Diagram
 
 ```mermaid
-graph LR
-A[Human/AI Counterpart] --> B[Speech Input]
-A --> C[Facial Expression/EEG Input]
-B --> D[Speech-to-Text & Sentiment Analysis]
-C --> E[Affective State Analysis]
-D --> F[Neural Network]
-E --> F
-F --> G[Adaptive Language Output]
-G --> A
+graph TD
+    A[Raw EEG Signal] --> B[ICA Artifact Removal]
+    C[Facial Video Stream] --> D[Expression Analysis]
+    E[Audio Stream] --> F[Speech-to-Text & Sentiment]
+    B --> G[Sliding Window Alignment 200ms]
+    D --> G
+    F --> G
+    G --> H[Multi-Head Attention Network]
+    H --> I[RL Agent PPO]
+    I --> J[Lexical/Tone/Syntax Adjustment]
+    J --> K[Output Response]
+    K --> L[Feedback Loop to Trust/Clarity Metrics]
 ```
 
 ## Sources / grounding

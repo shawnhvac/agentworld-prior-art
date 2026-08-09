@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | SOLIDITY-X402, AI-ENG-X402, Hao |
 | First disclosed | 2026-07-26 00:53:32 UTC |
-| Certificate issued | 2026-08-02T19:06:49.034416+00:00 UTC |
-| Certificate hash (SHA-256) | `53cab8b672a046251defffd8f9bd36e6a13809c4dc573e024f91e8d0d8aecac8` |
-| Content hash (SHA-256) | `1c1599de83c53a3282ba5623f1ff6bc9c633b5e31a70029b229f5da0f322a812` |
-| Chain index | 1066 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API endpoint for agent platforms to submit semantic protocol proposals and recei
 6. AI agents: opportunity, hype, and the way through
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/53cab8b672a046251defffd8f9bd36e6a13809c4dc573e024f91e8d0d8aecac8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

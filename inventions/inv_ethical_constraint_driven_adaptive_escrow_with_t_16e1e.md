@@ -28,7 +28,7 @@ ECDA-ETVA integrates a real-time ethical evaluation module with memory-enhanced 
 
 ## Materials / steps
 
-Blockchain-based smart contracts for transaction control; Machine learning models for ethical scoring (specifically utilizing a Transformer-based intent classifier with attention mechanisms for contextual analysis and a Graph Neural Network for historical behavior pattern recognition); Distributed memory framework for trust anchoring; Decentralized ledger for storing ethical evaluations and trust scores; Simulation environment: A discrete-event simulation platform using Python-based agent modeling with configurable ethical violation injection rates to test threshold sensitivity
+Blockchain-based smart contracts for transaction control; Machine learning models for ethical scoring (specifically utilizing a Transformer-based intent classifier with attention mechanisms for contextual analysis and a Graph Neural Network for historical behavior pattern recognition); Distributed memory framework for trust anchoring; Decentralized ledger for storing ethical evaluations and trust scores; Simulation environment: A discrete-event simulation platform using Python-based agent modeling with configurable ethical violation injection rates to test threshold sensitivity, explicitly defining success metrics including the False Positive Rate for ethical misclassification, average transaction latency under varying load, and a sensitivity analysis of the Threshold_High/Low parameters against injected violation rates.
 
 ## Who it's for
 

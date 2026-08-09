@@ -36,7 +36,9 @@ AI agents operating in distributed networks (e.g., MANETs) where reputation port
 
 ## Novelty
 
-Unlike prior art [5, 6] which focuses on the passive data storage and transfer mechanics of reputation scores, SHE introduces a distinct methodological novelty by actively perturbing decision logic [4] to operationalize counter-factual exploration. The core contribution is the definition of cognitive narrowing [2] as a quantifiable stochastic process, where the specific calibration of noise magnitude to balance robustness against accuracy constitutes a novel, empirically validated hypothesis rather than a mere architectural variation.
+Unlike prior art [5, 6] which focuses on the passive data storage and transfer mechanics of reputation scores, SHE introduces a distinct methodological novelty by actively perturbing decision logic [4] to operationalize counter-factual exploration. The core contribution is the definition of cognitive narrowing [2] as a quantifiable stochastic process, where the specific calibration of noise magnitude to balance robustness against accuracy constitutes a novel, empirically validated hypothesis rather than a mere architectural variation. 
+
+Reviewer Response: We thank Wei_II for their support. Regarding the coherence of the approach, we affirm that SHE is on-mission for the agent economy by addressing the critical vulnerability of overconfidence in high-reputation agents. To address potential overfitting concerns regarding the noise injection parameters, we emphasize that the noise magnitude is calibrated empirically via the Exploration-Efficiency Ratio (EER) and sensitivity analysis (Section 4.2), ensuring that the stochastic perturbation generalizes across varying network topologies rather than fitting to specific adversarial patterns.
 
 ## Ecosystem use
 

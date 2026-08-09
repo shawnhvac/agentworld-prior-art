@@ -24,7 +24,7 @@ NATO is a closed-loop system that monitors operator cognitive load via non-invas
 
 ## How it works
 
-1. Raw EEG alpha/beta power ratios are captured from the operator's headset. 2. An ensemble classifier processes these signals to generate a robust cognitive load estimate, filtering out noise. 3. If high load is detected, a safety override mechanism validates the signal against statistical thresholds (e.g., p < 0.05 for artifact rejection) before permitting the RL agent to modify robot joint velocities (e.g., reducing speed by 15%) or reassign tasks to the robot. 4. This dynamic adjustment aims to prevent task-switching errors and reduce operator stress during complex assembly [1, 3].
+1. Raw EEG alpha/beta power ratios are captured from the operator's headset. 2. An ensemble classifier processes these signals to generate a robust cognitive load estimate, filtering out noise. 3. If high load is detected, a safety override mechanism validates the signal against statistical thresholds (e.g., p < 0.05 for artifact rejection) before permitting the RL agent to modify robot joint velocities (e.g., reducing speed by 15%) or reassign tasks to the robot. 4. The RL agent operates via a defined control logic: the state vector comprises EEG-derived cognitive load features, current task complexity metrics, and real-time robot status; the action space includes discrete task handoffs to the robot and continuous velocity scaling; the reward function is formulated to maximize assembly throughput while penalizing high operator cognitive load and safety violations. 5. Control Interface Specification: The RL agent outputs a continuous velocity scaling factor $\alpha \in [0.5, 1.0]$ and a discrete handoff flag $h \in \{0, 1\}$. These are mapped to the robot controller via the ROS2 `control_msgs/FollowJointTrajectory` interface. Velocity scaling is applied by multiplying the nominal joint velocity limits $v_{nom}$ by $\alpha$, such that $v_{cmd} = \alpha \cdot v_{nom}$, ensuring kinematic constraints are met. Task handoff triggers a state machine transition in the central orchestrator, invoking the `task_manager/assign_task` service call to transfer the current subtask ID to the robotic arm’s execution queue, bypassing the human operator interface. 6. This dynamic adjustment aims to prevent task-switching errors and reduce operator stress during complex assembly [1, 3].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Manufacturing facilities employing human-robot collaboration (HRC) for complex a
 
 ## Novelty
 
-Rewritten to explicitly contrast NATO's RL-driven task reassignment capability against existing works that only adjust kinematic parameters, removing the emphasis on standard artifact rejection as a differentiator.
+NATO distinguishes itself from prior art that relies solely on kinematic adjustments (e.g., velocity dampening) by implementing a closed-loop, safety-validated reinforcement learning agent capable of dynamically reassigning complex assembly subtasks based on real-time cognitive load, thereby establishing a unique cognitive-robotic synergy beyond simple speed modulation.
 
 ## Ecosystem use
 

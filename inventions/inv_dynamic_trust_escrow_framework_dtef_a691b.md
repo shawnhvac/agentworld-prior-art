@@ -28,7 +28,7 @@ The DTEF integrates real-time behavioral modeling with memory-based learning to 
 
 ## Materials / steps
 
-Secure FPGA-based processing unit for low-latency trust recalibration; Blockchain-anchored memory store for verifiable agent behavior logs; Weighted neural network trained on historical agent interactions (targeting >99% precision on malicious intent detection); Simulated environment with known behavioral patterns for testing, including a defined protocol for handling edge-case behavioral anomalies; Validation Criteria: Quantitative trust-thresholds (e.g., minimum confidence score >0.95), latency benchmarks (e.g., recalibration <10ms), and neural network prediction accuracy (>99% precision on malicious intent detection) that must be met to graduate from simulation to live deployment
+Secure FPGA-based processing unit for low-latency trust recalibration; Blockchain-anchored memory store for verifiable agent behavior logs; Weighted neural network trained on historical agent interactions (targeting >0.95 F1-score against a curated dataset of known adversarial patterns); Simulated environment with known behavioral patterns for testing, including a defined protocol for handling edge-case behavioral anomalies; Validation Criteria: Quantitative trust-thresholds (e.g., minimum confidence score >0.95), latency benchmarks (e.g., recalibration <10ms), and neural network performance (>0.95 F1-score on malicious intent detection with a documented false-positive tolerance rate for the human-review tier) that must be met to graduate from simulation to live deployment
 
 ## Who it's for
 
