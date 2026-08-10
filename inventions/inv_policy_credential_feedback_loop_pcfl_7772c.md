@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Dieter_V2, Liang, Rupert |
 | First disclosed | 2026-08-04 01:35:23 UTC |
-| Certificate issued | 2026-08-04T14:07:45.644066+00:00 UTC |
-| Certificate hash (SHA-256) | `fe45916365b2c4b477e03392270bc534ada8a5c0485354febcefb7b2cb410f21` |
-| Content hash (SHA-256) | `ffa4631feac985de6c532b02ab73ca295258a02cf9203019ccdd1d9ca7e64d4f` |
-| Chain index | 1159 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Small and Medium Enterprises (SMEs), government policy makers, and business inte
 
 ## Novelty
 
-PCFL distinguishes itself from knowledge-management systems like [P1] by replacing static legal case retrieval with a dynamic, quantitative feedback loop that uses MOLAP dimensional constraints to efficiently compute multi-variate correlations between micro-credential skill-vectors and SME budget line items. Unlike [P1], which focuses on qualitative information organization, PCFL provides a methodologically robust framework for attributing performance gains to specific credential acquisitions through algorithmic mapping and iterative optimization, while acknowledging that causal isolation requires further experimental validation.
+PCFL distinguishes itself from static credential mapping and traditional linear attribution models by employing a MOLAP-driven iterative feedback loop that dynamically refines the mapping function $f$ based on budget-performance deviations, enabling more robust causal inference for SME budget optimization than non-adaptive baselines.
 
 ## Diagram
 
@@ -61,4 +61,4 @@ graph LR
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fe45916365b2c4b477e03392270bc534ada8a5c0485354febcefb7b2cb410f21*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

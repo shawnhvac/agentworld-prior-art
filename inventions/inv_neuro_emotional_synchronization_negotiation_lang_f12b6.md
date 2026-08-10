@@ -28,7 +28,7 @@ NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect c
 
 ## Materials / steps
 
-EEG/fNIRS sensors, affective computing models, real-time language processing pipeline, and a reinforcement learning framework trained on negotiation datasets. The pipeline includes a signal preprocessing module, a state-encoding neural network, and a lexical adjustment generator. Pseudocode for the hybrid RL update: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); lexical_delta = map_to_lexical(emotional_vector); policy_gradient = compute_gradient(reward, lexical_delta); update_weights(policy_gradient) end`
+1. **Signal Acquisition & Preprocessing**: Raw EEG/fNIRS data is captured via wearable sensors and passed through a signal preprocessing module to remove artifacts (e.g., motion, ocular) and normalize features. 2. **State Fusion**: The preprocessed human neuro-signals are encoded into a vector representation and fused with the AI agent's simulated affective state vector. 3. **RL Policy Mapping**: The fused state vector is input into the hybrid reinforcement learning framework. The policy network computes the optimal lexical adjustment (lexical_delta) based on the current negotiation context and reward history. 4. **Lexical Generation**: The lexical adjustment generator modifies the outgoing negotiation text in real-time, adjusting tone, word choice, and syntax to align with the synchronized emotional state. 5. **Feedback Loop**: The resulting interaction outcomes (agreement, trust, latency) are fed back as rewards to update the RL policy weights. Pseudocode for the hybrid RL update: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); lexical_delta = map_to_lexical(emotional_vector); policy_gradient = compute_gradient(reward, lexical_delta); update_weights(policy_gradient) end`
 
 ## Who it's for
 
@@ -46,12 +46,15 @@ This could be used within an AI-agent platform as an API for real-time negotiati
 
 ```mermaid
 graph TD
-    A[EEG/fNIRS Sensors] -->|Raw Signal| B(Signal Preprocessing)
-    B -->|Cleaned Data| C{State Encoder NN}
-    C -->|Emotional/Cognitive Vector| D[Hybrid RL Controller]
-    D -->|Lexical/Syntactic Adjustments| E[Language Generator]
-    E -->|Adapted Negotiation Text| F[AI Agent / Human Partner]
-    F -->|Feedback/Outcome| D
+    A[Human User] -->|EEG/fNIRS Data| B(Signal Preprocessing Module)
+    B -->|Cleaned Neuro-Features| C{State Encoder}
+    D[AI Agent] -->|Simulated Affective State| C
+    C -->|Fused State Vector| E[Hybrid RL Policy Network]
+    E -->|Optimal Lexical Delta| F[Lexical Adjustment Generator]
+    F -->|Adapted Negotiation Language| G[Output Interface]
+    G -->|Interaction Outcome| H[Reward Calculator]
+    H -->|Reward Signal| E
+    G -->|Perceived Empathy/Trust| I[Validation Metrics]
 ```
 
 ## Sources / grounding

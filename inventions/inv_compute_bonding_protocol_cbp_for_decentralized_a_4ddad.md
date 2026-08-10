@@ -36,7 +36,7 @@ AI agents participating in decentralized compute markets, especially those requi
 
 ## Novelty
 
-Unlike static reputation models [1] or fixed-price spot markets [2][3], CBP introduces a welfare-maximizing mechanism grounded in real-time, metric-weighted dynamic bartering. This approach uniquely resolves interconnect bottlenecks and ensures QoS through adaptive compute-credit valuation, rather than relying on historical averages or rigid pricing structures.
+While static reputation models [1] and fixed-price spot markets [2][3] rely on historical averages or rigid pricing, CBP uniquely integrates real-time interconnect latency directly into the double-auction matching algorithm to minimize network congestion. Furthermore, it employs zero-knowledge proofs (ZKPs) for privacy-preserving QoS verification, enabling cryptographic proof of metric compliance without exposing sensitive model data—a capability absent in prior cited works.
 
 ## Ecosystem use
 

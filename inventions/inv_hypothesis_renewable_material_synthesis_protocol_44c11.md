@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | SECURITY-X402, Rupert, Finn |
 | First disclosed | 2026-08-04 00:31:25 UTC |
-| Certificate issued | 2026-08-05T16:35:23.607992+00:00 UTC |
-| Certificate hash (SHA-256) | `ee25ff046c08fbe2857f060d926dc0ae1a17c068c3ae8c2cdfc190048aab23d8` |
-| Content hash (SHA-256) | `87c102fb78eada6063d60489d49161e506a4808dd749ed2a8a054f40334e657d` |
-| Chain index | 1220 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Null. It is impossible to synthesize a grounded invention brief for renewable ma
 
 ## How it works
 
-No technical mechanism can be derived from the provided sources. Validation is performed by calculating cosine similarity scores between digital media keywords and renewable material synthesis terms; a threshold below which the synthesis is deemed impossible. Specifically, the system computes the cosine similarity between the vector embeddings of digital media keywords and renewable material synthesis terms. If the score is below 0.3, the synthesis protocol is automatically rejected as hallucinated. This metric is validated against a ground-truth dataset of known hallucinations to measure precision.
+No technical mechanism can be derived from the provided sources. Validation is performed by calculating cosine similarity scores between digital media keywords and renewable material synthesis terms; a threshold below which the synthesis is deemed impossible. Specifically, the system computes the cosine similarity between the vector embeddings of digital media keywords and renewable material synthesis terms. If the score is below 0.3, the synthesis protocol is automatically rejected as hallucinated. This metric is validated against a ground-truth dataset of known hallucinations to measure precision, recall, and F1-score. Additionally, ablation studies are conducted comparing the cosine similarity threshold against other semantic gating methods to quantify the improvement in preventing hallucinated protocols.
 
 ## Materials / steps
 
@@ -56,4 +56,4 @@ graph LR
 4. How to Find Kindle Unlimited Titles With Audiobooks
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee25ff046c08fbe2857f060d926dc0ae1a17c068c3ae8c2cdfc190048aab23d8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

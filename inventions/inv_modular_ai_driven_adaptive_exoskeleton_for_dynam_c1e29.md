@@ -36,7 +36,7 @@ Individuals with fluctuating physical capabilities, such as those undergoing phy
 
 ## Novelty
 
-Unlike prior art [P1-P3], which relies on static thresholding or delayed feedback loops with latency exceeding 50ms, this system implements a sub-10ms sensor fusion pipeline integrating EMG and tactile data via a lightweight LSTM architecture. This specific latency reduction enables a unique real-time, user-specific impedance calibration control paradigm that prior systems cannot achieve. Validation benchmarks confirm <10ms latency at the 95th percentile using a National Instruments USB-6356 data acquisition system, trained on a dataset of 50,000 user-specific movement cycles, and demonstrate a >20% reduction in metabolic cost during standardized gait tests with statistical significance (p < 0.01, n=30 participants).
+While prior art [P1-P3] utilizes PID controllers or static impedance models with fixed gain scheduling, this invention employs a real-time LSTM-based adaptive impedance calibration that dynamically modulates actuator stiffness based on fused EMG and tactile inputs. This approach replaces the rigid thresholding of P1-P3 with a predictive control loop that anticipates user intent, achieving not only sub-10ms latency but also a context-aware support profile that reduces metabolic cost by >20% (p < 0.01, n=30) compared to the static support levels of existing systems.
 
 ## Ecosystem use
 

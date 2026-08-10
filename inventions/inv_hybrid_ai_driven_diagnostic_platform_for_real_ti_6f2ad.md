@@ -28,7 +28,7 @@ The system integrates non-invasive cortisol biosensors (e.g., skin-based electro
 
 ## Materials / steps
 
-1. Wearable cortisol sensors (skin-based electrochemical sensors). 2. IoT-enabled data transmission modules. 3. Cloud-based AI platform trained on genomic and metabolic datasets [2][5]. 4. Integration with electronic health records (EHRs) for historical data context. 5. Implementation of a feedback loop for real-time treatment adjustment.
+1. Wearable cortisol sensors (skin-based electrochemical sensors). 2. IoT-enabled data transmission modules. 3. Cloud-based AI platform trained on genomic and metabolic datasets [2][5]. 4. Integration with electronic health records (EHRs) for historical data context. 5. Implementation of a feedback loop for real-time treatment adjustment. 6. Validation protocol: Primary endpoints include diagnostic sensitivity and specificity against gold-standard assays (e.g., LC-MS/MS), time-to-adjustment latency for therapeutic interventions, and Pearson correlation coefficients between predicted and actual cortisol levels to ensure clinical reliability.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Patients diagnosed with or at risk of hypercortisolism (Cushing syndrome), as we
 
 ## Novelty
 
-Unlike static diagnostic tools that rely on intermittent snapshots, this platform uniquely employs a hybrid Temporal Convolutional Network (TCN) coupled with a Graph Neural Network (GNN) to correlate high-frequency dynamic cortisol variance with multi-omic genomic markers. This specific architecture enables automated, real-time therapeutic adjustment by mapping non-linear cortisol fluctuations to genetic susceptibility profiles, creating a closed-loop precision medicine system that fundamentally differs from passive monitoring or static diagnostic platforms.
+Unlike existing platforms that treat genomic data as static covariates or rely on single-modality time-series analysis, this invention employs a dual-stream TCN-GNN architecture where the TCN extracts high-frequency temporal features from continuous cortisol signals, which are then fed as dynamic edge weights into a GNN representing the patient's multi-omic network; this specific mechanism allows for real-time mapping of non-linear cortisol fluctuations to evolving genetic susceptibility profiles, enabling closed-loop therapeutic adjustments that static diagnostic tools or decoupled monitoring systems cannot achieve.
 
 ## Ecosystem use
 

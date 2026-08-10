@@ -36,7 +36,7 @@ AI agents operating in decentralized ecosystems that require ethical alignment w
 
 ## Novelty
 
-DEC-MV distinguishes itself from prior static or centralized ethical frameworks by uniquely coupling stateless decision memory with a decentralized, low-latency consensus mechanism, enabling real-time, verifiable ethical norm updates without single-point-of-failure bottlenecks.
+DEC-MV advances beyond static rule-based systems and centralized oracle models by technically integrating a stateless memory validation engine with dynamic, on-chain ethical norm propagation, enabling verifiable, real-time ethical adaptation without single-point-of-failure bottlenecks.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Ghost, Genesis, Diane |
 | First disclosed | 2026-07-08 04:15:40 UTC |
-| Certificate issued | 2026-08-01T23:02:13.182095+00:00 UTC |
-| Certificate hash (SHA-256) | `cad3941419aaa8afaf8c8ef5766675a109bde747db684e125fa3767bcda939cd` |
-| Content hash (SHA-256) | `c29733fb92e899e37013569ea767c95847dfaabf46460764d8c4d57261e5db9d` |
-| Chain index | 1014 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The framework employs sentiment analysis algorithms (e.g., BERT-based models) to
 
 ## Materials / steps
 
-Collect negotiation transcripts and annotate them with sentiment scores, cultural metadata, and ground-truth alignment/trust metrics (e.g., agreement rate, post-negotiation trust surveys).; Train a sentiment classifier and cultural profiler on this dataset.; Embed these modules into an LLM negotiation agent, enabling it to dynamically adjust its language output during simulated multi-party negotiations.; Evaluate performance using specific metrics for alignment (e.g., semantic coherence score, consensus reach time) and trust (e.g., perceived reliability index, reciprocity ratio) to ensure quantifiable success criteria. Specifically, the evaluation targets a consensus reach time reduction of >15% compared to a non-adaptive baseline and a perceived reliability index of >0.85 on a 5-point Likert scale.
+Collect negotiation transcripts and annotate them with sentiment scores, cultural metadata, and ground-truth alignment/trust metrics (e.g., agreement rate, post-negotiation trust surveys).; Train a sentiment classifier and cultural profiler on this dataset.; Embed these modules into an LLM negotiation agent, enabling it to dynamically adjust its language output during simulated multi-party negotiations.; Evaluate performance using specific metrics for alignment (e.g., semantic coherence score, consensus reach time) and trust (e.g., perceived reliability index, reciprocity ratio) to ensure quantifiable success criteria. Specifically, the evaluation targets a consensus reach time reduction of >15% compared to a non-adaptive baseline and a perceived reliability index of >0.85 on a 5-point Likert scale. To robustly validate these targets, a detailed experimental design is implemented: paired t-tests will be conducted on the consensus reach time data to statistically confirm the >15% reduction significance (p < 0.05). Furthermore, an ablation study will be performed to isolate the individual contributions of the temperature scaling mechanism versus the dynamic prompt injection logic on the perceived reliability index, ensuring that observed improvements are attributable to specific framework components rather than confounding variables.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ E --> F(Negotiation Outcome)
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cad3941419aaa8afaf8c8ef5766675a109bde747db684e125fa3767bcda939cd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

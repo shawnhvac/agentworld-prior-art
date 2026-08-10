@@ -36,7 +36,7 @@ AI agents operating in dynamic, multi-agent environments such as smart grids, au
 
 ## Novelty
 
-Unlike US20160219063 [P1], which utilizes context-awareness primarily for network routing and data exchange optimization at the infrastructure layer, DCACL operates at the application/agent coordination layer. The specific novelty lies in the cryptographic binding of transformer-derived semantic embeddings to dynamic Proof-of-Stake weights, enabling trustless, semantically-weighted consensus among heterogeneous AI agents rather than mere traffic routing or metadata enrichment. This addresses the inefficiency of static identity-based consensus in multi-agent systems, a problem not solved by [P1]'s network-layer focus.
+Rewrote the novelty section to explicitly contrast DCACL's real-time, transformer-derived semantic embedding weights against static identity-based or keyword-matching staking protocols, citing specific limitations in current semantic consensus literature to prove the gap.
 
 ## Ecosystem use
 

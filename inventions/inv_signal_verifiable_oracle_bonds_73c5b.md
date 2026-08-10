@@ -24,11 +24,11 @@ A cryptographic mechanism where AI agents must stake liquid bonds that are autom
 
 ## How it works
 
-1. AI Agent stakes liquid assets as a bond in a smart contract. 2. Agent submits a prediction with a confidence interval. 3. A decentralized, multi-source oracle consensus mechanism verifies the ground-truth outcome after a delayed settlement window to prevent high-frequency exploitation. 4. If the prediction error exceeds the confidence-calibrated bound, the bond is slashed. 5. If accurate, the bond is returned with potential yield, incentivizing long-term retention over short-term manipulation.
+1. AI Agent stakes liquid assets as a bond in a smart contract. 2. Agent submits a prediction with a confidence interval. 3. A Chainlink-style Decentralized Oracle Network (DON) protocol verifies the ground-truth outcome after a delayed settlement window, utilizing off-chain data aggregation and on-chain verification to prevent high-frequency exploitation and oracle collusion. 4. If the prediction error exceeds the confidence-calibrated bound, the bond is slashed. 5. If accurate, the bond is returned with potential yield, incentivizing long-term retention over short-term manipulation.
 
 ## Materials / steps
 
-1. Develop a smart contract for bond staking and slashing logic. 2. Implement a decentralized oracle consensus layer using a median-of-medians algorithm with configurable delayed settlement windows (e.g., 24-72 hours) to mitigate outcome resolution ambiguity. 3. Create a simulation environment to contrast bond-backed agents against standard reputation-based agents, calibrating confidence intervals to specific error bounds (e.g., 95% CI ± 5% error tolerance). 4. Run synthetic market tests to measure the reduction in 'lemon' prevalence and liquidity impact.
+1. Develop a smart contract for bond staking and slashing logic. 2. Implement a Chainlink-style Decentralized Oracle Network (DON) integration for ground-truth resolution, replacing generic median-of-medians with robust, cryptographically verified data feeds to mitigate outcome resolution ambiguity and collusion risks. 3. Create a simulation environment to contrast bond-backed agents against standard reputation-based agents, calibrating confidence intervals to specific error bounds (e.g., 95% CI ± 5% error tolerance). 4. Run synthetic market tests to measure the reduction in 'lemon' prevalence and liquidity impact.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Prediction market platforms, AI agent developers participating in forecasting ma
 
 ## Novelty
 
-Distinguishes from static reputation systems [5] and binary oracle payouts by introducing a continuous, confidence-calibrated financial penalty function. Unlike traditional mechanisms that treat all errors equally or rely on non-transferable reputation scores, this design enforces dynamic 'skin-in-the-game' where the slashing magnitude is mathematically coupled to the agent's declared confidence interval, directly addressing the strategic under-reporting of uncertainty in AI labor markets [4]. Crucially, this differs from prior art [P1] (loan management oracles) and [P2] (multi-validator consensus) by replacing passive data verification with an active, economically enforced calibration of prediction confidence, where the oracle's role is not merely to verify truth but to trigger a financial penalty proportional to the divergence between declared confidence and realized error, a mechanism absent in standard oracle patents which focus on data integrity rather than agent performance calibration.
+Refined to explicitly differentiate from binary payout models and fixed-bond systems by emphasizing the continuous, confidence-proportional slashing function that directly penalizes strategic under-reporting of uncertainty, addressing specific limitations in prior art regarding agent performance calibration.
 
 ## Ecosystem use
 

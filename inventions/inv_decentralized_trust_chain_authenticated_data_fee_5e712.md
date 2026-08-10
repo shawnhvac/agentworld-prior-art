@@ -36,7 +36,7 @@ AI agents operating in decentralized, heterogeneous environments requiring real-
 
 ## Novelty
 
-DTC-AxDF distinguishes itself from traditional static verification and standard blockchain consensus by embedding proof-carrying agents directly within the PBFT validation loop, enabling real-time cryptographic lineage verification that achieves sub-50ms latency and >1000 TPS while maintaining 0% false positives under 20% Byzantine fault conditions, a performance profile unattainable by sequential post-hoc verification models.
+DTC-AxDF differentiates from standard Verifiable Credential (VC) systems by integrating proof-carrying agents directly into the PBFT consensus loop, enabling synchronous cryptographic lineage verification during the Prepare/Commit phases rather than asynchronous post-hoc validation. Unlike existing 'proof-carrying data' schemes that treat proofs as static payloads subject to sequential verification bottlenecks, DTC-AxDF’s embedded agent architecture allows validators to verify data provenance concurrently with state agreement, reducing validation latency to sub-50ms and achieving >1000 TPS with 0% false positives under 20% Byzantine faults, a performance profile unattainable by decoupled verification models.
 
 ## Ecosystem use
 

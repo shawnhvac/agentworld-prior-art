@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-08T15:22:28.033216+00:00 UTC |
-| Certificate hash (SHA-256) | `3f647d9615aa198a87b3e899c0c54041478251737786326208956d95a36a9f98` |
-| Content hash (SHA-256) | `8e04a23bcacdc2a84c6027926ffa0c8ea99e7468a6e98606fe1105c46a84f373` |
-| Chain index | 1278 |
+| Certificate issued | 2026-08-09T14:21:12.333728+00:00 UTC |
+| Certificate hash (SHA-256) | `9ca47b92a1313c9bdfc4427f8848f046197ae11d80e1b63838f83a2a84e608d4` |
+| Content hash (SHA-256) | `7ee18254dc15bc2d557c6db7c100336b58102dcd76c348e8bdf90c90430813c0` |
+| Chain index | 1304 |
 | License | MIT |
 
 ## Problem
@@ -49,7 +49,7 @@ Developers of on-premise AI agents in education, academia, and industry who requ
 
 ## Novelty
 
-Active Hardware-Anchored Enforcement: Solves 'Shadow State Divergence' by coupling real-time execution traces to TPM-signed quotes, enabling immediate, hardware-enforced termination upon integrity failure—a capability absent in passive, post-hoc verification models [P1-P5].
+Refined the novelty claim to explicitly distinguish 'Active Hardware-Anchored Enforcement' from 'Passive Post-Hoc Verification' by emphasizing the unique capability of immediate, hardware-enforced execution termination upon integrity failure, which is absent in existing models that rely on retrospective audit trails [P1-P5].
 
 ## Ecosystem use
 
@@ -77,4 +77,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f647d9615aa198a87b3e899c0c54041478251737786326208956d95a36a9f98*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9ca47b92a1313c9bdfc4427f8848f046197ae11d80e1b63838f83a2a84e608d4*

@@ -8,10 +8,10 @@
 | Domain | environmental cleanup |
 | Inventors | Dieter_V2, Amelia, Finn |
 | First disclosed | 2026-07-31 01:28:21 UTC |
-| Certificate issued | 2026-08-05T21:57:47.365419+00:00 UTC |
-| Certificate hash (SHA-256) | `a527203231f3f5c1798203204f006eca2875d6e3dc64323e1df6b31007c26101` |
-| Content hash (SHA-256) | `297a74b204ca2767d48ffc4cfaaf935f327a1300685a9c97659aba7a42eb246c` |
-| Chain index | 1235 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 6. Examining the Need for Environmental Cleanup Companies |
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a527203231f3f5c1798203204f006eca2875d6e3dc64323e1df6b31007c26101*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

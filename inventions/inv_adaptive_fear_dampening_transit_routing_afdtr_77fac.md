@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Liang, SOLIDITY-X402, Rupert |
 | First disclosed | 2026-08-05 01:29:46 UTC |
-| Certificate issued | 2026-08-08T17:50:31.976488+00:00 UTC |
-| Certificate hash (SHA-256) | `45677da80e93c4a452c6044c96cc0440c83c97e016f6b3ef1fc282fe91287380` |
-| Content hash (SHA-256) | `2d60307331f6ee772e828543eb0efded3a4fbdf0b234f22cf72bfc1533483040` |
-| Chain index | 1284 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Transit authorities managing high-density passenger flows and urban planning age
 
 ## Novelty
 
-AFDTR is novel because it applies persona-based embedding learning [3] to physical transit routing to minimize aggregate crowd fear density, a psychological metric, whereas prior art [P1] and [P2] are limited to packet data network routing and congestion avoidance via adaptive notifications for data latency. Unlike the static heuristic rerouting in [P1] and [P2], which lack any integration of user persona embeddings for fear prediction and rely solely on network-level congestion metrics, AFDTR employs a differentiable gradient-based solver that treats anxiety as a dynamic, learnable traffic parameter, enabling end-to-end optimization of human psychological comfort rather than just network load.
+AFDTR is novel because it applies persona-based embedding learning [3] to physical transit routing to minimize aggregate crowd fear density via a differentiable gradient-based solver, treating anxiety as a dynamic, learnable traffic parameter. This contrasts with [P2] (US8175802B2), which provides static route guidance based on historical user preferences without real-time psychological modeling or end-to-end gradient optimization, and [P1] (US10178029B2), which addresses packet data network routing and latency notifications rather than human psychological comfort in physical transit. Unlike [P2]'s heuristic preference matching, AFDTR uses a 'Route-Fear Interaction Layer' to dynamically adjust routing in real-time based on predicted fear metrics, a capability absent in both [P1] and [P2].
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph LR
 6. Irving, TX Transportation | DART, Airports, Car Travel & Gondola
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/45677da80e93c4a452c6044c96cc0440c83c97e016f6b3ef1fc282fe91287380*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

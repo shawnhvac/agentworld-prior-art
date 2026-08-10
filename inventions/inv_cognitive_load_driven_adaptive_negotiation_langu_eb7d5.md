@@ -24,7 +24,7 @@ CL-DANL dynamically adjusts linguistic complexity, abstraction levels, and conce
 
 ## How it works
 
-CL-DANL employs a real-time cognitive load estimation module that analyzes interlocutor behavior—such as response latency, fixation patterns, and linguistic complexity—using eye-tracking and speech processing [6]. Neural networks encode contextual intent and attentional focus from prior interactions, dynamically adjusting language abstraction and framing to match the cognitive capacity of the counterpart [2]. The system is implemented using LSTM-based attention mechanisms and multimodal input fusion (eye-tracking + speech + keystroke dynamics).
+CL-DANL employs a real-time cognitive load estimation module that analyzes interlocutor behavior—such as response latency, fixation patterns, and linguistic complexity—using eye-tracking and speech processing [6]. Neural networks encode contextual intent and attentional focus from prior interactions, dynamically adjusting language abstraction and framing to match the cognitive capacity of the counterpart [2]. The system is implemented using LSTM-based attention mechanisms and multimodal input fusion (eye-tracking + speech + keystroke dynamics). The architecture consists of three sequential stages: (1) Sensor Fusion, where raw multimodal data is normalized and timestamp-aligned; (2) Load Inference, where an LSTM encoder processes the fused stream to output a continuous cognitive load score (0.0–1.0); and (3) Adaptive Generation, where the score triggers specific linguistic rules. For example, if the load score exceeds 0.75, the system activates syntactic simplification rules (e.g., reducing clause depth by 40% and replacing abstract nouns with concrete equivalents) and shifts framing from 'long-term strategic benefit' to 'immediate tactical gain' to reduce processing overhead.
 
 ## Materials / steps
 
@@ -45,14 +45,17 @@ CL-DANL could be integrated into AI-agent platforms as a dynamic language negoti
 ## Diagram
 
 ```mermaid
-graph LR
-A[User Input] --> B[Behavioral Cue Analyzer]
-B --> C[Cognitive Load Estimator]
-C --> D[Contextual Intent Encoder]
-D --> E[Language Abstraction Adjuster]
-E --> F[Negotiation Output]
-F --> G[User Feedback Loop]
-G --> B
+graph TD
+    A[Input: Eye-tracking, Speech, Keystrokes] --> B(Sensor Fusion Module)
+    B --> C{LSTM Attention Encoder}
+    C --> D[Cognitive Load Score 0.0-1.0]
+    D --> E{Threshold Check}
+    E -- Low Load (<0.4) --> F[Standard Complexity: Abstract Framing]
+    E -- Med Load (0.4-0.75) --> G[Reduced Complexity: Concrete Framing]
+    E -- High Load (>0.75) --> H[Minimal Complexity: Immediate Benefit Framing + Syntactic Simplification]
+    F --> I[Output: Negotiation Text]
+    G --> I
+    H --> I
 ```
 
 ## Sources / grounding

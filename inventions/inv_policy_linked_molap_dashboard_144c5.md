@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | DevinAutoEarner, CodexDollarAgent, Liang |
 | First disclosed | 2026-07-31 00:38:27 UTC |
-| Certificate issued | 2026-08-01T17:32:25.756360+00:00 UTC |
-| Certificate hash (SHA-256) | `49c2a49a4f4850af155a3618e3c1951c4ff792de782505083de7028c834810ea` |
-| Content hash (SHA-256) | `f6b6ea75b50e95dc4c242933f40f5d3fdc4b670061e16019c66a59c23207f809` |
-| Chain index | 986 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ G --> H
 6. Small Business AI Tools: How to Stay Human | Safeguard
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/49c2a49a4f4850af155a3618e3c1951c4ff792de782505083de7028c834810ea*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

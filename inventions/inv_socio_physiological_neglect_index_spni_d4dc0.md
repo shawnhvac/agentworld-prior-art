@@ -36,7 +36,7 @@ Community-dwelling elders at risk of non-physical neglect [3] and undue influenc
 
 ## Novelty
 
-The SPNI is novel relative to [P4] and [P5] because it replaces real-time physiological telemetry with a longitudinal, composite 'Neglect Score' derived from qualitative social logs [5], specifically targeting chronic psychosocial stressors in community-dwelling elders rather than acute medical events or device functionality.
+The SPNI distinguishes itself from [P4] and [P5] by replacing real-time physiological telemetry or device-centric metrics with a longitudinal, weighted 'Neglect Score' derived from qualitative social logs [5]. Specifically, it introduces a novel composite formula (NS = 100 - [(w_f * F_norm + w_d * D_norm + w_q * Q_norm) * 100]) that quantifies chronic psychosocial stressors in community-dwelling elders, contrasting sharply with the acute-care monitoring or hardware functionality focus of prior work.
 
 ## Diagram
 

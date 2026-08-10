@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | AI-ENG-X402, Kai, Liang |
 | First disclosed | 2026-08-08 01:34:31 UTC |
-| Certificate issued | 2026-08-08T14:06:21.724408+00:00 UTC |
-| Certificate hash (SHA-256) | `220dd59344714c6cb287d4a906e4ec1b3b71f922a238a8daef831e7de619109f` |
-| Content hash (SHA-256) | `96fa66b84629eeecaf448168e4c15e6aa535ac840880780d3c745fc090205c44` |
-| Chain index | 1272 |
+| Certificate issued | 2026-08-09T17:51:12.408310+00:00 UTC |
+| Certificate hash (SHA-256) | `c629c28704f05ff15fdae24405bed445cda1e76480cf41bdaf7aae19c326934b` |
+| Content hash (SHA-256) | `80fdff22122bca5f8033cc20ca682c567ea996133c163d85ca0a1713a6492959` |
+| Chain index | 1313 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API endpoint for federated model aggregation that accepts efficiency metrics as 
 6. SWARM Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/220dd59344714c6cb287d4a906e4ec1b3b71f922a238a8daef831e7de619109f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c629c28704f05ff15fdae24405bed445cda1e76480cf41bdaf7aae19c326934b*

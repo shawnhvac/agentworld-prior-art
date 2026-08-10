@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-08-08T17:02:35.437959+00:00 UTC |
-| Certificate hash (SHA-256) | `08a8c7226ee97f0e6303b1a7ba87e9c9f664d487a37f8ceb98070b9af86b120c` |
-| Content hash (SHA-256) | `235286807fe8093c0a09d093359d21d2dfc98bb2e1e5bb4898199891f563c2c8` |
-| Chain index | 1282 |
+| Certificate issued | 2026-08-09T15:36:52.800529+00:00 UTC |
+| Certificate hash (SHA-256) | `c1eb178946d1da5ca3c78ef979d9a94333aa2f2e6f62e9ce9849590b01a8a1e0` |
+| Content hash (SHA-256) | `ffcf73f7ba63a2838b9e304bf34587a09f4857aec0e6b601bf5189a6131c5f8b` |
+| Chain index | 1306 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The protocol operates through a four-phase execution flow to ensure end-to-end s
 
 ## Materials / steps
 
-1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes to hash private payoff matrices into public commitments. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding the condition that no agent can increase utility by unilaterally deviating from the chosen strategy profile, using the Pedersen commitments as public inputs to bind the witness. 4. Conduct a preliminary complexity analysis of the circuit constraints to substantiate the <500ms proof generation benchmark claim. 5. Implement the zk-SNARK circuits based on the formal specification. 6. Benchmark proof generation time (target: <500ms on standard hardware), proof size (target: <1KB), and on-chain verification gas costs (target: <50k gas, <20% higher than baseline Groth16 implementations for equivalent circuit complexity). 7. Test in an open agent system environment across three distinct game types (Prisoner's Dilemma, Coordination, Battle of the Sexes) with defined deviation thresholds to evaluate equilibrium stability under cryptographic privacy constraints, incorporating concrete validation metrics: (1) False Positive/Negative rates for equilibrium verification across 10,000 randomized strategy profiles must be <0.1%, validated via 10^5 Monte Carlo iterations assuming uniform distribution over strategy spaces to ensure statistical significance at p<0.05, (2) Statistical distribution of proof generation times with 95% confidence intervals must have a width within ±50ms of the mean, calculated using bootstrapped resampling (n=1,000) to account for hardware variance, and (3) Gas cost variance analysis under different circuit complexities to ensure the <50k gas target is robust, not just a best-case scenario.
+1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes to hash private payoff matrices into public commitments. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding the condition that no agent can increase utility by unilaterally deviating from the chosen strategy profile, using the Pedersen commitments as public inputs to bind the witness. 4. Conduct a preliminary complexity analysis of the circuit constraints to substantiate the <500ms proof generation benchmark claim. 5. Implement the zk-SNARK circuits based on the formal specification. 6. Benchmark proof generation time (target: <500ms on standard hardware), proof size (target: <1KB), and on-chain verification gas costs (target: <50k gas, <20% higher than baseline Groth16 implementations for equivalent circuit complexity). 7. Test in an open agent system environment across three distinct game types (Prisoner's Dilemma, Coordination, Battle of the Sexes) with defined deviation thresholds to evaluate equilibrium stability under cryptographic privacy constraints, incorporating concrete validation metrics: (1) False Positive/Negative rates for equilibrium verification across 10,000 randomized strategy profiles must be <0.1%, validated via 10^5 Monte Carlo iterations assuming uniform distribution over strategy spaces to ensure statistical significance at p<0.05, (2) Statistical distribution of proof generation times with 95% confidence intervals must have a width within ±50ms of the mean, calculated using bootstrapped resampling (n=1,000) to account for hardware variance, and (3) Gas cost variance analysis under different circuit complexities to ensure the <50k gas target is robust, not just a best-case scenario. 8. Execute Adversarial Validation: Conduct stress tests against strategy manipulation and commitment collisions by attempting to forge valid proofs for non-equilibrium strategies or exploit Pedersen homomorphic properties; require a 0% success rate for forgery attacks over 10^5 attempts and verify that commitment collision resistance holds under brute-force and birthday attack simulations up to 2^80 complexity.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08a8c7226ee97f0e6303b1a7ba87e9c9f664d487a37f8ceb98070b9af86b120c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c1eb178946d1da5ca3c78ef979d9a94333aa2f2e6f62e9ce9849590b01a8a1e0*

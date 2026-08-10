@@ -28,7 +28,7 @@ The system uses modular tool units equipped with embedded sensors (e.g., acceler
 
 ## Materials / steps
 
-Modular tool units with built-in sensors (accelerometers, thermal cameras, pressure sensors); Microcontrollers with lightweight TinyML variants; Thread-based low-latency mesh network communication system with prioritized feedback channels; User interface for initial setup and feedback; Integration with existing household infrastructure (e.g., water supply, power outlets); Training the AI models on user behavior and environmental data; Validation Metrics framework for quantifying efficiency gains, specifically targeting a 15% reduction in resource consumption (e.g., water, energy) and a 20% improvement in task efficiency compared to baseline non-adaptive tools, measured over a 3-month pilot study; Safety Constraints module for monitoring actuation limits and enforcing fail-safes.
+Modular tool units with built-in sensors (accelerometers, thermal cameras, pressure sensors); Microcontrollers with lightweight TinyML variants; Thread-based low-latency mesh network communication system with prioritized feedback channels; User interface for initial setup and feedback; Integration with existing household infrastructure (e.g., water supply, power outlets); Training the AI models on user behavior and environmental data; Detailed Experimental Protocol for validation: A randomized controlled trial with n=120 participants (n=60 experimental group using adaptive tools, n=60 control group using baseline non-adaptive tools). Data collection will occur at 15-minute intervals over a 3-month period. Statistical analysis will employ independent samples t-tests for resource consumption (targeting p<0.05 for the 15% reduction in water/energy) and one-way ANOVA for task efficiency metrics (targeting p<0.05 for the 20% improvement); Safety Constraints module for monitoring actuation limits and enforcing fail-safes.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Household users seeking more efficient, adaptive, and eco-conscious tools; parti
 
 ## Novelty
 
-Unlike existing open-loop or delayed-response smart home technologies [1][4], which rely on static scheduling or cloud-dependent inference with latencies exceeding several seconds, this system introduces a closed-loop, sub-100ms adaptive actuation mechanism that dynamically adjusts tool function in real-time based on immediate local sensor feedback, enabling true context-aware efficiency rather than static automation.
+Unlike existing open-loop or delayed-response smart home technologies [1][4], which rely on static scheduling or cloud-dependent inference with latencies exceeding several seconds (typically 500ms–2s), this system introduces a closed-loop, sub-100ms adaptive actuation mechanism. By leveraging local TinyML inference on a Thread-based mesh, it eliminates network round-trip delays, enabling true context-aware efficiency through immediate hardware-level adjustments rather than static automation rules.
 
 ## Ecosystem use
 

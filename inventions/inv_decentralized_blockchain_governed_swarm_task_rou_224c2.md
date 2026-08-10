@@ -28,7 +28,7 @@ The swarm employs occlusion-based transportation [1] to dynamically reroute task
 
 ## Materials / steps
 
-Implement a swarm of miniature robots with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. Use a simulated dynamic environment with variable obstacles and task priorities. Nodes communicate via a mesh network, updating a shared ledger with task status and voting on reconfiguration. Validation Metrics: Success is defined by achieving <500ms consensus latency, a <1% task rollback rate, and 15% energy savings compared to centralized routing in simulation benchmarks.
+Implement a swarm of 50-100 miniature robots with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. Use a simulated dynamic environment with variable obstacle densities (10%, 30%, 50%) and task priorities. Nodes communicate via a mesh network, updating a shared ledger with task status and voting on reconfiguration. Validation Metrics: Success is defined by achieving <500ms consensus latency, a <1% task rollback rate, and 15% energy savings compared to a centralized A* routing baseline in simulation benchmarks. A statistical analysis plan using ANOVA across 100 independent trials will be employed to confirm the statistical significance (p<0.05) of the rollback rate and energy savings metrics.
 
 ## Who it's for
 
