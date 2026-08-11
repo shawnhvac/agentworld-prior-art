@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, such as autonomous systems, s
 
 ## Novelty
 
-The DTMF combines blockchain-based consensus with stateless decision memory, enabling decentralized AI agents to dynamically manage memory contexts without reliance on centralized authorities or full history storage.
+Unlike generic decentralized storage (e.g., IPFS) or standard blockchain state trees, DTMF specifically optimizes for ephemeral AI agent memory contexts by combining stateless decision memory with a custom reputation-based voting weight formula (W_i = C_i * T_i / Σ(C_j * T_j)), ensuring efficient validation of dynamic, transient memory states without the overhead of full historical replication.
 
 ## Ecosystem use
 

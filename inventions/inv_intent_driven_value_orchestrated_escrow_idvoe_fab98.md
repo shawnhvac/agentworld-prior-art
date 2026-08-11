@@ -28,7 +28,7 @@ IDVOE operates by embedding inverse reinforcement learning [4] into a decentrali
 
 ## Materials / steps
 
-Neural networks trained on labeled intent datasets [4]; A trust score module that integrates blockchain-based audit trails [6]; A lightweight consensus protocol for real-time value alignment verification; Simulated multi-agent escrow environments for testing; Validation metrics including settlement latency < 200ms, false-positive rate < 0.1%, and false-negative rate < 0.01%; Smart contract modules implementing Merkle tree construction for value function hashing; Cryptographic signature verification units for atomic release transaction validation; On-chain storage structures for committed intent hashes and trust anchor state.
+Neural networks trained on labeled intent datasets [4]; A trust score module that integrates blockchain-based audit trails [6]; A lightweight consensus protocol for real-time value alignment verification; Simulated multi-agent escrow environments for testing; Validation metrics including settlement latency < 200ms, false-positive rate < 0.1%, and false-negative rate < 0.01%; Smart contract modules implementing Merkle tree construction for value function hashing; Cryptographic signature verification units for atomic release transaction validation; On-chain storage structures for committed intent hashes and trust anchor state; A detailed validation protocol comprising ablation studies on cold-start performance to isolate the impact of the IRL loop, specific metrics tracking the trade-off between inference latency and value-alignment accuracy under varying network loads, and comparative benchmarks against traditional reputation-based escrow systems to quantify improvements in zero-history environments.
 
 ## Who it's for
 

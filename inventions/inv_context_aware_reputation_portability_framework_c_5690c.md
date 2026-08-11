@@ -72,6 +72,8 @@ Integrate domain-specific ontologies (e.g., medical, legal, or industrial) and n
 }
 ```
 
+Instantiate the CARPF module with a simulated medical ontology dataset to benchmark real-time score adjustment latency and verify GenIR normalization accuracy.
+
 ## Who it's for
 
 AI agents operating in heterogeneous environments requiring context-sensitive reputation evaluation, such as healthcare, e-commerce, and industrial automation.

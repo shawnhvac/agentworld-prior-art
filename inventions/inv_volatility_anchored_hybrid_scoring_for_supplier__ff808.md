@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-08-08T14:06:21.558317+00:00 UTC |
-| Certificate hash (SHA-256) | `b26b4c94aede54c6922fd27a9ac6314960179820a22c89bff06ca3f3991b648d` |
-| Content hash (SHA-256) | `cee825b9639150af689a93e1f0238cbc1f3276910a2ca6f0a3f1402934be4f8c` |
-| Chain index | 1265 |
+| Certificate issued | 2026-08-10T18:37:13.931159+00:00 UTC |
+| Certificate hash (SHA-256) | `df1bca48b21a7a55f6687819bbd2d38fe3b75b9619a4fffefc873f09cc299611` |
+| Content hash (SHA-256) | `70b6ea097a9a7aa103935711b416cb60e1fb1cc144cceb0833c273d5554468d6` |
+| Chain index | 1326 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A dynamic weighting system that treats scoring volatility as a feature for calib
 
 ## How it works
 
-1. Collect parallel supplier evaluation scores from human coordinators and GAI models. 2. Calculate the standard deviation of the difference scores (S_human - S_GAI) over a 7-day rolling temporal window to quantify discrepancy volatility [3]. 3. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: if the coefficient of variation (CV) between human and GAI scores exceeds a threshold of 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-lambda * t)), where k is a sensitivity constant (k=0.5), lambda is a decay rate (lambda=0.1) to ensure weight stabilization over time, and t is the time elapsed since the volatility spike, effectively reducing the GAI weight by a factor proportional to the excess variance while allowing trust to recover, capped at a minimum weight of 0.2 to prevent total exclusion [3]. The human weight is derived as w_human = 1 - w_GAI. 4. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3]. 5. Compute the final hybrid score using the formula S_final = w_human * S_human + w_GAI * S_GAI to produce the actionable evaluation metric.
+1. Collect parallel supplier evaluation scores from human coordinators and GAI models. 2. Implement a 'Warm-up Phase' where static equal weights (w_human = 0.5, w_GAI = 0.5) are applied until the initial 7-day rolling temporal window is fully populated. 3. Once the window is full, calculate the standard deviation of the difference scores (S_human - S_GAI) over the 7-day rolling temporal window to quantify discrepancy volatility [3]. 4. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: if the coefficient of variation (CV) between human and GAI scores exceeds a threshold of 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-lambda * t)), where k is a sensitivity constant (k=0.5), lambda is a decay rate (lambda=0.1) to ensure weight stabilization over time, and t is the time elapsed since the volatility spike, effectively reducing the GAI weight by a factor proportional to the excess variance while allowing trust to recover, capped at a minimum weight of 0.2 to prevent total exclusion [3]. The human weight is derived as w_human = 1 - w_GAI. 5. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3]. 6. Compute the final hybrid score using the formula S_final = w_human * S_human + w_GAI * S_GAI at the end of each evaluation period, utilizing the stabilized weights derived from the final day of the rolling window to produce the actionable evaluation metric.
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b26b4c94aede54c6922fd27a9ac6314960179820a22c89bff06ca3f3991b648d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/df1bca48b21a7a55f6687819bbd2d38fe3b75b9619a4fffefc873f09cc299611*

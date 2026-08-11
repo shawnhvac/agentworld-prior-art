@@ -36,7 +36,7 @@ Eco-conscious households seeking to reduce waste and optimize resource use throu
 
 ## Novelty
 
-Unlike prior-art industrial NIR sorters that focus solely on material identification, AROTN introduces a novel closed-loop mechanism that integrates real-time household consumption data with edge-AI to enable predictive resource optimization and dynamic repurposing, a capability absent in existing modular waste management tools.
+AROTN distinguishes itself from prior-art industrial NIR sorters not merely through material identification, but by implementing a unique closed-loop architecture that fuses real-time household consumption telemetry with edge-AI inference. This integration enables predictive resource optimization and dynamic repurposing strategies—such as adjusting sorting thresholds based on immediate usage forecasts—which are absent in static, identification-only modular waste management tools.
 
 ## Ecosystem use
 

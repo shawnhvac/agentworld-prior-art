@@ -36,7 +36,7 @@ Enterprise API architects adapting architectures for AI agents [1], developers o
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the deterministic rule-based transformation (Intent Mapping, Session Context Injection, Error Standardization) against existing probabilistic LLM wrappers and static parsers, emphasizing the guaranteed structural compatibility and latency bounds as the primary innovation.
+The core novelty lies in the deterministic, rule-based structural transformation of raw API schemas into agent-native protocols, specifically through fixed Intent Mapping, deterministic SHA-256 Session Context Injection, and standardized Error Mapping. This approach guarantees structural compatibility and eliminates the probabilistic inference and latency variability inherent in LLM-based wrappers or static parsers, ensuring predictable <10ms transformation latency without semantic interpretation overhead. Unlike existing solutions that rely on heuristic alignment or post-hoc validation, this system enforces protocol compliance at the schema rewriting stage, providing a deterministic bridge between heterogeneous enterprise APIs and agentic workflows.
 
 ## Ecosystem use
 

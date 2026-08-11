@@ -20,15 +20,15 @@ AI agents currently discover APIs via structural descriptors or central registri
 
 ## Concept
 
-PC-ADP embeds cryptographic proofs of interface stability and security posture directly into discovery metadata. Instead of relying on central trusted registries or simple cross-linking, agents verify the integrity of the API schema and security policy via embedded signatures before execution, shifting the trust boundary to the cryptographic proof itself [4, 6].
+PC-ADP embeds cryptographic proofs of interface stability and security posture directly into discovery metadata. Instead of relying on central trusted registries or simple cross-linking, agents verify the integrity of the API schema and security policy via embedded signatures and decentralized identifier (DID) resolution before execution, shifting the trust boundary to the cryptographic proof itself [4, 6].
 
 ## How it works
 
-1. API Provider generates a JSON Web Signature (JWS) over the OpenAPI schema and current security policy. 2. This signature is embedded in the discovery response payload. 3. Upon discovery, the Agent validates the JWS against a known public key. 4. If valid, the agent proceeds; if invalid or missing, the agent rejects the endpoint or flags it for manual review, preventing invocation of drifted or insecure interfaces [4, 5].
+1. API Provider generates a JSON Web Signature (JWS) over the OpenAPI schema and current security policy using a key associated with a Decentralized Identifier (DID). 2. This signature and the corresponding DID document reference are embedded in the discovery response payload. 3. Upon discovery, the Agent resolves the DID to retrieve the public key from a decentralized ledger or service endpoint, validating the JWS against it. 4. If valid, the agent proceeds; if invalid, missing, or if the DID document indicates revocation, the agent rejects the endpoint or flags it for manual review, preventing invocation of drifted or insecure interfaces [4, 5].
 
 ## Materials / steps
 
-1. Implement JWS generation module for API providers to sign schema/policy bundles. 2. Develop agent-side validation middleware that intercepts discovery responses. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Conduct benchmarking experiments to measure proof-validation latency, specifically comparing the computational cost of verifying schema integrity proofs against standard JWT checks under high-throughput swarm conditions, targeting a maximum acceptable validation latency of 5ms and a minimum throughput of 10,000 requests per second. 5. Develop a formal threat model addressing potential key management vulnerabilities, including key rotation strategies and revocation mechanisms.
+1. Implement JWS generation module for API providers to sign schema/policy bundles linked to DIDs. 2. Develop agent-side validation middleware that intercepts discovery responses and performs DID resolution. 3. Create a simulated agentic swarm environment to test high-throughput discovery. 4. Conduct benchmarking experiments to measure proof-validation latency, specifically comparing the computational cost of verifying schema integrity proofs against standard JWT checks under high-throughput swarm conditions, targeting a maximum acceptable validation latency of 5ms and a minimum throughput of 10,000 requests per second. 5. Develop a formal threat model addressing potential key management vulnerabilities, including DID-based key rotation strategies, specific revocation mechanisms (e.g., DID document updates), and resilience against ledger censorship.
 
 ## Who it's for
 

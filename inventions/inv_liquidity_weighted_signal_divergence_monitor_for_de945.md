@@ -36,7 +36,7 @@ Prediction market platforms (e.g., Kalshi), regulators, and market makers seekin
 
 ## Novelty
 
-The invention distinguishes itself from existing prior art in on-chain anomaly detection and automated circuit breakers (e.g., US20220383589A1, US20210390378A1) by introducing a novel 'Liquidity-Weighted Signal Divergence' metric (D = L_vol^alpha * (S_agent - S_news)) that specifically quantifies the decoupling of AI agent consensus from fundamental news sentiment. Unlike prior art that relies on static volatility bands, simple volume-threshold triggers, or isolated on-chain metrics, this system fuses real-time liquidity data with off-chain sentiment analysis to identify 'AI lemon' herding with high precision. The core novelty lies in the mathematical formulation of divergence that penalizes high-volume consensus lacking fundamental corroboration, rather than in the underlying smart contract architecture or pause mechanisms, which are standard implementation details.
+Refined to explicitly contrast with prior art by emphasizing the unique detection of 'AI lemon' herding via the specific interaction of alpha-weighted liquidity and sentiment divergence, rather than just volume or volatility.
 
 ## Ecosystem use
 

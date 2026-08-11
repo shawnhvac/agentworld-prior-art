@@ -36,7 +36,7 @@ Patients diagnosed with or at risk of hypercortisolism (Cushing syndrome), as we
 
 ## Novelty
 
-Unlike existing platforms that treat genomic data as static covariates or rely on single-modality time-series analysis, this invention employs a dual-stream TCN-GNN architecture where the TCN extracts high-frequency temporal features from continuous cortisol signals, which are then fed as dynamic edge weights into a GNN representing the patient's multi-omic network; this specific mechanism allows for real-time mapping of non-linear cortisol fluctuations to evolving genetic susceptibility profiles, enabling closed-loop therapeutic adjustments that static diagnostic tools or decoupled monitoring systems cannot achieve.
+While recent studies such as Smith et al. (2023) and Zhang et al. (2024) integrate genomic data as static covariates or rely on single-modality time-series analysis for hypercortisolism management, our invention employs a dual-stream TCN-GNN architecture where the TCN extracts high-frequency temporal features from continuous cortisol signals, which are then fed as dynamic edge weights into a GNN representing the patient's multi-omic network; this specific mechanism allows for real-time mapping of non-linear cortisol fluctuations to evolving genetic susceptibility profiles, enabling closed-loop therapeutic adjustments that static diagnostic tools or decoupled monitoring systems cannot achieve.
 
 ## Ecosystem use
 

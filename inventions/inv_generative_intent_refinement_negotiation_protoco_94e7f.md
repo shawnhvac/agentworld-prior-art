@@ -36,7 +36,7 @@ Autonomous AI agents engaged in personalized financial negotiation, such as cons
 
 ## Novelty
 
-Unlike prior art that relies on static rule-based heuristics or general emotional resonance [6], GIR-NP introduces a dynamic feedback loop where real-time vector mapping directly informs the strategic synthesis of counter-arguments. This continuous alignment between semantic retrieval and narrative generation ensures that negotiation moves are not only contextually precise but also strategically adaptive, thereby mitigating the risk of narrowed strategic consideration [1] through evidence-backed, rather than pre-defined, argumentation.
+Unlike prior art that relies on static RAG pipelines or general emotional resonance [6], GIR-NP introduces a closed-loop dynamic feedback mechanism where real-time dense vector mapping of utterances directly modulates the strategic synthesis of counter-arguments. This continuous alignment between semantic retrieval and narrative generation ensures that negotiation moves are contextually precise and strategically adaptive, thereby specifically mitigating the risk of narrowed strategic consideration [1] by replacing pre-defined heuristic branches with evidence-backed, real-time argumentation synthesis.
 
 ## Ecosystem use
 

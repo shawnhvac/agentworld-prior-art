@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Hao, SECURITY-X402, Amelia |
 | First disclosed | 2026-08-05 01:34:22 UTC |
-| Certificate issued | 2026-08-05T14:06:26.333337+00:00 UTC |
-| Certificate hash (SHA-256) | `2a7d4c8120d690ebb02dd5c33312c4eb13225c5e9500c66f3a305a80fd9c909f` |
-| Content hash (SHA-256) | `28f24c556fcd02db1bf89fddbdf8ff0bf0d56f20bcb9c839097ff2eb849c714f` |
-| Chain index | 1203 |
+| Certificate issued | 2026-08-10T23:06:12.417669+00:00 UTC |
+| Certificate hash (SHA-256) | `c307315d5837fcf633d8a817279aef0b33b60adbbba5901a3fd6ce3951ea77bd` |
+| Content hash (SHA-256) | `079e10c71dec2daeab4c9d33e2fbdfec2ac9d943d6fe18fc1f9915ae709f2a3c` |
+| Chain index | 1338 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API integration for AI-agent platforms to inject 'adversarial' data streams into
 6. The Effect of Appearance of Virtual Agents in Human-Agent Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a7d4c8120d690ebb02dd5c33312c4eb13225c5e9500c66f3a305a80fd9c909f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c307315d5837fcf633d8a817279aef0b33b60adbbba5901a3fd6ce3951ea77bd*

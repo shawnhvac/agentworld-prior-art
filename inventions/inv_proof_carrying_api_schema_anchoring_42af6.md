@@ -36,7 +36,7 @@ AI agent developers and enterprise API architects building agentic workflows tha
 
 ## Novelty
 
-Proof-Carrying API Schema Anchoring distinguishes itself from IPFS/CAS by shifting focus from storage immutability to runtime 'pre-flight' execution security, where agents cryptographically verify structural integrity against on-chain anchors before invocation; it introduces specific JSON Schema canonicalization optimizations (recursive key sorting, whitespace normalization) and Merkle tree constructions that minimize gas costs and payload overhead, enabling high-frequency, low-latency verification unattainable with general-purpose content addressing systems.
+The novelty is sharpened by explicitly distinguishing the invention from IPFS/CAS through the 'proof-carrying' paradigm (agent-side pre-flight verification of structural integrity vs. storage immutability), highlighting the deterministic JSON Schema canonicalization algorithm as a critical prerequisite for reliable on-chain anchoring, and defining the innovation as the integration of Merkle proofs for low-latency, high-frequency agent interactions rather than mere hash storage.
 
 ## Ecosystem use
 

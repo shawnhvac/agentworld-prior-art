@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, particularly those requiring 
 
 ## Novelty
 
-The DCMV improves on prior work by explicitly addressing the coherence of AI-generated data in decentralized settings, which prior art such as [P1] and [P3] do not address. It combines neural verification with blockchain consensus for the first time in this specific context. Unlike [P2], which focuses on anonymization and general certification, DCMV introduces a specific Neural-to-Crypto Interface that bridges probabilistic neural outputs with deterministic BFT consensus rules, solving the end-to-end settlement ambiguity in semantic validation.
+Refined novelty claim to specifically contrast the DCMV's 'Neural-to-Crypto Interface' with existing decentralized AI frameworks, emphasizing the unique quantization of probabilistic semantic confidence into deterministic BFT votes as the primary innovation, distinguishing it from [P1]'s access control, [P2]'s transport-layer integrity, and [P3]'s anonymization.
 
 ## Ecosystem use
 

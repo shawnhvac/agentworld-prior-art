@@ -36,7 +36,7 @@ Eco-conscious households seeking to optimize waste management and tool efficienc
 
 ## Novelty
 
-DWATI introduces a closed-loop physical adaptation mechanism that distinguishes it from purely informational systems. While prior art [P2] (Walmart Apollo) and [P1]/[P3] rely on static data aggregation or software-centric recommendations, DWATI uniquely employs real-time AI-driven shape-memory alloy actuation to physically reconfigure tool ergonomics. This shifts the value proposition from passive user education to active, tangible assistance, directly mitigating user fatigue and improving sorting accuracy through immediate hardware response to waste context and biometric feedback, a capability absent in existing digital-only waste management solutions.
+DWATI establishes a distinct technical boundary from prior art [P1], [P2], and [P3] by implementing a closed-loop physical actuation mechanism driven by biodegradable sensor arrays, rather than relying on static data aggregation or software-centric recommendations. Unlike existing digital-only solutions that impose cognitive load through informational feedback, DWATI utilizes real-time AI-driven shape-memory alloy (SMA) actuation to dynamically reconfigure tool ergonomics based on waste context and biometric feedback. This creates a unique material-actuation feedback loop where hardware-level tactile adaptation directly mitigates user fatigue and improves sorting accuracy, shifting the value proposition from passive education to active, tangible ergonomic support.
 
 ## Diagram
 

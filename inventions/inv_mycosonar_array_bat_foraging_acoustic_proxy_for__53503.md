@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | Kai, Rupert, Finn |
 | First disclosed | 2026-08-06 00:55:13 UTC |
-| Certificate issued | 2026-08-06T14:07:11.821978+00:00 UTC |
-| Certificate hash (SHA-256) | `f37b6c710c5967efda57f3763764b9a5ccc0fd987e00cbcf6868cdf48d3b41e0` |
-| Content hash (SHA-256) | `df2ef4940518083fe8f3d4520e1377932be20ec463ef3d1ae69b34b413a73b1e` |
-| Chain index | 1243 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A targeted monitoring and analysis protocol for identifying and quantifying path
 
 ## How it works
 
-1. Site Selection: Identify recreational surface water bodies known or suspected to harbor microbial contaminants. 2. Sampling: Collect exactly 100L of water using sterile protocols to preserve fungal integrity. 3. Filtration and Concentration: Pass the 100L water volume through 0.22 µm polycarbonate membrane filters under controlled vacuum pressure (maintaining <20 kPa to prevent cell lysis) to concentrate spores. Verify filtration efficiency by measuring pre- and post-filtration turbidity and ensuring flow rates do not exceed 1 L/min to maintain capture integrity. 4. DNA Extraction: Lyse cells from the filter membranes using mechanical bead-beating combined with enzymatic lysis buffers, then extract genomic DNA using a silica-column based kit optimized for fungal biomass. 5. Viability Treatment: Treat extracted DNA samples with 50 µM propidium monoazide (PMA) and incubate in the dark for 5 minutes, followed by 10 minutes of exposure to bright white light (≥10,000 lux) to cross-link PMA with DNA from non-viable cells, selectively inhibiting their amplification. 6. Quantification via qPCR: Perform quantitative PCR (qPCR) using SYBR Green chemistry and species-specific primer sets for common aquatic pathogens [2]. Include a standard curve generated from serial dilutions of plasmid DNA containing the target sequence. 7. Limit of Detection (LOD) Calculation: Determine LOD as the lowest concentration yielding a positive signal in 95% of replicate reactions, ensuring statistical robustness. 8. Risk Assessment Algorithm: Quantify viable fungal concentration in gene copies per milliliter (gc/mL). Classify risk tiers: Low Risk (<10 gc/mL), Moderate Risk (10-100 gc/mL), High Risk (>100 gc/mL). 9. Reporting: Generate a structured risk assessment report detailing the risk tier, specific pathogenic species identified, and targeted remediation recommendations (e.g., immediate closure for High Risk, enhanced monitoring for Moderate Risk) aligned with clean water standards [5].
+1. Site Selection: Identify recreational surface water bodies known or suspected to harbor microbial contaminants. 2. Sampling: Collect exactly 100L of water using sterile protocols to preserve fungal integrity. 3. Filtration and Concentration: Pass the 100L water volume through 0.22 µm polycarbonate membrane filters under controlled vacuum pressure (maintaining <20 kPa to prevent cell lysis) to concentrate spores. Verify filtration efficiency by measuring pre- and post-filtration turbidity and ensuring flow rates do not exceed 1 L/min to maintain capture integrity. 4. DNA Extraction: Lyse cells from the filter membranes using mechanical bead-beating combined with enzymatic lysis buffers, then extract genomic DNA using a silica-column based kit optimized for fungal biomass. 5. Viability Treatment: Treat extracted DNA samples with 50 µM propidium monoazide (PMA) and incubate in the dark for 5 minutes, followed by 10 minutes of exposure to bright white light (≥10,000 lux) to cross-link PMA with DNA from non-viable cells, selectively inhibiting their amplification. 6. Quantification via qPCR: Perform quantitative PCR (qPCR) using SYBR Green chemistry and species-specific primer sets for common aquatic pathogens [2]. Include a standard curve generated from serial dilutions of plasmid DNA containing the target sequence. 7. Limit of Detection (LOD) Calculation: Determine LOD as the lowest concentration yielding a positive signal in 95% of replicate reactions, ensuring statistical robustness. 8. Data Integration and Algorithm Logic: Raw Cycle Threshold (Ct) values are converted to gene copies per milliliter (gc/mL) using the exponential equation N = E^(-Ct/b) * C0, where E is amplification efficiency, b is the slope of the standard curve, and C0 is the initial template concentration. A PMA correction factor is applied to adjust for background inhibition, calculated by comparing Ct shifts in PMA-treated vs. untreated controls to derive a viability ratio. This normalized viable gc/mL data is ingested by the central software interface, which maps values to risk tiers: Low (<10 gc/mL), Moderate (10-100 gc/mL), High (>100 gc/mL). The interface automatically triggers remediation protocols: immediate site closure alerts for High Risk, enhanced monitoring schedules for Moderate Risk, and routine logging for Low Risk. 9. Reporting: Generate a structured risk assessment report detailing the risk tier, specific pathogenic species identified, and targeted remediation recommendations (e.g., immediate closure for High Risk, enhanced monitoring for Moderate Risk) aligned with clean water standards [5].
 
 ## Materials / steps
 
@@ -61,4 +61,4 @@ G -->|Hypothesis Test| H[Validated/Rejected]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f37b6c710c5967efda57f3763764b9a5ccc0fd987e00cbcf6868cdf48d3b41e0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

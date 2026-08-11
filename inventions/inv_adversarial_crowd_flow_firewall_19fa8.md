@@ -36,7 +36,7 @@ Transit operators managing emergency evacuations or high-density crowd scenarios
 
 ## Novelty
 
-Distinct from [P3] (reactive crowd flow optimization, which adjusts routes based on aggregate density without individual physiological context) and [P4] (biometric authentication, which uses biometrics for identity verification rather than dynamic safety routing), this invention is the first to combine differential privacy-preserving biometric inference with Raft-based atomic resource locking for physical safety. It introduces a novel mechanism where individual anxiety states, inferred via persona-embedding learning [3] under strict differential privacy constraints, trigger atomic, cryptographically secured reservations of physical corridor capacity. In the context of crowd dynamics, 'adversarial' is explicitly defined as 'panic-induced congestion' rather than malicious actors, preventing conceptual confusion. This contrasts with prior art that lacks either the granular, privacy-preserving physiological trigger or the distributed consensus mechanism required to prevent double-booking of safe zones during high-concurrency panic events.
+Rewrote the Novelty section to explicitly contrast the invention with [P3] and [P4] by highlighting the unique coupling of differential privacy-preserving biometric triggers with Raft-based atomic resource locking, ensuring the distinction from aggregate density optimization is unambiguous.
 
 ## Ecosystem use
 

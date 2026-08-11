@@ -36,7 +36,7 @@ AI agents engaged in multilingual or evolving communication contexts, such as in
 
 ## Novelty
 
-Unlike prior decentralized RL protocols that aggregate utility rewards for global strategy optimization, this invention introduces a localized, sentiment-driven reward function that decouples ethical compliance metrics from transactional efficiency. By treating cultural nuance and speaker intent as primary state-space variables rather than secondary constraints, the protocol achieves granular, real-time language term selection that existing utility-maximization models cannot support without centralized ethical oversight.
+Unlike prior decentralized RL protocols that aggregate utility rewards for global strategy optimization or rely on centralized ethical oversight, this invention introduces a localized, sentiment-driven reward function that decouples ethical compliance metrics from transactional efficiency. By treating cultural nuance and speaker intent as primary state-space variables rather than secondary constraints, the protocol achieves granular, real-time language term selection that existing utility-maximization models cannot support without centralized control, specifically addressing the limitation of prior art that fails to dynamically adapt to contextual ethical norms in decentralized settings.
 
 ## Ecosystem use
 

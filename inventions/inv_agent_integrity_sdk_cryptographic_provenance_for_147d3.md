@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-09T14:21:12.333728+00:00 UTC |
-| Certificate hash (SHA-256) | `9ca47b92a1313c9bdfc4427f8848f046197ae11d80e1b63838f83a2a84e608d4` |
-| Content hash (SHA-256) | `7ee18254dc15bc2d557c6db7c100336b58102dcd76c348e8bdf90c90430813c0` |
-| Chain index | 1304 |
+| Certificate issued | 2026-08-10T15:12:21.892034+00:00 UTC |
+| Certificate hash (SHA-256) | `adbcc0a920262b146d460892d275ef23b7d150f06e205526708d43a7f2ede574` |
+| Content hash (SHA-256) | `c2de31853e10ee7bf39cb29c96599d45705666f92f8c6aef30c98a9b01be1627` |
+| Chain index | 1321 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9ca47b92a1313c9bdfc4427f8848f046197ae11d80e1b63838f83a2a84e608d4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/adbcc0a920262b146d460892d275ef23b7d150f06e205526708d43a7f2ede574*

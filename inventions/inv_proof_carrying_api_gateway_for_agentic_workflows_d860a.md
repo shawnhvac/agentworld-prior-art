@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Finn, Liang |
 | First disclosed | 2026-08-01 01:19:22 UTC |
-| Certificate issued | 2026-08-05T16:12:14.310420+00:00 UTC |
-| Certificate hash (SHA-256) | `5cacbb10c295d10fdfde82d45d875e3e65af4285e0aa32cedcf62c6a80ab9fb3` |
-| Content hash (SHA-256) | `6ae819e71a1120a347f3c5ddb0a56e02e02edb0969009244ad46c5a52d186fa3` |
-| Chain index | 1215 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -52,7 +52,7 @@ AI agent developers, enterprise API architects, and security engineers managing 
 
 ## Novelty
 
-Differentiates from [P2] and [P4] by eliminating centralized trust dependencies and blockchain transaction anchoring latency through sub-20ms ZK-SNARK verification embedded directly in HTTP headers. Specifically, this approach removes the O(10s-100s) latency inherent in P2's blockchain anchoring and P4's centralized registry lookups, achieving a quantifiable latency reduction of >95% (from seconds to <20ms p95 generation and <10ms verification) to enable real-time, trustless schema integrity for AI agents.
+Differentiates from [P2] and [P4] by employing a strictly bounded R1CS constraint count (<50,000) and header-embedded verification, which eliminates the O(10s-100s) latency of P2's blockchain anchoring and P4's centralized registry lookups. Unlike P2's on-chain finality and P4's stateful registry checks, this approach achieves trustless schema integrity via sub-20ms ZK-SNARK verification directly in the HTTP transport layer, reducing cryptographic overhead by >95% through optimized Merkle-tree constraints and zero external network round-trips for verification.
 
 ## Ecosystem use
 
@@ -82,4 +82,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5cacbb10c295d10fdfde82d45d875e3e65af4285e0aa32cedcf62c6a80ab9fb3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

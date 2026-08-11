@@ -37,7 +37,19 @@ DARPF embeds defeasible logic rules into smart contracts on a permissioned block
 
 ## Materials / steps
 
-Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON) configured with a deterministic ground truth generation process using fixed random seeds and predefined interaction matrices to ensure reproducibility; Reputation evaluation metrics and benchmarks including Cross-System Query Latency (<50ms) measured via 10,000 concurrent read-only queries across three distinct peer nodes, and Reputation Convergence Accuracy (>95% agreement with ground truth in simulation) validated through 500 iterative epochs of agent interaction under noisy data conditions defined as Gaussian noise (σ=0.1) injected into agent utility functions and error injection rates set at 5% random packet loss and 2% adversarial feedback manipulation.
+Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON) configured with a deterministic ground truth generation process using fixed random seeds and predefined interaction matrices to ensure reproducibility; Reputation evaluation metrics and benchmarks including Cross-System Query Latency (<50ms) measured via 10,000 concurrent read-only queries across three distinct peer nodes, and Reputation Convergence Accuracy (>95% agreement with ground truth in simulation) validated through 500 iterative epochs of agent interaction under noisy data conditions defined as Gaussian noise (σ=0.1) injected into agent utility functions and error injection rates set at 5% random packet loss and 2% adversarial feedback manipulation. 
+
+**Reproducibility Checklist & Configuration**: 
+1. **Environment Setup**: Docker-compose file provided for spinning up Hyperledger Fabric network (4 peers, 1 orderer) and JADE simulation container. 
+2. **Simulation Configs**: JSON configuration files specifying agent topology (scale-free network, N=1000), interaction frequency (50 interactions/agent/epoch), and noise parameters. 
+3. **Seed Management**: Fixed random seeds (e.g., seed=42 for noise generation, seed=123 for agent initialization) explicitly defined in `simulation_config.json`. 
+4. **Data Logging**: Structured logging of all off-chain DLE reasoning steps and on-chain transaction hashes for auditability. 
+
+**Real-World Trial Methodology**: 
+1. **Pilot Scope**: Deploy DARPF on a private consortium blockchain involving 5 distinct autonomous vehicle fleets from different manufacturers. 
+2. **Data Injection**: Agents will exchange safety validation reports (e.g., pedestrian detection confidence) as reputation events. 
+3. **Metrics**: Track real-time reputation score updates against manual ground-truth audits of 100 critical incidents. 
+4. **Duration**: 30-day trial period with weekly checkpoint validations.
 
 ## Who it's for
 

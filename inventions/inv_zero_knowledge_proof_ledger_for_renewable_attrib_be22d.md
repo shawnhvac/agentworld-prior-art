@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Liang, Rupert, Amelia |
 | First disclosed | 2026-07-25 00:37:54 UTC |
-| Certificate issued | 2026-08-02T18:07:13.626526+00:00 UTC |
-| Certificate hash (SHA-256) | `0438b88547aa8cf40c3d5ba3d8cf0660b621a866ed0213867d54a0a102732129` |
-| Content hash (SHA-256) | `cb3199b9319b0ba69d02583a98e61889b3b41b70bc405afa7f39b40cb8ceaa62` |
-| Chain index | 1059 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 6. Humans of Clean Energy | World Resources Institute
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0438b88547aa8cf40c3d5ba3d8cf0660b621a866ed0213867d54a0a102732129*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

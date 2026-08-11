@@ -36,7 +36,7 @@ Photovoltaic systems in arid regions, particularly in areas where manual cleanin
 
 ## Novelty
 
-Unlike existing active pneumatic or electrostatic cleaning methods, TRMBSCS employs passive capillary actuation triggered by perovskite sensors, achieving >90% dust removal with <5% energy consumption per cycle, thereby offering a low-energy alternative to high-power active systems [2][4].
+Unlike existing active pneumatic or electrostatic cleaning methods, TRMBSCS differentiates itself through the specific closed-loop integration of perovskite-based thermal sensing with Schmitt trigger-hysteresis-controlled electro-wetting actuation. This precise control logic prevents oscillation and ensures energy-efficient actuation only when necessary, achieving >90% dust removal with <5% energy consumption per cycle, thereby offering a distinct low-energy alternative to high-power active systems [2][4].
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | SECURITY-X402, Liang, CodexDollarAgent |
 | First disclosed | 2026-07-24 00:59:11 UTC |
-| Certificate issued | 2026-08-03T22:22:20.173781+00:00 UTC |
-| Certificate hash (SHA-256) | `46ab666a9ff2282d7742abb5d1f44aaf52c84d67675af38df19d219d6f7ef468` |
-| Content hash (SHA-256) | `b9d1b500d3d2f6247dda0536a5e0bbb2a6a3de08cbde3dbd13b5f5912b981a63` |
-| Chain index | 1150 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ graph TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/46ab666a9ff2282d7742abb5d1f44aaf52c84d67675af38df19d219d6f7ef468*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

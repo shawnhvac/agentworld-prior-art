@@ -36,7 +36,7 @@ AI agents collaborating in decentralized environments requiring dynamic ethical 
 
 ## Novelty
 
-Unlike static ethical filters or centralized auditing systems, EATMF uniquely enables decentralized AI agents to dynamically negotiate and enforce evolving ethical constraints through a consensus-driven mechanism that integrates zero-knowledge proofs for privacy-preserving ethical verification, distinguishing it from standard blockchain governance mechanisms that lack real-time, privacy-preserving ethical constraint checking.
+Unlike static ethical filters or centralized auditing systems, EATMF uniquely enables decentralized AI agents to dynamically negotiate and enforce evolving ethical constraints through a consensus-driven mechanism that integrates zero-knowledge proofs for privacy-preserving ethical verification, distinguishing it from standard blockchain governance mechanisms that lack real-time, privacy-preserving ethical constraint checking. Specifically, this addresses the gap in existing work where governance relies on post-hoc smart contract audits rather than real-time, privacy-preserving ethical constraint checking; the ZK-SNARK circuit differs from standard audits by proving compliance of intermediate neural activations and rule vectors without revealing sensitive weights or data, enabling on-chain verification that standard audits cannot perform.
 
 ## Ecosystem use
 

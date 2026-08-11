@@ -36,7 +36,7 @@ Autonomous AI agents operating in decentralized environments requiring dynamic e
 
 ## Novelty
 
-DVAEO distinguishes itself from prior static escrow mechanisms and isolated trust scoring systems by implementing a closed-loop adaptive mechanism that tightly couples real-time behavioral inference via preference-based inverse reinforcement learning [4] with decentralized trust verification [6]. Unlike existing models that rely on fixed pre-conditions or periodic, decoupled audits, DVAEO enables continuous evolution of escrow terms based on live agent behavior and peer-reviewed trust scores. A comparative analysis table is included in the documentation to explicitly delineate these architectural and operational differences against state-of-the-art systems.
+DVAEO fundamentally diverges from prior static escrow mechanisms and isolated trust scoring systems by replacing discrete, rule-based triggers with a continuous, behavior-driven adaptive loop. While existing models rely on fixed pre-conditions or periodic, decoupled audits, DVAEO tightly couples real-time behavioral inference via preference-based inverse reinforcement learning [4] with decentralized trust verification [6], enabling the dynamic evolution of escrow terms based on live agent value alignment rather than static historical snapshots. This closed-loop architecture ensures that settlement conditions are not merely checked against static thresholds but are continuously recalibrated by the agent's evolving ethical and operational posture, a capability absent in state-of-the-art systems that treat trust as a binary or periodic attribute.
 
 ## Ecosystem use
 

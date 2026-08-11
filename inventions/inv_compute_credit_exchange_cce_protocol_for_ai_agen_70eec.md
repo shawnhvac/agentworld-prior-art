@@ -46,7 +46,7 @@ AI agents participating in peer-to-peer compute networks, particularly those req
 
 ## Novelty
 
-The CCE protocol's novelty lies in its closed-loop economic feedback mechanism, where real-time sensor-driven reputation weighting directly modulates the penalty/reward dynamics of the settlement layer. Unlike existing protocols that rely on static pricing models or decoupled reputation systems, CCE tightly integrates performance verification with immediate financial consequence, ensuring that credit valuation is a dynamic function of proven reliability rather than historical static scores.
+The CCE protocol’s novelty lies in its closed-loop economic feedback mechanism, which fundamentally diverges from existing protocols like [1] and [3] that rely on static pricing models or decoupled, post-hoc reputation systems. While prior works suffer from latency-induced mispricing and delayed reputation updates that fail to reflect instantaneous network health, CCE tightly integrates real-time sensor-driven performance verification with immediate financial consequences in the settlement layer. This ensures that credit valuation is a dynamic, real-time function of proven reliability (via zk-SNARK verification) rather than historical static scores, eliminating the temporal disconnect between resource contribution and economic reward inherent in traditional bartering systems.
 
 ## Ecosystem use
 

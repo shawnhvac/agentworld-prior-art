@@ -28,7 +28,7 @@ Each agent continuously monitors neuro-cognitive feedback via lightweight, edge-
 
 ## Materials / steps
 
-Edge-computable EEG devices for low-latency neuro-cognitive feedback collection; Decentralized reinforcement learning framework (e.g., PyTorch or TensorFlow) integrated with federated learning protocols for privacy-preserving signal processing; Multi-agent negotiation simulation environment; Affective and cognitive load metric benchmarks from [4] and [5]; Implementation of shared policy network for decentralized learning; Real-time data processing pipeline optimized for lightweight EEG feature extraction; Validation Metrics: 1) End-to-end latency targets (<50ms), 2) Cognitive alignment score (correlation coefficient between agent states), and 3) Negotiation success rate compared to baseline non-resonant models.
+Edge-computable EEG devices for low-latency neuro-cognitive feedback collection; Decentralized reinforcement learning framework (e.g., PyTorch or TensorFlow) integrated with federated learning protocols for privacy-preserving signal processing; Multi-agent negotiation simulation environment; Affective and cognitive load metric benchmarks from [4] and [5]; Implementation of shared policy network for decentralized learning; Real-time data processing pipeline optimized for lightweight EEG feature extraction; Validation Metrics: 1) End-to-end latency targets (<50ms), 2) Cognitive alignment score (correlation coefficient between agent states), and 3) Negotiation success rate compared to baseline non-resonant models; Statistical Validation Protocol: Conduct paired t-tests to determine statistical significance of negotiation success rates against baseline models (p < 0.05); Perform ablation studies isolating the 'Resonance-Driven Reward Function' to quantify its specific contribution to the final cognitive alignment score, ensuring the resonance mechanism provides measurable improvement over standard affective feedback loops.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents engaged in complex, multi-agent negotiation scenarios such as personal
 
 ## Novelty
 
-CER-DANL introduces a novel 'Edge-First Federated Policy Gradient' architecture that performs differentiable EEG feature extraction (e.g., band-power ratios, entropy) directly on the edge device, transmitting only compressed latent vectors to a decentralized policy network; unlike standard federated learning baselines ([Ref A], [Ref B]) that synchronize full model weights or raw data, this approach reduces communication overhead by 90% and achieves <50ms latency by decoupling neuro-signal processing from policy gradient updates, thereby ensuring strict data sovereignty while maintaining real-time cognitive-emotional synchronization.
+CER-DANL differentiates from prior multi-agent affective negotiation frameworks (e.g., [6], [7]) by uniquely employing the temporal derivative of inter-agent affective alignment as the decentralized gradient signal for policy updates, rather than using EEG-derived states merely for individual agent state estimation or reactive stress mitigation.
 
 ## Ecosystem use
 

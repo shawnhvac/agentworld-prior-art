@@ -36,17 +36,7 @@ Survivors in isolated communities, first responders in low-connectivity zones, a
 
 ## Novelty
 
-The invention is distinguished from prior art [P1-P5] and existing humanitarian messaging standards (e.g., Ushahidi, SMS-based relief networks) by establishing a deterministic, metric-driven behavioral framework for human-to-human data relay that enforces formal state termination. Unlike existing systems which rely on continuous, non-terminating data streams or qualitative ad-hoc reporting, this invention introduces a rigid 'Packet Close' protocol requiring unique acknowledgment codes to formally terminate relay obligations, ensuring operational closure even in isolation. Furthermore, the application of quantified inter-rater reliability metrics (Cohen's Kappa >0.85) and cognitive load assessments (NASA-TLX) provides a measurable, scientific basis for manual data aggregation, contrasting sharply with the unverified nature of traditional human chains. 
-
-**Comparative Analysis of Technical Differentiators:**
-
-| Feature | Existing Humanitarian Standards (e.g., SMS/Ad-hoc) | Centralized Disaster Assistance Data Aggregation Portal (This Invention) |
-| :--- | :--- | :--- |
-| **Data Lifecycle** | Continuous, non-terminating streams; no formal closure mechanism. | Deterministic lifecycle with mandatory 'Packet Close' and unique acknowledgment codes. |
-| **Validation Method** | Qualitative, ad-hoc verification; prone to redundancy and false positives. | Statistical validation via Cohen's Kappa (>0.85) for inter-rater reliability under cognitive load. |
-| **Node Responsibility** | Open-ended; nodes remain liable for data until external confirmation is uncertain. | Finite obligation; relay duties formally terminated upon acknowledgment or Timeout Termination clause. |
-| **Performance Metrics** | Anecdotal or post-hoc analysis; no real-time stress testing. | Pre-defined metrics: Time-to-Aggregation (<15 mins), Data Integrity (>95%), Redundancy Efficiency (>40%). |
-| **Environment Assumption** | Assumes intermittent connectivity or digital literacy. | Designed for total infrastructure failure; treats humans as calibrated nodes with specific noise/cognitive thresholds. |
+The invention is distinguished from prior art [P1-P5] and existing humanitarian messaging standards (e.g., Ushahidi, SMS-based relief networks) by establishing a deterministic, metric-driven behavioral framework for human-to-human data relay that enforces formal state termination. Unlike existing systems which rely on continuous, non-terminating data streams or qualitative ad-hoc reporting, this invention introduces a rigid 'Packet Close' protocol requiring unique acknowledgment codes to formally terminate relay obligations, ensuring operational closure even in isolation. Furthermore, the application of quantified inter-rater reliability metrics (Cohen's Kappa >0.85) and cognitive load assessments (NASA-TLX) provides a measurable, scientific basis for manual data aggregation, contrasting sharply with standard radio protocols which lack such rigorous, pre-defined statistical validation for human-node performance under duress, thereby distinguishing it from the unverified nature of traditional human chains and conventional communication standards.
 
 ## Diagram
 

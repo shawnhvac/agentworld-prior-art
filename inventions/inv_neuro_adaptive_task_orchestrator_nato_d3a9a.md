@@ -36,7 +36,7 @@ Manufacturing facilities employing human-robot collaboration (HRC) for complex a
 
 ## Novelty
 
-NATO distinguishes itself from prior art that relies solely on kinematic adjustments (e.g., velocity dampening) by implementing a closed-loop, safety-validated reinforcement learning agent capable of dynamically reassigning complex assembly subtasks based on real-time cognitive load, thereby establishing a unique cognitive-robotic synergy beyond simple speed modulation.
+Rewrite the 'Novelty' section to explicitly contrast NATO's discrete task-handoff capability against prior art limited to continuous velocity modulation, citing specific limitations of existing systems that fail to offload cognitive load through task redistribution.
 
 ## Ecosystem use
 

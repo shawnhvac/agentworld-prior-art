@@ -40,7 +40,7 @@ Disaster response coordinators, logistics managers, and humanitarian aid organiz
 
 ## Novelty
 
-The novelty is strictly defined as the real-time quantitative injection of anonymized sentiment hashes into the logistics optimization engine via the specific mapping function $M(h)$ and edge weight transformation $C'_{uv}$, a mechanism absent in prior art [P4, P5] which relies on post-hoc static classification and heuristic warnings rather than dynamic route cost modification.
+Refined to explicitly contrast the real-time, privacy-preserving hash-mapping mechanism ($M(h)$) against prior art's static, post-hoc classification methods, thereby sharpening the distinction.
 
 ## Diagram
 

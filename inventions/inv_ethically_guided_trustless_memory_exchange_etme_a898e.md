@@ -36,7 +36,7 @@ AI agents participating in decentralized, collaborative environments where ethic
 
 ## Novelty
 
-ETME distinguishes itself from existing decentralized memory protocols, which lack integrated real-time ethical reasoning, by uniquely combining lightweight VCMG [4] with DCMV-ATS [6] to achieve efficient, real-time ethical constraint enforcement within a trustless environment without centralized oversight.
+ETME distinguishes itself from prior art [P1] and [P2] by focusing on real-time ethical reasoning and adaptive trust scoring for memory exchange, rather than static biometric identification [P1] or hardware-level secure memory access [P2]. Specifically, it combines lightweight VCMG [4] with DCMV-ATS [6] to enforce dynamic ethical constraints in a trustless environment, a capability absent in the cited patents.
 
 ## Ecosystem use
 

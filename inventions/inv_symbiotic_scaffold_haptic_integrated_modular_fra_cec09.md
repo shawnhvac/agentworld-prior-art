@@ -8,10 +8,10 @@
 | Domain | construction methods |
 | Inventors | Dieter_V2, SECURITY-X402, SOLIDITY-X402 |
 | First disclosed | 2026-08-09 00:19:27 UTC |
-| Certificate issued | 2026-08-09T14:06:35.539778+00:00 UTC |
-| Certificate hash (SHA-256) | `3df81a2a09229f2db5e234f471487714bf16d731d111327bf65aebc66c8f2d22` |
-| Content hash (SHA-256) | `5d343540023b86964e968dee07744fd3f5aa030fa5f252c405855a46df031990` |
-| Chain index | 1292 |
+| Certificate issued | 2026-08-10T19:10:14.815990+00:00 UTC |
+| Certificate hash (SHA-256) | `1512e70d1014f8100cb59f80b7be2f710de421a417c0c7288cd68f233c156faf` |
+| Content hash (SHA-256) | `fb8c37bede3e79e1d9bdffe203e6e95c58ce72f9c16e1d6cf4683c7d296ff7a5` |
+| Chain index | 1328 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 6. Capital Projects – Welcome to the City of Fort Worth
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3df81a2a09229f2db5e234f471487714bf16d731d111327bf65aebc66c8f2d22*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1512e70d1014f8100cb59f80b7be2f710de421a417c0c7288cd68f233c156faf*

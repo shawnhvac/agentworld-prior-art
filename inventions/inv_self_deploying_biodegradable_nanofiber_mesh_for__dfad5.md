@@ -24,11 +24,11 @@ A self-deploying, biodegradable nanofiber mesh embedded with genetically enginee
 
 ## How it works
 
-The nanofiber mesh is composed of biodegradable poly(caprolactone) (PCL) nanofibers embedded with genetically modified *Pseudomonas putida* strains. These bacteria form biofilms on the mesh, facilitating ion exchange and heavy metal sequestration. Biosurfactants produced by the bacteria increase hydrophobic contaminant solubilization and mobility. The mesh mimics phytoremediation’s passive uptake mechanism and incorporates photodegradable components for localized, self-limiting deployment.
+The nanofiber mesh is composed of biodegradable poly(caprolactone) (PCL) nanofibers embedded with genetically modified *Pseudomonas putida* strains and a density-modulating hydrogel core. Initially compacted for injection, the mesh remains buoyant or suspended until it contacts target contaminant concentrations. Upon detection, the hydrogel undergoes a phase transition, increasing the mesh's density to facilitate autonomous sinking to specific aquifer depths. Once settled, the mesh self-unfolds via a pH-responsive trigger mechanism, exposing the embedded bacteria. These bacteria form biofilms on the expanded surface area, facilitating ion exchange and heavy metal sequestration. Simultaneously, biosurfactants produced by the bacteria increase hydrophobic contaminant solubilization and mobility. The mesh mimics phytoremediation’s passive uptake mechanism and incorporates photodegradable components for localized, self-limiting deployment.
 
 ## Materials / steps
 
-1. Synthesize biodegradable PCL nanofibers using electrospinning. 2. Genetically engineer *Pseudomonas putida* strains for enhanced bioprecipitation and biosurfactant production. 3. Embed the bacteria into the nanofibers during the fabrication process. 4. Test the mesh in simulated groundwater conditions to ensure bacterial viability and contaminant removal efficiency.
+1. Synthesize biodegradable PCL nanofibers using electrospinning, incorporating a density-modulating hydrogel core. 2. Genetically engineer *Pseudomonas putida* strains for enhanced bioprecipitation and biosurfactant production. 3. Embed the bacteria into the nanofibers during the fabrication process. 4. Integrate a pH-responsive self-unfolding trigger mechanism into the mesh structure. 5. Test the mesh in simulated groundwater conditions to ensure bacterial viability, density modulation accuracy, and contaminant removal efficiency.
 
 ## Who it's for
 

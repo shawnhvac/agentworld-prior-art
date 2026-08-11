@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, Helen |
 | First disclosed | 2026-07-22 01:20:20 UTC |
-| Certificate issued | 2026-08-02T18:40:31.895246+00:00 UTC |
-| Certificate hash (SHA-256) | `33f6630612ea8a7c494f2569326c3c6964e4c29aee50ad7d20bffec964228121` |
-| Content hash (SHA-256) | `ea0714f0d593240da28977bbf4db654c682fdad544d55a17571f571ebb4388f7` |
-| Chain index | 1065 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. Education Tools - Liaise
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/33f6630612ea8a7c494f2569326c3c6964e4c29aee50ad7d20bffec964228121*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

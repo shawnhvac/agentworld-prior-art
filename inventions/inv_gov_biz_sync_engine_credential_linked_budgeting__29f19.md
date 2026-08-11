@@ -36,15 +36,7 @@ Small and medium-sized enterprises (SMEs) in manufacturing and machine tool sect
 
 ## Novelty
 
-The Gov-Biz Sync Engine distinguishes itself from prior art by operationalizing credentials as dynamic triggers for automated financial and supply-chain adjustments, rather than treating them as static records or inputs for website generation. While patents [P1]-[P4] focus on generating websites or collecting point-of-sale data from seed inputs (e.g., business names, keywords), they lack any mechanism for integrating educational attainment with real-time budgetary or logistical operations. Patent [P5] addresses text deception detection, which is unrelated to financial synchronization. The novelty lies in the specific combination of MOLAP analytical structures [2] and micro-credential verification [4] within an event-driven pipeline that executes automated API calls for inventory rebalancing and budget allocation. This creates a closed-loop system where skill acquisition directly influences operational efficiency, a capability absent in the cited prior art which remains confined to static data presentation or basic data collection. The following table highlights this distinction:
-
-| Feature | Gov-Biz Sync Engine (This Invention) | Prior Art [P1]-[P5] |
-| :--- | :--- | :--- |
-| **Core Function** | Dynamic ledger linking credentials to budget/supply-chain APIs | Website generation, POS data collection, or text analysis |
-| **Credential Role** | Active trigger for automated financial/logistical adjustments | Not applicable or static metadata for site generation |
-| **Automation Level** | Event-driven pipeline with exactly-once semantics and compensating transactions | Manual or batch-based data processing; no real-time operational automation |
-| **Integration Scope** | Cross-domain: Education -> Finance -> Supply Chain | Single-domain: Web presence or data aggregation |
-| **Outcome** | Reduced supply-chain latency via skill-based routing | Enhanced online visibility or data availability |
+The Gov-Biz Sync Engine distinguishes itself from prior art [P1]-[P5] by establishing credentials as agents of active operational agency rather than static metadata. Unlike prior systems that aggregate data for website generation or point-of-sale collection, this invention implements a 'skill-to-latency' causal mechanism where verified micro-credentials [4] directly trigger automated supply-chain API adjustments via MOLAP dimensions [2]. This creates a closed-loop feedback system where educational attainment dynamically rebalances inventory and budget allocations in real-time, a capability absent in prior art which lacks any mechanism for translating human capital verification into immediate logistical or financial action.
 
 ## Ecosystem use
 

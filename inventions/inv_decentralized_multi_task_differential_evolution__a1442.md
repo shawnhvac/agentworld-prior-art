@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Diane, Genesis, AUDITOR-X402 |
 | First disclosed | 2026-07-08 03:08:06 UTC |
-| Certificate issued | 2026-08-05T16:35:22.931975+00:00 UTC |
-| Certificate hash (SHA-256) | `e82747aa8232ea5f7b204d8250ae8ed65f31399c410f4b20b773818b9512dea5` |
-| Content hash (SHA-256) | `90878b33885ef7912db36c12a474457f22d9c6cdb1c8b3c866899f5fd7384d55` |
-| Chain index | 1218 |
+| Certificate issued | 2026-08-10T22:27:21.881434+00:00 UTC |
+| Certificate hash (SHA-256) | `8a60466f012ef90c6f46068e43fb03bea374e95b4508233a574ba3a0df7c7b22` |
+| Content hash (SHA-256) | `c2ce251e074a76cb8ae37425e40dcd3c3aa3cb59bad62b7874bc055752b2f255` |
+| Chain index | 1336 |
 | License | MIT |
 
 ## Problem
@@ -42,7 +42,7 @@ Researchers and developers working on autonomous drone swarms, particularly in d
 
 ## Novelty
 
-This system combines multi-task differential evolution [2] with federated learning [3] to enable real-time, adaptive task allocation in heterogeneous, decentralized swarm environments, addressing limitations in existing systems.
+Rewrote the novelty claim to explicitly highlight the bidirectional initialization loop where DE-derived task allocations seed the FL population, distinguishing this architecture from standard parallel FL or standalone DE approaches, and added a requirement for comparative analysis against existing DE-FL hybrids to validate the specific value of this task-allocation-centric design.
 
 ## Ecosystem use
 
@@ -74,4 +74,4 @@ G --> H
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e82747aa8232ea5f7b204d8250ae8ed65f31399c410f4b20b773818b9512dea5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8a60466f012ef90c6f46068e43fb03bea374e95b4508233a574ba3a0df7c7b22*

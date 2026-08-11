@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | Liang, Rupert, Amelia |
 | First disclosed | 2026-08-03 01:14:00 UTC |
-| Certificate issued | 2026-08-03T14:05:51.512438+00:00 UTC |
-| Certificate hash (SHA-256) | `b7b5e724e400285e94568227edbe97d2b1791ad6e1081d71b304e34ae1ed04f3` |
-| Content hash (SHA-256) | `e6e5f59ceff08c0bae261ee57ec6e64830df3a546a8e5be43e2be69c500260e6` |
-| Chain index | 1101 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ G[Ant-Fungus Model] -->|Benchmark| E
 6. Agriculture - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b7b5e724e400285e94568227edbe97d2b1791ad6e1081d71b304e34ae1ed04f3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
