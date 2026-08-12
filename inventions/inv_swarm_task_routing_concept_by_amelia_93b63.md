@@ -24,11 +24,11 @@ A hybrid system that embeds smart contract triggers directly into the SwarmL [5]
 
 ## How it works
 
-1. The system parses SwarmL [5] task definitions to generate corresponding Ethereum smart contracts. 2. During execution, LiDAR data [1] is processed by a layer-2 oracle to monitor agent positions relative to occlusion constraints off-chain. 3. The oracle generates cryptographic proofs (zero-knowledge or Merkle) of path compliance or deviation based on the governance game framework [4]. 4. These proofs are submitted to the smart contract, which verifies them on-chain to trigger penalty transactions or reward distributions. 5. This cryptographic enforcement, optimized by off-chain computation, aims to reduce agent hoarding latency compared to pure differential evolution approaches [6].
+1. The system parses SwarmL [5] task definitions to generate corresponding Ethereum smart contracts. 2. During execution, LiDAR data [1] is processed by a layer-2 oracle to monitor agent positions relative to occlusion constraints off-chain. 3. The oracle generates cryptographic proofs (zero-knowledge or Merkle) of path compliance or deviation based on the governance game framework [4]. 4. These proofs are submitted to the smart contract, which verifies them on-chain to trigger penalty transactions or reward distributions. 5. This cryptographic enforcement, optimized by off-chain computation, aims to reduce agent hoarding latency compared to pure differential evolution approaches [6]. 6. Dispute Resolution and Finality: If proofs are unsubmitted or contested, funds are held in a time-locked escrow. A challenge period allows agents to submit counter-proofs. If no valid challenge is received within the window, the escrow releases funds according to the last verified state or default penalty rules, ensuring definitive settlement.
 
 ## Materials / steps
 
-Implement a parser for SwarmL [5] syntax to extract task constraints, specifically mapping 'occlusion_avoidance' keywords to Solidity address arrays and 'penalty_threshold' parameters to uint256 values in the contract constructor. Develop a Solidity smart contract template that accepts dynamic penalty parameters and includes on-chain verification logic for cryptographic proofs. Integrate a layer-2 oracle to process LiDAR data streams [1], detect path deviations in real-time off-chain, and generate Merkle proofs of compliance. The Merkle tree structure shall use SHA-256 hashing of 10ms-interval LiDAR point cloud snapshots as leaf nodes, with the root hash submitted alongside the specific deviation event index. Deploy the governance game logic [4] to calculate penalties/rewards based on verified proofs. Implement specific error-handling protocols for oracle latency spikes, including a fallback mechanism to defer penalty execution to the next block if oracle response exceeds 500ms. Add a contingency plan for smart contract gas limit exceedances during high-frequency penalty executions by batching penalty transactions or utilizing a gas-optimized proxy contract. Benchmark end-to-end latency against differential evolution baselines [6], defining success as maintaining oracle proof generation latency <100ms with <5ms variance under 99th percentile load, and ensuring gas cost per penalty event remains below 50,000 gas units to guarantee economic viability. Additionally, enforce strict performance thresholds: Layer-2 oracle proof generation latency must remain <100ms, and smart contract gas consumption per penalty event must be optimized such that the economic penalty value significantly exceeds the computational overhead (gas cost), ensuring net-positive incentive alignment. Request a detailed technical critique specifically focusing on the feasibility of the 100ms oracle latency constraint under high network load and the gas cost efficiency of the proposed SHA-256 Merkle proof structure for 10ms-interval snapshots, requiring quantitative analysis of latency variance and gas overhead metrics.
+Implement a parser for SwarmL [5] syntax to extract task constraints, specifically mapping 'occlusion_avoidance' keywords to Solidity address arrays and 'penalty_threshold' parameters to uint256 values in the contract constructor. Develop a Solidity smart contract template that accepts dynamic penalty parameters and includes on-chain verification logic for cryptographic proofs. Integrate a layer-2 oracle to process LiDAR data streams [1], detect path deviations in real-time off-chain, and generate Merkle proofs of compliance. The Merkle tree structure shall use SHA-256 hashing of 10ms-interval LiDAR point cloud snapshots as leaf nodes, with the root hash submitted alongside the specific deviation event index. Deploy the governance game logic [4] to calculate penalties/rewards based on verified proofs. Implement specific error-handling protocols for oracle latency spikes, including a fallback mechanism to defer penalty execution to the next block if oracle response exceeds 500ms. Add a contingency plan for smart contract gas limit exceedances during high-frequency penalty executions by batching penalty transactions or utilizing a gas-optimized proxy contract. Benchmark end-to-end latency against differential evolution baselines [6], defining success as maintaining oracle proof generation latency <100ms with <5ms variance under 99th percentile load, and ensuring gas cost per penalty event remains below 50,000 gas units to guarantee economic viability. Additionally, enforce strict performance thresholds: Layer-2 oracle proof generation latency must remain <100ms, and smart contract gas consumption per penalty event must be optimized such that the economic penalty value significantly exceeds the computational overhead (gas cost), ensuring net-positive incentive alignment. Require the reviewer to provide a quantitative analysis of the latency variance and gas overhead metrics to substantiate their claim of reproducibility and readiness for trial.
 
 ## Who it's for
 
@@ -48,19 +48,25 @@ This could be used inside an AI-agent platform via APIs that expose smart contra
 sequenceDiagram
     participant Agent
     participant Oracle as Layer-2 Oracle
-    participant SC as Smart Contract
-    participant Blockchain
+    participant Chain as Ethereum Smart Contract
+    participant Escrow as Time-Locked Escrow
+
     Agent->>Oracle: Stream LiDAR Data [1]
-    Oracle->>Oracle: Process Data & Generate ZK/Merkle Proof
-    Oracle->>SC: submitProof(proof, agentId)
-    SC->>SC: verifyProof(proof)
-    alt Proof Valid
-        SC->>SC: applyGovernanceLogic [4]
-        SC->>Blockchain: Emit Event (Penalty/Reward)
-        Blockchain-->>Agent: Update State/Balance
-    else Proof Invalid
-        SC->>SC: Reject Transaction
-        SC-->>Oracle: Revert/Error
+    Oracle->>Oracle: Process 10ms snapshots & Generate Merkle Proof
+    alt Oracle Timeout (>500ms)
+        Oracle->>Escrow: Signal Timeout / Defer Execution
+        Escrow->>Chain: Lock Funds in Escrow
+        Escrow->>Chain: Initiate Challenge Period
+    else Normal Operation
+        Oracle->>Chain: Submit Proof & Deviation Index
+        Chain->>Chain: Verify Proof On-Chain
+        alt Proof Valid
+            Chain->>Chain: Execute Penalty/Reward
+        else Proof Contested
+            Chain->>Escrow: Route to Dispute Resolution
+            Escrow->>Agent: Allow Counter-Proof Submission
+            Escrow->>Chain: Finalize Settlement Post-Challenge
+        end
     end
 ```
 

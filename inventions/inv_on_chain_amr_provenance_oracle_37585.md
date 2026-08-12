@@ -28,7 +28,7 @@ Portable nanopore sequencing analyzes farm runoff to generate metagenomic data. 
 
 ## Materials / steps
 
-1. Deploy portable nanopore sequencers at farm effluent points. 2. Sequence metagenomic data from runoff. 3. Apply validated thresholds to distinguish livestock-specific AMR strains from background noise [1]. 4. Hash the verified risk data. 5. Bind the hash to livestock NFTs on a blockchain. 6. Execute pre-deployment validation against gold-standard lab sequencing to achieve >95% sensitivity and specificity, with a defined false-positive rate threshold.
+1. Deploy portable nanopore sequencers at farm effluent points. 2. Sequence metagenomic data from runoff. 3. Apply validated thresholds to distinguish livestock-specific AMR strains from background noise [1]. 4. Hash the verified risk data. 5. Bind the hash to livestock NFTs on a blockchain. 6. Execute pre-deployment validation against gold-standard lab sequencing using a minimum sample size of n=500 paired samples to achieve 95% confidence with a 5% margin of error, ensuring >95% sensitivity and specificity with a defined false-positive rate threshold of <1% for regulatory compliance.
 
 ## Who it's for
 

@@ -36,7 +36,7 @@ Construction site managers, engineers, and laborers working on complex builds wh
 
 ## Novelty
 
-The invention distinguishes itself from existing dynamic AR systems, specifically US20200020171A1 [P4], by replacing static anchors and discrete, threshold-based binary alerts (e.g., on/off warning states) with a 'graded, non-binary cognitive scaffolding' mechanism. While prior art induces cognitive overload through high-interruption alerts that fail to convey system complexity gradations, our algorithm continuously modulates AR visual parameters—specifically Color Intensity ($I = 0.85E + 0.15$) and Overlay Opacity ($O = 0.90S$)—based on real-time, mathematically derived Shannon entropy ($E$) and structural stability indices ($S$). This continuous modulation provides a graded cognitive scaffold that adapts to instantaneous environmental complexity, allowing workers to perceive system states intuitively without the attentional switching costs associated with binary alert systems, thereby establishing a sharper distinction in human-technology synergy mechanisms.
+Expanded novelty claim to distinguish from continuous AR visualization systems (e.g., heatmaps) by arguing that the specific translation of Shannon entropy and FEM stability indices into color intensity and opacity creates a unique 'cognitive scaffold' that reduces cognitive load differently than standard data visualization, supported by HCI literature on graded approaches over binary alerts.
 
 ## Diagram
 

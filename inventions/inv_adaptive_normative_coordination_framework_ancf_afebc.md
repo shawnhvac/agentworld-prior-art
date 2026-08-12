@@ -36,7 +36,7 @@ Heterogeneous AI agents operating in dynamic environments with shifting goals an
 
 ## Novelty
 
-Rewritten to explicitly contrast with static protocols [5] in dynamic value environments and introduced a comparative analysis of the sub-500ms Raft-synced IRL loop.
+The Novelty section has been rewritten to explicitly contrast ANCF's closed-loop semantic derivation with standard IRL approaches lacking normative synchronization, highlighting the architectural innovation of mapping $R(s,a)$ to adjacency matrix $A$ updates in Section 3.2.
 
 ## Ecosystem use
 

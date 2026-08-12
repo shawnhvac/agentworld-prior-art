@@ -24,7 +24,7 @@ A modular, non-invasive sensor layer embedded in countertops and cabinets that i
 
 ## How it works
 
-CAWARI operates via a network of embedded pressure, thermal, and optical sensors combined with material recognition algorithms using near-infrared (NIR) spectroscopy to classify waste types. These sensors feed data into a lightweight machine learning model (e.g., a convolutional neural network) trained on anonymized household waste patterns. The system outputs real-time suggestions for disposal or reuse via a low-power LED interface embedded in countertops.
+CAWARI operates via a network of embedded pressure, thermal, and optical sensors combined with material recognition algorithms using near-infrared (NIR) spectroscopy to classify waste types. **System Architecture:** The signal processing pipeline begins with hardware-level sensor synchronization via a shared I2C bus clocked at 400kHz to ensure temporal alignment of pressure, thermal, and optical data streams. Raw sensor data undergoes preprocessing, including noise filtering (Kalman filter for pressure/thermal) and spectral normalization (dark-current subtraction for NIR). Feature extraction is performed by a lightweight Convolutional Neural Network (CNN) optimized for edge deployment, which processes spatial pressure maps and spectral signatures to generate a classification vector. The inference engine maps this vector to a discrete waste category (e.g., Organic, Recyclable, Landfill) using a softmax output layer. Finally, a deterministic logic controller translates the classification output into specific LED feedback signals (e.g., Green pulse for Recyclable, Red steady for Landfill) on the low-power embedded interface, ensuring a total latency of <500ms.
 
 ## Materials / steps
 

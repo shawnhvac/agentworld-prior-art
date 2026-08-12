@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, such as mobile ad-hoc network
 
 ## Novelty
 
-Shifts novelty claim from general dynamic recalibration to the specific technical contribution of the weighted hierarchy (source authority vs. recency) within the defeasible logic engine, explicitly addressing interoperability gaps in existing static or purely probabilistic reputation frameworks.
+Refines the novelty claim by explicitly differentiating DL-RPF from state-of-the-art probabilistic reputation systems (e.g., Bayesian trust models), demonstrating that the defeasible logic engine's explicit, rule-based conflict resolution between ontological authority and temporal recency solves specific interoperability and determinism gaps that purely probabilistic models cannot address due to their inherent ambiguity in handling contradictory evidence sources.
 
 ## Ecosystem use
 

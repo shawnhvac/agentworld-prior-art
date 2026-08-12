@@ -30,6 +30,8 @@ NFDA employs real-time EEG and facial expression analysis to capture affective s
 
 EEG headset for real-time affective state detection; Camera for facial expression analysis; Speech-to-text API for linguistic feature extraction; Sentiment analysis module for emotional tone detection; Lightweight neural network model trained on negotiation data; Reinforcement learning framework optimized for trust and clarity; Integration of all components into a real-time feedback loop; Experimental Protocol: Conduct a double-blind A/B trial with 50 dyads engaged in standardized negotiation scenarios. Success is defined as achieving a >15% increase in the Interpersonal Trust Scale (ITS) score and a quantifiable Agreement Efficiency Score, measured against established benchmarks, with <200ms end-to-end latency in 80% of negotiation turns.
 
+System Architecture: The system is organized into three sequential processing stages to ensure deterministic latency. Stage 1 (Acquisition & Preprocessing): Parallel streams capture raw EEG and video. EEG undergoes immediate ICA-based artifact removal (eye-blink/muscle noise) on the edge device. Video streams are processed by a lightweight CNN for facial action unit detection. Stage 2 (Temporal Alignment & Fusion): A sliding window buffer (200ms) synchronizes the cleaned physiological signals with speech tokens from the STT module. This aligned tensor is fed into the multi-head attention encoder. Stage 3 (Policy & Output): The encoded features drive the PPO agent, which computes the reward R(t) and updates the language policy. The output module generates the adapted linguistic response. The critical path is constrained by hardware acceleration, ensuring <150ms for signal processing and <50ms for inference, totaling <200ms end-to-end.
+
 ## Who it's for
 
 AI agents engaged in high-stakes, human-AI or AI-AI negotiations, such as in consumer banking, legal mediation, or business dealmaking.
@@ -46,17 +48,18 @@ NFDA could be integrated into an AI-agent platform as an API module for dynamic 
 
 ```mermaid
 graph TD
-    A[Raw EEG Signal] --> B[ICA Artifact Removal]
-    C[Facial Video Stream] --> D[Expression Analysis]
-    E[Audio Stream] --> F[Speech-to-Text & Sentiment]
-    B --> G[Sliding Window Alignment 200ms]
-    D --> G
-    F --> G
-    G --> H[Multi-Head Attention Network]
-    H --> I[RL Agent PPO]
-    I --> J[Lexical/Tone/Syntax Adjustment]
-    J --> K[Output Response]
-    K --> L[Feedback Loop to Trust/Clarity Metrics]
+    A[Raw EEG & Video] --> B[ICA Artifact Removal & Facial CNN]
+    C[Speech Audio] --> D[Speech-to-Text API]
+    B --> E[200ms Sliding Window Buffer]
+    D --> E
+    E --> F[Multi-Head Attention Encoder]
+    F --> G[PPO RL Agent]
+    G --> H[Reward Calculation: Trust/Clarity]
+    G --> I[Lexical/Tone Adjustment]
+    I --> J[Adapted Negotiation Output]
+    style B fill:#f9f,stroke:#333,stroke-width:2px
+    style E fill:#bbf,stroke:#333,stroke-width:2px
+    style G fill:#bfb,stroke:#333,stroke-width:2px
 ```
 
 ## Sources / grounding

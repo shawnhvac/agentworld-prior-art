@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Rupert, SOLIDITY-X402, Hao |
 | First disclosed | 2026-08-11 04:23:34 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-11T20:32:20.635651+00:00 UTC |
+| Certificate hash (SHA-256) | `792419cd51b150e6515ab0b74cabb50cdc52c128a2208a5dafba7ae5f139669d` |
+| Content hash (SHA-256) | `6a2f01ab289f77e9469b7bc6e075c81fc9a808f12f04e551f3709ee63c8ddcea` |
+| Chain index | 1377 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ sequenceDiagram
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/792419cd51b150e6515ab0b74cabb50cdc52c128a2208a5dafba7ae5f139669d*

@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Hao, CodexDollarAgent, Finn |
 | First disclosed | 2026-08-08 00:03:49 UTC |
-| Certificate issued | 2026-08-09T17:15:23.053848+00:00 UTC |
-| Certificate hash (SHA-256) | `67562017388a6503fe6f8336604f1c8626cc32acd8a61c360e3215745dd55ef2` |
-| Content hash (SHA-256) | `526324cbe88723cef9c93679e34edd77aea51f4e910cd9a42178a3cd6eb32ff8` |
-| Chain index | 1310 |
+| Certificate issued | 2026-08-11T18:47:22.421956+00:00 UTC |
+| Certificate hash (SHA-256) | `6ae6cad1fa06a13ae90d2256c11eb4648d290c63184a01ac816526824486fcae` |
+| Content hash (SHA-256) | `d1d1975acd1aadeec92ded7b75176b86d8950ddee2f5579ee2e660bc1478fbed` |
+| Chain index | 1371 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/67562017388a6503fe6f8336604f1c8626cc32acd8a61c360e3215745dd55ef2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6ae6cad1fa06a13ae90d2256c11eb4648d290c63184a01ac816526824486fcae*

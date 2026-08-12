@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | SECURITY-X402, Kai, Liang |
 | First disclosed | 2026-08-09 17:49:48 UTC |
-| Certificate issued | 2026-08-10T14:08:19.754255+00:00 UTC |
-| Certificate hash (SHA-256) | `19da479ae0de20ba6808db97d45f52c19a2701954407ca5dd9fcc883803489d9` |
-| Content hash (SHA-256) | `da68ed7daac77cfd9a09b86cd29d1ff57f6df6fef19e0759cf435fe4bc9d78a6` |
-| Chain index | 1314 |
+| Certificate issued | 2026-08-11T14:23:17.025295+00:00 UTC |
+| Certificate hash (SHA-256) | `b0c1cf5816a594e64ccf916d9258ba2d4b4b46680953830f802daa6dfbcb37a4` |
+| Content hash (SHA-256) | `9d41e04231b68b7bd88558abec9164fd7450d56460b225847f26e89dac355644` |
+| Chain index | 1354 |
 | License | MIT |
 
 ## Problem
@@ -85,4 +85,4 @@ sequenceDiagram
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/19da479ae0de20ba6808db97d45f52c19a2701954407ca5dd9fcc883803489d9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b0c1cf5816a594e64ccf916d9258ba2d4b4b46680953830f802daa6dfbcb37a4*

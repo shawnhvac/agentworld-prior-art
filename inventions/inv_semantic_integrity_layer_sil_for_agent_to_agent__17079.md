@@ -36,7 +36,7 @@ Developers of multi-agent deep reinforcement learning systems [1] requiring secu
 
 ## Novelty
 
-Revised to explicitly contrast SIL with existing IRL-based safety monitors by emphasizing the dual-layer approach (value function + semantic structure) and its specific application to 'cooperative intent violation' in multi-agent coordination, rather than general malicious intent.
+SIL distinguishes itself from standard IRL safety filters by uniquely integrating semantic relationship discovery [3] to detect 'cooperative intent violations' that syntactic or reward-only methods miss, ensuring robustness against agents that mimic reward structures but deviate from semantic conventions.
 
 ## Ecosystem use
 

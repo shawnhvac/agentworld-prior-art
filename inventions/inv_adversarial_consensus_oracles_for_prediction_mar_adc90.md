@@ -36,7 +36,7 @@ Prediction market platforms seeking to mitigate the 'AI Lemons' problem [5] and 
 
 ## Novelty
 
-The invention distinguishes itself from standard ensemble methods, which aggregate predictions without cryptographic verification of uncertainty, and from existing oracle systems (e.g., UMA, Augur) that rely on decentralized governance or reputation-based dispute resolution. The unique technical contribution is the use of ZK-SNARKs to cryptographically verify the 'confidence delta'—the variance reduction achieved by adversarial LLM ensembles—as a quantifiable financial parameter. This enables automated, trustless price adjustments and immediate liquidity pricing without subjective voting or delayed dispute resolution when uncertainty remains within predefined bounds.
+The invention distinguishes itself from existing oracle systems (e.g., UMA, Augur) by replacing subjective, delayed governance voting with immediate, trustless ZK-SNARK verification of uncertainty bounds. This technical distinction eliminates the need for human intervention in low-dispute scenarios, enabling automated price adjustments based on cryptographically verified variance reduction rather than reputation-based consensus.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Autonomous AI agents and systems requiring secure, adaptive escrow mechanisms fo
 
 ## Novelty
 
-Rewrote the Novelty section to focus on the specific architectural synergy of hardware-enforced latency and immutable logging for real-time escrow, rather than just listing features. Removed the generic comparison table and replaced it with a technical analysis of why P1 and P2 cannot achieve sub-10ms adaptive trust recalibration during active asset delegation.
+Rewrote the Novelty section to include a specific technical comparison demonstrating why current state-of-the-art solutions fail to meet the <10ms latency requirement, thereby highlighting DTEF's unique hardware-software synergy.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ AI agents and compute-bartering platforms seeking to align resource allocation w
 
 ## Novelty
 
-The SCVO's core novelty is distinguished from prior art treating ethics and infrastructure as independent layers by establishing a unique causal link where interconnect saturation (τ(t)) directly modulates ethical weight allocation (w_i(t)). This dynamic coupling ensures that ethical compliance is not merely a static overlay but is physically constrained by real-time hardware bottlenecks, preventing resource exhaustion by deprioritizing non-critical ethical weights as system saturation increases, thereby enforcing a hard constraint on the weakest interconnect [6].
+The SCVO's novelty is distinguished from prior art in ethical compute allocation by implementing the first closed-loop control system where real-time interconnect saturation (τ(t)) directly modulates governance weights (w_i(t)) to prevent infrastructure collapse, rather than treating ethics as a static or independent overlay.
 
 ## Ecosystem use
 

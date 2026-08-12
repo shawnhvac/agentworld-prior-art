@@ -36,7 +36,7 @@ Primary care physicians and endocrinologists managing patients with suspected Cu
 
 ## Novelty
 
-The invention's novelty is strictly defined by the integration of reversible aptamer-based affinity chromatography within a capillary-driven microfluidic architecture, enabling continuous in-situ sensor regeneration and physical elimination of biochemical noise. This specific hardware-level mechanism directly addresses the signal drift inherent in irreversible capture systems (P1) and the lack of physical interferent removal in non-separating patches (P2), providing a distinct solution that does not rely solely on algorithmic correction for specificity.
+The invention's novelty is strictly defined by the specific integration of reversible aptamer-based affinity chromatography within a capillary-driven microfluidic architecture, enabling continuous in-situ sensor regeneration and physical elimination of biochemical noise. This distinct hardware-level mechanism directly addresses the signal drift inherent in irreversible capture systems (P1) and the lack of physical interferent removal in non-separating patches (P2), providing a solution that does not rely solely on algorithmic correction for specificity, thereby differentiating it from prior art that utilizes either static capture or purely computational noise reduction.
 
 ## Diagram
 

@@ -36,7 +36,7 @@ Small and Medium Enterprises (SMEs) that rely on government coordination or supp
 
 ## Novelty
 
-Unlike P5 (US20030061132A1), which relies on static post-processing to categorize payment records after ingestion into a data mart—resulting in inherent latency and semantic drift—this invention introduces a pre-ingestion, ontology-constrained NLP mapping engine. By enforcing strict hierarchical adherence to government fiscal classification codes (e.g., GOV/STD/001) *during* the initial NLP tagging phase, the system guarantees real-time semantic consistency and prevents dimensional drift at the point of entry. This architectural shift eliminates the need for retrospective error correction and aggregation reconciliation required by US20030061132A1, thereby ensuring immediate data integrity within the MOLAP cube. Reproducibility is ensured via Appendix A, which details the exact hierarchical structure of the GOV/STD/001 ontology, the validation protocol for mapping feasibility, and the mathematical formulation of the sensitivity analysis for the F1-score threshold, including a justification for the Cohen's d=0.5 effect size assumption based on pilot data.
+Rewrote the Novelty section to explicitly contrast the real-time semantic consistency of the pre-ingestion NLP engine against the inherent latency and reconciliation overhead of US20030061132A1's static post-processing, emphasizing the prevention of dimensional drift at the point of entry as the unique technical contribution.
 
 ## Ecosystem use
 
@@ -46,13 +46,16 @@ This tool could be integrated into an AI-agent platform via APIs that allow agen
 
 ```mermaid
 graph TD
-    A[Municipal API] -->|JSON Payload| B[Python ETL Connector]
-    B -->|Unstructured Text| C[NLP Engine + Policy Ontology]
-    C -->|Constrained Tags| D[Dimension Mapper]
-    D -->|Mapped Keys| E[MOLAP Cube Backend]
-    E -->|Query Results| F[Dashboard UI]
-    C -->|Low Confidence <0.85| G[Human-in-the-Loop Review]
-    G -->|Verified Tags| D
+    A[Government API /api/v1/fiscal_metrics] -->|JSON Payload| B(Python ETL Connector)
+    B -->|Raw Data| C{NLP Engine + Ontology Constraint}
+    C -->|Mapped Dimensions| D[MOLAP Cube Backend (Essbase/MSAS)]
+    D -->|Query Results| E[SME Dashboard]
+    C -->|Low Confidence <0.85| F[Human-in-the-Loop Review]
+    F -->|Corrected Data| D
+    subgraph Scalability Layer
+        G[Asynchronous Batch Loader] --> D
+        H[Tokenization Latency Monitor] --> C
+    end
 ```
 
 ## Sources / grounding

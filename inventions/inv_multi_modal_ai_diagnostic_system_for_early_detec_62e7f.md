@@ -36,7 +36,7 @@ Clinicians, particularly endocrinologists and diagnostic pathologists, who need 
 
 ## Novelty
 
-This system integrates longitudinal data analysis with biochemical assays and AI, building on advances in AI for diagnostic pathology [1] and machine learning in precision medicine [2], while addressing known diagnostic pitfalls [5]. Unlike prior art [P1] which focuses on pharmacological agents to inhibit cortisol production, this invention provides a computational diagnostic methodology leveraging temporal AI modeling for early detection, rather than treatment.
+This system distinguishes itself from existing static or single-modality AI diagnostics by employing a specific cross-attention mechanism that dynamically weights longitudinal temporal hormonal trends against baseline static biochemical features, enabling earlier detection of subtle imbalances indicative of Cushing’s syndrome that prior methods overlook, building on advances in AI for diagnostic pathology [1] and machine learning in precision medicine [2], while addressing known diagnostic pitfalls [5].
 
 ## Ecosystem use
 

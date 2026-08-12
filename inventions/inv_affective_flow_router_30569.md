@@ -36,7 +36,7 @@ Transit users with high anxiety or fear of crowds, particularly those whose trav
 
 ## Novelty
 
-The invention is novel relative to prior art [P1-P3], which pertain exclusively to network packet flow admission control and duplication in telecommunications hardware. This invention applies 'flow' concepts to human transit routing by integrating persona-based embedding learning [3] with real-time crowd-modeling [2] to compute a normalized affective cost, solving the problem of psychological stress in navigation—a domain entirely distinct from the data packet optimization addressed in [P1-P3].
+The invention is novel relative to prior art [P1-P3] and existing human-centric routing studies that consider user comfort or anxiety (e.g., static preference filters or heuristic-based comfort scores). Unlike these approaches, which typically treat user preferences as static inputs or rely on coarse-grained comfort heuristics, this invention uniquely integrates dynamic persona-based embedding learning [3] with real-time crowd-modeling data [2] via the specific AffectiveCost formula. This creates a distinct innovation by computing a normalized, real-time affective cost that dynamically adjusts to both the user's evolving psychological state and instantaneous environmental density, solving the problem of psychological stress in navigation with a granularity and adaptability absent in prior comfort-based routing systems.
 
 ## Ecosystem use
 

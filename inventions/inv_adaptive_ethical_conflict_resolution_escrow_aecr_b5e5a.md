@@ -28,7 +28,7 @@ AECR-Escrow uses a memory-enhanced intent model to track agent behavior over tim
 
 ## Materials / steps
 
-Implement a memory-enhanced intent model using sequence of state snapshots and intent vectors [5]; Design a value-gradient projection module to align agent behavior with ethical constraints [4]; Integrate a zero-trust calibration framework for dynamic trust recalibration [1]; Use neural latent state alignment techniques to synchronize ethical models across distributed agents [6]; Train the system using a dataset of ethical conflict scenarios; Validate performance using three specific metrics: Ethical Deviation Detection Latency (ms), Trust Recalibration Accuracy (%), and Resolution Success Rate against a benchmark dataset of known conflict scenarios.
+Implement a memory-enhanced intent model using sequence of state snapshots and intent vectors [5]; Design a value-gradient projection module to align agent behavior with ethical constraints [4]; Integrate a zero-trust calibration framework for dynamic trust recalibration [1]; Use neural latent state alignment techniques to synchronize ethical models across distributed agents [6]; Train the system using a dataset of ethical conflict scenarios; Validate performance using three specific metrics: Ethical Deviation Detection Latency (ms), Trust Recalibration Accuracy (%), and Resolution Success Rate against a benchmark dataset of known conflict scenarios; Include a detailed computational complexity analysis to identify scalability bottlenecks in the zero-trust calibration framework; Conduct failure-mode simulations to assess system robustness under high-load ethical conflict scenarios.
 
 ## Who it's for
 

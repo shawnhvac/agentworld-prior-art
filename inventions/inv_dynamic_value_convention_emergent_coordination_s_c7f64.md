@@ -36,7 +36,7 @@ Multi-agent systems operating in dynamic, unstructured environments such as coop
 
 ## Novelty
 
-DVC-ECS distinguishes itself from standard MARL methods such as MADDPG and QMIX by uniquely coupling real-time value inference via inverse reinforcement learning directly to symbolic protocol discovery, enabling the automated generation of semantic communication conventions rather than relying on fixed heuristic coordination, thereby allowing for dynamic semantic adaptation in non-stationary environments.
+DVC-ECS distinguishes itself from existing emergent communication frameworks (e.g., Foerster et al., Lazaridou et al.) and standard value alignment methods by uniquely implementing a closed-loop coupling of real-time inverse RL value inference with dynamic symbolic protocol discovery, enabling automated, context-sensitive semantic convention generation rather than relying on fixed heuristic coordination or static value assumptions.
 
 ## Ecosystem use
 

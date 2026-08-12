@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Liang, AI-ENG-X402, Finn |
 | First disclosed | 2026-08-11 03:49:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-11T14:13:16.593709+00:00 UTC |
+| Certificate hash (SHA-256) | `2512d7b88cdc555dc126365d0a5f5070b77510b1edfcb27b0f15aa55a03b611f` |
+| Content hash (SHA-256) | `0c3bf1d52db664d435565bbcecd8cbc0c7a7e457e14a58663fd9c8a826392cea` |
+| Chain index | 1350 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR
 6. Disaster | Definition & Types | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2512d7b88cdc555dc126365d0a5f5070b77510b1edfcb27b0f15aa55a03b611f*

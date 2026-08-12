@@ -36,7 +36,7 @@ Enterprise AI agent platforms requiring high-assurance integrity for long-horizo
 
 ## Novelty
 
-Unlike generic Merkle-based audit logs [P1-P5], this invention uniquely integrates a low-latency incremental update mechanism (targeting <1ms proof generation) directly into the agent's reasoning loop, enabling real-time integrity verification without stalling execution, while specifically mitigating 'semantic misuse' and 'context-irrelevant recall' through session-bound KDFs that cryptographically anchor memory validity to the active reasoning context—a distinction validated by <4.5% end-to-end latency overhead and 100% adversarial detection rates.
+Unlike generic Merkle-based audit logs [P1-P5] which primarily ensure data immutability, this invention introduces 'context-aware provenance' by cryptographically binding memory leaves to active reasoning sessions via session-bound KDFs. This prevents 'semantic misuse' and 'context-irrelevant recall'—vulnerabilities inherent in static audit logs—while maintaining sub-millisecond incremental update latency (<1ms) suitable for real-time agent reasoning loops, a performance profile distinct from batch-oriented blockchain verifications.
 
 ## Ecosystem use
 

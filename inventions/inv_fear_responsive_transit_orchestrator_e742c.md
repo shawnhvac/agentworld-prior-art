@@ -36,7 +36,7 @@ Urban transit authorities, emergency management agencies, and operators of auton
 
 ## Novelty
 
-Refined novelty claim to explicitly contrast the dynamic 'soft barrier' cost-function topology with prior art that utilizes emotion solely for static demand prediction, thereby establishing a clear technical distinction in closed-loop control mechanisms.
+The system's novelty lies in its closed-loop trajectory control mechanism, which updates navigation graph edge weights every 200ms based on real-time Fear Index dynamics. This contrasts sharply with prior art that utilizes emotion data solely for static demand prediction or pre-trip routing, establishing a technical distinction in handling transient panic-induced bottlenecks through dynamic 'soft barrier' cost-function topology rather than static demand modeling.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Environmental cleanup companies [6], regulatory bodies like the South Carolina D
 
 ## Novelty
 
-The core novelty is the 'Variance-Adaptive Sampling Function' (VASF), which mathematically defines the optimal ICP-MS sampling frequency ($f_{sample}$) as an inverse exponential function of the real-time coefficient of variation ($CV$) of plant impedance data ($f_{sample} \propto e^{-\alpha \cdot CV}$). This contrasts with prior art [P5] (US9286612B2), which employs static, time-based sampling intervals regardless of physiological signal stability. By dynamically coupling the statistical variance of the proxy metric directly to empirical validation logistics, the system minimizes unnecessary laboratory costs while maintaining a 99% confidence level, providing a non-obvious, algorithmically driven solution for resource-efficient regulatory compliance that transcends standard oracle fallback mechanisms.
+The core novelty is the 'Bio-Oracle Gas-Optimization Protocol', which utilizes the Variance-Adaptive Sampling Function (VASF) to dynamically dictate on-chain transaction batching intervals and oracle node consensus weights. By linking physiological data stability (via the real-time coefficient of variation of plant impedance) directly to blockchain resource allocation, the system minimizes gas costs during stable periods and prioritizes high-weight consensus during high-variance stress events, creating a non-obvious, algorithmically driven solution for resource-efficient regulatory compliance that transcends standard oracle fallback mechanisms.
 
 ## Ecosystem use
 

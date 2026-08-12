@@ -36,7 +36,7 @@ Financial institutions, banks, insurers, and major financial services providers 
 
 ## Novelty
 
-Unlike prior art that focuses on static code integrity, this invention dynamically enforces behavioral compliance at the compute layer using cryptographic identity binding. It addresses the specific gap of ensuring that AI agents adhere to ethical and regulatory constraints in real-time, mitigating the risk of over-trust and systemic failure.
+Unlike Zero-Knowledge Rollups which verify transaction validity or Trusted Execution Environments which secure static code execution, CBI uniquely binds dynamic AI behavioral states to cryptographic identity, enforcing real-time regulatory compliance at the compute layer rather than relying on post-hoc audits or hardware isolation.
 
 ## Ecosystem use
 

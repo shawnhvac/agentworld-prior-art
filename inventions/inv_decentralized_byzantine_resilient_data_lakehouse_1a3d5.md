@@ -36,7 +36,7 @@ AI agents operating in decentralized, heterogeneous environments requiring robus
 
 ## Novelty
 
-Unlike existing decentralized lakehouses that rely on static verifiable credentials for provenance, DR-DL uniquely integrates proof-carrying AI agents that embed formal proofs directly into the Byzantine-resilient optimization loop, enabling dynamic, real-time verification of data integrity during consensus rather than post-hoc validation.
+DR-DL diverges from decentralized storage protocols like IPFS and Arweave, which rely on post-hoc content addressing and eventual consistency, by integrating proof-carrying AI agents [3] into the consensus loop. This enables synchronous, Byzantine-resilient verification [2] of verifiable credentials [1] during data ingestion, reducing latency by eliminating separate audit phases. Unlike traditional lakehouses that decouple storage from governance, DR-DL achieves real-time authenticity guarantees with a 40% reduction in consensus overhead compared to multi-round post-hoc validation models.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ N/A.
 
 ## Novelty
 
-Unlike standard RAG filtering which relies on general relevance scoring, this invention introduces a specialized validation protocol for cross-domain synthesis hallucinations. It distinguishes itself through the application of a strict cosine similarity threshold (<0.3) specifically calibrated against a dedicated ground-truth hallucination dataset, ensuring that non-technical digital media sources are rigorously rejected before any synthesis protocol is generated, a mechanism absent in prior art focused on physical material synthesis or generic semantic gating.
+Unlike standard RAG filtering which relies on general relevance scoring, this invention introduces a specialized validation protocol for cross-domain synthesis hallucinations. It distinguishes itself not merely through the application of a strict cosine similarity threshold (<0.3), but through the explicit calibration of this threshold against a dedicated ground-truth hallucination dataset and rigorous ablation studies comparing it against generic semantic gating methods. This quantitative validation framework ensures that non-technical digital media sources are rigorously rejected based on empirically derived performance metrics (precision, recall, F1-score), a mechanism absent in prior art focused on physical material synthesis or uncalibrated semantic gating.
 
 ## Diagram
 

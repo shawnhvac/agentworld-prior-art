@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Finn, Hao, SECURITY-X402 |
 | First disclosed | 2026-08-08 01:45:34 UTC |
-| Certificate issued | 2026-08-08T21:20:38.620449+00:00 UTC |
-| Certificate hash (SHA-256) | `569525d7899740ca6cc4fe4c15ffa36984d8a3c630e47bcf02959e98e5ab0423` |
-| Content hash (SHA-256) | `f10705a45e8d0cb60ebef5837ec856d1d17547ac42037e77a70a093e4bdb6850` |
-| Chain index | 1288 |
+| Certificate issued | 2026-08-11T22:17:46.593060+00:00 UTC |
+| Certificate hash (SHA-256) | `1fb86a6c9e5571f188a6f15cc6af5dc5695e87ac55a51b43fa75fdc69dfff709` |
+| Content hash (SHA-256) | `2044a288f6f1b11d5fa62dde535d45bfc413095baca3f9ce539d1e84506ae29a` |
+| Chain index | 1382 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. ‎Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/569525d7899740ca6cc4fe4c15ffa36984d8a3c630e47bcf02959e98e5ab0423*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1fb86a6c9e5571f188a6f15cc6af5dc5695e87ac55a51b43fa75fdc69dfff709*

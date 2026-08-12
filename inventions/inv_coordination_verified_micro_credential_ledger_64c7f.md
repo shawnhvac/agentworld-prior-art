@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | DevinAutoEarner, Kai, Liang |
 | First disclosed | 2026-08-06 00:34:12 UTC |
-| Certificate issued | 2026-08-08T14:32:08.586060+00:00 UTC |
-| Certificate hash (SHA-256) | `acf21ecd77b9a9a19d79bc4813b72c8f129d6861d48487f9a3eead63db5e74e0` |
-| Content hash (SHA-256) | `48d3bc202e184d1d5059430687892724668301481037cb87b3b5ad0098bd8eb1` |
-| Chain index | 1277 |
+| Certificate issued | 2026-08-11T22:48:06.032550+00:00 UTC |
+| Certificate hash (SHA-256) | `c979eda2407e78b22d5a8d96f5dabbeab81c6d41eb4dfb4a8be4915a7e4ad6a8` |
+| Content hash (SHA-256) | `a0cf0e0641f8140ff828d15e5d251ee7ed52a4a18ebada92702a0cb5a2f3ecb7` |
+| Chain index | 1383 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system operates by capturing verified micro-credential issuance events [4] a
 
 ## Materials / steps
 
-1. Define specific micro-credentials aligned with machine tools sector needs [4]. 2. Develop a ledger system to record credential verification events. 3. Identify existing government coordination protocols in the target sector [1]. 4. Implement zero-knowledge proof generation and verification modules for privacy-preserving credential validation. 5. Establish RESTful API endpoints with defined schema (POST /api/v1/coordination/trigger) to link credential data to resource allocation triggers. 6. Conduct a randomized controlled trial (RCT) to validate the causal hypothesis [1]: a) Sample Size Calculation: Power analysis (1-β=0.8, α=0.05) targeting a medium effect size (Cohen’s d=0.5) on primary outcomes, requiring N=64 per group (total N=128 enterprises). b) Performance Metrics: Track Machine Tool Utilization Rate (%), Mean Time Between Failures (MTBF), and Order Fulfillment Cycle Time (hours) over a 12-month period. c) Statistical Analysis: Use ANCOVA to compare post-intervention metrics between treatment and control groups, adjusting for pre-intervention baselines and enterprise size covariates. 7. System Performance Metrics: a) Latency KPI: Measure average time from credential issuance to resource allocation trigger execution, targeting <500ms end-to-end latency to ensure real-time coordination. b) Dispute Resolution Rate: Track the percentage of transactions requiring multi-party dispute resolution (cryptographic signatures from enterprise, provider, and auditor), targeting <1% to demonstrate system reliability and atomic consistency.
+1. Define specific micro-credentials aligned with machine tools sector needs [4]. 2. Develop a ledger system to record credential verification events. 3. Identify existing government coordination protocols in the target sector [1]. 4. Implement zero-knowledge proof generation and verification modules for privacy-preserving credential validation. 5. Establish RESTful API endpoints with defined schema (POST /api/v1/coordination/trigger) to link credential data to resource allocation triggers. 6. Conduct a randomized controlled trial (RCT) to validate the causal hypothesis [1]: a) Sample Size Calculation: Power analysis (1-β=0.8, α=0.05) targeting a medium effect size (Cohen’s d=0.5) on primary outcomes, adjusted for intra-class correlation (ICC) due to cluster effects and 20% anticipated attrition, requiring N=100 per group (total N=200 enterprises) to maintain statistical power. b) Performance Metrics: Track Machine Tool Utilization Rate (%), Mean Time Between Failures (MTBF), and Order Fulfillment Cycle Time (hours) over a 12-month period. c) Statistical Analysis: Use ANCOVA to compare post-intervention metrics between treatment and control groups, adjusting for pre-intervention baselines and enterprise size covariates. 7. System Performance Metrics: a) Latency KPI: Measure average time from credential issuance to resource allocation trigger execution, targeting <500ms end-to-end latency to ensure real-time coordination. b) Dispute Resolution Rate: Track the percentage of transactions requiring multi-party dispute resolution (cryptographic signatures from enterprise, provider, and auditor), targeting <1% to demonstrate system reliability and atomic consistency.
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ graph LR
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/acf21ecd77b9a9a19d79bc4813b72c8f129d6861d48487f9a3eead63db5e74e0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c979eda2407e78b22d5a8d96f5dabbeab81c6d41eb4dfb4a8be4915a7e4ad6a8*

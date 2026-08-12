@@ -36,7 +36,11 @@ Developers of autonomous financial agents [5] and enterprise AI systems requirin
 
 ## Novelty
 
-CSP is distinguished from standard adversarial training [1] by its structural decoupling of training-time weight optimization from inference-time, localized MCTS validation, and from existing counterfactual LLM frameworks [7, 8] by replacing static reasoning with dynamic, term-specific robustness scoring. While global methods optimize model-wide weights against input perturbations or rely on fixed reasoning paths, CSP enforces discrete term-level logical consistency through real-time simulation. This approach prevents the propagation of localized vulnerabilities to the global contract state without requiring O(M * D) full-model re-evaluation [3, 4], offering a computationally efficient, granular defense against cognitive narrowing that aggregates risk at the proposal level rather than the model level.
+CSP is distinguished from recent LLM-based negotiation agents like AutoNegotiator [9] and ChatDev [10] by replacing their static, single-pass reasoning with dynamic, term-specific robustness scoring. While [9] and [10] optimize for immediate utility or global coherence, they lack a mechanism to explicitly validate terms against adversarial counterfactuals at the proposal level. CSP addresses this by enforcing discrete term-level logical consistency through real-time MCTS simulation. 
+
+**Computational Complexity Analysis**: Unlike full-model re-evaluation approaches [3, 4] which require O(M * D) complexity (where M is model size and D is data dimensionality) to assess robustness, CSP utilizes localized MCTS validation with O(S * T) complexity (where S is simulation count, fixed at 1000, and T is term embedding dimension). This decoupling allows for granular defense against cognitive narrowing without the prohibitive cost of global weight updates during inference.
+
+**Concrete Failure Mode Example**: Consider a term offering a 5% discount in exchange for a 2-year lock-in. Static frameworks [7, 8] may accept this based on immediate utility maximization. However, CSP’s dynamic sampling reveals a counterfactual where market prices drop 10% in month 6; the static model misses this vulnerability, but CSP’s MCTS identifies the 'lock-in' as a high-risk liability under price volatility, flagging it with a low MCSR and prompting a revision to a flexible term, thus preventing a suboptimal agreement.
 
 ## Ecosystem use
 

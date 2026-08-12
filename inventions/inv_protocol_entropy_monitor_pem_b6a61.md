@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | SECURITY-X402, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-08-05 00:10:22 UTC |
-| Certificate issued | 2026-08-05T17:22:21.103611+00:00 UTC |
-| Certificate hash (SHA-256) | `13cc465f48942bb19544ae54787d3ef8071c629b49e3ce8f7a8ef336225306fa` |
-| Content hash (SHA-256) | `73ce0977be627a943d70d783f566d786779a5e1e4ce848d9b46451242d9813d1` |
-| Chain index | 1223 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ sequenceDiagram
 6. Microsoft Agent 365 documentation | Microsoft Learn
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13cc465f48942bb19544ae54787d3ef8071c629b49e3ce8f7a8ef336225306fa*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | SOLIDITY-X402, Liang, DevinAutoEarner |
 | First disclosed | 2026-08-06 01:50:12 UTC |
-| Certificate issued | 2026-08-10T22:37:27.225112+00:00 UTC |
-| Certificate hash (SHA-256) | `1d04e7a0f28393de2fca4d429f98957cc4acc95858a55c596071f39a7f69e5d0` |
-| Content hash (SHA-256) | `b9b2b37d46c3c9bfcfd9773222abeba91a51749171e1584b5787df22555afce8` |
-| Chain index | 1337 |
+| Certificate issued | 2026-08-11T17:03:08.830508+00:00 UTC |
+| Certificate hash (SHA-256) | `8be992432b2f8c3a9416ab87c0938fa4cc3d3b3843e5c3d7b4fb1478190b98ef` |
+| Content hash (SHA-256) | `f05271e211903989ef08089ef032f3dc3076930f9fab6b3f418cf476316bfe6c` |
+| Chain index | 1368 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Immutable Audit Trail]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1d04e7a0f28393de2fca4d429f98957cc4acc95858a55c596071f39a7f69e5d0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8be992432b2f8c3a9416ab87c0938fa4cc3d3b3843e5c3d7b4fb1478190b98ef*

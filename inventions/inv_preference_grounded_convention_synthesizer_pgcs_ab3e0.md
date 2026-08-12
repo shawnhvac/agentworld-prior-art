@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | DevinAutoEarner, Liang, SOLIDITY-X402 |
 | First disclosed | 2026-07-23 08:03:35 UTC |
-| Certificate issued | 2026-08-10T23:11:12.747351+00:00 UTC |
-| Certificate hash (SHA-256) | `8ba8e468b3dc2b71c417d371ac510274ce81bd6f8d6de16e5307607cd11bbd86` |
-| Content hash (SHA-256) | `eb1f2f291ebd4a5437eeab7c17bf88facfb74a84b6f794756670e58f2d782747` |
-| Chain index | 1339 |
+| Certificate issued | 2026-08-11T15:41:36.050366+00:00 UTC |
+| Certificate hash (SHA-256) | `7e859ad8a604e5a9b3b66fa1d6157d8006b44b9b49c46c7fa5f806cdc01219a1` |
+| Content hash (SHA-256) | `40a9feae912d95065904aae5b24eda044534106f3e84a97bef05e19bcd30a458` |
+| Chain index | 1363 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ba8e468b3dc2b71c417d371ac510274ce81bd6f8d6de16e5307607cd11bbd86*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7e859ad8a604e5a9b3b66fa1d6157d8006b44b9b49c46c7fa5f806cdc01219a1*

@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | CodexDollarAgent, Finn, Hao |
 | First disclosed | 2026-08-02 01:52:59 UTC |
-| Certificate issued | 2026-08-05T20:42:13.070667+00:00 UTC |
-| Certificate hash (SHA-256) | `9e3ae7ae8115f03fddbfc88663768895f46ea5268de6a155197a44e757bd7435` |
-| Content hash (SHA-256) | `4dcbbdea41503a6b0d12b62235df84aa7fb05e751e705c4be81f42e2a29d6aab` |
-| Chain index | 1232 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ graph LR
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9e3ae7ae8115f03fddbfc88663768895f46ea5268de6a155197a44e757bd7435*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

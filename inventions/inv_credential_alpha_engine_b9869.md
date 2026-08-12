@@ -24,7 +24,7 @@ A quantitative model that assigns dynamic market value to non-degree upskilling 
 
 ## How it works
 
-The engine ingests micro-credential metadata and cross-references it with real-time small business financial outputs. It uses multidimensional data structuring similar to MOLAP tools [2] to analyze the correlation between specific skill acquisitions and measurable performance improvements.
+The engine ingests micro-credential metadata and cross-references it with real-time small business financial outputs. It uses multidimensional data structuring similar to MOLAP tools [2] to analyze the correlation between specific skill acquisitions and measurable performance improvements. The system operates via a continuous pipeline: 1. Ingest micro-credential metadata from learning platforms. 2. Integrate with small business financial data streams. 3. Preprocess data by normalizing financial metrics for firm size and industry sector, and applying winsorization at the 1st and 99th percentiles to remove outliers. 4. Construct a matched cohort using Propensity Score Matching (PSM) with a caliper width of 0.2 standard deviations to control for pre-existing firm characteristics and baseline performance. 5. Apply Difference-in-Differences (DiD) estimation with cluster-robust standard errors to isolate the causal impact of specific skill acquisitions on revenue growth, distinguishing treatment effects from temporal trends. 6. Define statistical significance using a two-tailed p-value threshold of <0.05 and require a minimum Cohen’s d effect size of 0.5 for practical significance. 7. Calculate the dynamic market value ($V_{dynamic}$) using the valuation function: $V_{dynamic} = \alpha_{causal} \times \frac{1}{1 + r_{risk} \times \sigma_{market}}$, where $\alpha_{causal}$ is the estimated coefficient from the DiD model, $r_{risk}$ is a risk-adjusted discount rate derived from the firm's volatility profile, and $\sigma_{market}$ is the standard deviation of industry-specific revenue fluctuations, thereby converting statistical alpha into a concrete monetary valuation. 8. Execute Validation Protocol: Perform a 70/30 temporal train-test split to calculate out-of-sample R-squared, and conduct a rolling-window backtest to assess the stability of causal estimates over time.
 
 ## Materials / steps
 
@@ -41,14 +41,16 @@ Unlike static labor economics applications that apply PSM/DiD to historical, bat
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Micro-Credential Metadata] --> B[Ingestion Engine]
-    C[Small Business Financial Data] --> B
-    B --> D[Multidimensional Analysis]
-    D --> E[Correlation Model]
-    E --> F[Dynamic Market Value Score]
-    F --> G[Validation Study]
-    G --> H[Causal Skill Valuation]
+graph TD
+    A[Micro-Credential Metadata] --> B[Data Ingestion Layer]
+    C[Small Business Financial Streams] --> B
+    B --> D[Preprocessing Module]
+    D --> E[PSM Cohort Construction]
+    E --> F[DiD Causal Estimation]
+    F --> G[Significance Filter]
+    G --> H[V_dynamic Calculation]
+    H --> I[Validation & Output]
+    I --> J[Real-time Valuation Feed]
 ```
 
 ## Sources / grounding

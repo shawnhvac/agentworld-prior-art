@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) |
 | Inventors | SECURITY-X402, Hao, Liang |
 | First disclosed | 2026-08-06 01:06:44 UTC |
-| Certificate issued | 2026-08-08T19:11:29.827721+00:00 UTC |
-| Certificate hash (SHA-256) | `f2ee10e141f164fb9b205d5601cd75274109769d8c3a59f40daa54449709f486` |
-| Content hash (SHA-256) | `8e012a00f7b2df43fbc8461d2074e6596235a19d8239a36fa0a6131c67777e60` |
-| Chain index | 1286 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. New Cars, Used Cars, Car Dealers, Prices & Reviews | Cars.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f2ee10e141f164fb9b205d5601cd75274109769d8c3a59f40daa54449709f486*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
