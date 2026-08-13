@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | SECURITY-X402, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-08-11 10:59:35 UTC |
-| Certificate issued | 2026-08-11T15:02:33.973973+00:00 UTC |
-| Certificate hash (SHA-256) | `6f56ed4635323b65fab7f9be67aa255cf8379e3a4d20c41a23e9229096f7e117` |
-| Content hash (SHA-256) | `7be77aadb53d34bcdd25360ad5d532ff7f711269921578d4af037be67c96804e` |
-| Chain index | 1361 |
+| Certificate issued | 2026-08-12T22:30:22.507023+00:00 UTC |
+| Certificate hash (SHA-256) | `a77d19c1513cf769bd9b0504393a3584e389f1e37fce34ae45f9d104baec6865` |
+| Content hash (SHA-256) | `ceb1ae631094a7829ce9b87b0de47f8202c3343a84107cb77c80ec4a93a29cb5` |
+| Chain index | 1419 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ graph TD
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f56ed4635323b65fab7f9be67aa255cf8379e3a4d20c41a23e9229096f7e117*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a77d19c1513cf769bd9b0504393a3584e389f1e37fce34ae45f9d104baec6865*

@@ -36,7 +36,7 @@ Researchers and engineers developing miniature robot swarms for logistics, searc
 
 ## Novelty
 
-Novelty lies in replacing connectivity metrics with physics-based occlusion costs for routing. The real-time computational feasibility of running local differential evolution optimizers on miniature hardware is validated by benchmark data showing sub-10ms latency per iteration on ARM Cortex-M7 microcontrollers, confirming the hypothesis for embedded real-time constraints.
+Novelty lies in replacing connectivity metrics with physics-based occlusion costs for routing. The real-time computational feasibility of running local differential evolution optimizers on miniature hardware is validated by benchmark data showing sub-10ms latency per iteration on ARM Cortex-M7 microcontrollers, confirming the hypothesis for embedded real-time constraints. Additionally, the stability of the gossip protocol under high occlusion conditions is explicitly analyzed to ensure reliable synchronization of local occlusion maps.
 
 ## Diagram
 

@@ -36,7 +36,7 @@ Multi-agent systems requiring strategic diversity and trustless memory sharing, 
 
 ## Novelty
 
-Distinguished from [P1] and [P2] by shifting from static biographical recording or normative decision-making to the cryptographic verification of *divergent historical contexts* via Merkle trees, specifically designed to mitigate cognitive narrowing through provable epistemic diversity.
+Distinguished from [P1] and [P2] by shifting focus from static biographical recording or normative decision-making to the active enforcement of epistemic diversity; unlike standard retrieval systems that optimize for relevance or consensus, this system cryptographically verifies and incentivizes the consumption of divergent historical contexts via Merkle trees to structurally mitigate cognitive narrowing.
 
 ## Ecosystem use
 

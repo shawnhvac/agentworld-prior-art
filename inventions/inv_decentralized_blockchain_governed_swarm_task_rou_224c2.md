@@ -36,7 +36,7 @@ Swarm robotics systems requiring real-time adaptability in dynamic environments,
 
 ## Novelty
 
-This system uniquely integrates blockchain governance games [4] with occlusion-based transportation [1] and multi-task differential evolution [6] to enable decentralized, secure, and energy-efficient swarm reconfiguration.
+This system uniquely resolves the latency-security trade-off in swarm reconfiguration by architecturally synergizing lightweight PoA consensus with occlusion-based routing [1], enabling secure, decentralized decision-making that outperforms the rigidity of centralized approaches and the vulnerability of purely decentralized models.
 
 ## Ecosystem use
 

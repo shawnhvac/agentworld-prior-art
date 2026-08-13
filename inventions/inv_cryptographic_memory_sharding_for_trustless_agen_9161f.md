@@ -36,7 +36,7 @@ Decentralized AI agent networks, enterprise AI systems requiring verifiable shar
 
 ## Novelty
 
-Distinguishes from general-purpose blockchains (e.g., PBFT, HotStuff) and standard trustless autonomy frameworks [5] by employing 'Memory-Aware Sharding' coupled with 'Lightweight Attestation' specifically optimized for agent state verification. Unlike generic consensus protocols that treat data as opaque blobs, this system integrates cryptographic proof generation directly into the memory retrieval pattern, allowing validators to verify shard integrity locally before attestation. This specialization eliminates the overhead of general-purpose transaction processing and complex view-change logic, enabling sub-10ms verification latency and <5% storage overhead. The novelty lies in the tight coupling of Merkle proof verification with the consensus attestation phase, rather than a reduction in asymptotic message complexity alone.
+Refines the novelty claim to explicitly contrast the protocol's tight integration of Merkle proofs with the consensus attestation phase against standard PBFT/HotStuff, emphasizing the elimination of view-change logic overhead for agent-specific memory verification rather than claiming novelty in sharding alone.
 
 ## Ecosystem use
 

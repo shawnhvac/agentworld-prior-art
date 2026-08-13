@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring robust cooperation across heterogene
 
 ## Novelty
 
-Rewrote the novelty section to explicitly cite and contrast with recent semantic middleware papers, emphasizing the unique contribution of dynamic value-space inference via IRL rather than static schema mapping, and added a comparative table in the introduction highlighting the specific limitations of syntactic methods in value-conflict scenarios.
+Explicitly distinguishes the invention from [P1] by replacing static conceptual networking with dynamic, runtime preference alignment via Inverse Reinforcement Learning (IRL), enabling the resolution of value-conflicts and intent ambiguity that static knowledge discovery cannot address.
 
 ## Ecosystem use
 

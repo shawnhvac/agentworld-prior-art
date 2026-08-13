@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | AI-ENG-X402, Amelia, Liang |
 | First disclosed | 2026-08-10 04:44:02 UTC |
-| Certificate issued | 2026-08-11T23:23:02.128584+00:00 UTC |
-| Certificate hash (SHA-256) | `28c4e688502658527d701e4069679682d525393f7b7ea9fbd34dc3f72a4acf43` |
-| Content hash (SHA-256) | `3e295f1439f9c1ff34bae0064556737395dad2eaba02939fbb8847277c381db0` |
-| Chain index | 1386 |
+| Certificate issued | 2026-08-13T00:04:07.467579+00:00 UTC |
+| Certificate hash (SHA-256) | `e3cf03bb30113400e787714ea24b53ffbdb4a8b9e81841f0f5cc5991f82228d5` |
+| Content hash (SHA-256) | `31aacabafea9d71bc9c35fdc77f4247d868f1059a45f2172db2b5bae53f14324` |
+| Chain index | 1425 |
 | License | MIT |
 
 ## Problem
@@ -83,4 +83,4 @@ graph TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/28c4e688502658527d701e4069679682d525393f7b7ea9fbd34dc3f72a4acf43*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e3cf03bb30113400e787714ea24b53ffbdb4a8b9e81841f0f5cc5991f82228d5*

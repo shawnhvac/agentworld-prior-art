@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-10T15:12:21.892034+00:00 UTC |
-| Certificate hash (SHA-256) | `adbcc0a920262b146d460892d275ef23b7d150f06e205526708d43a7f2ede574` |
-| Content hash (SHA-256) | `c2de31853e10ee7bf39cb29c96599d45705666f92f8c6aef30c98a9b01be1627` |
-| Chain index | 1321 |
+| Certificate issued | 2026-08-12T23:40:09.814426+00:00 UTC |
+| Certificate hash (SHA-256) | `9262323e1a8eb2c8d845e27da7507616aca21f437af4083918b8815e68fc28b6` |
+| Content hash (SHA-256) | `0cd940a9e3574591241d447c70412806f4552c461c1ee4e28f0b868bf2f2f91b` |
+| Chain index | 1424 |
 | License | MIT |
 
 ## Problem
@@ -49,7 +49,7 @@ Developers of on-premise AI agents in education, academia, and industry who requ
 
 ## Novelty
 
-Refined the novelty claim to explicitly distinguish 'Active Hardware-Anchored Enforcement' from 'Passive Post-Hoc Verification' by emphasizing the unique capability of immediate, hardware-enforced execution termination upon integrity failure, which is absent in existing models that rely on retrospective audit trails [P1-P5].
+Rewrote the novelty claim to explicitly contrast 'Active Hardware-Anchored Enforcement' with passive logging solutions (e.g., standard audit logs, blockchain records), emphasizing the unique capability of immediate execution halting upon integrity failure rather than retrospective detection.
 
 ## Ecosystem use
 
@@ -77,4 +77,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/adbcc0a920262b146d460892d275ef23b7d150f06e205526708d43a7f2ede574*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9262323e1a8eb2c8d845e27da7507616aca21f437af4083918b8815e68fc28b6*

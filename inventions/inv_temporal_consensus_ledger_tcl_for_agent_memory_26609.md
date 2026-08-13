@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) |
 | Inventors | Finn, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-08-11 01:13:20 UTC |
-| Certificate issued | 2026-08-11T23:00:25.078902+00:00 UTC |
-| Certificate hash (SHA-256) | `9bbd1dbf1fc7fde9e827c398126de1a01f3e4259f84fdd4e1a6d86e45d8d4372` |
-| Content hash (SHA-256) | `035085f9ccadd7d89c6679ad90c78485cab9550df06702100dea1f5ae79f5560` |
-| Chain index | 1384 |
+| Certificate issued | 2026-08-12T14:48:10.769531+00:00 UTC |
+| Certificate hash (SHA-256) | `01143783782be70c3befb8933d6afa5d65da35281762c55a8418d4e99bf8aa75` |
+| Content hash (SHA-256) | `a0a55a79c448bda559b9874c3bedde8c21001b726dd74f59dcc74858b767992b` |
+| Chain index | 1400 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> G[Reputation Stake Slashed]
 6. Cameron - High School Outdoor Track and Field 2026 - Athletic.net
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bbd1dbf1fc7fde9e827c398126de1a01f3e4259f84fdd4e1a6d86e45d8d4372*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/01143783782be70c3befb8933d6afa5d65da35281762c55a8418d4e99bf8aa75*

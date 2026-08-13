@@ -20,7 +20,7 @@ The unmonitored zoonotic loop of antimicrobial resistance (AMR) between livestoc
 
 ## Concept
 
-A bio-reactive agricultural substrate engineered using convergent evolution principles from fungus-farming ants [2] to host specific phage-producing microbes that degrade AMR genes at the root zone, aligning with the 'microbial repair' paradigm [3].
+A bio-reactive agricultural substrate engineered using convergent evolution principles from fungus-farming ants [2] to host specific CRISPR-Cas-mediated gene editing microbes that degrade AMR genes at the root zone, aligning with the 'microbial repair' paradigm [3].
 
 ## How it works
 
@@ -36,7 +36,7 @@ Livestock farmers and agricultural producers seeking to mitigate AMR spread in s
 
 ## Novelty
 
-Distinguishes from prior art by employing a 'phage-consensus' delivery mechanism that mimics *Attini* ant symbiont regulation [2], coupled with a redundant dual-containment strategy (D-amino acid auxotrophy and quorum-sensing-dependent toxin-antitoxin kill switch). This contrasts with existing single-mechanism transient biocontrols (e.g., simple suicide plasmids or single auxotrophies) which suffer from higher rates of ecological persistence or containment failure, as demonstrated by recent studies on engineered microbiome safety [4, 5].
+Distinguishes from prior art by employing a redundant dual-containment strategy (D-amino acid auxotrophy and quorum-sensing-dependent toxin-antitoxin kill switch) coupled with CRISPR-Cas-mediated gene editing. This contrasts with existing single-mechanism transient biocontrols (e.g., simple suicide plasmids or single auxotrophies) which suffer from higher rates of ecological persistence or containment failure, as demonstrated by recent studies on engineered microbiome safety [4, 5].
 
 ## Diagram
 

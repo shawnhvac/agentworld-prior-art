@@ -24,7 +24,7 @@ A self-healing hydrophobic coating with embedded microfluidic channels that auto
 
 ## How it works
 
-The self-healing hydrophobic coating consists of a silicone-based polymer matrix infused with microcapsules containing a photocatalytic polymer (e.g., polyurethane with TiO₂ nanoparticles) and embedded microfluidic channels filled with a nanofluid (water + surfactant, e.g., polyethylene glycol). Contaminant removal is autonomously triggered by an integrated resistive heating network coupled with a capacitance-based moisture/contaminant sensor. When the sensor detects a drop in surface capacitance indicative of contaminant adhesion, it activates the local resistive heaters to generate precise thermal gradients. These gradients, combined with the inherent Marangoni effect, drive capillary action to dispense the nanofluid, dissolving and washing away debris. Upon surface damage, microcapsules rupture, releasing the photocatalytic polymer. Under UV irradiation, TiO₂ nanoparticles generate electron-hole pairs that produce free radicals, initiating the cross-linking of the polyurethane matrix to chemically heal micro-cracks and restore structural integrity. The system's feasibility is confirmed by energy balance and fluid dynamics calculations: the resistive heating power density (approx. 50-100 W/m²) creates a sufficient temperature gradient (ΔT > 5°C) across the microchannel interface to overcome viscous drag, generating a Marangoni stress (∂γ/∂T * ∇T) capable of driving nanofluid flow rates exceeding 10 μL/min without external pumps, ensuring complete contaminant clearance.
+The self-healing hydrophobic coating consists of a silicone-based polymer matrix infused with microcapsules containing a photocatalytic polymer (e.g., polyurethane with TiO₂ nanoparticles) and embedded microfluidic channels filled with a nanofluid (water + surfactant, e.g., polyethylene glycol). Contaminant removal is autonomously triggered by an integrated resistive heating network coupled with a capacitance-based moisture/contaminant sensor. The closed-loop control system operates as follows: the capacitance sensor array continuously monitors surface dielectric properties; when a localized drop in capacitance indicative of contaminant adhesion is detected, the control logic maps this data to specific heater activation zones corresponding to the affected microfluidic channel segments. These zones activate local resistive heaters to generate precise thermal gradients. These gradients, combined with the inherent Marangoni effect, drive capillary action to dispense the nanofluid from the microchannel outlets, dissolving and washing away debris. Upon surface damage, microcapsules rupture, releasing the photocatalytic polymer. Under UV irradiation, TiO₂ nanoparticles generate electron-hole pairs that produce free radicals, initiating the cross-linking of the polyurethane matrix to chemically heal micro-cracks and restore structural integrity. The system's feasibility is confirmed by energy balance and fluid dynamics calculations: the resistive heating power density (approx. 50-100 W/m²) creates a sufficient temperature gradient (ΔT > 5°C) across the microchannel interface to overcome viscous drag, generating a Marangoni stress (∂γ/∂T * ∇T) capable of driving nanofluid flow rates exceeding 10 μL/min without external pumps, ensuring complete contaminant clearance.
 
 ## Materials / steps
 
@@ -46,12 +46,15 @@ This coating could be integrated into AI-agent platforms managing solar farms, w
 
 ```mermaid
 graph TD
-    A[Capacitance Sensor Detects Contaminant Adhesion] -->|Capacitance Drop| B[Control Unit Triggers Resistive Heaters]
-    B -->|Thermal Gradient ΔT > 5°C| C[Marangoni Effect Activates]
-    C -->|Capillary Action| D[Nanofluid Dispensed from Microchannels]
-    D -->|Dissolves & Washes Debris| E[Surface Cleaned]
-    E -->|Capacitance Returns to Baseline| F[Post-Cleaning Verification]
-    F -->|Reset| A
+    A[Capacitance Sensor Array] -->|Detects Dielectric Drop| B[Control Logic Unit]
+    B -->|Maps to Heater Zones| C[Resistive Heating Network]
+    C -->|Generates Thermal Gradient ΔT| D[Microfluidic Channel Outlets]
+    D -->|Marangoni Stress ∂γ/∂T * ∇T| E[Nanofluid Dispensing]
+    E -->|Dissolves/Repels| F[Contaminants]
+    G[Surface Damage] -->|Ruptures| H[Microcapsules]
+    H -->|Releases| I[Photocatalytic Polymer + TiO₂]
+    I -->|UV Irradiation| J[Free Radical Generation]
+    J -->|Cross-linking| K[Self-Healing of Micro-cracks]
 ```
 
 ## Sources / grounding

@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-agent transactions requiring dynamic ethic
 
 ## Novelty
 
-Unlike existing systems that rely on static trust anchoring or post-hoc audits, EVE-DTC introduces a closed-loop control mechanism where the KL-divergence-based Trust-Alignment Score (TAS) directly modulates settlement latency and arbitration triggers. This dynamic feedback loop enables proactive, real-time adjustment of escrow terms based on evolving ethical value alignments, rather than merely combining inverse reinforcement learning with static blockchain snapshots.
+EVE-DTC’s core novelty lies in its closed-loop, real-time modulation of settlement latency and arbitration triggers via the Trust-Alignment Score (TAS) feedback loop. Unlike prior art that relies on static trust anchors or post-hoc audits, this system proactively adjusts escrow terms based on continuous ethical value alignment, transforming trust from a binary gate into a dynamic control variable.
 
 ## Ecosystem use
 

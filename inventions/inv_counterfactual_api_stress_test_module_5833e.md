@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Liang, Finn |
 | First disclosed | 2026-08-10 00:41:52 UTC |
-| Certificate issued | 2026-08-10T14:08:19.807310+00:00 UTC |
-| Certificate hash (SHA-256) | `f5704d97020384dd836cee36f7de8841c93762055d53e9a6dcbf262721e05e99` |
-| Content hash (SHA-256) | `a9fdd09f24e3c53e73d8ad27a7a977eecf5b248f5f6463a4eb348fe34ffc47d4` |
-| Chain index | 1316 |
+| Certificate issued | 2026-08-12T17:12:18.180516+00:00 UTC |
+| Certificate hash (SHA-256) | `71b891e7777bbf5daa909d364d6f01e36a392096a162111a7b65ae452d0d8ac2` |
+| Content hash (SHA-256) | `f5f4224668c14df97e1e4ffa772f469d10d6a54ae1f3d8cdaa6edc9cdc3a516b` |
+| Chain index | 1404 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A runtime module that intercepts agentic API calls to inject synthetic failure s
 
 ## Materials / steps
 
-1. Define semantic equivalence protocols for target APIs based on [6]. 2. Build an interception layer for the agentic workflow engine. 3. Implement synthetic failure injection logic. 4. Instrument the agent's decision trace to log path exploration. 5. Deploy in a controlled environment with throttled primary APIs. 6. Implement the Resolution Protocol logic, including the semantic similarity function $S$ and threshold $\theta$, to validate secondary responses against original intent and enforce deterministic state transitions ('Exploring' -> 'Validated' -> 'Committed'). 7. Implement the Commitment Protocol to handle state serialization, context persistence, and the final state transition to 'Committed' for downstream queue triggering. 8. Implement Validation Metrics suite to quantify performance with concrete acceptance criteria: a) Semantic Discovery Rate (SDR) > 90% (ratio of successful semantic validations to total injected failure scenarios); b) Secondary endpoint identification time < 200ms; c) Semantic similarity score variance < 0.02 across 1000 test cases; d) Fallback trigger rate for valid semantic equivalents < 5%. 9. Edge-Case Test Coverage: Define a mandatory test matrix covering at least 95% of branch coverage for failure injection paths, including timeout, 5xx errors, and malformed JSON responses, to ensure scientific rigor in the real trial. 10. Statistical Validation: Determine sample size $N$ required to detect a 5% difference in fallback rates with 95% confidence using a two-proportion z-test ($N \approx 384$ per group assuming baseline rate of 10%); define 95% confidence intervals for semantic similarity variance using the Chi-squared distribution for variance estimation to ensure statistical significance of robustness claims.
+1. Define semantic equivalence protocols for target APIs based on [6]. 2. Build an interception layer for the agentic workflow engine. 3. Implement synthetic failure injection logic. 4. Instrument the agent's decision trace to log path exploration. 5. Deploy in a controlled environment with throttled primary APIs. 6. Implement the Resolution Protocol logic, including the semantic similarity function $S$ and threshold $	heta$, to validate secondary responses against original intent and enforce deterministic state transitions ('Exploring' -> 'Validated' -> 'Committed'). 7. Implement the Commitment Protocol to handle state serialization, context persistence, and the final state transition to 'Committed' for downstream queue triggering. 8. Implement Validation Metrics suite to quantify performance with concrete acceptance criteria: a) Semantic Discovery Rate (SDR) > 90% (ratio of successful semantic validations to total injected failure scenarios); b) Secondary endpoint identification time < 200ms; c) Semantic similarity score variance < 0.02 across 1000 test cases; d) Fallback trigger rate for valid semantic equivalents < 5%. 9. Edge-Case Test Coverage: Define a mandatory test matrix covering at least 95% of branch coverage for failure injection paths, including timeout, 5xx errors, and malformed JSON responses, to ensure scientific rigor in the real trial. 10. Statistical Validation: Determine sample size $N$ required to detect a 5% difference in fallback rates with 95% confidence using a two-proportion z-test ($N \approx 384$ per group assuming baseline rate of 10%); define 95% confidence intervals for semantic similarity variance using the Chi-squared distribution for variance estimation to ensure statistical significance of robustness claims. 11. Comparative Baseline Testing: Establish a control group using standard static retry logic (e.g., exponential backoff with fixed endpoint) to calculate 'Recovery Success Rate Improvement' (RSRI), defined as $(SuccessRate_{Counterfactual} - SuccessRate_{Static}) / SuccessRate_{Static}$, requiring a minimum RSRI of 15% to substantiate robustness claims over prior art.
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f5704d97020384dd836cee36f7de8841c93762055d53e9a6dcbf262721e05e99*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/71b891e7777bbf5daa909d364d6f01e36a392096a162111a7b65ae452d0d8ac2*

@@ -36,7 +36,7 @@ AI agents involved in real-time negotiation scenarios with human or AI participa
 
 ## Novelty
 
-Unlike static sentiment-analysis tools that provide post-hoc insights or rule-based systems with rigid adaptation, CALNF uniquely integrates affective computing with RL-driven linguistic primitives to enable real-time, proactive linguistic adaptation. This closed-loop mechanism dynamically optimizes negotiation utility based on emotional congruence, allowing the system to anticipate and adjust to shifting emotional and situational dynamics rather than merely reacting to them.
+Rewritten to emphasize the technical distinction of RL-driven linguistic primitives with conditional interpolation for real-time adaptation, moving beyond general claims of proactive adaptation.
 
 ## Ecosystem use
 

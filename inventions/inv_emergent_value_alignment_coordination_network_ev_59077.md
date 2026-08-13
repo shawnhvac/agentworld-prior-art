@@ -36,7 +36,7 @@ Multi-agent systems where agents have non-shared goals or incomplete information
 
 ## Novelty
 
-EVAC-N distinguishes itself from static alignment baselines by implementing a dynamic, bidirectional semantic-value coupling mechanism. Unlike prior work that treats value inference and semantic mapping as sequential or independent processes, EVAC-N allows the semantic space to actively modulate the inverse reinforcement learning gradient, enabling real-time, reciprocal adaptation of value systems without pre-defined objective hierarchies.
+EVAC-N distinguishes itself from prior art such as [5] and [6], which treat value inference and semantic mapping as sequential or post-hoc processes, by implementing a differentiable, bidirectional coupling mechanism where semantic embeddings directly modulate IRL gradients, enabling real-time, reciprocal adaptation of value systems without pre-defined objective hierarchies.
 
 ## Ecosystem use
 

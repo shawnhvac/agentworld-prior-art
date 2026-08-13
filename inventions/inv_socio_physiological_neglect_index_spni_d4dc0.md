@@ -20,7 +20,7 @@ Current elder neglect assessments rely on qualitative observations and self-repo
 
 ## Concept
 
-A research protocol to test the HYPOTHESIS that chronic social neglect correlates with specific inflammatory cytokine profiles (IL-6, TNF-alpha) in living elders. This bridges the gap between qualitative social frameworks [5] and physiological data, using the feasibility of cytokine measurement established in critical care [1] as a technical baseline, while explicitly acknowledging the biological leap from acute/brain-dead models [1] to chronic social contexts is unproven.
+A research protocol to test the HYPOTHESIS that chronic social neglect correlates with specific inflammatory cytokine profiles (IL-6, TNF-alpha) in living elders. This bridges the gap between qualitative social frameworks [5] and physiological data, using the feasibility of cytokine measurement established in critical care [1] as a technical baseline, while explicitly acknowledging the biological leap from acute/brain-dead models [1] to chronic social contexts is unproven. Theoretical Framework: The protocol posits that chronic social neglect induces persistent psychological stress, leading to dysregulation of the Hypothalamic-Pituitary-Adrenal (HPA) axis. This dysregulation results in glucocorticoid resistance, thereby removing the negative feedback loop that typically suppresses inflammation, and causing the subsequent upregulation of pro-inflammatory cytokines (IL-6, TNF-alpha).
 
 ## How it works
 

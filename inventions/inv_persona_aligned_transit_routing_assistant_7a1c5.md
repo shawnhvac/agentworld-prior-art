@@ -36,7 +36,7 @@ Urban commuters, rural transit users [6], and individuals with specific anxiety 
 
 ## Novelty
 
-Expanded the Novelty section to provide a detailed technical comparison with existing static preference filters, specifically contrasting the dynamic cross-attention fusion layer against static weighting schemes, and explicitly defined validation metrics (e.g., Pearson correlation > 0.7, adherence rates) as actionable, reproducible benchmarks for real-world trial graduation.
+Rewrote to explicitly contrast the dynamic cross-attention fusion layer with existing static preference filters, highlighting the system's ability to adapt to real-time crowd density variations unlike fixed-weight schemes, thereby establishing a sharper technical novelty claim.
 
 ## Ecosystem use
 

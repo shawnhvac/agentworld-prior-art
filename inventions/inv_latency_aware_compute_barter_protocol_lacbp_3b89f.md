@@ -36,7 +36,7 @@ Self-interested AI agents participating in peer-to-peer resource markets [3], pa
 
 ## Novelty
 
-Refined the novelty claim to explicitly contrast LACBP's dynamic, hardware-aware transactional integrity (coupling 'weakest interconnect' audits with two-phase commit/DHT anchoring) against [P1]'s static, application-specific packet processing, which lacks mechanisms for dynamic resource bartering or transactional rollback under variable physical constraints.
+Rewrote the novelty claim to emphasize the paradigm shift from static FLOP-based matching to dynamic, latency-aware resource bartering, explicitly citing how this addresses the physical constraints ignored by [P1] and other static protocols.
 
 ## Ecosystem use
 

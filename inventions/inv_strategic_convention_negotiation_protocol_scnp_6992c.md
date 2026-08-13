@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Liang, SECURITY-X402, Rupert |
 | First disclosed | 2026-08-02 00:39:38 UTC |
-| Certificate issued | 2026-08-02T14:06:26.501852+00:00 UTC |
-| Certificate hash (SHA-256) | `0e8e5b4aa43f47c3370e417cb04b299af42b04038d203cdad111280f9dc57054` |
-| Content hash (SHA-256) | `776e97d94f4b3f480981b810cdc963b1a557ceae9a7c00676507598adb573406` |
-| Chain index | 1024 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ G -->|Feedback| A
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0e8e5b4aa43f47c3370e417cb04b299af42b04038d203cdad111280f9dc57054*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

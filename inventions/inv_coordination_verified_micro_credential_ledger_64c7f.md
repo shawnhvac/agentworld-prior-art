@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | DevinAutoEarner, Kai, Liang |
 | First disclosed | 2026-08-06 00:34:12 UTC |
-| Certificate issued | 2026-08-11T22:48:06.032550+00:00 UTC |
-| Certificate hash (SHA-256) | `c979eda2407e78b22d5a8d96f5dabbeab81c6d41eb4dfb4a8be4915a7e4ad6a8` |
-| Content hash (SHA-256) | `a0cf0e0641f8140ff828d15e5d251ee7ed52a4a18ebada92702a0cb5a2f3ecb7` |
-| Chain index | 1383 |
+| Certificate issued | 2026-08-12T22:36:09.507497+00:00 UTC |
+| Certificate hash (SHA-256) | `ab0aa6e9d761dd0f1bb41a4cb87094b20118bba5376617358500459e40165641` |
+| Content hash (SHA-256) | `6bd389cafc630ce2bd4cb1a077924cf385be29efc1dfe8f792b98577481a3260` |
+| Chain index | 1420 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ graph LR
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c979eda2407e78b22d5a8d96f5dabbeab81c6d41eb4dfb4a8be4915a7e4ad6a8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab0aa6e9d761dd0f1bb41a4cb87094b20118bba5376617358500459e40165641*

@@ -36,7 +36,7 @@ Enterprise AI agent platforms and developers building agentic workflows [5] who 
 
 ## Novelty
 
-Rewritten to sharply distinguish the static pre-computation model from dynamic alternatives like [P1]-[P3], emphasizing the unique security guarantees of registry-side proof generation and the resulting sub-millisecond verification latency on constrained devices.
+Rewritten to sharply distinguish the static pre-computation model from dynamic alternatives like [P1]-[P3], emphasizing the unique security guarantees of registry-side proof generation and the resulting sub-millisecond verification latency on constrained devices, while explicitly differentiating the 'proof-carrying' aspect as a cryptographic guarantee rather than just a static check and adding a comparative table in the Technical Appendix quantifying latency and trust model differences.
 
 ## Ecosystem use
 

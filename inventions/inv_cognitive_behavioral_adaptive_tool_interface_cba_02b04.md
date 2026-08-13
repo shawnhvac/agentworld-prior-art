@@ -36,7 +36,7 @@ Household users, particularly those engaged in repetitive or complex tasks, and 
 
 ## Novelty
 
-CBATI introduces real-time behavioral adaptation in modular household tools, integrating AI with sustainability and ergonomic considerations, which is not explicitly addressed in existing literature on household tools [1-4].
+Unlike existing static tools or purely predictive systems that offer passive recommendations, CBATI provides a distinct technical contribution through its closed-loop biometric-to-mechanical adaptation pipeline, which actively and autonomously reconfigures tool ergonomics in real-time to optimize both user comfort and sustainability metrics.
 
 ## Ecosystem use
 

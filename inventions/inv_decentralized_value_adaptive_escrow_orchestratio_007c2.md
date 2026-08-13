@@ -28,7 +28,7 @@ The DVAEO system continuously monitors an autonomous agent's value system using 
 
 ## Materials / steps
 
-Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4].; Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6].; Design a smart contract framework with a Settlement Protocol that includes specific functions for threshold-based consensus aggregation and conditional execution (release, refund, or arbitration) based on aggregated trust scores and inferred value alignment.; Integrate all components into a unified system with real-time monitoring and adjustment capabilities.
+Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4].; Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6].; Design a smart contract framework with a Settlement Protocol that includes specific functions for threshold-based consensus aggregation and conditional execution (release, refund, or arbitration) based on aggregated trust scores and inferred value alignment.; Integrate all components into a unified system with real-time monitoring and adjustment capabilities.; Execute the comprehensive simulation plan using synthetic agent data to rigorously test edge cases within the predefined ambiguity band for arbitration routing, validating that the inverse reinforcement learning model achieves >90% alignment accuracy and oracle consensus latency remains under 2 seconds.
 
 ## Who it's for
 

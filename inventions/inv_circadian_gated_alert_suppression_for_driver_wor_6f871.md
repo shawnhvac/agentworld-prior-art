@@ -36,7 +36,7 @@ Supply chain planners and truck drivers operating in digital workplaces who must
 
 ## Novelty
 
-The invention is novel because it addresses algorithmic output volatility in digital decision support systems (LLM supplier scoring) rather than biological circadian entrainment via light therapy [P1-P3]. While [P1-P3] focus on physiological health and alertness through environmental lighting adjustments for circadian rhythm synchronization, this invention focuses on cognitive workload reduction through reactive statistical gating of AI-generated metrics. The specific point of novelty is the 'reactive volatility gating' mechanism that suppresses alerts for stable metrics and triggers human-in-the-loop verification only when rolling standard deviation exceeds a threshold, a problem domain and technical solution entirely distinct from the circadian lighting adjustments described in [P1-P3].
+The invention is distinguished from generic volatility filters or circadian gating by its 'constraint-injection' mechanism, which actively forces deterministic LLM re-evaluation via structured human context, rather than merely suppressing alerts based on statistical thresholds.
 
 ## Ecosystem use
 

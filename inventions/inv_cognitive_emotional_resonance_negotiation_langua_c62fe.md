@@ -36,7 +36,7 @@ AI negotiation agents involved in real-time, multi-agent interactions requiring 
 
 ## Novelty
 
-CER-NL is distinct from prior art such as ES2788140A2 [P1], which describes a distributed photobiomodulation therapy system involving LED pads and microcontrollers for physical tissue treatment. CER-NL does not involve phototherapy hardware or biological tissue treatment but rather introduces a computational dual-loop resonance mechanism that combines real-time affective state recognition with reinforcement learning-driven language adaptation. This enables more efficient and empathetic AI negotiation, a problem domain and technical solution entirely unrelated to the photobiomodulation methods described in P1.
+CER-NL distinguishes itself from prior affective computing works (e.g., Picard's affective state recognition, Gratch's empathetic dialogue agents) and recent ACL studies on empathetic language by uniquely integrating simultaneous, real-time dual-stream processing of fNIRS (hemodynamic) and EEG (electrical) data within a closed-loop Reinforcement Learning framework. While existing systems typically rely on unimodal inputs (e.g., facial expression or text sentiment) or static rule-based adaptation, CER-NL employs a novel dual-loop resonance mechanism that dynamically maps high-dimensional neurophysiological state vectors $S_t$ to linguistic policy adjustments $A_t$ via policy gradient methods, enabling real-time, neural-feedback-driven negotiation optimization that transcends the limitations of unimodal or non-adaptive empathetic dialogue systems.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | Finn, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-08-06 00:26:11 UTC |
-| Certificate issued | 2026-08-11T21:52:25.613030+00:00 UTC |
-| Certificate hash (SHA-256) | `ad942764a409ff0dcdbaa3fb889b8c5d196dfd6e206a2a7661001da35745a12e` |
-| Content hash (SHA-256) | `2fff9924be15d6e424bccef933ba92b9b7e1eead26685089357898905c406525` |
-| Chain index | 1381 |
+| Certificate issued | 2026-08-13T00:42:49.991429+00:00 UTC |
+| Certificate hash (SHA-256) | `ef78fefd11e4e6af588600348dfd1e7d6bdcb0ed76fe0f7137488d743b8f8b31` |
+| Content hash (SHA-256) | `5581b45bb1bb72a7239179d99a2901fdae53df8612cf5580d502bf874bc78fef` |
+| Chain index | 1427 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system implements a Merkle-tree-structured state log where each agent transi
 
 ## Materials / steps
 
-1. Implement DID-based identity for agents [1]. 2. Construct Merkle-tree state logs for temporal memory binding. 3. Define a mapping function from discrete state transitions to a vector space compatible with Byzantine-resilient SGD [2][4], specifically using a sparse embedding layer to project state hashes into L2-normalized vectors. 4. Provide a formal proof of convergence for the proposed embedding layer, rigorously demonstrating that the sparse embedding preserves the necessary geometric properties for Byzantine agreement on discrete state hashes, including theoretical bounds ensuring Byzantine agreement validity. 5. Conduct a sensitivity analysis for the mapping function parameters, including a statistical power analysis to justify sample size. 6. Conduct a preliminary simulation of the distributed cluster with 20% malicious nodes, expanded to include a detailed latency breakdown (p50/p95/p99) under varying churn rates to rigorously validate the <50ms threshold. 7. Measure verification latency and false-positive rejection rates compared to full-state replay baselines [6], enforcing acceptance thresholds of <50ms latency and <1% false positives. 8. Request and integrate a detailed technical critique focusing on the mathematical validity of projecting discrete state hashes into L2-normalized vectors for Byzantine agreement, and an assessment of the <50ms latency claim under high churn. 9. Define specific quantitative targets for the embedding layer's convergence, requiring <0.01 error tolerance after N iterations. 10. Establish exact false-positive/negative rate thresholds for Byzantine fault detection. 11. Include a detailed latency breakdown (p50/p95/p99) under varying churn rates to replace the vague 'stress-test' description. 12. Explicitly define the deterministic projection function from the aggregated vector space to the Merkle leaf hash and include a formal proof that this mapping preserves the integrity of the Byzantine-resilient aggregation, ensuring the ledger state is mathematically consistent with the consensus outcome.
+1. Implement DID-based identity for agents [1]. 2. Construct Merkle-tree state logs for temporal memory binding. 3. Define a mapping function from discrete state transitions to a vector space compatible with Byzantine-resilient SGD [2][4], specifically using a sparse embedding layer to project state hashes into L2-normalized vectors. 4. Provide a formal proof of convergence for the proposed embedding layer, rigorously demonstrating that the sparse embedding preserves the necessary geometric properties for Byzantine agreement on discrete state hashes, including theoretical bounds ensuring Byzantine agreement validity. 5. Conduct a sensitivity analysis for the mapping function parameters, including a statistical power analysis to justify sample size. 6. Conduct a preliminary simulation of the distributed cluster with 20% malicious nodes, expanded to include a detailed latency breakdown (p50/p95/p99) under varying churn rates to rigorously validate the <50ms threshold. 7. Measure verification latency and false-positive rejection rates compared to full-state replay baselines [6], enforcing acceptance thresholds of <50ms latency and <1% false positives. 8. Request and integrate a detailed technical critique focusing on the mathematical validity of projecting discrete state hashes into L2-normalized vectors for Byzantine agreement, and an assessment of the <50ms latency claim under high churn. 9. Define specific quantitative targets for the embedding layer's convergence, requiring <0.01 error tolerance after N iterations. 10. Establish exact false-positive/negative rate thresholds for Byzantine fault detection, specifically mandating a <1% false-positive rate for Byzantine fault detection. 11. Include a detailed latency breakdown (p50/p95/p99) under varying churn rates to replace the vague 'stress-test' description. 12. Explicitly define the deterministic projection function from the aggregated vector space to the Merkle leaf hash and include a formal proof that this mapping preserves the integrity of the Byzantine-resilient aggregation, ensuring the ledger state is mathematically consistent with the consensus outcome.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ F --> G[Proof-Carrying Output 3]
 6. Verifying agents with memory is harder than it seemed
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad942764a409ff0dcdbaa3fb889b8c5d196dfd6e206a2a7661001da35745a12e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ef78fefd11e4e6af588600348dfd1e7d6bdcb0ed76fe0f7137488d743b8f8b31*

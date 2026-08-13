@@ -36,7 +36,7 @@ Small businesses, particularly in sectors like machine tools [1], seeking to red
 
 ## Novelty
 
-Rewrote novelty to explicitly contrast the dynamic, skill-weighted probabilistic injection pipeline against prior art [P4]'s static time-space aggregation, emphasizing the non-obvious architectural integration of credential verification APIs [4] into MOLAP dimension mapping.
+The invention's novelty is defined by the 'probabilistic dimension injection' mechanism, which fundamentally diverges from prior art [P4]'s static time-space aggregation by implementing a real-time, statistically-gated update pipeline that dynamically adjusts MOLAP dimensions based on verified micro-credential metadata [4] and Bayesian validation outcomes.
 
 ## Diagram
 

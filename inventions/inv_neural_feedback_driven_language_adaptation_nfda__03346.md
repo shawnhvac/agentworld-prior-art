@@ -38,7 +38,7 @@ AI agents engaged in high-stakes, human-AI or AI-AI negotiations, such as in con
 
 ## Novelty
 
-NFDA distinguishes itself from CL-DANL and ECNLE by replacing their static classification or post-hoc analysis methods with a dynamic, RL-driven lexical adjustment loop, enabling real-time cognitive load adaptation and continuous optimization of trust and clarity through immediate neural feedback.
+NFDA distinguishes itself from CL-DANL and ECNLE by implementing a closed-loop feedback architecture with deterministic 200ms synchronized fusion, whereas CL-DANL relies on post-hoc static classification and ECNLE utilizes asynchronous batch processing; this specific temporal alignment mechanism enables sub-200ms real-time lexical adjustment, a capability absent in prior art due to their lack of tight hardware-software loop closure.
 
 ## Ecosystem use
 

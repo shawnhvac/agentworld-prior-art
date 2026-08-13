@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-08-11T23:27:36.425500+00:00 UTC |
-| Certificate hash (SHA-256) | `50884fba185bb9a5ad3eb93dbd4c14b9165252fd58d643c3e0c0f1c738470a85` |
-| Content hash (SHA-256) | `299b3a1b7219b81263e5767de6c579a9a0d89553470df1e81cce1ac18a93ca89` |
-| Chain index | 1387 |
+| Certificate issued | 2026-08-12T20:32:24.203181+00:00 UTC |
+| Certificate hash (SHA-256) | `f03ffd04e0efdbf25c51cdf557ab60541558c16e122e1f9997b6f6d996a8044b` |
+| Content hash (SHA-256) | `4ce3c390434b15205191bee3f193f102b4a7f84fa91de29fd09f199a241e78ac` |
+| Chain index | 1414 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A dynamic weighting system that treats scoring volatility as a feature for calib
 
 ## How it works
 
-1. Collect parallel supplier evaluation scores from human coordinators and GAI models. 2. Implement a 'Warm-up Phase' where static equal weights (w_human = 0.5, w_GAI = 0.5) are applied until the initial 7-day rolling temporal window is fully populated. 3. Once the window is full, calculate the standard deviation of the difference scores (S_human - S_GAI) over the 7-day rolling temporal window to quantify discrepancy volatility [3]. 4. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: if the coefficient of variation (CV) between human and GAI scores exceeds a threshold of 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-lambda * t)), where k is a sensitivity constant (k=0.5), lambda is a decay rate (lambda=0.1) to ensure weight stabilization over time, and t is the time elapsed since the volatility spike, effectively reducing the GAI weight by a factor proportional to the excess variance while allowing trust to recover, capped at a minimum weight of 0.2 to prevent total exclusion [3]. The human weight is derived as w_human = 1 - w_GAI. 5. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3]. 6. Compute the final hybrid score using the formula S_final = w_human * S_human + w_GAI * S_GAI at the end of each evaluation period, utilizing the stabilized weights derived from the final day of the rolling window to produce the actionable evaluation metric.
+1. Collect parallel supplier evaluation scores from human coordinators and GAI models, ensuring both inputs are normalized to a common scale (e.g., min-max scaling to [0, 1] or Z-score standardization) before further processing. 2. Implement a 'Warm-up Phase' where static equal weights (w_human = 0.5, w_GAI = 0.5) are applied until the initial 7-day rolling temporal window is fully populated. 3. Once the window is full, calculate the standard deviation of the difference scores (S_human - S_GAI) over the 7-day rolling temporal window to quantify discrepancy volatility [3]. 4. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: if the coefficient of variation (CV) between human and GAI scores exceeds a threshold of 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-lambda * t)), where k is a sensitivity constant (k=0.5), lambda is a decay rate (lambda=0.1) to ensure weight stabilization over time, and t is the time elapsed since the most recent volatility spike event (t resets to 0 upon each new event where CV > 0.15), effectively reducing the GAI weight by a factor proportional to the excess variance while allowing trust to recover, capped at a minimum weight of 0.2 to prevent total exclusion [3]. The human weight is derived as w_human = 1 - w_GAI. 5. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3]. 6. Compute the final hybrid score using the formula S_final = w_human * S_human + w_GAI * S_GAI at the end of each evaluation period, utilizing the stabilized weights derived from the final day of the rolling window to produce the actionable evaluation metric.
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/50884fba185bb9a5ad3eb93dbd4c14b9165252fd58d643c3e0c0f1c738470a85*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f03ffd04e0efdbf25c51cdf557ab60541558c16e122e1f9997b6f6d996a8044b*

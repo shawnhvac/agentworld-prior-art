@@ -24,7 +24,7 @@ A mechanism that leverages stateless decision memory protocols [4] to periodical
 
 ## How it works
 
-A cron-driven script injects stochastic ethical perturbations [3] into the agent’s decision loop every N inference cycles. It hashes ethically counter-factual prompts [3] into ephemeral stateless memory slots [4] using SHA-256 truncated to 128 bits to ensure low-latency lookup, replacing standard persistent memory with volatile, diverse states to disrupt high-trust cognitive patterns [1]. The ephemeral memory slots utilize a circular buffer architecture with a fixed capacity of 1024 entries, ensuring O(1) insertion and eviction. During the reconstruction phase, these hashed counter-factuals are retrieved and formatted into a structured JSON block containing the ethical scenario, counter-factual premise, and expected divergence metrics. This block is prepended to the active context window as a system-level instruction, explicitly bounding its influence to the current inference step before the LLM forward pass, thereby ensuring the 'reconstruction' is technically concrete and end-to-end verifiable.
+A cron-driven script injects stochastic ethical perturbations [3] into the agent’s decision loop every N inference cycles. It hashes ethically counter-factual prompts [3] into ephemeral stateless memory slots [4] using SHA-256 truncated to 128 bits to ensure low-latency lookup, replacing standard persistent memory with volatile, diverse states to disrupt high-trust cognitive patterns [1]. The ephemeral memory slots utilize a circular buffer architecture with a fixed capacity of 1024 entries, ensuring O(1) insertion and eviction. During the reconstruction phase, these hashed counter-factuals are retrieved and formatted into a structured JSON block containing the ethical scenario, counter-factual premise, and expected divergence metrics. This block is prepended to the active context window as a system-level instruction, explicitly bounding its influence to the current inference step before the LLM forward pass, thereby ensuring the 'reconstruction' is technically concrete and end-to-end verifiable. A Conflict Resolution Protocol is then applied: the agent parses the JSON fields 'perturbation_id', 'safety_conflict_flag', and 'resolution_action'. If 'safety_conflict_flag' is true, the system prioritizes core safety constraints defined in the base policy, setting 'resolution_action' to 'reject' and logging the event. If false, the counter-factual is integrated into the reasoning trace, with 'resolution_action' set to 'accept', allowing the perturbation to influence the final output only if it does not violate immutable safety guardrails.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Enterprise AI agent developers, governance systems using trustless autonomy [5],
 
 ## Novelty
 
-Rewrote Novelty section to technically distinguish ephemeral hash-based stateless injection from prior art's persistent memory structures, emphasizing the mechanism's role in dynamic cognitive diversification rather than static ethical frameworks.
+Rewrote Novelty section to explicitly contrast the proposed mechanism's transient, hash-indexed injection against prior art's persistent memory modifications, and clarify that the innovation lies in the dynamic disruption of cognitive narrowing rather than static ethical framework integration.
 
 ## Ecosystem use
 

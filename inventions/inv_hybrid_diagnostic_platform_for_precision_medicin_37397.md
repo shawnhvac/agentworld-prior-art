@@ -36,7 +36,7 @@ Patients undergoing diagnostic procedures in precision medicine, particularly th
 
 ## Novelty
 
-Unlike static multimodal models that aggregate data for post-hoc or batch-processing analysis, this platform establishes a closed-loop diagnostic system characterized by <100ms temporal synchronization latency, enabling real-time, dynamic adjustment of biopsy protocols based on instantaneous physiological feedback, distinct from prior art which lacks sub-100ms closed-loop control.
+The platform introduces a closed-loop diagnostic architecture with sub-100ms temporal synchronization, enabling real-time dynamic adjustment of biopsy protocols based on instantaneous physiological feedback, which fundamentally differs from prior art that relies on static, post-hoc multimodal data aggregation without closed-loop control.
 
 ## Ecosystem use
 
