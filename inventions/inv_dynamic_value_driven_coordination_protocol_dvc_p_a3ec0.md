@@ -24,11 +24,11 @@ A Dynamic Value-Driven Coordination Protocol (DVC-P) that combines preference-ba
 
 ## How it works
 
-DVC-P employs preference-based inverse reinforcement learning [4] to estimate the value functions of interacting agents in real-time, while semantic protocol discovery [3] identifies shared conventions in their communication patterns. These are dynamically integrated into a coordination framework that adjusts task allocation and message interpretation on the fly. The system utilizes a joint loss function L = λ * L_IRL + (1-λ) * L_semantic, where L_IRL is the inverse reinforcement learning error and L_semantic is the negative semantic alignment confidence, balanced by a hyperparameter λ. An iterative update rule applies gradient descent with a fixed step size α to minimize L, ensuring the coordination policy converges within the 100ms latency constraint. The inverse RL inference step operates with a time complexity of O(N log N) per iteration, where N is the number of observed interactions. Semantic protocol discovery halts when the convergence rate of the semantic mapping falls below a threshold of 0.01 over a sliding window of 50 interactions, preventing overfitting to noise.
+DVC-P employs preference-based inverse reinforcement learning [4] to estimate the value functions of interacting agents in real-time, while semantic protocol discovery [3] identifies shared conventions in their communication patterns. These are dynamically integrated into a coordination framework that adjusts task allocation and message interpretation on the fly. The system utilizes a joint loss function L = λ * L_IRL + (1-λ) * L_semantic, where L_IRL is the inverse reinforcement learning error and L_semantic is the negative semantic alignment confidence, balanced by a hyperparameter λ. The feedback mechanism operates as follows: the semantic protocol discovery module outputs a semantic alignment score S_t, which modulates the reward function R(s,a) in the IRL step by scaling the inferred value gradients by (1 + S_t), ensuring that high-semantic-confidence interactions receive higher weight in value estimation. Conversely, the IRL module outputs a value gradient ∇V that updates the semantic mapping weights via a meta-gradient step, allowing the semantic model to prioritize communication patterns that lead to higher-value states. An iterative update rule applies gradient descent with a fixed step size α to minimize L, ensuring the coordination policy converges within the 100ms latency constraint. The inverse RL inference step operates with a time complexity of O(N log N) per iteration, where N is the number of observed interactions. Semantic protocol discovery halts when the convergence rate of the semantic mapping falls below a threshold of 0.01 over a sliding window of 50 interactions, preventing overfitting to noise.
 
 ## Materials / steps
 
-1) Deploy a lightweight observation module to capture agent behaviors and communication signals on hardware with at least 8GB RAM and a quad-core processor to ensure low-latency data ingestion.; 2) Use inverse RL to infer latent value functions [4] with a target latency of <50ms per inference step to maintain real-time performance.; 3) Apply semantic protocol discovery [3] to map communication signals to shared meaning, utilizing GPU acceleration (e.g., NVIDIA RTX 3060 or equivalent) to handle the O(N log N) complexity under load.; 4) Compute the joint loss L = λ * L_IRL + (1-λ) * L_semantic and update the coordination policy via gradient descent with step size α, ensuring end-to-end loop latency remains below 100ms.; 5) Validation Plan: Conduct experiments on a standard multi-agent benchmark (e.g., Hanabi or SMAC), reporting mean inference latency (target <50ms), semantic mapping accuracy, and task completion rates compared to baseline sequential methods.
+1) Deploy a lightweight observation module to capture agent behaviors and communication signals on hardware with at least 8GB RAM and a quad-core processor to ensure low-latency data ingestion.; 2) Use inverse RL to infer latent value functions [4] with a target latency of <50ms per inference step to maintain real-time performance.; 3) Apply semantic protocol discovery [3] to map communication signals to shared meaning, utilizing GPU acceleration (e.g., NVIDIA RTX 3060 or equivalent) to handle the O(N log N) complexity under load.; 4) Compute the joint loss L = λ * L_IRL + (1-λ) * L_semantic and update the coordination policy via gradient descent with step size α, ensuring end-to-end loop latency remains below 100ms.; 5) Validation Plan: Conduct experiments on standard multi-agent benchmarks (Hanabi and SMAC). Report mean inference latency (target <50ms), semantic mapping accuracy (target >85% F1 score), and task completion rates (target >10% improvement over baseline sequential methods). Perform ablation studies on hyperparameter λ to determine optimal weighting between value inference and semantic alignment. Include a specific analysis of the computational overhead of the O(N log N) inference step under high-load conditions to verify scalability limits.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-agent systems where agent behaviors and communication norms are not pre-sp
 
 ## Novelty
 
-DVC-P distinguishes itself from prior work by implementing a simultaneous, real-time feedback loop that jointly optimizes value inference and semantic mapping, whereas existing approaches such as MAPPO [5] or QMIX with communication modules [6] treat value estimation and communication as decoupled, offline, or sequential stages, failing to adapt to dynamic semantic shifts in real-time.
+DVC-P distinguishes itself from prior work by implementing a simultaneous, real-time feedback loop that jointly optimizes value inference and semantic mapping, whereas existing approaches such as MAPPO [5] or QMIX with communication modules [6] treat value estimation and communication as decoupled, offline, or sequential stages, failing to adapt to dynamic semantic shifts in real-time. Unlike the identified prior art [P1-P5], which focuses on static geo-registration, video stream delay estimation, or content routing, DVC-P addresses the novel problem of dynamic multi-agent coordination through coupled inverse reinforcement learning and semantic protocol discovery, a domain and technical approach entirely distinct from the image processing and network routing technologies described in [P1-P5].
 
 ## Ecosystem use
 
@@ -45,13 +45,12 @@ DVC-P could be implemented as an API within an AI-agent platform, allowing agent
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Observation Module] --> B(Inverse RL Module)
-    A --> C(Semantic Protocol Discovery)
-    B --> D(Value Function Estimation)
-    C --> E(Communication Convention Mapping)
-    D & E --> F(Coordination Policy Update)
-    F --> G(Task Allocation & Message Interpretation)
+graph TD
+    A[Observation Module] -->|Behaviors & Signals| B(Semantic Protocol Discovery [3])
+    A -->|Behaviors & Signals| C(Inverse Reinforcement Learning [4])
+    B -->|Semantic Alignment Score S_t| C
+    C -->|Value Gradient ∇V| B
+    C -->|Modulated Reward R(s,a) * (1+S_t
 ```
 
 ## Sources / grounding

@@ -24,7 +24,36 @@ A hybrid mechanism that combines data encoding techniques for Byzantine resilien
 
 ## How it works
 
-Local nodes encode their gradient updates using the data encoding scheme from [1] to embed them within a verifiable structure. These encoded updates are then wrapped in cryptographic proofs inspired by the 'proof-carrying' agent concept [2], which attest to the computation integrity without revealing raw data. Remote aggregator nodes validate these proofs and check for consistency against Byzantine-resilient SGD benchmarks [3] before aggregating the updates. To ensure end-to-end clarity, the system operates via a strict Protocol Specification defined by the following detailed technical specification: 1) Encoding: The local gradient vector g is transformed via E(g) = Encode(g, seed_i), where Encode utilizes a sparse-sketching matrix S_i derived from seed_i to produce a compressed, resilient representation g' = S_i * g. 2) Proof Generation: A lightweight proof p is generated via P(E(g), S_i, key_i), specifically a Merkleized hash chain of the sketch coefficients, the sketching matrix S_i (or its seed), and their corresponding checksums, attesting to the integrity of the encoding process and the binding of the matrix to the gradient without exposing the full gradient. 3) Verification: The aggregator receives S_i (or seed_i) alongside the proof. It runs V(p, E(g), S_i, g_ref), where V reconstructs the expected sketch structure from g_ref (the global reference state) using the received S_i and verifies the cryptographic proof p against the received E(g) and S_i to ensure no tampering occurred during transmission and that the matrix used for encoding matches the one verified in the proof. 4) Aggregation: Only updates passing V() are aggregated using the resilient fusion logic from [3], specifically a trimmed-mean aggregation on the decoded gradient estimates to mitigate any residual Byzantine noise.
+Local nodes encode their gradient updates using the data encoding scheme from [1] to embed them within a verifiable structure. These encoded updates are then wrapped in cryptographic proofs inspired by the 'proof-carrying' agent concept [2], which attest to the computation integrity without revealing raw data. Remote aggregator nodes validate these proofs and check for consistency against Byzantine-resilient SGD benchmarks [3] before aggregating the updates. To ensure end-to-end clarity and implementability, the system operates via a strict Protocol Specification defined by the following detailed technical specification and formal threat model:
+
+**Formal Threat Model:**
+The system assumes a semi-honest central aggregator and malicious clients capable of colluding. Specific Byzantine attack vectors addressed include:
+1. **Gradient Poisoning:** Malicious nodes submit gradients designed to skew the global model. Mitigation: The sparse-sketching matrix S_i binds the gradient to a specific seed, and the Merkle proof verifies that the submitted sketch E(g) is mathematically consistent with S_i. Any deviation indicates tampering.
+2. **Model Inversion:** Attempts to reconstruct training data from gradients. Mitigation: The transmission of compressed sketches g' rather than raw gradients g, combined with the one-way nature of the sparse-sketching transformation, limits information leakage.
+3. **Sybil/Replay Attacks:** Submission of stale or duplicate updates. Mitigation: The proof p includes a timestamp and nonce, verified via the Merkle hash chain.
+
+**Protocol Specification & Pseudocode:**
+1) **Encoding:** The local gradient vector g is transformed via E(g) = Encode(g, seed_i), where Encode utilizes a sparse-sketching matrix S_i derived from seed_i to produce a compressed, resilient representation g' = S_i * g.
+```python
+def Encode(g, seed_i):
+    S_i = generate_sparse_sketch_matrix(seed_i, dimensions=g.shape)
+    g_prime = S_i @ g  # Matrix-vector multiplication
+    return g_prime, S_i
+```
+
+2) **Proof Generation:** A lightweight proof p is generated via P(E(g), S_i, key_i), specifically a Merkleized hash chain of the sketch coefficients, the sketching matrix S_i (or its seed), and their corresponding checksums, attesting to the integrity of the encoding process and the binding of the matrix to the gradient without exposing the full gradient.
+```python
+def GenerateProof(g_prime, S_i, key_i, timestamp):
+    # Create leaf nodes from sketch coefficients and matrix seed
+    leaf_1 = hash(g_prime)
+    leaf_2 = hash(S_i.seed)
+    leaf_3 = hash(timestamp)
+    merkle_root = merkle_tree(leaf_1, leaf_2, leaf_3)
+    signature = sign(merkle_root, key_i)
+    return {"merkle_root": merkle_root, "signature": signature, "timestamp": timestamp}
+```
+
+3) **Verification:** The aggregator receives S_i (or seed_i) alongside the proof. It runs V(p, E(g), S_i, g_ref), where V reconstructs the expected sketch structure from g_ref (the global reference state) using the received S_i and verifies the cryptographic proof p against the received E(g)
 
 ## Materials / steps
 

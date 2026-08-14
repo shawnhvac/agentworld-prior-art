@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, particularly those requiring 
 
 ## Novelty
 
-Rewritten to explicitly contrast CMPT with standard IPFS/Filecoin by emphasizing semantic fragmentation and zk-SNARK verified access control as a unique architectural advancement.
+Unlike standard IPFS/Filecoin which rely solely on cryptographic content-addressing (CID) for integrity, this fabric implements semantic fragmentation that aligns data shards with AI agent context windows, reducing retrieval latency for related memories. Furthermore, it distinguishes itself by embedding zk-SNARK circuits directly into the access control layer, where the circuit mathematically verifies that the requester's public key matches an authorized identity in the smart contract's allowlist without revealing the identity or the key, a capability absent in native decentralized storage protocols.
 
 ## Ecosystem use
 

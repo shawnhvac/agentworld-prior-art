@@ -24,11 +24,28 @@ A dual-layer negotiation protocol that uses Generative Information Retrieval (Ge
 
 ## How it works
 
-1. Input: Real-time negotiation utterances are encoded into dense vectors. 2. Retrieval: A GenIR engine searches a high-dimensional index of financial precedents and legal texts for semantically relevant counter-arguments [2]. 3. Synthesis: A generative model reconstructs persuasive narratives based on retrieved evidence, bypassing static heuristics [5]. 4. Evaluation: A utility function evaluates the generated proposal against the agent's reservation price and the counterparty's estimated utility. 5. Decision: If the utility exceeds a predefined confidence threshold or a maximum turn limit is reached, the protocol triggers termination. 6. Output: The agent proposes context-specific, evidence-backed negotiation moves or outputs a final agreement based on the termination condition.
+1. Input: Real-time negotiation utterances are encoded into dense vectors. 2. Retrieval: A GenIR engine searches a high-dimensional index of financial precedents and legal texts for semantically relevant counter-arguments [2]. 3. Synthesis: A generative model reconstructs persuasive narratives based on retrieved evidence, bypassing static heuristics [5]. 4. Evaluation: A utility function evaluates the generated proposal against the agent's reservation price and the counterparty's estimated utility. 5. Decision: If the utility exceeds a predefined confidence threshold or a maximum turn limit is reached, the protocol triggers termination. 6. Output: The agent proposes context-specific, evidence-backed negotiation moves or outputs a final agreement based on the termination condition. Pseudocode for the iterative loop and termination logic: 
+```python
+def negotiate(state, max_turns, threshold):
+    current_turn = 0
+    while current_turn < max_turns:
+        utterance_vec = encode(state.latest_utterance)
+        retrieved_evidence = gen_ir_search(utterance_vec)
+        narrative = synthesize(retrieved_evidence, state.context)
+        utility = evaluate_utility(narrative, state.reservation_price, state.counterparty_utility)
+        if utility >= threshold:
+            final_agreement = construct_agreement(narrative, state.terms)
+            return final_agreement, "terminated_by_utility"
+        state.history.append(narrative)
+        current_turn += 1
+    # Fallback if max turns reached without meeting threshold
+    final_agreement = construct_agreement(state.history[-1], state.terms)
+    return final_agreement, "terminated_by_turn_limit"
+```
 
 ## Materials / steps
 
-1. Construct a verified corpus of financial precedents and negotiation transcripts. 2. Implement a GenIR architecture (as described in [2]) for dense retrieval. 3. Develop a generative synthesizer layer to convert retrieved snippets into coherent negotiation language. 4. Integrate the system into an agent framework capable of multi-turn interaction. 5. Implement a cross-attention fusion module to integrate retrieved embeddings with the generative context window. 6. Train the system with a joint objective function optimizing for both retrieval precision and narrative coherence. 7. Validate performance using specific metrics: Win Rate, Average Settlement Value, and Argument Relevance Score (cosine similarity to optimal counter-arguments) to objectively measure performance against static heuristic baselines. 8. Conduct statistical validation using paired t-tests to compare GIR-NP against static heuristic baselines, ensuring a sample size sufficient for statistical significance (e.g., p < 0.05), and normalize the 'Argument Relevance Score' against a gold-standard dataset of expert negotiations to establish a baseline for optimal argumentation. 9. Apply explicit data preprocessing protocols including PII redaction, tokenization via SentencePiece, and normalization of financial terms to ensure consistent vector encoding. 10. Define the utility function parameters explicitly as U = w1*(Settlement_Value - Reservation_Price) + w2*(Argument_Relevance_Score) - w3*(Turn_Count), where weights w1, w2, w3 are calibrated via grid search on a validation set to balance deal quality, argument strength, and negotiation efficiency.
+1. Construct a verified corpus of financial precedents and negotiation transcripts. 2. Implement a GenIR architecture (as described in [2]) for dense retrieval. 3. Develop a generative synthesizer layer to convert retrieved snippets into coherent negotiation language. 4. Integrate the system into an agent framework capable of multi-turn interaction. 5. Implement a cross-attention fusion module to integrate retrieved embeddings with the generative context window. 6. Train the system with a joint objective function optimizing for both retrieval precision and narrative coherence. 7. Validate performance using specific metrics: Win Rate, Average Settlement Value, and Argument Relevance Score (cosine similarity to optimal counter-arguments) to objectively measure performance against static heuristic baselines. 8. Conduct statistical validation using paired t-tests to compare GIR-NP against static heuristic baselines, ensuring a sample size sufficient for statistical significance (e.g., p < 0.05), and normalize the 'Argument Relevance Score' against a gold-standard dataset of expert negotiations to establish a baseline for optimal argumentation. 9. Apply explicit data preprocessing protocols including PII redaction, tokenization via SentencePiece, and normalization of financial terms to ensure consistent vector encoding. 10. Define the utility function parameters explicitly as U = w1*(Settlement_Value - Reservation_Price) + w2*(Argument_Relevance_Score) - w3*(Turn_Count), where weights w1, w2, w3 are calibrated via grid search on a validation set to balance deal quality, argument strength, and negotiation efficiency. 11.
 
 ## Who it's for
 

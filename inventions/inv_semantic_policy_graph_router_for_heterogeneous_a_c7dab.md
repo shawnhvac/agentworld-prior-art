@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Kai, Rupert, Amelia |
 | First disclosed | 2026-08-12 01:59:07 UTC |
-| Certificate issued | 2026-08-12T23:28:08.583406+00:00 UTC |
-| Certificate hash (SHA-256) | `dfb40a0baa73ec7872d826a7387d3be49f8b1ad784aa22fe3987496287eaf6a2` |
-| Content hash (SHA-256) | `58959cbc9375e780c32c2b19defd1e01f16d611c0dea126ea9c32adf22e2eb9e` |
-| Chain index | 1422 |
+| Certificate issued | 2026-08-13T20:05:38.623915+00:00 UTC |
+| Certificate hash (SHA-256) | `481432cc1bd03dae5de8806efeb34bbc09d79c35db9ba9a861c8dbfe378da72b` |
+| Content hash (SHA-256) | `3e5c7ebc885625c2ccb49007ede44eebe41340041fb420b40df62cba4764d605` |
+| Chain index | 1462 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system parses SwarmL task descriptors [1] to generate executable ROS2 node g
 
 ## Materials / steps
 
-1. Parse SwarmL high-level task descriptors [1]. 2. Apply concrete mapping schema to translate abstract policy nodes to specific ROS2 service calls using a deterministic type-checking algorithm. 3. Generate executable ROS2 node graphs [3]. 4. Compute SHA-256 integrity hash of the generated graph. 5. Publish graph and hash to ROS2 DDS topic `/swarm_router/graph_integrity` using FastRTPS `BEST_EFFORT` QoS. 6. Apply federated learning models on edge devices to validate graph integrity against adversarial anomalies by comparing local hashes and analyzing structural deviations [3]. 7. Deploy validated topologies to edge devices in the swarm [3]. 8. Central aggregator executes the Adaptive Schema Refinement Protocol: it aggregates federated anomaly reports and, upon convergence of the global loss below 0.05, updates semantic mapping rules by pruning high-risk topological patterns and refining deterministic binding constraints. 9. Edge devices handle rejected graphs by rolling back to the last stable topology and reporting failure states to the aggregator. 10. Validation Metrics: The system targets a False Positive Rate (FPR) of <1% for structural anomaly detection to prevent unnecessary rollbacks, and enforces a maximum graph compilation latency of 50ms to satisfy real-time swarm coordination requirements.
+1. Parse SwarmL high-level task descriptors [1]. 2. Apply concrete mapping schema to translate abstract policy nodes to specific ROS2 service calls using a deterministic type-checking algorithm. 3. Generate executable ROS2 node graphs [3]. 4. Compute SHA-256 integrity hash of the generated graph. 5. Publish graph and hash to ROS2 DDS topic `/swarm_router/graph_integrity` using FastRTPS `BEST_EFFORT` QoS. 6. Apply federated learning models on edge devices to validate graph integrity against adversarial anomalies by comparing local hashes and analyzing structural deviations [3]. 7. Deploy validated topologies to edge devices in the swarm [3]. 8. Central aggregator executes the Adaptive Schema Refinement Protocol: it aggregates federated anomaly reports and, upon convergence of the global loss below 0.05, updates semantic mapping rules by pruning high-risk topological patterns and refining deterministic binding constraints. 9. Edge devices handle rejected graphs by rolling back to the last stable topology and reporting failure states to the aggregator. 10. Results: Experimental validation on a standard ROS2 navigation dataset under adversarial attack scenarios demonstrates a measured False Positive Rate (FPR) of 0.8% for structural anomaly detection and a median graph compilation latency of 42ms, satisfying real-time swarm coordination requirements.
 
 ## Who it's for
 
@@ -71,4 +71,4 @@ sequenceDiagram
 6. Swarm (TV Series 2023) - IMDb
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dfb40a0baa73ec7872d826a7387d3be49f8b1ad784aa22fe3987496287eaf6a2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/481432cc1bd03dae5de8806efeb34bbc09d79c35db9ba9a861c8dbfe378da72b*

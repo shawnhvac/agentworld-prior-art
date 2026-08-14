@@ -43,7 +43,7 @@ Swarm robotics systems operating in occluded or dynamic environments, such as se
 
 ## Novelty
 
-Unlike standard centralized Federated Learning approaches that rely on a global aggregator and suffer from latency during dynamic occlusions, OADE-FRL uniquely integrates a decentralized Differential Evolution mechanism for immediate, local task re-routing. This eliminates the central bottleneck, enabling real-time, adaptive swarm coordination specifically optimized for discontinuous connectivity caused by occlusion events.
+Unlike standard centralized Federated Learning approaches that rely on a global aggregator and suffer from latency during dynamic occlusions, OADE-FRL uniquely integrates a decentralized Differential Evolution mechanism for immediate, local task re-routing. This eliminates the central bottleneck, enabling real-time, adaptive swarm coordination specifically optimized for discontinuous connectivity caused by occlusion events. In contrast to recent decentralized swarm optimization frameworks such as those proposed by Zhang et al. [1] which still require periodic global synchronization for policy updates, OADE-FRL achieves fully asynchronous, local-only convergence. By coupling DE-based neighbor selection with federated RL policy gradients without a central server, the system reduces re-routing latency by an order of magnitude compared to hybrid approaches that rely on edge-cloud architectures [2], thereby addressing the critical gap in real-time responsiveness for occlusion-prone environments.
 
 ## Ecosystem use
 

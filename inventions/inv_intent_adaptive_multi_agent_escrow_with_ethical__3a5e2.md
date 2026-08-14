@@ -28,7 +28,7 @@ IAME-ECOP embeds ethical constraints as latent variables in a shared neural mani
 
 ## Materials / steps
 
-Neural networks trained on multi-agent intent datasets; Ethical rule encoders; Decentralized consensus layer for trust verification; Simulated multi-agent environment with dynamic ethical constraints; Validation Metrics: 1) Precision/Recall for ethical constraint violation detection against a ground-truth dataset of 10k simulated transactions; 2) Average consensus latency (ms) and throughput (TPS) under varying trust coefficient volatility; 3) Stress-test results for Nash Bargaining convergence time when agent utility functions are non-convex.
+Neural networks trained on multi-agent intent datasets; Ethical rule encoders; Decentralized consensus layer for trust verification; Simulated multi-agent environment with dynamic ethical constraints; Validation Metrics: 1) Precision/Recall for ethical constraint violation detection against a ground-truth dataset of 10k simulated transactions, targeting >95% precision and >95% recall; 2) Average consensus latency (ms) and throughput (TPS) under varying trust coefficient volatility, targeting <200ms latency and >100 TPS; 3) Stress-test results for Nash Bargaining convergence time when agent utility functions are non-convex.
 
 ## Who it's for
 

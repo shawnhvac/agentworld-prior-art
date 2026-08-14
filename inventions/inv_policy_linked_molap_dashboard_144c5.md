@@ -36,7 +36,7 @@ Small machine-tool enterprises in Malaysia and other regions where government-bu
 
 ## Novelty
 
-The invention's core novelty is the volatility-adaptive sliding-window cross-correlation algorithm, which dynamically calculates window sizes as the median duration of prior interventions plus one standard deviation of market volatility. This specific formulation directly mitigates spurious correlations inherent in non-stationary cash-flow data—a failure mode of standard AIC/BIC lag-selection methods in real-time MOLAP environments—enabling precise, statistically valid causal attribution (p < 0.05, F-statistic > 3.84) that static or generic batch-processed systems cannot achieve.
+The invention's core novelty is the volatility-adaptive sliding-window cross-correlation algorithm, which dynamically calculates window sizes as the median duration of prior interventions plus one standard deviation of market volatility. This specific formulation directly mitigates spurious correlations inherent in non-stationary cash-flow data—a failure mode of standard AIC/BIC lag-selection methods in real-time MOLAP environments due to their inability to handle dynamic market volatility—enabling precise, statistically valid causal attribution (p < 0.05, F-statistic > 3.84) that static or generic batch-processed systems cannot achieve.
 
 ## Diagram
 

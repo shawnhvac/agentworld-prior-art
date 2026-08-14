@@ -24,7 +24,7 @@ Contextual Trustless Memory Partitioning (CTMP) is a decentralized framework tha
 
 ## How it works
 
-CTMP operates by segmenting AI agent memory using Stateless Decision Memory [4], where each memory segment is tagged with context metadata. Access is governed by a dynamic trust score calculated via Trustless Autonomy [5] principles. The protocol utilizes zk-SNARKs with optimized R1CS constraint systems to generate zero-knowledge proofs of behavioral compliance. A deterministic HKDF-SHA256 Key Derivation Function maps the verified trust score to encryption keys, enabling instantaneous, context-aware decryption without exposing raw behavioral data. State updates are finalized via a lightweight PBFT consensus mechanism across the decentralized network.
+CTMP operates by segmenting AI agent memory using Stateless Decision Memory [4], where each memory segment is tagged with context metadata. Access is governed by a dynamic trust score calculated via Trustless Autonomy [5] principles. The protocol utilizes zk-SNARKs with optimized R1CS constraint systems to generate zero-knowledge proofs of behavioral compliance. A deterministic HKDF-SHA256 Key Derivation Function maps the verified trust score to encryption keys, enabling instantaneous, context-aware decryption without exposing raw behavioral data. State updates are finalized via a lightweight PBFT consensus mechanism across the decentralized network. The end-to-end flow begins when an agent requests access, triggering local behavioral proof generation. This proof is submitted to PBFT validators who verify compliance and update the global trust state. Upon consensus, the validated trust score is fed into the HKDF module to derive the specific decryption key for the requested memory segment, which is then returned to the agent for immediate access.
 
 ## Materials / steps
 
@@ -45,24 +45,22 @@ CTMP can be integrated into AI-agent platforms as a secure memory-sharing API, e
 ## Diagram
 
 ```mermaid
-graph LR
-A[AI Agent 1] --> B[Memory Segment 1]
-B --> C[Context Metadata]
-B --> D[Dynamic Trust Score]
-D --> E[Access Control Module]
-E --> F[Blockchain Storage]
-A --> G[AI Agent 2]
-G --> H[Memory Segment 2]
-H --> I[Context Metadata]
-H --> J[Dynamic Trust Score]
-J --> K[Access Control Module]
-K --> L[Blockchain Storage]
-A --> M[Behavioral Analysis Module]
-M --> N[Trust Score Update]
-N --> D
-G --> O[Behavioral Analysis Module]
-O --> P[Trust Score Update]
-P --> J
+sequenceDiagram
+    participant Agent
+    participant Prover as zk-SNARK Prover
+    participant Validators as PBFT Validators
+    participant KDF as HKDF Module
+    participant Storage as Decentralized Storage
+
+    Agent->>Prover: Request Access + Behavioral Data
+    Prover->>Prover: Generate ZK Proof (R1CS)
+    Prover->>Validators: Submit Proof for Verification
+    Validators->>Validators: PBFT Consensus on Trust Score
+    Validators->>KDF: Broadcast Validated Trust Score
+    KDF->>KDF: Derive Encryption Key (HKDF-SHA256)
+    KDF->>Storage: Retrieve Encrypted Segment
+    Storage->>KDF: Return Encrypted Data
+    KDF->>Agent: Return Decrypted Memory Segment
 ```
 
 ## Sources / grounding

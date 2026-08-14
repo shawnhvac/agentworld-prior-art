@@ -36,7 +36,7 @@ AI agents and platforms requiring secure, ethical, and adaptive escrow mechanism
 
 ## Novelty
 
-Unlike standard reputation systems that rely on static historical aggregates, ECDA-ETVA uniquely couples real-time contextual intent analysis with dynamic transaction parameter modulation, enabling immediate, granular enforcement of evolving ethical constraints within the settlement protocol itself. This distinguishes it from systems like OpenReputation and TrustScore, which lack real-time intent modulation. Comparative Analysis: ECDA-ETVA vs. OpenReputation vs. TrustScore: (1) Real-time Intent Analysis: ECDA-ETVA (Yes, Transformer-based), OpenReputation (No, static history), TrustScore (No, static history). (2) Dynamic Parameter Modulation: ECDA-ETVA (Yes, trust-modulated value alignment), OpenReputation (No, fixed thresholds), TrustScore (No, fixed thresholds). (3) Zero-Trust Architecture: ECDA-ETVA (Yes, decentralized ledger with memory-enhanced trust anchoring), OpenReputation (No, centralized trust), TrustScore (No, centralized trust).
+Unlike ZK-escrow protocols that prioritize privacy over contextual nuance or dynamic DeFi protocols that rely on static oracle inputs, ECDA-ETVA uniquely embeds Transformer-based intent analysis directly into the settlement logic to reduce false positives in high-frequency trading environments while maintaining strict zero-trust security guarantees through memory-enhanced trust anchoring.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Distinguishes from standard provenance ledgers by implementing a 'bio-financial' link where smart contract settlement is conditional on verified biological endpoints (qPCR data) rather than mere hardware telemetry. This is operationalized through a dedicated Biological Verification Oracle and a state machine that enforces end-to-end data integrity from farm to lab to ledger, creating a unique incentive structure for proven microbial repair outcomes.
+Distinguishes from existing livestock provenance standards (e.g., IBM Food Trust, Tezos-based supply chains) which primarily track logistics and chain-of-custody, by being the first to cryptographically enforce financial settlement based on verified biological efficacy (qPCR delta) rather than mere hardware telemetry or location data.
 
 ## Ecosystem use
 

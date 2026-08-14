@@ -36,7 +36,7 @@ Livestock producers, regulatory bodies, and supply chain auditors requiring veri
 
 ## Novelty
 
-Unlike existing oracles that aggregate bulk environmental data, this system establishes a deterministic cryptographic binding between individual livestock NFT identities and specific AMR strain hashes, enabling granular, animal-level attribution rather than farm-wide averages.
+Unlike existing oracles that rely on probabilistic, farm-wide environmental aggregation, this system establishes a deterministic, cryptographic binding between individual livestock NFT identities and specific AMR strain hashes. This enables granular, animal-level attribution of resistance risk, eliminating the dilution of signal inherent in bulk averaging and providing a unique, non-fungible provenance trail for regulatory compliance and supply chain transparency.
 
 ## Ecosystem use
 

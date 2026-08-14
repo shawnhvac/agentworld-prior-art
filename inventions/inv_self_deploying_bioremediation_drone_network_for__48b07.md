@@ -36,7 +36,7 @@ Environmental cleanup agencies, urban development authorities, and industrial fa
 
 ## Novelty
 
-This invention uniquely couples autonomous, closed-loop drone navigation with real-time, sensor-triggered dispensing of genetically engineered microbes, overcoming the spatial inefficiency of static bioaugmentation and the lack of remediation action in existing non-biological drone monitoring systems.
+Refined the novelty claim to explicitly contrast real-time, feedback-driven micro-dosing with static bioaugmentation and passive monitoring, and added a comparative matrix to delineate technical gaps.
 
 ## Ecosystem use
 

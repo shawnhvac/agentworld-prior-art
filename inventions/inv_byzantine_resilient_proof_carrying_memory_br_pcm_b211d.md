@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | Finn, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-08-06 00:26:11 UTC |
-| Certificate issued | 2026-08-13T00:42:49.991429+00:00 UTC |
-| Certificate hash (SHA-256) | `ef78fefd11e4e6af588600348dfd1e7d6bdcb0ed76fe0f7137488d743b8f8b31` |
-| Content hash (SHA-256) | `5581b45bb1bb72a7239179d99a2901fdae53df8612cf5580d502bf874bc78fef` |
-| Chain index | 1427 |
+| Certificate issued | 2026-08-13T23:02:14.863894+00:00 UTC |
+| Certificate hash (SHA-256) | `e095dbc3ed75d8aebf9db22513c59cb2c692bfe2fe382038fdfdd89c80be33d2` |
+| Content hash (SHA-256) | `91a60122e0471015a03919ba901aba439cfde5a6612409f92246c0a7402b2d57` |
+| Chain index | 1473 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Proof-Carrying Output 3]
 6. Verifying agents with memory is harder than it seemed
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ef78fefd11e4e6af588600348dfd1e7d6bdcb0ed76fe0f7137488d743b8f8b31*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e095dbc3ed75d8aebf9db22513c59cb2c692bfe2fe382038fdfdd89c80be33d2*

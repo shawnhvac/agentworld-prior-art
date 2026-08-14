@@ -28,16 +28,17 @@ A hybrid discovery protocol that combines 'proof-carrying' intent schemas [4] wi
 
 ## Materials / steps
 
-1. Define a lightweight 'Intent Schema' format compatible with OpenAPI. 2. Implement a client-side verification module that checks Merkle roots for signed APIs. 3. Build a sandboxed execution environment for unsigned APIs to validate semantic drift, ensuring constant-time execution constraints. For the sandboxing technology stack, we will utilize WebAssembly (WASI) modules rather than full Docker containers to ensure sub-10ms initialization latency and strict memory isolation, which is critical for the <50ms latency target. WASI capabilities will be restricted to read-only filesystem access and no network I/O during the dry-run phase. To ensure reproducibility for the real trial, the WASI sandbox initialization must use a fixed, version-locked WASI SDK (e.g., wasi-sdk-22.0) and a deterministic seed for any pseudo-random state within the mock execution engine. Container images or build artifacts must be pinned by SHA-256 hash to prevent supply chain drift. 4. Implement the Intent Schema Validation Handshake (pseudo-code below): 
+1. Define a lightweight 'Intent Schema' format compatible with OpenAPI. 2. Implement a client-side verification module that checks Merkle roots for signed APIs. 3. Build a sandboxed execution environment for unsigned APIs to validate semantic drift. For the sandboxing technology stack, we will utilize WebAssembly (WASI) modules rather than full Docker containers to ensure sub-10ms initialization latency and strict memory isolation, which is critical for the <50ms latency target. WASI capabilities will be restricted to read-only filesystem access and no network I/O during the dry-run phase. To ensure reproducibility for the real trial, the WASI sandbox initialization must use a fixed, version-locked WASI SDK (e.g., wasi-sdk-22.0) and a deterministic seed for any pseudo-random state within the mock execution engine. Container images or build artifacts must be pinned by SHA-256 hash to prevent supply chain drift. 4. Implement the Intent Schema Validation Handshake (pseudo-code below): 
    ```python
    def validate_intent(endpoint, schema):
        if endpoint.is_signed():
            return verify_merkle(endpoint.root)
        else:
-           sandbox = init_sandbox(endpoint) # WASI instance with fixed SDK
-           result = sandbox.dry_run(schema, timeout=CONSTANT_TIME_LIMIT)
-           if result.timing_variance > THRESHOLD:
-               return REJECT # Timing leak detected
+           # Separate bounded timeout for initial handshake/network overhead
+           handshake_timeout = HANDSHAKE_BOUND_MS 
+           sandbox = init_sandbox(endpoint, timeout=handshake_timeout) # WASI instance with fixed SDK
+           # Constant-time constraint applies strictly to internal WASI logic processing
+           result = sandbox.dry_run(schema, constant_time_guard=TRUE)
            if not result.matches_schema(schema):
                return REJECT
            return ACCEPT

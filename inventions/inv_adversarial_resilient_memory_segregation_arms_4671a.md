@@ -36,7 +36,7 @@ Developers of enterprise-grade AI agent platforms [3, 5] requiring secure, scala
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly contrast ARMS with CRDTs and standard BFT, focusing on the semantic segregation of memory states and the specific 'quarantine-and-reverify' lifecycle as the primary innovation, rather than the underlying gossip mechanism.
+ARMS distinguishes itself from standard BFT and CRDTs by decoupling consensus verification from immediate state commitment, introducing a semantic 'quarantine-and-reverify' lifecycle that treats unverified entries as low-priority hypotheses rather than binary facts or rejections, thereby preventing adversarial noise from corrupting the core memory substrate while maintaining eventual consistency through probabilistic majority resolution.
 
 ## Ecosystem use
 

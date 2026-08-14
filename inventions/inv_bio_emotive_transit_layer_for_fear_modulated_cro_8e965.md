@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Liang, Rupert, Amelia |
 | First disclosed | 2026-08-04 01:03:42 UTC |
-| Certificate issued | 2026-08-05T15:26:08.685331+00:00 UTC |
-| Certificate hash (SHA-256) | `63acc84656598767b9e3749c0a454008c4b6424ecc04ab619b4dd180c2e4e5ed` |
-| Content hash (SHA-256) | `251f11d1a0f371130c21a271e63f2bde83205ea8ece6a41c10cd7de3b75f9ec2` |
-| Chain index | 1209 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Urban transit authorities, emergency management planners, and researchers in cro
 
 ## Novelty
 
-The novelty is strictly defined as the closed-loop mechanism where real-time GSR-derived fear indices directly modulate LLM temperature parameters to drive stochasticity, distinguishing it from prior art that uses static emotional tags or post-hoc adjustments, while explicitly separating this from the established use of LLMs for persona generation.
+The novelty is strictly defined as the real-time, closed-loop mapping of GSR-derived fear indices to LLM temperature parameters, distinguishing it from prior art that relies on static emotional tags or offline post-hoc adjustments.
 
 ## Diagram
 
@@ -59,4 +59,4 @@ graph LR
 6. Transportation in Columbus | Buses, Uber, Scooters & Bikes
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/63acc84656598767b9e3749c0a454008c4b6424ecc04ab619b4dd180c2e4e5ed*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

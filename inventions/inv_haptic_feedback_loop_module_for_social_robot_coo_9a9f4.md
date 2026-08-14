@@ -24,29 +24,23 @@ A haptic-feedback module integrated into hand-held assistive tools that translat
 
 ## How it works
 
-The system operates via a closed-loop feedback mechanism utilizing a ROS2 DDS middleware for intent signal transmission. First, a social robot or virtual human generates an intent prediction signal based on its interaction algorithms [1], timestamped at the source using hardware-level clock synchronization via NTP/PTP protocols to ensure global time alignment. Second, this signal is transmitted via a QoS-configured DDS topic to the user's tool handle. The QoS policies enforce strict 'Deadline' (set to 30ms to provide a safety margin) and 'Liveliness' (Automatic with 10ms lease duration) to guarantee deterministic latency and detect stale data. Upon receipt, a synchronization module aligns the incoming intent data with local IMU readings to prevent phase errors; this synchronization and phase-error calculation step is allocated a 10ms budget. Third, the linear resonant actuator triggers specific vibration patterns corresponding to the robot's predicted action only after timestamp validation and phase-error correction, with an allocated 20ms response time budget. The system enforces a maximum allowable total perception-to-action loop latency threshold of 50ms (comprising 20ms DDS transmission, 10ms synchronization, and 20ms actuation) to ensure temporal coherence. A fallback mechanism discards signals if the cumulative latency exceeds this 50ms bound before actuation. Finally, the user's motor response to these cues is measured to refine future predictions, adhering to assistive technology service delivery standards [3].
+The system operates via a closed-loop feedback mechanism utilizing a ROS2 DDS middleware for intent signal transmission. First, a social robot or virtual human generates an intent prediction signal based on its interaction algorithms [1], timestamped at the source using hardware-level clock synchronization via PTP (Precision Time Protocol) to ensure microsecond-level global time alignment. Second, this signal is transmitted via a QoS-configured DDS topic to the user's tool handle. The QoS policies enforce strict 'Deadline' (set to 45ms to account for network jitter) and 'Liveliness' (Automatic with 10ms lease duration) to guarantee deterministic latency and detect stale data. Upon receipt, a synchronization module aligns the incoming intent data with local IMU readings using linear timestamp interpolation to predict the exact moment of intent execution; this synchronization step is allocated a 5ms processing budget. Third, the linear resonant actuator triggers specific vibration patterns corresponding to the robot's predicted action only after timestamp validation, with an allocated 15ms actuation response time budget. The system enforces a maximum allowable total perception-to-action loop latency threshold of 50ms (comprising 10ms average DDS transmission including jitter, 5ms synchronization processing, 15ms actuation delay, and a 20ms safety margin for variability) to ensure temporal coherence. A fallback mechanism discards signals if the predicted trigger time exceeds the current time plus the 50ms bound before actuation. Finally, the user's motor response to these cues is measured to refine future predictions, adhering to assistive technology service delivery standards [3].
 
 ## Materials / steps
 
-1. Integrate a 200Hz linear resonant actuator and low-latency IMU into the handle of a standard assistive tool, ensuring hardware timestamping capabilities and NTP/PTP network interface support. 2. Develop a ROS2-based middleware interface to receive intent signals from social robots/virtual humans as described in [1], implementing DDS QoS policies for reliability, durability, Deadline (40ms), and Liveliness (10ms). 3. Map specific vibration patterns to distinct robotic intents (e.g., approach, retract, stabilize). 4. Implement a control system that adjusts vibration intensity based on real-time proximity and intent confidence, including a synchronization algorithm to align robot prediction timestamps with local IMU data. The phase-error correction algorithm adjusts vibration onset based on the delta between predicted and actual IMU state:
+1. Integrate a 200Hz linear resonant actuator and low-latency IMU into the handle of a standard assistive tool, ensuring hardware timestamping capabilities and PTP network interface support. 2. Develop a ROS2-based middleware interface to receive intent signals from social robots/virtual humans as described in [1], implementing DDS QoS policies for reliability, durability, Deadline (45ms), and Liveliness (10ms). 3. Map specific vibration patterns to distinct robotic intents (e.g., approach, retract, stabilize). 4. Implement a control system that adjusts vibration intensity based on real-time proximity and intent confidence, including a synchronization algorithm that uses linear interpolation between the last known IMU state and the current state to align robot prediction timestamps with local time. The temporal alignment logic calculates the precise trigger time based on the delta between the predicted intent timestamp and the local clock:
 
     ```python
-    def adjust_vibration_onset(predicted_time, current_imu_state, predicted_imu_state):
-        time_delta = current_imu_state.timestamp - predicted_time
-        state_error = calculate_phase_error(predicted_imu_state, current_imu_state)
-        correction_factor = state_error * Kp # Proportional control for phase alignment
-        adjusted_onset = predicted_time + correction_factor
-        if abs(time_delta) + correction_factor <= 50ms:
-            trigger_actuator(adjusted_onset)
-        else:
-            discard_signal()
-    ```
-
-    5. Conduct a controlled real-world trial with the following protocol: 
-    a. Participant Recruitment: Recruit N=30 participants aged 60-80 with mild to moderate motor coordination deficits (measured via Fugl-Meyer Assessment), excluding those with severe vestibular disorders or neuropathy. 
-    b. Experimental Design: Use a within-subjects crossover design comparing baseline (no haptic feedback) vs. experimental (haptic-feedback module) conditions across 10 standardized coordination tasks (e.g., object handover, joint navigation). 
-    c. Metrics for Success: Primary outcomes are the Mean Temporal Deviation (ms) between robot intent and user action, and Intent Recognition Accuracy (percentage of tasks where user motor response matches robot predicted intent within the 50ms window). Success is defined as a statistically significant reduction of >15ms in temporal deviation (p<0.05) and an Intent Recognition Accuracy improvement >10% compared to baseline. Secondary outcomes include mean reaction time improvement and user-perceived cognitive load (NASA-TLX). 
-    d. Statistical Analysis: Perform a paired t-test to compare temporal deviation and accuracy metrics between conditions, with significance set at p<0.05. Use linear mixed-effects models to account for participant variability and task difficulty. Power analysis indicates N=30 provides 80% power to detect a medium effect size (Cohen's d=0.5), which was selected based on prior pilot studies in haptic-assisted coordination tasks showing moderate improvements in timing accuracy. This sample size ensures statistical robustness against individual variability in motor learning curves while remaining feasible for a single-center trial.
+    def trigger_haptic_feedback(intent_msg, local_clock, imu_buffer):
+        # intent_msg.timestamp is the absolute time of predicted intent execution
+        predicted_trigger_time = intent_msg.timestamp
+        current_time = local_clock.now()
+        
+        # Calculate time remaining until the predicted intent execution
+        time_to_trigger = predicted_trigger_time - current_time
+        
+        # Enforce 50ms maximum latency budget (including actuation delay of 15ms)
+        # If the signal is too old or too far
 
 ## Who it's for
 

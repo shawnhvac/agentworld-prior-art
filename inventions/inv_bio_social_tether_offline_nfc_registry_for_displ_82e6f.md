@@ -36,7 +36,7 @@ Displaced animal owners suffering from mental health crises [2], disaster respon
 
 ## Novelty
 
-The Bio-Social Tether distinguishes itself from existing solutions through a dual-layer architectural innovation: (1) it replaces the fragile dependency on centralized, internet-reliant microchip databases (e.g., AVID/FDX-B) with a decentralized, content-addressable IPFS registry, ensuring data persistence and accessibility in infrastructure-collapsed scenarios; and (2) it transcends generic disaster mesh radios (e.g., GoTenna, BRINK) that transport unstructured data by embedding structured, semantic query resolution directly into the low-power RPL mesh layer. Unlike prior art that treats animal tracking as a passive ID lookup requiring external connectivity, this system actively resolves deterministic CIDs via peer-to-peer block exchange within lossy networks, utilizing RPL OF0 hop-count minimization and sliding-window duplicate detection to guarantee low-latency, offline-first retrieval of medical and ownership records. This specific coupling of content-addressable storage with constrained mesh routing eliminates single points of failure and ensures data integrity without external infrastructure, a capability absent in current non-human welfare tracking literature [1].
+Refines novelty claim by explicitly contrasting the system's semantic query resolution and offline consistency against the centralized server dependency of AVID/FDX-B and the unstructured data transport of generic mesh radios like GoTenna, detailing how the specific integration of IPFS block exchange with RPL OF0 hop-count minimization solves the offline data consistency problem.
 
 ## Diagram
 

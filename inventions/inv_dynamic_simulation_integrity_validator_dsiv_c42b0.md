@@ -39,7 +39,7 @@ Researchers and engineers designing complex multi-agent simulations who require 
 
 ## Novelty
 
-The invention is novel relative to prior art [P1] and [P2] by applying Inverse Reinforcement Learning and Jensen-Shannon Divergence to detect 'strategic drift' in agent value systems, whereas [P1] focuses on IoT service orchestration and [P2] on storage media validation, neither of which address behavioral integrity or game-theoretic equilibrium compliance. The specific novelty lies in the end-to-end algorithmic workflow linking MM-IRL parameter recovery to Nash equilibrium comparison for continuous auditing, a mechanism absent in the cited hardware and service management patents.
+The invention distinguishes itself from prior art [P1] and [P2] by replacing static validation with a continuous behavioral inference pipeline that uniquely links MM-IRL-recovered preferences to game-theoretic Nash baselines for real-time integrity auditing, a dynamic mechanism absent in the static IoT orchestration [P1] and storage media validation [P2] approaches.
 
 ## Ecosystem use
 

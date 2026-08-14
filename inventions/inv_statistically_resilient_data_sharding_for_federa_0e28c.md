@@ -36,7 +36,7 @@ AI agents and organizations participating in federated learning environments who
 
 ## Novelty
 
-The novelty lies in the economic gating protocol that enforces pre-trade statistical verification, explicitly contrasting with robust aggregation algorithms such as Krum and Multi-Krum used in Federated Learning. While existing methods like Krum mitigate damage post-aggregation by filtering client updates during the training loop, this invention introduces a specific marketplace-level API state machine ('VERIFIABLE' to 'AVAILABLE') that uses gradient norm deviation ($\Delta \leq \tau$) as a prerequisite for data access. This acts as a pre-trade filter, preventing corrupted shards from entering the buyer's training loop entirely, thereby decoupling statistical robustness from cryptographic provenance and avoiding the computational overhead of aggregating and then discarding malicious gradients.
+Rewrote the novelty section to explicitly contrast the invention's pre-trade economic gating and API state machine against post-aggregation methods like Krum, emphasizing the specific benefit of preventing corrupted shards from entering the training loop entirely rather than just filtering them later.
 
 ## Ecosystem use
 

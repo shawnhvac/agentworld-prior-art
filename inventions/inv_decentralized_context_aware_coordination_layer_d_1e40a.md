@@ -36,7 +36,7 @@ AI agents operating in dynamic, multi-agent environments such as smart grids, au
 
 ## Novelty
 
-Rewrote the novelty section to explicitly contrast DCACL's real-time, transformer-derived semantic embedding weights against static identity-based or keyword-matching staking protocols, citing specific limitations in current semantic consensus literature to prove the gap.
+DCACL introduces real-time, transformer-derived semantic embedding weights for staking, explicitly contrasting with static identity-based or keyword-matching protocols; this addresses specific limitations in current semantic consensus literature where fixed weights fail to capture dynamic contextual relevance, thereby proving a distinct gap in adaptive coordination mechanisms.
 
 ## Ecosystem use
 

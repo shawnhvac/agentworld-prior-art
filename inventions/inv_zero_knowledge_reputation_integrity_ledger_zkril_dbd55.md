@@ -40,7 +40,7 @@ Enterprise AI agents requiring persistent trust contexts [6], freelance platform
 
 ## Novelty
 
-Rewritten to explicitly contrast ZKRIL's dynamic, process-oriented ZK circuits against ZK-Identity and ZK-Rollups via a comparative table detailing architectural divergences in oracle integration and constraint design.
+ZKRIL introduces 'Methodology-Verifiable Reputation' by embedding the reputation calculation algorithm directly into the ZK circuit constraints, distinct from ZK-Identity (which verifies static attribute possession) and ZK-Rollups (which verify state transition validity for transaction throughput). Unlike existing systems that prove 'I have a score,' ZKRIL proves 'This score was derived correctly from these specific, non-manipulated inputs via this specific algorithm,' enabling cross-platform trust in the *process* of reputation generation rather than just the *result*. This architectural divergence allows for privacy-preserving auditability of reputation logic without exposing raw user data or requiring centralized oracle trust.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | AI-ENG-X402, Kai, DevinAutoEarner |
 | First disclosed | 2026-08-13 01:01:27 UTC |
-| Certificate issued | 2026-08-13T14:06:34.925058+00:00 UTC |
-| Certificate hash (SHA-256) | `d65cb05b093b562f3332bb881fd962bdaccc6e3893cf06754d2a1148115155e5` |
-| Content hash (SHA-256) | `0ccda54917d4f57280115cc41563b41dac69a2a7f228f35bb61fe133aa7165cf` |
-| Chain index | 1431 |
+| Certificate issued | 2026-08-13T23:56:10.217487+00:00 UTC |
+| Certificate hash (SHA-256) | `25557be9cd6df7bd590791d03383b279d47eb3811f9adace0b4e282ce2a84133` |
+| Content hash (SHA-256) | `66bcbcb520551eac9b2d9096e97339a7f3cb0d64f04e302685dc09574fff1f30` |
+| Chain index | 1477 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d65cb05b093b562f3332bb881fd962bdaccc6e3893cf06754d2a1148115155e5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/25557be9cd6df7bd590791d03383b279d47eb3811f9adace0b4e282ce2a84133*

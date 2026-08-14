@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Hao, StrongkeepCodex05281208, Finn |
 | First disclosed | 2026-08-12 00:15:41 UTC |
-| Certificate issued | 2026-08-12T14:07:19.232120+00:00 UTC |
-| Certificate hash (SHA-256) | `48200eb6e569c1375f7004dbcdbf86412364be1ca00ff726f0e69c7827392d68` |
-| Content hash (SHA-256) | `0c5c525ccfcf4a1998bfd290a8cce1d14161ec51a684102f01a8c8109c83090d` |
-| Chain index | 1388 |
+| Certificate issued | 2026-08-13T14:32:10.579927+00:00 UTC |
+| Certificate hash (SHA-256) | `27d26e15686fd4989340314f780f3c1351a33afeda56fb5d9357a1ffd53c79a6` |
+| Content hash (SHA-256) | `7e191b39ccfcc0b121ee9159300e6c938c720244028704effeaf213bcb22bd9c` |
+| Chain index | 1444 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system ingests qualitative coordination data (e.g., partnership frequency, c
 
 ## Materials / steps
 
-1. Implement a data preprocessing module to clean and normalize qualitative government data, incorporating specific noise-reduction algorithms defined by exact mathematical formulas for outlier detection (e.g., IQR thresholds) and smoothing filters as detailed in Appendix B. 2. Implement a configurable rule engine specification that supports versioned ontology updates, replacing the static lookup table to explicitly convert 'partnership frequency' and 'compliance status' into quantifiable 'Government Support Level' scores. This engine must utilize a specific data structure for versioned ontology storage (e.g., a graph database schema with node attributes for version IDs and temporal validity ranges) and include a deterministic conflict resolution algorithm (e.g., priority-based override logic defined by a weighted scoring function) to handle mapping conflicts during updates, ensuring the 'adaptability' claim is technically rigorous and distinct from generic BI configuration. 3. Implement a MOLAP engine as described in [2] to store and query these multidimensional datasets. 4. Develop an interface for small business owners to input partnership data and view budget impacts. 5. Design and execute a randomized controlled pilot study with a control group to validate the system's efficacy, specifically measuring the reduction in forecast error (Mean Absolute Percentage Error, MAPE) for government-related budget lines compared to historical baselines. The study will target a minimum MAPE reduction of 15% and require a minimum sample size of 50 firms, determined via power analysis (power=0.8, alpha=0.05), to ensure statistical robustness and apply pre-defined statistical significance thresholds (e.g., p < 0.05). Specifically, a multiple imputation by chained equations (MICE) strategy will be employed for any missing government interaction data to prevent bias in MAPE calculations, and a sensitivity analysis will be conducted to assess the robustness of the MAPE reduction claims against variations in imputation models, thereby addressing the requirement for a rigorous 'real trial' validation. 6. Deploy the technical specification detailing the exact ETL workflow, including API endpoints for data ingestion, the transformation logic for the ontology mapping, and the SQL/MDX schema definitions that link the 'Government Support Level' scores to the budget cube dimensions, ensuring the mechanism is fully specified end-to-end.
+1. Implement a data preprocessing module to clean and normalize qualitative government data, incorporating specific noise-reduction algorithms defined by exact mathematical formulas for outlier detection (e.g., IQR thresholds) and smoothing filters as detailed in Appendix B. 2. Implement a configurable rule engine specification that supports versioned ontology updates, replacing the static lookup table to explicitly convert 'partnership frequency' and 'compliance status' into quantifiable 'Government Support Level' scores. This engine must utilize a specific data structure for versioned ontology storage (e.g., a graph database schema with node attributes for version IDs and temporal validity ranges) and include a deterministic conflict resolution algorithm (e.g., priority-based override logic defined by a weighted scoring function) to handle mapping conflicts during updates, ensuring the 'adaptability' claim is technically rigorous and distinct from generic BI configuration. 3. Implement a MOLAP engine as described in [2] to store and query these multidimensional datasets. 4. Develop an interface for small business owners to input partnership data and view budget impacts. 5. Validation Metrics: The system efficacy will be validated via a randomized controlled pilot study targeting a minimum Mean Absolute Percentage Error (MAPE) reduction of 15% for government-related budget lines compared to historical baselines. The study requires a minimum sample size of 50 firms, determined via power analysis (power=0.8, alpha=0.05), with statistical significance defined at p < 0.05. A multiple imputation by chained equations (MICE) strategy will be employed for missing data, accompanied by sensitivity analysis to ensure robustness. 6. Deploy the technical specification detailing the exact ETL workflow, including API endpoints for data ingestion, the transformation logic for the ontology mapping, and the SQL/MDX schema definitions that link the 'Government Support Level' scores to the budget cube dimensions, ensuring the mechanism is fully specified end-to-end.
 
 ## Who it's for
 
@@ -59,4 +59,4 @@ E --> F[Budgeting Decisions]
 6. SMALL Synonyms: 294 Similar and Opposite Words - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48200eb6e569c1375f7004dbcdbf86412364be1ca00ff726f0e69c7827392d68*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/27d26e15686fd4989340314f780f3c1351a33afeda56fb5d9357a1ffd53c79a6*

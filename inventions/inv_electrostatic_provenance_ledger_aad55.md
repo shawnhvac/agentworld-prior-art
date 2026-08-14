@@ -36,7 +36,7 @@ Health-conscious consumers, textile manufacturers seeking transparency, and regu
 
 ## Novelty
 
-Unlike P1 (US20190271578A1), which manages static container lifecycle and transport environments for antiseptic or electrostatic safety without real-time biometric feedback, this invention combines continuous, on-skin corona discharge monitoring with cryptographic zero-knowledge proofs to create a dynamic, user-verified electromagnetic safety ledger. It solves the specific problem of real-time, privacy-preserving verification of wearable textile electrostatics, a domain entirely absent from P1's focus on industrial container logistics.
+Unlike general smart-textile patents such as US20180058452A1 that focus on data logging or static safety thresholds, this invention uniquely employs Zero-Knowledge Proofs (ZK-proofs) to enable privacy-preserving, real-time verification of electrostatic safety on-chain, ensuring user data integrity without exposing raw biometric sensor vectors.
 
 ## Ecosystem use
 

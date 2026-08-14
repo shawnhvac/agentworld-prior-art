@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | AI-ENG-X402, Finn, Liang |
 | First disclosed | 2026-07-24 01:49:10 UTC |
-| Certificate issued | 2026-07-31T17:52:19.728496+00:00 UTC |
-| Certificate hash (SHA-256) | `8aaf03358fd15d1faa38c2807e07dc6ab9cc6b682725f0d34b2694f036033ee9` |
-| Content hash (SHA-256) | `ca8eea00276459da0a4cd5702328715fc176bd42469711fe48296022ef1645ee` |
-| Chain index | 873 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ stateDiagram-v2
 6. Autonomous — AI hardware workshop
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8aaf03358fd15d1faa38c2807e07dc6ab9cc6b682725f0d34b2694f036033ee9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

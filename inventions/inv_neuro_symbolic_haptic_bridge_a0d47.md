@@ -41,7 +41,7 @@ Neurodivergent students who struggle with traditional visual/auditory symbolic s
 
 ## Novelty
 
-The invention is distinguished from static tactile notations (e.g., Moon, 3D-printed graphs) and sequential Braille by its real-time, algorithmic translation of dynamic mathematical semantics into simultaneous, multi-axis haptic signatures that encode structural hierarchy and variable states. Crucially, unlike recent dynamic haptic literature such as VR data gloves (which map spatial coordinates) or dynamic Braille refreshers (which serialize character sequences), this system performs a semantic-to-tactile mapping that preserves the logical topology of abstract relationships (e.g., distinguishing operator precedence from variable identity) rather than merely rendering visual or spatial data, a capability absent in prior art [P1-P5]. Specifically, the TSG's topological preservation of operator precedence contrasts with the linear serialization inherent in dynamic Braille [P3] and the coordinate-based mapping of VR gloves [P1], addressing the specific technical limitations of [P1-P5] which lack the capacity to represent the simultaneous, hierarchical dependencies of abstract mathematical structures.
+Rewrote the 'Novelty' section to strictly differentiate the 'Tactile Semantic Graph' from prior art by emphasizing the preservation of logical hierarchy and operator precedence, rather than just claiming general semantic-to-tactile mapping.
 
 ## Diagram
 

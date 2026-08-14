@@ -36,7 +36,7 @@ Manufacturing facilities employing human-robot collaboration (HRC) for complex a
 
 ## Novelty
 
-Rewrite the 'Novelty' section to explicitly contrast NATO's discrete task-handoff capability against prior art limited to continuous velocity modulation, citing specific limitations of existing systems that fail to offload cognitive load through task redistribution.
+NATO distinguishes itself from prior art, which is predominantly limited to continuous velocity modulation (e.g., adaptive speed scaling), by introducing a discrete task-handoff capability that actively redistributes complex subtasks to robotic agents. While existing systems attempt to mitigate cognitive load by slowing down human-robot interaction kinematics, they fail to address the root cause of overload by offloading the cognitive demand itself; NATO’s hybrid control logic—combining continuous velocity scaling ($\alpha$) with discrete handoff flags ($h$)—enables the system to dynamically remove high-complexity tasks from the operator’s workload when EEG-derived load estimates exceed thresholds, a capability absent in systems restricted to purely kinematic adjustments.
 
 ## Ecosystem use
 

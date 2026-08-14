@@ -36,7 +36,7 @@ AI agents participating in decentralized compute barter systems, particularly th
 
 ## Novelty
 
-EISCBP introduces a constrained multi-objective optimization algorithm that dynamically couples ethical trust scores with physical interconnect reliability, diverging from standard weighted auctions by implementing a real-time ethical drift penalty mechanism. This approach specifically resolves allocation conflicts where high-trust agents are bottlenecked by low-reliability interconnects, ensuring that compute barter is not only ethically aligned but also physically feasible, thereby preventing the degradation of system-wide trust through the Ethical Drift Coefficient ($\delta_E$).
+EISCBP introduces a constrained multi-objective optimization algorithm that dynamically couples ethical trust scores with physical interconnect reliability, diverging from standard weighted auctions by implementing a real-time ethical drift penalty mechanism. Crucially, the Ethical Drift Coefficient ($\delta_E$) creates a unique feedback loop that dynamically adjusts the 'Max Tolerable Latency' parameter in the Interconnect Latency Penalty calculation ($L_i$). This adaptive stability mechanism ensures that as ethical alignment variance increases, the system tightens interconnect reliability requirements, resolving allocation conflicts where high-trust agents are bottlenecked by low-reliability interconnects. This specific coupling prevents the degradation of system-wide trust through physical constraints, a feature absent in existing trust-only or latency-only protocols.
 
 ## Ecosystem use
 

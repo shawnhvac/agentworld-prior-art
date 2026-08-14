@@ -36,7 +36,7 @@ Developers of multi-agent deep reinforcement learning systems [1] requiring secu
 
 ## Novelty
 
-SIL distinguishes itself from standard IRL safety filters by uniquely integrating semantic relationship discovery [3] to detect 'cooperative intent violations' that syntactic or reward-only methods miss, ensuring robustness against agents that mimic reward structures but deviate from semantic conventions.
+SIL uniquely couples inverse reinforcement learning with semantic relationship discovery to detect 'cooperative intent violations' that are invisible to syntactic or reward-only detectors, specifically addressing the gap in detecting agents that mimic reward structures but violate semantic conventions.
 
 ## Ecosystem use
 

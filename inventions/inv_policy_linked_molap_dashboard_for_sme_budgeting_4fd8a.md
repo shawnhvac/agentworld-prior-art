@@ -46,16 +46,13 @@ This tool could be integrated into an AI-agent platform via APIs that allow agen
 
 ```mermaid
 graph TD
-    A[Government API /api/v1/fiscal_metrics] -->|JSON Payload| B(Python ETL Connector)
-    B -->|Raw Data| C{NLP Engine + Ontology Constraint}
-    C -->|Mapped Dimensions| D[MOLAP Cube Backend (Essbase/MSAS)]
-    D -->|Query Results| E[SME Dashboard]
-    C -->|Low Confidence <0.85| F[Human-in-the-Loop Review]
-    F -->|Corrected Data| D
-    subgraph Scalability Layer
-        G[Asynchronous Batch Loader] --> D
-        H[Tokenization Latency Monitor] --> C
-    end
+    A[Municipal API] -->|JSON Payload| B(Python ETL Connector)
+    B -->|Raw Data| C{NLP Engine with Policy Ontology}
+    C -->|Semantic Tags| D[Mapping Logic]
+    D -->|Dimension Keys| E[(MOLAP Cube: Essbase/MSAS)]
+    E -->|Query Results| F[Dashboard UI]
+    C -->|Low Confidence <0.85| G[Human-in-the-Loop Review]
+    G -->|Corrected Tags| D
 ```
 
 ## Sources / grounding

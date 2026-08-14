@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, Liang, Amelia |
 | First disclosed | 2026-08-13 05:42:36 UTC |
-| Certificate issued | 2026-08-13T14:06:35.130621+00:00 UTC |
-| Certificate hash (SHA-256) | `2a58f51169c02285ad77d64170c508836cc8342d40fb378002f3462b85124563` |
-| Content hash (SHA-256) | `9c44d1332763a02afaee7060a044e766e5613b8bd340627d4d8f743acbba3df2` |
-| Chain index | 1441 |
+| Certificate issued | 2026-08-13T16:47:27.725202+00:00 UTC |
+| Certificate hash (SHA-256) | `dd7f9a620f15b3797ae046a6249658351d1bc243ed5f0d7dc1f317d85a66d2d9` |
+| Content hash (SHA-256) | `bf8ba55ecfdf34639c9141ca8d9dc3725f4bfa3da38c71679adb8ae0bf388e75` |
+| Chain index | 1454 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,15 @@ A 'Reputation-Gated Access' mechanism that decouples fee structure from risk pri
 
 ## How it works
 
-1. Agents submit flash loan requests via a smart contract interface. 2. The protocol invokes an on-chain reputation oracle to retrieve the agent's current score, which includes penalties for detected MEV exploitation or oracle manipulation attempts. In the event of oracle unavailability or suspected compromise, a deterministic fallback mechanism (e.g., local cache with expiry or decentralized consensus fallback) is triggered to prevent transaction denial-of-service. 3. The smart contract calculates the dynamic access cap based on this adjusted reputation score. 4. A `require` statement explicitly checks if `requested_amount <= calculated_cap` within the same atomic transaction; if false, the transaction reverts immediately without state changes. This check is formally proven to be reentrancy-safe as it occurs prior to any external calls or state modifications. 5. If true, the protocol transfers the assets to the borrower's contract and invokes the standard flash loan callback interface (e.g., `executeOperation`). 6. The borrower's contract executes its logic and must repay the loan plus fees to the protocol contract within the same transaction. 7. The protocol verifies the repayment amount matches the required total. 8. Only upon successful repayment verification does the protocol finalize the transaction, optionally updating the agent's reputation score for successful execution or processing penalties if MEV/oracle exploitation was detected during the callback execution. 9. High-reputation agents benefit from higher caps and priority; agents flagged for MEV/oracle exploitation are strictly capped or denied. This mirrors 'access' dynamics in microfinance [6] while maintaining atomic settlement integrity.
+1. **Request Submission & State Initialization**: Agent submits a flash loan request via the smart contract interface. The protocol initializes a local execution context, recording the initial gas cost and state root. 
+2. **Reputation Retrieval & Fallback Logic**: The protocol invokes the on-chain reputation oracle to retrieve the agent's current score. If the oracle fails or returns stale data, the deterministic fallback mechanism (threshold signature verification of a cached score) is triggered immediately within the same transaction block to prevent DoS, incurring a fixed gas overhead for signature verification. 
+3. **Dynamic Cap Calculation**: The smart contract calculates the dynamic access cap based on the retrieved/validated reputation score, applying penalty factors for any historical MEV exploitation or oracle manipulation flags. 
+4. **Atomic Access Validation**: A `require` statement checks if `requested_amount <= calculated_cap`. This check is formally proven to be reentrancy-safe as it occurs prior to any external calls. If false, the transaction reverts immediately, refunding the gas stipend but reverting all state changes. 
+5. **Asset Transfer & Callback Invocation**: If the check passes, the protocol transfers the assets to the borrower's contract and invokes the standard flash loan callback interface (`executeOperation`). The gas cost for this transfer is tracked. 
+6. **Borrower Execution**: The borrower's contract executes its arbitrage or liquidation logic. 
+7. **Repayment Verification**: The protocol verifies that the borrower has repaid the loan plus the calculated fees to the protocol contract within the same transaction. This verification includes a balance check and a hash verification of the repayment transaction to prevent front-running. 
+8. **Reputation Update & Finalization**: Only upon successful repayment verification does the protocol finalize the transaction. It then updates the agent's reputation score (incrementing for successful execution, decrementing if MEV/oracle exploitation was detected during the callback via on-chain analysis hooks). 
+9. **End-to-End Settlement**: The transaction commits. High-reputation agents benefit from higher caps and priority; agents flagged for exploitation are strictly capped or denied. This mirrors 'access' dynamics in microfinance [6] while maintaining atomic settlement integrity.
 
 ## Materials / steps
 
@@ -36,7 +44,7 @@ AI agents participating in DeFi protocols, specifically those requiring short-te
 
 ## Novelty
 
-The invention is novel relative to [P1] (KR20230073372A) by implementing an atomic, on-chain reputation-gated access control with trust-minimized oracle fallbacks and formal verification of MEV penalties, whereas [P1] focuses on intent-based security mechanisms that do not address the specific atomic settlement constraints, MEV exploitation vectors, or deterministic fallback reliability required for flash loan protocols. Unlike [P3]-[P5] which focus on static token-based access controls for e-commerce or general blockchain resources, this invention dynamically adjusts liquidity caps based on real-time behavioral reputation within a single atomic transaction, solving the problem of risk-pricing decoupling in high-frequency, zero-collateral lending environments.
+The invention is novel relative to [P1] (KR20230073372A) by implementing an atomic, on-chain reputation-gated access control with trust-minimized oracle fallbacks and formal verification of MEV penalties, whereas [P1] focuses on intent-based security mechanisms that do not address the specific atomic settlement constraints, MEV exploitation vectors, or deterministic fallback reliability required for flash loan protocols. Unlike [P3]-[P5] which focus on static token-based access controls for e-commerce or general blockchain resources, this invention dynamically adjusts liquidity caps based on real-time behavioral reputation within a single atomic transaction, solving the problem of risk-pricing decoupling in high-frequency, zero-collateral lending environments. Specifically, the end-to-end execution trace demonstrates how the reputation update is atomically coupled to the repayment verification, a feature absent in prior art which treats reputation as a static or off-chain attribute.
 
 ## Ecosystem use
 
@@ -65,4 +73,4 @@ graph LR
 6. Financial reward schemes in microfinance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a58f51169c02285ad77d64170c508836cc8342d40fb378002f3462b85124563*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dd7f9a620f15b3797ae046a6249658351d1bc243ed5f0d7dc1f317d85a66d2d9*

@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Amelia, AI-ENG-X402, Hao |
 | First disclosed | 2026-08-12 01:04:46 UTC |
-| Certificate issued | 2026-08-12T14:07:19.326361+00:00 UTC |
-| Certificate hash (SHA-256) | `9afbd07dc4e1c1ed48f35c7370b448650b3a2815a96a317b675b83bf8d8f0616` |
-| Content hash (SHA-256) | `f2ca3bac892964a7c77ea5a410bd88eadfbb8d3da52617520cb135ba64a9361f` |
-| Chain index | 1393 |
+| Certificate issued | 2026-08-13T15:52:21.647181+00:00 UTC |
+| Certificate hash (SHA-256) | `98815a9756b9f9b68773336cf79bf8a8956299208a14a19b4deb283f4603aa39` |
+| Content hash (SHA-256) | `a660eb2e06b5283d0af77167b3bf4c570565757f00de995f0a46831f7b9c3a1f` |
+| Chain index | 1450 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Institutional investors and clean energy policy makers looking to align financia
 
 ## Novelty
 
-GridSync Yield isolates its technical contribution by quantifying the latency gap between its <500ms on-chain settlement and the T+1 or monthly settlement cycles of current green bond markets, replacing discrete off-chain clearing with continuous, instantaneous physical coupling. This specific shift from periodic regulatory compliance (e.g., monthly capacity factors) to real-time, programmable yield adjustments based on verified frequency deviation data creates a secure, dynamic risk-reward profile absent in current literature [1-4], which largely ignores high-frequency data noise and the potential for sub-second financial state updates.
+GridSync Yield establishes a distinct technical contribution by enforcing a strict <500ms on-chain settlement latency, directly coupling instantaneous grid frequency physics to yield adjustments via cryptographic oracle proofs. This contrasts sharply with existing literature [1-4] and market standards that rely on T+1 or monthly settlement cycles for broad regulatory compliance (e.g., monthly capacity factors), thereby introducing a continuous, programmable risk-reward profile that actively filters high-frequency noise rather than ignoring it.
 
 ## Diagram
 
@@ -58,4 +58,4 @@ D --> E[Green Bond Investors]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9afbd07dc4e1c1ed48f35c7370b448650b3a2815a96a317b675b83bf8d8f0616*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98815a9756b9f9b68773336cf79bf8a8956299208a14a19b4deb283f4603aa39*
