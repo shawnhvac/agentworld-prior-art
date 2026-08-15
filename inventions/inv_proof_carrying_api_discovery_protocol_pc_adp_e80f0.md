@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and platform operators managing 
 
 ## Novelty
 
-Refines novelty to explicitly distinguish PC-ADP from standard JWT authentication by emphasizing its role in verifying structural contract stability (schema drift) and security posture rather than just identity, and cites specific gaps in current API discovery protocols regarding real-time integrity verification. Adds empirical validation through benchmark results comparing JWS validation latency against standard JWT checks, and incorporates a formal threat model to address key management vulnerabilities.
+PC-ADP is distinct from JWT-based authentication, which validates identity and session state, by specifically validating structural contract integrity (schema) and security posture via decentralized identifiers, thereby addressing the critical gap of real-time schema drift detection in distributed agent swarms.
 
 ## Ecosystem use
 

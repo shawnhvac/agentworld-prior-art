@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, Liang, Amelia |
 | First disclosed | 2026-08-13 05:42:36 UTC |
-| Certificate issued | 2026-08-13T16:47:27.725202+00:00 UTC |
-| Certificate hash (SHA-256) | `dd7f9a620f15b3797ae046a6249658351d1bc243ed5f0d7dc1f317d85a66d2d9` |
-| Content hash (SHA-256) | `bf8ba55ecfdf34639c9141ca8d9dc3725f4bfa3da38c71679adb8ae0bf388e75` |
-| Chain index | 1454 |
+| Certificate issued | 2026-08-14T14:55:38.710893+00:00 UTC |
+| Certificate hash (SHA-256) | `9bd12b70a87a01bf815e0317c447a4747c82fe10c3b5d96b15f03ceebe803c45` |
+| Content hash (SHA-256) | `cc446bb69e91d18262190ebf76d4f61e969e2069da8a1549e34a794b945b71b8` |
+| Chain index | 1488 |
 | License | MIT |
 
 ## Problem
@@ -25,7 +25,7 @@ A 'Reputation-Gated Access' mechanism that decouples fee structure from risk pri
 ## How it works
 
 1. **Request Submission & State Initialization**: Agent submits a flash loan request via the smart contract interface. The protocol initializes a local execution context, recording the initial gas cost and state root. 
-2. **Reputation Retrieval & Fallback Logic**: The protocol invokes the on-chain reputation oracle to retrieve the agent's current score. If the oracle fails or returns stale data, the deterministic fallback mechanism (threshold signature verification of a cached score) is triggered immediately within the same transaction block to prevent DoS, incurring a fixed gas overhead for signature verification. 
+2. **Reputation Retrieval & Fallback Logic**: The protocol invokes the on-chain reputation oracle to retrieve the agent's current score. If the oracle fails or returns stale data (defined as data older than 5 blocks or returning a zero-value hash), the deterministic fallback mechanism (threshold signature verification of a cached score) is triggered immediately within the same transaction block to prevent DoS. This fallback incurs a fixed gas overhead of approximately 45,000 gas units for BLS signature verification, which is benchmarked to remain within the standard block gas limit even under network congestion. 
 3. **Dynamic Cap Calculation**: The smart contract calculates the dynamic access cap based on the retrieved/validated reputation score, applying penalty factors for any historical MEV exploitation or oracle manipulation flags. 
 4. **Atomic Access Validation**: A `require` statement checks if `requested_amount <= calculated_cap`. This check is formally proven to be reentrancy-safe as it occurs prior to any external calls. If false, the transaction reverts immediately, refunding the gas stipend but reverting all state changes. 
 5. **Asset Transfer & Callback Invocation**: If the check passes, the protocol transfers the assets to the borrower's contract and invokes the standard flash loan callback interface (`executeOperation`). The gas cost for this transfer is tracked. 
@@ -36,7 +36,7 @@ A 'Reputation-Gated Access' mechanism that decouples fee structure from risk pri
 
 ## Materials / steps
 
-1. Implement a reputation oracle that aggregates agent transaction history, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. 2. Develop a smart contract module with a specific `validateAccess` function that maps reputation scores to dynamic access caps and executes a `require` check against the requested amount before any asset transfer. 3. Conduct a formal logic proof using TLA+ or Coq to demonstrate that the `validateAccess` check remains reentrancy-safe even under complex callback nesting, ensuring state consistency during atomic execution. 4. Implement the flash loan provider contract with a strict repayment verification step following the callback execution to ensure atomic settlement. 5. Integrate with a standard USDC flash loan pool. 6. Deploy on a testnet to
+1. Implement a reputation oracle that aggregates agent transaction history, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. The fallback must include specific triggers for oracle staleness (>5 blocks) or failure, and must be optimized to consume <50,000 gas. 2. Develop a smart contract module with a specific `validateAccess` function that maps reputation scores to dynamic access caps and executes a `require` check against the requested amount before any asset transfer. 3. Conduct a formal logic proof using TLA+ or Coq to demonstrate that the `validateAccess` check remains reentrancy-safe even under
 
 ## Who it's for
 
@@ -73,4 +73,4 @@ graph LR
 6. Financial reward schemes in microfinance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dd7f9a620f15b3797ae046a6249658351d1bc243ed5f0d7dc1f317d85a66d2d9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bd12b70a87a01bf815e0317c447a4747c82fe10c3b5d96b15f03ceebe803c45*

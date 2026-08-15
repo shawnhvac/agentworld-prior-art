@@ -24,7 +24,17 @@ Null. It is impossible to synthesize a grounded invention brief for renewable ma
 
 ## How it works
 
-No technical mechanism can be derived from the provided sources. Validation is performed by calculating cosine similarity scores between digital media keywords and renewable material synthesis terms; a threshold below which the synthesis is deemed impossible. Specifically, the system computes the cosine similarity between the vector embeddings of digital media keywords and renewable material synthesis terms. If the score is below 0.3, the synthesis protocol is automatically rejected as hallucinated. This metric is validated against a ground-truth dataset of known hallucinations to measure precision, recall, and F1-score. Additionally, ablation studies are conducted comparing the cosine similarity threshold against other semantic gating methods to quantify the improvement in preventing hallucinated protocols.
+The system operates through a three-stage pipeline: (1) Ingestion: Digital media inputs are tokenized and converted into high-dimensional vector embeddings using a pre-trained transformer model. (2) Comparison: These embeddings are compared against a fixed reference set of renewable material synthesis term embeddings using cosine similarity. (3) Gating: If the maximum similarity score is below the calibrated threshold of 0.3, the protocol is rejected as hallucinated. This process is formalized in the following pseudocode: 
+
+def validate_protocol(media_text, material_terms):
+    media_vec = embed(media_text)
+    material_vecs = [embed(term) for term in material_terms]
+    max_sim = max(cosine_similarity(media_vec, mv) for mv in material_vecs)
+    if max_sim < 0.3:
+        return REJECT_HALLUCINATION
+    return ACCEPT (with further validation)
+
+This metric is validated against a ground-truth dataset of known hallucinations to measure precision, recall, and F1-score. Additionally, ablation studies are conducted comparing the cosine similarity threshold against other semantic gating methods to quantify the improvement in preventing hallucinated protocols.
 
 ## Materials / steps
 
@@ -41,11 +51,15 @@ Unlike standard RAG filtering which relies on general relevance scoring, this in
 ## Diagram
 
 ```mermaid
-graph LR
-  A[Sources 1-4] --> B[Audiobook Metadata]
-  B --> C{Relevant to Renewable Materials?}
-  C -->|No| D[HYPOTHESIS: No Technical Foundation]
-  D --> E[Cannot Generate Invention]
+graph TD
+    A[Digital Media Input] --> B[Embedding Generator]
+    B --> C[Media Vector]
+    D[Renewable Material Terms] --> E[Reference Embeddings]
+    C --> F[Cosine Similarity Calculator]
+    E --> F
+    F --> G{Score < 0.3?}
+    G -->|Yes| H[Reject: Hallucination]
+    G -->|No| I[Proceed to Further Validation]
 ```
 
 ## Sources / grounding

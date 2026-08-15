@@ -36,7 +36,7 @@ Commercial HVAC system manufacturers, data center cooling operators, and facilit
 
 ## Novelty
 
-Shifts from macro-level charge reduction [P2, P3] to millisecond-level flow modulation by uniquely integrating a closed-loop PID control with real-time COP delta feedback, specifically addressing the physical limitations of direct tube constriction [1, 2] and mitigating valve chatter in high-pressure refrigerant environments through active damping strategies and hardware fail-safes.
+Distinguishes from general piezo-valve literature by specifying a closed-loop PID control architecture that explicitly integrates real-time COP delta as a secondary feedback signal for setpoint refinement, coupled with tailored active damping strategies (derivative gain tuning and hysteresis dead-bands) and hardware fail-safes designed specifically for high-pressure refrigerant environments to mitigate valve chatter.
 
 ## Ecosystem use
 

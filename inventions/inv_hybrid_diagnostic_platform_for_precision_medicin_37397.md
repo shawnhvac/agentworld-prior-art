@@ -36,7 +36,7 @@ Patients undergoing diagnostic procedures in precision medicine, particularly th
 
 ## Novelty
 
-The platform introduces a closed-loop diagnostic architecture with sub-100ms temporal synchronization, enabling real-time dynamic adjustment of biopsy protocols based on instantaneous physiological feedback, which fundamentally differs from prior art that relies on static, post-hoc multimodal data aggregation without closed-loop control.
+The platform's novelty lies not in the mere aggregation of multimodal data, but in a deterministic, sub-100ms temporal synchronization engine that enables causal, closed-loop control of biopsy protocols. Unlike prior art that performs static, post-hoc correlation of physiological and genomic datasets, this invention establishes a real-time feedback loop where instantaneous physiological deviations directly modulate sampling parameters before genomic analysis completes, thereby transforming diagnosis from a retrospective assessment into a dynamic, adaptive intervention.
 
 ## Ecosystem use
 

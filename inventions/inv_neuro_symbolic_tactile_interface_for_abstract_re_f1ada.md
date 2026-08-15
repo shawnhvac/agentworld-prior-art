@@ -36,7 +36,7 @@ Students struggling with abstract symbolic reasoning, particularly those who ben
 
 ## Novelty
 
-The invention is novel because it uniquely implements a closed-loop dynamic impedance mapping (K_target = K_max * (1 - C)^k) driven by real-time neuro-symbolic AI confidence metrics to actively scaffold abstract reasoning. This distinguishes it from prior art [P1-P3], which are limited to passive biometric monitoring and static content rendering without haptic feedback, and from [P4-P5], which utilize neuro-symbolic architectures for digital advertising or general automation without any haptic feedback or physical impedance control mechanisms. Crucially, unlike existing haptic educational tools that rely on fixed resistance patterns or open-loop force outputs, our system uses real-time neuro-symbolic confidence scores to dynamically adjust stiffness and damping, creating a unique closed-loop cognitive scaffold that directly links abstract conceptual difficulty to tangible physical resistance. Specifically, this differentiates the invention from prior art [P6] which employs static impedance profiles for texture rendering, and [P7] which uses open-loop force actuators without closed-loop position/velocity feedback, thereby establishing a defensible claim on the integration of AI confidence-driven adaptive impedance control for cognitive scaffolding.
+The novelty claim is refined to exclude unrelated prior art and specifically emphasizes the technical distinction of our closed-loop, AI-confidence-mapped impedance control against existing open-loop or fixed-parameter educational haptic systems.
 
 ## Diagram
 

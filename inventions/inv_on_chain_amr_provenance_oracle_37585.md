@@ -24,11 +24,11 @@ A hardware-software system that cryptographically hashes real-time microbiome se
 
 ## How it works
 
-Portable nanopore sequencing analyzes farm runoff to generate metagenomic data. This data is processed to distinguish livestock-specific AMR strains from environmental noise. The resulting risk profile is hashed and bound to livestock NFTs via smart contracts, creating an immutable audit trail.
+Portable Oxford Nanopore MinION Mk1C sequencers analyze farm runoff to generate metagenomic data. This data is processed using a standardized bioinformatics pipeline (e.g., Kraken2 with a curated AMR database and SAMtools for alignment) to distinguish livestock-specific AMR strains from environmental noise. The resulting risk profile is hashed using SHA-256 and bound to livestock NFTs via smart contracts, creating an immutable audit trail.
 
 ## Materials / steps
 
-1. Deploy portable nanopore sequencers at farm effluent points. 2. Sequence metagenomic data from runoff. 3. Apply validated thresholds to distinguish livestock-specific AMR strains from background noise [1]. 4. Hash the verified risk data. 5. Bind the hash to livestock NFTs on a blockchain. 6. Execute pre-deployment validation against gold-standard lab sequencing using a minimum sample size of n=500 paired samples to achieve 95% confidence with a 5% margin of error, ensuring >95% sensitivity and specificity with a defined false-positive rate threshold of <1% for regulatory compliance.
+1. Deploy portable Oxford Nanopore MinION Mk1C sequencers at farm effluent points. 2. Sequence metagenomic data from runoff using R10.4.1 flow cells. 3. Apply a validated bioinformatics pipeline (Kraken2 classification, SAMtools alignment) with defined thresholds to distinguish livestock-specific AMR strains from background noise [1]. 4. Hash the verified risk data using SHA-256. 5. Bind the hash to livestock NFTs on a blockchain. 6. Execute pre-deployment validation against gold-standard lab sequencing (Illumina NovaSeq) using a minimum sample size of n=500 paired samples to achieve 95% confidence with a 5% margin of error, ensuring >95% sensitivity and specificity with a defined false-positive rate threshold of <1% for regulatory compliance.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Livestock producers, regulatory bodies, and supply chain auditors requiring veri
 
 ## Novelty
 
-Unlike existing oracles that rely on probabilistic, farm-wide environmental aggregation, this system establishes a deterministic, cryptographic binding between individual livestock NFT identities and specific AMR strain hashes. This enables granular, animal-level attribution of resistance risk, eliminating the dilution of signal inherent in bulk averaging and providing a unique, non-fungible provenance trail for regulatory compliance and supply chain transparency.
+The innovation lies in the validated bioinformatics pipeline (Kraken2/SAMtools) that deterministically distinguishes livestock-specific AMR strains from environmental background noise, enabling precise, animal-level attribution of resistance risk rather than relying on probabilistic, farm-wide environmental aggregation.
 
 ## Ecosystem use
 

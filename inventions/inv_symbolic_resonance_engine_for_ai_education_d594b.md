@@ -36,7 +36,7 @@ Students and educators using AI tools who require deeper cognitive integration a
 
 ## Novelty
 
-Expanded the novelty claim to explicitly contrast the system's explicit symbolic ontology mapping and hybrid semantic-ontological alignment against the implicit statistical difficulty estimation and heuristic complexity metrics found in existing Adaptive Learning and Intelligent Tutoring System (ITS) frameworks [5][6][7], clarifying that the distinct contribution is the mechanism of 'symbolic resonance' rather than the feedback loop structure itself.
+Rewrote the novelty claim to explicitly contrast the system's explicit symbolic ontology mapping and hybrid semantic-ontological alignment against the implicit statistical difficulty estimation and heuristic complexity metrics found in existing Adaptive Learning and Intelligent Tutoring System (ITS) frameworks [5][6][7], clarifying that the distinct contribution is the mechanism of 'symbolic resonance' rather than the feedback loop structure itself.
 
 ## Ecosystem use
 
