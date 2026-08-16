@@ -36,7 +36,7 @@ Enterprise AI developers building agentic workflows that need to integrate with 
 
 ## Novelty
 
-The Semantic Handshake Protocol distinguishes itself from MCP's static tool discovery and OpenAPI's structural documentation by introducing a mandatory, bidirectional runtime negotiation of non-functional behavioral constraints (e.g., idempotency, consistency levels). It is the first protocol to enforce explicit service-side acceptance of these execution parameters via an 'execution-token' prior to invocation, thereby guaranteeing operational safety and eliminating the brittleness of static wrappers through verified dynamic constraint settlement.
+The Semantic Handshake Protocol introduces a distinct architectural pattern by coupling bidirectional runtime negotiation of non-functional behavioral constraints (e.g., idempotency, consistency levels) with pre-invocation cryptographic verification via an HMAC-signed 'execution-token'. Unlike MCP, which provides static tool discovery without mandatory runtime constraint validation, and OpenAPI, which offers structural documentation without cryptographic settlement of execution parameters, this protocol enforces a mandatory handshake where service-side acceptance is cryptographically guaranteed before invocation. This combination eliminates the brittleness of static wrappers by ensuring that semantic drift and unhandled constraint violations are resolved at the negotiation layer, providing a verifiable safety net for agentic interactions that existing standards do not offer.
 
 ## Ecosystem use
 

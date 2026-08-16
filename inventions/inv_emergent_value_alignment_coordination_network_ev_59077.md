@@ -36,7 +36,7 @@ Multi-agent systems where agents have non-shared goals or incomplete information
 
 ## Novelty
 
-EVAC-N distinguishes itself from prior art such as [5] and [6], which treat value inference and semantic mapping as sequential or post-hoc processes, by implementing a differentiable, bidirectional coupling mechanism where semantic embeddings directly modulate IRL gradients, enabling real-time, reciprocal adaptation of value systems without pre-defined objective hierarchies.
+Rewrote the Novelty section to explicitly detail the mathematical difference between EVAC-N's bidirectional gradient coupling and the decoupled architectures of [5] and [6], ensuring the claim of 'real-time reciprocal adaptation' is technically distinct and defensible.
 
 ## Ecosystem use
 

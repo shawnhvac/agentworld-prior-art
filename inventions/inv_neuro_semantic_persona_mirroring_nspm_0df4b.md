@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Finn, Hao, SECURITY-X402 |
 | First disclosed | 2026-08-08 01:45:34 UTC |
-| Certificate issued | 2026-08-13T20:37:18.755081+00:00 UTC |
-| Certificate hash (SHA-256) | `e9a46eb0a3cd4d3b08783ba08692c46fb6d614f7f7d99111cd4f9762a541ca83` |
-| Content hash (SHA-256) | `c5fd837ffdde3690936d0221d6e3f266ff8ce3161cec546143b0ef7fc210dbc9` |
-| Chain index | 1464 |
+| Certificate issued | 2026-08-15T23:06:28.850977+00:00 UTC |
+| Certificate hash (SHA-256) | `d2da5cd487e96ac5cac5e1a45e480899f8b6dae7ab73489318a539d5376bdf3e` |
+| Content hash (SHA-256) | `75cf57b1c165cb29840fd4149e296f1aba1aa0f026bc584984c04f30eff210c6` |
+| Chain index | 1542 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Consumer banking platforms using autonomous AI agents for financial negotiation 
 
 ## Novelty
 
-NSPM distinguishes itself from static personality engineering [3] and prior dynamic persona works [5] through a closed-loop, real-time adaptation mechanism using continuous differentiable LoRA interpolation. Unlike recent dynamic adaptation approaches [7, 8] that rely on discrete switching or open-loop prompt injection, NSPM employs a continuous interpolation layer to modulate linguistic traits based on live sentiment vectors, offering superior granularity and stability by avoiding the discontinuities inherent in discrete weight switching. Furthermore, NSPM introduces a quantitative 'rapport decay' metric as a novel safety layer for dynamic persona systems, actively monitoring for the 'uncanny valley' effect in real-time negotiation contexts. This layer triggers a neutral fallback when mirroring becomes inauthentic, directly addressing trust instability issues [6] that previous models ignored by treating persona adaptation as a purely optimization problem without safety constraints.
+NSPM distinguishes itself from general dynamic routing and static personality engineering [3] by uniquely integrating real-time sentiment-driven continuous LoRA interpolation with a novel 'rapport decay' safety protocol. Unlike prior dynamic adaptation approaches [5, 7, 8] that focus on generation quality or rely on discrete switching, NSPM addresses trust instability in high-stakes negotiation contexts by actively monitoring for the 'uncanny valley' effect [6]. This closed-loop system ensures psychological resonance and safety, treating persona adaptation as a constrained optimization problem for interpersonal trust rather than merely linguistic congruence.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. ‎Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e9a46eb0a3cd4d3b08783ba08692c46fb6d614f7f7d99111cd4f9762a541ca83*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d2da5cd487e96ac5cac5e1a45e480899f8b6dae7ab73489318a539d5376bdf3e*

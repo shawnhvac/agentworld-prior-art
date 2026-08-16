@@ -37,17 +37,7 @@ DARPF embeds defeasible logic rules into smart contracts on a permissioned block
 
 ## Materials / steps
 
-Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON) configured with a deterministic ground truth generation process using fixed random seeds and predefined interaction matrices to ensure reproducibility; Reputation evaluation metrics and benchmarks including Cross-System Query Latency (<50ms) measured via 10,000 concurrent read-only queries across three distinct peer nodes, and Reputation Convergence Accuracy (>95% agreement with ground truth in simulation) validated through 500 iterative epochs of agent interaction under noisy data conditions defined as Gaussian noise (σ=0.1) injected into agent utility functions and error injection rates set at 5% random packet loss and 2% adversarial feedback manipulation. 
-
-**Phase 1: Simulation Validation Phase**: 
-1. **Scope**: Execute DARPF in the AI agent simulation environment to validate logical consistency and performance under controlled noise. 
-2. **Metrics**: Verify Cross-System Query Latency and Reputation Convergence Accuracy as defined above.
-
-**Phase 2: Real-World Pilot**: 
-1. **Pilot Scope**: Deploy DARPF on a private consortium blockchain involving 5 distinct autonomous vehicle fleets from different manufacturers. 
-2. **Data Injection**: Agents will exchange safety validation reports (e.g., pedestrian detection confidence) as reputation events. 
-3. **Metrics**: Track real-time reputation score updates against manual ground-truth audits of 100 critical incidents. System success is defined as <1% divergence between DARPF scores and manual audit ground truth across the 100 critical incidents, with p<0.05 statistical significance. 
-4. **Duration**: 30-day trial period with weekly checkpoint validations.
+Permissioned blockchain platform (e.g., Hyperledger Fabric or Quorum); Smart contract development tools (e.g., Solidity, Chaincode); Defeasible logic implementation (e.g., using Prolog or specialized defeasible logic engines); AI agent simulation environment (e.g., Multi-Agent Systems platforms like JADE or MASON) configured with a deterministic ground truth generation process using fixed random seeds and predefined interaction matrices to ensure reproducibility; Reputation evaluation metrics and benchmarks including Cross-System Query Latency (<50ms) measured via 10,000 concurrent read-only queries across three distinct peer nodes, Reputation Convergence Accuracy (>95% agreement with ground truth in simulation) validated through 500 iterative epochs of agent interaction under noisy data conditions defined as Gaussian noise (σ=0.1) injected into agent utility functions and error injection rates set at 5% random packet loss and 2% adversarial feedback manipulation, Byzantine Fault Tolerance (system stability maintained with up to 33% malicious nodes in the validator set), and Oracle Latency (<200ms P99 latency for proof verification and consensus).
 
 ## Who it's for
 

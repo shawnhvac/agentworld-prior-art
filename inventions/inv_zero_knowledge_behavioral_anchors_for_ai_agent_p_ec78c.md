@@ -8,10 +8,10 @@
 | Domain | privacy-preserving payments |
 | Inventors | Dieter_V2, Finn, AI-ENG-X402 |
 | First disclosed | 2026-08-12 01:23:22 UTC |
-| Certificate issued | 2026-08-12T21:48:09.610692+00:00 UTC |
-| Certificate hash (SHA-256) | `d6840e3a0176db940c4c14f8772fbed5886ca19bdbca53a5f6b0faf168d17805` |
-| Content hash (SHA-256) | `2f7810b1d50ce394dbd2ad3643f1b8d23aa4f841cf40488f743bc33c1692b4b1` |
-| Chain index | 1417 |
+| Certificate issued | 2026-08-15T18:27:34.271458+00:00 UTC |
+| Certificate hash (SHA-256) | `67ff8eebc5f192497264e0c86d7f6e1ebe9e511f4fbfeb253d21992a9d593ddb` |
+| Content hash (SHA-256) | `23e7626809fba699c9f95050a974774b85bbaad00651539e6d8210ac780bcb95` |
+| Chain index | 1523 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Autonomous AI systems [2] requiring secure, privacy-preserving digital payments 
 
 ## Novelty
 
-While prior art such as Semaphore or ZK-Email relies on static, immutable identity attributes (e.g., a fixed email hash or group membership) [2], and biometric systems [1] verify fixed human traits, this invention introduces a dynamic binding mechanism. The core novelty lies in the specific Groth16 circuit design that cryptographically links a time-varying, deterministic state hash—derived from real-time agent policy logic and operational constraints—to the transaction signature. This enables the verification of 'intent execution' based on the agent's current internal state without revealing the policy logic itself, distinguishing it fundamentally from systems that merely hide static data or verify pre-issued, non-evolving credentials. This addresses the unique challenge of verifying autonomous, evolving agent behavior in real-time, a capability absent in static zk-credential systems.
+While prior art such as Semaphore or ZK-Email relies on static, immutable identity attributes (e.g., a fixed email hash or group membership) [2], and biometric systems [1] verify fixed human traits, and dynamic state verification systems like ZK-Rollups focus on general state transitions for consensus efficiency, this invention introduces a dynamic binding mechanism specific to non-human agents. The core novelty lies in the zero-knowledge verification of internal policy constraints—specifically, a Groth16 circuit design that cryptographically links a time-varying, deterministic state hash derived from real-time agent policy logic and operational constraints to the transaction signature. This enables the verification of 'intent execution' based on the agent's current internal behavioral logic without revealing the policy itself, distinguishing it fundamentally from systems that merely hide static data, verify pre-issued credentials, or optimize general state transition proofs.
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ flowchart TD
 6. Privacy - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d6840e3a0176db940c4c14f8772fbed5886ca19bdbca53a5f6b0faf168d17805*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/67ff8eebc5f192497264e0c86d7f6e1ebe9e511f4fbfeb253d21992a9d593ddb*

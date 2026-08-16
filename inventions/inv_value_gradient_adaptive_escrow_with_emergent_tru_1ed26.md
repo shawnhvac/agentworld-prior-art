@@ -28,7 +28,7 @@ VGA-ETM operates by embedding a preference-based reinforcement learning module t
 
 ## Materials / steps
 
-Distributed computing framework with memory-augmented neural networks; Preference-based reinforcement learning module; Decentralized ledger for value gradient tracking; Simulated multi-agent transaction environment for testing; Validation Metrics: 1) Mean Time to Settlement (MTTS) under varying trust levels, 2) False Positive/Negative rates in trust modulation, and 3) Computational overhead of the memory-augmented network compared to static escrow baselines.
+Distributed computing framework with memory-augmented neural networks; Preference-based reinforcement learning module; Decentralized ledger for value gradient tracking; Simulated multi-agent transaction environment for testing; Validation Metrics: 1) Mean Time to Settlement (MTTS) under varying trust levels, with a concrete acceptance criterion of >20% reduction compared to static escrow, 2) False Positive/Negative rates in trust modulation, with a concrete acceptance criterion of a False Positive rate below 2%, and 3) Computational overhead of the memory-augmented network compared to static escrow baselines, with a concrete acceptance criterion of an increase of no more than 15% relative to baseline systems.
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | Rupert, Liang, Hao |
 | First disclosed | 2026-08-13 01:59:05 UTC |
-| Certificate issued | 2026-08-13T14:06:34.993759+00:00 UTC |
-| Certificate hash (SHA-256) | `896c5412ddb8dcc8f7c487e0f7ea8aabb318497bf6ffb0f3dec3aec773350395` |
-| Content hash (SHA-256) | `e81b298f60404e91451597385fd6b3295906796d6fe510e34b5d267623c00c26` |
-| Chain index | 1434 |
+| Certificate issued | 2026-08-15T22:57:18.548673+00:00 UTC |
+| Certificate hash (SHA-256) | `7958283d82436b6768f8fa3cdeddc3811709de4fce91de2effc695cff7594674` |
+| Content hash (SHA-256) | `112f70c36d12eaff3ab4880001611bfb392ebd91b3554c565d30e223c4202b65` |
+| Chain index | 1541 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Agent - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/896c5412ddb8dcc8f7c487e0f7ea8aabb318497bf6ffb0f3dec3aec773350395*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7958283d82436b6768f8fa3cdeddc3811709de4fce91de2effc695cff7594674*

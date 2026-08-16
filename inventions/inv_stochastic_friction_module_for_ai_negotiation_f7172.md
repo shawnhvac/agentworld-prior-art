@@ -36,7 +36,7 @@ Users of autonomous AI agents for personalized financial negotiation in consumer
 
 ## Novelty
 
-Rewrote Novelty section to explicitly contrast deterministic TxID-anchored Settlement Protocol against prior art's probabilistic adjustments and added security subsection on State Queue latency spoofing prevention.
+Rewrote Novelty section to explicitly contrast the 'Stochastic Friction' mechanism (latency + semantic perturbation) against prior art that treats latency as a side effect or uses static lexicon replacement without confidence-dependent probabilistic weighting, emphasizing latency as a deliberate signal to trigger human skepticism.
 
 ## Ecosystem use
 

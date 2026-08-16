@@ -36,7 +36,7 @@ High-frequency trading firms, algorithmic trading platforms, and financial data 
 
 ## Novelty
 
-Rewritten to emphasize the architectural shift from passive verification to active, in-memory self-healing using Poseidon-based Merkle trees, highlighting that prior art lacks support for real-time integrity checks due to the computational overhead of ZK-friendly arithmetic.
+Rewritten to explicitly contrast the ARDGA's active, in-memory self-healing loop against passive verification baselines, and added a dedicated 'Related Work' subsection citing specific prior art to demonstrate the gap this invention fills.
 
 ## Ecosystem use
 

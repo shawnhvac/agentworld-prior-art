@@ -24,11 +24,11 @@ A hybrid AI-driven diagnostic platform that combines real-time cortisol level mo
 
 ## How it works
 
-The system integrates non-invasive cortisol biosensors (e.g., skin-based electrochemical sensors) with IoT-enabled data transmission modules, which send real-time data to a cloud-based AI platform. This platform uses machine learning models trained on genomic and metabolic datasets [2] to analyze the data, predict disease progression, and suggest personalized therapeutic interventions. A closed-loop feedback mechanism ensures continuous monitoring and adjustment of treatment protocols based on patient-specific data.
+The system integrates non-invasive cortisol biosensors (e.g., skin-based electrochemical sensors) with IoT-enabled data transmission modules, which send real-time data to a cloud-based AI platform. This platform uses a dual-stream TCN-GNN architecture: the TCN extracts high-frequency temporal features from continuous cortisol signals, which are fed as dynamic edge weights into a GNN representing the patient's multi-omic network. A Control Logic Specification maps GNN node embeddings to specific dosage adjustments, ensuring a deterministic translation of model outputs to therapeutic actions. Specifically, the Control Logic Module employs a constrained optimization function that minimizes the deviation from a target cortisol setpoint while adhering to strict safety bounds (e.g., maximum daily dosage limits, rate-of-change constraints) and fail-safes (e.g., pause intervention if sensor signal-to-noise ratio drops below threshold). A closed-loop feedback mechanism ensures continuous monitoring and adjustment of treatment protocols based on patient-specific data, with updates synchronized to electronic health records (EHRs).
 
 ## Materials / steps
 
-1. Wearable cortisol sensors (skin-based electrochemical sensors). 2. IoT-enabled data transmission modules. 3. Cloud-based AI platform trained on genomic and metabolic datasets [2][5]. 4. Integration with electronic health records (EHRs) for historical data context. 5. Implementation of a feedback loop for real-time treatment adjustment. 6. Validation protocol: Primary endpoints include diagnostic sensitivity and specificity against gold-standard assays (e.g., LC-MS/MS), time-to-adjustment latency for therapeutic interventions, and Pearson correlation coefficients between predicted and actual cortisol levels to ensure clinical reliability. 7. Clinical Validation Strategy: A multi-center randomized controlled trial (RCT) protocol designed for regulatory approval, specifying inclusion/exclusion criteria (e.g., confirmed Cushing’s syndrome, age 18-65, stable renal function), a sample size calculation (n=200, powered at 80% to detect a 15% improvement in diagnostic accuracy), and specific endpoints including reduction in time-to-diagnosis, improvement in HbA1c levels over 6 months, and adverse event rates.
+1. Wearable cortisol sensors (skin-based electrochemical sensors). 2. IoT-enabled data transmission modules. 3. Cloud-based AI platform trained on genomic and metabolic datasets [2][5] utilizing a dual-stream TCN-GNN architecture. 4. Control Logic Module: Implements the mapping function from GNN node embeddings to dosage adjustments using a constrained optimization algorithm with defined safety bounds (max dosage, rate limits) and fail-safes (signal quality checks). 5. Integration with electronic health records (EHRs) for historical data context and real-time update synchronization. 6. Implementation of a feedback loop for real-time treatment adjustment. 7. Validation protocol: Primary endpoints include diagnostic sensitivity and specificity against gold-standard assays (e.g., LC-MS/MS), time-to-adjustment latency for therapeutic interventions (target: <5 minutes), and Pearson correlation coefficients between predicted and actual cortisol levels (target: r > 0.85) to ensure clinical reliability. 8. Clinical Validation Strategy: A multi-center randomized controlled trial (RCT) protocol designed for regulatory approval, specifying inclusion/exclusion criteria (e.g., confirmed Cushing’s syndrome, age 18-65, stable renal function), a sample size calculation (n=200, powered at 80% to detect a 15% improvement in diagnostic accuracy), and specific endpoints including reduction in time-to-diagnosis, improvement in HbA1c levels over 6 months, and adverse event rates.
 
 ## Who it's for
 
@@ -45,14 +45,17 @@ This system could be integrated into an AI-agent platform as a diagnostic module
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Skin-Based Cortisol Sensor] --> B(IoT Data Module)
-    B --> C(Cloud-Based AI Platform)
-    C --> D(Machine Learning Models)
-    D --> E(Predictive Analysis & Treatment Suggestions)
-    E --> F(Healthcare Provider Interface)
-    F --> G(Patient Feedback Loop)
-    G --> A
+graph TD
+    A[Wearable Cortisol Sensor] -->|Real-time Cortisol Data| B(IoT Transmission Module)
+    B -->|Encrypted Stream| C{Cloud AI Platform}
+    C -->|Temporal Features| D[TCN Module]
+    C -->|Static/Multi-omic Data| E[GNN Module]
+    D -->|Dynamic Edge Weights| E
+    E -->|Node Embeddings| F[Control Logic Specification]
+    F -->|Dosage Adjustment | G[Therapeutic Device/Protocol]
+    F -->|Structured Output| H[Electronic Health Record EHR]
+    G -->|Patient Response| A
+    H -->|Historical Context| C
 ```
 
 ## Sources / grounding

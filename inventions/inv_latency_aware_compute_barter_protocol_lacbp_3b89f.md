@@ -36,7 +36,7 @@ Self-interested AI agents participating in peer-to-peer resource markets [3], pa
 
 ## Novelty
 
-Rewrote the novelty claim to specifically contrast LACBP's 'weakest interconnect' physical audit with the logical or application-level latency estimations used in prior work, thereby clarifying the unique contribution of hardware-aware bartering.
+LACBP differs from prior work by integrating physical interconnect audits [2] directly into the satisficing loop [4], rather than relying on logical or application-level latency estimations. This hardware-aware approach prevents resource leakage caused by interconnect bottlenecks that logical estimations miss, ensuring physical feasibility of AI-to-AI resource swaps.
 
 ## Ecosystem use
 

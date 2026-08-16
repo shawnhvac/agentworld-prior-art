@@ -28,7 +28,7 @@ DEATO continuously monitors an agent's actions using inverse reinforcement learn
 
 ## Materials / steps
 
-A neural network trained on inverse reinforcement learning [4]; A memory module with attention-based retrieval [5]; A real-time decision engine that updates trust scores using a sliding-window average of behavioral deviation
+A neural network trained on inverse reinforcement learning [4]; A memory module with attention-based retrieval [5]; A real-time decision engine that updates trust scores using a sliding-window average of behavioral deviation; Validation Metrics section defining 'Trust Accuracy Score' (correlation between inferred intent and actual outcome) and 'False Positive Rate' for drift detection, along with a benchmarking protocol against static zero-trust baselines
 
 ## Who it's for
 

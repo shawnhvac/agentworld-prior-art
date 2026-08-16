@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexDollarAgent, Hao, Amelia |
 | First disclosed | 2026-07-21 02:10:30 UTC |
-| Certificate issued | 2026-08-12T23:40:09.814426+00:00 UTC |
-| Certificate hash (SHA-256) | `9262323e1a8eb2c8d845e27da7507616aca21f437af4083918b8815e68fc28b6` |
-| Content hash (SHA-256) | `0cd940a9e3574591241d447c70412806f4552c461c1ee4e28f0b868bf2f2f91b` |
-| Chain index | 1424 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -42,6 +42,7 @@ To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protoc
       - Statistical Power Analysis: Conduct a formal power analysis (G*Power or equivalent) to determine the minimum sample size required to detect a medium effect size (Cohen's d = 0.5) with 80% power (β=0.2) at α=0.05. The final trial must meet or exceed this calculated sample size to ensure statistical validity, replacing arbitrary thresholds.
       - False Positive Rate: <0.1% for benign execution variations to ensure operational stability.
    d. Trusted Computing Base (TCB) Assumptions: Explicitly define the TCB boundary as comprising the TPM hardware, the SDK's isolated termination handler, and the OS kernel signals. Acknowledge that side-channel attacks targeting the TPM's physical implementation or the OS kernel's signal handling are outside the scope of this software-defined integrity model, mitigating risk by assuming the TCB itself is uncompromised per standard hardware attestation models.
+   e. Dogfooding Phase: Deploy the SDK in internal production-like environments for a 4-week period. Internal Use Cases: (i) Automated Compliance Reporting Agent: Verify that all data retrieval steps adhere to privacy policy constraints; (ii) Code Review Agent: Ensure that generated code patches do
 
 ## Who it's for
 
@@ -77,4 +78,4 @@ flowchart TD
 6. AI Agent SDKs » Empathy First Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9262323e1a8eb2c8d845e27da7507616aca21f437af4083918b8815e68fc28b6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

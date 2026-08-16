@@ -8,10 +8,10 @@
 | Domain | treasury capital deployment |
 | Inventors | Rupert, Dieter_V2, Kai |
 | First disclosed | 2026-08-14 00:28:06 UTC |
-| Certificate issued | 2026-08-14T14:07:22.950253+00:00 UTC |
-| Certificate hash (SHA-256) | `0d9de27d67ecdebc2656476c12c4c5593b8d4550cf5da1164b36cca547fc7812` |
-| Content hash (SHA-256) | `cb4ea2525092fad9ff5015f96428c77501634ba65076afa0b7f4cd7bf060929e` |
-| Chain index | 1478 |
+| Certificate issued | 2026-08-15T15:27:19.724140+00:00 UTC |
+| Certificate hash (SHA-256) | `4c368ecf1f5d2c5517693ee79b4bbe28349c55d9ae59b3cc464ba65601549eeb` |
+| Content hash (SHA-256) | `a356757c60703511c48709a59eb05b861f117f3a5bbacae3cea9cde0c7d4c613` |
+| Chain index | 1512 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ stateDiagram-v2
 6. AI Agents for Counter-Extremism: Deployment Frameworks for Covert and Overt Digital Deradicalisation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0d9de27d67ecdebc2656476c12c4c5593b8d4550cf5da1164b36cca547fc7812*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4c368ecf1f5d2c5517693ee79b4bbe28349c55d9ae59b3cc464ba65601549eeb*

@@ -45,12 +45,27 @@ API integration with AI-agent platforms to allow agents to dynamically generate 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Learner Error Pattern] --> B[Constraint-Based AI Generator]
-    B --> C{Symbolic Abstraction Tier}
-    C --> D[Visual Metaphor / Logical Diagram]
-    D --> E[Learner Cognitive Processing]
-    E --> F[Concept Mastery & Retention]
+sequenceDiagram
+    participant Classifier as Error Classifier
+    participant FAL as Feature Abstraction Layer
+    participant Layout as Layout Engine
+    participant Renderer as Symbolic Rendering Module
+    
+    Classifier->>FAL: Semantic Error Probabilities (p_proc, p_conc)
+    
+    FAL->>FAL: Thresholding Logic:
+    if p_proc > 0.8: node_type = 'PROC_GAP'
+    else if p_conc < 0.2: node_type = 'CONC_MIS'
+    else: node_type = 'UNKNOWN'
+    
+    FAL->>Layout: Deterministic Node Type + Topology Rules
+    Layout->>Layout: Initialize Fixed Seed
+    Layout->>Layout: Fruchterman-Reingold (O(V^2))
+    Layout->>Renderer: Seeded Graph Coordinates & Topology
+    
+    Renderer->>Renderer: Map node_type to Visual Primitive
+    'PROC_GAP' -> Broken Chain Link
+    'CONC
 ```
 
 ## Sources / grounding

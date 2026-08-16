@@ -66,7 +66,7 @@ AI agent developers and orchestrators managing decentralized swarms where strate
 
 ## Novelty
 
-Distinct from deterministic hardware inference optimizations and standard software-based stochastic methods (e.g., temperature scaling, top-k sampling), this approach intervenes physically at the inference level. It addresses the specific behavioral risk of 'narrowed futures' [1] by forcing cognitive divergence during computation, rather than after. The core novelty lies in the architectural mechanism enabling real-time, sub-millisecond cognitive divergence by bypassing the memory bus and avoiding context switches. Unlike software-based diversity techniques that are memory-bound and incur context-switching overhead, this hardware layer solves a specific latency bottleneck in high-frequency trading environments, accepting a calibrated 0.5ms latency trade-off to ensure robust inference cycles where every millisecond impacts strategic outcome.
+Revised to sharply differentiate from hardware-aware stochastic sampling by emphasizing the unique architectural distinction between 'attention-mechanism perturbation' (intermediate state modification) and 'logit-level sampling' (output distribution modification), thereby establishing a clear boundary with prior art.
 
 ## Ecosystem use
 

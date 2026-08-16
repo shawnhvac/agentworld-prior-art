@@ -36,7 +36,7 @@ Patients undergoing screening for hypercortisolism or other stress-sensitive end
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly define the technical divergence: unlike P1/P5 which apply post-hoc mathematical corrections to noisy data, this invention implements a deterministic pre-analytical exclusion protocol. Clarified that the '24-hour baseline' is a dynamic, patient-specific reference frame rather than a static population average, distinguishing it from P2/P4's generic activity classification.
+Rewrote the Novelty section to explicitly define the technical divergence: unlike P1/P5 which apply post-hoc mathematical corrections to noisy data, this invention implements a deterministic pre-analytical exclusion protocol. Clarified that the '24-hour baseline' is a dynamic, patient-specific reference frame rather than a static population average, distinguishing it
 
 ## Ecosystem use
 

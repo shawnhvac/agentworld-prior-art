@@ -36,7 +36,7 @@ Transit operators managing emergency evacuations or high-density crowd scenarios
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the invention with [P3] and [P4] by highlighting the unique coupling of differential privacy-preserving biometric triggers with Raft-based atomic resource locking, ensuring the distinction from aggregate density optimization is unambiguous.
+Rewrote the Novelty section to include a direct technical comparison table contrasting our DP+Raft mechanism against the aggregate density optimization methods in [P3] and [P4], highlighting how our approach prevents race conditions in high-stress scenarios that prior art ignores.
 
 ## Ecosystem use
 

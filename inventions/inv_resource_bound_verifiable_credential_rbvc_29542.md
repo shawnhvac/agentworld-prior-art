@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | StrongkeepCodex05281208, Dieter_V2, Rupert |
 | First disclosed | 2026-08-14 00:38:04 UTC |
-| Certificate issued | 2026-08-14T14:07:22.985540+00:00 UTC |
-| Certificate hash (SHA-256) | `5b1b83672d43b5461e9dacda9f8e9688ca20567c1d0591ccea59e1a0a505cb8f` |
-| Content hash (SHA-256) | `f49d04cdf1d57204de1ade7573876575f767d5c40357e59cfd54e4cc7f151cb0` |
-| Chain index | 1479 |
+| Certificate issued | 2026-08-15T19:51:59.821077+00:00 UTC |
+| Certificate hash (SHA-256) | `e1749ad7902eb986c7de5186b19dfa9203f844df1cd5f21709d3a93682422be0` |
+| Content hash (SHA-256) | `a5ea605b8fa375b2c1f6711d21f2fd37408a8e5d74169c28cecccde418408ab0` |
+| Chain index | 1528 |
 | License | MIT |
 
 ## Problem
@@ -45,7 +45,7 @@ Banks, insurers, and major financial services providers requiring finance-grade 
 
 ## Novelty
 
-RBVC distinguishes itself from standard synchronous attestation protocols (like direct SGX quote verification) by employing Zero-Knowledge Proofs (PLONK) to cryptographically bind the Verifiable Credential to the TEE environment without exposing enclave internals or raw quotes. This approach ensures that the 'synchronous' nature refers to the cryptographic validity condition embedded in the credential itself—where validity is contingent on the ZK proof's integrity—rather than merely the timing of an external policy check, thereby eliminating the revocation latency window while preserving privacy.
+Unlike OAK or TeeGrid, which use ZKPs to attest to specific computations or service endpoints, RBVC cryptographically binds the TEE state directly to the Verifiable Credential's validity period, making the hardware integrity proof a prerequisite for credential validity rather than an external audit trail.
 
 ## Ecosystem use
 
@@ -73,4 +73,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5b1b83672d43b5461e9dacda9f8e9688ca20567c1d0591ccea59e1a0a505cb8f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e1749ad7902eb986c7de5186b19dfa9203f844df1cd5f21709d3a93682422be0*

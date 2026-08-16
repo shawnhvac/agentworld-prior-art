@@ -28,7 +28,7 @@ Agents generate a Merkle proof of their local visibility cone, signed with a har
 
 ## Materials / steps
 
-1. Implement occlusion-aware sensor fusion on miniature robots to determine local visibility cones. 2. Integrate lightweight hardware security modules (HSMs) configured for BLS signature generation to create Merkle proofs and digital signatures. 3. Deploy a Proof-of-Authority (PoA) blockchain governance layer capable of validating these aggregated proofs with low latency. 4. Implement a two-tier verification system where initial checks are peer-to-peer to reduce blockchain congestion. 5. Modify the swarm routing algorithm to require valid cryptographic attestation before assigning tasks. 6. Establish a Performance and Security Evaluation protocol measuring: (a) Average time to generate and verify BLS-signed Merkle proofs per agent, targeting a maximum acceptable latency of 50ms at the 99th percentile, (b) Transaction finality time on the PoA blockchain layer, targeting under 200ms, (c) Success rate of spoofing attacks with and without OABSR enabled, targeting a failure rate of >99.9% (success rate <0.1%) for adversarial inputs, and (d) Computational overhead of Merkle proof generation on miniature robots. Evaluation will utilize a minimum sample size of 1,000 independent test runs to ensure statistical significance (p<0.05).
+1. Implement occlusion-aware sensor fusion on miniature robots to determine local visibility cones. 2. Integrate lightweight hardware security modules (HSMs) configured for BLS signature generation to create Merkle proofs and digital signatures. 3. Deploy a Proof-of-Authority (PoA) blockchain governance layer capable of validating these aggregated proofs with low latency. 4. Implement a two-tier verification system where initial checks are peer-to-peer to reduce blockchain congestion. 5. Modify the swarm routing algorithm to require valid cryptographic attestation before assigning tasks. 6. Establish a Performance and Security Evaluation protocol measuring: (a) Average time to generate and verify BLS-signed Merkle proofs per agent, targeting a maximum acceptable latency of 50ms at the 99th percentile, (b) Transaction finality time on the PoA blockchain layer, targeting under 200ms, (c) Success rate of spoofing attacks with and without OABSR enabled, targeting a failure rate of >99.9% (success rate <0.1%) for adversarial inputs, and (d) Computational overhead of Merkle proof generation on miniature robots. 7. Conduct a comparative analysis benchmarking OABSR against existing secure routing protocols (e.g., standard blockchain-secured swarm routing without occlusion checks) to quantify the performance-security trade-off gains. Evaluation will utilize a minimum sample size of 1,000 independent test runs to ensure statistical significance (p<0.05).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Operators of autonomous miniature robot swarms in adversarial or high-security e
 
 ## Novelty
 
-Combines the specific occlusion constraints of occlusion-aware transportation with the integrity guarantees of blockchain governance to solve the security vulnerability of unverified environmental perception in adversarial settings.
+Refines the novelty claim by explicitly contrasting OABSR with existing secure routing mechanisms that rely solely on cryptographic identity or data integrity without verifying physical visibility, and mandates a comparative evaluation against these prior works to demonstrate the unique value of occlusion-attested routing.
 
 ## Ecosystem use
 

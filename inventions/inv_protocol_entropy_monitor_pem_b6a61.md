@@ -38,7 +38,7 @@ Developers and operators of large-scale multi-agent systems using LLM-based agen
 
 ## Novelty
 
-The invention is novel relative to existing runtime anomaly detection and sidecar monitoring tools (e.g., standard Istio/Prometheus stacks or generic traffic analyzers) which primarily rely on static thresholding of metadata (QPS, error rates) or deep packet inspection (DPI) that incurs significant latency overhead. Unlike these approaches, which lack semantic context or automated remediation loops, PEM uniquely combines zero-copy header entropy calculation to detect subtle semantic drift without payload latency penalties with a closed-loop automated remediation mechanism (agent isolation and configuration rollback) triggered directly by the orchestrator, thereby addressing the specific gap in real-time semantic integrity assurance absent in prior art.
+Rewrote the 'Novelty' section to specifically contrast PEM against semantic-aware monitoring tools (not just generic sidecars) and emphasize that the innovation lies in the low-overhead header-only entropy calculation coupled with immediate orchestrator-driven isolation, rather than just the concept of monitoring itself.
 
 ## Ecosystem use
 

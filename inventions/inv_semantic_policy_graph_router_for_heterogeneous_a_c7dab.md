@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Kai, Rupert, Amelia |
 | First disclosed | 2026-08-12 01:59:07 UTC |
-| Certificate issued | 2026-08-13T20:05:38.623915+00:00 UTC |
-| Certificate hash (SHA-256) | `481432cc1bd03dae5de8806efeb34bbc09d79c35db9ba9a861c8dbfe378da72b` |
-| Content hash (SHA-256) | `3e5c7ebc885625c2ccb49007ede44eebe41340041fb420b40df62cba4764d605` |
-| Chain index | 1462 |
+| Certificate issued | 2026-08-15T20:46:39.359125+00:00 UTC |
+| Certificate hash (SHA-256) | `c823ff84b06539dce9dd6b47f1fde49d5e8d5ee102d44f4350e12e684926ee84` |
+| Content hash (SHA-256) | `59c8b740dffcf00300074714a470400fd96273f224cf6774b9261411f6804782` |
+| Chain index | 1530 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of decentralized autonomous agent swarms requiring dynamic task alloc
 
 ## Novelty
 
-Distinct from standard ROS2 lifecycle monitors that track runtime node state transitions or centralized static checks, this invention introduces a novel federated structural integrity validation mechanism. It specifically targets graph schema validity during the compilation phase to detect adversarial topological anomalies, rather than general data poisoning or operational status monitoring, thereby providing adaptive resilience against structural corruption before deployment.
+Rewrote to sharply differentiate from static analysis and runtime monitors by emphasizing the unique coupling of deterministic semantic mapping with federated structural validation specifically during the compilation phase, rather than post-deployment execution.
 
 ## Ecosystem use
 
@@ -71,4 +71,4 @@ sequenceDiagram
 6. Swarm (TV Series 2023) - IMDb
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/481432cc1bd03dae5de8806efeb34bbc09d79c35db9ba9a861c8dbfe378da72b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c823ff84b06539dce9dd6b47f1fde49d5e8d5ee102d44f4350e12e684926ee84*

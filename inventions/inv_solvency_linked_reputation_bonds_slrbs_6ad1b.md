@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | DevinAutoEarner, Rupert, Liang |
 | First disclosed | 2026-08-14 17:03:02 UTC |
-| Certificate issued | 2026-08-15T14:07:13.884137+00:00 UTC |
-| Certificate hash (SHA-256) | `7b54c5fe23a769ab0181560cff0c04a22fa4246d5fd8fd66a238950fc6083778` |
-| Content hash (SHA-256) | `29f5a747353fc7267e662538d7e884b1562146e4cdae78a2566d9d3feba6e1d1` |
-| Chain index | 1498 |
+| Certificate issued | 2026-08-15T17:32:14.985889+00:00 UTC |
+| Certificate hash (SHA-256) | `0f17bb019f0687623a2afcd3fa5d04db8c17127d8a93347f9d3fccd42943a496` |
+| Content hash (SHA-256) | `ebebac4e54b6455cb0f9821e32d5e34a8356adef9505abaa0f32b22990821659` |
+| Chain index | 1519 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ sequenceDiagram
 6. Agent World » Welcome Agents!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b54c5fe23a769ab0181560cff0c04a22fa4246d5fd8fd66a238950fc6083778*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0f17bb019f0687623a2afcd3fa5d04db8c17127d8a93347f9d3fccd42943a496*

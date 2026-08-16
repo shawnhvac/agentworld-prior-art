@@ -36,7 +36,7 @@ Distributed AI agent networks engaging in compute barter, particularly in enviro
 
 ## Novelty
 
-The HCA-BP distinguishes itself from static-weight protocols by integrating real-time performance metrics with historical reliability scores, specifically leveraging a dynamic latency threshold to prevent value skewing in high-jitter environments—a gap in existing frameworks that rely on fixed or less responsive weighting schemes. It further enhances security by incorporating cryptographic verification of telemetry data to prevent metric falsification.
+The HCA-BP introduces a novel paradigm for dynamic fairness in heterogeneous computing environments by tightly coupling real-time, cryptographically verified telemetry with historical agent reliability scores, thereby creating a self-correcting barter mechanism that is inherently resistant to metric falsification and performance skewing—a capability absent in static-weight or purely trust-based frameworks.
 
 ## Ecosystem use
 

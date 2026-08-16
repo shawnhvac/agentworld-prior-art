@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, Liang, Amelia |
 | First disclosed | 2026-08-13 05:42:36 UTC |
-| Certificate issued | 2026-08-14T14:55:38.710893+00:00 UTC |
-| Certificate hash (SHA-256) | `9bd12b70a87a01bf815e0317c447a4747c82fe10c3b5d96b15f03ceebe803c45` |
-| Content hash (SHA-256) | `cc446bb69e91d18262190ebf76d4f61e969e2069da8a1549e34a794b945b71b8` |
-| Chain index | 1488 |
+| Certificate issued | 2026-08-15T19:51:59.774051+00:00 UTC |
+| Certificate hash (SHA-256) | `84cd8f11494dcd8dcf3a8c199733cc2991b9912775adf4bb2c90f8d1ce5a1a7f` |
+| Content hash (SHA-256) | `bf314e5114d06fb363caf9d1f91aa4912d0a8c1ac22397df44600efd31840a91` |
+| Chain index | 1527 |
 | License | MIT |
 
 ## Problem
@@ -31,12 +31,12 @@ A 'Reputation-Gated Access' mechanism that decouples fee structure from risk pri
 5. **Asset Transfer & Callback Invocation**: If the check passes, the protocol transfers the assets to the borrower's contract and invokes the standard flash loan callback interface (`executeOperation`). The gas cost for this transfer is tracked. 
 6. **Borrower Execution**: The borrower's contract executes its arbitrage or liquidation logic. 
 7. **Repayment Verification**: The protocol verifies that the borrower has repaid the loan plus the calculated fees to the protocol contract within the same transaction. This verification includes a balance check and a hash verification of the repayment transaction to prevent front-running. 
-8. **Reputation Update & Finalization**: Only upon successful repayment verification does the protocol finalize the transaction. It then updates the agent's reputation score (incrementing for successful execution, decrementing if MEV/oracle exploitation was detected during the callback via on-chain analysis hooks). 
+8. **Reputation Update & Finalization**: Upon successful repayment verification, the protocol computes a deterministic `settlement_hash` comprising the repayment amount, timestamp, and agent ID. This hash is used to atomically bind the reputation state mutation to the financial settlement. The protocol executes a state transition function `updateReputation(agent, settlement_hash)` which increments the score for successful execution or decrements it if MEV/oracle exploitation was detected via on-chain analysis hooks. Crucially, this state mutation occurs within the same EVM execution frame as the repayment check; if the reputation update logic fails (e.g., due to storage corruption or logic error), the entire transaction reverts, ensuring that no partial state is committed. This guarantees that the reputation ledger and the liquidity ledger are always consistent at block finalization. 
 9. **End-to-End Settlement**: The transaction commits. High-reputation agents benefit from higher caps and priority; agents flagged for exploitation are strictly capped or denied. This mirrors 'access' dynamics in microfinance [6] while maintaining atomic settlement integrity.
 
 ## Materials / steps
 
-1. Implement a reputation oracle that aggregates agent transaction history, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. The fallback must include specific triggers for oracle staleness (>5 blocks) or failure, and must be optimized to consume <50,000 gas. 2. Develop a smart contract module with a specific `validateAccess` function that maps reputation scores to dynamic access caps and executes a `require` check against the requested amount before any asset transfer. 3. Conduct a formal logic proof using TLA+ or Coq to demonstrate that the `validateAccess` check remains reentrancy-safe even under
+1. Implement a reputation oracle that aggregates agent transaction history, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. The fallback must include specific triggers for oracle staleness (>5 blocks) or failure, and must be optimized to consume <50,0
 
 ## Who it's for
 
@@ -73,4 +73,4 @@ graph LR
 6. Financial reward schemes in microfinance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bd12b70a87a01bf815e0317c447a4747c82fe10c3b5d96b15f03ceebe803c45*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/84cd8f11494dcd8dcf3a8c199733cc2991b9912775adf4bb2c90f8d1ce5a1a7f*

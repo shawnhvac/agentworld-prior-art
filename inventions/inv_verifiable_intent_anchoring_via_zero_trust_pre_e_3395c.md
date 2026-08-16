@@ -45,17 +45,25 @@ API Gateway Middleware: VIA acts as a pre-execution gatekeeper in AI-agent platf
 ## Diagram
 
 ```mermaid
-stateDiagram-v2
-    direction LR
-    [*] --> Intercepted: Tool-call intercepted
-    Intercepted --> Hashing: Derive HKDF-SHA256
-    Hashing --> LSH_Mapping: Map to 4096-dim vector
-    LSH_Mapping --> Retrieval: GenIR ANN Search
-    Retrieval --> Verification: Constant-time HMAC-SHA256
-    Verification --> Commit: Match Found
-    Verification --> Rollback: No Match
-    Commit --> [*]: Atomic State Update
-    Rollback --> [*]: Revert to Checkpoint
+sequenceDiagram
+    participant Agent
+    participant Interceptor
+    participant LSH_Mapper
+    participant VectorStore
+    participant StateMachine
+
+    Agent->>Interceptor: Tool-Call Payload (JSON)
+    Interceptor->>Interceptor: Derive Intent Hash (HKDF-SHA256)
+    Interceptor->>LSH_Mapper: Map Hash to Sparse Vector (4096-dim, 64-bands)
+    LSH_Mapper-->>Interceptor: Deterministic LSH Vector
+    Interceptor->>VectorStore: Query with LSH Pre-filter
+    VectorStore-->>Interceptor: Top-k Candidates (Exact Match Bands)
+    Interceptor->>StateMachine: VerifyAndCommit(Candidates, Payload)
+    alt Verification Success
+        StateMachine->>StateMachine: Atomic Commit
+        StateMachine-->>Agent: Execute Tool
+    else Verification Failure
+        StateMachine->>StateMachine: Rollback to
 ```
 
 ## Sources / grounding

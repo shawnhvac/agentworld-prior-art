@@ -40,7 +40,28 @@ The system operates via a closed-loop feedback mechanism utilizing a ROS2 DDS mi
         time_to_trigger = predicted_trigger_time - current_time
         
         # Enforce 50ms maximum latency budget (including actuation delay of 15ms)
-        # If the signal is too old or too far
+        # Valid window: 0ms <= time_to_trigger <= 50ms
+        if time_to_trigger < 0 or time_to_trigger > 50:
+            return # Discard stale or future-out-of-bounds signals
+        
+        # Calculate vibration intensity based on intent confidence and proximity
+        # Formula: Intensity = min(1.0, (intent_confidence * proximity_factor))
+        # Where proximity_factor = 1.0 if distance < 10cm, else (10cm / distance)
+        confidence = intent_msg.confidence # Range: 0.0 to 1.0
+        distance = intent_msg.distance_cm  # Range: 0 to infinity
+        
+        if distance == 0:
+            proximity_factor = 1.0
+        else:
+            proximity_factor = min(1.0, 10.0 / distance)
+            
+        vibration_intensity = min(1.0, confidence * proximity_factor)
+        
+        # Trigger actuator with calculated intensity
+        actuator.trigger(pattern=intent_msg.action_type, intensity=vibration_intensity)
+    ```
+
+Novelty: The invention distinguishes itself from prior art [P1] (passive activity monitoring) and [P2] (visual/VR depth tracking) by implementing a deterministic, sub-50ms closed-loop haptic synchronization mechanism for proactive social robot coordination. Unlike P1, which relies on post-hoc analysis of recorded data without real-time predictive intent transmission, and P2, which utilizes visual channels susceptible to cognitive load and latency in non-social spatial alignment, this module provides immediate, tactile anticipation of robotic intent. This creates a unique bidirectional communication layer that operates independently of visual attention, ensuring temporal coherence and safety through strict DDS QoS enforcement and hardware-level timestamp synchronization, thereby addressing the critical gap in real-time, non-visual human
 
 ## Who it's for
 

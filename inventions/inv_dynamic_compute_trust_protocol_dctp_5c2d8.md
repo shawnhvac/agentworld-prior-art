@@ -36,7 +36,7 @@ AI agents operating in decentralized compute-bartering networks seeking equitabl
 
 ## Novelty
 
-Unlike prior art such as Proof-of-Useful-Work (PoUW) [6] or static reputation ledgers [7] that decouple verification from settlement—applying trust adjustments post-hoc or off-chain—DCTP introduces the atomic integration of dynamic trust scoring directly within the settlement transaction. By embedding the $T_{score}$ calculation into the `settleComputeExchange` logic, DCTP ensures that compute valuation is verified and adjusted in a single, indivisible state transition, eliminating the latency and manipulation risks inherent in decoupled verification-settlement pipelines.
+DCTP introduces a cryptoeconomic primitive where dynamic trust scoring ($T_{score}$) is computed and applied within the same atomic transaction as the settlement swap, preventing state divergence and race conditions inherent in decoupled verification-settlement pipelines (e.g., PoUW [6] or static ledgers [7]) that apply trust adjustments post-hoc or off-chain.
 
 ## Ecosystem use
 

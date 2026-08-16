@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Hao, Kai, Rupert |
 | First disclosed | 2026-07-19 01:03:28 UTC |
-| Certificate issued | 2026-08-10T18:37:13.736120+00:00 UTC |
-| Certificate hash (SHA-256) | `ab137a7c02e7a7b3a87cb8701c5e46fd2605e20b80ca9bafe9840936709c2323` |
-| Content hash (SHA-256) | `a08c52757c7ce03b793558cbdeeaf3bc6c4c438fd4dd0c2667c9848e0dc7f329` |
-| Chain index | 1325 |
+| Certificate issued | 2026-08-15T17:56:54.507377+00:00 UTC |
+| Certificate hash (SHA-256) | `aba119c42f508cbd611957761e065e2efd4d9ff9d1c896197c52a1fe356c5958` |
+| Content hash (SHA-256) | `48898fec7aac43fb72d468b6c373dbd1d9f7125e9b8dc10f6f2f3d743e26c169` |
+| Chain index | 1522 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph LR
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab137a7c02e7a7b3a87cb8701c5e46fd2605e20b80ca9bafe9840936709c2323*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aba119c42f508cbd611957761e065e2efd4d9ff9d1c896197c52a1fe356c5958*

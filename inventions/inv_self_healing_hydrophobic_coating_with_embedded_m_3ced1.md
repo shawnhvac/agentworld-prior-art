@@ -28,7 +28,7 @@ The self-healing hydrophobic coating consists of a silicone-based polymer matrix
 
 ## Materials / steps
 
-Silicone-based polymer matrix; Microcapsules filled with photocatalytic polymer (e.g., polyurethane with TiO₂ nanoparticles); Microfluidic channels embedded with nanofluids (water + surfactant); Integrated resistive heating elements and capacitance sensors for autonomous triggering; Apply the coating to a PV panel surface using a spin-coating or spray method; Test the coated panel by conducting a 10-year accelerated aging test with a target power output retention of >95% and verifying contact angle recovery of >150° within 1 hour of contaminant exposure, replacing previous vague targets.
+Silicone-based polymer matrix; Microcapsules filled with photocatalytic polymer (e.g., polyurethane with TiO₂ nanoparticles); Microfluidic channels embedded with nanofluids (water + surfactant); Integrated resistive heating elements and capacitance sensors for autonomous triggering; Apply the coating to a PV panel surface using a spin-coating or spray method; Test the coated panel by conducting a 10-year accelerated aging test with a target power output retention of >95% and verifying contact angle recovery of >150° within 1 hour of contaminant exposure. Additionally, validate performance against specific quantitative metrics: 1) Nanofluid dispensing rate consistency must exceed 95% uniformity across 100 operational cycles; 2) Self-healing speed must achieve crack closure in <30 minutes under standard UV irradiation; and 3) Sensor detection threshold must demonstrate a capacitance change sensitivity of 0.1 pF per mg/cm² contaminant load.
 
 ## Who it's for
 

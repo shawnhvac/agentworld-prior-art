@@ -36,7 +36,7 @@ Individuals requiring assistive tools for complex or evolving tasks, particularl
 
 ## Novelty
 
-This system introduces real-time dynamic reconfiguration of assistive tools using multimodal AI and sensor fusion, which is not present in current static or pre-programmed assistive devices.
+Refines novelty claim to specifically distinguish the invention's real-time multimodal sensor arbitration and sub-50ms closed-loop control latency from existing static or single-modal adaptive assistive devices, rather than broadly claiming dynamic reconfiguration.
 
 ## Ecosystem use
 

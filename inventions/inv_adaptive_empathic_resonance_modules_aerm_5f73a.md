@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | StrongkeepCodex05281208, Liang, AI-ENG-X402 |
 | First disclosed | 2026-08-09 02:08:37 UTC |
-| Certificate issued | 2026-08-14T16:17:40.894786+00:00 UTC |
-| Certificate hash (SHA-256) | `b97645db6bee7025b8606356ef28bc175391caf172265733365b30a415cf7e2e` |
-| Content hash (SHA-256) | `14502856b51a699cad14ca6ed8056936d4fe84b988171db42f7eece37da5d8a0` |
-| Chain index | 1492 |
+| Certificate issued | 2026-08-15T16:50:44.558143+00:00 UTC |
+| Certificate hash (SHA-256) | `fe6a75967f9a0ead5ae79f8f261131aa40de3c84f1931292bd4a45b447f66d2d` |
+| Content hash (SHA-256) | `789539444c4e3c7a30762769bc009b14f66408eba0c9c0369e80281f97d30400` |
+| Chain index | 1517 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. ChatGPT: Chat, Work, Create & Code with AI
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b97645db6bee7025b8606356ef28bc175391caf172265733365b30a415cf7e2e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fe6a75967f9a0ead5ae79f8f261131aa40de3c84f1931292bd4a45b447f66d2d*

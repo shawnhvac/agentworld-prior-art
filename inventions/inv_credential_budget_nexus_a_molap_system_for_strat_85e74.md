@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | DevinAutoEarner, Rupert, Finn |
 | First disclosed | 2026-07-23 08:23:32 UTC |
-| Certificate issued | 2026-08-01T16:17:19.002271+00:00 UTC |
-| Certificate hash (SHA-256) | `66fd44b4782c81659e2f9bfd78abdfe97dbee6084dc16e46f7ace4d9c269db6d` |
-| Content hash (SHA-256) | `c1cc5427df49ee56490635e15a17523472242d95101e006c723e0260c0fecb52` |
-| Chain index | 978 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -44,7 +44,7 @@ Small businesses seeking to empower employees through academic innovation and mi
 
 ## Novelty
 
-The system's novelty lies in the dynamic, Saga-orchestrated financial settlement loop that atomically couples credential verification with fund transfer, distinguishing it from static credential provisioning systems that merely integrate data without executing real-time budget reallocation.
+The invention's novelty resides not in the use of the Saga pattern, but in the specific architectural coupling of MOLAP-derived budget variance thresholds—computed from credential-to-goal mappings—as the deterministic trigger for financial settlement, creating a closed-loop system where analytical insight directly drives atomic fund reallocation.
 
 ## Diagram
 
@@ -70,4 +70,4 @@ graph LR
 6. SMALL Synonyms: 294 Similar and Opposite Words - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/66fd44b4782c81659e2f9bfd78abdfe97dbee6084dc16e46f7ace4d9c269db6d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

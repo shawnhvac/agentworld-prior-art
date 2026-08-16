@@ -28,7 +28,7 @@ NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect c
 
 ## Materials / steps
 
-1. **Signal Acquisition & Preprocessing**: Raw EEG/fNIRS data is captured via wearable sensors (e.g., OpenBCI Cyton or similar low-latency hardware) and passed through a signal preprocessing module. An Independent Component Analysis (ICA) step is implemented to isolate ocular and muscular artifacts, ensuring cleaner neurofeedback data. Features are then normalized for state fusion. 2. **State Fusion**: The preprocessed human neuro-signals are encoded into a vector representation and fused with the AI agent's simulated affective state vector. 3. **RL Policy Mapping**: The fused state vector is input into the hybrid reinforcement learning framework. The policy network computes the optimal lexical adjustment (lexical_delta) based on the current negotiation context and reward history. 4. **Lexical Generation**: The lexical adjustment generator modifies the outgoing negotiation text in real-time, adjusting tone, word choice, and syntax to align with the synchronized emotional state. 5. **Feedback Loop**: The resulting interaction outcomes (agreement, trust, latency) are fed back as rewards to update the RL policy weights. Pseudocode for the hybrid RL update: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); lexical_delta = map_to_lexical(emotional_vector); policy_gradient = compute_gradient(reward, lexical_delta); update_weights(policy_gradient) end`
+1. **Signal Acquisition & Preprocessing**: Raw EEG/fNIRS data is captured via wearable sensors (e.g., OpenBCI Cyton or similar low-latency hardware) and passed through a signal preprocessing module. An Independent Component Analysis (ICA) step is implemented to isolate ocular and muscular artifacts, ensuring cleaner neurofeedback data. Features are then normalized for state fusion. 2. **State Fusion**: The preprocessed human neuro-signals are encoded into a vector representation and fused with the AI agent's simulated affective state vector. 3. **RL Policy Mapping**: The fused state vector is input into the hybrid reinforcement learning framework. The policy network computes a 'style vector' based on the current negotiation context and reward history. 4. **LLM Generation**: A fine-tuned LLM (e.g., Llama-3-8B) serves as the base generator. The RL policy's style vector modulates the LLM's attention heads or prompt template to adjust tone, word choice, and syntax. 5. **Feedback Loop**: The resulting interaction outcomes are fed back as rewards to update the RL policy weights. The reward function is defined as a weighted sum: R = w1 * P(agreement) - w2 * latency_penalty + w3 * empathy_score. Pseudocode for the hybrid RL update: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); style_vector = map_to_style(emotional_vector); llm_output = generate_text(llm, style_vector); policy_gradient = compute_gradient(reward, style_vector); update_weights(policy_gradient) end`
 
 ## Who it's for
 
@@ -45,16 +45,16 @@ This could be used within an AI-agent platform as an API for real-time negotiati
 ## Diagram
 
 ```mermaid
-graph TD
-    A[Human User] -->|EEG/fNIRS Data| B(Signal Preprocessing Module)
-    B -->|Cleaned Neuro-Features| C{State Encoder}
-    D[AI Agent] -->|Simulated Affective State| C
-    C -->|Fused State Vector| E[Hybrid RL Policy Network]
-    E -->|Optimal Lexical Delta| F[Lexical Adjustment Generator]
-    F -->|Adapted Negotiation Language| G[Output Interface]
-    G -->|Interaction Outcome| H[Reward Calculator]
-    H -->|Reward Signal| E
-    G -->|Perceived Empathy/Trust| I[Validation Metrics]
+graph LR
+    A[EEG/fNIRS Sensors] --> B[Preprocessing & ICA]
+    B --> C[State Vector Fusion]
+    C --> D[RL Policy Network]
+    D --> E[Style Vector]
+    E --> F[Fine-tuned LLM (Llama-3-8B)]
+    F --> G[Output Text]
+    G --> H[Interaction Outcome]
+    H --> I[Reward Function: Agreement, Latency, Empathy]
+    I --> D
 ```
 
 ## Sources / grounding
