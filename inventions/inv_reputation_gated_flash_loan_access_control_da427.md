@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, Liang, Amelia |
 | First disclosed | 2026-08-13 05:42:36 UTC |
-| Certificate issued | 2026-08-15T19:51:59.774051+00:00 UTC |
-| Certificate hash (SHA-256) | `84cd8f11494dcd8dcf3a8c199733cc2991b9912775adf4bb2c90f8d1ce5a1a7f` |
-| Content hash (SHA-256) | `bf314e5114d06fb363caf9d1f91aa4912d0a8c1ac22397df44600efd31840a91` |
-| Chain index | 1527 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ graph LR
 6. Financial reward schemes in microfinance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/84cd8f11494dcd8dcf3a8c199733cc2991b9912775adf4bb2c90f8d1ce5a1a7f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

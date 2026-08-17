@@ -36,7 +36,7 @@ Developers of enterprise-grade AI agent platforms [3, 5] requiring secure, scala
 
 ## Novelty
 
-ARMS distinguishes itself from standard BFT and CRDTs by decoupling consensus verification from immediate state commitment, introducing a semantic 'quarantine-and-reverify' lifecycle that treats unverified entries as low-priority hypotheses rather than binary facts or rejections, thereby preventing adversarial noise from corrupting the core memory substrate while maintaining eventual consistency through probabilistic majority resolution.
+ARMS distinguishes itself from standard BFT and CRDTs not by the consensus mechanism itself, but by decoupling verification from commitment via a semantic 'quarantine-and-reverify' lifecycle. Unlike BFT, which seeks immediate binary agreement, or CRDTs, which merge states without semantic validation, ARMS treats unverified entries as low-priority hypotheses subject to a bounded probabilistic resolution timeout. This specific architectural choice—using time-bounded probabilistic majority to settle contested states rather than indefinite waiting or immediate rejection—prevents adversarial noise from corrupting the core memory substrate while guaranteeing eventual state settlement with bounded latency.
 
 ## Ecosystem use
 

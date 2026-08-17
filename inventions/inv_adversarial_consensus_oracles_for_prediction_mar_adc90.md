@@ -36,7 +36,7 @@ Prediction market platforms seeking to mitigate the 'AI Lemons' problem [5] and 
 
 ## Novelty
 
-The invention distinguishes itself from existing oracle systems (e.g., UMA, Augur) by replacing subjective, delayed governance voting with immediate, trustless ZK-SNARK verification of uncertainty bounds. This technical distinction eliminates the need for human intervention in low-dispute scenarios, enabling automated price adjustments based on cryptographically verified variance reduction rather than reputation-based consensus.
+The invention distinguishes itself from existing oracle systems (e.g., UMA, Augur) by shifting the cryptographic verification target from subjective outcome resolution to the deterministic, trustless verification of *stochastic divergence* (variance reduction). Unlike UMA's reputation-based governance, which relies on human judgment to resolve binary outcomes, this system uses ZK-SNARKs to cryptographically prove the mathematical confidence delta derived from Bayesian model averaging. This allows for the immediate, automated adjustment of market prices based on quantified uncertainty bounds without requiring human intervention or delayed voting, effectively treating disagreement as a verifiable asset class rather than a dispute to be adjudicated.
 
 ## Ecosystem use
 

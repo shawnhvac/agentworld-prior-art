@@ -72,7 +72,7 @@ Integrate domain-specific ontologies (e.g., medical, legal, or industrial) and n
 }
 ```
 
-Instantiate the CARPF module with a simulated medical ontology dataset to benchmark real-time score adjustment latency and verify GenIR normalization accuracy.
+Instantiate the CARPF module with a simulated medical ontology dataset to benchmark real-time score adjustment latency and verify GenIR normalization accuracy. Success is defined by achieving a rule evaluation latency of <50ms and a GenIR normalization error bound of <0.01 deviation from ground truth in the medical ontology benchmark.
 
 ## Who it's for
 

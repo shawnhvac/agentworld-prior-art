@@ -36,7 +36,7 @@ AI agents operating in decentralized compute-bartering networks seeking equitabl
 
 ## Novelty
 
-DCTP introduces a cryptoeconomic primitive where dynamic trust scoring ($T_{score}$) is computed and applied within the same atomic transaction as the settlement swap, preventing state divergence and race conditions inherent in decoupled verification-settlement pipelines (e.g., PoUW [6] or static ledgers [7]) that apply trust adjustments post-hoc or off-chain.
+DCTP introduces a cryptoeconomic primitive where the Groth16 zero-knowledge proof is cryptographically bound to the dynamic trust score ($T_{score}$) within the settlement logic, ensuring that the trust-adjusted value $C_{final}$ is verified and executed atomically. Unlike standard atomic swaps or decoupled verification-settlement pipelines (e.g., PoUW [6] or static ledgers [7]) that apply trust adjustments post-hoc or off-chain, DCTP prevents state divergence and race conditions by making the trust score an immutable input to the atomic swap validation, rather than a separate, potentially asynchronous adjustment mechanism.
 
 ## Ecosystem use
 

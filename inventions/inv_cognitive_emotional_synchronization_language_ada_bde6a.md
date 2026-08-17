@@ -24,7 +24,7 @@ CESLA is a real-time adaptive negotiation framework that uses neuro-semantic fee
 
 ## How it works
 
-CESLA operates as a closed-loop system with three distinct stages. First, the Sensing Layer aggregates time-series data from EEG headsets (e.g., Emotiv EPOC) and physiological sensors, incorporating a personal calibration phase to normalize EEG baselines per user before extracting features such as frontal alpha asymmetry (for valence) and theta/beta ratios (for cognitive load). Second, the Inference Layer processes these features through a lightweight edge-deployed neural network (target inference latency <50ms, accuracy >90%) to output a continuous affective state vector V = [valence, arousal, cognitive_load]. Third, the Modulation Layer applies an adaptive mapping function f: V -> L, where L is the set of language parameters, to translate this vector into specific linguistic adjustments using adaptive thresholds calibrated to individual physiological profiles rather than fixed global values, ensuring robustness across diverse users. This pipeline ensures real-time adaptation of syntax, lexicon, and prosody based on the interacting agent's detected state.
+CESLA operates as a closed-loop system with three distinct stages. First, the Sensing Layer aggregates time-series data from EEG headsets (e.g., Emotiv EPOC) and physiological sensors, incorporating a personal calibration phase to normalize EEG baselines per user before extracting features such as frontal alpha asymmetry (for valence) and theta/beta ratios (for cognitive load). Second, the Inference Layer processes these features through a lightweight edge-deployed neural network (target inference latency <50ms, accuracy >90%) to output a continuous affective state vector V = [valence, arousal, cognitive_load]. Third, the Modulation Layer applies the deterministic mapping function f: V -> L, where L is the set of language parameters. This function uses a fixed rule set: (1) If cognitive_load > T_load, reduce syntactic complexity by 20% and simplify lexicon; (2) If arousal > T_arousal, lower prosodic pitch and increase sentence pause duration by 15%; (3) If valence < T_valence, shift tone to supportive and increase positive reinforcement frequency. The system utilizes a finite state machine (FSM) to manage dialogue flow, transitioning between 'Standard', 'Simplified', and 'Supportive' states based on hysteresis thresholds to prevent rapid oscillation, ensuring the dialogue updates in real-time within the <200ms end-to-end latency constraint.
 
 ## Materials / steps
 
@@ -46,14 +46,21 @@ CESLA could be integrated into AI-agent platforms as a dynamic language modulati
 
 ```mermaid
 graph TD
-    A[Sensing Layer] -->|EEG/Physio Features| B(Inference Layer)
-    B -->|Vector V=[valence, arousal, load]| C[Modulation Layer]
-    C -->|f: V -> L| D{Rule Engine}
-    D -->|load > 0.7| E[Syntactic Simplification]
-    D -->|valence < -0.3| F[Lexical Adjustment]
-    D -->|arousal > 0.6| G[Prosodic Smoothing]
-    E & F & G --> H[Adapted Language Output]
-    H -->|Feedback| A
+    A[Sensing Layer: EEG & Physio] --> B[Inference Layer: NN Model]
+    B --> C{Affective Vector V}
+    C --> D[Modulation Layer: Deterministic Rules f(V->L)]
+    D --> E{State Check}
+    E -->|Load > T_load| F[State: Simplified]
+    E -->|Arousal > T_arousal| G[State: Calm/Supportive]
+    E -->|Valence < T_valence| H[State: Empathetic]
+    E -->|All Normal| I[State: Standard]
+    F --> J[Update Language Params L]
+    G --> J
+    H --> J
+    I --> J
+    J --> K[Real-Time Dialogue Output]
+    K --> L[User Interaction/Feedback]
+    L --> A
 ```
 
 ## Sources / grounding

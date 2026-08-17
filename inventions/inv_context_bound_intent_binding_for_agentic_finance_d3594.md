@@ -36,7 +36,7 @@ Financial institutions, insurers, and regulators requiring finance-grade assuran
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly differentiate the dynamic ROC-derived threshold from static cosine similarity methods and clarify why this specific binding to Context-Bound Identity offers unique security guarantees compared to general-purpose semantic routers.
+Rewrote the 'Novelty' section to explicitly articulate how the fusion of DVC-VCs with Context-Bound Identity creates a unique security perimeter that general-purpose semantic routers cannot provide, specifically highlighting the deterministic settlement guarantees enabled by the cryptographic intent-hash binding.
 
 ## Ecosystem use
 

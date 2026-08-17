@@ -36,7 +36,7 @@ Healthcare professionals involved in precision medicine, including pathologists,
 
 ## Novelty
 
-Unlike prior work focusing on automated vital sign measurements or centralized data aggregation, this invention introduces a privacy-preserving, federated attention-based fusion architecture that aligns heterogeneous modalities (imaging, biomarkers, and NLP-derived patient narratives) at the edge, solving the specific technical challenge of cross-modal alignment without compromising data sovereignty.
+Unlike generic federated learning that aggregates scalar gradients or centralized systems that pool raw data, this invention employs a distributed cross-modal attention mechanism that performs token-level alignment of heterogeneous signals (imaging tensors, biochemical vectors, NLP embeddings) directly at the edge. This architecture uniquely resolves the technical challenge of feature-space mismatch across disparate data types without ever transmitting raw patient data or unaligned intermediate features, thereby ensuring both diagnostic precision and strict data sovereignty.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-08-12T20:32:24.203181+00:00 UTC |
-| Certificate hash (SHA-256) | `f03ffd04e0efdbf25c51cdf557ab60541558c16e122e1f9997b6f6d996a8044b` |
-| Content hash (SHA-256) | `4ce3c390434b15205191bee3f193f102b4a7f84fa91de29fd09f199a241e78ac` |
-| Chain index | 1414 |
+| Certificate issued | 2026-08-16T23:25:36.297487+00:00 UTC |
+| Certificate hash (SHA-256) | `3e61a040b358743363abf184cdf21fd1fc3b0de2cab49b633f1d6be7fd05b172` |
+| Content hash (SHA-256) | `c38330c9f7f8adf4bb75f4a0be7bc83fb27021cb6901baf6d78256ea4456c4e5` |
+| Chain index | 1573 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Supply chain planners, logistics coordinators, and procurement managers who util
 
 ## Novelty
 
-Unlike static Bayesian updating or standard weighted averages that treat variance as noise to be smoothed post-hoc, this invention embeds 'volatility-anchoring' directly into the operational workflow by utilizing specific Coefficient of Variation (CV) thresholds to trigger mandatory human-in-the-loop reviews and a distinct exponential decay function for trust recovery, mechanisms absent in static or simple dynamic weighting baselines [3].
+Unlike static Bayesian updating or standard weighted averages that treat variance as noise to be smoothed post-hoc, this invention uniquely integrates a time-dependent exponential decay function for trust recovery triggered by specific Coefficient of Variation (CV) thresholds, explicitly modeling the temporal dynamics of confidence restoration in a way absent in static or simple moving average baselines [3].
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f03ffd04e0efdbf25c51cdf557ab60541558c16e122e1f9997b6f6d996a8044b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3e61a040b358743363abf184cdf21fd1fc3b0de2cab49b633f1d6be7fd05b172*

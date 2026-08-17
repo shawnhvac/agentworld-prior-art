@@ -26,9 +26,16 @@ A 'Provenance-SDK' that embeds a lightweight, agent-native proof-of-integrity pr
 
 The SDK hooks into the agent's runtime to capture state transitions and tool calls. Each event is hashed and appended to a local, immutable Merkle tree, creating a cryptographic chain where any modification to past states or logs results in a root hash mismatch. The system distinguishes between provenance (data immutability) and verifiability, focusing on ensuring the recorded execution trace matches the actual runtime behavior.
 
-Baseline Configuration: The verifier maintains a secure, version-controlled repository of expected PCR values and Merkle root policies mapped to specific agent software versions and configurations. Upon initialization, the agent declares its version and configuration hash; the verifier retrieves the corresponding baseline from this repository to establish the trusted state for validation.
-
-To ensure end-to-end integrity, the SDK implements a Hardware Attestation Protocol: 1. The remote verifier generates a cryptographically secure random nonce and sends it to the agent. 2. The agent's SDK computes the current Merkle root of the execution ledger and extends this root hash into a dedicated Platform Configuration Register (PCR). 3. The agent requests a quote from the TPM. 4. The TPM generates a signed quote containing the current PCR state (which now cryptographically binds the ledger root), the received nonce, and other relevant PCRs reflecting the loaded agent runtime environment, signed with the TPM's Endorsement Key (EK) or Attestation Identity Key (AIK). 5. The agent returns this quote along with the PCR log to the verifier. 6. The verifier validates the signature using the TPM's public key certificate, checks that the nonce in the quote matches the challenge issued (preventing replay attacks), and verifies that the PCR state matches the expected baseline for the authorized agent runtime, thereby confirming the software execution history is bound to the hardware attestation.
+**Protocol Sequence:**
+1. **Baseline Establishment:** The verifier maintains a secure, version-controlled repository of expected PCR values and Merkle root policies mapped to specific agent software versions and configurations. Upon initialization, the agent declares its version and configuration hash; the verifier retrieves the corresponding baseline from this repository to establish the trusted state for validation.
+2. **Challenge Issuance:** The remote verifier generates a cryptographically secure random nonce (N) and sends it to the agent.
+3. **State Extension:** The agent's SDK computes the current Merkle root (M) of the execution ledger. The SDK invokes the TPM2_Extend command on a dedicated Platform Configuration Register (PCR), using the SHA-256 digest of M as the data input. This cryptographically binds the current ledger state to the PCR, updating the PCR value to H(PCR_old || M).
+4. **Quote Generation:** The agent requests a quote from the TPM. The TPM generates a signed quote containing:
+   - The received nonce (N) to prevent replay attacks.
+   - The selected PCR indices (including the dedicated Merkle PCR and runtime PCRs).
+   - The current PCR values reflecting the extended state.
+   - A signature over these fields using the TPM's Attestation Identity Key (AIK) or Endorsement Key (EK).
+5. **Verification:** The agent returns the quote along with the PCR log to the verifier. The verifier validates the signature using the TPM's public key certificate, checks that the nonce matches the challenge issued, and verifies that the PCR state matches the expected baseline for the authorized agent runtime. This confirms that the software execution history is bound to the hardware attestation, settling the end-to-end integrity proof.
 
 ## Materials / steps
 

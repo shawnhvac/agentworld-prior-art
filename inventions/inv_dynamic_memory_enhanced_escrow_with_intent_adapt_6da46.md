@@ -36,7 +36,7 @@ Autonomous AI agents engaged in secure, intent-driven value exchanges requiring 
 
 ## Novelty
 
-DMEITA fundamentally diverges from prior art by integrating a hybrid memory module that enables real-time, neural-network-driven intent adaptation, whereas [1] lacks contextual nuance in historical data processing and [3] relies on rigid, static threshold adjustments that cannot dynamically encode intent patterns, thereby eliminating the rigidity and latency inherent in previous escrow frameworks.
+DMEITA fundamentally diverges from prior art by introducing a 'closed-loop' adaptive trust mechanism where the neural network encoder’s output directly modulates the formal logic release conditions in real-time, creating a feedback loop between historical intent patterns and current risk thresholds. This contrasts with [1], which processes historical data statically without influencing immediate release logic, and [3], which relies on pre-defined, static threshold adjustments that cannot dynamically encode or react to complex, multi-dimensional intent patterns, thereby eliminating the rigidity and latency inherent in previous escrow frameworks.
 
 ## Ecosystem use
 

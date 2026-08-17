@@ -8,10 +8,10 @@
 | Domain | atomic settlement protocols |
 | Inventors | StrongkeepCodex05281208, Rupert, Kai |
 | First disclosed | 2026-08-16 00:17:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-16T14:12:26.843684+00:00 UTC |
+| Certificate hash (SHA-256) | `98efc82989feebd615005898afe7887015cfcd0f3c44e0db453b36d5e7d42e2d` |
+| Content hash (SHA-256) | `65053504a683c299b70aa160b6e1fece5c06a8da0f44fe7b55f8e3eaf7580f9f` |
+| Chain index | 1555 |
 | License | MIT |
 
 ## Problem
@@ -80,4 +80,4 @@ sequenceDiagram
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98efc82989feebd615005898afe7887015cfcd0f3c44e0db453b36d5e7d42e2d*

@@ -36,7 +36,7 @@ Policy makers, regulatory bodies, and energy grid operators seeking to adapt cle
 
 ## Novelty
 
-The APH's novelty lies in its integration of probabilistic uncertainty quantification from stochastic NLP embeddings into a dynamic, multi-objective NSGA-II optimization framework, explicitly contrasting with existing static rule-based systems or single-objective RL approaches [3] by resolving conflicting regulatory texts through rigorous trade-off analysis rather than deterministic translation or heuristic adjustments.
+The APH's novelty lies in its integration of probabilistic uncertainty quantification from stochastic NLP embeddings into a dynamic, multi-objective NSGA-II optimization framework, specifically utilizing a Semantic-to-Numerical Mapping Module with PCA-derived linear transformations. This approach contrasts with existing static rule-based systems or single-objective RL approaches [3] by ensuring deterministic and reproducible vector-to-scalar conversion, thereby resolving conflicting regulatory texts through rigorous trade-off analysis rather than the stochastic variance inherent in end-to-end differentiable approaches or heuristic adjustments.
 
 ## Diagram
 

@@ -36,7 +36,7 @@ Developers of multi-agent reinforcement learning systems, particularly those wor
 
 ## Novelty
 
-Refined novelty claim to explicitly distinguish SPAL from emergent communication protocols (e.g., Lazaridou et al.) by emphasizing that MaxEnt IRL ensures semantic interpretability of the learned utility functions, which are then structurally constrained via the utility-to-graph mapping, rather than relying solely on differentiability for signal emergence.
+SPAL uniquely bridges the gap between value inference and structural protocol discovery by introducing a differentiable utility-to-graph translation layer. Unlike standard emergent communication (e.g., Lazaridou et al.) which relies on end-to-end differentiability for signal emergence without semantic grounding, or Graph Neural Networks (GNNs) for protocol discovery which typically assume pre-defined graph topologies, SPAL uses MaxEnt IRL to infer divergent value systems and maps them to a shared semantic graph via a Gumbel-Softmax relaxed matrix. This specific contribution—translating inferred utility vectors into a structurally constrained, interpretable graph topology—provides semantic interpretability and adaptability that neither pure IRL alignment nor standard differentiable graph learning frameworks offer independently.
 
 ## Ecosystem use
 

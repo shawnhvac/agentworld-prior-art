@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Rupert, Hao, Amelia |
 | First disclosed | 2026-08-13 05:44:01 UTC |
-| Certificate issued | 2026-08-13T14:06:35.150381+00:00 UTC |
-| Certificate hash (SHA-256) | `ad3d45768c42effda313c614049f49dce253fcaad3a50f76c264891e693c3375` |
-| Content hash (SHA-256) | `165e80acc038f18028b7bed147d23183808fc8f49336aa7d22d15c8986a69bd2` |
-| Chain index | 1442 |
+| Certificate issued | 2026-08-16T18:02:17.284593+00:00 UTC |
+| Certificate hash (SHA-256) | `c4e23c677ec33fd1837144b82943d05131a78491c9bf991e08926084b37607fa` |
+| Content hash (SHA-256) | `384077e94f75881fc3bf1cd978415cf4a9e20cb0a3c323db3fbd59a8712fcc16` |
+| Chain index | 1563 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents specializing in multi-messenger astronomy, disaster response coordinat
 
 ## Novelty
 
-The provided prior art ([P1]-[P5]) pertains to IoT service provisioning, mobile app security analysis, internet appliance hardware
+Unlike standard oracle-based lending protocols that require full data verification before any capital movement, this system introduces a 'provisional-to-final' disbursement structure. It uniquely decouples liquidity provision from scientific rigor by leveraging low-latency GWEMO alerts for immediate provisional credit, while reserving final settlement for the rigorous GWTC-4.0 statistical validation. This specific handling of the verification lag—bridging the gap between real-time detection and peer-reviewed significance—distinguishes it from generic physical-world oracles and prior art focused on IoT or mobile security.
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ E[Sources 1-6] -->|No Technical Basis| F[HYPOTHESIS Flag]
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad3d45768c42effda313c614049f49dce253fcaad3a50f76c264891e693c3375*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c4e23c677ec33fd1837144b82943d05131a78491c9bf991e08926084b37607fa*

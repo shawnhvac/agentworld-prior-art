@@ -24,11 +24,11 @@ DEATO integrates real-time behavioral analysis using inverse reinforcement learn
 
 ## How it works
 
-DEATO continuously monitors an agent's actions using inverse reinforcement learning to infer its latent goals. A memory-augmented module tracks historical decisions to detect behavioral drift. Trust thresholds are adjusted via a feedback loop that compares inferred goals with initial expectations, using a dynamic scoring system based on deviations from baseline behavior.
+DEATO continuously monitors an agent's actions using inverse reinforcement learning to infer its latent goals. A memory-augmented module tracks historical decisions to detect behavioral drift. Trust thresholds are adjusted via a feedback loop that compares inferred goals with initial expectations, using a dynamic scoring system based on deviations from baseline behavior. Specifically, the system calculates a sliding-window deviation score $D_t$ over the last $N$ time steps, where $D_t = \frac{1}{N} \sum_{i=t-N+1}^{t} ||g_i - g_{base}||_2$, with $g_i$ being the IRL-inferred goal vector and $g_{base}$ the baseline expectation. If $D_t$ exceeds a dynamic threshold $\tau_t$, the trust score is updated. The integration point for comparison occurs immediately after the IRL inference step, before the memory module commits the current state to long-term storage.
 
 ## Materials / steps
 
-A neural network trained on inverse reinforcement learning [4]; A memory module with attention-based retrieval [5]; A real-time decision engine that updates trust scores using a sliding-window average of behavioral deviation; Validation Metrics section defining 'Trust Accuracy Score' (correlation between inferred intent and actual outcome) and 'False Positive Rate' for drift detection, along with a benchmarking protocol against static zero-trust baselines
+A neural network trained on inverse reinforcement learning [4]; A memory module with attention-based retrieval [5]; A real-time decision engine that updates trust scores using a sliding-window average of behavioral deviation; Validation Metrics section defining 'Trust Accuracy Score' (correlation between inferred intent and actual outcome) and 'False Positive Rate' for drift detection, along with a benchmarking protocol against static zero-trust baselines. Pseudocode for end-to-end cycle: 1) Observe action $a_t$; 2) Run IRL model to infer $g_t$; 3) Retrieve baseline $g_{base}$ from memory; 4) Compute $D_t$ using sliding window; 5) If $D_t > \tau_t$, update trust score $T_{t+1} = \alpha T_t + (1-\alpha) f(D_t)$; 6) Store $a_t, g_t$ in memory.
 
 ## Who it's for
 

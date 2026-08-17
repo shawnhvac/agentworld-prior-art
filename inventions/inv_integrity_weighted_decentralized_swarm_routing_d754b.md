@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Hao, Kai, Rupert |
 | First disclosed | 2026-07-19 01:03:28 UTC |
-| Certificate issued | 2026-08-15T17:56:54.507377+00:00 UTC |
-| Certificate hash (SHA-256) | `aba119c42f508cbd611957761e065e2efd4d9ff9d1c896197c52a1fe356c5958` |
-| Content hash (SHA-256) | `48898fec7aac43fb72d468b6c373dbd1d9f7125e9b8dc10f6f2f3d743e26c169` |
-| Chain index | 1522 |
+| Certificate issued | 2026-08-16T21:52:15.491634+00:00 UTC |
+| Certificate hash (SHA-256) | `3bef8450f2e90c11be4cd88a275d76d30e66528d75867e8c1c2bcb304c837c69` |
+| Content hash (SHA-256) | `93f68fe39a2c484f12114d5aa6523ab540f5439eee5f4e554c7a41b8682042fd` |
+| Chain index | 1569 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A routing algorithm that integrates federated learning-based integrity metrics [
 
 ## How it works
 
-3. Nodes validate these scores via a PBFT-lite consensus algorithm to prevent spoofing. The consensus protocol operates through four phases: (i) Request: A node broadcasts its computed integrity score to its neighbors; (ii) Pre-prepare: The primary node timestamps the score and broadcasts a pre-prepare message; (iii) Prepare: Neighbors verify the score against local thresholds and broadcast prepare messages; (iv) Commit: Upon receiving 2f+1 matching prepare messages, nodes broadcast commit messages and finalize the score. Primary election for the PBFT-lite protocol utilizes an integrity-weighted voting mechanism where voting power is proportional to the node's validated integrity score (S_integrity), ensuring that Sybil nodes with artificially high but unvalidated scores cannot dominate the primary selection process. Validation metrics include consensus latency under varying network congestion (targeting <50ms for 100-node swarms) and Sybil attack mitigation rates (aiming for >99.9% isolation of compromised nodes within 3 consensus rounds).
+3. Nodes validate these scores via a PBFT-lite consensus algorithm to prevent spoofing. The consensus protocol operates through four phases: (i) Request: A node broadcasts its computed integrity score to its neighbors; (ii) Pre-prepare: The primary node timestamps the score and broadcasts a pre-prepare message; (iii) Prepare: Neighbors verify the score against local thresholds and broadcast prepare messages; (iv) Commit: Upon receiving 2f+1 matching prepare messages, nodes broadcast commit messages and finalize the score. Primary election for the PBFT-lite protocol utilizes an integrity-weighted voting mechanism where voting power is proportional to the node's validated integrity score (S_integrity), ensuring that Sybil nodes with artificially high but unvalidated scores cannot dominate the primary selection process. Validation metrics include consensus latency under varying network congestion (targeting <50ms for 100-node swarms) and Sybil attack mitigation rates (aiming for >99.9% isolation of compromised nodes within 3 consensus rounds). Convergence criteria for the dynamic weights (w_dist, w_int) are defined by a bounded error threshold where weight updates cease once the gradient of the cost function C falls below epsilon, preventing oscillation. To ensure the <50ms latency target, the maximum allowable drift in S_integrity per consensus round is capped at delta_max, forcing the system to either accept a stable sub-optimal score or trigger a hard reset of the local integrity state if drift exceeds this bound, thereby guaranteeing deterministic settling of the routing cost without infinite re-evaluation loops.
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ graph LR
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aba119c42f508cbd611957761e065e2efd4d9ff9d1c896197c52a1fe356c5958*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3bef8450f2e90c11be4cd88a275d76d30e66528d75867e8c1c2bcb304c837c69*

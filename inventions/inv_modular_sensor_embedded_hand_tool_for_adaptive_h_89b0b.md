@@ -36,7 +36,7 @@ Household users, especially those with physical limitations or those performing 
 
 ## Novelty
 
-Unlike prior art relying on open-loop adaptive grippers or cloud-dependent IoT systems, this invention is novel in its specific integration of local edge computing to guarantee sub-20ms closed-loop stability for real-time PID control. This low-latency feedback mechanism, coupled with a kinematically optimized four-bar linkage (featuring 0.45 N·m·s/rad joint damping and 1.2 N·m actuator torque limits), enables dynamic grip adaptation that open-loop systems cannot achieve due to inherent delay and lack of real-time corrective action [3]. The specific mechanical constraints ensure deterministic settling times that generic variable-stiffness grippers in prior art do not address.
+Unlike prior art [P1] and [P3], which utilize removable sensors solely for static environmental detection (e.g., locating studs or wires) with no actuation capability, and [P2], which focuses on passive task verification via visual projection without mechanical adaptation, this invention is novel in its integration of a local closed-loop PID control system driving a kinematically optimized four-bar linkage. This specific architecture enables real-time, sub-20ms dynamic grip strength and posture adjustment based on continuous feedback, a capability entirely absent in the static sensing or passive verification systems of the cited prior art.
 
 ## Ecosystem use
 

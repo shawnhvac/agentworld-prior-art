@@ -28,7 +28,7 @@ NFDA employs real-time EEG and facial expression analysis to capture affective s
 
 ## Materials / steps
 
-EEG headset for real-time affective state detection; Camera for facial expression analysis; Speech-to-text API for linguistic feature extraction; Sentiment analysis module for emotional tone detection; Lightweight neural network model trained on negotiation data; Reinforcement learning framework optimized for trust and clarity; Integration of all components into a real-time feedback loop; Experimental Protocol: Conduct a detailed feasibility critique focusing on the technical viability of the <200ms end-to-end latency constraint and the mathematical validity of the Trust(t) formula (specifically the weighting of V_pos and A_alpha), rather than proceeding immediately to a double-blind A/B trial with 50 dyads.
+EEG headset for real-time affective state detection; Camera for facial expression analysis; Speech-to-text API for linguistic feature extraction; Sentiment analysis module for emotional tone detection; Lightweight neural network model trained on negotiation data; Reinforcement learning framework optimized for trust and clarity; Integration of all components into a real-time feedback loop; Experimental Protocol: Conduct a detailed feasibility critique focusing on the technical viability of the <200ms end-to-end latency constraint and the mathematical validity of the Trust(t) formula (specifically the weighting of V_pos and A_alpha), rather than proceeding immediately to a double-blind A/B trial with 50 dyads. Validation Metrics: Success is defined by achieving a target reduction in total negotiation time by 15% and a minimum 10% increase in the mean Trust(t) score compared to the static baseline control group.
 
 ## Who it's for
 

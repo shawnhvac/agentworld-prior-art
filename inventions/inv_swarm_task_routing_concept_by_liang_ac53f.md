@@ -36,7 +36,7 @@ Researchers and engineers deploying heterogeneous UAV swarms in cluttered, dynam
 
 ## Novelty
 
-Rewritten to explicitly contrast 'occlusion-guided DE mutation' against static constraint handling in P3/P5 and network-level protocols in P1/P2, adding a comparative technical gap analysis to address the overlap concern.
+The core contribution is the 'occlusion-guided DE mutation' strategy, which explicitly contrasts with static constraint handling (P3/P5) and network-level protocols (P1/P2) by optimizing task assignment confidence in real-time based on visual feedback rather than merely routing packets or handling static constraints. This method uniquely leverages local occlusion detection to drive DE-based task reallocation, a capability absent in existing decentralized MAPF algorithms.
 
 ## Ecosystem use
 

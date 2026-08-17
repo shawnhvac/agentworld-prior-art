@@ -36,7 +36,7 @@ Autonomous AI agents and systems requiring secure, adaptive escrow mechanisms fo
 
 ## Novelty
 
-Rewrote the Novelty section to include a specific technical comparison demonstrating why current state-of-the-art solutions fail to meet the <10ms latency requirement, thereby highlighting DTEF's unique hardware-software synergy.
+DTEF achieves a <10ms trust recalibration latency by leveraging an FPGA-based hardware-software synergy that offloads the weighted neural network inference to dedicated logic blocks, eliminating the memory bandwidth bottlenecks and context-switching overhead inherent in software-based trust scoring and general-purpose GPU acceleration. This architectural distinction allows DTEF to maintain >0.95 F1-score accuracy and blockchain-anchored security without the latency penalties that prevent existing state-of-the-art solutions from meeting real-time escrow requirements.
 
 ## Ecosystem use
 

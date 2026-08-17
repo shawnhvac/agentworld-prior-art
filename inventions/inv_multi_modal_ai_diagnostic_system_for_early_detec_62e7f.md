@@ -36,7 +36,7 @@ Clinicians, particularly endocrinologists and diagnostic pathologists, who need 
 
 ## Novelty
 
-Rewritten to contrast cross-attention with standard fusion techniques, highlighting clinical interpretability of static baselines querying temporal anomalies and addressing circadian rhythm noise limitations in static AI.
+Unlike standard concatenation or late-fusion methods that treat temporal and static features as independent inputs, this system employs a cross-attention mechanism where static biochemical baselines (queries) actively interrogate temporal embeddings (keys/values). This architecture specifically isolates and weights circadian rhythm disruptions against individual baselines, providing superior clinical interpretability for subtle hormonal anomalies compared to black-box temporal models that obscure the causal link between baseline deviations and diagnostic outcomes.
 
 ## Ecosystem use
 

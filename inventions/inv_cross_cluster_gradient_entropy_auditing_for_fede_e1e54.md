@@ -36,7 +36,7 @@ Operators of federated data marketplaces [6] and AI-agent platforms requiring se
 
 ## Novelty
 
-Refines the novelty claim by explicitly contrasting the proposed two-stage pipeline (Entropy Audit -> Proof-Carrying Verification) against single-stage cryptographic methods, highlighting the significant reduction in computational overhead for clean shards and introducing a comparative latency analysis.
+Refines the novelty claim by explicitly contrasting the proposed two-stage pipeline (Entropy Audit -> Proof-Carrying Verification) against single-stage cryptographic methods, highlighting the significant reduction in computational overhead for clean shards. This is substantiated by a quantitative comparative latency analysis benchmarking the ZK-SNARK verification overhead against the computational cost of standard gradient clipping, demonstrating that the entropy pre-filter reduces the frequency of expensive proof generation by orders of magnitude in benign conditions.
 
 ## Ecosystem use
 

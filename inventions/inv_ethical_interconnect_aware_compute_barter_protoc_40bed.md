@@ -36,7 +36,7 @@ AI agents operating in decentralized ecosystems that require fair, ethical, and 
 
 ## Novelty
 
-The EICBP distinguishes itself from existing static ethical auditing systems and pure bandwidth trading protocols by uniquely integrating privacy-preserving, real-time interconnect physics directly into the dynamic valuation function, thereby coupling physical infrastructure constraints with ethical compliance in a single, verifiable barter mechanism.
+The EICBP distinguishes itself from existing static ethical auditing systems [5] and pure bandwidth trading protocols [6] by introducing a novel 'trust-weighted valuation function' that mathematically couples real-time physical interconnect constraints (e.g., InfiniBand vs. Ethernet latency jitter) with dynamic ethical compliance scores into a single, privacy-preserving barter rate. Unlike prior works that treat ethics and infrastructure as separate silos, EICBP’s zk-SNARK-verified mechanism ensures that physical bandwidth caps directly modulate the ethical weight of compute credits in real-time, providing a verifiable, non-repudiable basis for fair exchange that is absent in static or decoupled systems.
 
 ## Ecosystem use
 

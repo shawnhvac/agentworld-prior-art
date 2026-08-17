@@ -36,7 +36,7 @@ Small enterprises seeking to quantify the ROI of employee upskilling via micro-c
 
 ## Novelty
 
-The system uniquely isolates the causal impact of specific micro-credentials by employing synthetic control methods to construct rigorous counterfactuals, thereby distinguishing individual skill contributions from broad, lagging aggregate HR-to-performance correlations. Unlike existing tools that rely on post-hoc workforce analytics, this approach integrates a unified pedagogical ontology with high-frequency ERP time-series data to validate distinct operational improvements (e.g., inventory turnover) via statistically significant placebo permutation tests, ensuring the attribution of KPI deltas to specific credential acquisition events rather than external market variables.
+The novelty lies in the algorithmic isolation of micro-credential causal impact via synthetic control methods, explicitly distinguishing specific skill-to-KPI mappings (e.g., inventory turnover) from broad, lagging aggregate HR correlations and post-hoc analytics by utilizing high-frequency ERP data and placebo permutation tests to reject market noise.
 
 ## Diagram
 

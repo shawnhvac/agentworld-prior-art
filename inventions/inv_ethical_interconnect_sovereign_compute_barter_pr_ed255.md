@@ -28,7 +28,7 @@ EISCBP utilizes a decentralized ledger to record and validate AI agents' ethical
 
 ## Materials / steps
 
-Decentralized ledger infrastructure (e.g., blockchain or distributed database); Implementation of ethical alignment scoring system [3]; Dynamic trust metric calculation [1]; Interconnect reliability assessment [6]; Sovereign Compute Validator (SCV) module with verifiable credentials [4]; Weighted auction mechanism implementing $W_i = (E_i \cdot T_i) \cdot (1 - L_i)$ with $L_i = \frac{\text{Actual Latency}_i - \text{Baseline Latency}}{\text{Max Tolerable Latency}}$; Validation suite for Success Rate, Interconnect Latency Penalty, and Ethical Drift Coefficient ($\delta_E = \frac{1}{N} \sum_{t=1}^{N} |E_{i,t} - E_{i,t-1}|$)
+Decentralized ledger infrastructure (e.g., blockchain or distributed database); Implementation of ethical alignment scoring system [3]; Dynamic trust metric calculation [1]; Interconnect reliability assessment [6]; Sovereign Compute Validator (SCV) module with verifiable credentials [4]; Weighted auction mechanism implementing $W_i = (E_i \cdot T_i) \cdot (1 - L_i)$ with $L_i = \frac{\text{Actual Latency}_i - \text{Baseline Latency}}{\text{Max Tolerable Latency}}$; Validation suite for Success Rate, Interconnect Latency Penalty, and Ethical Drift Coefficient ($\delta_E = \frac{1}{N} \sum_{t=1}^{N} |E_{i,t} - E_{i,t-1}|$) with strict pass criteria: minimum Success Rate of 99.9% and maximum allowable Ethical Drift Coefficient ($\delta_E$) of 0.05 over a 1000-transaction window
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents participating in decentralized compute barter systems, particularly th
 
 ## Novelty
 
-EISCBP introduces a constrained multi-objective optimization algorithm that dynamically couples ethical trust scores with physical interconnect reliability, diverging from standard weighted auctions by implementing a real-time ethical drift penalty mechanism. Crucially, the Ethical Drift Coefficient ($\delta_E$) creates a unique feedback loop that dynamically adjusts the 'Max Tolerable Latency' parameter in the Interconnect Latency Penalty calculation ($L_i$). This adaptive stability mechanism ensures that as ethical alignment variance increases, the system tightens interconnect reliability requirements, resolving allocation conflicts where high-trust agents are bottlenecked by low-reliability interconnects. This specific coupling prevents the degradation of system-wide trust through physical constraints, a feature absent in existing trust-only or latency-only protocols.
+EISCBP’s primary novelty is the bidirectional feedback loop where the Ethical Drift Coefficient ($\delta_E$) dynamically modulates the 'Max Tolerable Latency' threshold in the Interconnect Latency Penalty calculation ($L_i$). This distinguishes EISCBP from static weighted auction models [1], [2] and decoupled trust/latency protocols [5] by coupling ethical variance directly to physical interconnect reliability requirements. Specifically, unlike prior art [P1]-[P3] which manage generic multi-party barter items without considering compute-specific interconnect physics or ethical alignment, EISCBP introduces a unique constraint where ethical instability directly tightens physical latency tolerances, a non-obvious combination absent in the cited barter transaction methods.
 
 ## Ecosystem use
 

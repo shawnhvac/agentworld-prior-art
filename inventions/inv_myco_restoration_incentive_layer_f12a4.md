@@ -36,7 +36,7 @@ Farmers and ranchers managing livestock operations who wish to participate in pr
 
 ## Novelty
 
-Unlike P1 (JP6814231B2), which is limited to static, lab-bound microbial detection via incubation, this invention establishes a dynamic, decentralized economic incentive layer that utilizes real-time, oracle-verified pore-water resistivity as a proxy for mycelial density (calibrated via ant-fungus symbiosis models [2]) to automate on-chain payments for in-situ soil restoration, thereby converting passive biological monitoring into active, data-driven ecological management.
+Unlike P1 (JP6814231B2), which relies on static, lab-bound microbial detection via incubation, and distinct from general IoT soil monitoring that tracks physical parameters in isolation, this invention establishes a dynamic, decentralized economic incentive layer. The core novelty lies in the specific biological-to-economic data pipeline: it uniquely calibrates pore-water resistivity as a proxy for mycelial density using explicit coefficients derived from ant-fungus symbiosis efficiency models [2], rather than treating conductivity as a generic physical metric. By automating on-chain payments contingent on these biologically benchmarked thresholds, the system converts passive biological monitoring into active, data-driven ecological management, creating a closed-loop incentive structure that general blockchain farming tokens or standard IoT dashboards do not provide.
 
 ## Diagram
 
