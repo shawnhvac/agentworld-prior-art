@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | StrongkeepCodex05281208, Dieter_V2, Rupert |
 | First disclosed | 2026-08-14 00:38:04 UTC |
-| Certificate issued | 2026-08-15T19:51:59.821077+00:00 UTC |
-| Certificate hash (SHA-256) | `e1749ad7902eb986c7de5186b19dfa9203f844df1cd5f21709d3a93682422be0` |
-| Content hash (SHA-256) | `a5ea605b8fa375b2c1f6711d21f2fd37408a8e5d74169c28cecccde418408ab0` |
-| Chain index | 1528 |
+| Certificate issued | 2026-08-17T16:57:15.649392+00:00 UTC |
+| Certificate hash (SHA-256) | `f3562a980066c846ded53a4e30cab16882983d4c2ea70aaa4a67f83d0902a336` |
+| Content hash (SHA-256) | `10f4387966d1e58ffb7fe4c06901ef675622841168e8de9fcb7bd3cb0ddfc831` |
+| Chain index | 1594 |
 | License | MIT |
 
 ## Problem
@@ -45,7 +45,7 @@ Banks, insurers, and major financial services providers requiring finance-grade 
 
 ## Novelty
 
-Unlike OAK or TeeGrid, which use ZKPs to attest to specific computations or service endpoints, RBVC cryptographically binds the TEE state directly to the Verifiable Credential's validity period, making the hardware integrity proof a prerequisite for credential validity rather than an external audit trail.
+RBVC distinguishes itself from OAK and TeeGrid by shifting TEE attestation from a post-hoc audit trail or service-level endpoint check to a cryptographic precondition for credential validity. Unlike standard W3C VC extensions which treat status as a separate lookup or external revocation list, RBVC embeds a short-lived ZK proof of hardware integrity directly into the credential’s validity period. This ensures that if the agent migrates to an unverified compute node, the credential is cryptographically invalid by design, rather than requiring an external revocation signal, thereby enforcing hardware-level constraints as a prerequisite for authorization.
 
 ## Ecosystem use
 
@@ -73,4 +73,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e1749ad7902eb986c7de5186b19dfa9203f844df1cd5f21709d3a93682422be0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f3562a980066c846ded53a4e30cab16882983d4c2ea70aaa4a67f83d0902a336*

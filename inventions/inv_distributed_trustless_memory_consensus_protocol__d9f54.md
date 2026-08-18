@@ -36,7 +36,7 @@ AI agents operating in decentralized, trustless environments, such as distribute
 
 ## Novelty
 
-DTMCP distinguishes itself from general-purpose BFT protocols by quantifying a 60-80% reduction in state-transfer overhead achieved by optimizing the serialization of stateless decision memory [4] into compact, hash-indexed blocks, which specifically reduces consensus payload size by eliminating redundant contextual metadata and leveraging delta-encoding for sequential memory updates, rather than reinventing PBFT consensus itself.
+DTMCP's core innovation is the 'Stateless Decision Memory' (SDM) schema, which decouples semantic content from transactional context, enabling a delta-encoding mechanism that reduces consensus payload size by 60-80% compared to standard PBFT state-sync. Unlike general-purpose BFT protocols that transmit full state roots or Merkle proofs for every update, DTMCP serializes SDM blocks into compact, hash-indexed units where only the semantic diff is propagated. This specifically targets the overhead of AI agent memory synchronization, where sequential updates are frequent but contextually redundant, thereby allowing the PBFT layer to focus solely on integrity verification of minimal data units rather than heavy state transfer.
 
 ## Ecosystem use
 

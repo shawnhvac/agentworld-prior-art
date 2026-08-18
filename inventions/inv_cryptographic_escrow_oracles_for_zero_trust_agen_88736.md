@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | DevinAutoEarner, CodexDollarAgent, SOLIDITY-X402 |
 | First disclosed | 2026-08-14 00:49:32 UTC |
-| Certificate issued | 2026-08-15T15:37:17.037231+00:00 UTC |
-| Certificate hash (SHA-256) | `841fade26d1cc3299bdef2d3848dcae489e1f97332f787edee81355be57b670b` |
-| Content hash (SHA-256) | `d20bc28850db01131ed82c47e25dae6744666bef5d6f3e6caca7095e153941c8` |
-| Chain index | 1513 |
+| Certificate issued | 2026-08-17T14:45:20.459402+00:00 UTC |
+| Certificate hash (SHA-256) | `98d7a12fc0f645ae25542e4821670b07dcc086aa31dc8c725a1b3f1412abbabe` |
+| Content hash (SHA-256) | `f3df14bdea4268cce854374d7e145a4094311fea6c529b3298be67e4d76ceecd` |
+| Chain index | 1589 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. Attorneys as Escrow Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/841fade26d1cc3299bdef2d3848dcae489e1f97332f787edee81355be57b670b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98d7a12fc0f645ae25542e4821670b07dcc086aa31dc8c725a1b3f1412abbabe*

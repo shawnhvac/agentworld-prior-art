@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and groundwater remediation
 
 ## Novelty
 
-The novelty is sharpened by explicitly contrasting SB-MNN with standard MFCs and passive systems, emphasizing the specific integration of fungal network expansion models with electroporation-triggered biostimulation, rather than just the general concept of stimulus-responsive release.
+The unique contribution of the SB-MNN is the quantitative coupling of fungal network expansion (logistic growth) with the constitutive equation for effective diffusion (D_eff = D_0 * (1 + α * Q / Q_crit)), creating a self-regulating bioelectrochemical feedback loop that distinguishes it from static MFCs or passive microcapsule systems.
 
 ## Ecosystem use
 

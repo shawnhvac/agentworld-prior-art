@@ -24,22 +24,26 @@ A system that dynamically adjusts AI agent reputation scores based on evolving l
 
 ## How it works
 
-The DLCRPS uses a defeasible logic engine to evaluate legal ontologies against real-time regulatory updates, dynamically adjusting reputation scores stored on a blockchain. Reputation data is represented as NFTs with jurisdiction-specific legal tags. The process follows a strict sequence: (1) The Legal Ontology Parser detects a regulatory update and pushes a change event to the Defeasible Reasoner. (2) The Defeasible Reasoner evaluates the new context against existing rules, generating a signed 'Reputation Adjustment Proof' (RAP) containing the delta score and legal justification hash. (3) This RAP is submitted to the Smart Contract's `updateReputation` function. (4) The contract verifies the RAP signature against the authorized Reasoner registry. (5) Upon verification, the contract invokes the NFT's metadata URI update mechanism, appending the new score and legal context tag to the IPFS-hosted metadata, thereby finalizing the end-to-end settlement. Pseudocode for the update function:
+The DLCRPS uses a defeasible logic engine to evaluate legal ontologies against real-time regulatory updates, dynamically adjusting reputation scores stored on a blockchain. Reputation data is represented as NFTs with jurisdiction-specific legal tags. The process follows a strict sequence: (1) The Legal Ontology Parser detects a regulatory update and pushes a change event to the Defeasible Reasoner. (2) The Defeasible Reasoner evaluates the new context against existing rules, generating a signed 'Reputation Adjustment Proof' (RAP) containing the delta score and legal justification hash. (3) This RAP is submitted to the Smart Contract's `updateReputation` function. (4) The contract verifies the RAP signature against the authorized Reasoner registry. (5) Upon verification, the contract constructs the new metadata JSON, computes the new IPFS CID, and executes an atomic state transition that updates the NFT's tokenURI to the new IPFS pin, thereby finalizing the end-to-end settlement as the transaction is included in a block. Pseudocode for the update function:
 
 function updateReputation(uint256 tokenId, bytes32 rapHash, bytes signature) public {
     require(isAuthorizedReasoner(msg.sender), "Unauthorized");
     require(verifyRAP(rapHash, signature), "Invalid Proof");
+    
+    // 1. Parse RAP to extract new state
     ReputationData memory newData = parseRAP(rapHash);
-    updateNFTMetadata(tokenId, newData.score, newData.legalContextHash);
-    emit ReputationUpdated(tokenId, newData.score);
+    
+    // 2. Construct new metadata and derive new IPFS CID
+    string memory currentMetadata = tokenURI(tokenId);
+    Metadata memory updatedMeta = updateMetadataJSON(currentMetadata, newData.score, newData.legalContextHash);
+    bytes32 newCid = keccak256(abi.encodePacked(updatedMeta)); // Simplified CID derivation for illustration
+    
+    // 3. Atomic State Transition: Update on-chain tokenURI
+    // This ensures the on-chain pointer matches the off-chain content hash
+    _updateTokenURI(tokenId, string(abi.encodePacked("ipfs://", newCid)));
+    
+    emit ReputationUpdated(tokenId, newData.score, newCid);
 }
-
-To handle contradictory legal inputs, the system employs a formal verification module that checks for logical consistency in the generated RAPs before submission. If the Defeasible Reasoner's confidence score falls below a defined threshold (e.g., <0.85) or if contradictory legal precedents are detected, the system triggers a fallback mechanism that pauses the automated update and flags the case for manual override by authorized legal administrators.
-
-Validation Metrics:
-- Legal Consistency Accuracy: >95% of RAPs must align with current jurisdictional statutes as verified by the formal verification module.
-- Update Latency: End-to-end processing time from regulatory update detection to NFT metadata finalization must remain <500ms under standard network conditions.
-- False-Positive Rate in Jurisdictional Conflict Detection: <2% to minimize unnecessary manual overrides while ensuring high sensitivity to genuine legal contradictions.
 
 ## Materials / steps
 

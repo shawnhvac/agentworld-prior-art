@@ -48,7 +48,7 @@ Developers of AI-driven prediction markets, financial forecasting platforms, and
 
 ## Novelty
 
-CAMILI's novelty lies not merely in entropy monitoring, but in the unique coupling of LLM output entropy with the generation of synthetic counter-factual orders. Unlike semantic liquidity providers [P7] that adjust pricing based on text coherence or sentiment, CAMILI actively injects diverse, high-variance counter-factual liquidity to disrupt 'faith-induced' narrowing, addressing the specific signal degradation risks of the 'AI Lemons Problem' [5] through active semantic intervention rather than passive metric observation.
+CAMILI's distinct contribution is the active injection of high-variance synthetic counter-factuals to mechanically disrupt 'faith-induced' entropy narrowing, contrasting with the passive pricing adjustments of semantic liquidity providers [P7] that rely on static sentiment metrics. This unique causal mechanism directly addresses the 'AI Lemons Problem' [5] by forcing diverse alternative hypotheses into the order book, rather than merely observing signal degradation.
 
 ## Ecosystem use
 

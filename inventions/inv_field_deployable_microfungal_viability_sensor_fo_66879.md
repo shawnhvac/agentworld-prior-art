@@ -36,7 +36,7 @@ Environmental health inspectors, recreational water users, and field researchers
 
 ## Novelty
 
-The invention's novelty lies in the specific biochemical engineering of a compartmentalized microfluidic architecture that resolves the inherent incompatibility between aggressive fungal cell wall lysis reagents and propidium monoazide (PMA) stability. Unlike prior art [P2], which suffers from >40% signal loss within 48 hours due to hydrolytic degradation of PMA in bulk mixing, or [P4], which requires complex manual workflows prone to user error, this device physically isolates lyophilized PMA from harsh lysis agents until the moment of sample injection. This precise temporal control prevents premature PMA cross-linking or degradation, enabling stable, closed-system viability discrimination for microfungi with >6 months ambient shelf-life, a technical breakthrough specifically addressing the failure modes of existing portable nucleic acid analysis systems in the context of fungal pathogen detection.
+The invention's novelty lies in the specific integration of a 500V electro-osmotic hydrophobic valve to autonomously transfer lysate from a PMA-treated zone to a thermal cycler without manual intervention. This enables a closed-system viability index for fungi, distinguishing it from prior art [P2] and [P4] which rely on manual workflows or suffer from signal loss due to lack of precise temporal control. While lyophilized PMA isolation is a necessary enabler for this EOF-based workflow, it is not claimed as a standalone breakthrough.
 
 ## Diagram
 

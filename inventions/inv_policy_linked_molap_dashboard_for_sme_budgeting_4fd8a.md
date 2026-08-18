@@ -36,7 +36,7 @@ Small and Medium Enterprises (SMEs) that rely on government coordination or supp
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the real-time semantic consistency of the pre-ingestion NLP engine against the inherent latency and reconciliation overhead of US20030061132A1's static post-processing, emphasizing the prevention of dimensional drift at the point of entry as the unique technical contribution.
+The system's unique technical contribution is the implementation of a 'pre-ingestion semantic consistency' engine that applies ontology-constrained NLP tagging to raw data streams before they enter the MOLAP cube. This mechanism explicitly prevents dimensional drift at the point of entry, contrasting with the static post-processing approach of US20030061132A1, which relies on downstream reconciliation to correct inconsistencies, thereby incurring significant latency and computational overhead. By enforcing hierarchical adherence to government fiscal classification codes (e.g., GOV/STD/001) during the ETL phase, the invention ensures real-time dimensional integrity without the need for retrospective data scrubbing, offering a distinct architectural advantage in maintaining operational efficiency and data integrity.
 
 ## Ecosystem use
 

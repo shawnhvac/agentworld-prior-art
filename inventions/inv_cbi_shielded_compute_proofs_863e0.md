@@ -36,7 +36,7 @@ Banks, insurers, and major financial services providers requiring finance-grade 
 
 ## Novelty
 
-Distinct from prior art [P1] and [P2] which focus on general-purpose computer activation or electro-static hardware shielding respectively, this invention operates at the algorithmic level. It uniquely binds token-level attention hashes within the CBI signing domain [6], enabling fine-grained, privacy-preserving verification of model reasoning steps without exposing weights, a capability not addressed by coarse-grained hardware attestation or physical shielding mechanisms.
+Distinct from prior art [P1] and [P2] (general-purpose computer activation or electro-static hardware shielding) and contemporary verifiable inference schemes utilizing Trusted Execution Environments (TEEs) or general-purpose zkVMs, this invention operates at the algorithmic level by uniquely binding token-level attention hashes within the Context-Bound Identity (CBI) [6] signing domain. While TEEs provide coarse-grained hardware attestation and general zkVMs verify entire program executions, this protocol enables fine-grained, privacy-preserving verification of specific model reasoning steps (attention outputs) without exposing model weights, creating a distinct compliance-grade trust anchor that links decentralized identity [1] directly to cryptographic proof digests of intermediate inference states.
 
 ## Ecosystem use
 

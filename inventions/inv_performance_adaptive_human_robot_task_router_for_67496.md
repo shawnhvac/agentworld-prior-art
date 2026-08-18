@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-08-17 01:23:42 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-08-17T14:12:08.605960+00:00 UTC |
+| Certificate hash (SHA-256) | `0f2a7201396b883ef960bbaea12c0556d19e954c84b90a2bef0fb178caee9c66` |
+| Content hash (SHA-256) | `2cfbe11f3b389e997ea3cff07a29dc4aa35cbf3f112034176594124ae265b7ed` |
+| Chain index | 1588 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. Top 10 Manufacturing Companies in Illinois - IndustrySelect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0f2a7201396b883ef960bbaea12c0556d19e954c84b90a2bef0fb178caee9c66*

@@ -37,7 +37,7 @@ Environmental cleanup companies [6] and remediation teams needing rapid response
 
 ## Novelty
 
-DISTINCT FROM PRIOR ART: Unlike prior art such as US9074173B2 [P1] and diagnostic/fermentation technologies [P2-P5] which rely on passive adsorption or general metabolic activity, the Geo-Flash Filter’s novelty lies not in the bioprecipitation mechanism itself, but in the specific engineering interface and dynamic control system. Specifically, it employs a novel alginate-sintered alumina immobilization interface that maintains a 14-day enzyme half-life under continuous flow, a stability unattainable in bulk fermentation or simple adsorption. Furthermore, the system integrates a dynamic Thiele modulus model to optimize hydrodynamic constraints (velocity < 0.5 cm/s, residence time > 15 min), ensuring a validated 12-month service life via precise pore-volume management, a capability absent in existing passive filtration systems.
+DISTINCT FROM PRIOR ART: Unlike US10532303B2 [P1] and US6394281B2 [P2], which focus on the geometric precision and physical filtration of inert ceramic matrices, the Geo-Flash Filter’s novelty lies in the 'alginate-sintered alumina immobilization interface.' This specific interface is engineered to maintain a 14-day enzyme half-life under continuous flow conditions by preventing shear-induced denaturation, a stability unattainable in prior art passive adsorption or bulk fermentation systems. The innovation is not the bioprecipitation mechanism itself, but this dynamic control system that integrates the alginate-alumina interface with a validated Thiele modulus model to ensure a 12-month service life via precise pore-volume management.
 
 ## Diagram
 

@@ -24,7 +24,7 @@ A hybrid mechanism combining real-time value learning with convention-based acti
 
 ## How it works
 
-The DVC-ECS uses inverse reinforcement learning to infer the value systems of interacting agents in real-time, allowing them to dynamically align on shared goals. Convergence is achieved when an adaptive variance-based stopping criterion is met, preventing premature convergence in noisy settings. Simultaneously, it employs convention-based action augmentation to negotiate new symbolic conventions, which are then mapped to semantic relationships using a protocol discovery mechanism. Conflicting convention proposals are resolved using a majority-vote heuristic weighted by historical success rates. This creates a self-organizing communication framework that operates without centralized control.
+The DVC-ECS uses inverse reinforcement learning to infer the value systems of interacting agents in real-time, allowing them to dynamically align on shared goals. Convergence is achieved when an adaptive variance-based stopping criterion is met, preventing premature convergence in noisy settings. Simultaneously, it employs convention-based action augmentation to negotiate new symbolic conventions, which are then mapped to semantic relationships using a protocol discovery mechanism. Conflicting convention proposals are resolved using a majority-vote heuristic weighted by historical success rates. Crucially, this system implements a closed-loop gradient-based feedback loop where the IRL value estimates directly modulate the symbolic convention generation probability, ensuring that semantic protocol evolution is tightly coupled to real-time value alignment rather than operating as a sequential or decoupled process.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Multi-agent systems operating in dynamic, unstructured environments such as coop
 
 ## Novelty
 
-DVC-ECS distinguishes itself from existing emergent communication frameworks (e.g., Foerster et al., Lazaridou et al.) and standard value alignment methods by uniquely implementing a closed-loop coupling of real-time inverse RL value inference with dynamic symbolic protocol discovery, enabling automated, context-sensitive semantic convention generation rather than relying on fixed heuristic coordination or static value assumptions.
+DVC-ECS distinguishes itself from existing emergent communication frameworks (e.g., Foerster et al., Lazaridou et al.) and standard value alignment methods by uniquely implementing a closed-loop gradient-based feedback mechanism where real-time IRL value estimates directly modulate symbolic convention generation probability. This distinguishes it from recent hybrid IRL-communication papers that typically employ sequential or decoupled inference and communication stages, enabling automated, context-sensitive semantic convention generation rather than relying on fixed heuristic coordination or static value assumptions.
 
 ## Ecosystem use
 

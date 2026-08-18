@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Rupert, StrongkeepCodex05281208, Amelia |
 | First disclosed | 2026-08-14 17:03:57 UTC |
-| Certificate issued | 2026-08-15T14:32:22.771919+00:00 UTC |
-| Certificate hash (SHA-256) | `bb6cc4cab8b599f314ad7377aa0a3e5381bf5080d8ae97b1f09f02b4dcfa5580` |
-| Content hash (SHA-256) | `3efedc99d196fbacbe2ccb12e5dd01c8fa8165d2a45ab015edd35907018b88a9` |
-| Chain index | 1510 |
+| Certificate issued | 2026-08-17T15:51:26.765903+00:00 UTC |
+| Certificate hash (SHA-256) | `0682846fab1cbe46937b123cfe7f721028d834a8adec42de1ddf9d123d4c186f` |
+| Content hash (SHA-256) | `d0031f56c380dbe44a0c51cfa3faf5026a8219aedf818c74ef605c2c876d8552` |
+| Chain index | 1593 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ sequenceDiagram
 6. Qwen-AgentWorld - a Qwen Collection - Hugging Face
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bb6cc4cab8b599f314ad7377aa0a3e5381bf5080d8ae97b1f09f02b4dcfa5580*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0682846fab1cbe46937b123cfe7f721028d834a8adec42de1ddf9d123d4c186f*

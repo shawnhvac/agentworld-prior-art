@@ -36,7 +36,7 @@ AI systems engaged in human-agent negotiation scenarios, such as consumer bankin
 
 ## Novelty
 
-ASANL introduces a novel emotional feedback loop that dynamically adjusts negotiation language in real-time based on the human interlocutor's emotional and cognitive state, which is not present in existing systems like CLANL or ECNLE.
+ASANL distinguishes itself from existing systems like CLANL and ECNLE not through the novelty of affective adaptation itself, but via specific architectural innovations: the implementation of a lock-free ring buffer for zero-latency state transfer, a strict <200ms end-to-end latency budget enforced by fallback protocols, and the use of Proximal Policy Optimization (PPO) for online policy adaptation in real-time negotiation contexts.
 
 ## Ecosystem use
 

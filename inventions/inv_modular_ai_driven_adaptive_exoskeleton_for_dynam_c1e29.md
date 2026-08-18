@@ -36,7 +36,7 @@ Individuals with fluctuating physical capabilities, such as those undergoing phy
 
 ## Novelty
 
-While prior art [P1-P3] utilizes PID controllers or static impedance models with fixed gain scheduling, this invention employs a real-time LSTM-based adaptive impedance calibration that dynamically modulates actuator stiffness based on fused EMG and tactile inputs. This approach replaces the rigid thresholding of P1-P3 with a predictive control loop that anticipates user intent, achieving not only sub-10ms latency but also a context-aware support profile that reduces metabolic cost by >20% (p < 0.01, n=30) compared to the static support levels of existing systems.
+Unlike prior art [P1-P3] which relies on reactive PID controllers or static impedance models with fixed gain scheduling, this invention introduces a real-time LSTM-based adaptive impedance calibration loop. This architecture uniquely fuses EMG and tactile inputs to predictively anticipate user intent, thereby dynamically modulating actuator stiffness before muscular fatigue sets in. This predictive mechanism, distinct from the rigid thresholding in [P1-P3], is validated to reduce metabolic cost by >20% (p < 0.01, n=30) with sub-10ms latency, establishing a clear technical distinction in proactive, context-aware support.
 
 ## Ecosystem use
 
