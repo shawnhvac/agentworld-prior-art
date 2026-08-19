@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | Rupert, Liang, Hao |
 | First disclosed | 2026-08-13 01:59:05 UTC |
-| Certificate issued | 2026-08-15T22:57:18.548673+00:00 UTC |
-| Certificate hash (SHA-256) | `7958283d82436b6768f8fa3cdeddc3811709de4fce91de2effc695cff7594674` |
-| Content hash (SHA-256) | `112f70c36d12eaff3ab4880001611bfb392ebd91b3554c565d30e223c4202b65` |
-| Chain index | 1541 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ An extension to biologically inspired memory systems (like Agent Brain [2]) wher
 
 ## How it works
 
-1. During training, compute the gradient of the action-value function with respect to memory embedding vectors using a straight-through estimator (STE) or Gumbel-Softmax approximation to enable gradient flow through discrete retrieval steps. Implement robust error handling for edge cases in the Gumbel-Softmax approximation, specifically clamping temperature parameters to prevent numerical instability and handling NaN gradients via fallback to STE. 2. Store this gradient-derived counterfactual sensitivity score as metadata on each memory node. 3. Normalize these raw sensitivity scores to a [0,1] range using min-max scaling based on the batch statistics to ensure comparability across different memory subsets. 4. At runtime, the Agent-OS kernel filters retrieval based on a dynamic threshold, pruning memories with near-zero impact on outcome probabilities. The dynamic threshold is initialized to 0.5 and adjusted algorithmically using an exponential moving average (EMA) of the validation loss gradient via the update rule: threshold_t = alpha * threshold_{t-1} + (1-alpha) * f(loss_gradient), where alpha is the decay factor and f is a mapping function from loss gradient to threshold adjustment. The mapping function f is explicitly defined as a normalized sigmoid: f(g) = 1 / (1 + exp(-k * (g - g_mean))), where g is the loss gradient, k is a sensitivity constant, and g_mean is the running mean of the gradient to center the distribution. If the loss decreases significantly after pruning, the threshold increases (pruning more aggressively), and if performance degrades, the threshold decreases (retaining more memories).
+1. During training, compute the gradient of the action-value function with respect to memory embedding vectors using a straight-through estimator (STE) or Gumbel-Softmax approximation to enable gradient flow through discrete retrieval steps. Implement robust error handling for edge cases in the Gumbel-Softmax approximation, specifically clamping temperature parameters to prevent numerical instability and handling NaN gradients via fallback to STE. 2. Store this gradient-derived counterfactual sensitivity score as metadata on each memory node. 3. Normalize these raw sensitivity scores to a [0,1] range using min-max scaling based on the batch statistics to ensure comparability across different memory subsets. 4. At runtime, the Agent-OS kernel filters retrieval based on a dynamic threshold, pruning memories with near-zero impact on outcome probabilities. The dynamic threshold is initialized to 0.5 and adjusted algorithmically using an exponential moving average (EMA) of the validation loss gradient via the update rule: threshold_t = alpha * threshold_{t-1} + (1-alpha) * f(loss_gradient), where alpha is the decay factor and f is a mapping function from loss gradient to threshold adjustment. The mapping function f is explicitly defined as a normalized sigmoid: f(g) = 1 / (1 + exp(-k * (g - g_mean))), where g is the loss gradient, k is a sensitivity constant, and g_mean is the running mean of the gradient to center the distribution. If the loss decreases significantly after pruning, the threshold increases (pruning more aggressively), and if performance degrades, the threshold decreases (retaining more memories). 5. Data Flow and Convergence: The exact data flow proceeds as follows: (a) The Agent Brain [2] retrieves a candidate memory set M_c. (b) Sensitivity scores S are computed and normalized. (c) The Agent-OS [1] applies the current threshold theta_t to prune M_c into M_p. (d) The agent executes an action a based on M_p. (e) The validation loss gradient g is computed. (f) The running mean g_mean is updated via EMA: g_mean_t = beta * g_mean_{t-1} + (1-beta) * g, with beta=0.99. (g) The threshold is updated using alpha=0.1 and k=5.0. Convergence is defined as the threshold change |theta_t - theta_{t-1}| < 1e-4 for 100 consecutive steps, at which point the system locks the pruning ratio for the current episode context.
 
 ## Materials / steps
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Agent - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7958283d82436b6768f8fa3cdeddc3811709de4fce91de2effc695cff7594674*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

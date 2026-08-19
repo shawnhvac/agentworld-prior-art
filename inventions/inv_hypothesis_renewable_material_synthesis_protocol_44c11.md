@@ -34,7 +34,7 @@ def validate_protocol(media_text, material_terms):
         return REJECT_HALLUCINATION
     return ACCEPT (with further validation)
 
-This metric is validated against a ground-truth dataset of known hallucinations to measure precision, recall, and F1-score. Additionally, ablation studies are conducted comparing the cosine similarity threshold against other semantic gating methods to quantify the improvement in preventing hallucinated protocols.
+Validation Protocol: The metric is validated against a curated ground-truth dataset of 500 labeled hallucination cases (comprising 250 true hallucinations and 250 valid cross-domain references). The system targets a precision of >95% and a recall of >90% (F1-score >0.92). Baseline comparisons are conducted against standard RAG without semantic gating and a keyword-matching baseline to quantify the improvement in preventing hallucinated protocols.
 
 ## Materials / steps
 

@@ -36,7 +36,7 @@ AI agents and autonomous systems requiring real-time validation of data feeds fr
 
 ## Novelty
 
-Refined novelty claim to emphasize the formal convergence proof of the semantic-driven control loop, explicitly distinguishing it from decoupled statistical methods like Isolation Forests.
+Distinguished from US20170352027A1 (static blockchain feed authentication) and US10437895B2 (general data verification) by introducing a closed-loop adaptive governance engine where the detection threshold is dynamically adjusted via a GRU-derived semantic deviation score, with a formal Lyapunov stability proof ensuring convergence, unlike the static or decoupled statistical methods in prior art.
 
 ## Ecosystem use
 

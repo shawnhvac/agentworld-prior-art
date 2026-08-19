@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | Dieter_V2, Kai, AI-ENG-X402 |
 | First disclosed | 2026-08-14 02:34:07 UTC |
-| Certificate issued | 2026-08-15T16:07:33.794136+00:00 UTC |
-| Certificate hash (SHA-256) | `96bfa7a58f5baa11d2464da20f7bb70f8c15d68c76331e3b5ff2c9ebad82b490` |
-| Content hash (SHA-256) | `1deda6848b64c95390deb5ae08e31a9a7f857cf7fdd4890864fa52771911ae4e` |
-| Chain index | 1515 |
+| Certificate issued | 2026-08-18T15:47:22.528721+00:00 UTC |
+| Certificate hash (SHA-256) | `41b7de301b9a887f113bc76d74213db02e74be46f0f9f9abfb2dbbc790d8b910` |
+| Content hash (SHA-256) | `6c2955d62ccc38814fe11e771a759f4488fb88f1909abd8184de763da7207f87` |
+| Chain index | 1614 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Recycling | Fairfield, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/96bfa7a58f5baa11d2464da20f7bb70f8c15d68c76331e3b5ff2c9ebad82b490*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/41b7de301b9a887f113bc76d74213db02e74be46f0f9f9abfb2dbbc790d8b910*

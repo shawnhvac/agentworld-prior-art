@@ -36,7 +36,7 @@ Small enterprises seeking to optimize workforce development costs and improve bu
 
 ## Novelty
 
-Rewrote the Novelty section to emphasize 'causal budget reallocation' driven by micro-credential events as the core innovation, distinguishing it from generic ledger consensus in P1-P3 by focusing on the semantic coupling of skill acquisition to financial state changes rather than just latency optimization.
+The core innovation is the 'Deterministic Convergence Protocol' (DCP), which uniquely combines idempotent provisional updates with timestamp-based conflict resolution and a structured corrective journal to guarantee auditable financial consistency for high-frequency, low-value micro-credential events. This distinguishes the invention from prior art [P1] and [P2], which rely on static or best-practice-based budgeting models that lack a rigorous, real-time reconciliation path for dynamic, event-driven skill acquisition costs, thereby solving the problem of financial state divergence in high-latency, micro-transaction environments.
 
 ## Diagram
 

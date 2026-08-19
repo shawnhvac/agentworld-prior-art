@@ -36,7 +36,7 @@ Enterprise AI agent platforms, API providers concerned with security, and develo
 
 ## Novelty
 
-TOPCAR is distinguished by its dual-layer defense: it couples zero-knowledge intent verification with active, session-specific XOR masking of endpoint addresses, directly preventing adjacency matrix reconstruction by ensuring topology metadata is never transmitted in clear text, unlike passive redaction methods or identity-centric ZK systems (e.g., ZK-Login) that do not obscure infrastructure layout.
+TOPCAR is distinguished by its active topology-concealment layer, which uniquely obscures endpoint addresses via session-specific XOR masking derived from a shared secret, directly preventing adjacency matrix reconstruction. This contrasts sharply with identity-centric systems like ZK-Login or mTLS, which verify agent credentials or transport security but do not cryptographically mask the infrastructure layout, thereby leaving endpoint topology exposed to passive observers and active reconnaissance.
 
 ## Ecosystem use
 

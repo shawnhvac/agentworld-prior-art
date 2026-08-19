@@ -28,7 +28,7 @@ A dynamic routing system that treats 'fear' as a tangible traffic constraint. By
 
 ## Materials / steps
 
-1. Develop a simulation environment using crowd-modeling parameters from [2]. 2. Integrate computer vision and audio analysis modules for real-time fear detection. 3. Implement an Extended Kalman Filter (EKF)-based sensor fusion architecture to combine CV
+1. Develop a high-fidelity simulation environment using SUMO integrated with crowd-modeling parameters from [2] to generate synthetic traffic and panic scenarios. 2. Integrate computer vision and audio analysis modules for real-time fear detection within the simulation. 3. Implement an Extended Kalman Filter (EKF)-based sensor fusion architecture to combine CV and audio streams into a unified Fear Index. 4. Execute a comparative validation suite against a standard traffic-only routing baseline. 5. Calculate the 'Average Detour Efficiency Ratio' (actual travel time / optimal travel time given fear constraints) and 'Panic Exposure Reduction' (percentage decrease in time spent in high-FI zones). 6. Verify that the system achieves >20% Panic Exposure Reduction without exceeding a 10% increase in average travel time.
 
 ## Who it's for
 

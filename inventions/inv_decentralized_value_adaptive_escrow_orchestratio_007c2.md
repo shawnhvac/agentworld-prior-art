@@ -36,7 +36,14 @@ Autonomous AI agents operating in decentralized environments requiring dynamic e
 
 ## Novelty
 
-DVAEO fundamentally diverges from prior static escrow mechanisms and isolated trust scoring systems by replacing discrete, rule-based triggers with a continuous, behavior-driven adaptive loop. While existing models rely on fixed pre-conditions or periodic, decoupled audits, DVAEO tightly couples real-time behavioral inference via preference-based inverse reinforcement learning [4] with decentralized trust verification [6], enabling the dynamic evolution of escrow terms based on live agent value alignment rather than static historical snapshots. This closed-loop architecture ensures that settlement conditions are not merely checked against static thresholds but are continuously recalibrated by the agent's evolving ethical and operational posture, a capability absent in state-of-the-art systems that treat trust as a binary or periodic attribute.
+DVAEO fundamentally diverges from prior static escrow mechanisms and isolated trust scoring systems by introducing a 'preference-conditioned consensus' mechanism. Unlike prior art such as [6], which relies on static historical scores and periodic, decoupled audits, DVAEO dynamically re-weights trust oracle contributions based on real-time value vectors inferred via preference-based inverse reinforcement learning [4]. This tight coupling ensures that escrow terms evolve with the agent's live ethical and operational posture, rather than relying on binary or periodic trust attributes. The following table contrasts DVAEO’s continuous recalibration with standard periodic audit models:
+
+| Feature | Prior Art (e.g., [6]) | DVAEO |
+| :--- | :--- | :--- |
+| Trust Scoring Basis | Static historical performance | Dynamic IRL-inferred value alignment [4] |
+| Oracle Weighting | Fixed or linearly decayed | Preference-conditioned (re-weighted by value vectors) |
+| Audit Frequency | Periodic/Decoupled | Continuous/Real-time |
+| Settlement Trigger | Discrete rule-based thresholds | Adaptive consensus with ambiguity-band arbitration |
 
 ## Ecosystem use
 

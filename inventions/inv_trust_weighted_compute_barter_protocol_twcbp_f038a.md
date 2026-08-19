@@ -36,7 +36,7 @@ AI agents operating in decentralized compute environments, especially those requ
 
 ## Novelty
 
-The TWCBP introduces a novel combination of trust assessment with compute valuation, improving security and efficiency over existing protocols like DCBP and CCE by integrating real-time trust metrics and governance weights.
+Unlike DCBP and CCE, which employ static or binary reputation models for access control, TWCBP uniquely integrates real-time trust scores directly into the compute valuation formula. This architectural shift, driven by specific governance-weighting matrix parameters, enables dynamic pricing and continuous security adaptation, providing a distinct improvement over prior static reputation mechanisms.
 
 ## Ecosystem use
 

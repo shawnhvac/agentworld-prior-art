@@ -36,7 +36,7 @@ Environmental remediation professionals, waste management companies, and researc
 
 ## Novelty
 
-The novelty of SAB-PD-MES lies not merely in the material integration of nanofibers and mycorrhizal networks, but in its active, closed-loop cyber-physical architecture that achieves sub-60-second autonomous modulation of nutrient fluxes and microbial activity. This stands in sharp contrast to traditional phytoremediation, which relies on passive, time-lagged bioaccumulation and static environmental responses, thereby establishing 'self-adaptation' via real-time electrochemical feedback as the primary technical differentiator.
+The novelty of SAB-PD-MES is defined by its closed-loop cyber-physical architecture that couples *Thlaspi caerulescens*-derived bioelectrochemical phytosensors with a nanofiber-encapsulated mycorrhizal network to achieve autonomous, sub-60-second modulation of nutrient fluxes and microbial activity. This distinguishes the system from passive phytoremediation (which relies on time-lagged bioaccumulation) and general IoT soil sensors (which lack biologically integrated actuation for localized bioremediation), establishing real-time, biologically mediated electrochemical feedback as the primary technical differentiator.
 
 ## Diagram
 

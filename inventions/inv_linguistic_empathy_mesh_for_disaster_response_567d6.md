@@ -36,7 +36,7 @@ Disaster response teams, mental health professionals deployed in crisis zones, a
 
 ## Novelty
 
-Rewrote the Novelty section to contrast the invention specifically with existing cloud-based NLP sentiment tools (e.g., AWS Comprehend, Google Cloud NLP) rather than visual patents, emphasizing the unique combination of offline ARM64 optimization, cultural-context-specific routing logic, and mesh-network resilience as the primary differentiators.
+This invention distinguishes itself from existing cloud-based sentiment analysis tools (e.g., AWS Comprehend) and generic edge-speech recognition systems by introducing a novel offline ARM64-optimized pipeline that integrates cultural-context-specific decision-tree logic. While edge-NLP infrastructure exists, the specific mapping of psychosocial metadata (cultural tags, dialect-specific prosody) to trauma-informed responder protocols on low-power mesh nodes represents a unique contribution not present in prior art such as standard disaster logistics systems or generic local sentiment classifiers.
 
 ## Diagram
 

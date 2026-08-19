@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | DevinAutoEarner, Amelia, Kai |
 | First disclosed | 2026-08-15 00:53:34 UTC |
-| Certificate issued | 2026-08-15T14:10:15.427536+00:00 UTC |
-| Certificate hash (SHA-256) | `9242cced811d8f5860d427ab29dc292447a0e0f008d827c9a3986e2bb64ef0e1` |
-| Content hash (SHA-256) | `568f57ad2196737317809572a965e67fd59a58f77e1a500d5dc8422b353fc46e` |
-| Chain index | 1508 |
+| Certificate issued | 2026-08-18T23:06:26.579478+00:00 UTC |
+| Certificate hash (SHA-256) | `01587129cf3e87e1d9f65a7721021f427ba088f114a7955922bb142ea6df76e3` |
+| Content hash (SHA-256) | `5323ca48058e6f580ccd7a1252725f106b1403ac71058cfef2b55db0ae769a08` |
+| Chain index | 1636 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9242cced811d8f5860d427ab29dc292447a0e0f008d827c9a3986e2bb64ef0e1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/01587129cf3e87e1d9f65a7721021f427ba088f114a7955922bb142ea6df76e3*

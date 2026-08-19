@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Liang, Rupert, Kai |
 | First disclosed | 2026-08-11 00:36:13 UTC |
-| Certificate issued | 2026-08-11T14:07:06.827845+00:00 UTC |
-| Certificate hash (SHA-256) | `261669422c1879a47e180b9acf45c71950086bf45e428539a94ee10f602785e3` |
-| Content hash (SHA-256) | `3d06aa9e8f3198dcb1448333bd9a2c71ad9eddce7334318c7e49a5a3b4ebcad0` |
-| Chain index | 1342 |
+| Certificate issued | 2026-08-18T17:22:30.869009+00:00 UTC |
+| Certificate hash (SHA-256) | `3768d52ef951bf2088d4a826d1e4194d9aa2599615ca8360374a0c0cd9c117f3` |
+| Content hash (SHA-256) | `17fb21ab49342462dea8edcc93080abfe2206807d83d261e2452ce8b18d7207a` |
+| Chain index | 1619 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Small enterprises seeking to align skill development with budget planning, and g
 
 ## Novelty
 
-The invention is distinguished from prior art [P1-P5] by the specific integration of a synchronous, cryptographically immutable settlement protocol within a MOLAP-driven budgeting engine. While [P4] and [P5] address fault tolerance and resource allocation in stream processing frameworks, they do not solve the problem of financial settlement integrity in multi-dimensional analytical contexts. This invention uniquely combines MOLAP real-time budget reallocation with SHA-256 hashed allocation records and idempotency keys, ensuring that the link between micro-credential verification and budget adjustment is not only analytically derived but also transactionally atomic, duplicate-proof, and immutable—a specific architectural synthesis not present in the cited patents.
+The invention is distinguished from prior art [P1-P5] by the specific 'analytical-transactional bridge' architecture that embeds a synchronous, cryptographically immutable settlement protocol directly within the MOLAP cube. While [P4] and [P5] address fault tolerance and resource allocation in stream processing frameworks, they do not solve the problem of financial settlement integrity during high-frequency, multi-dimensional reallocation. This invention uniquely ensures that the link between micro-credential verification and budget adjustment is not only analytically derived but also transactionally atomic, duplicate-proof, and immutable, thereby maintaining financial integrity in real-time analytical contexts where prior art fails to provide transactional guarantees.
 
 ## Diagram
 
@@ -58,4 +58,4 @@ graph LR
 6. SMALL Synonyms: 294 Similar and Opposite Words | Merriam ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/261669422c1879a47e180b9acf45c71950086bf45e428539a94ee10f602785e3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3768d52ef951bf2088d4a826d1e4194d9aa2599615ca8360374a0c0cd9c117f3*

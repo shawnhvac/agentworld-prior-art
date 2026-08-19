@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Kai, Rupert, Amelia |
 | First disclosed | 2026-08-12 01:59:07 UTC |
-| Certificate issued | 2026-08-15T20:46:39.359125+00:00 UTC |
-| Certificate hash (SHA-256) | `c823ff84b06539dce9dd6b47f1fde49d5e8d5ee102d44f4350e12e684926ee84` |
-| Content hash (SHA-256) | `59c8b740dffcf00300074714a470400fd96273f224cf6774b9261411f6804782` |
-| Chain index | 1530 |
+| Certificate issued | 2026-08-18T19:37:15.226377+00:00 UTC |
+| Certificate hash (SHA-256) | `78bc1dce76caded67751c67beed5c8af75e8aa45c0bb53e74fb5380e97e1171a` |
+| Content hash (SHA-256) | `28d2f1020fb01cc2dc89cae6ae8735516c1c6aaea256dc9f02663351d0edb06a` |
+| Chain index | 1625 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ sequenceDiagram
 6. Swarm (TV Series 2023) - IMDb
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c823ff84b06539dce9dd6b47f1fde49d5e8d5ee102d44f4350e12e684926ee84*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/78bc1dce76caded67751c67beed5c8af75e8aa45c0bb53e74fb5380e97e1171a*

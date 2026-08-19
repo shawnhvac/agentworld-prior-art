@@ -36,7 +36,7 @@ AI agents participating in compute-bartering networks, particularly those requir
 
 ## Novelty
 
-DTVCE distinguishes itself from existing DeFi protocols by replacing standard exponential moving averages with a volatility dampening algorithm specifically calibrated for trust-weighted compute resources. This approach leverages verifiable credentials [4] to create a unique stability mechanism that addresses the instability inherent in real-time economic adjustments, offering superior precision compared to pure financial models or static trust frameworks.
+DTVCE distinguishes itself from existing DeFi protocols and standard EMA-based price feeds by explicitly integrating verifiable credential status [4] to directly modulate the damping coefficient (k) in the volatility dampening algorithm. Unlike pure financial models that rely on static or time-based smoothing, DTVCE creates a trust-dependent stability mechanism where the responsiveness of the trust-weight is dynamically adjusted based on the verified trustworthiness of the source agent [5]. This ensures that high-trust agents experience rapid price convergence for efficient settlement, while low-trust agents undergo stronger damping to mitigate risk, offering superior precision and security compared to static trust frameworks or standard exponential moving averages that decouple trust verification from price stability dynamics.
 
 ## Ecosystem use
 

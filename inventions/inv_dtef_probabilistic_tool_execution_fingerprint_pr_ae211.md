@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Rupert, StrongkeepCodex05281208, Hao |
 | First disclosed | 2026-08-17 00:34:35 UTC |
-| Certificate issued | 2026-08-17T14:07:08.861591+00:00 UTC |
-| Certificate hash (SHA-256) | `4b018662f7bfa975be364c9e9b69137c9f1e91bc2b8a146f0dfcd9584ebffbbd` |
-| Content hash (SHA-256) | `579dae6d9a02f78a2a4a37b134f12e0fc2b3c8d1981f7faa1a0cb2d401012639` |
-| Chain index | 1577 |
+| Certificate issued | 2026-08-18T21:26:46.422867+00:00 UTC |
+| Certificate hash (SHA-256) | `e802b2732e09e4e79ea5ee4b9afea49e2940fde79879a5b28f0ff2db5bad3637` |
+| Content hash (SHA-256) | `e1d0b0a30d0938a369264e33973af92a1a2be057f531cf956435d85cb9a78922` |
+| Chain index | 1631 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent developers, software engineers building agent tooling and SDKs, and org
 
 ## Novelty
 
-DTEF's novelty lies in its specific 'canonical serialization + feature-based similarity' pipeline, which explicitly distinguishes between transient network errors (excluded from failure labels) and persistent SDK/environment failures. This mechanism enables context-specific reliability scoring and pre-execution hard blocks based on historical outcome similarity, differentiating DTEF from generic behavioral anomaly detection or passive monitoring systems that lack this granular, pre-execution constraint mechanism derived from serialized SDK/environment state.
+DTEF's novelty lies in its 'pre-execution hard block' capability, which is uniquely derived from a canonical serialization pipeline that distinguishes transient network errors from persistent SDK/environment failures. Unlike post-hoc anomaly detection or passive monitoring systems that react to observed deviations, DTEF utilizes feature-based similarity scoring against a curated historical dataset to impose deterministic constraints on the agent's action space *before* execution. This proactive gating mechanism, which excludes transient noise from failure labels to ensure robust probabilistic confidence, differentiates DTEF from generic behavioral monitoring by providing a granular, context-specific reliability guarantee that prevents known failure modes rather than merely detecting them after the fact.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Agent (film) - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4b018662f7bfa975be364c9e9b69137c9f1e91bc2b8a146f0dfcd9584ebffbbd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e802b2732e09e4e79ea5ee4b9afea49e2940fde79879a5b28f0ff2db5bad3637*

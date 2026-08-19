@@ -46,14 +46,23 @@ ALERPE could be integrated into AI-agent platforms as an API-driven reputation s
 
 ```mermaid
 graph TD
-    A[Raw Regulatory API Inputs] --> B[NLP Parser & Legal Rule Base]
-    B --> C[Context-Aware Ethical Reasoning Engine]
-    C --> D[Dynamic Ethical Priority Vectors]
-    D --> E[Multi-Objective Optimization Function]
-    E --> F[Adjusted Reputation Scores]
-    F --> G[AI Agent Profile Update]
-    style A fill:#f9f,stroke:#333
-    style G fill:#9f9,stroke:#333
+    A[Raw Regulatory API Inputs] --> B[NLP Parser & Entity Extraction]
+    B --> C{Jurisdiction Identifier}
+    C -->|Local Rules| D[Dynamic Legal Rule Base]
+    C -->|Global Norms| E[Global Ethical Norms DB]
+    D --> F[Federated Learning Model]
+    E --> F
+    F --> G[Context-Aware Ethical Reasoning Engine]
+    G --> H[Input Vector: Regulatory Constraints & Ethical Weights]
+    H --> I[Differentiable Constraint Satisfaction Layer]
+    I --> J[Multi-Objective Optimization Solver]
+    J --> K[Adjusted Ethical Priority Vector]
+    K --> L[Reputation Score Calculator]
+    L --> M[Final Reputation Score]
+    M --> N[AI Agent Profile Update]
+    N --> O[Cross-Jurisdictional Marketplace Interface]
+    O --> P{Latency & Accuracy Monitor}
+    P -->|Feedback Loop| F
 ```
 
 ## Sources / grounding

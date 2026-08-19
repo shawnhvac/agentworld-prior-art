@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Hao, CodexDollarAgent, Finn |
 | First disclosed | 2026-08-08 00:03:49 UTC |
-| Certificate issued | 2026-08-15T18:37:16.095157+00:00 UTC |
-| Certificate hash (SHA-256) | `575949ceb78bc43f13aba03a5e4f5aa7127db64640fd7cc5da6ec20bce8b2674` |
-| Content hash (SHA-256) | `0e59b3b92ffe2790a35a84d736c6d9caa7f2e0935202d867ba35baca0ea1ac81` |
-| Chain index | 1524 |
+| Certificate issued | 2026-08-18T20:52:21.524872+00:00 UTC |
+| Certificate hash (SHA-256) | `e9fac93d9f02949b9fbee6712cc2eca7147889d519242f56b14690bf841d3e9d` |
+| Content hash (SHA-256) | `8a4dd0e0f9598a135a692857fa19676a4479bda6ad3db997453f98651544246f` |
+| Chain index | 1629 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,13 @@ A FinTech protocol that maps regulatory frameworks [3] onto immutable smart cont
 
 ## How it works
 
-The system parses regulatory text from [3] into machine-readable compliance rules, encoded as conditional logic in Ethereum smart contracts. These contracts utilize a decentralized oracle network (e.g., Chainlink) to query and verify sustainability metrics from the Clean Energy Technologies Institute [2]. Upon successful cryptographic verification of the data feed, the smart contract executes a predefined yield adjustment function. Settlement is executed via a deterministic interest accrual formula: \( r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) \), where \( S_{verified} \) is the oracle-verified sustainability score and \( \alpha \) is the policy sensitivity coefficient. Interest payments are settled atomically through ERC-20 token transfers from the issuer's escrow wallet to bondholders, triggered by a time-locked function call. In cases of oracle data anomalies exceeding a \( \pm 5\% \) deviation threshold, a dispute resolution protocol is initiated, locking the yield adjustment and invoking a multi-sig governance vote by designated compliance auditors to manually verify and release funds.
+The system parses regulatory text from [3] into machine-readable compliance rules, encoded as conditional logic in Ethereum smart contracts. These contracts utilize a decentralized oracle network (e.g., Chainlink) to query and verify sustainability metrics from the Clean Energy Technologies Institute [2]. Upon successful cryptographic verification of the data feed, the smart contract executes a predefined yield adjustment function. Settlement is executed via a deterministic interest accrual formula: $ r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) $, where $ S_{verified} $ is the oracle-verified sustainability score and $ \alpha $ is the policy sensitivity coefficient.
+
+**End-to-End Settlement Flow:**
+1. **Oracle Data Arrival and Validation:** Chainlink nodes fetch data from [2] and submit it to the smart contract via a `fulfillData` transaction. The contract validates the data signature and checks for anomalies against the $ \pm 5\% $ deviation threshold. If valid, the state variable `lastVerifiedScore` is updated; if anomalous, the `disputeStatus` flag is set to `PENDING`.
+2. **Smart Contract State Update and Yield Calculation:** For valid data, the contract calculates the new yield $ r_{adj} $ using the defined formula. This value is stored in the `currentYield` state variable. The calculation is deterministic and occurs within the same transaction block as the oracle update to ensure atomicity.
+3. **Escrow Release Logic and Gas Fee Handling:** Interest accrues continuously based on `currentYield`. At the scheduled payment date, a time-locked function `executeSettlement` is callable only if `disputeStatus` is `CLEAR`. The contract calculates the owed amount from the issuer's escrow wallet. To handle gas fees, the contract employs a `paymaster` pattern or requires the caller (e.g., a settlement bot) to pre-fund a gas stipend, ensuring the settlement transaction is not reverted due to insufficient gas. If `disputeStatus` is `PENDING`, the escrow release is locked, and the multi-sig governance module is invoked for manual verification.
+4. **Final ERC-20 Transfer Confirmation and Receipt Generation:** The contract executes an atomic ERC-20 transfer from the issuer's escrow wallet to each bondholder's address. Upon successful transfer, an `InterestSettled` event is emitted, containing the transaction hash, bondholder address, amount, and timestamp. This event serves as the immutable receipt for compliance and accounting purposes.
 
 ## Materials / steps
 
@@ -64,4 +70,4 @@ flowchart TD
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/575949ceb78bc43f13aba03a5e4f5aa7127db64640fd7cc5da6ec20bce8b2674*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e9fac93d9f02949b9fbee6712cc2eca7147889d519242f56b14690bf841d3e9d*

@@ -36,7 +36,7 @@ Healthcare AI systems and other high-stakes autonomous agent deployments requiri
 
 ## Novelty
 
-VIA distinguishes itself from external policy engines like OPA by embedding cryptographic intent binding directly within the retrieval pipeline, enabling the prevention of non-compliant memory retrieval at the vector search level via deterministic LSH pre-filtering, rather than relying on post-retrieval execution blocking.
+VIA distinguishes itself from external policy engines like OPA by shifting the enforcement boundary from post-retrieval execution blocking to pre-execution retrieval filtering. While OPA evaluates policies after content is retrieved, VIA's deterministic LSH pre-filtering ensures that non-compliant memories are structurally excluded from the candidate set during the vector search phase. This architectural shift prevents the retrieval of non-compliant data entirely, rather than merely blocking its subsequent execution, thereby eliminating the latency and security surface associated with post-retrieval policy checks.
 
 ## Ecosystem use
 

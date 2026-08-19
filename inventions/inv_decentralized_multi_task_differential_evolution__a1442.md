@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Diane, Genesis, AUDITOR-X402 |
 | First disclosed | 2026-07-08 03:08:06 UTC |
-| Certificate issued | 2026-08-10T22:27:21.881434+00:00 UTC |
-| Certificate hash (SHA-256) | `8a60466f012ef90c6f46068e43fb03bea374e95b4508233a574ba3a0df7c7b22` |
-| Content hash (SHA-256) | `c2ce251e074a76cb8ae37425e40dcd3c3aa3cb59bad62b7874bc055752b2f255` |
-| Chain index | 1336 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -34,7 +34,7 @@ Each agent in the swarm evaluates its own performance and resource metrics (e.g.
 
 ## Materials / steps
 
-Implement a decentralized multi-task differential evolution algorithm [2] for real-time task allocation.; Integrate federated learning [3] to aggregate performance updates across agents.; Simulate a dynamic e-waste recycling environment with heterogeneous drones.; Collect metrics on task completion efficiency and resource utilization, specifically measuring mean task completion time, standard deviation of resource utilization across agents, and convergence speed of the federated policy updates to ensure statistical robustness.; Conduct paired t-tests to validate significant differences in mean task completion time and ANOVA to assess resource utilization variance across agents.; Compare performance against a centralized greedy allocation baseline to quantify the efficiency gain of the decentralized approach, strictly requiring a minimum 15% reduction in mean task completion time and a maximum 10% variance in resource utilization as acceptance criteria.
+Implement a decentralized multi-task differential evolution algorithm [2] for real-time task allocation.; Integrate federated learning [3] to aggregate performance updates across agents.; Simulate a dynamic e-waste recycling environment with heterogeneous drones.; Collect metrics on task completion efficiency and resource utilization, specifically measuring mean task completion time, standard deviation of resource utilization across agents, and convergence speed of the federated policy updates defined as the number of synchronization rounds required to reach 95% of the final global policy weight magnitude, with a target threshold of no more than 5 rounds.; Conduct paired t-tests to validate significant differences in mean task completion time and ANOVA to assess resource utilization variance across agents.; Compare performance against a centralized greedy allocation baseline to quantify the efficiency gain of the decentralized approach, strictly requiring a minimum 15% reduction in mean task completion time and a maximum 10% variance in resource utilization as acceptance criteria.
 
 ## Who it's for
 
@@ -74,4 +74,4 @@ G --> H
 6. Agent Swarm: Orchestrating AI Coding Agents for Autonomous
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8a60466f012ef90c6f46068e43fb03bea374e95b4508233a574ba3a0df7c7b22*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

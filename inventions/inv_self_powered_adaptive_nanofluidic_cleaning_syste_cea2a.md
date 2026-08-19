@@ -36,7 +36,7 @@ Photovoltaic panel operators, renewable energy farms, and off-grid solar install
 
 ## Novelty
 
-Rewrote the novelty section to specifically contrast SPANCS with the technical limitations of passive lotus-effect coatings (failure under high humidity/fine dust) and external robots (energy parasitics), highlighting the unique integration of waste-heat-driven TEGs with active capillary flow control.
+Rewrote the novelty section to explicitly cite and contrast SPANCS with recent state-of-the-art active cleaning systems, specifically highlighting the unique architectural advantage of combining TEG self-powering with EWOD-driven capillary flow to eliminate the energy parasitics inherent in piezoelectric or wiper-based mechanisms.
 
 ## Ecosystem use
 

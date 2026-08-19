@@ -24,7 +24,7 @@ A system that correlates specific micro-credential acquisition events with subse
 
 ## How it works
 
-The system ingests discrete micro-credential completion events [4] and correlates them with time-series operational metrics via a causal inference layer. It leverages the established link between coordination mechanisms and enterprise performance [1] to structure the data, but treats the specific causal chain between a credential and a KPI (e.g., inventory turnover) as a hypothesis requiring validation [4]. The causal inference layer explicitly employs a counterfactual framework, such as synthetic control methods, to construct valid control groups that account for external market variables, ensuring robust isolation of the credential's impact. Technical architecture: Data ingestion utilizes a serverless architecture (e.g., AWS Lambda triggered by S3 events) to handle the computational load of iterative placebo tests. The ingestion module includes a standardization layer that normalizes disparate ERP outputs into a unified schema mapping event_id, credential_type, and timestamp to operational metrics, handling schema drift via dynamic field mapping. The synthetic control implementation uses donor selection criteria based on pre-intervention metric similarity, optimizing weights via a constrained least-squares minimization of the root mean square error between the treated unit and the synthetic control over the pre-intervention period. The causal inference layer exposes API endpoints (GET /causal_impact/{credential_id}) to return quantified KPI deltas, calculated using placebo permutation tests to determine statistical significance.
+The system ingests discrete micro-credential completion events [4] via S3 triggers that invoke an AWS Lambda serverless pipeline. This pipeline executes a standardized ingestion module that normalizes disparate ERP outputs into a unified schema (event_id, credential_type, timestamp), handling schema drift via dynamic field mapping. The processed data flows into a causal inference layer that employs a counterfactual framework using synthetic control methods. This layer constructs valid control groups by selecting donor units based on pre-intervention metric similarity and optimizing weights via constrained least-squares minimization of the root mean square error. The system then calculates quantified KPI deltas using placebo permutation tests to determine statistical significance, exposing results via API endpoints (GET /causal_impact/{credential_id}).
 
 ## Materials / steps
 
@@ -41,12 +41,15 @@ The novelty lies in the algorithmic isolation of micro-credential causal impact 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Micro-Credential Completion Event] --> B[Causal Inference Layer]
-    B --> C{Operational Metrics Time-Series}
-    C --> D[KPI Variance Analysis]
-    D --> E[Performance Delta Quantification]
-    E --> F[Validated Skill-to-Outcome Map]
+graph TD
+    A[S3 Bucket: Credential Events] -->|S3 Event Notification| B[Lambda: Ingestion Trigger]
+    B --> C[Standardization Layer]
+    C -->|Unified Schema| D[Data Lake: Time-Series Metrics]
+    D --> E[Lambda: Causal Inference Engine]
+    E --> F[Synthetic Control Computation]
+    F --> G[Placebo Permutation Tests]
+    G --> H[API Gateway]
+    H -->|GET
 ```
 
 ## Sources / grounding

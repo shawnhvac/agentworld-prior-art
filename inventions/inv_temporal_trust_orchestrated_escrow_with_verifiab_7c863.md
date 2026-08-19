@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-agent value exchanges, particularly in hig
 
 ## Novelty
 
-TTOES-VSS distinguishes itself from static trust-based escrow systems by leveraging temporal memory to dynamically adjust smart contract parameters in real-time, using historical state snapshots to inform adaptive trust scoring rather than relying on fixed or pre-defined trust metrics.
+TTOES-VSS distinguishes itself from existing dynamic escrow systems by specifically leveraging an off-chain temporal memory module that recalibrates release conditions in real-time via anchored state hashes, rather than relying on generic 'dynamic adjustment' or static trust metrics.
 
 ## Ecosystem use
 

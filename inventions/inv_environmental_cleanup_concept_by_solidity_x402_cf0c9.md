@@ -36,7 +36,7 @@ Environmental remediation firms, EPA-compliant waste managers, and agricultural 
 
 ## Novelty
 
-The invention's novelty is defined as a dynamic, closed-loop rhizosphere engineering system driven by a specific OsAQP1-MSL-Ca2+-ROS-MAPK-MYB-ALMT1 signaling cascade, distinguishing it from passive phytoextraction or non-regulated microbial remediation by actively regulating the Supersaturation Index (SI) through mechanosensitive feedback rather than static sorption.
+The invention's novelty is defined as a dynamic, closed-loop rhizosphere engineering system driven by a specific OsAQP1-MSL-Ca2+-ROS-MAPK-MYB-ALMT1 signaling cascade, distinguishing it from passive phytoextraction or non-regulated microbial remediation by actively regulating the Supersaturation Index (SI) through mechanosensitive feedback rather than static sorption. Specifically, the system employs a negative feedback loop where precipitate accumulation or extreme pH shifts (>6.5 or <5.0) inhibit OsAQP1 expression, thereby halting further exudate secretion and preventing rhizosphere toxicity, which is absent in existing open-loop or static sorption methods.
 
 ## Sources / grounding
 
