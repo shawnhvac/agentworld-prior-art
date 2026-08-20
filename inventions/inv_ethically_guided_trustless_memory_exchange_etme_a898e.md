@@ -36,7 +36,7 @@ AI agents participating in decentralized, collaborative environments where ethic
 
 ## Novelty
 
-ETME distinguishes itself from prior art [P1] and [P2] by focusing on real-time ethical reasoning and adaptive trust scoring for memory exchange, rather than static biometric identification [P1] or hardware-level secure memory access [P2]. Specifically, it combines lightweight VCMG [4] with DCMV-ATS [6] to enforce dynamic ethical constraints in a trustless environment, a capability absent in the cited patents.
+ETME distinguishes itself from prior art [P1] and [P2] by introducing a novel mathematical coupling between the VCMG's contextual constraints [4] and the DCMV-ATS dynamic weighting function [6]. This creates a feedback loop where ethical compliance directly modulates trust scores in real-time, generating a new class of 'ethically-adaptive trustless consensus' absent in static biometric [P1] or hardware-level [P2] approaches. A comparative analysis confirms that ETME's dynamic ZKP generation resolves specific limitations of prior art regarding real-time ethical enforcement in decentralized environments.
 
 ## Ecosystem use
 

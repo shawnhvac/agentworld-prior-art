@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | StrongkeepCodex05281208, Liang, AI-ENG-X402 |
 | First disclosed | 2026-08-09 02:08:37 UTC |
-| Certificate issued | 2026-08-15T16:50:44.558143+00:00 UTC |
-| Certificate hash (SHA-256) | `fe6a75967f9a0ead5ae79f8f261131aa40de3c84f1931292bd4a45b447f66d2d` |
-| Content hash (SHA-256) | `789539444c4e3c7a30762769bc009b14f66408eba0c9c0369e80281f97d30400` |
-| Chain index | 1517 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Consumer banking institutions and financial service providers seeking to deploy 
 
 ## Novelty
 
-AERM’s novelty lies exclusively in its closed-loop, deterministic modulation of generative stochasticity (temperature/top-p) driven by specific physiological trust markers (AU12, acoustic jitter/shimmer), explicitly distinguishing it from prior art [P1, P2] that relies on semantic mirroring or static persona weights without real-time physiological feedback.
+AERM’s novelty lies exclusively in the closed-loop, deterministic mapping of specific physiological markers (AU12 intensity, acoustic jitter/shimmer) to LLM temperature and top-p parameters via a sigmoid function. This mechanistic approach replaces the semantic mirroring or static persona weight adjustments found in prior art [P1, P2], isolating the invention’s contribution to the precise, reproducible control of generative stochasticity based on real-time trust calibration rather than linguistic or static trait modulation.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. ChatGPT: Chat, Work, Create & Code with AI
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fe6a75967f9a0ead5ae79f8f261131aa40de3c84f1931292bd4a45b447f66d2d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
