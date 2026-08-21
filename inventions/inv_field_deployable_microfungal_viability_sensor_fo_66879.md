@@ -36,7 +36,7 @@ Environmental health inspectors, recreational water users, and field researchers
 
 ## Novelty
 
-The invention's novelty lies in the specific integration of a 500V electro-osmotic hydrophobic valve to autonomously transfer lysate from a PMA-treated zone to a thermal cycler without manual intervention. This enables a closed-system viability index for fungi, distinguishing it from prior art [P2] and [P4] which rely on manual workflows or suffer from signal loss due to lack of precise temporal control. While lyophilized PMA isolation is a necessary enabler for this EOF-based workflow, it is not claimed as a standalone breakthrough.
+The invention's novelty is strictly defined by the autonomous, closed-system lysate transfer mechanism, specifically the 500V electro-osmotic hydrophobic valve that bridges the gap between PMA viability treatment and thermal cycling without manual intervention. This specific hardware integration distinguishes the device from prior art [P2] and [P4], which rely on open manual workflows or lack precise temporal control, resulting in signal loss and contamination risks. The general concept of field-deployable fungal sensing or the use of lyophilized PMA is not claimed as novel, as these are established enablers; the unique contribution is the autonomous, contamination-free transfer architecture that enables a reliable real-time biological toxicity index.
 
 ## Diagram
 

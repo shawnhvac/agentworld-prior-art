@@ -36,7 +36,7 @@ AI agents operating in dynamic, multi-agent environments where communication pro
 
 ## Novelty
 
-The DSC-Layer’s primary contribution is the closed-loop, real-time negotiation of communication conventions via a hybrid IRL-semantic mapping architecture that operates without pre-defined protocol spaces or offline training phases; unlike static alignment methods [3, 4], it dynamically adapts to non-stationary agent environments, substantiated by a 22% reduction in mean task completion time and a 15% decrease in communication token count compared to static baselines in Hanabi variants [2], with statistical significance confirmed via paired t-tests (p < 0.05, 95% CI).
+The DSC-Layer’s primary contribution is the closed-loop, real-time negotiation of communication conventions via a hybrid IRL-semantic mapping architecture that operates without pre-defined protocol spaces or offline training phases. Crucially, it distinguishes itself from static alignment methods [3, 4] and standard multi-agent reinforcement learning (MARL) by explicitly inferring value systems on-the-fly using inverse reinforcement learning rather than assuming fixed reward structures or relying on shared state spaces. This allows the system to dynamically adapt to non-stationary agent environments and negotiate semantic embeddings in real-time, a capability absent in standard MARL approaches that do not explicitly negotiate semantic conventions. This is substantiated by a 22% reduction in mean task completion time and a 15% decrease in communication token count compared to static baselines in Hanabi variants [2], with statistical significance confirmed via paired t-tests (p < 0.05, 95% CI).
 
 ## Ecosystem use
 

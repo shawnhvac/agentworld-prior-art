@@ -36,7 +36,7 @@ Swarm robotics systems requiring real-time adaptability in dynamic environments,
 
 ## Novelty
 
-This system uniquely resolves the latency-security trade-off in swarm reconfiguration by architecturally synergizing lightweight PoA consensus with occlusion-based routing [1], enabling secure, decentralized decision-making that outperforms the rigidity of centralized approaches and the vulnerability of purely decentralized models.
+This system uniquely resolves the latency-security trade-off in swarm reconfiguration by introducing an energy-proximity weighted quorum and a rollback-on-deadlock mechanism. Unlike standard PoA protocols that rely on static validator sets or centralized baselines that lack fault tolerance, this dynamic governance structure allows the swarm to maintain sub-500ms consensus latency while ensuring security through adaptive validator election based on real-time resource availability, a specific architectural synergy not present in existing occlusion-based routing [1] or differential evolution [6] applications.
 
 ## Ecosystem use
 

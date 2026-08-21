@@ -24,7 +24,7 @@ Replace mechanically infeasible capillary tube constriction with piezoelectric-d
 
 ## How it works
 
-1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=1.2, Ki=8.0, Kd=0.15, sample time=10ms) drives piezoelectric micro-valves to adjust aperture, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. The gains are tuned to achieve a settling time of <200ms. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs. The COP delta is explicitly integrated into the PID error term as a secondary feedback signal to refine the setpoint. To ensure system stability, active damping strategies (including derivative gain tuning and hysteresis dead-bands) prevent valve chatter during steady-state operation. A hardware-level fail-safe defaults the valve to a fixed safe aperture in the event of piezo stack failure.
+1. Sensors detect load changes in real-time. 2. A control unit calculates optimal refrigerant mass flow. 3. A PID control loop (Kp=1.2, Ki=8.0, Kd=0.15, sample time=10ms) drives piezoelectric micro-valves to adjust aperture, modulating flow and avoiding the high power draw and failure risks of mechanical tube constriction. The gains are tuned to achieve a settling time of <200ms. 4. System monitors COP delta to verify net efficiency after subtracting actuator energy costs. The COP delta is explicitly integrated into the PID error term as a secondary feedback signal to refine the setpoint. To ensure system stability, active damping strategies (including derivative gain tuning and hysteresis dead-bands) prevent valve chatter during steady-state operation. A hardware-level fail-safe defaults the valve to a fixed safe aperture in the event of piezo stack failure. 5. Stability Analysis: The system employs a dual-loop architecture with strict bandwidth separation to guarantee settling. The inner flow loop operates with a bandwidth of 50 Hz, ensuring rapid flow stabilization independent of thermal inertia. The outer COP loop operates at a significantly lower bandwidth of 0.5 Hz, preventing interaction-induced oscillations. To eliminate valve chatter, a hysteresis dead-band of ±0.5% of the full-scale aperture is applied to the error signal; the valve command is updated only when the error exceeds this threshold, combined with a derivative gain limit of 0.15 to suppress high-frequency noise from sensor jitter.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Commercial HVAC system manufacturers, data center cooling operators, and facilit
 
 ## Novelty
 
-Distinguishes from general piezo-valve literature by specifying a closed-loop PID control architecture that explicitly integrates real-time COP delta as a secondary feedback signal for setpoint refinement, coupled with tailored active damping strategies (derivative gain tuning and hysteresis dead-bands) and hardware fail-safes designed specifically for high-pressure refrigerant environments to mitigate valve chatter.
+Unlike conventional piezo-valve systems that rely solely on open-loop pressure or temperature feedback, this invention uniquely employs a dual-loop architecture where real-time COP delta serves as a secondary feedback signal to dynamically refine the flow setpoint, combined with specific active damping strategies (derivative gain tuning and hysteresis dead-bands) and hardware fail-safes engineered to mitigate valve chatter in high-pressure refrigerant environments.
 
 ## Ecosystem use
 

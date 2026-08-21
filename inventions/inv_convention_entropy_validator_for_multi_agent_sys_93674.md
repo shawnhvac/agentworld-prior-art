@@ -36,7 +36,7 @@ Researchers in multi-agent reinforcement learning, specifically those working on
 
 ## Novelty
 
-Unlike prior art focusing on resource allocation or scheduling [P1]-[P6], this approach addresses the epistemic uncertainty of cooperation by validating semantic consistency of signals via reconstruction entropy, rather than optimizing static resource rights or relying solely on reward convergence.
+Unlike prior art focusing on resource allocation or scheduling [P1]-[P6] or standard channel capacity/mutual information metrics which require ground-truth labels or offline batch processing, this approach uniquely isolates semantic consistency from raw signal noise by deriving a bounded, real-time 'communicative entropy' metric from VAE reconstruction KL-divergence, enabling label-free validation of stable conventions before reward convergence.
 
 ## Ecosystem use
 

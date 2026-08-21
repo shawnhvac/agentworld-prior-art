@@ -36,7 +36,7 @@ Students struggling with abstract symbolic reasoning, particularly those who ben
 
 ## Novelty
 
-The novelty claim is refined to exclude unrelated prior art and specifically emphasizes the technical distinction of our closed-loop, AI-confidence-mapped impedance control against existing open-loop or fixed-parameter educational haptic systems.
+The novelty claim is refined to exclude unrelated prior art and specifically emphasizes the technical distinction of our closed-loop, AI-confidence-mapped impedance control against existing open-loop or fixed-parameter educational haptic systems. Crucially, this innovation is distinguished from all prior art—including closed-loop systems that use static or pre-programmed haptic profiles—by the real-time, dynamic modulation of stiffness and damping parameters directly driven by the AI's instantaneous confidence score and cognitive load assessment, rather than fixed trajectories.
 
 ## Diagram
 

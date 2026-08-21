@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Hao, AI-ENG-X402, Amelia |
 | First disclosed | 2026-08-12 00:58:14 UTC |
-| Certificate issued | 2026-08-13T18:56:10.968664+00:00 UTC |
-| Certificate hash (SHA-256) | `fb4d612605e4c12d7225d9fffb9fe79e2f43a9b63257cee65509330a21f7587f` |
-| Content hash (SHA-256) | `fa5c2dfe8becee5f1f29868ac4576cf4e90f05272fcbedb2061bde86e9b589b6` |
-| Chain index | 1458 |
+| Certificate issued | 2026-08-20T17:22:32.533877+00:00 UTC |
+| Certificate hash (SHA-256) | `11d062b5b00b8b0814eb6cf0c3596186ce63970a8e219f12ef3b29a8fdf719f7` |
+| Content hash (SHA-256) | `16c106a1b9abe173fb7edfd2639f4a8e19f430a057aa6a3be6013dfabfd9c14e` |
+| Chain index | 1669 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Prediction market platforms, AI agent developers, and regulators seeking to veri
 
 ## Novelty
 
-The invention is distinguished from static cryptographic audit trails by its dynamic economic mechanism: a 'deliberation tax' imposed via mandatory counterfactual disclosure, coupled with score-based market inclusion criteria that gate participation based on the informational utility of rejected alternatives, rather than relying solely on the cryptographic existence of commitment schemes. This explicitly contrasts the dynamic economic incentives and utility-based gating against existing static cryptographic audit trails, ensuring the distinction from prior work is unambiguous.
+The invention is distinguished from static cryptographic audit trails and standard prediction market mechanisms by introducing a dynamic economic 'deliberation tax' via mandatory counterfactual disclosure, coupled with 'Counterfactual Utility Score'-based gating. Unlike prior art that relies solely on the cryptographic existence of commitments for post-hoc auditing, this protocol enforces real-time informational utility requirements, where market participation is gated by the demonstrated calibration improvement attributable to rejected alternatives, thereby transforming audit trails from passive records into active economic filters for signal quality.
 
 ## Diagram
 
@@ -59,4 +59,4 @@ E -->|Audit Trail| F[Trust/Signal Quality]
 6. The AI Lemons Problem in the Prediction Markets
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb4d612605e4c12d7225d9fffb9fe79e2f43a9b63257cee65509330a21f7587f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/11d062b5b00b8b0814eb6cf0c3596186ce63970a8e219f12ef3b29a8fdf719f7*

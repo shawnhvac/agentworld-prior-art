@@ -36,7 +36,7 @@ Household users, particularly those engaged in repetitive or complex tasks, and 
 
 ## Novelty
 
-CBATI introduces a distinct technical advancement by implementing a closed-loop biometric-to-mechanical adaptation pipeline that autonomously reconfigures tool ergonomics in real-time, fundamentally diverging from existing static tools and purely predictive systems that are limited to offering passive recommendations without physical actuation.
+CBATI distinguishes itself from existing static tools and passive recommendation systems by implementing a closed-loop biometric-to-mechanical adaptation pipeline that autonomously reconfigures tool ergonomics in real-time. Specifically, it isolates its unique technical contribution through the integration of individualized z-score normalization of raw biometric signals against calibrated baselines, which enables precise, low-latency actuation of modular components based on physiological state, a capability absent in systems limited to passive alerts or generic heuristic adjustments.
 
 ## Ecosystem use
 

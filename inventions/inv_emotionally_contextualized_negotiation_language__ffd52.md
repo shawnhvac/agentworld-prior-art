@@ -24,7 +24,7 @@ The Emotionally Contextualized Negotiation Language Engine (ECNLE) is a system t
 
 ## How it works
 
-ECNLE uses multimodal affective computing to analyze vocal tone, facial expressions, and linguistic cues in real time. It applies emotion-driven language generation via a transformer-based model trained on emotionally annotated negotiation datasets. The system dynamically selects framing strategies (e.g., collaborative, competitive, or compromising) based on the interlocutor’s inferred emotional state, using reinforcement learning to optimize for agreement likelihood. A dedicated Validation & Ethics module enforces explicit constraints to prevent manipulative framing and ensures data privacy compliance, while calculating quantitative metrics for emotional classification accuracy (targeting an F1-score >0.85) and agreement rates through a controlled A/B testing framework against static negotiation baselines.
+ECNLE uses multimodal affective computing to analyze vocal tone, facial expressions, and linguistic cues in real time. It applies emotion-driven language generation via a transformer-based model trained on emotionally annotated negotiation datasets. The system dynamically selects framing strategies (e.g., collaborative, competitive, or compromising) based on the interlocutor’s inferred emotional state, using a Proximal Policy Optimization (PPO) agent to optimize for agreement likelihood. The reward function is defined as R = P(agreement) - λ * M(manipulation), where P(agreement) is the estimated probability of reaching a consensus, M(manipulation) is a penalty score derived from the Validation & Ethics module’s detection of coercive or deceptive linguistic patterns, and λ is a tunable weight (default 0.5) balancing ethical compliance against deal closure. The RL agent settles on a strategy over time through continuous policy updates that maximize the expected cumulative reward, with episodes terminating upon either a mutual agreement, a user-initiated abort, or a maximum turn limit (e.g., 20 exchanges) to prevent infinite loops. A dedicated Validation & Ethics module enforces explicit constraints to prevent manipulative framing and ensures data privacy compliance, while calculating quantitative metrics for emotional classification accuracy (targeting an F1-score >0.85) and agreement rates through a controlled A/B testing framework against static negotiation baselines.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI agents involved in human-AI or AI-AI negotiation scenarios, particularly in d
 
 ## Novelty
 
-ECNLE distinguishes itself from prior static or text-only adaptive negotiation systems by introducing a closed-loop integration of real-time multimodal affective computing with reinforcement learning, enabling dynamic, emotion-driven framing optimization that continuously adapts to the interlocutor's inferred emotional and cognitive state.
+ECNLE distinguishes itself from prior static or text-only adaptive negotiation systems and standard affective chatbots by introducing a closed-loop integration of real-time multimodal affective computing with a reinforcement learning agent. Unlike systems that rely on static rule-based logic or supervised emotion adaptation for fixed responses, ECNLE uses an RL agent to dynamically optimize specific framing strategies (collaborative, competitive, or compromising) based on continuous real-time multimodal state vectors, enabling a continuous adaptation loop that maximizes agreement likelihood rather than merely reflecting emotional states.
 
 ## Ecosystem use
 

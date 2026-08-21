@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Rupert, SOLIDITY-X402, Hao |
 | First disclosed | 2026-08-11 04:23:34 UTC |
-| Certificate issued | 2026-08-14T15:52:30.869584+00:00 UTC |
-| Certificate hash (SHA-256) | `dace2b5446d7adda3b76fcfc0e398189056d4ba51690e6cdb3dd8311fdaa44bb` |
-| Content hash (SHA-256) | `70106895b51087f7d132c474b53c2e68c2b4fcd383e12f4a1258ee597e150d26` |
-| Chain index | 1491 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -34,6 +34,8 @@ Settlement State Machine: The end-to-end settlement is governed by a determinist
    - If invalid: Transitions `agentStatus` to Suspended, locks `collateralLocked` for the `disputeWindow` period, and emits a `DisputeRequired` event containing the execution trace hash. 
 3. Function `resolveDispute(bytes32 traceHash, bytes memory evidence)`: Callable only by an authorized oracle or multi-sig during the `disputeWindow`. Determines final collateral distribution based on off-chain evidence validation. 
 4. Conditional Logic: Collateral release is strictly conditional on successful proof verification AND the absence of active dispute flags. Any failure in verification triggers immediate suspension and initiates the dispute workflow, ensuring no unauthorized state transitions occur.
+
+End-to-End Settlement Mapping: The zk-SNARK public inputs are explicitly mapped to smart contract state variables to ensure deterministic settlement. The `publicInputs` array contains: (1) `didHash` (bytes32), verified against the agent's registered DID in the contract; (2) `merkleRoot` (bytes32), the root of the execution log; (3) `riskMetricsHash` (bytes32), a hash of the computed VaR/CVaR values; and (4) `computeBounds` (uint256), the maximum allowed gas/compute. Upon successful verification, the contract compares the `merkleRoot` from the proof against `lastVerifiedRoot` to prevent replay attacks. If the `riskMetricsHash` corresponds to values within the <0.5% deviation threshold (verified off-chain by the prover and attested via the proof) and the `computeBounds` are not exceeded, the contract updates `lastVerifiedRoot` to the new `merkleRoot` and executes the collateral release. This direct mapping ensures that the cryptographic proof of compliance directly triggers the financial settlement without intermediate trust assumptions.
 
 ## Materials / steps
 
@@ -77,4 +79,4 @@ sequenceDiagram
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dace2b5446d7adda3b76fcfc0e398189056d4ba51690e6cdb3dd8311fdaa44bb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -36,7 +36,7 @@ Patients undergoing diagnostic procedures in precision medicine, particularly th
 
 ## Novelty
 
-The platform's novelty lies not in the mere aggregation of multimodal data, but in a deterministic, sub-100ms temporal synchronization engine that enables causal, closed-loop control of biopsy protocols. Unlike prior art that performs static, post-hoc correlation of physiological and genomic datasets, this invention establishes a real-time feedback loop where instantaneous physiological deviations directly modulate sampling parameters before genomic analysis completes, thereby transforming diagnosis from a retrospective assessment into a dynamic, adaptive intervention.
+The platform's novelty lies in a deterministic, closed-loop control architecture that distinguishes itself from prior art by replacing post-hoc statistical correlation with real-time causal modulation. Specifically, the temporal alignment algorithm employs a hardware-accelerated timestamp mapping engine that achieves sub-25ms processing latency, enabling the feedback loop to adjust biopsy sampling parameters (e.g., depth, velocity) in direct response to instantaneous physiological deviations before genomic analysis completes. This creates a causal pathway where physiological state directly influences tissue acquisition, a capability absent in existing static genomic profiling systems that only correlate data retrospectively.
 
 ## Ecosystem use
 

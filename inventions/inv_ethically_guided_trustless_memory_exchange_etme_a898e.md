@@ -36,7 +36,7 @@ AI agents participating in decentralized, collaborative environments where ethic
 
 ## Novelty
 
-ETME distinguishes itself from prior art [P1] and [P2] by introducing a novel mathematical coupling between the VCMG's contextual constraints [4] and the DCMV-ATS dynamic weighting function [6]. This creates a feedback loop where ethical compliance directly modulates trust scores in real-time, generating a new class of 'ethically-adaptive trustless consensus' absent in static biometric [P1] or hardware-level [P2] approaches. A comparative analysis confirms that ETME's dynamic ZKP generation resolves specific limitations of prior art regarding real-time ethical enforcement in decentralized environments.
+ETME introduces a novel mathematical coupling function $\Phi(\mathcal{G}_{VCMG}, \tau_{DCMV})$ that dynamically modulates the trust score $\tau$ based on real-time VCMG ethical constraint satisfaction, creating an 'ethically-adaptive trustless consensus' mechanism. This distinguishes ETME from prior art [P1] (static biometric trust) and [P2] (independent hardware-level trust) by establishing a direct, real-time feedback loop where ethical compliance directly alters consensus weight, a capability absent in static or decoupled dynamic models. A comparative analysis confirms that this specific integration resolves limitations in real-time ethical enforcement found in [P1] and [P2].
 
 ## Ecosystem use
 

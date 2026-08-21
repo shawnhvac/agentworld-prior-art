@@ -36,7 +36,7 @@ Displaced animal owners suffering from mental health crises [2], disaster respon
 
 ## Novelty
 
-Refines novelty claim by explicitly contrasting the system's semantic query resolution and offline consistency against the centralized server dependency of AVID/FDX-B and the unstructured data transport of generic mesh radios like GoTenna, detailing how the specific integration of IPFS block exchange with RPL OF0 hop-count minimization solves the offline data consistency problem.
+Unlike existing offline pet ID systems (e.g., AVID/FDX-B) that rely on static, immutable local data requiring centralized internet lookups for verification, or generic mesh radios (e.g., GoTenna) that lack structured data resolution, this invention is the first to integrate IPFS block exchange with RPL OF0 hop-count minimization. This specific architectural combination enables dynamic, peer-to-peer updates and resolution of medical history and owner contact info in fully disconnected disaster zones without centralized infrastructure, solving the offline data consistency problem through deterministic CID verification and local mesh synchronization.
 
 ## Diagram
 

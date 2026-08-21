@@ -36,7 +36,7 @@ CEFD-MANL is designed for AI agents involved in multi-party negotiations, partic
 
 ## Novelty
 
-CEFD-MANL distinguishes itself from recent multi-agent affective computing frameworks (e.g., [1], [2]) by implementing a closed-loop system where linguistic adaptation is driven not by isolated emotional states, but by a Reinforcement Learning agent optimizing a discrete language action space against a global emotional vector weighted by inverse cognitive load, thereby achieving emergent consensus through synchronized neuro-emotional feedback rather than static rule-based empathy.
+CEFD-MANL distinguishes itself from recent multi-agent affective computing frameworks (e.g., [1], [2]) by replacing static, unweighted, or majority-vote emotional aggregation with a dynamic Collective State Aggregation Module that computes a global emotional vector V_global = Σ(w_i * v_i), where weights w_i are inversely proportional to individual cognitive load. This specific fusion algorithm allows the system to prioritize high-capacity participants for consensus formation while protecting low-capacity participants from overload, a mechanism absent in prior rule-based empathy models that treat all inputs as equally weighted signals.
 
 ## Ecosystem use
 

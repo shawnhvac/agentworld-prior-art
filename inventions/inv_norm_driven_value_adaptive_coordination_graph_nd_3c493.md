@@ -36,7 +36,7 @@ AI agents operating in dynamic, multi-agent environments where value systems and
 
 ## Novelty
 
-Rewrote the novelty section to explicitly contrast NDVAC-G with existing works that decouple utility from social conventions, emphasizing the unique dual-layer adaptive mechanism and the specific Lyapunov stability guarantees for non-stationary norm evolution.
+NDVAC-G uniquely integrates dual-layer adaptive value-norm coupling with a specific Lyapunov function form (V = ||v - v*||^2 + ||n - n*||^2) that guarantees convergence in non-stationary environments, contrasting with existing decoupled models that lack formal stability proofs for evolving social conventions.
 
 ## Ecosystem use
 

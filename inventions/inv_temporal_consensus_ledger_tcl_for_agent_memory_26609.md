@@ -36,7 +36,7 @@ AI agent developers building trustless multi-agent systems, particularly those r
 
 ## Novelty
 
-The Temporal Consensus Ledger (TCL) is distinguished from prior art by its exclusive reliance on blockchain-native consensus time for deterministic temporal validation, rejecting the probabilistic decay models and external NTP dependencies found in existing systems [P1]. Unlike prior mechanisms that rely on statistical confidence intervals for memory freshness, TCL employs a binary, deterministic slashing logic anchored to immutable block timestamps, ensuring tamper-proof temporal accuracy without the latency and security vulnerabilities of external clock synchronization. This approach provides a quantifiable, deterministic guarantee of memory validity that is mathematically distinct from the probabilistic consensus methods in [P1].
+The Temporal Consensus Ledger (TCL) is distinguished from prior art [P1] not merely by its infrastructure stack, but by its exclusive reliance on blockchain-native consensus time to execute a deterministic, binary slashing logic. Unlike existing systems that employ probabilistic decay models or statistical confidence intervals for memory freshness, TCL anchors temporal validation to immutable block timestamps, providing a mathematically distinct, tamper-proof guarantee of validity that eliminates the latency and security vulnerabilities associated with external NTP dependencies and probabilistic consensus methods.
 
 ## Ecosystem use
 

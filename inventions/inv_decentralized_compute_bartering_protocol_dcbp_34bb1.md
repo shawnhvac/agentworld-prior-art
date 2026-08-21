@@ -36,7 +36,7 @@ AI agents requiring trustless, verifiable, and fair exchange of computational re
 
 ## Novelty
 
-Unlike existing decentralized compute platforms that primarily optimize for raw capacity or latency, DCBP uniquely integrates a governance-weighted scoring mechanism [5] specifically designed to mitigate congestion on weak interconnects [6] during peer-to-peer bartering, a control layer absent in prior DID-based resource exchange protocols.
+DCBP distinguishes itself from existing decentralized compute platforms, which primarily optimize for raw capacity or latency, by introducing a specific governance-weighted scoring algorithm [5] that actively mitigates congestion on weak interconnects [6] during peer-to-peer bartering. This control layer, absent in prior DID-based resource exchange protocols, ensures fair resource allocation by dynamically adjusting transaction weights based on network health, filling a specific technical gap in trustless compute bartering.
 
 ## Ecosystem use
 

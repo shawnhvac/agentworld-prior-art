@@ -36,7 +36,7 @@ Enterprise API architects adapting architectures for AI agents [5] and developer
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly differentiate 'Protocol-First' discovery from standard API linting by focusing on the semantic verification of agent-centric safety primitives (idempotency, rate-limiting) rather than just syntactic correctness, and added a comparative table in the introduction contrasting our compliance certificate fields with standard OpenAPI validation outputs to clarify the unique value proposition.
+Refined the novelty claim to explicitly distinguish 'Protocol-First' discovery from standard API linting by emphasizing the 'proof-carrying' nature of the Compliance Certificate, which enables active trust negotiation between agents and APIs. Unlike linting tools that only flag syntactic or structural errors (false positives/negatives), our system generates a verifiable contract that agents can cryptographically validate against static specs before execution, ensuring semantic compliance with agent-centric safety primitives (idempotency, rate-limiting). This addresses a specific gap in prior art for agentic workflows, where standard OpenAPI validation lacks the trust-assurance mechanism required for autonomous, untrusted agent interactions [4, 6].
 
 ## Ecosystem use
 

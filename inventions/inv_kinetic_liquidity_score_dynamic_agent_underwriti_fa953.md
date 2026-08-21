@@ -61,7 +61,7 @@ AI agent platforms, decentralized lending protocols, and automated credit risk e
 
 ## Novelty
 
-Unlike prior art [P1] which
+Unlike prior art [P1] which treats creditworthiness as a static attribute derived from historical aggregates, and GWTC-4.0 [4] which applies multi-messenger consistency solely to astrophysical signal detection, the Kinetic Liquidity Score uniquely integrates the time-derivative of on-chain reputation with off-chain revenue volatility into a deterministic underwriting mechanism. This specific coupling of $v$ and $\sigma_R$ via the geometric mean in $C_{max}$ creates a novel fraud-detection surface that distinguishes organic growth from sybil behavior in real-time, a capability absent in both static credit models and general signal-processing frameworks.
 
 ## Ecosystem use
 

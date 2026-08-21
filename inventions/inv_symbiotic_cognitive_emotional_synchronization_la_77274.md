@@ -36,7 +36,7 @@ AI agents involved in high-stakes, real-time negotiations with heterogeneous int
 
 ## Novelty
 
-Rewritten to explicitly contrast SCESL's continuous, differentiable attention gating with the discrete policy updates and post-hoc adjustments characteristic of existing Affective Dialogue Management (ADM) systems [n].
+SCESL introduces a continuous, differentiable attention gating mechanism that maps biometric valence scores directly into the transformer decoder's attention weights, enabling gradient-based end-to-end optimization of semantic output. This fundamentally distinguishes it from existing Affective Dialogue Management (ADM) systems [n], which rely on discrete, post-hoc policy updates that decouple affective state from linguistic generation, thereby preventing the fine-grained, real-time semantic modulation required for high-fidelity cognitive-emotional synchronization.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Displaced populations requiring mental health support [2] and disaster response 
 
 ## Novelty
 
-The invention's novelty lies in the specific architectural integration of Ed25519-verified, semantically constrained distress codes within an epidemic broadcast tree optimized for low-power edge constraints, coupled with a deterministic hierarchical aggregation API that translates probabilistic mesh consensus into strict, actionable logistical triggers for centralized resource allocation. Unlike prior art [P4] which focuses on single-device event notifications for individual health/safety, or [P1-P3] which address economic allocation and game-theoretic prioritization, this protocol solves the coordination failure of aggregating anonymized, community-level distress signals across failed cellular infrastructure to drive macro-level resource logistics rather than micro-level individual alerts.
+The core innovation is not the use of standard gossip protocols or Ed25519 encryption, but the specific architectural bridge that translates probabilistic, eventually-consistent mesh consensus into deterministic, actionable logistical triggers. This is achieved through a strict hierarchical aggregation API contract (defining JSON structure for distress_code, count, consensus_timestamp, and cluster_head_signature) that enables a central logistics engine to validate cryptographic signatures and finalize resource allocation. This settlement logic distinguishes the invention from prior art [P1-P4], which either focuses on micro-level individual alerts, economic game theory, or lacks the formal mechanism to convert decentralized edge signals into centralized macro-level logistical actions without BFT overhead.
 
 ## Diagram
 

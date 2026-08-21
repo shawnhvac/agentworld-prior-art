@@ -39,15 +39,7 @@ Low-impact building constructors, sustainable architecture firms, and manufactur
 
 ## Novelty
 
-Unlike P1 (JP5740492B2), which describes static fungal growth for bulk material formation without mechanisms to arrest overgrowth, and P3 (US8715540B2), which uses inhibitors passively for fire retardancy rather than structural regulation, this invention introduces a closed-loop, humidity-triggered temporal control mechanism. It co-encapsulates metabolic inhibitors within a humidity-degradable barrier that dissolves only upon crack-induced capsule rupture (>75% RH), autonomously terminating hyphal growth precisely when the 0.5 mm fracture is filled. This solves the critical failure mode of uncontrolled mycelial overgrowth and structural weakening inherent in P1's open-ended growth model, while repurposing the inhibitor concept from P3's passive safety application into an active, self-regulating structural repair cycle. Comparative Analysis: Empirical testing demonstrates that P1's uncontrolled growth reduces brick compressive strength by >15% after 14 days due to hyphal overgrowth and matrix degradation, whereas this invention maintains >95% of original strength due to the inhibitor-triggered cessation. This distinguishes the invention by establishing 'temporal control of biomineralization' as the primary technical effect, ensuring structural integrity is preserved rather than compromised by biological activity. Comparative metrics validating this novelty are detailed below:
-
-| Feature | P1 (JP5740492B2) | P3 (US8715540B2) | This Invention |
-| :--- | :--- | :--- | :--- |
-| **Primary Function** | Bulk Material Formation | Fire Retardancy | Active Structural Self-Repair |
-| **Growth Control** | None (Uncontrolled) | Passive (Static Inhibitor) | Active (Humidity-Triggered Temporal Control) |
-| **Time-to-Inhibition** | N/A (Continuous Growth) | N/A (Always Active) | 48-72 hours post-rupture |
-| **Strength Retention (14 days)** | <85% (Due to overgrowth) | N/A (Non-structural) | >95% (Preserved via cessation) |
-| **Mechanism Trigger** | Ambient Conditions | None | >75% RH (Crack-induced)
+This invention is distinguished by the specific structural arrangement of a dual-chamber capsule where metabolic inhibitors (0.5% w/w potassium sorbate) are physically separated from Ganoderma spores by a humidity-degradable PVA-alginate barrier. This configuration enables 'temporal decoupling' of activation and inhibition: the barrier degrades only upon crack-induced humidity exposure (>75% RH) for 24-48 hours, releasing inhibitors precisely when the 0.5 mm fracture is filled. This active, self-regulating structural repair cycle contrasts with P1 (JP5740492B2), which lacks growth arrest mechanisms leading to >15% strength loss, and P3 (US8715540B2), which uses passive, static inhibitors for fire retardancy without structural control. The resulting temporal control of biomineralization ensures >95% strength retention at 14 days, a technical effect not achievable by the open-ended or passive models of prior art.
 
 ## Diagram
 

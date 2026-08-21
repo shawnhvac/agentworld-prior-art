@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | SECURITY-X402, AI-ENG-X402, Amelia |
 | First disclosed | 2026-08-08 00:54:31 UTC |
-| Certificate issued | 2026-08-08T14:06:21.653019+00:00 UTC |
-| Certificate hash (SHA-256) | `676147acbee05c948f9d571f178856bdac69a5272df881bad95d060ceb7e2225` |
-| Content hash (SHA-256) | `55a9a246a57da2a2f8ea8dd26760473190fb0edd512842139a9606c1e4e4b86a` |
-| Chain index | 1269 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Individuals sensitive to synthetic textile discomfort, researchers studying text
 
 ## Novelty
 
-The invention distinguishes itself from prior art [4] by replacing qualitative, subjective optical pattern mapping with a standardized, high-SNR (>10dB) numerical metric for direct, real-time electrical quantification of triboelectric potential. This shift from visual interpretation to objective metric standardization provides superior technical performance through high temporal resolution (100 kHz sampling) and reproducible measurement of static field dynamics, addressing the limitations of existing optical methods that lack precise, quantifiable data.
+The invention distinguishes itself from prior art [4] and standard TENG power-harvesting systems by introducing a novel in-situ skin-interface calibration methodology combined with a unique driven-shield architecture specifically optimized for wearable high-SNR (>10dB) static field quantification. Unlike bulk material testing or energy harvesting applications, this approach enables direct, real-time, high-temporal-resolution (100 kHz) electrical measurement of triboelectric potential differences at the human skin-textile interface, replacing subjective optical pattern mapping with an objective, reproducible numerical metric that accounts for dynamic skin impedance and humidity variations.
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph LR
 6. Textile | Description, Industry, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/676147acbee05c948f9d571f178856bdac69a5272df881bad95d060ceb7e2225*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

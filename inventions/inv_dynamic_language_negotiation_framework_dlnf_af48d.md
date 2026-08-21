@@ -36,7 +36,7 @@ AI agents operating in decentralized, heterogeneous environments where real-time
 
 ## Novelty
 
-The novelty of DLNF lies in its explicit 'Negotiation Protocol' for real-time semantic mapping updates, which distinguishes it from prior emergent language work that relies on implicit convergence; furthermore, it integrates posterior entropy H(S|U,C) as a quantifiable ambiguity metric within the RL state, enabling precise, measurable adaptation of linguistic protocols that is absent in existing frameworks [1-6].
+Unlike CA2227086C, which negotiates static, pre-defined communication protocols to ensure basic interoperability, DLNF dynamically negotiates and adapts the semantic content and linguistic mappings in real-time. The core novelty lies in using posterior entropy H(S|U,C) to quantify semantic ambiguity and a PPO-based RL agent to drive a deterministic, entropy-guided negotiation protocol. This ensures measurable, task-specific semantic alignment, overcoming the limitations of implicit stochastic convergence found in prior emergent language studies and the static protocol selection of CA2227086C.
 
 ## Ecosystem use
 

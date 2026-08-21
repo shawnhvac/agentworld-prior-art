@@ -36,7 +36,7 @@ Decentralized AI agent networks, enterprise AI systems requiring verifiable shar
 
 ## Novelty
 
-The invention distinguishes itself from standard PBFT and HotStuff implementations by tightly integrating Merkle proof verification directly into the consensus attestation phase. This architectural choice eliminates the view-change logic overhead typically required for general-purpose state replication, optimizing the protocol specifically for high-throughput, agent-specific memory verification. Unlike Ethereum State Trees [2] or Hyperledger Fabric [6], which focus on general ledger integrity or permissioned chain management, this system specifically targets the trustless coordination of autonomous agents by binding cryptographic memory integrity proofs to consensus finality, thereby replacing faith-based trust [1] with verifiable, immutable state without a central authority.
+The invention distinguishes itself from standard PBFT and HotStuff implementations by tightly integrating Merkle proof verification directly into the consensus attestation phase. This architectural choice structurally eliminates the need for standard view-change logic overhead typically required for general-purpose state replication, optimizing the protocol specifically for high-throughput, agent-specific memory verification. Unlike Ethereum State Trees [2] or Hyperledger Fabric [6], which focus on general ledger integrity or permissioned chain management, this system specifically targets the trustless coordination of autonomous agents by binding cryptographic memory integrity proofs to consensus finality, thereby replacing faith-based trust [1] with verifiable, immutable state without a central authority.
 
 ## Ecosystem use
 

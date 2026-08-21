@@ -36,7 +36,7 @@ Research laboratories, biotech enterprises, and AI-agent platforms requiring aud
 
 ## Novelty
 
-VLPO uniquely bridges the precision gap between physical causality and logical consensus by coupling IEEE 1588 PTPv2 hardware-level atomic timestamps with HotStuff BFT validation. Unlike standard blockchain timestamping, which lacks the sub-microsecond resolution to resolve physical race conditions in high-frequency lab operations, or virtual schedulers (e.g., P1) which manage logical state without verifying physical temporal anchors, VLPO encodes hardware-verified temporal data into Merkle-tree structures. This specific integration creates a deterministic causal ledger that prevents replay attacks and false positives in sequence verification, a capability neither standard blockchain nor virtual scheduling architectures can achieve independently.
+VLPO distinguishes itself from prior art in hardware-secured logging and timestamped blockchains by uniquely resolving physical race conditions in high-frequency laboratory operations. While standard blockchains lack the sub-microsecond resolution to distinguish concurrent physical events, and existing virtual schedulers manage logical state without verifying physical temporal anchors, VLPO specifically encodes IEEE 1588 PTPv2 hardware-verified temporal data into Merkle-tree structures validated by HotStuff BFT. This integration creates a deterministic causal ledger that prevents replay attacks and false positives in sequence verification, a capability unattainable by standard blockchain consensus or isolated hardware logging systems.
 
 ## Diagram
 

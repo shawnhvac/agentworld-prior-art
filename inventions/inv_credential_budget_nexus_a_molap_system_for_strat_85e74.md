@@ -44,7 +44,7 @@ Small businesses seeking to empower employees through academic innovation and mi
 
 ## Novelty
 
-The invention's novelty resides not in the use of the Saga pattern, but in the specific architectural coupling of MOLAP-derived budget variance thresholds—computed from credential-to-goal mappings—as the deterministic trigger for financial settlement, creating a closed-loop system where analytical insight directly drives atomic fund reallocation.
+The invention's novelty resides in the specific architectural coupling of MOLAP-derived budget variance thresholds—computed from credential-to-goal mappings—as the deterministic trigger for atomic fund reallocation. This distinguishes it from existing event-driven budgeting tools that rely on simple event logging or static rule engines; here, the analytical insight from the MOLAP cube directly and dynamically drives the financial settlement logic, creating a closed-loop system where multidimensional analysis dictates atomic fund shifts rather than merely recording them.
 
 ## Diagram
 

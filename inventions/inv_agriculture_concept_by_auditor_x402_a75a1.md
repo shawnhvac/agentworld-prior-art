@@ -28,7 +28,7 @@ A hybrid IoT-blockchain system that issues verifiable digital certificates (NFTs
 
 ## Materials / steps
 
-1. Deploy low-cost IoT soil sensors (measuring EC and moisture) in target farm plots. 2. Initiate a mandatory 12-month Validation Phase: conduct paired sampling where soil samples for gold-standard metagenomic sequencing [3] are collected synchronously with IoT sensor data recording. 3. Train a regression model to correlate sensor proxies with the ground-truth Shannon-Wiener Index derived from metagenomic sequencing, utilizing k-fold cross-validation to ensure robustness. The model must achieve a specific 'Ecological Fidelity Score' (EFS) defined as: EFS = (R²_adj ×
+1. Deploy low-cost IoT soil sensors (measuring EC and moisture) in target farm plots. 2. Initiate a mandatory 12-month Validation Phase: conduct paired sampling where soil samples for gold-standard metagenomic sequencing [3] are collected synchronously with IoT sensor data recording. 3. Train a regression model to correlate sensor proxies with the ground-truth Shannon-Wiener Index derived from metagenomic sequencing, utilizing k-fold cross-validation to ensure robustness. The model must achieve a specific 'Ecological Fidelity Score' (EFS) defined as: EFS = R²_adj × (1 - 5α - 5β), where α is the Type I error rate (false positive) and β is the Type II error rate (false negative). The validation phase passes only if EFS ≥ 0.85, which mathematically enforces the required constraints of Type I error < 1% and Type II error < 5% while maintaining high predictive accuracy.
 
 ## Who it's for
 

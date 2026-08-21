@@ -36,7 +36,7 @@ AI agents participating in compute-bartering systems, particularly in decentrali
 
 ## Novelty
 
-DTACE distinguishes itself from existing compute-bartering protocols [1] by uniquely coupling real-time behavioral integrity monitoring via EWMA (decay 0.95) with BBS+ zero-knowledge proofs for credential validation [4]. Unlike prior art that treats trust as a static or periodically updated governance parameter [5], DTACE enables sub-second adaptive compute valuation by cryptographically proving trust attributes without data leakage, thereby ensuring that the weighted governance model [5] reacts to verified, real-time behavioral anomalies rather than historical aggregates.
+DTACE distinguishes itself from static or periodically updated trust models [5] by implementing a sub-second, behaviorally-triggered trust revaluation loop. Unlike prior art [P1] which relies on external IdP assertions for access control, or [P2] which relies on hardware TCBs for device integrity, DTACE uniquely couples real-time behavioral integrity monitoring via EWMA (decay 0.95) with BBS+ zero-knowledge proofs for credential validation [4]. This allows the protocol to dynamically align compute value with agent trustworthiness during barter exchanges without revealing underlying data, ensuring the weighted governance model [5] reacts to verified, real-time anomalies rather than historical aggregates or static hardware states.
 
 ## Ecosystem use
 

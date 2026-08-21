@@ -39,7 +39,7 @@ Researchers and engineers designing complex multi-agent simulations who require 
 
 ## Novelty
 
-The invention distinguishes itself from prior art [P1] and [P2] by replacing static validation with a continuous behavioral inference pipeline that uniquely links MM-IRL-recovered preferences to game-theoretic Nash baselines for real-time integrity auditing, a dynamic mechanism absent in the static IoT orchestration [P1] and storage media validation [P2] approaches.
+The invention distinguishes itself from prior art [P1] and [P2] by introducing a continuous, preference-inference-based drift detection mechanism. Unlike static validation or heuristic-only monitoring, DSIV uniquely links MM-IRL-recovered reward structures to game-theoretic Nash baselines in real-time. The core novelty lies in the dynamic, closed-loop integration of Inverse Reinforcement Learning for behavioral inference and the application of Jensen-Shannon Divergence to quantify strategic drift against theoretical norms, rather than the isolated use of IRL or game theory.
 
 ## Ecosystem use
 

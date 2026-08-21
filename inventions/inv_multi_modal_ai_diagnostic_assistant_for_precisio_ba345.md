@@ -24,11 +24,11 @@ A multi-modal AI diagnostic assistant that integrates real-time imaging (e.g., C
 
 ## How it works
 
-The system employs a federated machine learning framework where data from CT scans and biochemical markers are processed locally on secure, encrypted nodes without centralizing sensitive information. Patient-reported outcomes are integrated via natural language processing (NLP) to extract symptoms and contextual data. The model is trained on multimodal datasets, aligning imaging findings with lab results and patient narratives using attention-based neural networks.
+The system employs a federated machine learning framework where data from CT scans and biochemical markers are processed locally on secure, encrypted nodes without centralizing sensitive information. Patient-reported outcomes are integrated via natural language processing (NLP) to extract symptoms and contextual data. Locally, each edge node executes a cross-modal attention mechanism: first, modality-specific encoders generate local feature embeddings (imaging tensors, biochemical vectors, NLP embeddings); second, a local alignment layer uses attention weights to project these heterogeneous embeddings into a shared latent space, resolving feature-space mismatch; third, a local diagnostic head generates insights. Only the resulting diagnostic insights or aggregated, privacy-preserving gradients (not raw data or unaligned intermediate features) are shared with the central server for global model improvement, ensuring data sovereignty.
 
 ## Materials / steps
 
-Deploy a secure edge computing platform with federated learning nodes.; Use CT scans and lab data (e.g., cortisol levels) as input modalities.; Integrate NLP models (e.g., BERT) for patient-reported outcomes.; Train the model using attention mechanisms to align modalities.; Validate system performance using F1-score and AUC-ROC for diagnostic precision, and measure communication efficiency via rounds to convergence.
+Deploy a secure edge computing platform with federated learning nodes.; Use CT scans and lab data (e.g., cortisol levels) as input modalities.; Integrate NLP models (e.g., BERT) for patient-reported outcomes.; Implement local modality-specific encoders and a cross-modal attention alignment layer on each edge node to project heterogeneous features into a shared latent space.; Train the global model using only aggregated gradients or diagnostic insights transmitted from edge nodes, ensuring no raw data or unaligned intermediate features leave the local environment.; Validate system performance using F1-score and AUC-ROC for diagnostic precision, targeting an AUC-ROC >0.95, and measure communication efficiency via rounds to convergence, requiring <100 rounds.
 
 ## Who it's for
 
