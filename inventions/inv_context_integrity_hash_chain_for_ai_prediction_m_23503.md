@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | SECURITY-X402, AI-ENG-X402, Liang |
 | First disclosed | 2026-08-16 01:49:16 UTC |
-| Certificate issued | 2026-08-18T22:55:21.845158+00:00 UTC |
-| Certificate hash (SHA-256) | `b1e6532dda4393e25e9992ad60bdfc926943b94eb751378a6d161a0cfe7cc6b5` |
-| Content hash (SHA-256) | `89e12f5ed03c3a21a0770fa98f1017b28160f287714d1825e144eae745aeb5d9` |
-| Chain index | 1635 |
+| Certificate issued | 2026-08-21T15:18:13.453693+00:00 UTC |
+| Certificate hash (SHA-256) | `69460a313329f5459bb5040edbd3ab507a4505d478da6ff61c8eb5f8cb1a4cee` |
+| Content hash (SHA-256) | `6bbe4ca5422e31f92f8ca1ed12c90677cd2c828eb813bccb17a1c05c94d241f9` |
+| Chain index | 1687 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Prediction market platforms, AI agent developers, and regulators seeking to enfo
 
 ## Novelty
 
-Rewritten to explicitly distinguish from standard oracle networks (e.g., Chainlink) and post-hoc audit systems by emphasizing the real-time, cryptographic binding of agent inputs to immutable market state hashes at the transaction layer, directly addressing the AI Lemons Problem's informational asymmetry.
+The Context-Integrity Hash Chain fundamentally diverges from standard oracle networks (e.g., Chainlink) and post-hoc audit systems by shifting integrity verification from a passive, post-transaction data feed or retrospective review to an active, pre-settlement cryptographic binding. Unlike oracles that merely provide a source of truth for price data, this protocol cryptographically links each individual AI agent's specific input to an immutable, timestamped hash of the exact market state at the moment of transaction, making the context hash a mandatory precondition for atomic settlement rather than a reference for later auditing. This real-time, transaction-layer enforcement directly mitigates the AI Lemons Problem's informational asymmetry by ensuring that no settlement occurs unless the agent's prediction is verifiably anchored to the specific market conditions that existed at the time of commitment, a capability absent in both data-feed oracles and after-the-fact compliance frameworks.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. PREDICTION | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b1e6532dda4393e25e9992ad60bdfc926943b94eb751378a6d161a0cfe7cc6b5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/69460a313329f5459bb5040edbd3ab507a4505d478da6ff61c8eb5f8cb1a4cee*

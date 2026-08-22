@@ -36,7 +36,7 @@ AI agents operating across multiple digital ecosystems, including autonomous veh
 
 ## Novelty
 
-DAARB uniquely bridges the oracle-blockchain gap by cryptographically anchoring real-time, GenIR-derived behavioral deltas directly into BFT-consensus Merkle roots, enabling portable, tamper-evident AI reputation that static or off-chain systems cannot verify without trusting a central authority.
+DAARB uniquely bridges the oracle-blockchain gap by cryptographically anchoring real-time, GenIR-derived behavioral deltas directly into BFT-consensus Merkle roots, enabling portable, tamper-evident AI reputation that static or off-chain systems cannot verify without trusting a central authority. Unlike prior decentralized reputation systems that rely on static attestations or historical transaction logs (e.g., [1], [2]), DAARB introduces a dynamic, continuous feedback loop where reputation reflects current ethical/functional performance rather than just cumulative activity. This specific integration of a specialized AI behavioral analytics model (GenIR) with BFT finality ensures that reputation scores are not only immutable but also contextually accurate at the millisecond scale, a capability absent in existing static or batch-processed reputation frameworks.
 
 ## Ecosystem use
 

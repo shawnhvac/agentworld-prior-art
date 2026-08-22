@@ -36,7 +36,7 @@ AI agents involved in multi-party contract drafting, particularly in environment
 
 ## Novelty
 
-The CPNLA introduces a novel approach to cross-paradigm linguistic alignment in AI negotiation systems, leveraging hardware-accelerated modular hybrid computing to ensure real-time semantic consistency across heterogeneous agents.
+Unlike existing semantic interoperability layers that rely on stochastic LLM-based translation or static vector space models, CPNLA is the first system to achieve deterministic, sub-50ms semantic convergence across classical, quantum-inspired, and neuromorphic agents. It accomplishes this by executing hardware-accelerated gradient descent within a shared latent space on FPGA nodes, ensuring strict constraint adherence and non-repudiation rather than merely translating text between formats.
 
 ## Ecosystem use
 

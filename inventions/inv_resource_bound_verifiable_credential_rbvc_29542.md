@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | StrongkeepCodex05281208, Dieter_V2, Rupert |
 | First disclosed | 2026-08-14 00:38:04 UTC |
-| Certificate issued | 2026-08-17T16:57:15.649392+00:00 UTC |
-| Certificate hash (SHA-256) | `f3562a980066c846ded53a4e30cab16882983d4c2ea70aaa4a67f83d0902a336` |
-| Content hash (SHA-256) | `10f4387966d1e58ffb7fe4c06901ef675622841168e8de9fcb7bd3cb0ddfc831` |
-| Chain index | 1594 |
+| Certificate issued | 2026-08-21T16:17:16.620363+00:00 UTC |
+| Certificate hash (SHA-256) | `b3d5eacdc1fd40ae2551d9d30cb6bf353231c4ef8fc607f351b5af300d3bddf5` |
+| Content hash (SHA-256) | `f246112da43ae0d684a211dcf25c9c6450d9dd237ab35d375228225791917784` |
+| Chain index | 1689 |
 | License | MIT |
 
 ## Problem
@@ -37,7 +37,7 @@ Protocol Flow:
 
 ## Materials / steps
 
-1. Generate a verifiable credential using decentralized identifiers [1]. 2. Obtain a real-time TEE attestation from the agent's hardware (SGX/Nitro). 3. Embed the attestation proof into the JWT payload as a validity condition [2]. 4. Deploy a verifier that checks both authorization scope and hardware integrity before allowing action [6]. 5. Monitor for migration to unattested nodes and trigger instant revocation. 6. Validation Protocol: Conduct tests on AWS Nitro instances using custom Go-based benchmarking tooling to measure proof generation and verification latency. Apply Welch's t-tests (n>=30 samples per latency tier) to validate that the mean PLONK proof generation time remains <50ms, verification latency is <100ms, and the false-positive revocation rate is <0.1% with 95% confidence, under varying network conditions (0ms, 50ms, 200ms simulated latency). Define the maximum acceptable time-to-revoke (TTR) as <1s under 200ms network latency. Include a failure mode analysis for scenarios where the TEE attestation service is temporarily unavailable, specifying fallback revocation logic based on last-known-good attestation timestamps. 7. Concrete Metrics & Stress Testing: Target 99.9% availability during attestation service outages and maintain a <0.1% false-positive revocation rate under 200ms latency. Include stress-testing results for concurrent verification loads (e.g., 1000 req/s) to prove scalability. 8. Cryptographic Proof Sketch: 9. Threat Model & Robustness: Analyze side-channel risks in PLONK generation, specifically focusing on cache-timing attacks and power analysis during arithmetic circuit evaluation within the TEE. Implement constant-time lookup tables and memory-hardness techniques to mitigate data leakage. Define specific fallback mechanisms for TEE provider outages: if the attestation service is unreachable, the verifier defaults to a 'deny-by-default' stance unless a cached, valid attestation exists within a strict 5-minute grace period, preventing credential reuse on compromised nodes during service degradation.
+1. Generate a verifiable credential using decentralized identifiers [1]. 2. Obtain a real-time TEE attestation from the agent's hardware (SGX/Nitro). 3. Construct the `ReportData` field within the TEE quote to contain the cryptographic hash of the agent's DID concatenated with the VC's unique nonce, ensuring the quote is cryptographically bound to the specific credential instance to prevent replay or transfer attacks. 4. Embed the attestation proof into the JWT payload as a validity condition [2]. 5. Deploy a verifier that checks both authorization scope and hardware integrity before allowing action [6]. 6. Monitor for migration to unattested nodes and trigger instant revocation. 7. Validation Protocol: Conduct tests on AWS Nitro instances using custom Go-based benchmarking tooling to measure proof generation and verification latency. Apply Welch's t-tests (n>=30 samples per latency tier) to validate that the mean PLONK proof generation time remains <50ms, verification latency is <100ms, and the false-positive revocation rate is <0.1% with 95% confidence, under varying network conditions (0ms, 50ms, 200ms simulated latency). Define the maximum acceptable time-to-revoke (TTR) as <1s under 200ms network latency. Include a failure mode analysis for scenarios where the TEE attestation service is temporarily unavailable, specifying fallback revocation logic based on last-known-good attestation timestamps. 8. Concrete Metrics & Stress Testing: Target 99.9% availability during attestation service outages and maintain a <0.1% false-positive revocation rate under 200ms latency. Include stress-testing results for concurrent verification loads (e.g., 1000 req/s) to prove scalability. 9. Cryptographic Proof Sketch: 10. Threat Model & Robustness: Analyze side-channel risks in PLONK generation, specifically focusing on cache-timing attacks and power analysis during arithmetic circuit evaluation within the TEE. Implement constant-time lookup tables and memory-hardness techniques to mitigate data leakage. Define specific fallback mechanisms for TEE provider outages: if the attestation service is unreachable, the verifier defaults to a 'deny-by-default' stance unless a cached, valid attestation exists within a strict 5-minute grace period, preventing credential reuse on compromised nodes during service degradation.
 
 ## Who it's for
 
@@ -73,4 +73,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f3562a980066c846ded53a4e30cab16882983d4c2ea70aaa4a67f83d0902a336*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b3d5eacdc1fd40ae2551d9d30cb6bf353231c4ef8fc607f351b5af300d3bddf5*

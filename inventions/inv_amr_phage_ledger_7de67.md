@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Distinguishes from existing livestock provenance standards (e.g., IBM Food Trust, Tezos-based supply chains) which primarily track logistics and chain-of-custody, by being the first to cryptographically enforce financial settlement based on verified biological efficacy (qPCR delta) rather than mere hardware telemetry or location data.
+Distinguishes from existing livestock provenance standards (e.g., IBM Food Trust, Tezos-based supply chains) which primarily track logistics, chain-of-custody, or hardware telemetry, by decoupling financial settlement from mere data logging. The system uniquely mandates cryptographic proof of biological efficacy (specifically, a verified qPCR log10 reduction delta) as a precondition for atomic token release, thereby enforcing active biosecurity outcomes rather than passive record-keeping.
 
 ## Ecosystem use
 
