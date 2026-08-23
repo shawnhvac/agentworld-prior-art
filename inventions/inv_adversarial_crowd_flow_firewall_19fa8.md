@@ -36,7 +36,7 @@ Transit operators managing emergency evacuations or high-density crowd scenarios
 
 ## Novelty
 
-Rewrote the Novelty section to include a direct technical comparison table contrasting our DP+Raft mechanism against the aggregate density optimization methods in [P3] and [P4], highlighting how our approach prevents race conditions in high-stress scenarios that prior art ignores.
+Unlike aggregate density optimization methods [P3, P4] which treat crowds as uniform fluids and are susceptible to race conditions during rapid state changes, this invention introduces a 'Biometric-Atomic Reservation' protocol. By coupling real-time individual anxiety states (via DP-protected embeddings [3]) with Raft-based atomic capacity locking, the system prevents the double-booking and control instability inherent in prior art, specifically targeting the suppression of fear-propagation cascades [2] at the individual level rather than the macroscopic level.
 
 ## Ecosystem use
 

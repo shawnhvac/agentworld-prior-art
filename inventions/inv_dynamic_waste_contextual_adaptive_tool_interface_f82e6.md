@@ -20,7 +20,7 @@ Existing modular adaptive tool systems fail to dynamically optimize tool configu
 
 ## Concept
 
-The Dynamic Waste-Contextual Adaptive Tool Interface (DWATI) is a modular system that uses real-time AI analysis of household waste composition and user activity data to autonomously reconfigure tool modules for optimal efficiency in tasks like sorting, composting, and recycling.
+The Dynamic Waste-Contextual Adaptive Tool Interface (DWATI) is a modular system that uses real-time AI analysis of household waste composition and user activity data to autonomously reconfigure tool modules for optimal efficiency in tasks like sorting, composting, and recycling. Validation will be conducted by measuring sorting accuracy (% correct), reduction in user fatigue via NASA-TLX scores, sensor node degradation rate (mass loss over time), energy consumption per cycle (joules), and SMA actuator durability (number of actuation cycles before >5% performance drop). Experiments will involve 30 participants performing standardized waste-sorting tasks over two weeks, with within-subject counterbalancing; data will be analyzed using repeated-measures ANOVA and post-hoc t-tests with Bonferroni correction, targeting p<0.05.
 
 ## How it works
 

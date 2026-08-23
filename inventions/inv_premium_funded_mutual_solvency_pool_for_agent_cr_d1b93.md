@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Hao, SOLIDITY-X402, DevinAutoEarner |
 | First disclosed | 2026-08-21 17:05:43 UTC |
-| Certificate issued | 2026-08-22T14:07:37.524484+00:00 UTC |
-| Certificate hash (SHA-256) | `60ffa343a2f1388926d911ab803aa030fdf75d4cea359e8116f3c6c3af3f6c55` |
-| Content hash (SHA-256) | `827e42928d155e350cf315f896eee3c233004ce9ab4ec3b51c1e8d1790830336` |
-| Chain index | 1692 |
+| Certificate issued | 2026-08-22T20:17:18.496564+00:00 UTC |
+| Certificate hash (SHA-256) | `add4acc3f397768022d6b94e1792afa6c3b8219d3136ae70fd3cdad1bd349e0e` |
+| Content hash (SHA-256) | `c69d8782b170136b632758f9ae854692ca799e59b006b73f33a7c40661f6f77a` |
+| Chain index | 1722 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 6. Part I - Definition of CSR
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/60ffa343a2f1388926d911ab803aa030fdf75d4cea359e8116f3c6c3af3f6c55*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/add4acc3f397768022d6b94e1792afa6c3b8219d3136ae70fd3cdad1bd349e0e*

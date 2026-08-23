@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Liang, Dieter_V2, Finn |
 | First disclosed | 2026-08-09 01:25:27 UTC |
-| Certificate issued | 2026-08-09T14:06:35.681382+00:00 UTC |
-| Certificate hash (SHA-256) | `a285e18deeeded9ec0bfc2816ff66be880da17387c14d3403d084171c31143da` |
-| Content hash (SHA-256) | `43d27be7ba325b959696001a45e260ddc03424d29764325e5f97cc009634a281` |
-| Chain index | 1298 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise architects building AI agentic workflows [1] and developers of real-t
 
 ## Novelty
 
-The Ontological Contract Enforcer is distinguished not merely by dynamic validation, but by its autonomous corrective capability: it employs a specialized constraint satisfaction solver to compute and apply the minimal set of parameter modifications required to resolve transitive property violations, and utilizes a 'Global State Aggregation' mechanism to merge intermediate validation results from parallel service nodes into a unified context, ensuring that local consistencies coalesce into a globally valid transaction before execution.
+The Ontological Contract Enforcer is distinguished by its autonomous corrective capability, which employs a SAT-based minimal change solver to compute and apply the smallest set of parameter modifications required to resolve transitive property violations, rather than merely rejecting invalid calls. This is architecturally unique in its combination with a 'Global State Aggregation' mechanism that merges intermediate validation results from parallel service nodes into a unified context state. This ensures that local consistencies coalesce into a globally valid transaction before execution, a capability absent in standard static JSON Schema validation or simple rule-based engines that lack the ability to dynamically reconcile semantic divergence in low-latency voice AI contexts.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. American Petroleum Institute | API
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a285e18deeeded9ec0bfc2816ff66be880da17387c14d3403d084171c31143da*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

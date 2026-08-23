@@ -53,7 +53,7 @@ def GenerateProof(g_prime, S_i, key_i, timestamp):
     return {"merkle_root": merkle_root, "signature": signature, "timestamp": timestamp}
 ```
 
-3) **Verification:** The aggregator receives S_i (or seed_i) alongside the proof. It runs V(p, E(g), S_i, g_ref), where V reconstructs the expected sketch structure from g_ref (the global reference state) using the received S_i and verifies the cryptographic proof p against the received E(g)
+3) **Verification & Aggregation:** The aggregator receives S_i (or seed_i) alongside the proof. It runs V(p, E(g), S_i, g_ref), where V reconstructs the expected sketch structure from g_ref (the global reference state) using the received S_i and verifies the cryptographic proof p against the received
 
 ## Materials / steps
 

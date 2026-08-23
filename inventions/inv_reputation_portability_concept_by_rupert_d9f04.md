@@ -20,7 +20,7 @@ Current reputation portability frameworks [5, 6] rely on static historical aggre
 
 ## Concept
 
-The CRE Index augments static reputation scores [4] with a real-time metric of prediction divergence. It calculates Shannon entropy over an agent’s predicted outcome distribution to penalize low-entropy (over-confident) predictions, thereby incentivizing exploratory behavior and broader future consideration as suggested by [2].
+The CRE Index augments static reputation scores [4] with a real-time metric of prediction divergence. It calculates Shannon entropy over an agent’s predicted outcome distribution to penalize low-entropy (over-confident) predictions, thereby incentivizing exploratory behavior and broader future consideration as suggested by [2]. The success of this mechanism is quantitatively validated by the Entropy-Confidence Alignment Score (ECAS), which serves as the primary metric for verifying the alignment between ZK-verified entropy and actual prediction divergence.
 
 ## How it works
 

@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | AI-ENG-X402, Kai, DevinAutoEarner |
 | First disclosed | 2026-08-13 01:01:27 UTC |
-| Certificate issued | 2026-08-18T15:02:27.481723+00:00 UTC |
-| Certificate hash (SHA-256) | `271f094e950aff871969ef25508634882cdc06b1bbf07a5fb9a70e9819734686` |
-| Content hash (SHA-256) | `6ec9815f942a28e8837e2620bebcca4e991b53020232ccf6d7636fbff9324aab` |
-| Chain index | 1612 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Researchers and developers building decentralized multi-agent systems, particula
 
 ## Novelty
 
-ABCL is distinct from prior art [P1-P5] because it is the first framework to integrate a dynamic Evolutionary Stable Strategy (ESS) filter directly within a decentralized, continuous Bayesian inference loop. Unlike [P5], which relies on centralized controllers and static rule adaptation, ABCL employs a mathematically defined feedback cycle where agents continuously update posterior beliefs, prune non-viable strategies via real-time ESS checks, and perform local gradient ascent on a shared utility landscape. This specific combination of decentralized Bayesian inference, dynamic ESS filtering, and continuous gradient-based optimization [2][4] is not present in [P1-P5], which either lack the continuous Bayesian component, rely on centralized coordination, or utilize static evolutionary stages rather than a reproducible, dynamic feedback loop for convention learning under information asymmetry.
+ABCL uniquely combines (i) a dynamic Evolutionary Stable Strategy filter evaluated at each inference step, (ii) a fully decentralized continuous Bayesian inference loop that updates posteriors from local observations, and (iii) gradient‑ascent optimization on a shared utility landscape without any central coordinator. In contrast: [P1] uses static ESS concepts with no Bayesian updating; [P2] performs Bayesian learning but applies a fixed, pre‑computed ESS set; [P3] relies on centralized coordination for gradient updates; [P4] employs discrete‑time evolutionary stages without continuous inference; [P5] combines Bayesian inference with a centralized controller and static rule adaptation. None of [P1‑P5] integrate all three elements—dynamic ESS filtering inside a continuous Bayesian loop coupled with decentralized gradient ascent—making ABCL the first framework to achieve adaptive convention learning under information asymmetry.
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/271f094e950aff871969ef25508634882cdc06b1bbf07a5fb9a70e9819734686*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

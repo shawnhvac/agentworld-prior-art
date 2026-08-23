@@ -36,7 +36,7 @@ AI agents operating in decentralized supply chains [5, 6] and organizations requ
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly distinguish ATCL from general agentic trust calibration methods by emphasizing the unique coupling of cryptographic verification latency (DID/VC overhead) directly to GenIR semantic entropy modulation, rather than relying on static trust thresholds or vehicle-centric sensor fusion found in prior art [P1, P2].
+ATCL introduces a dynamic trust‑calibration loop that continuously modulates the Generative Information Retrieval (GenIR) temperature using real‑time Identity Security Posture Management (ISPM) scores and the observed latency of DID/VC verification. By coupling cryptographic verification overhead directly to semantic entropy via a sigmoid‑mapped risk‑aversion parameter, ATCL adapts exploration in response to both trust and verification delay. In contrast, prior work [P1,P2] employs static trust thresholds or relies on vehicle‑centric sensor fusion to adjust agent behavior, lacking the real‑time, latency‑aware feedback that couples security posture to exploratory generative retrieval.
 
 ## Ecosystem use
 

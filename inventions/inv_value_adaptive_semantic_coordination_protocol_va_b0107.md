@@ -39,7 +39,7 @@ Multi-agent systems requiring real-time adaptation to changing value systems and
 
 ## Novelty
 
-VASCP distinguishes itself from existing convention-based learning protocols through its decentralized, token-based semantic alignment mechanism, which enables real-time, distributed value adaptation without centralized oversight, unlike prior works that rely on global state aggregation or static convention sets; this is further delineated in the introduction via comparative analysis against centralized value learning frameworks.
+VASCP uniquely couples decentralized inverse reinforcement learning for real-time value inference with a bandwidth-constrained sparse binary masking mechanism for semantic token exchange. Unlike prior decentralized protocols that rely on static conventions or global state aggregation, VASCP specifically addresses the joint challenge of dynamic value adaptation and strict communication overhead limits ($B_{max}$), a combination not present in existing literature [2, 4].
 
 ## Ecosystem use
 

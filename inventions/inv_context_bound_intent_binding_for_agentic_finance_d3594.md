@@ -36,7 +36,7 @@ Financial institutions, insurers, and regulators requiring finance-grade assuran
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly articulate how the fusion of DVC-VCs with Context-Bound Identity creates a unique security perimeter that general-purpose semantic routers cannot provide, specifically highlighting the deterministic settlement guarantees enabled by the cryptographic intent-hash binding.
+Unlike [P4] which refines reasoning statelessly, and [P1]-[P3],[P5] which focus on secure data exchange without semantic intent verification, this invention uniquely binds a cryptographic semantic hash (H_s) to a specific execution window via Context-Bound Identity (CBI). This creates a deterministic settlement finality mechanism where on-chain finalization is contingent on the mathematical equality of pre-signed intent hashes and execution output hashes within a bounded temporal context, a capability absent in prior art that relies on stateless semantic checks or generic secure channels.
 
 ## Ecosystem use
 

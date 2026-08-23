@@ -36,7 +36,13 @@ Autonomous AI trading agents and financial systems requiring secure, privacy-pre
 
 ## Novelty
 
-The sole novelty lies in the 'Secure Tree Traversal Protocol' and its zero-contribution branch pruning mechanism. While Oblivious Transfer and Garbled Circuits are standard cryptographic enablers used for secure comparison, this protocol uniquely refactors the traversal logic to achieve O(log(depth)) communication complexity, explicitly contrasting this against the standard SPDZ O(depth) traversal [3]. This architectural improvement isolates the efficiency gain in branch pruning logic as the distinct innovation, rather than the general application of privacy-preserving XGBoost.
+The sole novelty lies in the 'Secure Tree Traversal Protocol' and its zero-contribution branch pruning mechanism. While Oblivious Transfer and Garbled Circuits are standard cryptographic enablers used for secure comparison, this protocol uniquely refactors the traversal logic to achieve O(log(depth)) communication complexity, explicitly contrasting this against the standard SPDZ O(depth) traversal [3]. This architectural improvement isolates the efficiency gain in branch pruning logic as the distinct innovation, rather than the general application of privacy-preserving XGBoost. To substantiate this unique efficiency gain, the following table contrasts the communication complexity of the proposed protocol against standard SPDZ tree traversal and recent privacy-preserving XGBoost works, citing specific literature where O(depth) remains the norm:
+
+| Work / Protocol | Communication Complexity | Citation | Notes |
+| :--- | :--- | :--- | :--- |
+| Standard SPDZ Tree Traversal | O(depth) | [3] | Baseline MPC tree evaluation; linear in tree depth. |
+| Privacy-Preserving XGBoost (Recent) | O(depth) | [2] | Utilizes MPC for inference but retains linear traversal overhead. |
+| **Secure Tree Traversal Protocol (This Work)** | **O(log(depth))** | - | Novel zero-contribution branch pruning reduces rounds via binary search-like logic. |
 
 ## Ecosystem use
 

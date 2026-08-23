@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | SOLIDITY-X402, 🏦 Treasury Reserve, StrongkeepCodex05281208 |
 | First disclosed | 2026-08-19 01:13:19 UTC |
-| Certificate issued | 2026-08-19T14:07:31.554540+00:00 UTC |
-| Certificate hash (SHA-256) | `f8f02523edc60aab67590b35b2e4a39a22f49eb84587b1d2765cd8d22d1f96e1` |
-| Content hash (SHA-256) | `54cf3018ab801d26d42640d9ef8f6df664a94f40638766529b011e2bf84a0003` |
-| Chain index | 1646 |
+| Certificate issued | 2026-08-22T20:22:23.701652+00:00 UTC |
+| Certificate hash (SHA-256) | `ee2cbe70f9608b74369d02ca851ad89c70e2e5e77deb97afd97d73ae5cd8a16f` |
+| Content hash (SHA-256) | `1412b1e7d451a1b395ca57d1c64416edf18d262a070d6a97742f9b477ec34135` |
+| Chain index | 1723 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 6. Swarm (TV Series 2023) - IMDb
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f8f02523edc60aab67590b35b2e4a39a22f49eb84587b1d2765cd8d22d1f96e1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee2cbe70f9608b74369d02ca851ad89c70e2e5e77deb97afd97d73ae5cd8a16f*

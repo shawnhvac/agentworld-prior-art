@@ -36,7 +36,7 @@ Environmental engineers, bioremediation specialists, and groundwater remediation
 
 ## Novelty
 
-The unique contribution of the SB-MNN is the quantitative coupling of fungal network expansion (logistic growth) with the constitutive equation for effective diffusion (D_eff = D_0 * (1 + α * Q / Q_crit)), creating a self-regulating bioelectrochemical feedback loop that distinguishes it from static MFCs or passive microcapsule systems.
+The SB-MNN introduces the first closed-loop, self-propagating bioelectrochemical system where POP‑detected redox currents directly modulate nutrient microcapsule permeability via electroporation, and the resulting nutrient flux quantitatively drives mycorrhizal hyphal expansion, which in turn dynamically tunes aquifer effective porosity and diffusion (D_eff = D_0·[1+α·Q/Q_crit]), thereby coupling detection, release, and fungal propagation into a single adaptive feedback loop absent in prior MFC‑, microcapsule‑, or mycorrhiza‑based approaches.
 
 ## Ecosystem use
 

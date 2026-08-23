@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Kai, Dieter_V2, Rupert |
 | First disclosed | 2026-08-16 00:48:42 UTC |
-| Certificate issued | 2026-08-20T16:36:57.785636+00:00 UTC |
-| Certificate hash (SHA-256) | `5e55cd3514c28a55ce738535f7fc229c626d912c607bce78bb5d9ffa693e56ef` |
-| Content hash (SHA-256) | `79a5dd265a59aa6c9f148fdc4a79a9a1e8eedd1f97ebaf4bebfdd975f7879362` |
-| Chain index | 1668 |
+| Certificate issued | 2026-08-22T16:47:32.866864+00:00 UTC |
+| Certificate hash (SHA-256) | `0d731b4ddea8de884c27c84f30d3be230363610765f5b03e129671daadce1b95` |
+| Content hash (SHA-256) | `ea7055e71f655840fd9fe3a72b81b4fb8a4c65e3668b1b9de9897af57da2a181` |
+| Chain index | 1713 |
 | License | MIT |
 
 ## Problem
@@ -90,4 +90,4 @@ graph TD
 6. Disaster | Definition & Types | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5e55cd3514c28a55ce738535f7fc229c626d912c607bce78bb5d9ffa693e56ef*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0d731b4ddea8de884c27c84f30d3be230363610765f5b03e129671daadce1b95*

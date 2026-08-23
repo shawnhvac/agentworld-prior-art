@@ -36,7 +36,7 @@ Students and educators using AI tools who require deeper cognitive integration a
 
 ## Novelty
 
-Rewrote the novelty claim to explicitly contrast the system's explicit symbolic ontology mapping and hybrid semantic-ontological alignment against the implicit statistical difficulty estimation and heuristic complexity metrics found in existing Adaptive Learning and Intelligent Tutoring System (ITS) frameworks [5][6][7], clarifying that the distinct contribution is the mechanism of 'symbolic resonance' rather than the feedback loop structure itself.
+Unlike the mechanical spring-mass resonators in [P1] and [P2], which rely on physical oscillatory transducers and natural frequencies, this invention utilizes a computational hybrid semantic-ontological alignment mechanism to map AI explanations to user-defined symbolic frameworks, solving the problem of implicit statistical difficulty estimation in educational AI by providing explicit, mathematically rigorous 'symbolic resonance' scoring via cosine similarity and composite validation metrics.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Household users, especially those with physical limitations or those performing 
 
 ## Novelty
 
-Unlike prior art [P1] and [P3], which utilize removable sensors solely for static environmental detection (e.g., locating studs or wires) with no actuation capability, and [P2], which focuses on passive task verification via visual projection without mechanical adaptation, this invention is novel in its integration of a local closed-loop PID control system driving a kinematically optimized four-bar linkage. This specific architecture enables real-time, sub-20ms dynamic grip strength and posture adjustment based on continuous feedback, a capability entirely absent in the static sensing or passive verification systems of the cited prior art.
+Unlike prior art [P1] and [P3], which utilize removable sensors solely for static environmental detection (e.g., locating studs or wires) with no actuation capability, and [P2], which focuses on passive task verification via visual projection without mechanical adaptation, this invention is novel in its integration of a local closed-loop PID control system driving a kinematically optimized four-bar linkage. Specifically, the system’s 120Hz natural frequency and sub-20ms latency enable real-time dynamic grip strength and posture adjustment tailored to the high-frequency variability of household object textures and shapes—a capability entirely absent in the static sensing or passive verification systems of the cited prior art, which lack the mechanical bandwidth and control loop necessary for adaptive force modulation.
 
 ## Ecosystem use
 

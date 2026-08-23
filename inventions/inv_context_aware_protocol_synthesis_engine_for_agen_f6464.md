@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and security engineers building 
 
 ## Novelty
 
-Unlike passive discovery tools such as Swagger Inspector or Prism that infer static schemas from historical logs and fail to accurately model concurrent state transitions, this engine uniquely synthesizes dynamic, 'proof-carrying' behavioral contracts. It differentiates itself by employing a deterministic State Merging Algorithm that resolves probabilistic traffic inconsistencies into a single stable state-machine graph, providing a unique guarantee of behavioral contract stability that prior art lacks and enabling agents to actively negotiate and verify protocol compliance at runtime.
+Unlike passive discovery tools or general state-machine inference that produce static schemas or probabilistic models, this engine's specific contribution is a deterministic State Merging Algorithm with formal termination guarantees ($\max_i |\frac{dC_i(t)}{dt}| < \epsilon$). This ensures a single, stable state-machine graph, providing a unique stability guarantee for agent protocol negotiation that prior art lacks, rather than merely generating OpenAPI specifications.
 
 ## Ecosystem use
 

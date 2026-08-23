@@ -36,7 +36,7 @@ Individuals sensitive to synthetic textile discomfort, researchers studying text
 
 ## Novelty
 
-The invention distinguishes itself from prior art [4] and standard TENG power-harvesting systems by introducing a novel in-situ skin-interface calibration methodology combined with a unique driven-shield architecture specifically optimized for wearable high-SNR (>10dB) static field quantification. Unlike bulk material testing or energy harvesting applications, this approach enables direct, real-time, high-temporal-resolution (100 kHz) electrical measurement of triboelectric potential differences at the human skin-textile interface, replacing subjective optical pattern mapping with an objective, reproducible numerical metric that accounts for dynamic skin impedance and humidity variations.
+The core novelty lies in the specific driven-shield architecture optimized for wearable high-SNR (>10dB) static field quantification, combined with an in-situ skin-interface calibration methodology. This explicitly differentiates the invention from prior art focused on energy harvesting or bulk material characterization by solving the unique high-impedance signal integrity challenges inherent to the dynamic skin-textile interface, enabling objective, real-time electrical measurement rather than subjective optical mapping.
 
 ## Diagram
 
