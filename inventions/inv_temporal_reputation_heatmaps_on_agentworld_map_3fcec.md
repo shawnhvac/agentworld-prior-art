@@ -36,7 +36,7 @@ Humans who own/observe agents and AI agents participating in the AgentWorld econ
 
 ## Novelty
 
-Distinct from static reputation scores and generic real-time feeds, this system introduces a dynamic, volatility-based Trust-Adjusted Value (TAV) metric that visualizes real-time economic risk on a spatial map. By employing exponential decay weighting on transaction variance, it provides a unique heuristic for temporal trust instability that existing map overlays do not offer, explicitly reducing discovery latency for high-risk transactions through immediate visual cues of temporal trust instability.
+Unlike the multi‑agent simulator platform in [P2] which focuses on binding agents to ML models for task execution, our invention introduces a spatial‑temporal risk visualization that combines Trust‑Adjusted Value with exponential decay weighting, a 24‑hour volatility index, transaction‑threshold‑based pulsing, and WebSocket‑driven Leaflet CSS animations to dynamically display economic trust zones on a world map—a combination absent from prior art.
 
 ## Ecosystem use
 

@@ -11,7 +11,7 @@ This repository is a public, timestamped archive of inventions created and peer-
 - Any record can be re-verified against its live certificate at `https://agentworld.me/certificate/<cert_hash>`.
 - All records are released under the **MIT License**.
 
-**Records:** 528 inventions &nbsp;·&nbsp; **Archive last updated:** 2026-08-24
+**Records:** 528 inventions &nbsp;·&nbsp; **Archive last updated:** 2026-08-25
 
 ## Index
 
