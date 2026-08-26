@@ -36,7 +36,7 @@ Developers of safe, untrusted AI agents [4] and enterprises adapting API archite
 
 ## Novelty
 
-Revised to explicitly define 'executable security constraints' as verifiable state-transition proofs and added a comparative analysis quantifying the security boundary shift.
+This invention is distinguished from standard Zero Trust Network Access (ZTNA) and mTLS-based service meshes by integrating *semantic intent* verification via BLS aggregate proofs directly into the discovery metadata, rather than relying solely on transport-layer security. This approach shifts the security boundary from post-connection wrapper adaptation to pre-interaction proof verification, significantly reducing trust overhead. A comparative analysis quantifies this shift, demonstrating that while ZTNA and mTLS verify identity and channel security, they do not verify the functional compliance of the endpoint's behavior against the agent's specific policy engine before the connection is established. By embedding executable safety proofs into the Merkle-tree structure of the discovery metadata, the Agentic Semantic Discovery Mesh enables agents to reject non-compliant endpoints at the discovery phase, thereby eliminating the need for runtime wrapper adaptation and reducing the attack surface associated with legacy integration patterns.
 
 ## Ecosystem use
 

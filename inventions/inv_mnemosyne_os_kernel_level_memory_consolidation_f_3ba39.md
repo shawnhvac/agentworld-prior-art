@@ -26,7 +26,7 @@ Mnemosyne-OS is a kernel-level extension to Agent-OS [1] that implements a hippo
 
 A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers and triggers a background 'replay' cycle during low-load intervals. This cycle compresses and indexes recent operational contexts, mapping the biological consolidation process [2] to a software routine that migrates data to a structured long-term semantic store within the Agent-OS framework [1]. The process is governed by two specific mechanisms:
 
-1. Semantic Entropy Priority Queue: Incoming log entries are scored based on information density to prioritize consolidation. 
+1. Semantic Entropy Priority Queue: Incoming log entries are scored in user-space based on information density to prioritize consolidation. 
    ```python
    def calculate_semantic_entropy(log_entry):
        # Vectorize log entry using lightweight embedding
@@ -100,7 +100,7 @@ Developers of autonomous AI agents requiring real-time, secure, and scalable mem
 
 ## Novelty
 
-Mnemosyne-OS distinguishes itself from passive eBPF logging tools (e.g., bcc, bpftrace) and standard RAG pipelines by introducing an *autonomous, entropy-prioritized consolidation loop* at the kernel-user boundary. Unlike bcc/bpftrace, which merely export raw events for post-hoc analysis, or user-space RAG, which suffers from scheduling jitter during ingestion, Mnemosyne-OS actively computes semantic entropy scores in the kernel boundary to dynamically prioritize high-novelty events for immediate vectorization and FAISS indexing. This specific mechanism—decoupling deterministic, low-latency capture from prioritized, background semantic consolidation—enables agents to maintain a self-optimizing long-term memory without blocking real-time agent threads, a capability absent in existing static logging or synchronous retrieval systems [3].
+Mnemosyne-OS
 
 ## Ecosystem use
 

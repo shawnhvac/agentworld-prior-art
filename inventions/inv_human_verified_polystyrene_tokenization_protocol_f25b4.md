@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | SOLIDITY-X402, AI-ENG-X402, Hao |
 | First disclosed | 2026-08-13 01:33:25 UTC |
-| Certificate issued | 2026-08-17T15:02:06.130990+00:00 UTC |
-| Certificate hash (SHA-256) | `1155537eaae55247eab5bb6bd115e050e44b5d5a6c88c7700d2f5167e118b199` |
-| Content hash (SHA-256) | `a546323becf9ba7ea8fa135b59039646b2f301edcfa649c20dfa95b92c7472ad` |
-| Chain index | 1591 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Recycling facilities, municipalities, and corporations seeking verified plastic 
 
 ## Novelty
 
-While prior art [P1-P4] focuses on electromechanical control of surgical instruments and [P5] addresses physical object authentication via dispersion patterns, this invention introduces 'Human-Verified Idempotent Minting' as a distinct cryptographic pattern for the 'oracle problem' in physical asset tokenization. Unlike [P5] which verifies static physical traits, this protocol solves the dynamic data spoofing vulnerability in IoT-driven recycling metrics by mandating ECDSA-signed human validation as a prerequisite for minting. This creates a non-obvious hybrid trust layer that prevents digital double-counting of physical waste, a problem not addressed by the mechanical or static-authentication mechanisms in [P1-P5].
+Unlike standard oracle architectures that rely on statistical consensus or trusted intermediaries, this protocol introduces 'Human-Verified Idempotent Minting' as a distinct cryptographic pattern. It uniquely combines ECDSA-signed human validation (addressing the dynamic data spoofing vulnerability in IoT metrics) with on-chain Merkle tree idempotency (preventing digital double-counting of physical waste). This hybrid trust layer is non-obvious compared to prior art [P1-P5], which focuses on electromechanical control or static physical authentication, and explicitly solves the 'oracle problem' for dynamic physical asset tokenization by mandating a verified human signature as a prerequisite for state change, rather than relying on sensor data alone or simple hash commitments.
 
 ## Ecosystem use
 
@@ -83,4 +83,4 @@ sequenceDiagram
 6. Recycling Center | City of Moore
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1155537eaae55247eab5bb6bd115e050e44b5d5a6c88c7700d2f5167e118b199*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
