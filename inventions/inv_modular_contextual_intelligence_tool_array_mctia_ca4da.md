@@ -36,7 +36,7 @@ Eco-conscious households, individuals seeking efficient and adaptive tools, and 
 
 ## Novelty
 
-Unlike persistent modular robots (e.g., Polybot) designed for long-term structural integrity and locomotion, MCTIA introduces ephemeral, tool-specific configurations that dissolve or disassemble post-task. The biodegradability is not merely a material choice but a functional requirement for transient assemblies, ensuring that temporary tool geometries do not persist as waste, thereby solving the sustainability gap in adaptive, short-lifecycle tooling systems [2][5].
+MCTIA distinguishes itself from persistent modular robots (e.g., Polybot) and stochastic swarm assembly methods by introducing an 'ephemeral assembly protocol' that prioritizes short-lifecycle tool formation over long-term structural integrity. The primary technical contribution is not the hardware components themselves, but the unique integration of a deterministic 3-bit handshake coupled with a strict energy-minimization settling mechanism. This specific computational-mechanical protocol ensures precise, transient configurations that dissolve post-task, solving the sustainability gap in adaptive, short-lifecycle tooling systems by eliminating the latency and structural rigidity constraints inherent in persistent or random assembly approaches [2][5].
 
 ## Ecosystem use
 

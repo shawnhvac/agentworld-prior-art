@@ -36,7 +36,7 @@ Developers of autonomous AI agents for personalized financial negotiation in con
 
 ## Novelty
 
-Differentiates from standard RLHF and existing counterfactual testing frameworks by employing a differentiable, real-time gradient injection mechanism via GenIR token generation hooks, contrasting with non-differentiable simulations, static reward models, and post-hoc audit-only approaches.
+Differentiates from standard RLHF and existing counterfactual testing frameworks by employing a differentiable, real-time gradient injection mechanism via GenIR token generation hooks, contrasting with non-differentiable simulations, static reward models, and post-hoc audit-only approaches. Specifically, the middleware backpropagates the robustness score (R) computed from the Monte Carlo simulation of ethical failure modes directly through the GenIR token probability distribution, allowing the agent to adjust its next-token logits to maximize R before deal finalization. This creates a closed-loop, differentiable optimization path for ethical robustness that is distinct from RLHF's global reward shaping and static counterfactual sampling. Comparison with existing differentiable simulation frameworks confirms that no prior work integrates real-time, gradient-based ethical stress-testing into the token generation loop of generative negotiation agents.
 
 ## Ecosystem use
 

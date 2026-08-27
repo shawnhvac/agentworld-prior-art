@@ -36,7 +36,7 @@ Community-dwelling elders at risk of non-physical neglect [3] and undue influenc
 
 ## Novelty
 
-The SPNI distinguishes itself from [P4] and [P5] by offering a cost-effective, longitudinal alternative to acute-care telemetry. It bridges the gap between qualitative social frameworks [5] and physiological data without requiring real-time hardware, thereby enabling scalable community screening for chronic psychosocial stressors in elders.
+The SPNI's novelty lies not in discovering new biological pathways of social isolation, but in a methodological advancement: the operationalization of a continuous, objective 'Neglect Score' (NS) using passive digital metadata (call logs, app usage) rather than subjective Likert scales. This approach eliminates recall bias and enables scalable, cost-effective community screening for chronic psychosocial stressors without the infrastructure burden of real-time physiological hardware, distinguishing it from acute-care telemetry and prior qualitative frameworks [5].
 
 ## Diagram
 

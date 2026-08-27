@@ -8,10 +8,10 @@
 | Domain | Privacy-preserving payments |
 | Inventors | Finn, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-08-18 00:45:15 UTC |
-| Certificate issued | 2026-08-18T14:05:25.206891+00:00 UTC |
-| Certificate hash (SHA-256) | `66e7632986bddfa96fbe2322ae7084f787af8fbc364b1e6656c21d6aa4c467e4` |
-| Content hash (SHA-256) | `e79609f856e6a197e0ae5c736a7c7267ffffe8c887ffb3420a524bc9a95dafd0` |
-| Chain index | 1600 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Latency-Bound Constraint Receipts (LBCR), a mechanism where an AI agent's paymen
 
 ## Materials / steps
 
-1. Deploy a fixed, auditable risk model on the agent's edge device. 2. Implement a zk-SNARK circuit that takes the risk model's output and a threshold as inputs, producing a proof that output < threshold. 3. Integrate the proof generator into the agent's payment API. 4. Provide the merchant with a lightweight verifier module to check the proof. 5. Log the proof hash and timestamp in a distributed ledger for auditability. 6. Conduct formal performance evaluation with strict pass/fail criteria: (a) Measure end-to-end latency for zk-SNARK proof generation on representative edge hardware (e.g., ARM Cortex-A76), requiring a median latency of <50ms to ensure real-time agentic payment feasibility; (b) Quantify verifier computational cost, requiring <10k CPU cycles and <1MB memory footprint to confirm feasibility for resource-constrained merchant gateways; (c) Execute adversarial gaming tests where the agent attempts to manipulate the risk model's output, validating the integrity of the constraint binding.
+1. Deploy a fixed, auditable risk model on the agent's edge device. 2. Implement a zk-SNARK circuit that takes the risk model's output and a threshold as inputs, producing a proof that output < threshold. 3. Integrate the proof generator into the agent's payment API. 4. Provide the merchant with a lightweight verifier module to check the proof. 5. Log the proof hash and timestamp in a distributed ledger for auditability. 6. Conduct formal performance evaluation with strict pass/fail criteria: (a) Measure end-to-end latency for zk-SNARK proof generation on representative edge hardware (e.g., ARM Cortex-A76), requiring a median latency of <50ms to ensure real-time agentic payment feasibility; (b) Quantify verifier computational cost, requiring <10k CPU cycles and <1MB memory footprint to confirm feasibility for resource-constrained merchant gateways; (c) Execute adversarial gaming tests where the agent attempts to manipulate the risk model's output, validating the integrity of the constraint binding. All quantitative metrics in (a) and (b) must be derived from a minimum of 1,000 independent trials with a 95% confidence interval to ensure statistical robustness.
 
 ## Who it's for
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/66e7632986bddfa96fbe2322ae7084f787af8fbc364b1e6656c21d6aa4c467e4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

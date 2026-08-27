@@ -53,7 +53,7 @@ Autonomous AI agents engaged in personalized financial negotiation, such as cons
 
 ## Novelty
 
-GIR-NP distinguishes itself from static RAG pipelines by implementing a closed-loop feedback mechanism where the utility evaluation of generated proposals dynamically re-weights the GenIR retrieval index in real-time. Unlike prior art that relies on static retrieval or general emotional resonance [6], this adaptive modulation ensures that subsequent retrieval queries are biased toward evidence that historically yields higher utility outcomes, thereby specifically mitigating the risk of narrowed strategic consideration [1] through continuous strategic alignment rather than pre-defined heuristic branches.
+GIR-NP distinguishes itself from static RAG pipelines and standard adaptive RAG by implementing a closed-loop feedback mechanism where the utility evaluation of generated proposals dynamically re-weights the GenIR retrieval index in real-time. Unlike contextual bandit approaches that optimize for immediate reward signals or prior art relying on static retrieval and general emotional resonance [6], GIR-NP's adaptive modulation biases subsequent retrieval queries toward evidence that historically yields higher long-term utility outcomes, thereby specifically mitigating the risk of narrowed strategic consideration [1] through continuous strategic alignment rather than pre-defined heuristic branches or myopic reward maximization.
 
 ## Ecosystem use
 

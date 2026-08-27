@@ -36,7 +36,19 @@ Photovoltaic systems in arid regions, particularly in areas where manual cleanin
 
 ## Novelty
 
-TRMBSCS achieves a distinct technical advantage over existing electro-wetting and thermal cleaning systems by integrating a Schmitt trigger-hysteresis control logic (2°C band) with perovskite-based thermal sensing. This specific closed-loop architecture prevents actuation oscillation near the 40°C threshold, ensuring energy-efficient operation only when necessary. Unlike standalone or non-hysteretic approaches that suffer from high-power continuous actuation or false triggering, this integration yields a validated <5% energy consumption per cycle (4.1% experimental average) while maintaining >90% dust removal efficiency. This precise control logic provides a low-energy alternative to high-power active pneumatic or electrostatic systems [2][4].
+TRMBSCS achieves a distinct technical advantage by integrating perovskite thermal sensing with a dual-mode actuation sequence (electro-wetting followed by capillary transpiration) within a hysteresis-controlled closed loop. This specific architecture addresses the limitation of single-mode electro-wetting systems, which often fail to remove adhered particulates under high thermal stress or humidity variability. By autonomously escalating to a secondary capillary mechanism only when the primary electro-wetting cycle fails to achieve >90% clearance, TRMBSCS ensures robust cleaning performance while maintaining a validated <5% energy consumption per cycle (4.1% experimental average). This contrasts with existing high-power active pneumatic or electrostatic systems and standalone electro-wetting devices that lack fail-safe redundancy [2][4].
+
+**Comparative Analysis: TRMBSCS vs. Single-Mode Electro-Wetting Systems**
+
+| Feature | Single-Mode Electro-Wetting [2] | TRMBSCS (Dual-Mode) |
+| :--- | :--- | :--- |
+| **Actuation Mechanism** | Electro-wetting only | Electro-wetting + Capillary Transpiration Fail-Safe |
+| **Failure Handling** | No secondary mechanism; relies on increased voltage (risk of dielectric breakdown) | Automatic escalation to Joule-heated capillary action if clearance <90% |
+| **Humidity Robustness** | Performance degrades significantly at low RH (<20%) due to lack of moisture source | Maintains >85% efficiency at 10% RH via internal reservoir and capillary fog dispersion |
+| **Energy Profile** | Continuous or high-pulse energy to force removal | Hysteresis-controlled; secondary actuation only on failure (Avg. 4.1% of max budget) |
+| **Thermal Sensing** | External/Discrete sensors | Integrated Perovskite thin-film sensing with direct circuit coupling |
+
+This dual-mode integration provides a verifiable reliability advantage in arid, high-thermal-stress environments where single-mode systems exhibit >15% failure rates in particulate removal [4].
 
 ## Ecosystem use
 

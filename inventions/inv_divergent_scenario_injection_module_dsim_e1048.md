@@ -36,7 +36,7 @@ Autonomous AI agents engaged in personalized financial negotiation or consumer b
 
 ## Novelty
 
-DSIM is distinct from Monte Carlo Tree Search (MCTS) and standard RL exploration by operating as a deterministic, post-policy verification gate rather than a stochastic policy optimizer; specifically, it addresses cognitive narrowing [1] through explicit variance penalization (P = λ * (σ^2 / μ)) of GenIR-generated counterfactuals [2], filtering high-variance noise to isolate structurally divergent, high-upside negotiation paths that standard exploration mechanisms typically discard as risk.
+DSIM is distinct from Monte Carlo Tree Search (MCTS) and standard RL exploration by operating as a deterministic, post-policy verification gate rather than a stochastic policy optimizer. While MCTS alters the planning process via tree expansion during search and standard RL modifies behavior through policy weight updates in the learning loop, DSIM intervenes strictly at the action selection boundary without altering underlying policy weights. It acts as a deterministic filter on the final action space, leveraging GenIR-specific structural deviations [2] to explicitly counter cognitive narrowing [1] via variance penalization (P = λ * (σ^2 / μ)), thereby isolating structurally divergent, high-upside negotiation paths that standard exploration mechanisms discard as risk.
 
 ## Ecosystem use
 
