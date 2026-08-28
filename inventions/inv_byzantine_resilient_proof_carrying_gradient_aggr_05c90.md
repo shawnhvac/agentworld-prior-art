@@ -65,7 +65,7 @@ Organizations participating in federated data marketplaces [6] and multicloud AI
 
 ## Novelty
 
-Refined the novelty claim to explicitly distinguish the invention from prior art [P2] and [P3] by emphasizing that pre-aggregation cryptographic verification of gradient encoding integrity (via sparse-sketching and Merkle proofs) provides a structural defense against coordinated Byzantine attacks that evade statistical robust aggregation, whereas prior art relies on post-hoc statistical filtering or general blockchain authentication without verifying the mathematical consistency of the gradient encoding process itself.
+This invention distinguishes itself from SecAgg (which ensures communication security but not encoding integrity) and Krum/ByzSGD (which rely on post-hoc statistical filtering) by introducing pre-aggregation verification of the *mathematical consistency* of the gradient encoding process. Specifically, it uses Merkle proofs to bind the sparse-sketching matrix seed to the compressed gradient sketch, ensuring that the structural transformation itself is untampered, thereby providing a defense against coordinated Byzantine attacks that evade standard robust aggregation rules.
 
 ## Ecosystem use
 

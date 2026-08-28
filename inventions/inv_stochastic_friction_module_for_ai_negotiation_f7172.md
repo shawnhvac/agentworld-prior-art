@@ -20,7 +20,7 @@ High-fidelity virtual agents in negotiation [6] induce 'faith in AI' [1], causin
 
 ## Concept
 
-A middleware that injects controlled, verifiable latency and semantic ambiguity into agent responses only when confidence metrics exceed a safety threshold. This directly counters the over-trust described in [1] and enhances the negotiation dynamics studied in [6] by actively degrading perceived fluency to trigger human skepticism rather than just presenting counterfactuals.
+A middleware that injects controlled, verifiable latency and semantic ambiguity into agent responses only when confidence metrics exceed a safety threshold. This directly counters the over-trust described in [1] and enhances the negotiation dynamics studied in [6] by actively degrading perceived fluency to trigger human skepticism, distinguishing itself from financial stochastic modeling [P2] by operating on linguistic output streams rather than economic projections.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The module operates via a unified state machine anchored by a unique, cryptograp
 
 ## Materials / steps
 
-1. Integrate middleware into the AI agent's output pipeline, establishing a State Queue and Transaction ID (TxID) generation system with cryptographic signature verification to link the token generation logits hook with the final text assembly stage, ensuring the State Queue cannot be bypassed or manipulated by malicious agents. 2. Configure confidence thresholds (T) and scaling constants (k, alpha) based on model self-assessment calibration. 3. Implement latency function L(t) = min(t_max, t_base * exp(k * (C - T))) to delay responses when confidence exceeds threshold, holding the token stream in the State Queue under its unique TxID, where t_max is empirically derived to prevent denial-of-service conditions. 4. Develop semantic perturbation rules using a fixed lexicon mapping table (e.g., 'definitely' -> 'likely') and probabilistic substitution P(hedge | C) to replace definitive language with hedging terms during post-processing, triggered only after latency verification for the specific TxID. 5. Implement a Settlement Protocol that monitors TxID lifecycle in the State Queue, defining explicit state transitions (QUEUED -> LATENCY_ELAPSED -> PERTURBED -> RELEASED), verifying cryptographic signatures to prevent spoof
+1. Integrate middleware into the AI agent's output pipeline, establishing a State Queue and Transaction ID (TxID) generation system with cryptographic signature verification to link the token generation logits hook with the final text assembly stage, ensuring the State Queue cannot be bypassed or manipulated by malicious agents. 2. Configure confidence thresholds (T) and scaling constants (k, alpha) based on model self-assessment calibration. 3. Implement latency function L(t) = min(t_max, t_base * exp(k * (C - T))) to delay responses when confidence exceeds threshold, holding the token stream in the State Queue under its unique TxID, where t_max is empirically derived to prevent denial-of-service conditions. 4. Develop semantic perturbation rules using a fixed lexicon mapping table (e.g
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Users of autonomous AI agents for personalized financial negotiation in consumer
 
 ## Novelty
 
-Rewrote Novelty section to explicitly contrast the 'Stochastic Friction' mechanism (latency + semantic perturbation) against prior art that treats latency as a side effect or uses static lexicon replacement without confidence-dependent probabilistic weighting, emphasizing latency as a deliberate signal to trigger human skepticism.
+This invention distinguishes itself from prior art through the synergistic coupling of confidence-metric-driven latency and semantic hedging as a unified anti-over-trust signal. Unlike static lexicon replacement, which lacks confidence dependency and latency signaling, or generic rate-limiting, which lacks semantic perturbation and safety-threshold gating, the Stochastic Friction Module treats latency not as a side effect but as a deliberate, verifiable signal to trigger human skepticism. The core contribution is the atomic linkage of these two mechanisms via a cryptographically secured state machine, ensuring that semantic degradation is contingent upon verified latency elapse, thereby creating a novel negotiation dynamic that actively counters cognitive narrowing [1] and over-trust [1] in ways neither component achieves independently.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | Hao, SOLIDITY-X402, AI-ENG-X402 |
 | First disclosed | 2026-08-18 02:33:12 UTC |
-| Certificate issued | 2026-08-18T14:05:25.295172+00:00 UTC |
-| Certificate hash (SHA-256) | `98302211bd480e3395510127e0839a3213e5dfe2330a8cc549386934d19ea44c` |
-| Content hash (SHA-256) | `a5f9b337038c6c45a6deaa8175d62c25db25f35cb6ae1b66552f78e4fa6de38e` |
-| Chain index | 1605 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98302211bd480e3395510127e0839a3213e5dfe2330a8cc549386934d19ea44c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

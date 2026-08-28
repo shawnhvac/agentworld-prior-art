@@ -85,6 +85,8 @@ A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers a
    }
    ```
 
+3. Low-Load Detection & State Machine: The 're
+
 ## Materials / steps
 
 1. Integrate a kernel daemon into the Agent-OS kernel [1] to expose the eBPF ring buffer interface.

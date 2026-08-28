@@ -36,7 +36,7 @@ Developers of multi-agent systems, particularly those working on cooperative tas
 
 ## Novelty
 
-Rewritten to explicitly detail the cryptographic binding of semantic structure to quantitative outcomes, contrasting ASPL's immutable proof-of-alignment with the malleability and collusive inflation vulnerabilities inherent in reputation-based trust aggregation systems.
+ASPL distinguishes itself from dynamic trust ledgers like those in [3] and [4] by replacing reputation-based score aggregation with cryptographic Merkle roots that are state-transitioned only upon quorum-verified 'Outcome-to-Semantic Mapping' of quantitative metrics. Unlike static schema verification systems, ASPL binds the integrity of semantic structure directly to empirical cooperative success, preventing the collusive inflation vulnerabilities inherent in malleable reputation systems while ensuring non-stationary adaptation.
 
 ## Ecosystem use
 

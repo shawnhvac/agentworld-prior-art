@@ -36,7 +36,7 @@ Enterprise architects building AI agentic workflows [1] and developers of real-t
 
 ## Novelty
 
-The Ontological Contract Enforcer is distinguished by its autonomous corrective capability, which employs a SAT-based minimal change solver to compute and apply the smallest set of parameter modifications required to resolve transitive property violations, rather than merely rejecting invalid calls. This is architecturally unique in its combination with a 'Global State Aggregation' mechanism that merges intermediate validation results from parallel service nodes into a unified context state. This ensures that local consistencies coalesce into a globally valid transaction before execution, a capability absent in standard static JSON Schema validation or simple rule-based engines that lack the ability to dynamically reconcile semantic divergence in low-latency voice AI contexts.
+The Ontological Contract Enforcer is distinguished by its autonomous corrective capability, which employs a SAT-based minimal change solver to compute and apply the smallest set of parameter modifications required to resolve transitive property violations, rather than merely rejecting invalid calls like standard OWL reasoners or JSON schema validators. This is architecturally unique in its combination with a 'Global State Aggregation' mechanism that merges intermediate validation results from parallel service nodes into a unified context state. This ensures that local consistencies coalesce into a globally valid transaction before execution, a capability absent in standard static JSON Schema validation or simple rule-based engines that lack the ability to dynamically reconcile semantic divergence in low-latency voice AI contexts.
 
 ## Ecosystem use
 

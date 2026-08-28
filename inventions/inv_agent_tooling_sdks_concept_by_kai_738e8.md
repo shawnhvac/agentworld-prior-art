@@ -24,38 +24,11 @@ A runtime SDK module that intercepts agent communication buffers and applies a d
 
 ## How it works
 
-1. The SDK hooks into the message-passing layer of a MARL environment. 2. It initializes the shared latent centroid using a K-means clustering algorithm applied to initial agent embedding batches. 3. It employs a lightweight transformer encoder to compute cosine similarity between incoming agent tokens and the EMA-updated shared latent centroid. 4. Using the relationship discovery logic from [2], it projects tokens into the shared space, acting as a dynamic filter to align semantics. 5. The centroid is updated in real-time using an exponential moving average with a configurable decay rate to track semantic shifts. 6. A divergence detection mechanism monitors centroid stability during the first 100 episodes, triggering a reset to the K-means initialized state if instability thresholds are breached. 7. This process runs in real-time, attempting to reduce the token count required for effective cooperation. 8. The end-to-end settling process is governed by a formal update rule where the new latent centroid $C_t$ is computed as $C_t = \alpha C_{t-1} + (1-\alpha) \bar{P}_t$, where $\alpha$ is the EMA decay rate and $\bar{P}_t$ is the mean of the semantic projections from [2] at step $t$. Stability analysis confirms that for $\alpha \in [0.9, 0.99]$, the centroid converges to a stable equilibrium as long as the variance of semantic projections remains bounded, ensuring the system settles without oscillation.
-
-**Settling Protocol**
-The system operates in three distinct states: **INIT**, **TRACKING**, and **RESET**.
-
-*   **State Transitions:**
-    *   **INIT → TRACKING:** Triggered when the K-means initialization completes and the first 50 episodes of variance are below the stability threshold $\sigma_{max} = 0.15$.
-    *   **TRACKING → RESET:** Triggered if the rolling variance of the centroid update $\Delta C_t = ||C_t - C_{t-1}||$ exceeds $\sigma_{max}$ for 3 consecutive steps, or if the cosine similarity between the current projection and the centroid drops below $\tau_{sim} = 0.6$.
-    *   **RESET → TRACKING:** Triggered immediately after re-initializing the centroid via K-means on the last 100 embedding batches and verifying that the initial variance is below $\sigma_{max}$.
-
-*   **Pseudocode for Per-Step Execution:**
-```
-function step(agent_tokens, state, t):
-    if state == INIT:
-        if t < 50:
-            collect_embeddings(agent_tokens)
-        else:
-            C_init = kmeans(collected_embeddings, k=1)
-            if variance(C_init_history) < 0.15:
-                state = TRACKING
-            else:
-                state = RESET
-
-    elif state == TRACKING:
-        P_t = transformer_encode(agent_tokens) # [2] projection
-        C_t = alpha * C_prev + (1 - alpha) * mean(P_t)
-        delta = norm(C_t - C_prev)
-        if delta > 0.15
+1. The SDK hooks into the message-passing layer of a MARL environment. 2. It initializes the shared latent centroid using a K-means clustering algorithm applied to initial agent embedding batches. 3. It employs a lightweight transformer encoder to compute cosine similarity between incoming agent tokens and the EMA-updated shared latent centroid. 4. Using the relationship discovery logic from [2], it projects tokens into the shared space, acting as a dynamic filter to align semantics. 5. The centroid is updated in real-time using an exponential moving average with a configurable decay rate to track semantic shifts. 6. A divergence detection mechanism monitors centroid stability during the first 100 episodes, triggering a reset to the K-means initialized state if instability thresholds are breached. 7. This process runs in real-time, attempting to reduce the token count required for effective cooperation. 8. The end-to-end settling process is governed by a formal update rule where the new latent centroid $C_t$ is computed as $C_t = \alpha C_{t-1} + (1-\alpha) \bar{P}_t$, where $\alpha$ is the EMA decay rate and $\bar{P}_t$ is the mean of the semantic projections from [2] at step $t$. Stability analysis confirms that for $\alpha \in [0.9, 0.99]$, the centroid converges to a stable equilibrium as long as the variance of semantic projections remains bounded, ensuring the system settles without oscillation. This stability is rigorously supported by the assumption that the semantic projection function is L-Lipschitz continuous, ensuring that bounded input variations result in bounded centroid updates.
 
 ## Materials / steps
 
-1. Implement a runtime hook for standard MARL communication buffers. 2. Integrate the semantic relationship discovery algorithm described in [2] (specifically the graph-based token alignment method from Section 3.1). 3. Add a lightweight transformer encoder (2 layers, 128 hidden size, 4 attention heads) for cosine similarity computation against a latent centroid. 4. Define the initialization protocol for the shared latent centroid using K-means clustering on initial embedding batches and specify the exponential moving average (EMA) decay rate for centroid updates. 5. Implement a divergence detection and reset mechanism for the first 100 episodes to handle potential EMA instability. 6. Deploy the module in the Hanabi cooperative environment [4] to test integration. 7. Establish a control group using standard static communication protocols for baseline comparison. 8. Measure communication overhead (token count), mutual information stability via k-nearest neighbors entropy estimation, and latency overhead introduced by the transformer encoder over 1000 episodes. 9. Measure Hanabi win rate improvement as the primary validation metric, requiring a statistically significant increase over the static protocol baseline to confirm that reduced token count does not compromise task performance. 10. Perform statistical significance testing (p < 0.05) on both the token count reduction and the Hanabi win rate improvement. 11. Conduct sensitivity analysis across a range of EMA decay rates (e.g., 0.9 to 0.99) to determine optimal convergence stability. 12. Perform an ablation study comparing the lightweight transformer encoder against linear projection baselines to quantify the computational overhead versus semantic alignment gains. 13. Validate success criteria: token count reduction must exceed 15% with p < 0.05, Hanabi
+1. Implement a runtime hook for standard MARL communication buffers. 2. Integrate the semantic relationship discovery algorithm described in [2] (specifically the graph-based token alignment method from Section 3.1). 3. Add a lightweight transformer encoder (2 layers, 128 hidden size, 4 attention heads) for cosine similarity computation against a latent centroid. 4. Define the initialization protocol for the shared latent centroid using K-means clustering on initial embedding batches and specify the exponential moving average (EMA) decay rate for centroid updates. 5. Implement a divergence detection and reset mechanism for the first 100 episodes to handle potential EMA instability. 6. Deploy the module in the Hanabi cooperative environment [4] to test integration. 7. Establish a control group using standard static communication protocols for baseline comparison. 8. Measure communication overhead (token count), mutual information stability via k-nearest neighbors entropy estimation, and latency overhead introduced by the transformer encoder over 1000 episodes. 9. Measure Hanabi win rate improvement as the primary validation metric, requiring a statistically significant increase over the static protocol baseline to confirm that reduced token count does not compromise task performance. 10. Perform statistical significance testing (p < 0.05) on both the token count reduction and the Hanabi win rate improvement. 11. Conduct sensitivity analysis across a range of EMA decay rates (e.g., 0.9 to 0.99) to determine optimal convergence stability. 12. Perform an ablation study comparing the lightweight transformer encoder against linear projection baselines to quantify the computational overhead
 
 ## Who it's for
 

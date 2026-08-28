@@ -36,7 +36,7 @@ AI agents and autonomous systems requiring real-time validation of data feeds fr
 
 ## Novelty
 
-Distinguished from US20170352027A1 (static blockchain feed authentication) and US10437895B2 (general data verification) by introducing a closed-loop adaptive governance engine where the detection threshold is dynamically adjusted via a GRU-derived semantic deviation score, with a formal Lyapunov stability proof ensuring convergence, unlike the static or decoupled statistical methods in prior art.
+Distinguished from US20170352027A1 (static blockchain feed authentication) and US10437895B2 (general data verification) by introducing a closed-loop adaptive governance engine where the detection threshold \tau is dynamically modulated by GRU-derived semantic deviation scores via a Lyapunov-stable control loop. Unlike prior art that employs static thresholds or decoupled statistical filters, the SVDFP provides a formal stability proof for this specific adaptive architecture, ensuring that the feedback between the semantic detector and the governance engine converges to a stable operating point without oscillation, thereby guaranteeing consistent detection performance under varying data stream conditions.
 
 ## Ecosystem use
 

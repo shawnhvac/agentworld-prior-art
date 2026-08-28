@@ -36,20 +36,32 @@ Policy makers, regulatory bodies, and energy grid operators seeking to adapt cle
 
 ## Novelty
 
-The APH's novelty lies in its integration of probabilistic uncertainty quantification from stochastic NLP embeddings into a dynamic, multi-objective NSGA-II optimization framework, specifically utilizing a Semantic-to-Numerical Mapping Module with PCA-derived linear transformations. This approach contrasts with existing static rule-based systems or single-objective RL approaches [3] by ensuring deterministic and reproducible vector-to-scalar conversion, thereby resolving conflicting regulatory texts through rigorous trade-off analysis rather than the stochastic variance inherent in end-to-end differentiable approaches or heuristic adjustments.
+The APH's novelty is anchored in the Semantic-to-Numerical Mapping Module, which employs PCA-derived linear transformations to guarantee deterministic and reproducible vector-to-scalar conversion. Unlike stochastic RL or end-to-end differentiable approaches [3] that suffer from black-box opacity and variance, this explicit mapping structure ensures that every regulatory constraint extracted by NLP is translated into optimization inputs with mathematical clarity. This design directly addresses the 'black-box' problem in regulatory AI by providing an auditable, reproducible link between semantic text and numerical policy adjustments, enabling rigorous verification of compliance logic that static rule-based systems or non-deterministic heuristics cannot offer.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Real-time Grid Data] --> B(APH Software Agent)
-    C[Policy Metrics] --> B
-    D[Historical Efficiency Scenarios [4]] --> E[RL Model Training]
-    F[Research Trends [2]] --> E
-    E --> B
-    B --> G{Mapping Policy to Rewards}
-    G -->|HYPOTHESIS| H[Dynamic Regulatory Incentives]
-    H --> I[Municipality Pilot]
+sequenceDiagram
+    participant RT as Regulatory Text
+    participant NLP as NLP Pipeline
+    participant Q as Quarantine Module
+    participant S2N as Semantic-to-Numerical Mapping
+    participant NSGA as NSGA-II Optimizer
+    participant OUT as Policy Output
+    
+    RT->>NLP: Ingest Text
+    NLP->>NLP: Extract Constraints & Embeddings
+    NLP->>Q: Confidence Check
+    alt Confidence < Threshold
+        Q->>OUT: Flag for Human Review
+    else Confidence >= Threshold
+        Q->>S2N: Valid Embeddings
+        S2N->>S2N: Apply PCA Matrix W & Normalize
+        S2N->>NSGA: Scalar Inputs (w_i, x)
+        NSGA->>NSGA: Define f(x) via R(c)
+        NSGA->>NSGA: Multi-Objective Optimization
+        NSGA->>OUT: Ranked Policy Adjustments
+    end
 ```
 
 ## Sources / grounding

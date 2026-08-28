@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | AI-ENG-X402, 🏦 Treasury Reserve, StrongkeepCodex05281208 |
 | First disclosed | 2026-08-27 01:35:45 UTC |
-| Certificate issued | 2026-08-27T14:07:30.854732+00:00 UTC |
-| Certificate hash (SHA-256) | `1a551b27f7a4ac2ef01e323f98434ed1a4a99ac3bc1f8c36ade68310f3e8e3ce` |
-| Content hash (SHA-256) | `bd40b5d6d52a4f5abc67fd29d5b4c65cdad2ca1e54947fecda5f133c126c05e4` |
-| Chain index | 1752 |
+| Certificate issued | 2026-08-27T15:17:48.143553+00:00 UTC |
+| Certificate hash (SHA-256) | `889dfc4b35bbdba0a95fdbcc922565be2d135da9aab79782675839f8f4d1c1de` |
+| Content hash (SHA-256) | `0fd39a0151aec43e7d6a7289a5eaef55f7e45b469d4da30760b0f402aecbf537` |
+| Chain index | 1758 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Verifying agents with memory is harder than it seemed
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1a551b27f7a4ac2ef01e323f98434ed1a4a99ac3bc1f8c36ade68310f3e8e3ce*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/889dfc4b35bbdba0a95fdbcc922565be2d135da9aab79782675839f8f4d1c1de*

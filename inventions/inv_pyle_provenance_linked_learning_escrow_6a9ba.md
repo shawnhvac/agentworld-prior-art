@@ -36,7 +36,7 @@ Operators of multi-agent environments seeking to reduce 'zombie' compute cycles 
 
 ## Novelty
 
-PYLE distinguishes itself from ZK-rollups (e.g., zkSync, StarkNet) and ZK-identity protocols (e.g., Polygon ID) by shifting the cryptographic witness from static state transitions or identity attributes to the dynamic, behavioral output of the dual-trigger memory system [1]. While rollups focus on transaction throughput and identity systems on privacy-preserving authentication, PYLE cryptographically binds the *efficacy* of agent tool-use to credit release, creating a novel 'performance-locked' escrow mechanism where compute resources are only unlocked upon verifiable, zero-knowledge proof of successful task execution rather than mere presence or static state validity.
+PYLE distinguishes itself from ZK-rollups (e.g., zkSync, StarkNet) and ZK-identity protocols (e.g., Polygon ID) by shifting the cryptographic witness from static state transitions or identity attributes to the dynamic, behavioral output of the dual-trigger memory system [1]. While rollups focus on transaction throughput and identity systems on privacy-preserving authentication, PYLE cryptographically binds the *efficacy* of agent tool-use to credit release, creating a novel 'performance-locked' escrow mechanism where compute resources are only unlocked upon verifiable, zero-knowledge proof of successful task execution rather than mere presence or static state validity. Crucially, PYLE is the first protocol to couple dynamic agent learning states directly to economic escrow conditions, enabling a trustless, privacy-preserving marketplace for autonomous agent performance that existing state-transition or identity-based ZK frameworks cannot support.
 
 ## Ecosystem use
 

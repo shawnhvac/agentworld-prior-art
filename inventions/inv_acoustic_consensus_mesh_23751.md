@@ -36,7 +36,7 @@ Search and rescue teams operating in communication blackout environments.
 
 ## Novelty
 
-The invention is defined as a method for 'gating physical signal processing triggers via federated learning convergence metrics,' specifically coupling the stabilization of global model weight variance (variance < 0.001 for three consecutive epochs) to the hardware-level execution of Time-Difference-of-Arrival (TDoA) calculations. This architectural innovation explicitly distinguishes the system from prior art [P1] and [P4] by using abstract ML convergence states as a conditional gate for physical signal processing, rather than relying on static classification thresholds or continuous high-bandwidth streams. The novelty lies solely in this conditional execution mechanism for off-grid resilience, not in the underlying acoustic triangulation or federated averaging techniques themselves.
+The invention is defined as a method for 'gating physical signal processing triggers via federated learning convergence metrics,' specifically coupling the stabilization of global model weight variance (variance < 0.001 for three consecutive epochs) to the hardware-level execution of Time-Difference-of-Arrival (TDoA) calculations. This architectural innovation explicitly distinguishes the system from prior art [P1] (decentralized IoT data storage) and [P4] (spatial annotation) by using abstract ML convergence states as a conditional gate for physical signal processing, rather than relying on static classification thresholds or continuous high-bandwidth streams. The novelty lies solely in this conditional execution mechanism for off-grid resilience, not in the underlying acoustic triangulation or federated averaging techniques themselves.
 
 ## Diagram
 

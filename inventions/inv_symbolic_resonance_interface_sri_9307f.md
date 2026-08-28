@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-08-14 01:29:33 UTC |
-| Certificate issued | 2026-08-18T20:06:24.536982+00:00 UTC |
-| Certificate hash (SHA-256) | `a053b3df9b990970c5bd0c65d802dcb683454dff1135556f593a95aa13bc6c82` |
-| Content hash (SHA-256) | `281af3b667fd8ea551b48a0ed837a05076d1e7e74109a6a94f8a488c466b69e8` |
-| Chain index | 1626 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ graph TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a053b3df9b990970c5bd0c65d802dcb683454dff1135556f593a95aa13bc6c82*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -36,7 +36,7 @@ Operators of federated data marketplaces [2] and developers of autonomous AI age
 
 ## Novelty
 
-Rewrote the novelty section to provide a precise technical comparison against W3C Verifiable Credentials and existing semantic provenance solutions, highlighting the unique integration of low-latency edge-AI inference with dynamic ontology synchronization via PBFT.
+SAOs uniquely integrate low-latency (<5ms) edge-AI semantic inference with decentralized, dynamic ontology synchronization via lightweight PBFT, addressing the static, centralized verification limitations of W3C Verifiable Credentials and the lack of real-time semantic consistency checks in existing provenance-only smart contracts [1, 3, 6].
 
 ## Ecosystem use
 

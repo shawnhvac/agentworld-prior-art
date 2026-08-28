@@ -28,40 +28,7 @@ The system operates via a closed-loop feedback mechanism utilizing a ROS2 DDS mi
 
 ## Materials / steps
 
-1. Integrate a 200Hz linear resonant actuator and low-latency IMU into the handle of a standard assistive tool, ensuring hardware timestamping capabilities and PTP network interface support. 2. Develop a ROS2-based middleware interface to receive intent signals from social robots/virtual humans as described in [1], implementing DDS QoS policies for reliability, durability, Deadline (45ms), and Liveliness (10ms). 3. Map specific vibration patterns to distinct robotic intents (e.g., approach, retract, stabilize). 4. Implement a control system that adjusts vibration intensity based on real-time proximity and intent confidence, including a synchronization algorithm that uses linear interpolation between the last known IMU state and the current state to align robot prediction timestamps with local time. The temporal alignment logic calculates the precise trigger time based on the delta between the predicted intent timestamp and the local clock:
-
-    ```python
-    def trigger_haptic_feedback(intent_msg, local_clock, imu_buffer):
-        # intent_msg.timestamp is the absolute time of predicted intent execution
-        predicted_trigger_time = intent_msg.timestamp
-        current_time = local_clock.now()
-        
-        # Calculate time remaining until the predicted intent execution
-        time_to_trigger = predicted_trigger_time - current_time
-        
-        # Enforce 50ms maximum latency budget (including actuation delay of 15ms)
-        # Valid window: 0ms <= time_to_trigger <= 50ms
-        if time_to_trigger < 0 or time_to_trigger > 50:
-            return # Discard stale or future-out-of-bounds signals
-        
-        # Calculate vibration intensity based on intent confidence and proximity
-        # Formula: Intensity = min(1.0, (intent_confidence * proximity_factor))
-        # Where proximity_factor = 1.0 if distance < 10cm, else (10cm / distance)
-        confidence = intent_msg.confidence # Range: 0.0 to 1.0
-        distance = intent_msg.distance_cm  # Range: 0 to infinity
-        
-        if distance == 0:
-            proximity_factor = 1.0
-        else:
-            proximity_factor = min(1.0, 10.0 / distance)
-            
-        vibration_intensity = min(1.0, confidence * proximity_factor)
-        
-        # Trigger actuator with calculated intensity
-        actuator.trigger(pattern=intent_msg.action_type, intensity=vibration_intensity)
-    ```
-
-Novelty: The invention distinguishes itself from prior art [P1] (passive activity monitoring) and [P2] (visual/VR depth tracking) by implementing a deterministic, sub-50ms closed-loop haptic synchronization mechanism for proactive social robot coordination. Unlike P1, which relies on post-hoc analysis of recorded data without real-time predictive intent transmission, and P2, which utilizes visual channels susceptible to cognitive load and latency in non-social spatial alignment, this module provides immediate, tactile anticipation of robotic intent. This creates a unique bidirectional communication layer that operates independently of visual attention, ensuring temporal coherence and safety through strict DDS QoS enforcement and hardware-level timestamp synchronization, thereby addressing the critical gap in real-time, non-visual human
+1. Integrate a 200Hz linear resonant actuator and low-latency IMU into the handle of a standard assistive tool, ensuring hardware timestamping capabilities and PTP network interface support. 2. Develop a ROS2-based middleware interface to receive intent signals from social robots/virtual humans as described in [1], implementing DDS QoS policies for reliability, durability, Deadline (45ms), and Liveliness (10ms). 3. Map specific vibration patterns to distinct robotic intents (e.g., approach, retract, stabilize). 4. Implement a control system that adjusts vibration intensity based on real-time proximity and intent confidence, including a synchronization algorithm that uses linear interpolation between the last known IMU state and the current state to align robot prediction timestamps with local time. The temporal alignment logic calculates the precise trigger time based on the delta between the predicted intent timestamp and the local clock: ```python def trigger_haptic_feedback(intent_msg, local_clock, imu_buffer): # intent_msg.timestamp is the absolute time of predicted intent execution predicted_trigger_time = intent_msg.timestamp current_time = local_clock.now() # Calculate time remaining until the predicted intent execution time_to_trigger = predicted_trigger_time - current_time # Enforce 50ms maximum latency budget (including actuation delay of 15ms) # Valid window: 0ms <= time_to_trigger <= 50ms if time_to_trigger < 0 or time_to_trigger > 50: return # Discard stale or future-out-of-bounds signals # Calculate vibration intensity based on intent confidence and proximity # Formula: Intensity = min(1.0, (intent_confidence * proximity_factor)) # Where proximity_factor = 1.0 if distance < 10cm, else (10cm / distance) confidence = intent_msg.confidence # Range: 0.0 to 1.0 distance = intent_msg.distance_cm # Range: 0 to infinity if distance == 0: proximity_factor = 1.0 else: proximity_factor = min(1.0, 10.0 / distance) vibration_intensity = min(1.0, confidence * proximity_factor) # Trigger actuator with calculated intensity actuator.trigger(pattern=intent_msg.action_type, intensity=vibration_intensity) ``` 5. Validation Plan: Define specific success metrics for the controlled social robot interaction study: (a) Mean Absolute Error (MAE) between predicted intent execution time and actual haptic trigger time, with a target of <5ms; (b) User reaction time variance measured before and after the introduction of haptic cues to assess temporal stability; (c) Pre/post-test NASA-TLX scores to quantify cognitive load reduction; (d) A 'near-miss' incident rate metric to objectively measure safety outcomes; and (e) Statistical power analysis parameters (sample size n=20, alpha=0.05, power=0.80) to ensure the MAE and reaction time metrics are statistically significant.
 
 ## Who it's for
 

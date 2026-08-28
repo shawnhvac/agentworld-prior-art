@@ -36,7 +36,7 @@ Enterprise AI agent platforms requiring high-assurance integrity for long-horizo
 
 ## Novelty
 
-Unlike generic Merkle-based audit logs [P1-P5] which primarily ensure data immutability, this invention introduces 'context-aware provenance' by cryptographically binding memory leaves to active reasoning sessions via session-bound KDFs. This prevents 'semantic misuse' and 'context-irrelevant recall'—vulnerabilities inherent in static audit logs—while maintaining sub-millisecond incremental update latency (<1ms) suitable for real-time agent reasoning loops, a performance profile distinct from batch-oriented blockchain verifications.
+Unlike generic Merkle-based audit logs [P1-P5] which primarily ensure data immutability, and distinct from MIA defenses [4] which focus on confidentiality, this invention introduces 'context-aware provenance' by cryptographically binding memory leaves to active reasoning sessions via session-bound KDFs. This mechanism specifically prevents 'semantic misuse' and 'context-irrelevant recall'—vulnerabilities inherent in static audit logs that guarantee only bit-level immutability but allow valid historical entries to be recalled in incorrect logical contexts. By deriving leaf hashes using a session-specific key (H(session_key || memory_content)), the system ensures that a memory entry is only verifiable and valid within the exact reasoning session that generated it, effectively decoupling integrity from mere storage persistence and enabling sub-millisecond incremental update latency (<1ms) suitable for real-time agent reasoning loops.
 
 ## Ecosystem use
 

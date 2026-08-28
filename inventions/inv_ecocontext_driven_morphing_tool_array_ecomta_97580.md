@@ -36,7 +36,7 @@ Household users, especially those in eco-conscious or alternative residential dw
 
 ## Novelty
 
-While prior art [P1][P2] demonstrates morphing mechanisms in rigid metals or non-biodegradable polymers for general utility, ECOMTA is uniquely novel in its integration of PLA-based kirigami compliant mechanisms with closed-loop environmental adaptation for eco-centric efficiency. This synergy enables a fully biodegradable system that dynamically optimizes shape and function in response to real-time waste and user inputs, a capability absent in existing static or non-eco-centric morphing devices.
+While [P1] covers general morphing mechanisms in rigid or non-biodegradable materials, ECOMTA is novel in its specific integration of a biodegradable PLA kirigami lattice with closed-loop environmental sensing for waste-sorting efficiency. Specifically, it solves the problem of static tool inefficiency by using piezoelectric actuation to morph shape based on real-time waste type, a capability absent in the general morphing patents of [P1].
 
 ## Diagram
 

@@ -36,7 +36,7 @@ Household users seeking a more efficient, personalized, and adaptive environment
 
 ## Novelty
 
-Unlike prior art [P1] which relies on static location-based triggers, the AHA system employs a dynamic, event-driven inference pipeline that aggregates contextual mesh data to predictively automate physical tasks (e.g., organizing clutter) via standardized API dispatch to modular actuators, solving the latency and rigidity issues of rule-based location automation. Specifically, the invention introduces a deterministic Finite State Machine (FSM) that bridges probabilistic neural network outputs with discrete actuator commands, coupled with hard-coded fallback safety mechanisms (watchdog timers, torque limits) to ensure reliable end-to-end execution, a feature absent in the static trigger models of [P1].
+Unlike [P1] (wearable biometric monitoring), [P2] (sleep health wearables), [P3] (biological vaccines), [P4] (headset mode control), and [P5] (network gateway integration), the AHA system introduces a novel 'probabilistic-to-deterministic safety bridge' specifically for physical robotic execution in unstructured household environments. Prior art lacks a mechanism to translate probabilistic neural network outputs into hard-coded, torque-verified kinematic actions. AHA’s novelty lies in its deterministic Finite State Machine (FSM) that couples confidence thresholds (e.g., >0.85 for Execute) with real-time hardware torque monitoring and watchdog timers, ensuring safe physical interaction where purely probabilistic or static rule-based systems fail.
 
 ## Ecosystem use
 

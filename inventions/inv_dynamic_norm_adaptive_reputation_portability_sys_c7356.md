@@ -41,7 +41,7 @@ AI agents operating across multiple jurisdictions requiring consistent and legal
 
 ## Novelty
 
-DNARPS's core novelty lies in the RL-driven resolution of conflicting legal embeddings, distinguishing it from existing systems that merely combine blockchain and ML; this mechanism dynamically optimizes reputation weight matrices to reconcile divergent jurisdictional norms, whereas prior art relies on static mapping or centralized arbitration.
+DNARPS introduces a decentralized, RL-driven conflict resolution mechanism that dynamically optimizes reputation weight matrices to reconcile divergent jurisdictional norms, eliminating the need for centralized arbitration or static mapping heuristics found in prior art.
 
 ## Ecosystem use
 

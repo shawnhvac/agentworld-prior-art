@@ -38,7 +38,7 @@ Enterprise AI agent platforms requiring robust API integration and workflow adap
 
 ## Novelty
 
-The invention's novelty is strictly confined to the active resolution mechanism that employs Statistical Model Checking [7] to derive deterministic settlement outcomes from non-deterministic protocol negotiations. This explicitly distinguishes the system from passive fuzzing and drift detection tools, which only identify structural violations or input boundary issues without providing a path to recovery or active schema negotiation. The unique contribution is the dual-loop counterfactual simulation that drives schema modification (specifically Step 2 of the Negotiation Resolution Protocol) by excluding low-confidence fields identified in the secondary loop, thereby transforming detection into a constructive recovery path.
+The invention's novelty is strictly confined to the active resolution mechanism that employs Statistical Model Checking [7] to derive deterministic settlement outcomes from non-deterministic protocol negotiations. This explicitly distinguishes the system from existing dynamic schema adaptation and fault-tolerance systems, which typically rely on passive fuzzing, drift detection, or static fallbacks. Unlike prior art that merely identifies structural violations or input boundary issues without providing a recovery path, this system utilizes dual-loop counterfactual simulation to drive constructive schema modification (specifically excluding low-confidence fields identified in the secondary loop). This transforms detection into a constructive recovery path, ensuring deterministic settlement despite non-deterministic negotiation, rather than simply flagging errors or reverting to static enforcement baselines [3].
 
 ## Ecosystem use
 

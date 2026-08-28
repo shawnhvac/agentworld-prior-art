@@ -28,7 +28,7 @@ The framework employs a blockchain-based ledger to anchor reputation scores, ens
 
 ## Materials / steps
 
-Deploy a lightweight blockchain node on each AI agent. Use defeasible logic rules to define reputation adjustment conditions (e.g., trust score decay in high-risk environments). Implement a decentralized consensus algorithm (e.g., Proof-of-Stake with reputation-weighted voting) to validate reputation updates. Store reputation history in a distributed ledger with timestamps and environmental metadata. Conduct validation experiments measuring consensus latency (target <500ms), storage overhead per agent (target <1KB/update), and defeasible logic adjustment accuracy (target >95% correlation with ground-trust simulations). Include a detailed sequence diagram and pseudocode for the consensus validation and defeasible logic inference steps to explicitly demonstrate how an agent's action translates into an on-chain reputation adjustment. Add a 'Validation Protocol' section specifying the exact dataset (e.g., synthetic multi-agent trust graph with 10k nodes), simulation environment parameters (e.g., varying network latency 0-200ms, node failure rate 5-20%), and failure thresholds (e.g., consensus divergence <1%, false positive rate <0.1%) required to constitute a successful trial. Explicitly measure 'reputation convergence time' (target <2 seconds to stabilize after a context shift) and 'false trust propagation rate' (target <0.5%) to concretely evaluate the effectiveness of defeasible logic adjustments in dynamic environments.
+Deploy a lightweight blockchain node on each AI agent. Use defeasible logic rules to define reputation adjustment conditions. Implement a decentralized consensus algorithm (Proof-of-Stake with reputation-weighted voting). Store reputation history in a distributed ledger. Conduct validation experiments measuring consensus latency (<500ms), storage overhead (<1KB/update), and logic accuracy (>95% correlation). Include a detailed sequence diagram and pseudocode for consensus and inference steps. Add a 'Validation Protocol' section specifying the exact dataset (synthetic multi-agent trust graph with 10k nodes), simulation environment parameters (latency 0-200ms, node failure 5-20%), and failure thresholds (consensus divergence <1%, false positive rate <0.1%). Explicitly measure 'reputation convergence time' (<2 seconds) and 'false trust propagation rate' (<0.5%).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating in heterogeneous environments requiring dynamic, context-awa
 
 ## Novelty
 
-This framework introduces a novel combination of blockchain anchoring, defeasible logic, and decentralized consensus to enable real-time reputation recalibration in response to changing trust contexts, which existing systems do not address.
+The specific combination of defeasible logic-driven real-time recalibration anchored to a blockchain ledger, validated by a defined 10k-node simulation protocol with strict convergence and false-positive thresholds, constitutes the novel contribution suitable for a real trial.
 
 ## Ecosystem use
 
