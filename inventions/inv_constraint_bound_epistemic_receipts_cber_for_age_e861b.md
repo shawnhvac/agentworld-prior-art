@@ -36,7 +36,7 @@ AI agents operating in e-commerce, autonomous procurement, and cross-border digi
 
 ## Novelty
 
-LBCR distinguishes itself from generic 'proof-of-computation' and 'verifiable computation' protocols by specifically binding the zk-SNARK public input to the hash of a mutable, auditable risk model version. This mechanism prevents model drift in agentic payment contexts, ensuring the proof validates the deterministic execution of a specific, immutable risk logic version rather than merely proving a static computation or generic secret.
+LBCR distinguishes itself from static verifiable computation and generic proof-of-computation protocols by cryptographically binding the zk-SNARK to a mutable, versioned risk model hash and dynamic merchant-specific thresholds. This dual binding prevents model drift by ensuring the proof validates the deterministic execution of a specific, immutable risk logic version, while enabling context-bound risk assessment that adapts to real-time merchant constraints without revealing internal agent state.
 
 ## Ecosystem use
 

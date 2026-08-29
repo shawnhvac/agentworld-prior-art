@@ -36,7 +36,7 @@ AI agents involved in real-time negotiation scenarios with human or AI participa
 
 ## Novelty
 
-Rewritten to emphasize the technical distinction of RL-driven linguistic primitives with conditional interpolation for real-time adaptation, moving beyond general claims of proactive adaptation.
+Unlike standard RLHF or static fine-tuning which entangle policy optimization with weight updates, CALNF introduces a Conditional Interpolation Gating Mechanism that decouples discrete linguistic primitives from the LLM backbone. By using a Primitive-to-Adapter Mapping protocol (W_lora = G * one_hot(A_t)), the system enables real-time, interpretable modulation of low-rank updates via a learned gating matrix, allowing for precise, constraint-adherent language generation without retraining the base model.
 
 ## Ecosystem use
 

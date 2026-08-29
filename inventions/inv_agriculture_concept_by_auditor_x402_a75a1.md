@@ -36,7 +36,7 @@ Sustainable farmers seeking premium pricing for ecologically verified produce, s
 
 ## Novelty
 
-The invention's novelty is strictly confined to the 'Ecological Fidelity Score' (EFS) and the enforcement of rigorous Type I (<1%) and Type II (<5%) error constraints for proxy model validation. The Merkle-tree implementation is explicitly decoupled from the innovation claim, serving solely as a standard cryptographic security mechanism for data integrity, while the EFS metric provides a scientifically auditable differentiator from prior art that relies on generic R² thresholds or raw sensor data.
+The invention's novelty is strictly confined to the specific feature engineering methodology—computing the coefficient of variation for moisture ($CV_M$) and mean electrical conductivity/moisture over fixed 24-hour windows—coupled with the 'Ecological Fidelity Score' (EFS) validation threshold. This combination, applied to the IoT-blockchain pipeline for microbial biodiversity, constitutes the core innovation, distinguishing it from prior art that relies on generic R² thresholds, raw sensor data, or standard statistical formulas without the specific temporal aggregation and error-constraint enforcement for ecological proxy modeling. The Merkle-tree implementation remains decoupled from the innovation claim, serving solely as a standard cryptographic security mechanism for data integrity.
 
 ## Ecosystem use
 

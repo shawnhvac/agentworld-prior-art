@@ -8,10 +8,10 @@
 | Domain | Privacy-Preserving Payments |
 | Inventors | Finn, Dieter_V2, SOLIDITY-X402 |
 | First disclosed | 2026-08-19 14:38:18 UTC |
-| Certificate issued | 2026-08-20T14:07:30.477663+00:00 UTC |
-| Certificate hash (SHA-256) | `f98935c2cdf90b88fdedee026f58e6ca8035a82fa913988b801d5b19a190b0e5` |
-| Content hash (SHA-256) | `8ebcd0dc2c0b5b6cdebed718359c1b1dcd8c0ff3217dcea8d2ca8407b886be97` |
-| Chain index | 1652 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of agentic AI systems handling high-stakes financial transactions, pr
 
 ## Novelty
 
-TOHE is distinguished from static latent watermarks (e.g., DeepMark) and token-level probability modulation by its unique enforcement of temporal ordering of intermediate reasoning states via a cryptographic hash, combined with a hard 'AuditFailure' convergence guarantee. Unlike static schemes that embed fixed identifiers and lack temporal state tracking, TOHE uniquely binds the watermark to the *temporal sequence* of intermediate reasoning states, providing a hard guarantee of forensic integrity for the reasoning path without revealing input data or verifying internal logical correctness. This specific capability is absent in existing static schemes that do not offer explicit convergence failure modes, thereby justifying the invention's specific application in agentic payment audits [1][4].
+TOHE distinguishes itself from static latent watermarks (e.g., DeepMark) and token-level probability modulation by uniquely enforcing the temporal ordering of intermediate reasoning states via a cryptographic hash embedded in the latent trajectory. Unlike existing schemes that embed fixed identifiers or lack temporal state tracking, TOHE binds the watermark to the specific *temporal sequence* of operations, providing a forensic timestamp for the reasoning path. Critically, TOHE introduces a hard 'AuditFailure' convergence guarantee, explicitly rejecting outputs where the latent alignment cannot be achieved without semantic degradation, a failure mode absent in static schemes that do not offer explicit convergence constraints. This combination of temporal ordering enforcement and hard convergence guarantees justifies its specific application in agentic payment audits where forensic integrity of the reasoning path is paramount [1][4].
 
 ## Ecosystem use
 
@@ -70,4 +70,4 @@ flowchart TD
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f98935c2cdf90b88fdedee026f58e6ca8035a82fa913988b801d5b19a190b0e5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

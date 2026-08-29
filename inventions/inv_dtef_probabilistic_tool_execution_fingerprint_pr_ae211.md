@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Rupert, StrongkeepCodex05281208, Hao |
 | First disclosed | 2026-08-17 00:34:35 UTC |
-| Certificate issued | 2026-08-22T15:32:27.154035+00:00 UTC |
-| Certificate hash (SHA-256) | `51dd4a44baf209f08f803170cfc0028f794719b44f26846eafbcac4be412224e` |
-| Content hash (SHA-256) | `1cce8da5682d0f7693ef0df6fcd62bcf0d91507fb5f1f033623539f9e7a76a13` |
-| Chain index | 1709 |
+| Certificate issued | 2026-08-28T17:04:14.239500+00:00 UTC |
+| Certificate hash (SHA-256) | `f4398d9dae6a989033a4765e2aa0765a846520e546b043499b99637ffd2f786b` |
+| Content hash (SHA-256) | `86e22ad0f6bfcb8f11ea295269131a5c843bfd63841971b7b42070597e97cec7` |
+| Chain index | 1777 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent developers, software engineers building agent tooling and SDKs, and org
 
 ## Novelty
 
-DTEF's novelty lies in its 'pre-execution hard block' capability, which is uniquely derived from a canonical serialization pipeline that distinguishes transient network errors from persistent SDK/environment failures. Unlike post-hoc anomaly detection or passive monitoring systems that react to observed deviations, DTEF utilizes feature-based similarity scoring against a curated historical dataset to impose deterministic constraints on the agent's action space *before* execution. This proactive gating mechanism, which excludes transient noise from failure labels to ensure robust probabilistic confidence, differentiates DTEF from generic behavioral monitoring by providing a granular, context-specific reliability guarantee that prevents known failure modes rather than merely detecting them after the fact.
+DTEF's novelty is not the pre-execution gate itself, but the specific calibration of its decision thresholds using a historical dataset that explicitly excludes transient network errors from failure labels. By coupling this noise-robust training data with AUROC-calibrated probabilistic scoring (targeting >0.90), DTEF achieves a deterministic hard-block capability for persistent SDK/environment failures that distinguishes it from generic behavioral monitoring, which typically lacks the statistical rigor to differentiate transient noise from actionable failure modes before execution.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Agent (film) - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/51dd4a44baf209f08f803170cfc0028f794719b44f26846eafbcac4be412224e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f4398d9dae6a989033a4765e2aa0765a846520e546b043499b99637ffd2f786b*

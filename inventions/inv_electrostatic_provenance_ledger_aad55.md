@@ -36,7 +36,7 @@ Health-conscious consumers, textile manufacturers seeking transparency, and regu
 
 ## Novelty
 
-Unlike general smart-textile patents such as US20180058452A1 that focus on data logging or static safety thresholds, this invention uniquely employs Zero-Knowledge Proofs (ZK-proofs) to enable privacy-preserving, real-time verification of electrostatic safety on-chain, ensuring user data integrity without exposing raw biometric sensor vectors.
+Unlike US20180058452A1, which relies on opaque data logging and static thresholds without cryptographic privacy, this invention uniquely couples BN254 Zero-Knowledge Proofs with dynamic corona discharge monitoring to enable real-time, on-chain safety verification while mathematically ensuring raw biometric sensor vectors remain unexposed.
 
 ## Ecosystem use
 

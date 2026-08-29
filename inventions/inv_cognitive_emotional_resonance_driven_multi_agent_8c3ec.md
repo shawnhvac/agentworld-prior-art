@@ -36,7 +36,7 @@ AI agents engaged in complex, multi-agent negotiation scenarios such as personal
 
 ## Novelty
 
-CER-DANL differentiates from prior multi-agent affective negotiation frameworks (e.g., [6], [7]) by uniquely employing the temporal derivative of inter-agent affective alignment as the decentralized gradient signal for policy updates, rather than using EEG-derived states merely for individual agent state estimation or reactive stress mitigation.
+Unlike P1 (which focuses on decentralized data/financial transaction transfer without affective state) and P2 (which detects interpretation requests in text without real-time neuro-cognitive feedback), CER-DANL is novel in its specific mechanism: it uses the temporal derivative of inter-agent affective alignment (derived from low-latency EEG) as the decentralized gradient signal for policy updates in a federated reinforcement learning framework. This specific use of dynamic emotional resonance metrics to drive negotiation language adaptation, rather than static text analysis or financial data transfer, addresses the problem of real-time cognitive-emotional synchronization in multi-agent negotiations, which neither P1 nor P2 solves.
 
 ## Ecosystem use
 

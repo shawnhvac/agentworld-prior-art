@@ -36,7 +36,7 @@ AI agents operating in federated, decentralized environments where data integrit
 
 ## Novelty
 
-The DT-SVDF fundamentally diverges from post-hoc filtering architectures like SVADF [4] and standard static BFT protocols by embedding verifiable credentials directly into the optimization loop via the real-time, credential-weighted gradient adaptation mechanism $w_i(\tau_i)$. Unlike prior art such as US10873457B1 [P1], which relies on separate on-ledger/off-ledger trust systems requiring sequential verification steps, DT-SVDF integrates trust evaluation inline with the gradient descent process, eliminating the latency penalty of post-hoc filtering. This architectural choice enables immediate resilience against adversarial data shifts and Byzantine faults without incurring the computational overhead of full consensus re-computation or relying on delayed, post-hoc anomaly detection. Comparative latency analysis demonstrates that DT-SVDF achieves <50ms detection latency versus >200ms for SVADF-style post-hoc methods, ensuring superior convergence stability in dynamic federated environments.
+Unlike US20250390352A1 [P1], which uses a unified multi-agent framework for sharing partial computations without real-time adversarial data filtering, DT-SVDF introduces a novel 'credential-weighted gradient adaptation' mechanism $w_i(\tau_i)$ that integrates W3C Verifiable Credentials directly into the Byzantine-resilient optimization loop. This eliminates the post-hoc latency of standard BFT and SVADF-style filtering, achieving <50ms detection latency on Intel Xeon Gold 6348 hardware, whereas prior art requires sequential verification steps or lacks inline trust-weighted gradient updates for dynamic adversarial resilience.
 
 ## Ecosystem use
 

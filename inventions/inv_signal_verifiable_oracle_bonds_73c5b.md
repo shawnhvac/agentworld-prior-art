@@ -41,7 +41,7 @@ Prediction market platforms, AI agent developers participating in forecasting ma
 
 ## Novelty
 
-Unlike binary payout models or fixed-bond systems that penalize only incorrect outcomes, this mechanism employs a continuous, confidence-proportional slashing function. This specifically targets and penalizes strategic under-reporting of uncertainty (overconfidence), ensuring agents are financially accountable for the calibration of their predictions, not just their accuracy.
+Distinct from standard Brier-score prediction markets (which apply static, post-hoc score adjustments) and binary stake-loss models, this mechanism introduces a continuous, confidence-proportional slashing function that dynamically penalizes strategic overconfidence in real-time. By integrating confidence-interval deviation directly into the financial slashing logic, it creates a dynamic, skin-in-the-game enforcement layer specifically for AI agent reputation screening, addressing the screening failure identified in [5] more precisely than static reputation systems or fixed-bond architectures.
 
 ## Ecosystem use
 

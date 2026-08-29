@@ -36,16 +36,7 @@ Developers of multi-agent reinforcement learning systems, particularly those req
 
 ## Novelty
 
-SPDL distinguishes itself from prior art [P1], [P2], and [P3]—which focus on static rights management or template presentation—and recent semantic routing works in LLM orchestration (e.g., LangChain routers, DSPy) by employing dynamic, unsupervised, density-based DBSCAN clustering on latent semantic embeddings to actively prune redundant communication channels in real-time. Unlike attention-based or classifier-based protocol selection methods that map messages to pre-defined fixed channels (supervised classification), SPDL's unique contribution is the automatic discovery and consolidation of semantically aligned but structurally distinct protocols without predefined labels. This unsupervised approach reduces the total number of active communication channels by grouping latent semantic clusters, thereby eliminating the need for manual hierarchy updates found in [P1] and avoiding the syntactic limitations of keyword-based systems like [P2]. 
-
-| Feature | SPDL (Proposed) | Standard Semantic Routing (LLM Orchestration) | Static Protocol MARL [P1] |
-| :--- | :--- | :--- | :--- |
-| **Learning Paradigm** | Unsupervised (DBSCAN) | Supervised (Classifier/LLM) | Static/Hand-crafted |
-| **Channel Management** | Dynamic Pruning & Consolidation | Fixed Channel Selection | Fixed Topology |
-| **Adaptability** | High (Adapts to emergent semantics) | Low (Requires re-training/fine-tuning) | None |
-| **Overhead Reduction** | Structural (Reduces channel count) | Latency (Optimizes path selection) | None |
-
-This approach significantly reduces communication overhead while adapting to non-stationary agent behaviors by continuously refining the semantic similarity graph.
+SPDL distinguishes itself from prior art [P1], [P2], and [P3]—which focus on static rights management or template presentation—and recent semantic routing works in LLM orchestration (e.g., LangChain routers, DSPy) by employing dynamic, unsupervised, density-based DBSCAN clustering on latent semantic embeddings to actively prune redundant communication channels in real-time. While standard semantic routing in LLM orchestration optimizes path selection among a fixed set of pre-defined handlers, SPDL’s unique contribution is the automatic discovery of functional equivalence to eliminate redundant protocols entirely, reducing the total number of active communication channels through consolidation rather than mere routing optimization. Unlike attention-based or classifier-based protocol selection methods that map messages to pre-defined fixed channels (supervised classification), SPDL’s unsupervised approach automatically discovers and consolidates semantically aligned but structurally distinct protocols without predefined labels, thereby eliminating the need for manual hierarchy updates found in [P1] and avoiding the syntactic limitations of keyword-based systems like [P2].
 
 ## Ecosystem use
 

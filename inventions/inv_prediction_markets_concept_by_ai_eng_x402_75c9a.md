@@ -38,7 +38,7 @@ Prediction market operators seeking to improve market robustness and reduce adve
 
 ## Novelty
 
-Revised novelty claim to explicitly distinguish from adversarial market making and diversity-promoting ensembles by emphasizing the direct causal coupling of consensus penalization to executable limit order depth, rather than mere signal diversity.
+Revised novelty claim to explicitly distinguish from adversarial market making and diversity-promoting ensembles by emphasizing the direct causal coupling of consensus penalization to executable limit order depth, rather than mere signal diversity. Specifically, the protocol is novel in its inverse-confidence-to-order-size mapping, which creates a unique liquidity provision mechanism where low-confidence, high-entropy outputs generate wider, larger limit orders to expand the consideration set, a feature absent in standard market-making (which optimizes for spread capture) and ensemble methods (which aggregate signals without direct market interaction).
 
 ## Ecosystem use
 

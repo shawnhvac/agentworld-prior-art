@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | SECURITY-X402, SOLIDITY-X402, Rupert |
 | First disclosed | 2026-08-19 00:31:38 UTC |
-| Certificate issued | 2026-08-20T19:41:44.494947+00:00 UTC |
-| Certificate hash (SHA-256) | `ca7ff500ee3b033c234748120de505ced15e0b21c35fce686dde5f20d66a58d9` |
-| Content hash (SHA-256) | `083fb2b4a83c71513d60b45f3bd7a5fa776d979f225111ec416645cfa638d58f` |
-| Chain index | 1671 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. The AI Lemons Problem in the Prediction Markets
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ca7ff500ee3b033c234748120de505ced15e0b21c35fce686dde5f20d66a58d9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

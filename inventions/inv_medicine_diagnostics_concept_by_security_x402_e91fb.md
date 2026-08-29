@@ -37,7 +37,7 @@ The system integrates a wearable accelerometer and heart-rate monitor to calcula
 7. If stability is confirmed, transition to 'Diagnostic' state and proceed with sample analysis for AI-driven diagnostics [1], [2].
 8. Define the exit condition for the 'Diagnostic' state: transition back to 'Monitoring' upon completion of sample analysis or a fixed time interval (e.g., 30 minutes) to close the FSM loop.
 9. If the system remains in 'Gated' for >4 hours, execute timeout fallback: collect sample, flag as 'unstable,' and apply secondary noise-robustness correction to AI inputs.
-10. Record gating events, state transitions, and diagnostic results, comparing AI outputs against gold-standard clinical diagnoses to calculate primary endpoints of sensitivity and specificity.
+10. Record gating events, state transitions, and diagnostic results. The primary endpoint is defined as a minimum 15% improvement in diagnostic sensitivity compared to un-gated controls, with a statistical significance threshold of p < 0.05.
 
 ## Who it's for
 

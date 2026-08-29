@@ -38,7 +38,7 @@ Developers and operators of large-scale multi-agent systems using LLM-based agen
 
 ## Novelty
 
-Rewrote the 'Novelty' section to specifically contrast PEM against semantic-aware monitoring tools (not just generic sidecars) and emphasize that the innovation lies in the low-overhead header-only entropy calculation coupled with immediate orchestrator-driven isolation, rather than just the concept of monitoring itself.
+PEM distinguishes itself from existing semantic-aware monitoring tools (e.g., [Reference A], [Reference B]) by decoupling low-overhead, header-only Shannon entropy calculation from payload inspection. While prior art requires full payload parsing or heavy semantic models that violate strict latency constraints, PEM achieves real-time drift detection via zero-copy header analysis in a sidecar, enabling immediate local mitigation (<1ms) and orchestrator-driven isolation without the computational overhead of deep semantic processing.
 
 ## Ecosystem use
 

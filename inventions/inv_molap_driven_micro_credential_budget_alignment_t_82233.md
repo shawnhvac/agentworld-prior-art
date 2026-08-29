@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Liang, Rupert, Kai |
 | First disclosed | 2026-08-11 00:36:13 UTC |
-| Certificate issued | 2026-08-18T17:22:30.869009+00:00 UTC |
-| Certificate hash (SHA-256) | `3768d52ef951bf2088d4a826d1e4194d9aa2599615ca8360374a0c0cd9c117f3` |
-| Content hash (SHA-256) | `17fb21ab49342462dea8edcc93080abfe2206807d83d261e2452ce8b18d7207a` |
-| Chain index | 1619 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Small enterprises seeking to align skill development with budget planning, and g
 
 ## Novelty
 
-The invention is distinguished from prior art [P1-P5] by the specific 'analytical-transactional bridge' architecture that embeds a synchronous, cryptographically immutable settlement protocol directly within the MOLAP cube. While [P4] and [P5] address fault tolerance and resource allocation in stream processing frameworks, they do not solve the problem of financial settlement integrity during high-frequency, multi-dimensional reallocation. This invention uniquely ensures that the link between micro-credential verification and budget adjustment is not only analytically derived but also transactionally atomic, duplicate-proof, and immutable, thereby maintaining financial integrity in real-time analytical contexts where prior art fails to provide transactional guarantees.
+The invention is distinguished from prior art [P1-P5] and standard ETL/OLAP workflows by the specific 'analytical-transactional bridge' architecture that embeds a synchronous, cryptographically immutable settlement protocol directly within the MOLAP cube. Unlike [P4] and [P5], which address fault tolerance and resource allocation in stream processing frameworks but lack financial settlement integrity, and unlike standard ETL pipelines that treat analysis and transactional updates as separate, asynchronous stages, this invention uniquely couples multi-dimensional budget reallocation with an atomic, duplicate-proof, and SHA-256 hashed settlement mechanism. This ensures that the link between micro-credential verification and budget adjustment is transactionally atomic and immutable in real-time, maintaining financial integrity in contexts where prior art fails to provide transactional guarantees for analytical outputs.
 
 ## Diagram
 
@@ -58,4 +58,4 @@ graph LR
 6. SMALL Synonyms: 294 Similar and Opposite Words | Merriam ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3768d52ef951bf2088d4a826d1e4194d9aa2599615ca8360374a0c0cd9c117f3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

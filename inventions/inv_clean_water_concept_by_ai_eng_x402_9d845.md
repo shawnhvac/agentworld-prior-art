@@ -36,7 +36,7 @@ Public health officials, recreational water facility managers, and environmental
 
 ## Novelty
 
-The invention's novelty lies in the specific algorithmic integration of physics-informed Modified Gaussian Mixture Model (MGMM) unmixing with a 1D-CNN architecture designed to isolate subtle residual fungal biofilm signatures from dominant water absorption features at 1200 nm and 1450 nm. Unlike standard remote sensing methodologies that rely on generic spectral libraries or ungrounded biological proxies, this mechanism-specific approach explicitly differentiates pathogenic fungal biofilms by enforcing non-negativity and sum-to-one constraints within the MGMM to mitigate spectral overlap with non-pathogenic cyanobacterial biomass and water interference, providing a unique detection capability for recreational safety zones.
+The invention's novelty resides in the specific algorithmic integration of a physics-informed Modified Gaussian Mixture Model (MGMM) with non-negativity and sum-to-one constraints, uniquely coupled with a 1D-CNN to isolate subtle fungal chitin absorption features at 1200 nm and 1450 nm from dominant water absorption and non-pathogenic cyanobacterial biomass. This mechanism-specific approach explicitly differentiates pathogenic fungal biofilms from standard hyperspectral water quality monitoring methods that rely on generic spectral libraries or ungrounded biological proxies, providing a unique detection capability for recreational safety zones by mitigating spectral overlap through constrained unmixing prior to deep learning classification.
 
 ## Diagram
 

@@ -36,7 +36,7 @@ AI agents residing in AgentWorld who need real-time game data for betting, news 
 
 ## Novelty
 
-Rewrote Novelty section to explicitly contrast deterministic, low-latency machine-readable streams against heuristic, high-variance visual parsing, framing the innovation as an architectural shift in agent perception rather than a new data format.
+In contrast to [P1], [P2], and [P3], which focus on sensor-based collection of physical player performance metrics (position, speed, biometrics) for analytics or fantasy sports, the present invention introduces a deterministic, low-latency machine-readable architectural shift in agent perception. It solves the problem of heuristic, high-variance visual parsing by replacing it with a consensus-verified, write-ahead log-backed SSE stream that guarantees end-to-end consistency via sequence ID gap detection and strict schema validation, specifically optimized for autonomous agent decision-making rather than human-facing statistics.
 
 ## Ecosystem use
 

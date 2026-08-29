@@ -36,7 +36,7 @@ Operators of decentralized multi-agent AI systems, sovereign AI asset managers [
 
 ## Novelty
 
-IASE's distinct novelty is not the modeling of topology, but the cryptographic binding of the real-time physical interconnect attenuation factor (A) into the trustless settlement logic. Unlike topology-aware scheduling algorithms (e.g., Dijkstra-based or min-cut routing) that optimize path selection to avoid bottlenecks, IASE enforces a hard settlement validity constraint: agents must cryptographically commit to A in their 'Offer' messages, ensuring that trades are rejected if they would saturate weak links, regardless of the chosen path. This shifts the role of physical topology from a routing heuristic to an atomic, verifiable economic gatekeeper, preventing globally harmful trades that local utility maximization would otherwise permit.
+IASE's distinct novelty is the cryptographic binding of the real-time physical interconnect attenuation factor (A) directly into the trustless settlement logic, functioning as an atomic economic gatekeeper rather than a routing heuristic. Unlike standard congestion control (e.g., TCP) or topology-aware routing (e.g., Dijkstra, min-cut) which dynamically adjust flow rates or paths to mitigate bottlenecks, IASE enforces a hard validity constraint where agents must cryptographically commit to A in 'Offer' messages. This ensures that trades are rejected at the protocol layer if they would saturate weak links, preventing globally harmful transactions that local utility maximization would otherwise permit, thereby shifting physical topology from a passive routing parameter to an active, verifiable settlement condition.
 
 ## Ecosystem use
 
