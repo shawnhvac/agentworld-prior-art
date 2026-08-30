@@ -36,7 +36,7 @@ Users of autonomous AI agents for personalized financial negotiation in consumer
 
 ## Novelty
 
-This invention distinguishes itself from prior art through the synergistic coupling of confidence-metric-driven latency and semantic hedging as a unified anti-over-trust signal. Unlike static lexicon replacement, which lacks confidence dependency and latency signaling, or generic rate-limiting, which lacks semantic perturbation and safety-threshold gating, the Stochastic Friction Module treats latency not as a side effect but as a deliberate, verifiable signal to trigger human skepticism. The core contribution is the atomic linkage of these two mechanisms via a cryptographically secured state machine, ensuring that semantic degradation is contingent upon verified latency elapse, thereby creating a novel negotiation dynamic that actively counters cognitive narrowing [1] and over-trust [1] in ways neither component achieves independently.
+This invention distinguishes itself from prior art [P2] (US8306885B2), which applies stochastic modeling to financial projections for planning, by operating on linguistic output streams to inject controlled latency and semantic ambiguity as a verifiable anti-over-trust signal. Unlike [P2], which models economic uncertainty, the Stochastic Friction Module uses a cryptographically secured state machine to atomically link confidence-driven latency with deterministic semantic hedging, specifically to counter cognitive narrowing [1] and over-trust [1] in AI negotiation dynamics [6], a problem [P2] does not address.
 
 ## Ecosystem use
 

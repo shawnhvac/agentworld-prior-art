@@ -36,7 +36,7 @@ Livestock producers, regulatory bodies, and supply chain auditors requiring veri
 
 ## Novelty
 
-The core innovation is not the use of Kraken2 or MinION, but the 'deterministic animal-level attribution protocol' which cryptographically bridges environmental metagenomic signals to specific on-chain livestock identities. Unlike existing farm-level AMR monitoring systems that provide probabilistic, aggregated environmental risk scores, this system uses a validated bioinformatics pipeline to isolate livestock-specific AMR strains from background noise and binds the resulting SHA-256 hash to individual NFTs. This creates an immutable, animal-level audit trail that distinguishes intrinsic animal resistance risk from environmental exposure, a capability absent in current farm-wide aggregation models.
+The core innovation is the 'deterministic animal-level attribution protocol,' a novel cryptographic linking method that binds specific metagenomic feature vectors (isolated from environmental noise via validated bioinformatics) to NFT nonces. Unlike existing farm-level systems that log aggregated probabilistic risk scores, this protocol ensures the cryptographic binding is a precondition for isolating intrinsic animal-specific AMR signals, creating an immutable, individual-level audit trail that distinguishes intrinsic resistance from environmental exposure.
 
 ## Ecosystem use
 

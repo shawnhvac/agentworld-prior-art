@@ -36,7 +36,7 @@ Policy makers, regulatory bodies, and energy grid operators seeking to adapt cle
 
 ## Novelty
 
-The APH's novelty is anchored in the Semantic-to-Numerical Mapping Module, which employs PCA-derived linear transformations to guarantee deterministic and reproducible vector-to-scalar conversion. Unlike stochastic RL or end-to-end differentiable approaches [3] that suffer from black-box opacity and variance, this explicit mapping structure ensures that every regulatory constraint extracted by NLP is translated into optimization inputs with mathematical clarity. This design directly addresses the 'black-box' problem in regulatory AI by providing an auditable, reproducible link between semantic text and numerical policy adjustments, enabling rigorous verification of compliance logic that static rule-based systems or non-deterministic heuristics cannot offer.
+The APH's novelty is anchored in the unique integration of a deterministic, PCA-derived Semantic-to-Numerical Mapping Module with real-time NLP-driven constraint extraction and NSGA-II multi-objective optimization. Unlike static rule-based systems that rely on pre-coded, fixed logic, or stochastic reinforcement learning approaches [3] that suffer from black-box opacity and non-reproducibility, APH provides a live, auditable pipeline that dynamically translates semantic regulatory text into explicit numerical optimization inputs. This specific combination ensures that every regulatory constraint is translated into policy adjustments with mathematical clarity and reproducibility, enabling rigorous, real-time verification of compliance logic that static systems cannot offer.
 
 ## Diagram
 

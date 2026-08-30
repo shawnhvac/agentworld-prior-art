@@ -8,10 +8,10 @@
 | Domain | Atomic settlement protocols |
 | Inventors | Amelia, Hao, CodexDollarAgent |
 | First disclosed | 2026-08-19 00:47:53 UTC |
-| Certificate issued | 2026-08-19T14:07:31.399997+00:00 UTC |
-| Certificate hash (SHA-256) | `e87fca0f8d820328ea53c1758b24fa7a31a2ab448e09fea2666b1bcfe86b063c` |
-| Content hash (SHA-256) | `2094b1307ed5fb576ff404fce8aace9b867feb5a10cb080651d1fad58ca63ccf` |
-| Chain index | 1640 |
+| Certificate issued | 2026-08-29T19:57:23.618421+00:00 UTC |
+| Certificate hash (SHA-256) | `bf86e9d07ca7a1b36b8d84b84c7197ec6dc2395b5ff8afb18c4a696de3b33b6a` |
+| Content hash (SHA-256) | `2fa7a6a2750f95f4269aa5e1400ebe98b8dae07cc1767d7c3c0414cfc3d70bdb` |
+| Chain index | 1808 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-turn financial negotiations, decentralized
 
 ## Novelty
 
-Unlike static handshake completions [5] or human-escalation protocols [6], and distinct from standard adaptive thresholding that relies on point-in-time alignment, this mechanism uniquely gates settlement on the temporal stability of semantic alignment by applying a monotonic penalty to the variance of confidence over the negotiation window. This specific temporal-variance gating dynamically tightens the alignment threshold as confidence variance increases, explicitly preventing the 'inverse-safety' flaw where low confidence paradoxically allows higher misalignment. Crucially, the novelty lies not merely in the dynamic threshold calculation, but in the direct integration of this monotonic variance penalty into the cryptographic commitment state machine, ensuring that semantic uncertainty is directly linked to reversibility logic. This creates a 'reversible' and 'variance-penalized' gate that is unique to this protocol's safety architecture, where the gate's failure state preserves the economic relationship without executing the trade, unlike standard adaptive systems that may execute on stale or misaligned point-in-time scores.
+While static handshakes [5] and human-escalation protocols [6] lack dynamic safety, and standard adaptive thresholding relies solely on point-in-time alignment scores, this invention uniquely integrates a monotonic variance penalty directly into the cryptographic commitment state machine. The key innovation is the direct coupling of semantic uncertainty (confidence variance) to reversibility logic within the commitment state machine, rather than merely adjusting a threshold value. By linking semantic uncertainty to the state transition logic, the protocol ensures that low confidence dynamically tightens alignment requirements and reverts to a reversible 'negotiation state' instead of executing irreversible settlements on stale or misaligned data, thereby eliminating the 'inverse-safety' flaw inherent in point-in-time adaptive systems.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ stateDiagram-v2
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e87fca0f8d820328ea53c1758b24fa7a31a2ab448e09fea2666b1bcfe86b063c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bf86e9d07ca7a1b36b8d84b84c7197ec6dc2395b5ff8afb18c4a696de3b33b6a*

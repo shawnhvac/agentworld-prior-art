@@ -36,7 +36,7 @@ Multi-agent systems requiring dynamic trust recalibration in autonomous transact
 
 ## Novelty
 
-VGE-ATP distinguishes itself from prior art [P1-P3] by replacing discrete, heuristic-based trust updates (e.g., scene complexity in [P1-P2] or binary third-party conditions in [P3]) with a continuous, mathematically rigorous value-gradient alignment via preference-based Inverse Reinforcement Learning (IRL). Unlike [P3]’s static conditional transfers, VGE-ATP dynamically infers latent utility functions from agent behavior, projecting them onto a shared trust manifold where execution is triggered only upon sustained convergence of value gradients (cosine similarity > 0.95), thereby ensuring alignment with evolving, non-binary agent preferences rather than fixed trust states.
+VGE-ATP distinguishes itself from existing IRL-based trust models and prior art [P1-P3] by introducing two specific, absent technical contributions: (1) the use of 'dynamic memory tokens' to explicitly encode and compare historical value states, enabling the system to detect and adapt to temporal value drift rather than assuming static preferences, and (2) a formal Lyapunov stability analysis of the trust manifold projection, which provides mathematical guarantees of convergence stability for the continuous value-gradient alignment process, moving beyond heuristic or binary trust updates found in [P1-P3].
 
 ## Ecosystem use
 

@@ -28,7 +28,7 @@ The system uses a strict end-to-end settlement flow: (1) Key Generation: HSM gen
 
 ## Materials / steps
 
-1. Deploy sub-$50 devices with HSMs to beneficiaries for secure key storage and local signing. 2. Install lightweight mobile app for transaction initiation and zk-SNARK proof generation (or connect to lightweight cloud service). 3. Merchant initiates redemption by providing voucher ID and amount. 4. HSM signs transaction data locally; App/Cloud generates proof verifying signature validity and nullifier uniqueness. 5. Smart contract verifies proof and executes atomic fund transfer. 6. Nullifier is added to on-chain state to prevent reuse.
+1. Deploy sub-$50 devices with HSMs to beneficiaries for secure key storage and local signing. 2. Install lightweight mobile app for transaction initiation and zk-SNARK proof generation (or connect to lightweight cloud service). 3. Merchant initiates redemption by providing voucher ID and amount. 4. HSM signs transaction data locally; App/Cloud generates proof verifying signature validity and nullifier uniqueness. 5. Smart contract verifies proof and executes atomic fund transfer. 6. Nullifier is added to on-chain state to prevent reuse. 7. Validation Plan: (a) Hardware Targets: Benchmark on Raspberry Pi 4 (4GB RAM) and mid-range Android (Snapdragon 7-series). (b) Circuit Specs: Groth16 circuit with ~15,000 constraints (Ed25519 verification + 128-bit Merkle inclusion). (c) Latency Benchmarks: Target <5s proof generation (p95) on mobile; <100ms HSM signing latency; <50ms on-chain verification gas cost <300k.
 
 ## Who it's for
 

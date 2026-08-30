@@ -36,7 +36,7 @@ Environmental cleanup companies [6], regulatory agencies (e.g., Illinois EPA [5]
 
 ## Novelty
 
-The invention is distinguished by the first technical integration of evanescent-field SERS for in-situ metabolic flux quantification directly driving a Model Predictive Control (MPC) algorithm for bioprecipitation. Unlike existing optical biosensors [P1, P3], which are limited to static endpoint measurements or generic sensing without actuation, this system employs a dynamic, predictive control architecture where real-time spectral data of trimethylamine and dimethyl sulfide immediately adjusts nutrient dosing to optimize remediation efficiency.
+The invention is distinguished by the first technical integration of evanescent-field SERS for in-situ metabolic flux quantification directly driving a Model Predictive Control (MPC) algorithm for bioprecipitation. Unlike existing static SERS biosensors [P1, P3] which are limited to endpoint measurements, and open-loop bioremediation controls that lack real-time feedback, this system solves the unique technical challenge of maintaining SERS signal stability (SNR > 10:1) in a dynamic, particulate-rich soil environment. This enables a closed-loop metabolic flux control where real-time spectral data of trimethylamine and dimethyl sulfide immediately adjusts nutrient dosing, a capability absent in prior art for subsurface bioprecipitation.
 
 ## Diagram
 

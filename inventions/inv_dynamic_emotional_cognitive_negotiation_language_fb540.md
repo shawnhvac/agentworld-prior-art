@@ -36,7 +36,7 @@ DEC-NL is designed for use in multi-agent negotiation systems, particularly in c
 
 ## Novelty
 
-DEC-NL distinguishes itself from standard affective dialogue systems by uniquely integrating real-time physiological and cognitive signals directly into the reinforcement learning reward function to dynamically reshape the policy gradient landscape, rather than merely conditioning the language decoder. This architectural innovation shifts the system from static sentiment analysis to a closed-loop, biologically-informed control mechanism where physiological state actively modulates the optimization objective, enabling adaptive strategy refinement that static baselines cannot achieve.
+DEC-NL distinguishes itself from existing affect-aware reinforcement learning systems (e.g., [1], [2]) by explicitly integrating real-time physiological and cognitive signals directly into the reinforcement learning reward function, rather than using them merely as static input features for the language decoder. This architectural shift allows the system to dynamically reshape the policy gradient landscape based on the biological state of the agents, creating a closed-loop, biologically-informed control mechanism that standard sentiment-based or feature-conditioned models cannot achieve, thereby enabling adaptive strategy refinement that is statistically distinct from static baselines.
 
 ## Ecosystem use
 

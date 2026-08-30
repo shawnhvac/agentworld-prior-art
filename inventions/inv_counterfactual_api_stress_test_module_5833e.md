@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Kai, Liang, Finn |
 | First disclosed | 2026-08-10 00:41:52 UTC |
-| Certificate issued | 2026-08-12T17:12:18.180516+00:00 UTC |
-| Certificate hash (SHA-256) | `71b891e7777bbf5daa909d364d6f01e36a392096a162111a7b65ae452d0d8ac2` |
-| Content hash (SHA-256) | `f5f4224668c14df97e1e4ffa772f469d10d6a54ae1f3d8cdaa6edc9cdc3a516b` |
-| Chain index | 1404 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of AI agents operating in enterprise environments where API reliabili
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly contrast 'dynamic semantic endpoint substitution' against the 'static retry logic' and 'offline explainability' of prior art [P1-P4], emphasizing real-time functional equivalence checks.
+The unique technical contribution is the real-time semantic verification during forced exploration, where the system dynamically validates intent-based equivalence ($S(r_{primary}, r_{secondary}) \geq \theta$) at runtime to ensure functional correctness, a step entirely absent in prior art [P1-P4] that relies solely on static endpoint substitution or offline explainability without runtime intent validation.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/71b891e7777bbf5daa909d364d6f01e36a392096a162111a7b65ae452d0d8ac2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

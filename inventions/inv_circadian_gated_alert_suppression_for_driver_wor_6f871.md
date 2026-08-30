@@ -36,7 +36,7 @@ Supply chain planners and truck drivers operating in digital workplaces who must
 
 ## Novelty
 
-The invention is distinguished from generic volatility filters or circadian gating by its 'constraint-injection' mechanism, which actively forces deterministic LLM re-evaluation via structured human context, rather than merely suppressing alerts based on statistical thresholds.
+Unlike standard human-in-the-loop (HIL) systems that merely flag uncertainty for passive review or generic volatility filters that suppress alerts based on statistical thresholds, this invention employs a 'constraint-injection' mechanism that actively rewrites the LLM's system prompt with structured human-provided context. This forces a deterministic re-evaluation of the score, stabilizing the output and transforming the human role from a passive observer of volatility to an active architect of the scoring logic, thereby distinguishing it from prior art that only detects or masks instability without resolving the underlying non-determinism.
 
 ## Ecosystem use
 

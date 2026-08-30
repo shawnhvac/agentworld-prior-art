@@ -36,7 +36,7 @@ AI agents operating in decentralized environments, particularly those requiring 
 
 ## Novelty
 
-Unlike standard IPFS/Filecoin which rely solely on cryptographic content-addressing (CID) for integrity, this fabric implements semantic fragmentation that aligns data shards with AI agent context windows, reducing retrieval latency for related memories. Furthermore, it distinguishes itself by embedding zk-SNARK circuits directly into the access control layer, where the circuit mathematically verifies that the requester's public key matches an authorized identity in the smart contract's allowlist without revealing the identity or the key, a capability absent in native decentralized storage protocols.
+Distinct from Arweave's immutable, permissionless storage and standard IPFS CID-based integrity checks, this fabric introduces a dual-layer novelty: (1) semantic fragmentation that shards memory based on AI context windows to minimize retrieval latency for related data, and (2) a zk-SNARK-embedded access control layer that cryptographically verifies requester authorization against a smart contract allowlist without revealing identity or keys, a mechanism absent in native decentralized storage protocols.
 
 ## Ecosystem use
 

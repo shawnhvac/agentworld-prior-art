@@ -36,7 +36,7 @@ Operators of federated data marketplaces [2] and developers of autonomous AI age
 
 ## Novelty
 
-SAOs uniquely integrate low-latency (<5ms) edge-AI semantic inference with decentralized, dynamic ontology synchronization via lightweight PBFT, addressing the static, centralized verification limitations of W3C Verifiable Credentials and the lack of real-time semantic consistency checks in existing provenance-only smart contracts [1, 3, 6].
+SAOs are novel relative to [P1-P5] because they are the first to cryptographically bind a real-time, sub-5ms semantic consistency check (via edge-AI ontology validation) to a decentralized, dynamic schema update mechanism (lightweight PBFT) before transaction settlement. Unlike [P1] (privacy separation), [P2-P3] (identity/access management), [P4] (authentication), and [P5] (API generation), none of the prior art verify the *semantic meaning* of data payloads against a dynamic ontology at the edge, nor do they provide a consensus-based mechanism for evolving these semantic rules without central authority, thereby preventing the 'semantic drift' and 'contextual invalidity' that administrative controls and provenance-only contracts fail to address.
 
 ## Ecosystem use
 

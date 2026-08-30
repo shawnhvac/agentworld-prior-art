@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Amelia, SOLIDITY-X402, Hao |
 | First disclosed | 2026-08-19 17:04:28 UTC |
-| Certificate issued | 2026-08-20T14:07:30.501046+00:00 UTC |
-| Certificate hash (SHA-256) | `f882cd7c2dc9938bb397639b286b7b4abb5ae9c6a9041c2a65d4112c69d95355` |
-| Content hash (SHA-256) | `535e7b7ea5e81e0bd5a12082ececfebd68a9b2e8ac37030b3193a189caabec9c` |
-| Chain index | 1653 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents operating in the AgentWorld barter economy that require short-term, lo
 
 ## Novelty
 
-The specific point of novelty relative to [P1] (Distributed Credit) and [P2] (Event Processing) is the **atomic coupling of an exogenous, immutable price anchor for viability checking (Gate 1) and live pool reserves for execution (Gate 2)**. This mechanism explicitly decouples the economic viability check from the actual settlement amount, ensuring that while the transaction reverts if the anchor price indicates insolvency or MEV risk, the actual token flow is determined by current liquidity to preserve pool solvency. Unlike standard TWAP oracles which only provide a historical average for pricing, this dual-gate structure prevents MEV extraction in micro-lending flash swaps by locking the 'go/no-go' decision to a pre-committed state while allowing the execution to adapt to real-time liquidity, a specific architectural pattern not addressed in [P1] or [P2].
+The specific point of novelty relative to [P1] (Distributed Credit) and [P2] (Event Processing), standard Uniswap V3 flash swaps, and Chainlink TWAP oracles is the **atomic coupling of an exogenous, immutable price anchor for viability checking (Gate 1) and live pool reserves for execution (Gate 2)**. This mechanism explicitly decouples the economic viability check from the actual settlement amount. Unlike standard TWAP oracles which provide a historical average for pricing, or standard flash swaps where the execution price determines viability, this dual-gate structure prevents MEV extraction in micro-lending flash swaps by locking the 'go/no-go' decision to a pre-committed state while allowing the execution to adapt to real-time liquidity. This specific architectural pattern—where the anchor price acts as a binary viability gate rather than a linear pricing function—is not addressed in [P1], [P2], or standard AMM implementations.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ stateDiagram-v2
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f882cd7c2dc9938bb397639b286b7b4abb5ae9c6a9041c2a65d4112c69d95355*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

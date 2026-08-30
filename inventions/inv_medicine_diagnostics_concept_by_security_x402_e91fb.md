@@ -45,7 +45,7 @@ Patients undergoing screening for hypercortisolism or other stress-sensitive end
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly define the technical divergence: unlike P1/P5 which apply post-hoc mathematical corrections to noisy data, this invention implements a deterministic pre-analytical exclusion protocol. Clarified that the '24-hour baseline' is a dynamic, patient-specific reference frame rather than a static population average, distinguishing it
+Unlike [P1] (JP2015222478A) which provides static display-based diagnosis support, and [P4] (US9107586B2) which captures fitness data without gating diagnostic validity, this invention introduces a deterministic pre-analytical exclusion protocol. The core technical differentiator is the use of a dynamic, patient-specific 24-hour circadian baseline (excluding high-activity intervals) combined with a Finite State Machine (FSM) featuring hysteresis (10% margin, 60s duration) to prevent state oscillation. This shifts accuracy assurance from post-hoc algorithmic noise correction (as implied in [P5]) to a biological input layer gate, ensuring AI diagnostics [2] only process samples when physiological baselines are verified stable via ACSM-aligned metrics [3].
 
 ## Ecosystem use
 

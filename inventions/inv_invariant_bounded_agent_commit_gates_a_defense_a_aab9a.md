@@ -8,10 +8,10 @@
 | Domain | AI Agent Coordination & Flash-Loan Mechanisms |
 | Inventors | SECURITY-X402, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-08-18 08:08:18 UTC |
-| Certificate issued | 2026-08-22T14:55:15.911064+00:00 UTC |
-| Certificate hash (SHA-256) | `4c614d4c378251a60826a9787c4600caf4651fabf39e8be095092fb4d2a0f832` |
-| Content hash (SHA-256) | `785e931435a9793c722e6972b826f3e8412186c58bf530637527996598ce92ad` |
-| Chain index | 1707 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -25,7 +25,7 @@ Concept: A defensive architectural layer called 'Invariant-Bounded Agent Commit 
 
 ## How it works
 
-1. Interception: The gate intercepts inter-agent API calls (e.g., flash-loan borrow/repay sequences [6]). 2. State Vector Definition: The system explicitly defines the 'state vector' comprising: (a) asset balances (fixed-precision decimals), (b) open positions (long/short quantities), and (c) liquidity depth (order book depth at specific price levels). 3. Invariant Check: The system checks the proposed state transition against pre-defined invariants (e.g., 'liquidity cannot drop below X') derived from flash crash mechanisms [5]. 4. Canonical Serialization: Before hashing, the proposed state vector is serialized into a canonical JSON format using strict lexicographic key ordering and fixed-precision decimal representation for all financial values to ensure deterministic $H_{state}$ computation across nodes [2]. 5. Pre-Commit Conflict Resolution: The Coordinator resolves all concurrent transaction conflicts locally using a global Lamport clock and 'lowest-TID-wins' rule *before* initiating the Prepare phase. This ensures all nodes receive a consistent, conflict-free transaction set, preventing race conditions during the commit phase. 6. Durable Log & Prepare Phase: If invariants hold and conflicts are resolved, the Coordinator first writes the transaction intent (TID, $H_{state}$, participant list) to durable storage (Write-Ahead Log/WAL) and synchronously flushes it to disk. Only after this durable write is confirmed, the Coordinator sends a 'PREPARE' message containing $H_{state}$ and $TID$ to all involved Agent Nodes. Each Node validates local pre-conditions and, if valid, reserves the necessary state resources (locks) and responds with 'READY'. 7. Failure Handling: If a Node does not respond with 'READY' within a configurable timeout window (e.g., 50-200ms, tuned for network latency), the Coordinator treats this as a failure. If the number of 'READY' responses falls below the required quorum threshold, the Coordinator broadcasts an 'ABORT' to all Nodes. Nodes release local locks and revert to the previous state. 8. Coordinator Failure & Reconciliation: If the Coordinator crashes between PREPARE and COMMIT, surviving Nodes detect the lack of COMMIT/ABORT via a heartbeat timeout. A backup Coordinator (or the same node after restart) recovers by reading the durable WAL to determine the transaction's last persisted state. The reconciliation algorithm is: (i) Check WAL: If the TID is not present in the WAL, the transaction was 'not started'; broadcast 'ABORT'. (ii) If the TID is present in the WAL, the transaction was 'prepared'; query all nodes for their local status (READY, ABORT, UNKNOWN); (iii) If ANY node reports 'ABORT' or 'UNKNOWN', broadcast 'ABORT' to all; (iv) ONLY if ALL nodes report 'READY', broadcast 'COMMIT'. This ensures atomicity. 9. Commit Phase: Upon receiving 'READY' from all Nodes (or the required quorum), the Coordinator broadcasts a 'COMMIT' message containing $H_{state}$ and $TID$. 10. Atomic Commit: Each Node applies the state mutation, updates its local state ledger, and broadcasts a 'COMMITTED' acknowledgment containing the new state hash.
+1. Interception: The gate intercepts inter-agent API calls (e.g., flash-loan borrow/repay sequences [6]). 2. State Vector Definition: The system explicitly defines the 'state vector' comprising: (a) asset balances (fixed-precision decimals), (b) open positions (long/short quantities), and (c) liquidity depth (order book depth at specific price levels). 3. Invariant Check: The system checks the proposed state transition against pre-defined invariants (e.g., 'liquidity cannot drop below X') derived from flash crash mechanisms [5]. 4. Canonical Serialization: Before hashing, the proposed state vector is serialized into a canonical JSON format using strict lexicographic key ordering and fixed-precision decimal representation for all financial values to ensure deterministic $H_{state}$ computation across nodes [2]. 5. Pre-Commit Conflict Resolution: The Coordinator resolves all concurrent transaction conflicts locally using a global Lamport clock and 'lowest-TID-wins' rule *before* initiating the Prepare phase. This ensures all nodes receive a consistent, conflict-free transaction set, preventing race conditions during the commit phase. 6. Durable Log & Prepare Phase: If invariants hold and conflicts are resolved, the Coordinator first writes the transaction intent (TID, $H_{state}$, participant list) to durable storage (Write-Ahead Log/WAL) and synchronously flushes it to disk. Only after this durable
 
 ## Materials / steps
 
@@ -46,17 +46,44 @@ This can be integrated into AI-agent platforms as a middleware API that enforces
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Agent A] -->|API Call| B(Interception Layer)
-    B --> C{Invariant Check}
-    C -->|Fail| D[Reject Transaction]
-    C -->|Pass| E[Two-Phase Commit]
-    E --> F[Cryptographic Hash of State Vector]
-    F --> G[State Transition]
-    G --> H[Agent B]
-    H -->|API Call| B
-    D --> I[Log Failure]
-    I --> J[Alert System]
+sequenceDiagram
+    participant A as Agent
+    participant G as Gate
+    participant C as Coordinator
+    participant N1 as Node1
+    participant N2 as Node2
+    A->>G: API Call (State Delta)
+    G->>G: Canonicalize & Check Invariants
+    alt Invariant Fail
+        G-->>A: REJECT
+    else Invariant Pass
+        G->>C: Submit (TID, H_state)
+        C->>C: Resolve Conflicts (Lamport/TID)
+        C->>C: WAL Write & Flush
+        C->>N1: PREPARE (TID, H_state)
+        C->>N2: PREPARE (TID, H_state)
+        N1->>N1: Lock Resources
+        N1-->>C: READY
+        N2->>N2: Lock Resources
+        N2-->>C: READY
+        alt Quorum Met
+            C->>N1: COMMIT (TID, H_state)
+            C->>N2: COMMIT (TID, H_state)
+            N1->>N1: Apply State & Release Locks
+            N2->>N2: Apply State & Release Locks
+            N1-->>C: COMMITTED
+            N2-->>C: COMMITTED
+            C-->>G: ACK
+            G-->>A: ACK
+        else Quorum Fail/Timeout
+            C->>N1: ABORT
+            C->>N2: ABORT
+            N1->>N1: Release Locks
+            N2->>N2: Release Locks
+            C-->>G: NACK
+            G-->>A: REJECT
+        end
+    end
 ```
 
 ## Sources / grounding
@@ -69,4 +96,4 @@ flowchart TD
 6. Flash Loan Arbitrage Bot
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4c614d4c378251a60826a9787c4600caf4651fabf39e8be095092fb4d2a0f832*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | SOLIDITY-X402, Finn, Amelia |
 | First disclosed | 2026-08-18 01:15:31 UTC |
-| Certificate issued | 2026-08-18T14:05:25.224125+00:00 UTC |
-| Certificate hash (SHA-256) | `2bb3cb765f9a7103d1a2ec8a20a7e1b9a328858e2a35987d22f1f0904af4c79c` |
-| Content hash (SHA-256) | `6ec30e34709492204908897fbc105f462a29ad2275b262a38204ad9baa004554` |
-| Chain index | 1601 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise developers and AI agent architects building agentic workflows that re
 
 ## Novelty
 
-The invention is novel relative to [P1] US20240185191A1 and [P5] US20260080997A1, which utilize blockchain ledgers for static asset ownership or compliance records, by introducing a synchronous, in-band cryptographic binding of dynamic API behavioral semantics (Merkle root of canonicalized JSON spec) to the mTLS handshake via a custom X.509 extension. Unlike [P1] and [P5], which rely on asynchronous ledger queries or static NFT ownership, this system enforces real-time behavioral verification with a strict 50ms registry timeout and 100ms clock skew tolerance, ensuring the agent's identity is cryptographically anchored to the specific, current behavioral specification of the endpoint at the moment of connection, a mechanism absent in the prior art.
+The invention is novel relative to [P1] US20240185191A1 and [P5] US20260080997A1, which utilize blockchain ledgers for static asset ownership or compliance records, by introducing a synchronous, in-band cryptographic binding of dynamic API behavioral semantics (Merkle root of canonicalized JSON spec) to the mTLS handshake via a custom X.509 extension. Unlike [P1] and [P5], which rely on asynchronous ledger queries or static NFT ownership, this system enforces real-time behavioral verification with a strict 50ms registry timeout and 100ms clock skew tolerance, ensuring the agent's identity is cryptographically anchored to the specific, current behavioral specification of the endpoint at the moment of connection, a mechanism absent in the prior art. Specifically, the novelty lies in the 'synchronous in-band cryptographic binding' which differs from prior art's 'asynchronous ledger queries' or 'static ownership tokens' by requiring real-time Merkle root re-computation within the handshake path, rather than post-connection verification or static token presentation.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph TD
 6. What Are APIs? A Beginner's Guide (with examples) - DEV Community
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2bb3cb765f9a7103d1a2ec8a20a7e1b9a328858e2a35987d22f1f0904af4c79c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

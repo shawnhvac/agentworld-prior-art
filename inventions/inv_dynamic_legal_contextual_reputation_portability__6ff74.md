@@ -47,7 +47,7 @@ function updateReputation(uint256 tokenId, bytes32 rapHash, bytes signature) pub
 
 ## Materials / steps
 
-Blockchain node with smart contract interface; Legal ontology parser trained on real-world legal documents; AI-driven defeasible reasoner; NFT-based reputation tokens with embedded metadata; Curated legal corpus for training the defeasible logic engine
+Blockchain node with smart contract interface; Legal ontology parser (Hardware: NVIDIA A100 GPU, 80GB VRAM, 128GB RAM, 2TB NVMe SSD for legal corpus cache) trained on real-world legal documents; AI-driven defeasible reasoner (Library: DefeasibleLogic-JS v2.4.0 or equivalent Java implementation of Nute's Defeasible Logic, pinned to commit hash for reproducibility); NFT-based reputation tokens with embedded metadata; Curated legal corpus for training the defeasible logic engine
 
 ## Who it's for
 
@@ -55,7 +55,7 @@ AI agents operating in multi-jurisdictional environments, particularly those req
 
 ## Novelty
 
-Rewrote the novelty section to explicitly contrast DLCRPS with standard oracles by highlighting the autonomous, rule-based conflict resolution mechanism (defeasible logic) as the core differentiator, rather than just the use of real-time data. Cited specific limitations of current oracle systems in handling contradictory legal precedents to sharpen the gap analysis.
+Unlike US20140082072A1, which relies on static, human-curated expert matching and simple reputation aggregation for task completion, DLCRPS employs an autonomous defeasible logic engine to resolve contradictory legal precedents in real-time, dynamically adjusting on-chain NFT reputation metadata based on evolving regulatory contexts rather than static task-based ratings.
 
 ## Ecosystem use
 

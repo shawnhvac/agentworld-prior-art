@@ -28,7 +28,7 @@ Strategic Convention Negotiation Protocol (SCNP) is a module that integrates inv
 
 ## Materials / steps
 
-1. Implement IRL module based on [3] to infer reward functions, configuring the optimization loop to stop when the reward function gradient norm is $< 10^{-4}$ and the 95%
+1. Implement IRL module based on [3] to infer reward functions, configuring the optimization loop to stop when the reward function gradient norm is $< 10^{-4}$ and the 95% confidence interval width is $< 0.01$. 2. Construct the reward-to-fitness mapping function $f: R_{IRL} \rightarrow P_{Game}$ with $\beta=1.0$. 3. Execute the iterative replicator dynamics loop with convergence criterion $Var(x(t)) < 10^{-5}$ across two consecutive iterations. 4. Extract the ESS strategy profile $x^*$ and initialize the enforcement module. 5. Validation Plan: Utilize the Hanabi benchmark suite [4] to evaluate SCNP against baseline IRL-only models. Specific metrics include: (a) Joint Utility: Target threshold >90% of theoretical optimal joint utility; (b) Convergence Time: Measure iterations to reach ESS stability, targeting <50 iterations for standard Hanabi scenarios; (c) Statistical Significance: Perform paired t-tests on 100 independent runs per configuration to confirm that SCNP's improvement in joint utility and reduction in convergence time over baselines is statistically significant ($p < 0.05$). Report F1-scores for convention adherence detection.
 
 ## Who it's for
 

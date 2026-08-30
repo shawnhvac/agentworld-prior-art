@@ -36,7 +36,7 @@ Transit operators managing emergency evacuations or high-density crowd scenarios
 
 ## Novelty
 
-Unlike aggregate density optimization methods [P3, P4] which treat crowds as uniform fluids and are susceptible to race conditions during rapid state changes, this invention introduces a 'Biometric-Atomic Reservation' protocol. By coupling real-time individual anxiety states (via DP-protected embeddings [3]) with Raft-based atomic capacity locking, the system prevents the double-booking and control instability inherent in prior art, specifically targeting the suppression of fear-propagation cascades [2] at the individual level rather than the macroscopic level.
+Unlike aggregate density optimization methods [P3, P4] and existing adaptive traffic systems that treat individuals as indistinguishable flow particles within a uniform fluid, this invention introduces a 'Biometric-Atomic Reservation' protocol that treats each traveler as a distinct atomic unit. The key differentiator is the latency-bound (<200ms) atomic locking mechanism, which couples real-time individual anxiety states (via DP-protected embeddings [3]) with Raft-based consensus to ensure unique, consensus-verified capacity reservations. This prevents the double-booking and control instability inherent in macroscopic density-based rerouting, specifically targeting the suppression of fear-propagation cascades [2] at the individual level rather than the macroscopic level.
 
 ## Ecosystem use
 

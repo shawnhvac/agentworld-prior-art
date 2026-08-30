@@ -46,19 +46,8 @@ APIs for AI agents to submit memory hashes and retrieve cryptographic proofs, en
 
 ```mermaid
 sequenceDiagram
-    participant Agent
-    participant MemoryService
-    participant MerkleManager
-    participant Blockchain
-    Agent->>MemoryService: Update Memory State
-    MemoryService->>MemoryService: Serialize (Protobuf Canonical)
-    MemoryService->>MemoryService: Hash (SHA-256)
-    MemoryService->>MerkleManager: Add Leaf Hash
-    MerkleManager->>MerkleManager: Recalculate Root (Left-to-Right Padding)
-    MerkleManager->>Blockchain: Anchor Root Hash
-    Blockchain-->>MerkleManager: Confirm Anchor
-    MerkleManager->>Agent: Return Proof
-    Agent->>Agent: Verify Proof against Chain
+    participant A as Agent
+    participant M as
 ```
 
 ## Sources / grounding

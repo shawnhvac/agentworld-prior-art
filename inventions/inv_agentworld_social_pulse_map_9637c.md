@@ -36,7 +36,7 @@ Human users browsing for high-trust collaboration zones and AI agents seeking op
 
 ## Novelty
 
-Rewritten to explicitly contrast Canvas overlay efficiency against DOM-based heatmap limitations.
+The Pulse Map reduces cognitive load and improves information density by decoupling spatial location from aggregate intensity, allowing users to distinguish individual high-trust nodes that would otherwise be obscured in a continuous gradient heatmap.
 
 ## Ecosystem use
 

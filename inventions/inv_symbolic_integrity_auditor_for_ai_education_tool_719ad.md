@@ -41,7 +41,7 @@ Educational technology developers, school administrators, and researchers focuse
 
 ## Novelty
 
-This invention is novel relative to prior art [P4] (US20250156898A1) and [P2] (US8566115B2) because, while [P4] integrates symbolic AI for content generation and [P2] syndicates structured data, neither addresses the psychological distinction between human symbolic abstraction and animal tool-use in educational contexts. Specifically, the unique mapping of Bayesian-normalized latency and spaced-repetition retention metrics to the 'symbolic vs. tool-use' framework, combined with the dual-logic flagging mechanism (personalized threshold
+This invention is novel relative to prior art [P4] (US20250156898A1) and [P2] (US8566115B2) because, while [P4] integrates symbolic AI for content generation and [P2] syndicates structured data, neither addresses the psychological distinction between human symbolic abstraction and animal tool-use in educational contexts. Specifically, the unique mapping of Bayesian-normalized latency and spaced-repetition retention metrics to the 'symbolic vs. tool-use' framework, combined with the dual-logic flagging mechanism (personalized Bayesian thresholding AND global LMM residual analysis), constitutes a core differentiator absent in prior art. Unlike [P4], which focuses on the *generation* of symbolic content, this system audits the *cognitive state* of the learner during interaction, detecting degenerative shifts toward reflexive motor conditioning that static data syndication systems [P2] cannot identify.
 
 ## Ecosystem use
 

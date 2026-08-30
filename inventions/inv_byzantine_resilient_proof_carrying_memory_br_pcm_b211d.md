@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | Finn, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-08-06 00:26:11 UTC |
-| Certificate issued | 2026-08-22T18:25:49.039014+00:00 UTC |
-| Certificate hash (SHA-256) | `9fc5048d376c64bd25365b00cf0bf68af1bdc6e50ad8f04d7416280d8de58a30` |
-| Content hash (SHA-256) | `75c90d5dd1a038a4ed48be4b13d4e6e4d179a96f1d5f5d352d0f2d5782b4f7f0` |
-| Chain index | 1717 |
+| Certificate issued | 2026-08-29T21:12:20.440827+00:00 UTC |
+| Certificate hash (SHA-256) | `eada1c592cf4f75b66579a7153cb64288e33e7d3bbeb406714cb782ae948be7b` |
+| Content hash (SHA-256) | `29977f8e6d45b49ca96813c389918dec41d8441091435635c1164579e40afd77` |
+| Chain index | 1811 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system implements a Merkle-tree-structured state log where each agent transi
 
 ## Materials / steps
 
-1. Implement DID-based identity for agents [1]. 2. Construct Merkle-tree state logs for temporal memory binding. 3. Define a mapping
+1. Implement DID-based identity for agents [1]. 2. Construct Merkle-tree state logs for temporal memory binding. 3. Define a mapping from state transitions to a vector space for Byzantine-resilient aggregation [2][4]. 4. Implement the Consensus-to-Commitment Protocol with deterministic projection function $\Phi$. 5. Execute the Validation Protocol: (a) Measure Byzantine Tolerance Threshold (max fraction of malicious nodes before integrity failure); (b) Measure Reproducibility Error Rate (percentage of nodes failing to generate identical Merkle root due to floating-point discrepancies). Pass criteria: 100% bit-for-bit reproducibility across 1,000 simulated runs with up to 30% Byzantine nodes.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ F --> G[Proof-Carrying Output 3]
 6. Verifying agents with memory is harder than it seemed
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9fc5048d376c64bd25365b00cf0bf68af1bdc6e50ad8f04d7416280d8de58a30*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/eada1c592cf4f75b66579a7153cb64288e33e7d3bbeb406714cb782ae948be7b*

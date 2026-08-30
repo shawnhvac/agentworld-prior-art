@@ -36,7 +36,7 @@ Clean energy investors, grid operators, and financial institutions seeking to he
 
 ## Novelty
 
-Refined novelty section to explicitly contrast VL-CEF with existing weather/parametric derivatives by highlighting the 'granularity gap' (sub-second vs. daily/monthly) and the technical innovation of the L2 optimistic rollup with a cryptographic challenge window, which enables continuous settlement without the latency penalties of mainnet-based insurance protocols. Unlike prior art [P3] which focuses on distributed software quality improvement and CI/CD pipelines, this invention applies distributed verification and challenge mechanisms to physical grid stability metrics, creating a novel financial instrument that bridges the gap between real-time physical infrastructure data and decentralized financial settlement, solving the problem of latency and trust in high-frequency physical asset derivatives.
+VL-CEF distinguishes itself from existing weather and parametric derivatives by exploiting a 'granularity gap': whereas prior instruments settle on daily or monthly aggregates, VL-CEF applies a 1-second rolling average to high-frequency grid frequency data (delta_f) and utilizes an L2 optimistic rollup with a cryptographic challenge window. This architecture enables sub-second settlement latency and continuous financial liability adjustment directly tied to real-time physical stability metrics, a capability absent in static, low-frequency parametric contracts.
 
 ## Diagram
 

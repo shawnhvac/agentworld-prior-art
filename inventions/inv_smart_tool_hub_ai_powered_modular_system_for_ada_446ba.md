@@ -24,7 +24,7 @@ A modular, AI-powered 'Smart Tool Hub' that integrates with everyday household t
 
 ## How it works
 
-The Smart Tool Hub uses embedded micro-sensors (accelerometers, pressure sensors) in modular tool attachments to collect real-time data. A central AI unit processes this data using a Kalman filter-based sensor fusion algorithm with explicitly defined process noise covariance (Q) and measurement noise covariance (R) matrices. The control architecture operates with a strict latency budget: sensor fusion completes within 5 ms, and lightweight neural network inference concludes within 10 ms, ensuring total decision latency under 15 ms. Fused data drives control signals executed by electromechanical actuators. To stabilize micro-servo motors adjusting blade angles or grip tension, the system employs a PID feedback loop with tuned proportional, integral, and derivative gains (Kp=2.5, Ki=0.8, Kd=0.3) to minimize overshoot and settle time. A failure-safe protocol is active: if the Kalman filter’s confidence metric (based on the trace of the posterior covariance matrix) drops below a threshold of 0.7, the system immediately reverts actuators to a neutral, low-power default state and disables automated adjustments until confidence recovers. This ensures safe operation during sensor noise spikes or communication gaps, allowing the system to suggest tool substitutions or optimize spatial arrangement only when high-confidence data is available.
+The Smart Tool Hub uses embedded micro-sensors (accelerometers, pressure sensors) in modular tool attachments to collect real-time data. A central AI unit processes this data using a Kalman filter-based sensor fusion algorithm with explicitly defined process noise covariance (Q) and measurement noise covariance (R) matrices. The control architecture operates with a strict latency budget: sensor fusion completes within 5 ms, and lightweight neural network inference concludes within 10 ms, ensuring total decision latency under 15 ms. Fused data drives control signals executed by electromechanical actuators. The system utilizes a specific signal path: the Kalman filter outputs a 3D state vector (position, velocity, orientation) which is mapped directly to servo targets via a linear transformation matrix. To stabilize micro-servo motors adjusting blade angles or grip tension, the system employs a PID feedback loop with tuned proportional, integral, and derivative gains (Kp=2.5, Ki=0.8, Kd=0.3) to minimize overshoot and settle time. The closed-loop feedback mechanism operates by comparing the target state from the AI unit with the actual state from the sensors, generating an error signal that drives the PID controller. A failure-safe protocol is active: if the Kalman filter’s confidence metric (based on the trace of the posterior covariance matrix) drops below a threshold of 0.7, the system immediately reverts actuators to a neutral, low-power default state and disables automated adjustments until confidence recovers. This ensures safe operation during sensor noise spikes or communication gaps, allowing the system to suggest tool substitutions or optimize spatial arrangement only when high-confidence data is available.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Household users seeking to reduce effort and optimize workflow in routine tasks 
 
 ## Novelty
 
-The integration of real-time adaptive AI with modular household tools is a novel approach that has not been demonstrated in prior literature on everyday household tools [3].
+Unlike surgical hubs [P2, P4, P5] which rely on sterile-field communication and cloud analytics, or phase-detection systems [P1], this invention is novel in its application of a strict 15 ms latency budget and a closed-loop PID feedback mechanism (Kp=2.5, Ki=0.8, Kd=0.3) directly mapped from Kalman-filtered household tool state estimates to micro-servo actuators, enabling real-time, closed-loop adaptive adjustment of everyday tools without network dependency.
 
 ## Ecosystem use
 
@@ -45,13 +45,14 @@ The Smart Tool Hub could be integrated into an AI-agent platform as an API-drive
 ## Diagram
 
 ```mermaid
-graph LR
-    A[User Interaction] --> B[Tool Attachments with Sensors]
-    B --> C[Wireless Communication Module]
-    C --> D[Central AI Unit]
-    D --> E[Real-Time Data Processing]
-    E --> F[Adaptive Tool Behavior]
-    F --> G[Optimized Workflow & Reduced Effort]
+graph TD
+    A[Micro-Sensors] --> B[Sensor Fusion (Kalman Filter)]
+    B --> C[AI Inference (10ms)]
+    C --> D[State-to-Target Mapping Matrix]
+    D --> E[PID Controller (Kp=2.5, Ki=0.8, Kd=0.3)]
+    E --> F[Micro-Servo Actuators]
+    F --> G[Tool Attachment]
+    G --> A
 ```
 
 ## Sources / grounding

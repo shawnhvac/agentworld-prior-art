@@ -24,11 +24,11 @@ A hybrid mechanism that combines data encoding techniques for Byzantine resilien
 
 ## How it works
 
-Local nodes encode their gradient updates using the data encoding scheme from [1] to embed them within a verifiable structure. These encoded updates are then wrapped in cryptographic proofs inspired by the 'proof-carrying' agent concept [2], which attest to the computation integrity without revealing raw data. Remote aggregator nodes validate these proofs and check for consistency against Byzantine-resilient SGD benchmarks [3] before aggregating the updates. To ensure end-to-end clarity and implementability, the system operates via a strict Protocol Specification defined by the following detailed technical specification and formal threat model:
+Local nodes encode their gradient updates using the data encoding scheme from [1] to embed them within a verifiable structure. These encoded updates are then wrapped in a Zero-Knowledge Proof (ZKP) inspired by the 'proof-carrying' agent concept [2], which attests to the computation integrity without revealing raw data. Specifically, the client generates a ZKP that the compressed sketch g' is the result of the linear transformation S_i * g for their private g. Remote aggregator nodes validate these ZKPs to verify the mathematical consistency of the encoding process without access to the raw gradient or a reference state, and check for consistency against Byzantine-resilient SGD benchmarks [3] before aggregating the updates. To ensure end-to-end clarity and implementability, the system operates via a strict Protocol Specification defined by the following detailed technical specification and formal threat model:
 
 **Formal Threat Model:**
 The system assumes a semi-honest central aggregator and malicious clients capable of colluding. Specific Byzantine attack vectors addressed include:
-1. **Gradient Poisoning:** Malicious nodes submit gradients designed to skew the global model. Mitigation: The sparse-sketching matrix S_i binds the gradient to a specific seed, and the Merkle proof verifies that the submitted sketch E(g) is mathematically consistent with S_i. Any deviation indicates tampering.
+1. **Gradient Poisoning:** Malicious nodes submit gradients designed to skew the global model. Mitigation: The ZKP binds the gradient to a specific seed, and the proof verifies that the submitted sketch E(g) is mathematically consistent with S_i. Any deviation indicates tampering.
 2. **Model Inversion:** Attempts to reconstruct training data from gradients. Mitigation: The transmission of compressed sketches g' rather than raw gradients g, combined with the one-way nature of the sparse-sketching transformation, limits information leakage.
 3. **Sybil/Replay Attacks:** Submission of stale or duplicate updates. Mitigation: The proof p includes a timestamp and nonce, verified via the Merkle hash chain.
 
@@ -41,19 +41,16 @@ def Encode(g, seed_i):
     return g_prime, S_i
 ```
 
-2) **Proof Generation:** A lightweight proof p is generated via P(E(g), S_i, key_i), specifically a Merkleized hash chain of the sketch coefficients, the sketching matrix S_i (or its seed), and their corresponding checksums, attesting to the integrity of the encoding process and the binding of the matrix to the gradient without exposing the full gradient.
+2) **Proof Generation:** A Zero-Knowledge Proof (ZKP) is generated via ZKP_E(g', S_i, g), proving that g' = S_i * g holds for the private g without revealing g. This attests to the integrity of the encoding process and the binding of the matrix to the gradient.
 ```python
-def GenerateProof(g_prime, S_i, key_i, timestamp):
-    # Create leaf nodes from sketch coefficients and matrix seed
-    leaf_1 = hash(g_prime)
-    leaf_2 = hash(S_i.seed)
-    leaf_3 = hash(timestamp)
-    merkle_root = merkle_tree(leaf_1, leaf_2, leaf_3)
-    signature = sign(merkle_root, key_i)
-    return {"merkle_root": merkle_root, "signature": signature, "timestamp": timestamp}
+def GenerateProof(g_prime, S_i, g):
+    # Generate ZKP that g_prime is the result of S_i @ g
+    # Uses a linear relation proof system (e.g., zk-SNARK for linear equations)
+    proof = zk_snark_prove(relation='g_prime == S_i @ g', witness=g, public_values=[g_prime, S_i])
+    return proof
 ```
 
-3) **Verification & Aggregation:** The aggregator receives S_i (or seed_i) alongside the proof. It runs V(p, E(g), S_i, g_ref), where V reconstructs the expected sketch structure from g_ref (the global reference state) using the received S_i and verifies the cryptographic proof p against the received
+3) **Verification & Aggregation:** The aggregator receives S_i (or seed_i), the sketch g', and the ZKP. It runs V(proof, g_prime, S_i), which verifies the ZKP to ensure the sketch was correctly computed from
 
 ## Materials / steps
 

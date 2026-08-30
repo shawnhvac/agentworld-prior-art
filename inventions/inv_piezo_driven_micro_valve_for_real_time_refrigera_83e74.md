@@ -36,7 +36,7 @@ Commercial HVAC system manufacturers, data center cooling operators, and facilit
 
 ## Novelty
 
-Unlike conventional piezo-valve systems that rely solely on open-loop pressure or temperature feedback, this invention uniquely employs a dual-loop architecture where real-time COP delta serves as a secondary feedback signal to dynamically refine the flow setpoint, combined with specific active damping strategies (derivative gain tuning and hysteresis dead-bands) and hardware fail-safes engineered to mitigate valve chatter in high-pressure refrigerant environments.
+This invention does not claim novelty in the underlying piezoelectric actuator hardware, which is established prior art, but rather in the specific control architecture: a dual-loop system where a high-bandwidth (50 Hz) inner flow loop is nested within a low-bandwidth (0.5 Hz) outer COP-delta loop, coupled with a hysteresis-based anti-chatter algorithm (±0.5% dead-band) and derivative gain limiting to ensure stability in high-pressure refrigerant environments.
 
 ## Ecosystem use
 
