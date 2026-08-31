@@ -31,7 +31,7 @@ Convergence in the decentralized setting is guaranteed by enforcing Lipschitz co
 
 ## Materials / steps
 
-Implement decentralized IR-Learning modules with preference-based reward shaping defined as $R_{pref}(s, a, s') = \exp(-\beta || \phi(s') - \phi_{target}(s') ||_2)$, where $\beta$ is a temperature parameter controlling preference sharpness and $\phi$ represents the semantic embedding. Integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment with the specified $B_{max}$ bandwidth constraint. Train in dynamic multi-agent environments with evolving task values. Validation will be conducted on the Hanabi and Traffic Junction benchmarks, measuring average reward per step, Inter-Subject Agreement (ISA) [Ref] to quantify consensus among agents, and Communication Efficiency Ratio to concretely measure the bandwidth cost of the token-exchange protocol, alongside standard reward metrics.
+Implement decentralized IR-Learning modules with preference-based reward shaping defined as $R_{pref}(s, a, s') = \exp(-\beta || \phi(s') - \phi_{target}(s') ||_2)$, where $\beta$ is a temperature parameter controlling preference sharpness and $\phi$ represents the semantic embedding. Integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment with the specified $B_{max}$ bandwidth constraint. Train in dynamic multi-agent environments with evolving task
 
 ## Who it's for
 

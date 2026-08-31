@@ -36,7 +36,7 @@ Developers of decentralized multi-agent systems requiring verifiable, low-latenc
 
 ## Novelty
 
-GOPCO introduces a unique coupling of semantic divergence ($D_s$) with dynamic gas adjustment ($G(s) = G_{base} \cdot (1 + \alpha \cdot D_s)$), resolving the static inefficiency limitations found in prior art [P1-P5] and standard quadratic voting by aligning economic incentives directly with semantic consensus validity rather than heuristic rules.
+GOPCO distinguishes itself from prior art [P1-P5] and standard quadratic voting by being the first to implement a deterministic on-chain gas modulation function $G(s) = G_{base} \cdot (1 + \alpha \cdot D_s)$ directly tied to semantic divergence $D_s$ within a single EVM call. This mechanism eliminates the reliance on static weights or off-chain negotiation loops found in existing systems, instead aligning economic incentives precisely with semantic consensus validity through immediate, on-chain cost adjustment.
 
 ## Ecosystem use
 

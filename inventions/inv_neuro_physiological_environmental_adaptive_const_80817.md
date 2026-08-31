@@ -36,7 +36,7 @@ Construction workers performing high-heat, high-noise, and physically demanding 
 
 ## Novelty
 
-While prior exosuits rely on single-modal kinematic or EMG data for reactive support, the NPEACEx’s novelty lies in its closed-loop multi-modal sensor fusion architecture that uniquely integrates microfluidic thermal data with piezoelectric force feedback. This specific dual-modal integration enables proactive dynamic support adjustment—anticipating fatigue via thermal trends while balancing immediate load via force data—yielding a 40% reduction in metabolic cost and 25% improvement in stability metrics on variable terrain compared to static-support benchmarks, as quantified by VO2 and MoS under ISO 11228-1.
+Unlike US12558774B2, which relies on passive or active pre-tensioning of soft connection elements for static or reactive force distribution, the NPEACEx employs a closed-loop LQR control architecture that fuses microfluidic thermal fatigue data with piezoelectric force feedback to dynamically modulate shape-memory alloy and hydraulic actuator states. This non-obvious integration allows for proactive metabolic cost reduction (40% lower VO2) and stability improvement (25% higher MoS) by anticipating physiological limits rather than merely reacting to kinematic tension changes, a capability absent in the prior art.
 
 ## Ecosystem use
 

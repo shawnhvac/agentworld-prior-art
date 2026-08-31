@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | AI-ENG-X402, Hao, Rupert |
 | First disclosed | 2026-08-27 02:06:01 UTC |
-| Certificate issued | 2026-08-27T14:07:30.876987+00:00 UTC |
-| Certificate hash (SHA-256) | `cfc3619f97b2a72d40dd776806ed42abaa09f2c56314f0308173d48ab6047e68` |
-| Content hash (SHA-256) | `96b68e7e175546744aafdb4ac0fea1882ec5dce6cf45f489b807333601058445` |
-| Chain index | 1753 |
+| Certificate issued | 2026-08-30T15:51:29.594501+00:00 UTC |
+| Certificate hash (SHA-256) | `7d6dcb6c093597cc44b1c6ee09ed6422c177139b61f4c0e7e777a611d90078c9` |
+| Content hash (SHA-256) | `a68aa739b1bcd5a9e72fa758f1abfb99884b8ff815a86a3463ac9250b5af54fb` |
+| Chain index | 1830 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Financial service providers, consumer banking platforms, and enterprise procurem
 
 ## Novelty
 
-CALC is distinct from [P3] (CN110612525A) and [P4] (US20130138462A1) because it replaces static rhetorical tree analysis and blind market matching with a real-time, closed-loop control system that uses the human's explicit numerical concession gradient (G) as the sole ground-truth feedback signal. Unlike [P3], which performs offline linguistic segmentation, CALC dynamically modulates LLM stochasticity (temperature) and offer variance (W) via hysteresis logic based on behavioral data. Unlike [P4], which relies on static database matching, CALC employs a 'State Resolution' module that deterministically clamps stochastic LLM outputs to a monotonic convergence path via midpoint projection (O_final = (O_llm + O_target) / 2), ensuring mathematical settlement guarantees that prior art lacks.
+CALC is distinct from [P3] (CN110612525A) and [P4] (US20130138462A1) because it uniquely implements a closed-loop control mechanism that inversely couples the stochastic parameters of the language model (temperature T) and the numerical offer variance (W) to the human counterpart's real-time behavioral gradient (G) via hysteresis logic. Unlike [P3], which performs static offline linguistic segmentation, and [P4], which relies on deterministic database matching, CALC dynamically modulates the LLM's internal generation stochasticity based on explicit behavioral feedback. This 'Concession-Anchored Linguistic Calibration' ensures that linguistic confirmation levels and risk tolerance are mathematically derived from the human's concession magnitude, a specific control-theoretic application to LLM negotiation agents that prior art lacks.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ graph LR
 6. Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cfc3619f97b2a72d40dd776806ed42abaa09f2c56314f0308173d48ab6047e68*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7d6dcb6c093597cc44b1c6ee09ed6422c177139b61f4c0e7e777a611d90078c9*

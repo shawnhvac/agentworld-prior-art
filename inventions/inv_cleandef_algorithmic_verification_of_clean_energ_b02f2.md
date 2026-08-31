@@ -24,7 +24,47 @@ CleanDef is a smart contract prototype that automates the verification of energy
 
 ## How it works
 
-The system ingests project metadata and maps it to energy-efficiency scenarios defined in [4] and capacity constraints in [1]. It executes a deterministic boolean check against configurable threshold parameters passed at deployment or via authorized governance updates. If reported metrics fall outside these bounds, the transaction reverts. A dedicated data-ingestion module facilitates the periodic updating of these thresholds with granular emission factors as they become available. The end-to-end settlement workflow proceeds as follows: 1) An off-chain oracle submits a Merkle proof of updated thresholds; 2) The contract verifies this proof against a trusted root hash; 3) Project metadata is hashed and compared against the current verified thresholds; 4) If compliant, the contract mints or credits the corresponding clean energy certificate; 5) If non-compliant, the transaction reverts with a specific error code. To ensure economic viability for the real-world trial, the implementation includes an optimized gas cost analysis for Merkle proof verification and certificate minting, ensuring that verification costs remain below 0.05% of the certificate's face value. Furthermore, the system explicitly documents security assumptions regarding the off-chain oracle's data integrity, requiring cryptographic signatures from at least two independent, reputation-weighted oracle sources to prevent single-point-of-failure data manipulation. The reputation weighting is calculated based on a decayed historical accuracy score, where $W_i = \frac{1}{1 + e^{-k(Acc_i - \bar{Acc})}}$, ensuring that oracles with higher historical verification accuracy exert greater influence on the consensus threshold.
+The system ingests project metadata and maps it to energy-efficiency scenarios defined in [4] and capacity constraints in [1]. It executes a deterministic boolean check against configurable threshold parameters passed at deployment or via authorized governance updates. If reported metrics fall outside these bounds, the transaction reverts. A dedicated data-ingestion module facilitates the periodic updating of these thresholds with granular emission factors as they become available. The end-to-end settlement workflow is fully specified by the following pseudocode sequence, which maps the data flow from oracle signature verification through Merkle proof validation to the final ERC-721 minting or revert:
+
+```solidity
+function settleProject(bytes32 projectHash, bytes[] calldata oracleSignatures, bytes32 merkleRoot, bytes calldata merkleProof) external {
+    // 1. Oracle Consensus & Reputation Verification
+    // Verify signatures from >= 2 independent oracles
+    require(verifyOracleSignatures(oracleSignatures) >= 2, "Insufficient Oracle Consensus");
+    
+    // 2. Reputation Weighted Validation
+    // Calculate W_i for each signer and ensure consensus threshold is met
+    uint256 totalWeight = 0;
+    for (uint i = 0; i < oracleSignatures.length; i++) {
+        address oracle = recoverSigner(oracleSignatures[i]);
+        totalWeight += getReputationWeight(oracle); // W_i = 1/(1+e^(-k(Acc_i - Acc_bar)))
+    }
+    require(totalWeight >= CONSENSUS_THRESHOLD, "Reputation Threshold Not Met");
+
+    // 3. Merkle Proof Validation
+    // Verify that the updated thresholds root matches the trusted root
+    require(verifyMerkleProof(merkleProof, merkleRoot, THRESHOLD_ROOT), "Invalid Merkle Root");
+
+    // 4. Compliance Check
+    // Decode project metadata and check against thresholds derived from merkleRoot
+    (uint256 emissionFactor, uint256 capacity) = decodeThresholds(merkleRoot);
+    (uint256 reportedEmission, uint256 reportedCapacity) = decodeProject(projectHash);
+    
+    bool isCompliant = (reportedEmission <= emissionFactor) && (reportedCapacity >= capacity);
+
+    // 5. Settlement Action
+    if (isCompliant) {
+        // Mint ERC-721 Certificate
+        uint256 tokenId = mintCertificate(projectHash, msg.sender);
+        emit CertificateMinted(tokenId, projectHash);
+    } else {
+        // Revert with specific error code
+        revert NonCompliantProject();
+    }
+}
+```
+
+To ensure economic viability for the real-world trial, the implementation includes an optimized gas cost analysis for Merkle proof verification and certificate minting, ensuring that verification costs remain below 0.05% of the certificate's face value. Furthermore, the system explicitly documents security assumptions regarding the off-chain oracle's data integrity, requiring cryptographic signatures from at least two independent, reputation-weighted oracle sources to prevent single-point-of-failure data manipulation. The reputation weighting is calculated based on a decayed historical accuracy score, where
 
 ## Materials / steps
 

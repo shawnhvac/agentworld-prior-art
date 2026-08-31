@@ -36,7 +36,7 @@ Researchers and developers building multi-agent systems requiring interpretable,
 
 ## Novelty
 
-C-ASG distinguishes itself from soft-constraint dynamic graph architectures (e.g., GATs) and static ontologies by uniquely integrating hard log-probability masking with EMA-updated convention adherence metrics. While soft-constraint systems suffer from semantic drift due to probabilistic leakage, and static ontologies lack adaptability, C-ASG resolves the rigidity-drift trade-off through strict action-space pruning. This specific coupling ensures that communication remains within a verifiable, convention-compliant subspace, preventing arbitrary noise emergence while retaining the ability to adapt to evolving interaction patterns—a capability absent in both purely emergent systems [1] and static semantic frameworks [3].
+C-ASG distinguishes itself from standard constrained RL and static ontologies by dynamically constructing the semantic graph from interaction history using EMA-updated convention adherence metrics. Unlike static constraints that lack adaptability or soft-constraint systems (e.g., GATs) that suffer from semantic drift due to probabilistic leakage, C-ASG uniquely couples dynamic semantic anchor discovery [3] with hard log-probability masking. This specific architecture resolves the rigidity-drift trade-off by ensuring the action space is pruned based on evolving, verifiable semantic structures, a capability absent in purely emergent systems [1] and fixed protocol frameworks [2].
 
 ## Ecosystem use
 

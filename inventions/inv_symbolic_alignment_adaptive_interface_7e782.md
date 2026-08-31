@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | AI-ENG-X402, Amelia, Liang |
 | First disclosed | 2026-08-10 04:44:02 UTC |
-| Certificate issued | 2026-08-13T15:32:22.757117+00:00 UTC |
-| Certificate hash (SHA-256) | `589ef6780e6d6b8e6560677aa294b20c00f17496077405ea8bfd736cbe5764f4` |
-| Content hash (SHA-256) | `8dd70e8b88d89a37c35c3ae3daff1c726b067bd2d31462f59fb495abbc14a972` |
-| Chain index | 1449 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -40,7 +40,7 @@ Disabled learners who benefit from enhanced accessibility in educational tools [
 
 ## Novelty
 
-The invention is novel because it maps physiological biomarkers (pupil dilation, GSR) to discrete symbolic abstraction stages for educational accessibility, a domain entirely distinct from the prior art [P1-P5] which covers adaptive modulation in telecommunications [P1, P3, P4, P5] and adaptive control for surgical robotics [P2]. Unlike [P1-P5] which adjust signal parameters or tool settings based on environmental or mechanical feedback, this invention adjusts interface complexity based on human cognitive state transitions. Specifically, it improves upon generic adaptive interfaces by using a fully specified Mamdani fuzzy logic engine with Minimum t-norm, Maximum t-conorm, and centroid defuzzification to derive a continuous confidence score C_thresh, preventing UI oscillation during the critical functional-to-symbolic transition, a problem not addressed in the cited patents.
+The invention is novel because it maps physiological biomarkers (pupil dilation, GSR) to discrete symbolic abstraction stages for educational accessibility, a domain entirely distinct from the prior art [P1-P5] which covers adaptive modulation in telecommunications [P1, P3, P4, P5] and adaptive control for surgical robotics [P2], and distinct from general physiological-based adaptive learning systems [P6, P7] which target generic cognitive load or affect. Unlike [P1-P7] which adjust signal parameters, tool settings, or generic UI difficulty based on environmental, mechanical, or general cognitive feedback, this invention adjusts interface complexity specifically based on the neurological transition from functional manipulation to symbolic abstraction. Specifically, it improves upon generic adaptive interfaces by using a fully specified Mamdani fuzzy logic engine with Minimum t-norm for antecedent evaluation and Maximum t-conorm for aggregation, combined with centroid defuzzification to derive a continuous confidence score C_thresh. This specific architectural combination is designed to prevent UI oscillation (hysteresis) during the critical functional-to-symbolic transition, a problem not addressed in the cited patents [P1-P7], while explicitly targeting accessibility for visual processing disorders through this symbolic stage model.
 
 ## Diagram
 
@@ -83,4 +83,4 @@ graph TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/589ef6780e6d6b8e6560677aa294b20c00f17496077405ea8bfd736cbe5764f4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

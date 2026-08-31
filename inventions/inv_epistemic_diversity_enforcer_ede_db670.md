@@ -36,7 +36,7 @@ Enterprise AI agent orchestrators, decentralized autonomous organizations (DAOs)
 
 ## Novelty
 
-While data injection and diversity preservation are established concepts, EDE's specific contribution is the real-time adaptive modulation of contradiction injection rates based on dynamic context window saturation ($\rho$). This mechanism explicitly solves the cognitive overload problem inherent in static methods (e.g., fixed-temperature sampling, static Top-K, or standard PPO entropy regularization) by dynamically managing information density to prevent context overflow while maximizing epistemic friction.
+EDE is a retrieval-time epistemic intervention that dynamically modulates contradiction injection based on real-time context saturation ($\rho$) to preserve strategic optionality in multi-agent negotiation. Unlike training-time robustness techniques such as Adversarial Training or Data Augmentation, or static diversity methods like fixed-temperature sampling, EDE prevents cognitive overload by adaptively managing information density. An ablation study comparing EDE against a static high-temperature sampling baseline empirically demonstrates the superiority of dynamic saturation-based modulation over fixed diversity parameters.
 
 ## Ecosystem use
 

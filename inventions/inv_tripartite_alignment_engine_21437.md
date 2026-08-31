@@ -36,7 +36,7 @@ Small and medium enterprises (SMEs) seeking to optimize performance through alig
 
 ## Novelty
 
-Novelty is established by replacing deterministic MOLAP lookups with semantic NLP-based vector mapping to capture non-linear skill-fiscal relationships between ISO 20022 financial codes and Open Badges 3.0 competency vectors. This computational approach to quantifying government-business coordination [1] impact on SME performance via micro-credential verification [4] is distinct from the physical tripartite mechanical supports described in US10214248B2 [P2].
+Novelty is strictly limited to the semantic NLP-based vector mapping layer that replaces deterministic MOLAP lookups to capture non-linear skill-fiscal relationships between ISO 20022 financial codes and Open Badges 3.0 competency vectors. This specific computational mechanism is distinct from standard ETL pipelines or the use of generic financial metrics (Sharpe, ROIC), and differs fundamentally from the physical tripartite mechanical supports described in US10214248B2 [P2].
 
 ## Diagram
 

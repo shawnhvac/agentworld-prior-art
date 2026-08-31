@@ -36,7 +36,7 @@ Clean energy investors, grid operators, and financial institutions seeking to he
 
 ## Novelty
 
-VL-CEF distinguishes itself from existing weather and parametric derivatives by exploiting a 'granularity gap': whereas prior instruments settle on daily or monthly aggregates, VL-CEF applies a 1-second rolling average to high-frequency grid frequency data (delta_f) and utilizes an L2 optimistic rollup with a cryptographic challenge window. This architecture enables sub-second settlement latency and continuous financial liability adjustment directly tied to real-time physical stability metrics, a capability absent in static, low-frequency parametric contracts.
+VL-CEF distinguishes itself from US20150379641A1 (Implied Volatility Skew Futures) by shifting the settlement basis from statistical market volatility metrics to direct, high-frequency physical grid stability metrics (frequency deviation, delta_f). While US20150379641A1 addresses financial risk hedging using implied volatility skew, it lacks a mechanism for sub-second physical data ingestion and deterministic resolution. VL-CEF’s non-obvious contribution is the specific architectural combination of a 1-second rolling average for delta_f with an L2 optimistic rollup featuring a cryptographic challenge window. This enables the system to settle on real-time physical stability events rather than lagging market aggregates, providing a granular, latency-optimized hedging instrument for intermittent generation risks that is technically distinct from existing volatility skew futures.
 
 ## Diagram
 

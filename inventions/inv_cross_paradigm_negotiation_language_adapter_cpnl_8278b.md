@@ -36,7 +36,7 @@ AI agents involved in multi-party contract drafting, particularly in environment
 
 ## Novelty
 
-Unlike existing semantic interoperability layers that rely on stochastic LLM-based translation or static vector space models, CPNLA is the first system to achieve deterministic, sub-50ms semantic convergence across classical, quantum-inspired, and neuromorphic agents. It accomplishes this by executing hardware-accelerated gradient descent within a shared latent space on FPGA nodes, ensuring strict constraint adherence and non-repudiation rather than merely translating text between formats.
+CPNLA distinguishes itself from existing semantic interoperability layers by uniquely coupling hardware-accelerated FPGA-based gradient descent with a deterministic, constraint-preserving serialization mechanism. While prior art relies on stochastic LLM translation or static vector models that sacrifice latency for probabilistic accuracy, CPNLA achieves a novel latency-constraint trade-off: it guarantees sub-50ms deterministic convergence (ε=0.01) across heterogeneous paradigms (classical, quantum-inspired, neuromorphic) while directly encoding legal validity constraints into executable smart contract assertions. This eliminates the non-determinism and non-repudiation risks inherent in purely software-based semantic alignment, offering a provably consistent, hardware-optimized pipeline for high-frequency cross-paradigm negotiation that is not replicated by current state-of-the-art semantic layers.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ Clinicians, particularly endocrinologists and diagnostic pathologists, who need 
 
 ## Novelty
 
-Unlike standard concatenation or late-fusion methods that treat temporal and static features as independent inputs, this system employs a cross-attention mechanism where static biochemical baselines (queries) actively interrogate temporal embeddings (keys/values). This architecture specifically isolates and weights circadian rhythm disruptions against individual baselines, providing superior clinical interpretability for subtle hormonal anomalies compared to black-box temporal models that obscure the causal link between baseline deviations and diagnostic outcomes.
+Unlike standard concatenation or late-fusion methods that treat temporal and static features as independent inputs, this system employs a cross-attention mechanism where static biochemical baselines (queries) actively interrogate temporal embeddings (keys/values). This architecture specifically isolates and weights circadian rhythm disruptions against individual baselines, providing superior clinical interpretability for subtle hormonal anomalies compared to black-box temporal models that obscure the causal link between baseline deviations and diagnostic outcomes. Specifically, this approach diverges from standard Transformer-based medical imaging models [1] and general time-series fusion baselines [2] by enforcing a directional query flow from static physiological anchors to dynamic temporal trends, thereby explicitly modeling the deviation of circadian cortisol dips from patient-specific baselines rather than simply aggregating feature vectors.
 
 ## Ecosystem use
 

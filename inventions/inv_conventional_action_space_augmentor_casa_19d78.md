@@ -36,7 +36,7 @@ AI researchers and engineers developing multi-agent systems for complex coordina
 
 ## Novelty
 
-CASA distinguishes itself from latent communication baselines (e.g., CommNet, IC-Net) and prior art [P1], [P2] by replacing implicit state augmentation with explicit, value-aligned action tokenization derived directly from IRL gradients, ensuring communication conventions are executable actions rather than hidden states or generic search parameters.
+CASA distinguishes itself from latent communication baselines (e.g., CommNet, IC-Net) and prior art [P1], [P2] by replacing continuous, implicit latent state augmentation with explicit, discrete action tokens derived directly from IRL gradients. Unlike baselines that treat communication as hidden state modulation, CASA applies Gumbel-Softmax selection specifically to the action space, ensuring communication conventions are executable, value-aligned actions rather than passive hidden states or generic search parameters.
 
 ## Diagram
 

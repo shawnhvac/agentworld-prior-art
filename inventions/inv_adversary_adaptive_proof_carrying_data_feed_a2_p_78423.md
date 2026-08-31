@@ -36,7 +36,7 @@ Decentralized AI ecosystems requiring high resilience to adversarial data inject
 
 ## Novelty
 
-A2-PCDF introduces a closed-loop feedback mechanism where real-time behavioral analysis of AI agents directly modulates the generation of zk-SNARK proofs, unlike static PCP or standard BFT which rely on fixed verification schemas; this dynamic coupling, validated against recent adaptive verification schemes, achieves a 20% reduction in verification latency and 15% improvement in detection accuracy by pruning unnecessary proof complexity during low-threat states while intensifying verification rigor under detected adversarial patterns.
+A2-PCDF is novel relative to [P1] and [P2] because it is the first to implement a closed-loop, real-time modulation of zk-SNARK circuit complexity (pruning from C_max=5000 to C_min=500 gates) based on dynamic AI agent behavioral Trust Scores, rather than relying on static geographic tamper-proofing ([P1]) or fixed polymorphic protocol stacks ([P2]). This dynamic coupling is uniquely quantified by the Threat-Adaptive Efficiency Ratio (TAER), which explicitly targets a 25% efficiency improvement over static PCP baselines under 20% adversarial load, a metric and adaptive cryptographic mechanism absent in both prior art references.
 
 ## Ecosystem use
 

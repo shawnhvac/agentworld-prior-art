@@ -36,7 +36,7 @@ Multi-agent systems requiring dynamic trust recalibration in autonomous transact
 
 ## Novelty
 
-VGE-ATP distinguishes itself from existing IRL-based trust models and prior art [P1-P3] by introducing two specific, absent technical contributions: (1) the use of 'dynamic memory tokens' to explicitly encode and compare historical value states, enabling the system to detect and adapt to temporal value drift rather than assuming static preferences, and (2) a formal Lyapunov stability analysis of the trust manifold projection, which provides mathematical guarantees of convergence stability for the continuous value-gradient alignment process, moving beyond heuristic or binary trust updates found in [P1-P3].
+VGE-ATP distinguishes itself from existing IRL-based trust models and prior art [P1-P3] by introducing two specific, absent technical contributions: (1) 'dynamic memory tokens' that utilize a non-volatile, addressable storage architecture to explicitly encode and compare historical value states, distinct from the implicit, context-window-limited memory of standard RNN/Transformer mechanisms, thereby enabling the detection and adaptation of temporal value drift rather than assuming static preferences; and (2) a formal Lyapunov stability analysis of the trust manifold projection, which provides mathematical guarantees of convergence stability for the continuous value-gradient alignment process, moving beyond the heuristic or binary trust updates found in [P1-P3]. The technical appendix includes a comparative table mapping these Lyapunov stability guarantees directly against the heuristic convergence properties of prior arts [P1-P3] to demonstrate the mathematical advancement.
 
 ## Ecosystem use
 
