@@ -30,6 +30,26 @@ An extension to biologically inspired memory systems (like Agent Brain [2]) wher
 
 Implement a differentiable interface for the memory retrieval mechanism in Agent Brain [2] using a straight-through estimator (STE) or Gumbel-Softmax approximation to handle discrete retrieval steps, including explicit error handling for numerical edge cases (NaN/Inf gradients) to ensure robustness. Integrate gradient computation logic into the training loop to calculate sensitivity scores via the differentiable approximation. Implement a normalization module to scale raw sensitivity scores to [0,1] using batch min-max statistics. Modify the Agent-OS [1] retrieval module to read and apply these normalized scores for pruning, incorporating the EMA-based dynamic threshold adjustment logic with the explicit normalized sigmoid mapping function. Deploy in a property management simulation environment. Validate performance using concrete metrics with specific targets: measure retrieval latency reduction (target >20%), quantify memory footprint decrease (target >30%), and explicitly compute and report a causal fidelity score (target >0.95) comparing pruned vs. full-memory agent performance. The causal fidelity score is defined as the counterfactual accuracy, calculated as the proportion of actions where the pruned memory set yields the same optimal action as the full memory set under identical state observations. Use statistical significance testing (specifically, paired t-tests with a significance level of p<0.05) to verify improvements against the full-memory baseline. Conduct ablation studies with a minimum sample size of N=1000 episodes per condition to ensure sufficient statistical power (power > 0.8) for detecting effect sizes of Cohen's d = 0.5, strictly adhering to these parameters to guarantee reproducibility. Additionally, conduct a sensitivity analysis detailing how variations in hyperparameters alpha (EMA decay) and k (sigmoid sensitivity) affect pruning stability and causal fidelity, ensuring
 
+Implementation Surface:
+1. Agent Brain [2] Modifications:
+   - File: `agent_brain/memory/retrieval_core.py`
+   - Function: `def differentiable_retrieve(query_vec: np.ndarray, memory_bank: MemoryBank, temperature: float = 1.0) -> Tuple[List[MemoryNode], np.ndarray]`
+   - Change: Replace hard argmax retrieval with Gumbel-Softmax relaxation. Add try-catch block for NaN gradients, falling back to STE if detected.
+   - File: `agent_brain/memory/node.py`
+   - Function: `class MemoryNode`
+   - Change: Add attribute `counterfactual_score: float` and method `update_score(gradient: np.ndarray)`.
+
+2. Agent-OS [1] Modifications:
+   - File: `agent_os/kernel/retrieval_filter.py`
+   - Function: `def apply_pruning(candidate_set: List[MemoryNode], threshold: float) -> List[MemoryNode]`
+   - Change: Implement threshold-based filtering logic.
+   - File: `agent_os/kernel/threshold_controller.py`
+   - Function: `def update_threshold(current_theta: float, loss_gradient: float, g_mean: float, alpha: float = 0.1, k: float = 5.0, g_mean_running: float = 0.0) -> Tuple[float, float]`
+   - Change: Implement EMA update for `g_mean` and threshold update using the normalized sigmoid mapping function.
+
+Validation Harness:
+- Script: `tests/test
+
 ## Who it's for
 
 Developers of autonomous AI agents requiring efficient, high-fidelity memory retrieval, particularly in complex domains like property management.

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | AI-ENG-X402, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-22 01:54:33 UTC |
-| Certificate issued | 2026-08-22T14:07:37.832708+00:00 UTC |
-| Certificate hash (SHA-256) | `2ad87ee332983a8c7dae7473bcf23320485ae8959863a6d494943c47eb41e91c` |
-| Content hash (SHA-256) | `28881c31346779936110440a553055ff61c9554c1454884afe7f2702f505ed43` |
-| Chain index | 1702 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -75,4 +75,4 @@ flowchart TD
 6. ChatGPT: Chat, Work, Create & Code with AI
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2ad87ee332983a8c7dae7473bcf23320485ae8959863a6d494943c47eb41e91c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

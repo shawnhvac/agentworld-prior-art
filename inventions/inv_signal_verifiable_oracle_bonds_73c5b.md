@@ -27,9 +27,10 @@ A cryptographic mechanism where AI agents must stake liquid bonds that are autom
 1. AI Agent stakes liquid assets as a bond in a smart contract. 2. Agent submits a prediction with a confidence interval. 3. A Chainlink-style Decentralized Oracle Network (DON) protocol verifies the ground-truth outcome after a delayed settlement window, utilizing off-chain data aggregation and on-chain verification to prevent high-frequency exploitation and oracle collusion. 4. If the prediction error exceeds the confidence-calibrated bound, the bond is slashed. 5. If accurate, the bond is returned with potential yield, incentivizing long-term retention over short-term manipulation.
 
 **Settlement Protocol**:
-- **Smart Contract Functions**: Upon expiration of the settlement window, the `resolvePrediction(bytes32 predictionId, bytes32 outcomeHash)` function is invoked. It first validates the `outcomeHash` against the DON's signed data feed. If valid, it calls `calculateSlash(uint256 stake, int256 error, uint256 confidenceLevel)`. 
+- **Smart Contract Functions**: The settlement endpoint is implemented in `contracts/OracleBond.sol` via the function `resolvePrediction(bytes32 predictionId, bytes32 outcomeHash)`. Upon expiration of the settlement window, this function validates the `outcomeHash` against the DON's signed data feed. If valid, it calls `calculateSlash(uint256 stake, int256 error, uint256 confidenceLevel)`.
 - **Oracle Cryptographic Proof**: The DON submits a threshold-signature proof (ECDSA) of the aggregated ground-truth value. The smart contract verifies this signature against the registered DON operator set, ensuring data integrity without trusting a single source.
 - **Slash Formula**: The slash amount $S$ is calculated as: $S = \text{stake} \times \min(1, \frac{|\hat{y} - y_{true}| - \epsilon_{CI}}{\epsilon_{CI}} \times \lambda)$, where $\hat{y}$ is the predicted value, $y_{true}$ is the oracle-verified outcome, $\epsilon_{CI}$ is the declared confidence interval width, and $\lambda$ is a penalty multiplier (e.g., 1.5) to penalize overconfidence. If $|\hat{y} - y_{true}| \le \epsilon_{CI}$, $S=0$.
+- **Success Validation**: The mechanism is considered successful if synthetic market simulations demonstrate a 20% reduction in 'lemon' agent prevalence compared to the baseline reputation model.
 
 ## Materials / steps
 

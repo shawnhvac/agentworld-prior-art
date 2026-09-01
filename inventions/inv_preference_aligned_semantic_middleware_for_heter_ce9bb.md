@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring robust cooperation across heterogene
 
 ## Novelty
 
-Explicitly distinguishes the invention from static ontology mapping and fixed-schema translation by leveraging dynamic, runtime preference alignment via Inverse Reinforcement Learning (IRL), thereby resolving value-conflicts and intent ambiguity that static approaches cannot address due to their inability to adapt to evolving agent preferences.
+Unlike US20060112029A1 [P1], which performs static knowledge discovery and conceptual relationship mapping for search results, this invention uses Inverse Reinforcement Learning (IRL) to dynamically map latent intent vectors to a shared value space, resolving value-conflicts and intent ambiguity in real-time heterogeneous agent communication rather than static ontological indexing.
 
 ## Ecosystem use
 

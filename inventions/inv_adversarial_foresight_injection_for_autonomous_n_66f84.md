@@ -24,39 +24,11 @@ AFI-AN is a robustness layer that injects counter-factual 'worst-case' scenarios
 
 ## How it works
 
-1. The primary generative policy (based on GenIR foundations [2]) proposes a negotiation move. 2. A parallel MCTS module perturbs the reward function with adversarial noise to simulate 'narrowed futures' and failure states [1]. 3. The agent computes the Adversarial Robustness Score (ARS) by evaluating the variance of outcomes across these perturbed trajectories. 4. If the ARS falls below a stability threshold, the primary policy parameters are updated via **Projected Gradient Descent (PGD)** on the min-max utility function. Specifically, the policy updates $\theta \leftarrow \theta - \eta \nabla_\theta \min_{\delta \sim \mathcal{D}} \mathbb{E}[R(s, \pi_\theta(s) + \delta)]$, where the gradient is estimated via finite differences or backpropagation through the MCTS simulation loop, and the update is projected onto the feasible policy space to maintain stability. 5. The agent executes the robustness-adjusted move, ensuring strategic stability rather than just immediate utility maximization. Pseudocode for the MCTS-adversarial perturbation loop:
-```
-function AFI_MCTS_Rollout(state, policy, adversarial_noise_dist):
-    node = create_node(state)
-    for _ in range(iterations):
-        current = node
-        while current.is_expandable():
-            current = current.select_child()
-        current.expand()
-        // Adversarial Perturbation Step
-        perturbed_reward = current.reward + sample(adversarial_noise_dist)
-        outcome = simulate_future(current.state, perturbed_reward)
-        current.backpropagate(outcome)
-    return node.best_child()
-
-function AFI_Policy_Update(policy, state, adversarial_noise_dist):
-    // Estimate min-max utility gradient
-    grad_estimate = 0
-    for i in range(num_grad_samples):
-        delta = sample(adversarial_noise_dist)
-        # Differentiate through the simulation or use finite differences
-        loss = -utility(state, policy, delta) 
-        grad_estimate += grad(loss, policy.params)
-    grad_estimate /= num_grad_samples
-    
-    // Projected Gradient Descent Step
-    new_params = policy.params - learning_rate * grad_estimate
-    policy.params = project_to_feasible_space(new_params)
-```
+1. The primary generative policy (based on GenIR foundations [2]) proposes a negotiation move. 2. A parallel MCTS module perturbs the reward function with adversarial noise to simulate 'narrowed futures' and failure states [1]. 3. The agent computes the Adversarial Robustness Score (ARS) by evaluating the variance of outcomes across these perturbed trajectories. 4. If the ARS falls below a stability threshold, the primary policy parameters are updated via **Projected Gradient Descent (PGD)** on the min-max utility function. Specifically, the policy updates $\theta \leftarrow \theta - \eta \nabla_\theta \min_{\delta \sim \mathcal{D}} \mathbb{E}[R(s, \pi_\theta(s) + \delta)]$, where the gradient is estimated via finite differences or backpropagation through the MCTS simulation loop, and the update is projected onto the feasible policy space to maintain stability. 5. The agent executes the robustness-adjusted move, ensuring strategic stability rather than just immediate utility maximization. Integration Points: The AFI-AN hook is inserted at `negotiation_policy.py::generate_move()` (Step 5) to intercept the raw LLM output, and the MCTS rollout logic is encapsulated in `mcts_module.py::AFI_MCTS_Rollout()` (Step 2-3).
 
 ## Materials / steps
 
-1. Implement a standard LLM-based negotiation agent using GenIR principles [2]. 2. Develop an MCTS module capable of perturbing reward functions with adversarial noise. 3. Create a simulation environment modeling adversarial banking negotiations [5]. 4. Train the AFI-AN module to identify and explore low-probability failure states. 5. Implement the Projected Gradient Descent (PGD) optimizer for the min-max utility function, ensuring gradients can be backpropagated or estimated through the MCTS simulation loop. 6. Integrate the robustness score into the agent's final decision policy using the defined PGD update rule. 7. Define and calculate the Adversarial Robustness Score (ARS) as the negative variance of reward outcomes under adversarial perturbation. 8. Define and calculate the Strategic Stability Index (SSI) as the ratio of the agent's worst-case outcome to its expected outcome, measuring resilience to strategic narrowing. 9. Conduct a validation benchmark comparing AFI-AN against a standard MCTS baseline (without adversarial perturbation) and a non-robust LLM agent in the adversarial banking environment, reporting ARS and SSI metrics to demonstrate measurable improvements in worst-case outcome variance.
+1. Implement a standard LLM-based negotiation agent using GenIR principles [2]. 2. Develop an MCTS module capable of perturbing reward functions with adversarial noise. 3. Create a simulation environment modeling adversarial banking negotiations [5]. 4. Train the AFI-AN module to identify and explore low-probability failure states. 5. Implement the Projected Gradient Descent (PGD) optimizer for the min-max utility function, ensuring gradients can be backpropagated or estimated through the MCTS simulation loop. 6. Integrate the robustness score into the agent's final decision policy using the defined PGD update rule. 7. Define and calculate the Adversarial Robustness Score (ARS) as the negative variance of reward outcomes under adversarial perturbation. 8. Define and calculate the Strategic Stability Index (SSI) as the ratio of the agent's worst-case outcome to its expected outcome, measuring resilience to strategic narrowing. 9. Conduct a validation benchmark comparing AFI-AN against a standard MCTS baseline (without adversarial perturbation) and a non-robust LLM agent in the adversarial banking environment. Validation Protocol: Use a fixed test suite of 100 adversarial scenarios. Success criterion: AFI-AN must demonstrate a measurable 20% reduction in worst-case loss variance (calculated from ARS) compared to the standard MCTS baseline.
 
 ## Who it's for
 

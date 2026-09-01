@@ -24,17 +24,7 @@ Null. It is impossible to synthesize a grounded invention brief for renewable ma
 
 ## How it works
 
-The system operates through a three-stage pipeline: (1) Ingestion: Digital media inputs are tokenized and converted into high-dimensional vector embeddings using a pre-trained transformer model. (2) Comparison: These embeddings are compared against a fixed reference set of renewable material synthesis term embeddings using cosine similarity. (3) Gating: If the maximum similarity score is below the calibrated threshold of 0.3, the protocol is rejected as hallucinated. This process is formalized in the following pseudocode: 
-
-def validate_protocol(media_text, material_terms):
-    media_vec = embed(media_text)
-    material_vecs = [embed(term) for term in material_terms]
-    max_sim = max(cosine_similarity(media_vec, mv) for mv in material_vecs)
-    if max_sim < 0.3:
-        return REJECT_HALLUCINATION
-    return ACCEPT (with further validation)
-
-Validation Protocol: The metric is validated against a curated ground-truth dataset of 500 labeled hallucination cases (comprising 250 true hallucinations and 250 valid cross-domain references). The system targets a precision of >95% and a recall of >90% (F1-score >0.92). Baseline comparisons are conducted against standard RAG without semantic gating and a keyword-matching baseline to quantify the improvement in preventing hallucinated protocols.
+The system operates through a three-stage pipeline exposed via the REST endpoint `POST /v1/protocol/validate`. (1) Ingestion: The request body contains `media_text` and `material_terms`; these inputs are tokenized and converted into high-dimensional vector embeddings using a pre-trained transformer model. (2) Comparison: These embeddings are compared against a fixed reference set of renewable material synthesis term embeddings using cosine similarity. (3) Gating: If the maximum similarity score is below the calibrated threshold of 0.3, the endpoint returns HTTP 422 with a `REJECT_HALLUCINATION` status; otherwise, it returns HTTP 200 with `ACCEPT`. Success is measured via a live A/B test against the existing RAG baseline, targeting a >50% reduction in invalid synthesis steps per 1000 queries compared to the un-gated baseline.
 
 ## Materials / steps
 

@@ -28,7 +28,29 @@ ETME operates through a three-phase end-to-end sequence: 1) Agent generates a Ze
 
 ## Materials / steps
 
-Implement a lightweight version of the Verifiable Contextual Memory Graph (VCMG) [4] as a context-aware ethical filter for ZKP generation. Integrate adaptive trust scoring from DCMV-ATS [6] to dynamically adjust the weight of each agent's memory contribution during verification. Use zero-knowledge proofs to ensure privacy during the initial compliance check. Apply threshold cryptography among network nodes for decentralized consensus on memory validation and block finalization [5]. Deploy the system in a simulated environment with AI agents of varying ethical profiles. Validate system performance against concrete metrics: target ZKP generation latency under 50ms, minimum 99% accuracy in rejecting non-compliant memories, system throughput benchmark of 1,000 transactions per second, DCMV-ATS score stability with convergence within 500ms, and threshold cryptography verification latency of <20ms per node. Add a detailed 'Protocol Specification' section that explicitly defines the message formats, the mathematical linkage between the VCMG output and the ZKP circuit, the specific algorithm for updating DCMV-ATS scores based on verification results, and the threshold signature scheme parameters used for final block consensus. Include a detailed performance analysis section justifying the 50ms ZKP latency claim, featuring specific mathematical formulations linking VCMG outputs to ZKP circuits, complexity analysis of the proof generation pipeline, and empirical benchmarking results from the simulated environment.
+Implement a lightweight version of the Verifiable Contextual Memory Graph (VCMG) [4] as a context-aware ethical filter for ZKP generation. Integrate adaptive trust scoring from DCMV-ATS [6] to dynamically adjust the weight of each agent's memory contribution during verification. Use zero-knowledge proofs to ensure privacy during the initial compliance check. Apply threshold cryptography among network nodes for decentralized consensus on memory validation and block finalization [5]. 
+
+**System Architecture & Surface:**
+1. **Core Files:**
+   - `src/protocol/zkp_generator.py`: Implements the VCMG-to-ZKP circuit compilation and proof generation logic.
+   - `src/consensus/threshold_signer.go`: Handles the threshold cryptography operations for block finalization.
+   - `src/trust/dcmv_ats_engine.py`: Manages the adaptive trust scoring state and updates.
+   - `src/api/handlers.py`: Defines the RESTful interface for memory submission and trust queries.
+
+2. **API Endpoints:**
+   - `POST /v1/memory/submit`: Accepts a memory payload and ZKP; returns a verification status and transaction ID.
+   - `GET /v1/trust/score/{agent_id}`: Retrieves the current DCMV-ATS adaptive trust score for a specific agent.
+   - `GET /v1/consensus/status`: Returns the current state of the threshold consensus for the latest block.
+
+**Validation Plan:**
+1. **Test Harness:** Deploy a simulated environment with 100 AI agents of varying ethical profiles using the `etme-sim` framework.
+2. **Input Datasets:** Generate 1,000 synthetic memory entries with ground-truth ethical labels (500 compliant, 500 non-compliant) using the `ethics-gen` tool.
+3. **Pass/Fail Criteria:**
+   - **Rejection Accuracy:** The system must reject >99% of non-compliant memories and accept >99% of compliant memories on the test set, with statistical significance p<0.05.
+   - **Latency:** ZKP generation must complete in <50ms (95th percentile) and threshold verification in <20ms per node (95th percentile).
+   - **Throughput:** The system must sustain 1,000 transactions per second for 60 seconds without error.
+   - **Trust Convergence:** DCMV-ATS scores must stabilize (variance <0.01) within 500ms of a significant ethical violation event.
+4. **Reproducibility:** All test scripts, dataset generation seeds, and configuration files must be committed to the `tests/` directory with a `Makefile` target `make validate` that executes the full suite.
 
 ## Who it's for
 
