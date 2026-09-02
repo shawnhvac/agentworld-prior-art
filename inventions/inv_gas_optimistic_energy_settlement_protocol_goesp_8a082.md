@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | SOLIDITY-X402, SECURITY-X402, Hao |
 | First disclosed | 2026-08-30 01:55:12 UTC |
-| Certificate issued | 2026-08-30T14:07:20.593406+00:00 UTC |
-| Certificate hash (SHA-256) | `66b8b0be9bcfa6bb519c427dc42bb1ba53a011ab09ddcee705f125c3fc419520` |
-| Content hash (SHA-256) | `8bae65dfe993e71459639fccca246392b1ffc57fe6786088b06ae547382c93b3` |
-| Chain index | 1825 |
+| Certificate issued | 2026-09-01T15:07:04.543835+00:00 UTC |
+| Certificate hash (SHA-256) | `b738b603a43ef0cdc9e9328d78bd7b1bf8b723f70f248b6dad37ae7421706559` |
+| Content hash (SHA-256) | `3b56a8442346d3da34a866b2f5aab1c98fafba41ee7ab02b699becc0a5665228` |
+| Chain index | 1878 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The protocol operates via a deterministic state machine for off-chain flow messa
 
 ## Materials / steps
 
-Develop a lightweight on-chain smart contract that manages escrow, verifies ECDSA signatures, and executes final settlement based on the Merkle root hash and proof-of-payment. Create an off-chain layer implementing a state machine for energy flow messages, generating Merkle trees of signed transactions and managing the bonded stake for the validator. Implement the cryptographic proof-of-payment mechanism, ensuring that specific signed flow records can be verified on-chain against the committed Merkle root to resolve disputes. Define the final commitment structure as a tuple `(merkle_root, net_balance, channel_id)` signed by both parties. Benchmark the system on a testnet with strict pass/fail criteria: (1) achieve a minimum 90% reduction in total gas costs compared to the baseline of executing N=1,000 individual on-chain ERC-20 `transfer` transactions (approx. 25M gas), targeting a maximum total protocol gas cost of <2.5M gas; (2) ensure maximum dispute resolution latency does not exceed 12 hours under simulated network congestion; (3) verify that off-chain Merkle tree construction for 1,000 energy flow records completes in <50ms; (4) conduct a precise gas cost analysis for the on-chain dispute resolution path, assuming a maximum Merkle tree depth of 10 levels, confirming that the `verifyProof` function executes in <120k gas and the `settle` function in <30k gas, ensuring the combined execution remains within the 150k total gas limit to guarantee finality within the latency constraint; and (5) verify that 100% of forged Merkle proofs are rejected by the `verifyProof` function with zero state changes, ensuring cryptographic integrity.
+Develop a lightweight on-chain smart contract that manages escrow, verifies ECDSA signatures, and executes final settlement based on the Merkle root hash and proof-of-payment. Create an off-chain layer implementing a state machine for energy flow messages, generating Merkle trees of signed transactions and managing the bonded stake for the validator. Implement the cryptographic proof-of-payment mechanism, ensuring that specific signed flow records can be verified on-chain against the committed Merkle root to resolve disputes. Define the final commitment structure as a tuple `(merkle_root, net_balance, channel_id)` signed by both parties. Benchmark the system on a testnet with strict pass/fail criteria: (1) achieve a minimum 90% reduction in total gas costs compared to the baseline of executing N=1,000 individual on-chain ERC-20 `transfer` transactions (approx. 25M gas), targeting a maximum total protocol gas cost of <2.5M gas; (2) ensure maximum dispute resolution latency does not exceed 12 hours under simulated network congestion; (3) verify that off-chain Merkle tree construction for 1,000 energy flow records completes in <50ms; (4) conduct a precise gas cost analysis for the on-chain dispute resolution path, assuming a maximum Merkle tree depth of 10 levels, confirming that the `verifyProof` function executes in <120k gas and the `settle` function in <30k gas, ensuring the combined execution remains within the 150k total gas limit to guarantee finality within the latency constraint; and (5) verify that 100% of forged Merkle proofs are rejected by the `verifyProof` function with zero state changes, ensuring cryptographic integrity. **Implementation & Verification Endpoints**: The on-chain logic is split into `contracts/GOESPChannel.sol` (managing state, escrow, and settlement) and `contracts/MerkleVerifier.sol` (containing the `verifyProof(bytes32 root, bytes32[] calldata proof, bytes32 leaf)` function). The primary on-chain endpoints are `finalizeSettlement(uint256 channel_id, bytes calldata signature_a, bytes calldata signature_b, bytes32 merkle_root, int256 net_balance)` for cooperative closure and `forceClose(uint256 channel_id, bytes32 merkle_root, int256 net_balance, bytes32[] calldata proof)` for adversarial resolution. Success is measured by observing the emission of the `SettlementFinalized(uint256 indexed channel_id, address indexed beneficiary, uint256 amount)` event in `test/GOESPSpec.ts`. This test script asserts that the gas usage of `finalizeSettlement` and `forceClose` paths remains within the specified limits and that the event data matches the expected net balance, providing a deterministic, observable check for protocol correctness and efficiency.
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/66b8b0be9bcfa6bb519c427dc42bb1ba53a011ab09ddcee705f125c3fc419520*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b738b603a43ef0cdc9e9328d78bd7b1bf8b723f70f248b6dad37ae7421706559*

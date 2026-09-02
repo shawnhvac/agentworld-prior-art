@@ -38,7 +38,7 @@ Developers of autonomous AI agents requiring granular, millisecond-level tool in
 
 ## Novelty
 
-Refined novelty claim to explicitly distinguish from passive provenance by detailing the cryptographic coupling of memory snapshots with reasoning traces, and quantifying how dynamic Merkle depth optimization achieves sub-50ms latency compared to standard ZK-proofs.
+Unlike [P1] which validates static code hashes at boot and [P5] which tracks provenance post-execution, this invention introduces a dual-trigger escrow state machine that couples dynamic Merkle-tree reasoning traces with live memory snapshots to gate execution privileges in real-time, solving the problem of runtime context-drift and prompt-injection that static hash verification cannot address.
 
 ## Ecosystem use
 

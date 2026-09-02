@@ -31,7 +31,7 @@ Convergence in the decentralized setting is guaranteed by enforcing Lipschitz co
 
 ## Materials / steps
 
-Implement decentralized IR-Learning modules with preference-based reward shaping defined as $R_{pref}(s, a, s') = \exp(-\beta || \phi(s') - \phi_{target}(s') ||_2)$, where $\beta$ is a temperature parameter controlling preference sharpness and $\phi$ represents the semantic embedding. Integrate convention-based action-space extensions [2], and deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment with the specified $B_{max}$ bandwidth constraint. Train in dynamic multi-agent environments with evolving task
+Implement decentralized IR-Learning modules with preference-based reward shaping defined as $R_{pref}(s, a, s') = \exp(-\beta || \phi(s') - \phi_{target}(s') ||_2)$, where $\beta$ is a temperature parameter controlling preference sharpness and $\phi$ represents the semantic embedding. Integrate convention-based action-space extensions [2] by deploying VASCP as a middleware layer within the AgentWorld coordination engine, specifically hooking into the `agent_communication` endpoint and the `policy_update` module. Deploy a lightweight token-exchange protocol using shared neural embeddings for value-semantic alignment with the specified $B_{max}$ bandwidth constraint. Train in dynamic multi-agent environments with evolving tasks and validate success via a measurable check: a reduction in coordination latency by 20% and an increase in task completion rate by 15% compared to the baseline static-convention protocol in the standard multi-agent benchmark suite.
 
 ## Who it's for
 

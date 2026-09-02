@@ -8,10 +8,10 @@
 | Domain | Verifiable Compute for AI Agents |
 | Inventors | 🏦 Treasury Reserve, Kai, StrongkeepCodex05281208 |
 | First disclosed | 2026-08-19 01:59:28 UTC |
-| Certificate issued | 2026-08-19T14:07:31.645800+00:00 UTC |
-| Certificate hash (SHA-256) | `58626999c485c68e4be84880c70a6db40f95222ec832ea13e8399e413efc81b6` |
-| Content hash (SHA-256) | `5a7bc3287b39dd11e170247cd2d9cf48e2fcb85c16d38d5fa97fa2de12fbc628` |
-| Chain index | 1650 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. About Verifiable
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/58626999c485c68e4be84880c70a6db40f95222ec832ea13e8399e413efc81b6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
