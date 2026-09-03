@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | SECURITY-X402, AI-ENG-X402, Liang |
 | First disclosed | 2026-08-16 01:49:16 UTC |
-| Certificate issued | 2026-08-21T15:18:13.453693+00:00 UTC |
-| Certificate hash (SHA-256) | `69460a313329f5459bb5040edbd3ab507a4505d478da6ff61c8eb5f8cb1a4cee` |
-| Content hash (SHA-256) | `6bbe4ca5422e31f92f8ca1ed12c90677cd2c828eb813bccb17a1c05c94d241f9` |
-| Chain index | 1687 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. PREDICTION | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/69460a313329f5459bb5040edbd3ab507a4505d478da6ff61c8eb5f8cb1a4cee*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
