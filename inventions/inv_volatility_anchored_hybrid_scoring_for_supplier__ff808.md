@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-08-27T20:27:20.249752+00:00 UTC |
-| Certificate hash (SHA-256) | `3032e477e838d6771255e17a0cbef91e3ae3f5988abac34ed492b2964eecab9b` |
-| Content hash (SHA-256) | `2656184277adfcea16b3ae496b26454bd1997089fbcd0e7016505060d088af65` |
-| Chain index | 1760 |
+| Certificate issued | 2026-09-03T14:52:21.898283+00:00 UTC |
+| Certificate hash (SHA-256) | `fcf52b9e635bb40d4e115ebeb70c95e54afde21e4105c02d512bb90aa57f3d85` |
+| Content hash (SHA-256) | `2a3927c466c31d927adf6f156aec3680a84f7d6b284198fbe0ff6b1aedc9e8cf` |
+| Chain index | 1924 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A dynamic weighting system that treats scoring volatility as a feature for calib
 
 ## Materials / steps
 
-1. Integrate GAI supplier evaluation module with existing supply chain planning software [1]. 2. Implement a real-time analytics engine to compute the standard deviation of difference scores (human - GAI) and the coefficient of variation between human and AI scores [3]. 3. Deploy interface for logistics coordinators to view volatility-adjusted scores and override if necessary [4]. 4. Conduct a sensitivity analysis to determine optimal values for the sensitivity constant k and decay rate lambda by testing a range of parameters against historical data to maximize planning accuracy, augmented by a Monte Carlo simulation to assess parameter stability and robustness under stochastic input variations. 5. Execute a back-testing protocol using Supplier Selection Accuracy (defined as the percentage of selected suppliers who meet delivery and quality SLAs) as the primary concrete metric, and Mean Absolute Percentage Error (MAPE) as a secondary technical metric against historical supply chain data, targeting a concrete reduction of at least 5% MAPE compared to the static baseline with a p-value < 0.05. 6. Implement tracking for 'Weight Convergence Rate' to measure the speed at which dynamic weights stabilize, and 'Human Override Frequency' to quantify the efficiency of the human-in-the-loop process, ensuring the volatility metric reduces cognitive load. 7. Perform a formal power analysis prior to the pilot to ensure the sample size is sufficient to detect the improvement in Supplier Selection Accuracy and the 5% MAPE reduction with 80% statistical power, explicitly detailing the power analysis results and assumptions in the methodology to justify the sample size of 50 coordinators, and explicitly designate Supplier Selection Accuracy as the primary efficacy endpoint for the study. 8. Conduct a real-world pilot trial over a 90-day period with a cohort of 50 logistics coordinators, comparing the volatility-anchored system against a static weighting baseline, using a randomized controlled trial design to measure statistical significance in planning accuracy and user trust scores.
+1. Integrate GAI supplier evaluation module with existing supply chain planning software [1]. 2. Implement a real-time analytics engine to compute the standard deviation of difference scores (human - GAI) and the coefficient of variation between human and AI scores [3]. 3. Deploy the 'Supplier Detail View' UI component in the Logistics Dashboard, which renders the volatility-adjusted score and an explicit 'Override' button; this view is served via the API endpoint POST /api/v1/supplier/score/hybrid [4]. 4. Conduct a sensitivity analysis to determine optimal values for the sensitivity constant k and decay rate lambda by testing a range of parameters against historical data to maximize planning accuracy, augmented by a Monte Carlo simulation to assess parameter stability and robustness under stochastic input variations. 5. Execute a back-testing protocol using Supplier Selection Accuracy (defined as the percentage of selected suppliers who meet delivery and quality SLAs) as the primary concrete metric, and Mean Absolute Percentage Error (MAPE) as a secondary technical metric against historical supply chain data, targeting a concrete reduction of at least 5% MAPE compared to the static baseline with a p-value < 0.05. 6. Implement tracking for 'Weight Convergence Rate' to measure the speed at which dynamic weights stabilize, and 'Human Override Frequency' to quantify the efficiency of the human-in-the-loop process, ensuring the volatility metric reduces cognitive load. 7. Perform a formal power analysis prior to the pilot to ensure the sample size is sufficient to detect the improvement in Supplier Selection Accuracy and the 5% MAPE reduction with 80% statistical power, explicitly detailing the power analysis results and assumptions in the methodology to justify the sample size of 50 coordinators, and explicitly designate Supplier Selection Accuracy as the primary efficacy endpoint for the study. 8. Conduct a real-world pilot trial over a 90-day period with a cohort of 50 logistics coordinators, comparing the volatility-anchored system against a static weighting baseline, using a randomized controlled trial design to measure statistical significance in planning accuracy and user trust scores; the primary success metric is defined as a statistically significant reduction in MAPE (target: >5% reduction with p < 0.05) compared to the control group within the 90-day pilot duration.
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3032e477e838d6771255e17a0cbef91e3ae3f5988abac34ed492b2964eecab9b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fcf52b9e635bb40d4e115ebeb70c95e54afde21e4105c02d512bb90aa57f3d85*
