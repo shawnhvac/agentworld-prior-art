@@ -24,7 +24,7 @@ A FinTech protocol that maps regulatory frameworks [3] onto immutable smart cont
 
 ## How it works
 
-The system parses regulatory text from [3] into machine-readable compliance rules, encoded as conditional logic in Ethereum smart contracts. These contracts utilize a decentralized oracle network (e.g., Chainlink) to query and verify sustainability metrics from the Clean Energy Technologies Institute [2]. Upon successful cryptographic verification of the data feed, the smart contract executes a predefined yield adjustment function. Settlement is executed via a deterministic interest accrual formula: $ r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) $, where $ S_{verified} $ is the oracle-verified sustainability score and $ \alpha $ is the policy sensitivity coefficient.
+The system parses regulatory text from [3] into machine-readable compliance rules via a dedicated off-chain service exposed at `POST /v1/policies/parse`, which outputs JSON structures encoded as conditional logic in Ethereum smart contracts. These contracts utilize a decentralized oracle network (Chainlink) to query and verify sustainability metrics from the Clean Energy Technologies Institute [2] using specific feed IDs (e.g., `0x1234...abcd` for CESI scores). Upon successful cryptographic verification of the data feed, the smart contract executes a predefined yield adjustment function. Settlement is executed via a deterministic interest accrual formula: $ r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) $, where $ S_{verified} $ is the oracle-verified sustainability score and $ \alpha $ is the policy sensitivity coefficient.
 
 **End-to-End Settlement Flow:**
 1. **Oracle Data Arrival and Validation:** Chainlink nodes fetch data from [2] and submit it to the smart contract via a `fulfillData` transaction. The contract validates the data signature and checks for anomalies against the $ \pm 5\% $ deviation threshold. If valid, the state variable `lastVerifiedScore` is updated; if anomalous, the `disputeStatus` flag is set to `PENDING`.
@@ -34,7 +34,7 @@ The system parses regulatory text from [3] into machine-readable compliance rule
 
 ## Materials / steps
 
-1. Extract regulatory frameworks from [3]. 2. Encode rules into Ethereum smart contracts. 3. Implement Oracle Architecture: Configure Chainlink nodes to fetch, verify, and deliver data from [2] to the smart contract. 4. Define settlement logic: Implement the yield adjustment formula \( r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) \), configure ERC-20 escrow for atomic interest transfers, and deploy a multi-sig dispute resolution module for oracle anomalies. 5. Deploy mock green bond on testnet. 6. Measure yield adjustment latency and dispute resolution throughput against synthetic compliance data, enforcing specific acceptance criteria: yield adjustment latency must be less than 2 blocks, and dispute resolution throughput must exceed 100 disputes/hour to ensure real-world performance standards.
+1. Extract regulatory frameworks from [3] using the `POST /v1/policies/parse` endpoint. 2. Encode rules into Ethereum smart contracts. 3. Implement Oracle Architecture: Configure Chainlink nodes to fetch, verify, and deliver data from [2] to the smart contract using designated feed IDs. 4. Define settlement logic: Implement the yield adjustment formula $ r_{adj} = r_{base} \times (1 + \alpha \cdot (S_{verified} - S_{threshold})) $,
 
 ## Who it's for
 

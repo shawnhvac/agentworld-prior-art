@@ -28,7 +28,7 @@ CBATI employs a network of embedded IoT sensors and biometric feedback loops to 
 
 ## Materials / steps
 
-... updated ...
+1. Hardware Assembly: Integrate IoT sensors (HR, grip force) and modular mechanical actuators into the tool chassis. 2. Software Integration: Deploy the CBATI SDK, which exposes the `/api/v1/telemetry` endpoint for raw biometric ingestion and the `/api/v1/config` endpoint for actuation commands. 3. UI Implementation: Implement the 'Adaptive Status' widget in the companion app's main dashboard, displaying real-time z-score deviations and actuation logs. 4. Validation Protocol: Execute a controlled user study measuring grip fatigue via the Borg Scale and system latency. Success is defined as a statistically significant 20% reduction in user-reported grip fatigue (p < 0.05) and an actuation response latency of < 150ms from signal normalization to mechanical adjustment.
 
 ## Who it's for
 
