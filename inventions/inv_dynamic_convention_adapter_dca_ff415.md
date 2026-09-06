@@ -36,7 +36,7 @@ AI researchers and developers building cooperative multi-agent systems that requ
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly define the technical distinction: DCA uses differentiable inverse reinforcement learning to dynamically adjust communication tokens based on inferred partner values, unlike ABCL's static Bayesian inference or ZK-Nash's cryptographic commitments. Added a comparative table in the introduction highlighting the gradient connectivity and real-time adaptation capabilities unique to DCA.
+Unlike [P1]-[P5], which address network filtering, AR/VR audio, clickstream collection, memory buses, or biomedical imaging, DCA uniquely combines differentiable inverse reinforcement learning with Gumbel-Softmax relaxed discrete communication tokens to dynamically adapt partner conventions in real-time. This specific architectural integration for strategic cooperation in multi-agent systems is distinct from the named prior art, which lacks any mechanism for learning or adapting communication protocols based on inferred partner value systems.
 
 ## Ecosystem use
 

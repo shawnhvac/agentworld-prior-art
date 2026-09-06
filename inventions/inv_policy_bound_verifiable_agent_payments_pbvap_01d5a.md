@@ -24,21 +24,21 @@ A protocol that binds an AI agent's payment authorization to a cryptographic com
 
 ## How it works
 
-1. **Transaction Registration**: The agent initiates a payment request by registering a 'pending' transaction with the Payment Gateway to obtain a unique `tx_id`. The Gateway initializes the state machine for `tx_id` to `PENDING`.
-2. **Policy Definition & Registration**: The agent owner defines a finite set of immutable policy rules and registers the cryptographic hash of these rules with a trusted registry.
+1. **Transaction Registration**: The agent initiates a payment request by sending a `POST /v1/tx/register` request to the Payment Gateway API. The Gateway initializes the state machine for the generated `tx_id` to `PENDING` and returns the `tx_id`.
+2. **Policy Definition & Registration**: The agent owner defines a finite set of immutable policy rules and registers the cryptographic hash via `POST /v1/policy/register`.
 3. **Decision Mapping**: The AI agent processes the payment request and maps its internal decision to a specific Policy Rule ID (PRID). If no valid PRID is found, the process terminates with an `ERROR_NO_POLICY` status.
-4. **ZKP Generation**: The agent executes a Groth16 ZKP circuit taking the PRID, payment parameters, and policy hash as private inputs. It outputs a proof proving: (a) the PRID corresponds to a valid rule in the registered policy set, and (b) the payment parameters satisfy the logical constraints of that specific PRID. If circuit execution fails, the process terminates with `ERROR_ZKP_FAIL`.
-5. **Verification & Signing**: The agent submits the payment request, `tx_id`, and ZKP proof to the Verifier. The Verifier retrieves the policy hash, verifies the Groth16 proof, and checks PRID authorization. 
+4. **ZKP Generation**: The agent executes the Groth16 ZKP circuit (defined in `zkp_circuits/payment_policy.v1`) taking the PRID, payment parameters, and policy hash as private inputs. It outputs a proof proving: (a) the PRID corresponds to a valid rule in the registered policy set, and (b) the payment parameters satisfy the logical constraints of that specific PRID. If circuit execution fails, the process terminates with `ERROR_ZKP_FAIL`.
+5. **Verification & Signing**: The agent submits the payment request, `tx_id`, and ZKP proof via `POST /v1/verify/submit`. The Verifier retrieves the policy hash, verifies the Groth16 proof, and checks PRID authorization. 
    - **Success**: The Verifier constructs a Verification Token (VT) = `{ tx_id, prid, payment_params, proof_groth16, verifier_sig }`, where `verifier_sig` is an Ed25519 signature over `H(tx_id || prid || payment_params || proof_groth16)`. The Verifier returns the VT to the agent.
    - **Failure**: If proof verification fails or PRID is unauthorized, the Verifier returns an `ERROR_VERIFICATION` response. The agent must discard the request; no VT is issued.
-6. **Settlement (Atomic State Machine)**: The Agent submits the VT to the Payment Gateway. The Gateway executes the following atomic sequence:
+6. **Settlement (Atomic State Machine)**: The Agent submits the VT via `POST /v1/settlement/commit`. The Gateway (logic in `gateway/state_machine.py`) executes the following atomic sequence:
    - **(a) State Lock**: Acquires an exclusive lock on `tx_id`. Checks current state. If state is not `PENDING`, rejects with `ERROR_STATE_CONFLICT` (prevents double-spend/replay).
    - **(b) Verification**: Verifies `verifier_sig` using the Verifier's public key. Re-verifies the Groth16 proof against the registered policy hash. If any check fails, releases the lock, transitions state to `FAILED`, and rejects with `ERROR_SETTLEMENT_VERIFICATION`.
-   - **(c) Atomic Commit**: If all checks pass, atomically transitions state from `PENDING` to `SETTLED`, writes the settlement record anchored by `H(tx_id || proof_groth16)`, and releases the lock. The Gateway confirms settlement to the agent.
+   - **(c) Atomic Commit**: If all checks pass, atomically transitions state from `PENDING` to `SETTLED`, writes the settlement record anchored by `H(tx_id || proof_groth16)`, and releases the lock. The Gateway confirms settlement to the agent with HTTP 200 and body `{"status": "SETTLED", "receipt_id": "..."}`.
 
 ## Materials / steps
 
-1. Define a finite, immutable set of policy rules and assign unique IDs to each. 2. Register the hash of the policy set with a trusted registry. 3. Implement a decision layer that maps model outputs to specific Policy Rule IDs. 4. Develop a Groth16 ZKP circuit that takes the Policy Rule ID (PRID), payment parameters, and policy hash as private inputs and generates a proof of constraint satisfaction. 5. Implement the Verifier module to validate proofs and issue Ed25519-signed Verification Tokens (VTs). 6. Implement the Payment Gateway's atomic state machine for settlement. 7. Execute the Validation & Metrics protocol: (a) Benchmark ZKP performance to ensure proof generation <50ms and verification <10ms for real-time feasibility; (b) Conduct formal security analysis under load to demonstrate <0.01% failure rate for proof substitution and state race condition attacks.
+1. Define a finite, immutable set of policy rules and assign unique
 
 ## Who it's for
 

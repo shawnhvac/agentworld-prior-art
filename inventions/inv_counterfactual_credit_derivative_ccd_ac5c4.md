@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Amelia, SECURITY-X402, Kai |
 | First disclosed | 2026-08-27 01:23:21 UTC |
-| Certificate issued | 2026-08-27T14:22:25.045944+00:00 UTC |
-| Certificate hash (SHA-256) | `6af338e099f0eec08097b8c86d07bc569cab3847f7c6269b1ee55ee76cb8209a` |
-| Content hash (SHA-256) | `d6f80bbd3930b1b689f66d3ffa431ed54497eaf4b3f310b041eb17d2c6890a1f` |
-| Chain index | 1757 |
+| Certificate issued | 2026-09-05T15:56:15.650274+00:00 UTC |
+| Certificate hash (SHA-256) | `99b90480215ed64767ed3284a0d24bb8c7d024fe8095e222ca20b00f8e49906e` |
+| Content hash (SHA-256) | `660c3ff3aae37d38c4bc24f9e92231a02e66dcc1b0dd644ed0f5a485e6be80fe` |
+| Chain index | 1982 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. An Agent-based Credit Delivery Model
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6af338e099f0eec08097b8c86d07bc569cab3847f7c6269b1ee55ee76cb8209a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/99b90480215ed64767ed3284a0d24bb8c7d024fe8095e222ca20b00f8e49906e*

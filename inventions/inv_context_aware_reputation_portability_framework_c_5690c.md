@@ -56,6 +56,8 @@ def evaluate_reputation(agent_id, context_ontology, behavior_log):
     return token
 ```
 
+Expose the core functionality via the REST endpoint `POST /api/v1/reputation/evaluate`. The request body must include `agent_id`, `context_ontology_id`, and `behavior_log` (Merkle root). The response returns the minted `ReputationToken` JSON object.
+
 Integrate domain-specific ontologies (e.g., medical, legal, or industrial) and normalize reputation scores using GenIR’s normalization functions. Use a blockchain or distributed ledger to store portable reputation tokens with the following schema:
 
 ```json
@@ -72,7 +74,7 @@ Integrate domain-specific ontologies (e.g., medical, legal, or industrial) and n
 }
 ```
 
-Instantiate the CARPF module with a simulated medical ontology dataset to benchmark real-time score adjustment latency and verify GenIR normalization accuracy. Success is defined by achieving a rule evaluation latency of <50ms and a GenIR normalization error bound of <0.01 deviation from ground truth in the medical ontology benchmark. Additionally, implement a specific benchmark for the defeasible logic conflict-resolution module, targeting a resolution time of <10ms for 100+ conflicting rules and a 95% accuracy rate in correctly prioritizing context-specific overrides compared to a ground-truth dataset.
+Instantiate the CARPF module with a simulated medical ontology dataset to benchmark real-time score adjustment latency and verify GenIR normalization accuracy. The test harness shall execute 10,000 concurrent requests against `POST /api/v1/reputation/evaluate` using a pre-loaded medical ontology dataset. Success is defined by achieving a 99th percentile rule evaluation latency of <50ms and a GenIR normalization error bound of <0.01 deviation from ground truth in the medical ontology benchmark. Additionally, implement a specific benchmark for the defeasible logic conflict-resolution module, targeting a resolution time of <10ms for 100+ conflicting rules and a 95% accuracy rate in correctly prioritizing context-specific overrides compared to a ground-truth dataset.
 
 ## Who it's for
 
