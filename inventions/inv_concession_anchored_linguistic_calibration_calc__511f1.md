@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | AI-ENG-X402, Hao, Rupert |
 | First disclosed | 2026-08-27 02:06:01 UTC |
-| Certificate issued | 2026-08-30T15:51:29.594501+00:00 UTC |
-| Certificate hash (SHA-256) | `7d6dcb6c093597cc44b1c6ee09ed6422c177139b61f4c0e7e777a611d90078c9` |
-| Content hash (SHA-256) | `a68aa739b1bcd5a9e72fa758f1abfb99884b8ff815a86a3463ac9250b5af54fb` |
-| Chain index | 1830 |
+| Certificate issued | 2026-09-07T15:52:36.418896+00:00 UTC |
+| Certificate hash (SHA-256) | `13b49e6e41f6f93ce428785806ecae954e7d15f1755bfc34a03ea2bd73a0991b` |
+| Content hash (SHA-256) | `d01d783ee8a922a642f982822d0ac9962a128100cdf75eb1d64ddd5332487f6d` |
+| Chain index | 2032 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Current AI negotiation agents often rely on static personality profiles or unval
 
 ## Concept
 
-A closed-loop control system that decouples linguistic strategy from unvalidated acoustic signals and instead uses the human counterpart's explicit concession size as the ground-truth behavioral metric for risk tolerance. The agent dynamically adjusts its offer variance and linguistic confirmation level based on the inverse of the observed concession magnitude, treating negotiation as a continuous optimization problem rather than static role-play [2, 4].
+Concession-Anchored Linguistic Calibration (CALC) for AI Negotiation Agents: A closed-loop control system that decouples linguistic strategy from unvalidated acoustic signals and instead uses the human counterpart's explicit concession size as the ground-truth behavioral metric for risk tolerance. The agent dynamically adjusts its offer variance and linguistic confirmation level based on the inverse of the observed concession magnitude, treating negotiation as a continuous optimization problem rather than static role-play [2, 4].
 
 ## How it works
 
-The system operates in four stages: (1) Ingestion: ASR and VAD modules capture the human's utterances, parsing numerical concession values [3, 4]. (2) Calibration: A 'Concession Gradient' (G) is calculated as the rate of change in the human's offer variance over the last N=3 turns, normalized by the initial offer spread. (3) Actuation: The LLM's generation parameters are adjusted via hysteresis logic. If G > 0.15, the state is 'High-Variance Anchoring'; if G < 0.05, the state is 'Low-Variance Confirmation'. Crucially, if 0.05 <= G <= 0.15, the system maintains the previous hysteresis state (hold) to prevent oscillation and ensure a stable path to convergence. The LLM temperature (T) is scaled linearly as T = T_base * (1 / (1 + 5*G)), and the numerical counter-offer range width (W) is set to W = W_max * (1 - G/2). (4) Termination: The negotiation ends via a defined 'Termination Protocol' when the agent's and human's offer ranges overlap (agreement reached) or when a maximum turn limit (T_max) is exceeded, at which point the system finalizes the best observed mutual value. A 'State Resolution' module ensures determinism by treating the LLM's stochastic output as a proposal that is strictly projected onto the monotonic path defined by the Convergence Guarantee. The agent's final offer O_final is calculated as the midpoint between the LLM's raw proposal O_llm and the monotonic target O_target (derived from the 50% gap reduction rule), ensuring the output remains within the valid convergence path while retaining some linguistic nuance.
+The system operates in four stages via the `/v1/negotiate/session` endpoint: (1) Ingestion: An ASR/VAD module (e.g., Whisper.cpp or WebRTC VAD) captures the human's utterances via the audio input stream, parsing numerical concession values into a structured JSON payload [3, 4]. (2) Calibration: A 'Concession Gradient' (G) is calculated as the rate of change in the human's offer variance over the last N=3 turns, normalized by the initial offer spread, and logged to the `negotiation_state.db` database. (3) Actuation: The LLM's generation parameters are adjusted via hysteresis logic. If G > 0.15, the state is 'High-Variance Anchoring'; if G < 0.05, the state is 'Low-Variance Confirmation'. If 0.05 <= G <= 0.15, the system maintains the previous hysteresis state (hold). The LLM temperature (T) is scaled linearly as T = T_base * (1 / (1 + 5*G)), and the numerical counter-offer range width (W) is set to W = W_max * (1 - G/2). These parameters are injected into the LLM API request payload. (4) Termination: The negotiation ends via a defined 'Termination Protocol' when the agent's and human's offer ranges overlap or when a maximum turn limit (T_max) is exceeded. A 'State Resolution' module ensures determinism by projecting the LLM's stochastic output onto the monotonic path defined by the Convergence Guarantee. The agent's final offer O_final is calculated as the midpoint between the LLM's raw proposal O_llm and the monotonic target O_target. The system validates success by logging the turn count to the state database and comparing it against the static baseline; specifically, the median turn count to agreement in the treatment group must be <= 0.85x the control group median, with p < 0.05 in a paired t-test over 100 simulated negotiations.
 
 ## Materials / steps
 
-1. Integrate an ASR/VAD pipeline to extract spoken numbers and pause durations [3, 4]. 2. Implement a 'Concession Tracker' module that logs the numerical delta between the human's last two offers and computes the normalized Concession Gradient (G) over a sliding window of N=3 turns. 3. Develop a 'Linguistic Strategy Mapper' that applies hysteresis thresholds (High: G > 0.15; Low: G < 0.05; Hold: 0.05 <= G <= 0.15) to select system prompts and calculate scaling factors for LLM temperature and offer variance [2, 4]. 4. Configure the LLM to adjust the numerical variance of its counter-offers using the formula W = W_max * (1 - G/2) and temperature T = T_base * (1 / (1 + 5*G)) [1]. 5. Implement a 'Convergence Guarantee' module that enforces the agent's offer range center moves monotonically toward the human's last offer by a fixed fraction (e.g., 50%) of the remaining gap each turn, independent of the hysteresis state, to ensure ranges eventually overlap. 6. Implement a 'Termination Protocol' module that monitors for offer range overlap or maximum turn limits to signal end-of-negotiation. 7. Define the 'Static Baseline' control agent explicitly: a fixed-temperature (T_base = 0.7) LLM with a fixed linguistic prompt ("Be a reasonable negotiator") and a static counter-offer strategy (always moves 50%
+1. Integrate an ASR/VAD pipeline (e.g., Whisper.cpp) to extract spoken numbers and pause durations from the audio input stream [3, 4]. 2. Implement a 'Concession Tracker' module that logs the numerical delta between the human's last two offers to the `negotiation_state.db` database and computes the normalized Concession Gradient (G) over a sliding window of N=3 turns. 3. Develop a 'Linguistic Strategy Mapper' that applies hysteresis thresholds (High: G > 0.15; Low: G < 0.05; Hold: 0.05 <= G <= 0
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ graph LR
 6. Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7d6dcb6c093597cc44b1c6ee09ed6422c177139b61f4c0e7e777a611d90078c9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13b49e6e41f6f93ce428785806ecae954e7d15f1755bfc34a03ea2bd73a0991b*

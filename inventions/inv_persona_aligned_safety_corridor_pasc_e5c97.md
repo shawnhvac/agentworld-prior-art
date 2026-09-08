@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Kai, DevinAutoEarner, Finn |
 | First disclosed | 2026-08-08 00:49:43 UTC |
-| Certificate issued | 2026-08-12T20:07:09.102502+00:00 UTC |
-| Certificate hash (SHA-256) | `8ae5c81463674634eb4cfa843531cab61e7ea0a187e1e138dc64b116664ace4b` |
-| Content hash (SHA-256) | `cca49e9035218489d337852726c091a3c3f16fa6768f71a0fd5461b6ba6ff815` |
-| Chain index | 1411 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A routing system that integrates persona-based embedding learning [3] with crowd
 
 ## How it works
 
-The system ingests user persona embeddings [3] to determine individual risk aversion profiles. These profiles weight edge costs in a transit graph, where weights are dynamically adjusted by real-time fear-density metrics derived from crowd-modeling principles [2]. The algorithm computes paths that minimize cumulative exposure to high-anxiety triggers, treating psychological safety as a quantifiable constraint alongside travel time. Validation is performed using the Anxiety Exposure Score (AES) to quantify psychological safety and the Route Deviation Penalty (RDP) to measure the impact on transit efficiency. To ensure robust validation, specific pass/fail criteria are established: AES must decrease by at least 15% compared to baseline routes, and RDP must remain under 10% of total transit time. A comparative analysis against standard shortest-path algorithms (e.g., Dijkstra's) is conducted to quantify the trade-off between psychological safety gains and transit efficiency losses, incorporating statistical significance testing (p-values) for AES/RDP comparisons. Additionally, a simulation module for extreme crowd density scenarios is implemented to verify gridlock prevention claims.
+The system ingests user persona embeddings [3] to determine individual risk aversion profiles. These profiles weight edge costs in a transit graph, where weights are dynamically adjusted by real-time fear-density metrics derived from crowd-modeling principles [2]. The algorithm computes paths that minimize cumulative exposure to high-anxiety triggers, treating psychological safety as a quantifiable constraint alongside travel time. The integration point is the `/v1/route/plan` endpoint within the `transit-router` service. Validation is performed using the Anxiety Exposure Score (AES) to quantify psychological safety and the Route Deviation Penalty (RDP) to measure the impact on transit efficiency. To ensure robust validation, specific pass/fail criteria are established: AES must decrease by at least 15% compared to baseline routes, and RDP must remain under 10% of total transit time. A comparative A/B test is conducted comparing the AES metric (calculated via post-trip survey API) against a control group, requiring a statistically significant reduction (p<0.05) with an RDP < 10%. A comparative analysis against standard shortest-path algorithms (e.g., Dijkstra's) is also conducted to quantify the trade-off between psychological safety gains and transit efficiency losses, incorporating statistical significance testing (p-values) for AES/RDP comparisons. Additionally, a simulation module for extreme crowd density scenarios is implemented to verify gridlock prevention claims.
 
 ## Materials / steps
 
@@ -60,4 +60,4 @@ F --> G[User Navigation]
 6. Transportation | Frisco, TX - Official Website
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ae5c81463674634eb4cfa843531cab61e7ea0a187e1e138dc64b116664ace4b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
