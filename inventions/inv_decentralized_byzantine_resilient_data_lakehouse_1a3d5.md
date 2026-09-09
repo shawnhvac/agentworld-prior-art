@@ -28,7 +28,21 @@ Each data shard is signed with a verifiable credential [1], and a proof-carrying
 
 ## Materials / steps
 
-Implement a decentralized ledger using verifiable credentials [1], train proof-carrying agents [3] on signed data shards, and integrate Byzantine-resilient optimization [2] to enable consensus across agents. Use secure multi-party computation to ensure cryptographic signing and validation. Define and implement the Consensus Protocol Specification (Section 2.2), including: 1) Deterministic message passing logic based on cryptographic identifiers; 2) Exact cryptographic proof verification steps for credentials [1] and agent proofs [3]; and 3) A three-round voting procedure for dispute resolution where shards require >2/3 affirmative votes per round for acceptance. Additionally, implement the split-vote resolution mechanism: code the 'Quarantine' state logic for shards failing the >2/3 threshold, triggering re-broadcasts with incremented nonces and reputation downgrading for divergent agents. Implement the Termination and Commit Protocol to ensure bounded convergence to 'Committed' or 'Rejected' states. Validation Plan: Conduct a benchmarking experiment comparing DR-DL against a standard decentralized storage protocol (e.g., IPFS) under a 30% Byzantine fault rate. Measure average consensus latency (ms) and total communication overhead (bytes) to empirically verify the projected 40% reduction in consensus overhead derived from theoretical communication complexity analysis.
+Implement a decentralized ledger using verifiable credentials [1], train proof-carrying agents [3] on signed data shards, and integrate Byzantine-resilient optimization [2] to enable consensus across agents. Use secure multi-party computation to ensure cryptographic signing and validation. Define and implement the Consensus Protocol Specification (Section 2.2), including: 1) Deterministic message passing logic based on cryptographic identifiers; 2) Exact cryptographic proof verification steps for credentials [1] and agent proofs [3]; and 3) A three-round voting procedure for dispute resolution where shards require >2/3 affirmative votes per round for acceptance. Additionally, implement the split-vote resolution mechanism: code the 'Quarantine' state logic for shards failing the >2/3 threshold, triggering re-broadcasts with incremented nonces and reputation downgrading for divergent agents. Implement the Termination and Commit Protocol to ensure bounded convergence to 'Committed' or 'Rejected' states. 
+
+Implementation Surface:
+- `consensus/protocol.py`: Core logic for deterministic message passing, round-robin scheduling, and state machine transitions (Committed/Rejected/Quarantine).
+- `agents/validator.rs`: Rust-based agent implementation handling cryptographic proof verification [1, 3] and local ledger state updates.
+- `api/gateway.py`: RESTful interface exposing endpoints for external integration.
+  - `POST /v1/shard/verify`: Submit a shard header for consensus verification.
+  - `GET /v1/shard/status/{shard_id}`: Retrieve current consensus state and consensus certificate.
+  - `POST /v1/agent/register`: Register a new agent with cryptographic identifier.
+
+Validation Plan: Conduct a benchmarking experiment comparing DR-DL against a standard decentralized storage protocol (e.g., IPFS) under a 30% Byzantine fault rate. 
+Pass Criteria:
+1. Average consensus latency must be < 500ms.
+2. Total communication overhead must be < 1.5x the baseline overhead of the comparison protocol.
+These explicit bounds replace the prior theoretical projection, providing checkable metrics for system performance.
 
 ## Who it's for
 
