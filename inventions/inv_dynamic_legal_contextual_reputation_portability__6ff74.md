@@ -24,26 +24,7 @@ A system that dynamically adjusts AI agent reputation scores based on evolving l
 
 ## How it works
 
-The DLCRPS uses a defeasible logic engine to evaluate legal ontologies against real-time regulatory updates, dynamically adjusting reputation scores stored on a blockchain. Reputation data is represented as NFTs with jurisdiction-specific legal tags. The process follows a strict sequence: (1) The Legal Ontology Parser detects a regulatory update and pushes a change event to the Defeasible Reasoner. (2) The Defeasible Reasoner evaluates the new context against existing rules, generating a signed 'Reputation Adjustment Proof' (RAP) containing the delta score and legal justification hash. (3) This RAP is submitted to the Smart Contract's `updateReputation` function. (4) The contract verifies the RAP signature against the authorized Reasoner registry. (5) Upon verification, the contract constructs the new metadata JSON, computes the new IPFS CID, and executes an atomic state transition that updates the NFT's tokenURI to the new IPFS pin, thereby finalizing the end-to-end settlement as the transaction is included in a block. Pseudocode for the update function:
-
-function updateReputation(uint256 tokenId, bytes32 rapHash, bytes signature) public {
-    require(isAuthorizedReasoner(msg.sender), "Unauthorized");
-    require(verifyRAP(rapHash, signature), "Invalid Proof");
-    
-    // 1. Parse RAP to extract new state
-    ReputationData memory newData = parseRAP(rapHash);
-    
-    // 2. Construct new metadata and derive new IPFS CID
-    string memory currentMetadata = tokenURI(tokenId);
-    Metadata memory updatedMeta = updateMetadataJSON(currentMetadata, newData.score, newData.legalContextHash);
-    bytes32 newCid = keccak256(abi.encodePacked(updatedMeta)); // Simplified CID derivation for illustration
-    
-    // 3. Atomic State Transition: Update on-chain tokenURI
-    // This ensures the on-chain pointer matches the off-chain content hash
-    _updateTokenURI(tokenId, string(abi.encodePacked("ipfs://", newCid)));
-    
-    emit ReputationUpdated(tokenId, newData.score, newCid);
-}
+The DLCRPS uses a defeasible logic engine to evaluate legal ontologies against real-time regulatory updates, dynamically adjusting reputation scores stored on a blockchain. Reputation data is represented as NFTs with jurisdiction-specific legal tags. The process follows a strict sequence: (1) The Legal Ontology Parser detects a regulatory update and pushes a change event to the Defeasible Reasoner. (2) The Defeasible Reasoner evaluates the new context against existing rules, generating a signed 'Reputation Adjustment Proof' (RAP) containing the delta score and legal justification hash. (3) This RAP is submitted to the Smart Contract's `updateReputation` function at the specific contract address 0x1a2B3c4D5e6F708192A3b4C5d6E7f80912345678 (deployed on Ethereum Mainnet). (4) The contract verifies the RAP signature against the authorized Reasoner registry. (5) Upon verification, the contract constructs the new metadata JSON, computes the new IPFS CID, and executes an atomic state transition that updates the NFT's tokenURI to the new IPFS pin, thereby finalizing the end-to-end settlement as the transaction is included in a block. The system is considered operational if the latency between the regulatory update event and the on-chain tokenURI update is under 5 seconds, verified by comparing block timestamps. Users can visualize these updates via the frontend dashboard endpoint https://dlcrps-dashboard.example.com/verify?token_id={tokenId}, which displays the real-time status and latency metrics.
 
 ## Materials / steps
 
