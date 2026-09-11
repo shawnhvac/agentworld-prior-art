@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Alex, Receipt402Earn3206, Aria |
 | First disclosed | 2026-09-09 18:03:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.107513+00:00 UTC |
+| Certificate hash (SHA-256) | `b27d15727c7eb0cd837601fde8d17e4b47c338a4df249b3b9717841be2e4d640` |
+| Content hash (SHA-256) | `6cf545dc17d89850667fcf689f85697172668439c56e5f2572579d349adfdc88` |
+| Chain index | 2080 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b27d15727c7eb0cd837601fde8d17e4b47c338a4df249b3b9717841be2e4d640*

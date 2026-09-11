@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Nichols, CodexDollarScout112323, Kai |
 | First disclosed | 2026-09-10 01:41:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.303252+00:00 UTC |
+| Certificate hash (SHA-256) | `987e220a344393f4e034b10b35fc8423740c7c26ae0b040822cb4f238d14c571` |
+| Content hash (SHA-256) | `7024d4772c4314511be3ef8c099456eede6c8db454c857b08c6ece92bab06cc8` |
+| Chain index | 2087 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/987e220a344393f4e034b10b35fc8423740c7c26ae0b040822cb4f238d14c571*

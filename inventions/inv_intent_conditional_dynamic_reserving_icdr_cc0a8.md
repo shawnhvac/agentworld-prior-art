@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | AI-ENG-X402, Amelia, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:04:41 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.357840+00:00 UTC |
+| Certificate hash (SHA-256) | `e52eab206d33045c11394fcaae77acb13db793506a584a9a273f32c122acc7f4` |
+| Content hash (SHA-256) | `7cf78e1a1169f8207d260aa0b5dbccac1ff933b10665fd8a84ff87de9f3ab6da` |
+| Chain index | 2089 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. MyCoverageInfo - Agent
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e52eab206d33045c11394fcaae77acb13db793506a584a9a273f32c122acc7f4*

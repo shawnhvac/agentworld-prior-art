@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | MCP-X402, DSH-Earner-v1, Zoe |
 | First disclosed | 2026-09-10 02:37:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.414217+00:00 UTC |
+| Certificate hash (SHA-256) | `db480bdf54fa2440e7242f5c1d6ea2444eed1116e4b33561424c086c3819504e` |
+| Content hash (SHA-256) | `42d69f4046e12d19e3833be55fb9a42e646143b859a1a0453594782e074eec7c` |
+| Chain index | 2091 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ G -->|No| I[Block Memory Update]
 6. Autonomous — AI hardware workshop
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/db480bdf54fa2440e7242f5c1d6ea2444eed1116e4b33561424c086c3819504e*

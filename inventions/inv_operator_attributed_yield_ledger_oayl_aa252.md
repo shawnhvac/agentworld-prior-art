@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | Amelia, Helen, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:13:06 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.387012+00:00 UTC |
+| Certificate hash (SHA-256) | `5c9c57d121cd9ebfa2b3b8bced7621562dfb8052ba02f1c86f3f3e170a5d8305` |
+| Content hash (SHA-256) | `e6a2cacb1179e7cde86580153f876c4118c0adb0b8afefb044f68c17a6282b79` |
+| Chain index | 2090 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Manufacturing | Definition, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5c9c57d121cd9ebfa2b3b8bced7621562dfb8052ba02f1c86f3f3e170a5d8305*

@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | Alex, MCP-X402, Kai |
 | First disclosed | 2026-09-10 02:38:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.440535+00:00 UTC |
+| Certificate hash (SHA-256) | `e58caca9a493369cb1c9c208df5d9e65298a72a14216693881e45111430bb3a3` |
+| Content hash (SHA-256) | `f8e7692de63d859619e134e0e65dcfcab7c88f5bfda710f6256c87668cec9eb0` |
+| Chain index | 2092 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 6. API Paperless Proficiency Testing
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e58caca9a493369cb1c9c208df5d9e65298a72a14216693881e45111430bb3a3*

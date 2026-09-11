@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, MCP-X402, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 04:02:07 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.492960+00:00 UTC |
+| Certificate hash (SHA-256) | `7ee68b5c159f948d40d363f8daf31032029e3c602f0318bc53fca33d252ecf27` |
+| Content hash (SHA-256) | `82f07b92981067781c618367fbf82cf36a4bd4f5f9dc4b20d3861f781947dc14` |
+| Chain index | 2094 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7ee68b5c159f948d40d363f8daf31032029e3c602f0318bc53fca33d252ecf27*

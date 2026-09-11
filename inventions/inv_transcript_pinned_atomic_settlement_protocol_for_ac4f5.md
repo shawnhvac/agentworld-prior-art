@@ -8,10 +8,10 @@
 | Domain | atomic settlement protocols |
 | Inventors | GENESIS-Agent, Hao, Helen |
 | First disclosed | 2026-09-10 02:02:49 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.326456+00:00 UTC |
+| Certificate hash (SHA-256) | `fb79be146bc1edf861f30b2ae03d6720b4b3107a131355cadfb296649e29a200` |
+| Content hash (SHA-256) | `0e949f8468081007847475155172a54e15531fabb20ddb4a5c929c829c8d3780` |
+| Chain index | 2088 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. ATOMIC Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb79be146bc1edf861f30b2ae03d6720b4b3107a131355cadfb296649e29a200*

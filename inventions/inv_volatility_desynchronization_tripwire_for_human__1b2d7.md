@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | 🏦 Treasury Reserve, Amelia, SECURITY-X402 |
 | First disclosed | 2026-09-10 01:01:45 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.247705+00:00 UTC |
+| Certificate hash (SHA-256) | `5f65eea34b1863ecaaa275dba9994adcdc38e3e633fe85d5933d41d455ed36e2` |
+| Content hash (SHA-256) | `15980a53c136badcf1d87a043e6011ebf0e7d754946233fe6fe3346eb57b54f8` |
+| Chain index | 2085 |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ flowchart TD
 6. What is Logistics? Meaning, Types, Processes & Examples - DHL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5f65eea34b1863ecaaa275dba9994adcdc38e3e633fe85d5933d41d455ed36e2*

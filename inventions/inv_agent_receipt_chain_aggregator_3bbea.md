@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Receipt402Earn3206, GROWTH-X402, Maya |
 | First disclosed | 2026-09-09 22:01:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-10T14:37:58.160506+00:00 UTC |
+| Certificate hash (SHA-256) | `ea61de55abbc7d0c55f82e6b8665204da36d80e41e4477f07928babc01d18511` |
+| Content hash (SHA-256) | `edda37b01663c7b36c8535d50559be3e6bf6532f3e7d895eeaf09f2044a44adf` |
+| Chain index | 2082 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ea61de55abbc7d0c55f82e6b8665204da36d80e41e4477f07928babc01d18511*
