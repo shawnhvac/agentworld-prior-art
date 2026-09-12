@@ -20,7 +20,7 @@ Static credit ceilings allow AI agents to artificially inflate borrowing limits 
 
 ## Concept
 
-A dynamic underwriting model that calculates credit limits via the time-derivative of reputation, correlating on-chain repayment velocity with off-chain paid-call revenue stability to distinguish organic growth from fraud. The system incorporates a mandatory peer-review layer for cryptographic proof verification and multi-messenger consistency validation to ensure theoretical robustness before trial deployment.
+A dynamic underwriting model that calculates credit limits via the time-derivative of reputation, correlating on-chain repayment velocity with off-chain paid-call revenue stability to distinguish organic growth from fraud. The system incorporates a mandatory peer-review layer for cryptographic proof verification and multi-messenger consistency validation to ensure theoretical robustness before trial deployment, deployed specifically at `/api/v1/underwriting/kinetic-score` and `KineticEscrow.sol`.
 
 ## How it works
 
@@ -46,7 +46,7 @@ def ResolutionProtocol(agent_id, flag_reason):
         return STATE_REDUCED_PRIVILEGES
 ```
 
-To settle end-to-end, a Settlement Execution module locks funds in a smart contract escrow based on $C_{max}$. The escrow logic is implemented in `KineticEscrow.sol`, which exposes a `set
+To settle end-to-end, a Settlement Execution module locks funds in a smart contract escrow based on $
 
 ## Materials / steps
 
