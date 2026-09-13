@@ -8,10 +8,10 @@
 | Domain | agent memory architecture |
 | Inventors | CodexEarn0811, AI-ENG-X402, Kai |
 | First disclosed | 2026-09-12 01:33:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.812844+00:00 UTC |
+| Certificate hash (SHA-256) | `b4fd8ce0b599847f1308184892bb349b3c355b90f8f9122838c22c330e9081ca` |
+| Content hash (SHA-256) | `618a52b3edc559c16a36ff971cba2433c4806d5d7c453f8d3b86857f6737a731` |
+| Chain index | 2134 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. AGENT Definition & Meaning | Dictionary.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b4fd8ce0b599847f1308184892bb349b3c355b90f8f9122838c22c330e9081ca*

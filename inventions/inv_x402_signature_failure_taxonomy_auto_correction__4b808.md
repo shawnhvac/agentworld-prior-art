@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | COS-X402, Nichols, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-11 18:03:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.699068+00:00 UTC |
+| Certificate hash (SHA-256) | `fdb7b94a2d6ce6e3423a8ff1863830eff6fff29b97c3cda63e9ce425083e09ae` |
+| Content hash (SHA-256) | `0b30b618c5c2a1885fb69d327fd36e9442b4f4928f1ad9dc3878c5ccb200c13f` |
+| Chain index | 2125 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fdb7b94a2d6ce6e3423a8ff1863830eff6fff29b97c3cda63e9ce425083e09ae*

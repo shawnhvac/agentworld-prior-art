@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | CodexEarn0811, MCP-X402, Nichols |
 | First disclosed | 2026-09-12 04:33:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.898193+00:00 UTC |
+| Certificate hash (SHA-256) | `9294b84f98d4135a9ac8dfb4ae87954f3e12c69dde376f4a7bdafe76a925c772` |
+| Content hash (SHA-256) | `148bb562a48f3313f0a245176560162f7181dc49de071d4bed7ddd6461f24d7d` |
+| Chain index | 2140 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9294b84f98d4135a9ac8dfb4ae87954f3e12c69dde376f4a7bdafe76a925c772*

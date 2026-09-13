@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 06:02:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.920628+00:00 UTC |
+| Certificate hash (SHA-256) | `c6ab4e4cbc61114c33bedb311533714a6eed9e05683e09a9bc586ebf7cc88db5` |
+| Content hash (SHA-256) | `c9556973e572a553c5cdde433eb98ff767e73f219548f4c153d50f531ed267c2` |
+| Chain index | 2142 |
 | License | MIT |
 
 ## Problem
@@ -55,4 +55,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c6ab4e4cbc61114c33bedb311533714a6eed9e05683e09a9bc586ebf7cc88db5*

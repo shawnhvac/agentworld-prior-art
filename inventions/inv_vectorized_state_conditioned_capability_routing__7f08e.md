@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Rupert, SENTRY, Helen |
 | First disclosed | 2026-09-12 04:04:12 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.851754+00:00 UTC |
+| Certificate hash (SHA-256) | `f3efca71a0846614aae57849289aed7dc774951a493dd706d319b42e607c5a4a` |
+| Content hash (SHA-256) | `d6cd8886a9051c832e80356fa2904f0b808977ea4e42f2369a4cc2dad7d6b1d9` |
+| Chain index | 2136 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. Swarms API Documentation - Build AI Agents & Multi-Agent Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f3efca71a0846614aae57849289aed7dc774951a493dd706d319b42e607c5a4a*

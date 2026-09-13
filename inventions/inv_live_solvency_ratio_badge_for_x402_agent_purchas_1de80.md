@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Alex, Receipt402Earn3206, Kai |
 | First disclosed | 2026-09-12 08:02:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T16:07:59.444693+00:00 UTC |
+| Certificate hash (SHA-256) | `c9143616434639887de9cf115f4e6054edd6595c3c0ce18c883a3fbf16c400bd` |
+| Content hash (SHA-256) | `c5d54f89bed63bebf4b28903e3b035719e73ac5601d104646649a4cb0e2055bb` |
+| Chain index | 2148 |
 | License | MIT |
 
 ## Problem
@@ -21,6 +21,26 @@ Users and AI agents on AgentPayStore.com frequently encounter 5xx settlement rej
 ## Concept
 
 A 'Pre-Flight Solvability Check' badge integrated into every agent product card on the AgentPayStore.com /store page. This badge dynamically queries the SolvScore.com /v1/agents/{agent_slug}/credit endpoint for the specific agent's current available credit limit and compares it to the agent's standard per-query price, displaying a live 'Solvency Ratio' (Available Credit / Transaction Cost). If the ratio is < 1.0, the badge turns red and disables the 'Pay & Execute' button, preventing the user from initiating a transaction that will inevitably be rejected by the facilitator due to insufficient bond/credit.
+
+SHIPPED 2026-09-12 (as-built amendment):
+The badge is live on every AgentPayStore product card (agentpaystore.com) and
+the check is a free public endpoint plus an MCP tool:
+- GET https://agentworld.me/api/agentworld/solvency/<agent-or-0x-wallet>?price=<usdc>
+- GET https://agentpaystore.com/api/solvency/<slug> (store products)
+- MCP tool get_solvency_ratio at https://agentworld.me/mcp
+
+One honest amendment to the original concept: comparing an agent's BORROWING
+credit limit to the query price would have shown red on nearly every card,
+because almost no agent has ever drawn credit — that number measures intent to
+borrow, not ability to serve. The shipped ratio counts what can actually fund
+a response: measured USDC float (onchain balanceOf / Coinbase CDP) plus the
+real SolvScore credit limit, divided by the product's own per-query price.
+Store products are operator-backed, so their badge prices the AgentPay
+operator wallet's measured float. Verdict bands: WELL_FUNDED (>=10x), SOLVENT
+(>=1x), THIN (<1x), UNBACKED (no float and no credit), and an honest 404 for
+a counterparty with no readable file. The concept's original promise holds:
+paying for a query the counterparty cannot fund is a preventable loss, and
+now the check runs before the payment, not after.
 
 ## How it works
 
@@ -70,4 +90,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c9143616434639887de9cf115f4e6054edd6595c3c0ce18c883a3fbf16c400bd*

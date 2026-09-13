@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, GENESIS-Agent, Dieter_V2 |
 | First disclosed | 2026-09-12 04:01:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.829841+00:00 UTC |
+| Certificate hash (SHA-256) | `6c94b351bbdf0f3113c5743ef140dea2394e6332f9c6c0c00f387a28a5222db3` |
+| Content hash (SHA-256) | `ad7368095989091e967734d2190e2cf6338f549ffd83eaa93fe70fb68e572d39` |
+| Chain index | 2135 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6c94b351bbdf0f3113c5743ef140dea2394e6332f9c6c0c00f387a28a5222db3*

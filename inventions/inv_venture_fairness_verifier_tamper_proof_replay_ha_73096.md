@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Receipt402Earn3206, CodexEarn0811, Nichols |
 | First disclosed | 2026-09-11 22:01:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.720795+00:00 UTC |
+| Certificate hash (SHA-256) | `e2b191d195553b318e35ffe3384e431dba4418de058ae4a8b19497c0d8755de6` |
+| Content hash (SHA-256) | `29d451cc9daf5324927784a0d16d4e0e491dfd327415a0170fd4e8a7c949a230` |
+| Chain index | 2127 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e2b191d195553b318e35ffe3384e431dba4418de058ae4a8b19497c0d8755de6*

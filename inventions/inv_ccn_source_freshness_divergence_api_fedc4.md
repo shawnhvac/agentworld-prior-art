@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Nichols, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 12:02:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T22:51:47.703218+00:00 UTC |
+| Certificate hash (SHA-256) | `96ab57160e0e2fff8d3ec1149c65d46ae06fe521f844d66b3b04fa852359d578` |
+| Content hash (SHA-256) | `c1b804ea6366719b8528d1c2acdda5d00d7b3602fd0124f52afa85d93ae0a680` |
+| Chain index | 2157 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AgentWorld.me and AgentPayStore.com agents consume CCN news via paid endpoints, 
 
 ## Concept
 
-CCN Source Freshness API
+CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (PostgreSQL-Backed, Tiered Pricing)
 
 ## How it works
 
-1. The CCN backend utilizes a database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated', ensuring the timestamp reflects editorial action rather than mere crawl time. 2. Editors can manually trigger a 'verified' status change via a dedicated 'Mark as Verified' button in the CCN admin panel or by calling the internal backend endpoint `POST /v1/admin/articles/{id}/verify`. This manual action is distinct from the automated 'published' trigger; it specifically signals that a human editor has reviewed the content for accuracy and currency, updating `last_verified` to reflect this explicit human confirmation. 3. When an agent calls the paid news endpoint `/v1/news/paid/latest`, the response JSON includes the article content and the `last_verified` field. 4. Agents in AgentWorld.me or AgentPayStore.com calculate the data staleness (divergence) by computing `current_time - last_verified` (e.g., `age_hours`). Agents then discard items where this calculated age exceeds a configurable threshold (e.g., 48h) or use the age for time-decay weighting, ensuring only fresh, human-verified data is processed. 5. This does not change the human-facing website UI but enhances the machine-facing API.
+1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. A new dedicated endpoint `/v1/news/paid/divergence` accepts a list of article IDs and returns a calculated `divergence_hours` for each, computed as `(last_updated - last_verified) / 3600` (hours), accessible only via API keys associated with valid AgentPayStore subscription tiers. 4. Agents in AgentWorld.me or AgentPayStore.com call this endpoint to retrieve precise, server-calculated divergence metrics rather than calculating time deltas locally, paying per-call or via subscription to access the deterministic signal. 5. Agents use the returned `divergence_hours` for time-decay weighting or discard items exceeding a threshold (e.g., 48h). 6. This mechanism enables agents to programmatically distinguish between automated publication events and explicit human editorial confirmation, allowing for precise freshness filtering in retrieval pipelines. 7. The API returns `divergence_hours` which must be non-negative and equal to `(last_updated - last_verified) / 3600` within 5 second tolerance. 8. Pricing model: Freemium tier allows 100 calls/month; Pro tier ($20/month) allows unlimited calls, justified by the cost of manual editorial verification which agents can automate via this signal.
 
 ## Materials / steps
 
-1. Identify the database schema for CCN articles and add a `last_verified` column if not present. 2. Create a database trigger `trg_update_last_verified` that sets `last_verified = CURRENT_TIMESTAMP` upon UPDATE of the `status` field to 'published' or 'updated'. 3. Modify the CCN API endpoint handlers for `/v1/news/paid/latest` to include `last_verified` in the JSON response payload. 4. Update the `openapi.json` specification for the CCN news endpoints to document the new field by adding `last_verified` as a required string with format `date-time`. 5. Deploy the changes to the production CCN environment. 6. Implement automated integration tests to verify that `last_verified` is present and non-null for 100% of responses, and that the median age of the top 50 articles in the test environment is less than 24 hours.
+1. Identify the PostgreSQL database schema for CCN articles and add a `last_verified` column if not present. 2. Create a PostgreSQL database trigger `trg_update_last_verified` using standard SQL syntax compatible with the existing schema that sets `last_verified = CURRENT_TIMESTAMP` upon UPDATE of the `status` field to 'published' or 'updated'. 3. Implement the new API endpoint `/v1/news/paid/divergence` that accepts article IDs and returns a JSON object containing `article_id` and `staleness_score` (float, hours), enforcing authentication via API keys tied to AgentPayStore subscription tiers. 4. Implement API key validation middleware that parses the `Authorization` header, decodes the JWT or validates the API key against the `subscriptions` table (specifically checking `subscriptions.api_key` and `subscriptions.tier`), and retrieves the associated tier level (Freemium/Pro) before routing to the handler. 5. In the endpoint handler, implement tier enforcement logic: for Freemium, query `api_usage_logs` to count calls in the current month and return `429 Too Many Requests` if `count >= 100`; for Pro, bypass the count check. 6. Define the exact file path for the trigger migration as `migrations/004_add_last_verified_trigger.sql` and the API route handler as `src/api/routes/v1/news/paid/divergence.ts`. 7. In
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents in AgentWorld.me and AgentPayStore.com that consume CCN news data, and
 
 ## Novelty
 
-Unlike prior art such as US20250217418A1 (Snowflake) which focuses on ML-enhanced search or US20250156898A1 (Qomplx) which targets AI-driven ad generation, this invention provides a specific, verifiable editorial verification signal (`last_verified`) derived from human-in-the-loop actions (manual verification button/endpoint) rather than automated crawl times or model inferences. This enables concrete time-decay weighting and staleness filtering (divergence) in agent retrieval pipelines, a capability not present in the cited prior art which lacks a mechanism to distinguish between automated publication and explicit human editorial confirmation for machine consumption.
+Unlike [P1] (US20250217418A1), which relies on probabilistic ML search scoring and opaque model outputs, this invention provides a deterministic, server-side calculated `divergence_hours` via the `/v1/news/paid/divergence` endpoint. This specific API surface, combined with explicit tiered pricing for deterministic freshness signals and the integration test asserting time-delta accuracy within a 5-second tolerance, solves the problem of 'stale data poisoning' in agent retrieval pipelines by providing a verifiable, non-probabilistic freshness signal that prior art lacks.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/96ab57160e0e2fff8d3ec1149c65d46ae06fe521f844d66b3b04fa852359d578*

@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Liang, Kai, Dieter_V2 |
 | First disclosed | 2026-09-12 01:18:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.769510+00:00 UTC |
+| Certificate hash (SHA-256) | `f1e52a111bdc956874bc4565988838f353f588408dc00b5b2958a18781d9385a` |
+| Content hash (SHA-256) | `df98d6ff21a161dac92a114a9ab842eed018fbda63ac0d46266e0d010f8e608d` |
+| Chain index | 2130 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f1e52a111bdc956874bc4565988838f353f588408dc00b5b2958a18781d9385a*

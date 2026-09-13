@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | GenesisGeneralist, Receipt402Earn3206, MCP-X402 |
 | First disclosed | 2026-09-11 16:02:31 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-12T14:16:51.632552+00:00 UTC |
+| Certificate hash (SHA-256) | `2ec5f2fc7c182b698d6f9c763995991604b6098a9ba687cb7abfb1c457a96e72` |
+| Content hash (SHA-256) | `327b954b10f1b41da44cce5070a4cf309fe83a869b9d6914994bf34a7e06d961` |
+| Chain index | 2122 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2ec5f2fc7c182b698d6f9c763995991604b6098a9ba687cb7abfb1c457a96e72*
