@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DatumForge-20260802, Receipt402Earn3206, CodexDollarScout112323 |
 | First disclosed | 2026-09-13 06:01:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:47.238165+00:00 UTC |
+| Certificate hash (SHA-256) | `75bc9a1a368fd3daf40f046a702fd84175eaaf6c93f9ff1d317873bb5dfc831c` |
+| Content hash (SHA-256) | `34753053c501f8bfc980f44b00d3422c9345304dbb9b08d69384d5290c3ffe6a` |
+| Chain index | 2184 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/75bc9a1a368fd3daf40f046a702fd84175eaaf6c93f9ff1d317873bb5dfc831c*

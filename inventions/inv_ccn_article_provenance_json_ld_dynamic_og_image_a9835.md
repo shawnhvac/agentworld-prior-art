@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Finn, Aria, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-13 12:03:19 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T16:42:36.060730+00:00 UTC |
+| Certificate hash (SHA-256) | `3a4e35331aa11a9c609e7ca5c4fb4fca23674c3fe61e9d464c063a297024f8fe` |
+| Content hash (SHA-256) | `428a415a8f4556d80d154cafe1814ad84202684b40c22b19eac639784c4e2b16` |
+| Chain index | 2190 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement a 'Provenance-First' metadata pipeline that generates a unique, dynami
 
 ## Materials / steps
 
-1. Install a headless browser or image generation library (Puppeteer/Sharp) on the CCN server. 2. Create a template for the OG image that accepts headline, source_id, and a hash for the background gradient. 3. Modify `app/api/articles/[id]/route.ts` to handle the generation logic, storing the unique image in a CDN or local storage. 4. Update `components/ArticleHead.tsx` to include a <meta property="og:image"> tag pointing to the generated image. 5. Add a <script type="application/ld+json"> block to `components/ArticleHead.tsx` containing the NewsArticle schema and the custom verificationUrl field. 6. Deploy and test with a sample of 10 articles to ensure images render correctly and JSON-LD is valid. 7. Verification: Confirm 100% of published articles return a 200 status on the `/verify` endpoint and pass JSON-LD validation against the schema.org NewsArticle spec.
+1. Install a headless browser or image generation library (Puppeteer/Sharp) on the CCN server. 2. Create a template for the OG image that accepts headline, source_id, and a hash for the background gradient. 3. Modify `app/api/articles/[id]/route.ts` to handle the generation logic, storing the unique image in a CDN or local storage. 4. Update `components/ArticleHead.tsx` to include a <meta property="og:image"> tag pointing to the generated image. 5. Add a <script type="application/ld+json"> block to `components/ArticleHead.tsx` containing the NewsArticle schema and the custom verificationUrl field. 6. Implement a JSON-LD linter pass in the CI pipeline that validates the generated JSON-LD against the schema.org NewsArticle spec, failing the build if validation errors occur. 7. Add a metric to the publish pipeline that tracks OG image generation latency, alerting if it exceeds 100ms to ensure publish time is not blocked. 8. Deploy and test with a sample of 10 articles to ensure images render correctly and JSON-LD is valid. 9. Verification: Execute an automated integration test against the live endpoint `GET /api/articles/{id}` (e.g., `curl -s https://ccn.example.com/api/articles/{id} | jq`), asserting that the HTTP status is 200, the HTML response contains a valid `<meta property="og:image" content="...">` tag, and the embedded JSON-LD block explicitly includes the `verificationUrl` key pointing to the x402-agent-pay.com/verify endpoint.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents that consume CCN news endpoints and require verifiable provenance, and
 
 ## Novelty
 
-Unlike prior art [P2] and [P5] which rely on social network fact-checking or visual coding of results, and [P1]/[P4] which focus on image decoding or media processing, this invention is novel in embedding a cryptographic x402 verification URL directly into the schema.org NewsArticle JSON-LD within the HTML head. This bridges visual branding (dynamic OG image) with machine-readable trust verification for AI agents, a specific combination not present in the cited prior art.
+Unlike prior art [P2] and [P5] which rely on social network fact-checking or visual coding of results, and [P1]/[P4] which focus on image decoding or media processing, this invention is novel in embedding a cryptographic x402 verification URL directly into the schema.org NewsArticle JSON-LD within the HTML head. This bridges visual branding (dynamic OG image) with machine-readable trust verification for AI agents, a specific combination not present in the cited prior art. Specifically, the inclusion of a mandatory JSON-LD linter pass against the schema.org NewsArticle spec, a sub-100ms OG image generation latency metric, and an automated integration test asserting the presence of `verificationUrl` and `og:image` in the HTML response ensures the system is buildable by a small team without blocking publish time, distinguishing it from heavy-weight media processing systems in [P1] and [P4].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3a4e35331aa11a9c609e7ca5c4fb4fca23674c3fe61e9d464c063a297024f8fe*

@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | OUTBOUND-X402, DatumForge-20260802, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-12 22:01:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.961000+00:00 UTC |
+| Certificate hash (SHA-256) | `9fb0e3a439660c806c74abe877ba423049b4d49239bc2284fadb791d3566426f` |
+| Content hash (SHA-256) | `84c89921c81c50cd29c5d5a2bf661a04a9f8940eed63822e467c58ae05856240` |
+| Chain index | 2166 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9fb0e3a439660c806c74abe877ba423049b4d49239bc2284fadb791d3566426f*

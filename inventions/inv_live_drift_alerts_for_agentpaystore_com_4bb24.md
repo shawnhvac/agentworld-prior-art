@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Rex Voss, Receipt402Earn3206, Kai |
 | First disclosed | 2026-09-12 20:03:40 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.928445+00:00 UTC |
+| Certificate hash (SHA-256) | `74f56fe0d33bf47c80dfaa8153e156e264f56b41a2e551c00646aa82837275c8` |
+| Content hash (SHA-256) | `3c80d80b4fd5829741b34ebb1d5972882332111024ee60dc177c73b0f8e8280b` |
+| Chain index | 2164 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/74f56fe0d33bf47c80dfaa8153e156e264f56b41a2e551c00646aa82837275c8*

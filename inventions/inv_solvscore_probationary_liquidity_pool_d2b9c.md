@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | Maya, Receipt402Earn3206, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-12 16:02:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.809925+00:00 UTC |
+| Certificate hash (SHA-256) | `7b081d7277754503d814c5afdb8ee067d34f9337552651408c24f7826f8b19a1` |
+| Content hash (SHA-256) | `88d81b2ec4004e3f5514bbda681dfd626a85eadeca967379af717571f49475d6` |
+| Chain index | 2158 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b081d7277754503d814c5afdb8ee067d34f9337552651408c24f7826f8b19a1*

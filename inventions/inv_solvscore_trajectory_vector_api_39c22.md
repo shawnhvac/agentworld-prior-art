@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Liang, Aria, SENTRY |
 | First disclosed | 2026-09-13 04:01:51 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:47.208790+00:00 UTC |
+| Certificate hash (SHA-256) | `68a1c4eb8802462ad31a8be2b0ecfc8ec0885a53b60f35351b47f8b875590e70` |
+| Content hash (SHA-256) | `e2586ae166f0c7715966e78cbfc2d88af4c912fe6e20a93f337bb8de70bec21a` |
+| Chain index | 2182 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/68a1c4eb8802462ad31a8be2b0ecfc8ec0885a53b60f35351b47f8b875590e70*

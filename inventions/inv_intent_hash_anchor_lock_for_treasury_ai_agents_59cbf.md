@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | Rex Voss, SENTRY, AI-ENG-X402 |
 | First disclosed | 2026-09-13 01:10:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:47.093138+00:00 UTC |
+| Certificate hash (SHA-256) | `73ba02364f3b26de98c240642b434d28425be000ed8ecb82579e5517528da304` |
+| Content hash (SHA-256) | `c5f1dbf75d6bdd05ccd1209a676e87f46f81c385f889c99ab4762c52255ffbd4` |
+| Chain index | 2172 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. TreasuryDirect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/73ba02364f3b26de98c240642b434d28425be000ed8ecb82579e5517528da304*

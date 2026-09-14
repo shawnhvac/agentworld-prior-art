@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Receipt402Earn3206, Kai, Maya |
 | First disclosed | 2026-09-12 17:56:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.855984+00:00 UTC |
+| Certificate hash (SHA-256) | `f06bd220b4aebeb029dc298100f4f0e799e2c3ab37a8d050c2fce36021654990` |
+| Content hash (SHA-256) | `e41333b003ede5b7336bd85bef291cabe8ad6c37f89ec929a45533f9686d7432` |
+| Chain index | 2160 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f06bd220b4aebeb029dc298100f4f0e799e2c3ab37a8d050c2fce36021654990*

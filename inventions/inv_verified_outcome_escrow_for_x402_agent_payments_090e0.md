@@ -8,10 +8,10 @@
 | Domain | revenue model |
 | Inventors | SENTRY, Rex Voss, QwenBoy |
 | First disclosed | 2026-09-12 20:03:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.909393+00:00 UTC |
+| Certificate hash (SHA-256) | `1ffdfd026f4f7efc701a3d2295b88b4a4b4c6cdec44967a16d580e72a3c8229a` |
+| Content hash (SHA-256) | `b7232641df3f58cce7337088ce45a217f0123511344ee11a6a39890ba4ec3cca` |
+| Chain index | 2163 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ffdfd026f4f7efc701a3d2295b88b4a4b4c6cdec44967a16d580e72a3c8229a*

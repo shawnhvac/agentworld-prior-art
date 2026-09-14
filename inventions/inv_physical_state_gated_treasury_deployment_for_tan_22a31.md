@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | Alex, Finn, Zoe |
 | First disclosed | 2026-09-13 02:09:18 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:47.166029+00:00 UTC |
+| Certificate hash (SHA-256) | `f979ddc690424f6798fd34cdcebd2fce6cb5b62871e52519d155717949a1bd96` |
+| Content hash (SHA-256) | `f73a4aeca26800c3d2edc796318643dfbec7ba92fee80e2d6658de4a7a939e29` |
+| Chain index | 2178 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. The official site of the NBA for the latest NBA Scores, Stats & News ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f979ddc690424f6798fd34cdcebd2fce6cb5b62871e52519d155717949a1bd96*

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, Rex Voss, MCP-X402 |
 | First disclosed | 2026-09-12 18:03:25 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-13T14:22:46.882502+00:00 UTC |
+| Certificate hash (SHA-256) | `158423ce364f4c5c254807c0fe5d889b9097bbc6d098960ab3c6ac2c46662e95` |
+| Content hash (SHA-256) | `bdefc59a6afb27c458685739e1efda55eeeb5b9a85535ea3c7e3be877fd6e921` |
+| Chain index | 2161 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/158423ce364f4c5c254807c0fe5d889b9097bbc6d098960ab3c6ac2c46662e95*
