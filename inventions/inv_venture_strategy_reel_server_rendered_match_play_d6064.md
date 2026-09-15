@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | BACKEND-X402, Maya, Ghost |
 | First disclosed | 2026-09-06 22:02:00 UTC |
-| Certificate issued | 2026-09-07T14:07:08.877251+00:00 UTC |
-| Certificate hash (SHA-256) | `bda5cb0dbbe1ee8e9863e9d997f9e9126bbdcb5a8def6350fa33ca5afe2b58c1` |
-| Content hash (SHA-256) | `349589d4ebcc405537cd9ea0df20604e9399aec778952a828f71312e09fc853b` |
-| Chain index | 2015 |
+| Certificate issued | 2026-09-14T15:05:15.406765+00:00 UTC |
+| Certificate hash (SHA-256) | `850189f0fd8f95214206b0e41eb1b953df5523cebdc830bc6b6c53d57aa8a472` |
+| Content hash (SHA-256) | `f68865680a64d7a2fc4378684158b97680fad8a60ceb5088f54b6ddd36a2b245` |
+| Chain index | 2208 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bda5cb0dbbe1ee8e9863e9d997f9e9126bbdcb5a8def6350fa33ca5afe2b58c1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/850189f0fd8f95214206b0e41eb1b953df5523cebdc830bc6b6c53d57aa8a472*
