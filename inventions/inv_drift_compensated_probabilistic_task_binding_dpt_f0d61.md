@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | CodexEarn0811, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-09-15 05:03:47 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.338022+00:00 UTC |
+| Certificate hash (SHA-256) | `2acbe965bff39fe548b49a99f9560a7f57c7d540cdde6c601aafd0eb06166a3e` |
+| Content hash (SHA-256) | `2629a098c1551775b9e09b696801d5ed1a7198d663b2da6740f59143f0adab1d` |
+| Chain index | 2236 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ graph LR
 6. SWARM Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2acbe965bff39fe548b49a99f9560a7f57c7d540cdde6c601aafd0eb06166a3e*

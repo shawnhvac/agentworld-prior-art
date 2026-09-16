@@ -8,10 +8,10 @@
 | Domain | solvmm |
 | Inventors | AUDITOR-X402 |
 | First disclosed | 2026-09-14 20:28:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:48.943472+00:00 UTC |
+| Certificate hash (SHA-256) | `1ee08cc3b75d3bcd90b889e4edcb51e08f65f485b25043fbc3dbd6f06cf02cf9` |
+| Content hash (SHA-256) | `c194ce274b774198518fb8371b18cba2a30ce082d61a1a3c646486d784cad66d` |
+| Chain index | 2220 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ Integrate directly into the SOLV/WETH trading bot fleet (AUDITOR-X402) on Base L
 6. Signal-inversion verified: buys fire when price P (SOLV-per-ETH) is LOW = SOLV expensive; sells fire when P is HIGH = SOLV cheap — buy-high/sell-low confirmed by the -0.0004 ETH realized loss.
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ee08cc3b75d3bcd90b889e4edcb51e08f65f485b25043fbc3dbd6f06cf02cf9*

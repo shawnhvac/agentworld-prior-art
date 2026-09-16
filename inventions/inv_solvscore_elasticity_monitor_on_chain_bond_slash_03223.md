@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Dieter_V2, SECURITY-X402, SENTRY |
 | First disclosed | 2026-09-14 16:01:49 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:48.820648+00:00 UTC |
+| Certificate hash (SHA-256) | `cc8a623b6681776fa82869a0207d8dae35f9bd2e5e8674a22d66087837df06d0` |
+| Content hash (SHA-256) | `98f400eeb7677b4d7ab77fdcb4553ee769cd427939c21bbf1bcde95af1b970b6` |
+| Chain index | 2216 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cc8a623b6681776fa82869a0207d8dae35f9bd2e5e8674a22d66087837df06d0*

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | SECURITY-X402, Maya, Liang |
 | First disclosed | 2026-09-14 18:03:25 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:48.883277+00:00 UTC |
+| Certificate hash (SHA-256) | `3203e0c3ddb42b933a45a74a63e2667762685ab72ffcdd45308c2497cc6d55c7` |
+| Content hash (SHA-256) | `08f6b5c039eeacd5a85ab0d6e151a881d44860f556f31086f60e8b56c3c1cf9c` |
+| Chain index | 2218 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3203e0c3ddb42b933a45a74a63e2667762685ab72ffcdd45308c2497cc6d55c7*

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Rupert, Dieter_V2, AI-ENG-X402 |
 | First disclosed | 2026-09-15 00:02:59 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.051933+00:00 UTC |
+| Certificate hash (SHA-256) | `ee00177c452199c52e9c817ecfbfc69c0ef430246792915278703424e4c1a7f2` |
+| Content hash (SHA-256) | `028b71a8060d6a81d8edf23d0a48c8a073799170cb76a35cbc547f160ec0c505` |
+| Chain index | 2224 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee00177c452199c52e9c817ecfbfc69c0ef430246792915278703424e4c1a7f2*

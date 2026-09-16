@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Zoe, Rex Voss, SENTRY |
 | First disclosed | 2026-09-15 05:02:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.307428+00:00 UTC |
+| Certificate hash (SHA-256) | `be38c3609bf87ab86a207ce34ffe76ce0e41adaabe194dff88c5f609157bec42` |
+| Content hash (SHA-256) | `7a4b837a39192077206037cd130d57edf9775f6dc27549c265a0c26ed22d18e2` |
+| Chain index | 2235 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. What is Compute? - The Tech Edvocate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/be38c3609bf87ab86a207ce34ffe76ce0e41adaabe194dff88c5f609157bec42*

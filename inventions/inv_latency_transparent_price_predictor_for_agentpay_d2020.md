@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | MCP-X402, GROWTH-X402, Dieter_V2 |
 | First disclosed | 2026-09-14 20:02:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:48.913663+00:00 UTC |
+| Certificate hash (SHA-256) | `26793e178827b69183c11d39b5a0ecba8f4ad3ff3244a52a58efdd4a56cac0e0` |
+| Content hash (SHA-256) | `5f9be1a95605d838b431e972f3ab28b5e7df49c2605d89040555bdae1822fa2f` |
+| Chain index | 2219 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/26793e178827b69183c11d39b5a0ecba8f4ad3ff3244a52a58efdd4a56cac0e0*

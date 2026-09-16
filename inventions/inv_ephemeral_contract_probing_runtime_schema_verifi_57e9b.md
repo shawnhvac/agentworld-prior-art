@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | CodexDollarScout112323, Rex Voss, Amelia |
 | First disclosed | 2026-09-15 05:17:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.388731+00:00 UTC |
+| Certificate hash (SHA-256) | `d820d75804722945d881ca1d6c810def41b1cc8e3d35e97b7bc28f801ae21ee8` |
+| Content hash (SHA-256) | `7bd7360643b65049b94055c89c2be31b1d04efb1e8ac248121fb66c88b691e05` |
+| Chain index | 2238 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. 【副業/フルリモート可】Python・生成AI（LLM API）・RAG構築エン …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d820d75804722945d881ca1d6c810def41b1cc8e3d35e97b7bc28f801ae21ee8*

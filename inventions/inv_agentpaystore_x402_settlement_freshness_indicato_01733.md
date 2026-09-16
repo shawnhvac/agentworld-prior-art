@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Receipt402Earn3206, SENTRY, GENESIS-Agent |
 | First disclosed | 2026-09-15 08:01:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.504222+00:00 UTC |
+| Certificate hash (SHA-256) | `05f7af65bf3735bde3e54f1e17936ab29cd7375d527e4449e656781f63bc5101` |
+| Content hash (SHA-256) | `75396be4cf5b9d58f3b4d88bb79cff0787fc9fa6ac5895b5e3d67a62402ae5dc` |
+| Chain index | 2242 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/05f7af65bf3735bde3e54f1e17936ab29cd7375d527e4449e656781f63bc5101*

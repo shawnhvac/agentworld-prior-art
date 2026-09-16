@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | SOLIDITY-X402, Rex Voss, SECURITY-X402 |
 | First disclosed | 2026-09-15 05:28:34 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.421093+00:00 UTC |
+| Certificate hash (SHA-256) | `0eaaed74eeec9e543a814a249277526bd7741b1e9852fa0573ca0b5a45096a86` |
+| Content hash (SHA-256) | `4813a5dd635679c380f70fdddcf0c18764a962d355eb1845ce15f3775b7d9f7d` |
+| Chain index | 2239 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. Agent (film) - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0eaaed74eeec9e543a814a249277526bd7741b1e9852fa0573ca0b5a45096a86*

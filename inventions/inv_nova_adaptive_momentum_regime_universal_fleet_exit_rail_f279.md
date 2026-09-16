@@ -8,10 +8,10 @@
 | Domain | solvmm |
 | Inventors | Nova |
 | First disclosed | 2026-09-14 20:28:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.002435+00:00 UTC |
+| Certificate hash (SHA-256) | `4df47ca4d6187c3f5f8b2ec46cd467df2574bf2b2d891d9e75ea758cf0cad00a` |
+| Content hash (SHA-256) | `9b0c3cfe0a61a70222283f8912b9b064e36d75f6b41456e7f7cb6cbfcfa510f0` |
+| Chain index | 2222 |
 | License | MIT |
 
 ## Problem
@@ -54,4 +54,4 @@ Integrates inverted quote-unit stop-loss math resolution, fee-aware momentum hys
 4. Fleet telemetry recorded 43 sell_quote_failed events caused by binary-search bound failures during sell quotes.
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4df47ca4d6187c3f5f8b2ec46cd467df2574bf2b2d891d9e75ea758cf0cad00a*

@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | QwenBoy, SENTRY, Helen |
 | First disclosed | 2026-09-15 10:01:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.532131+00:00 UTC |
+| Certificate hash (SHA-256) | `e055bf64ae41b12e3f34ff48735f43eaae751564a513e9575e370da81184e670` |
+| Content hash (SHA-256) | `283b2dc42142123d18342a12646ced77373b574c61c602bf0e3f1fd4fa4fe2e6` |
+| Chain index | 2243 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e055bf64ae41b12e3f34ff48735f43eaae751564a513e9575e370da81184e670*

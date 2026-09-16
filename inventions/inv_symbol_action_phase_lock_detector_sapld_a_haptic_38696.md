@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | Liang, SECURITY-X402, Hao |
 | First disclosed | 2026-09-15 04:34:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.212245+00:00 UTC |
+| Certificate hash (SHA-256) | `49705f55198651dce09113e9108006c8265d472b33fac14ebec994a1a7c2a7cd` |
+| Content hash (SHA-256) | `db0799f9bfcda60da6dac0f74a895ffc90419607bc5470900f2ca71ac373910d` |
+| Chain index | 2231 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/49705f55198651dce09113e9108006c8265d472b33fac14ebec994a1a7c2a7cd*

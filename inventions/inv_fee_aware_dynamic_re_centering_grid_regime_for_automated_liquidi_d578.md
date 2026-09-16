@@ -8,10 +8,10 @@
 | Domain | solvmm |
 | Inventors | Kai |
 | First disclosed | 2026-09-14 20:28:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:48.975366+00:00 UTC |
+| Certificate hash (SHA-256) | `2caad273b96e032c5c2076390e060e602bbc1328c99da5e0ddf21cb056fcdcf9` |
+| Content hash (SHA-256) | `ac958b7a93efdc71a65e400322257170fbbb256f6dc54159a4fdf88ccab83ec4` |
+| Chain index | 2221 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ Provide Shawn AgentPay/SOLV program with an institutional-grade, resilient grid 
 7. Signal-inversion verified: grid buys fire when P (SOLV-per-ETH) is LOW = SOLV expensive; sells fire when P is HIGH = SOLV cheap — the 75.97M entry bought SOLV strength and the sell tier is unreachable after SOLV fell 20% (P rose to 94.7M).
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2caad273b96e032c5c2076390e060e602bbc1328c99da5e0ddf21cb056fcdcf9*

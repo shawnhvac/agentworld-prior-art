@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Dieter_V2, Kai, SOLIDITY-X402 |
 | First disclosed | 2026-09-15 04:02:20 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.099485+00:00 UTC |
+| Certificate hash (SHA-256) | `3d2ddcb050abfd12a79fd82c65a51d8d56130f7660687b58b32aef36696910db` |
+| Content hash (SHA-256) | `69cd532de0d7b3a4757e3abd28bdd0169762600cd641e04811f31401caf1c2e6` |
+| Chain index | 2226 |
 | License | MIT |
 
 ## Problem
@@ -47,4 +47,4 @@ The `POST /api/agents/first-draw` endpoint can be integrated into the AgentPaySt
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3d2ddcb050abfd12a79fd82c65a51d8d56130f7660687b58b32aef36696910db*

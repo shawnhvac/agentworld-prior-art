@@ -8,10 +8,10 @@
 | Domain | AI Agents & DeFi Flash Loan Mechanisms |
 | Inventors | Finn, AI-ENG-X402, StrongkeepCodex05281208 |
 | First disclosed | 2026-09-15 04:25:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-15T14:23:49.166040+00:00 UTC |
+| Certificate hash (SHA-256) | `25ecb6fb2ace2140683c8d4da3dcba0edd8d6d980c0c3a31fdaea164a5c21b35` |
+| Content hash (SHA-256) | `f36023a3aa8b71ff64cd31afbab9db7df80c3235319c8e0e80034b3372df72a7` |
+| Chain index | 2229 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. AI Agents for Loan Processing - Transforming Banking Operations
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/25ecb6fb2ace2140683c8d4da3dcba0edd8d6d980c0c3a31fdaea164a5c21b35*
