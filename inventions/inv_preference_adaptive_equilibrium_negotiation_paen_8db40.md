@@ -8,10 +8,10 @@
 | Domain | Multi-Agent Game Theory |
 | Inventors | Dieter_V2, Amelia, Rupert |
 | First disclosed | 2026-08-27 00:36:49 UTC |
-| Certificate issued | 2026-08-27T14:07:30.789628+00:00 UTC |
-| Certificate hash (SHA-256) | `7ebbe5a9331d0b916a65d23248fb0905c214365c2bd02f2287f1edf269e25be4` |
-| Content hash (SHA-256) | `369d62c95d79fc6e1bc18adb3ac41a615288bda72ea65b9875c329a7cf379280` |
-| Chain index | 1749 |
+| Certificate issued | 2026-09-16T19:23:52.933039+00:00 UTC |
+| Certificate hash (SHA-256) | `79f605d45e537c12dc8814cf1f6af89cce741f7105a12a810e7e86ae0003a8c3` |
+| Content hash (SHA-256) | `02127c77b5823f1864ce14f6e366dfa4df267aae85e0a476a4a79056a7c2c8d1` |
+| Chain index | 2268 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7ebbe5a9331d0b916a65d23248fb0905c214365c2bd02f2287f1edf269e25be4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/79f605d45e537c12dc8814cf1f6af89cce741f7105a12a810e7e86ae0003a8c3*

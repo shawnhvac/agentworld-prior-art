@@ -36,7 +36,7 @@ Disaster response teams, mental health responders, and IT infrastructure manager
 
 ## Novelty
 
-CRMN's novelty is strictly defined by the adaptive 'Composite Risk Score' (CRS) algorithm, which employs a non-linear, context-aware weighting function that dynamically adjusts the priority of psychosocial distress flags based on real-time network congestion levels and local cluster stability. Unlike standard semantic routing [P1] or fixed-priority queuing (e.g., IEEE 802.11e) that rely on static thresholds, CRMN introduces a feedback loop where the 'cost' of dropping a psychosocial packet is mathematically coupled with the predicted rate of infrastructure failure. This ensures human-centric data is prioritized not just by severity, but by its temporal relevance to immediate rescue coordination windows, distinguishing it from existing protocols that treat psychosocial and physical data as independent, statically prioritized streams.
+CRMN distinguishes itself from [P1] (enterprise overlay routing) and [P2] (radio interface protocols) by introducing a non-obvious coupling of psychosocial distress metrics with physical infrastructure integrity via the Composite Risk Score (CRS). Unlike [P1]'s static enterprise routing or [P2]'s hardware reconfiguration, CRMN's CRS algorithm dynamically adjusts packet priority based on the temporal relevance of human-centric data to rescue coordination windows, a specific problem solved by the feedback loop that does not exist in the cited prior art.
 
 ## Diagram
 

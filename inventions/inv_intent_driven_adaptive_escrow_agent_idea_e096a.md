@@ -30,14 +30,15 @@ IDEA employs a multi-layered approach involving real-time behavioral modeling us
 Upon trigger activation, the system distinguishes between the *current* escrow instance and *future* instances. The current transaction settles strictly based on the policy parameters (releaseThreshold, timeoutDuration) locked at the time of contract initiation. The RL engine does not alter the conditions of the active transaction mid-flight to ensure atomicity and predictability. Instead, the updated policy parameters are serialized and applied only to subsequent escrow instances initiated after the on-chain state update is confirmed. 
 
 **End-to-End Data Flow (Pseudocode):**
-1. **Monitor**: RL Engine monitors `Current_Behavior_Vector`.
+1. **Monitor**: RL Engine monitors `Current_Behavior_Vector` via the `/api/v1/behavior/stream` WebSocket endpoint.
 2. **Trigger Check**: IF (Current_Behavior_Vector · Memory_Trigger_Threshold < Safety_Margin) THEN `Generate_New_Policy_Params()`.
 3. **Serialize & Sign**: `policy_hash = SHA256(New_Policy_Params); sig = Sign(policy_hash, agent_private_key)`.
-4. **On-Chain Update**: Call `updateEscrowPolicy(policy_hash, sig)`. Contract verifies signature, updates internal `Global_Policy_State`.
+4. **On-Chain Update**: Call `updateEscrowPolicy(bytes32 policyHash, bytes signature)` at the contract address `0xIDEA...`. Contract verifies signature, updates internal `Global_Policy_State`.
 5. **Settlement (Current Tx)**: Existing escrow continues to settle using `Initiated_Policy_State` (immutable for this tx).
 6. **Future Tx**: New escrow contracts initialized after step 4 use `Global_Policy_State`.
 
-Validation is ensured through concrete metrics: Trust_Score accuracy must demonstrate >95% correlation with on-chain fulfillment, and maximum acceptable Latency_Penalty is capped at <200ms. Performance is verified via a formal hypothesis testing framework specifying a 95% confidence interval, a minimum sample size of 10,000 transactions, and a p-value threshold of <0.05 to statistically validate the >95% Trust_Score correlation claim. Policy Serialization & On-Chain Execution: Upon trigger activation, the RL engine serializes the new policy parameters into a compact byte array, hashes it using SHA-256, and signs it with the agent's private key. This signed payload is submitted via a gas-optimized `updateEscrowPolicy(bytes32 policyHash, bytes signature)` function in the smart contract. The contract verifies the signature against the registered agent address, updates the internal state variables (e.g., `releaseThreshold`, `timeoutDuration`) for future instances, and enforces
+**Operational Verification & Latency Monitoring:**
+A 'Policy Drift Alert' metric is continuously computed by comparing the on-chain settlement timestamp against the predicted latency generated at the `/api/v1/policy/predict` endpoint. If the deviation exceeds 50ms, the system flags a drift event, providing a measurable, real-time verification of the <200ms latency constraint. Validation is ensured through concrete metrics: Trust_Score accuracy must demonstrate >95% correlation with on-chain fulfillment, and maximum acceptable Latency_Penalty is capped at <200ms. Performance is verified via a formal hypothesis testing framework specifying a 95% confidence interval, a minimum sample size of 10,000 transactions, and a p-value threshold of <0.05 to statistically validate the >95% Trust_Score correlation claim. Policy Serialization & On-
 
 ## Materials / steps
 

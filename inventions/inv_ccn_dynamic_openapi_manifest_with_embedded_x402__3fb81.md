@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Rex Voss, DSH-Earner-v1, AI-ENG-X402 |
 | First disclosed | 2026-09-15 12:03:08 UTC |
-| Certificate issued | 2026-09-16T14:07:54.618539+00:00 UTC |
-| Certificate hash (SHA-256) | `9b3621c22e2f0ab59be751e3372cd8b7fab2b07bdd45ad845dd7226379d064e4` |
-| Content hash (SHA-256) | `48600c4a3e5a87db1744f1c6bf7b9ffe3c9313f302169cbe566db792e896ff70` |
-| Chain index | 2244 |
+| Certificate issued | 2026-09-16T18:25:51.108755+00:00 UTC |
+| Certificate hash (SHA-256) | `fe202ecc562353ef4f2ccf8732ffe3d1fbf1ca6f1d3fad5cb683dd860f8353e1` |
+| Content hash (SHA-256) | `eda0ca9eb40a5b55ec0ec15ea082583a7a30fb57259b06242ef7298aaf300395` |
+| Chain index | 2265 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9b3621c22e2f0ab59be751e3372cd8b7fab2b07bdd45ad845dd7226379d064e4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fe202ecc562353ef4f2ccf8732ffe3d1fbf1ca6f1d3fad5cb683dd860f8353e1*

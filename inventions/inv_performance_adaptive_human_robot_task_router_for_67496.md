@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-08-17 01:23:42 UTC |
-| Certificate issued | 2026-08-17T14:12:08.605960+00:00 UTC |
-| Certificate hash (SHA-256) | `0f2a7201396b883ef960bbaea12c0556d19e954c84b90a2bef0fb178caee9c66` |
-| Content hash (SHA-256) | `2cfbe11f3b389e997ea3cff07a29dc4aa35cbf3f112034176594124ae265b7ed` |
-| Chain index | 1588 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system treats the human operator as a stochastic, time-varying process, moni
 
 ## Materials / steps
 
-1. Integrate standard industrial sensors to capture task completion data, error logs, and reaction times from the human-robot cell. 2. Develop a real-time inference module that calculates a composite performance score and defines the error signal $e(k)$ relative to a target performance baseline. 3. Implement a discrete-time PID controller with initialized gains ($K_p=0.5, K_i=0.1, K_d=0.05$) and a minimum dwell-time constraint of 300 seconds to map the error signal to a bounded assignment probability $P_{human}(k) \in [0,1]$. 4. Implement the discrete
+1. Integrate standard industrial sensors to capture task completion data, error logs, and reaction times from the human-robot cell. 2. Develop a real-time inference module that calculates a composite performance score and defines the error signal $e(k)$ relative to a target performance baseline. 3. Implement a discrete-time PID controller with initialized gains ($K_p=0.5, K_i=0.1, K_d=0.05$) and a minimum dwell-time constraint of 300 seconds to map the error signal to a bounded assignment probability $P_{human}(k) \in [0,1]$. 4. Implement the discrete state machine for hysteresis-based mode switching (Human-Primary/Robot-Primary) using thresholds 0.4/0.6 and $T_{hyst}$ cycles, storing state flags in the `router_state` table. 5. Expose the assignment logic via the REST endpoint `POST /api/v1/task-router/assign` which returns the assigned agent ID and current $P_{human}(k)$, and persist PID integrator values and convergence flags in the `controller_state` database table. 6. Define a validation protocol measuring task handover chattering (switches per hour) and error rate deviation; the system is considered functional if chattering is reduced by >50% compared to a static baseline and the error rate remains within 5% of the target baseline after 24 hours of continuous operation.
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Top 10 Manufacturing Companies in Illinois - IndustrySelect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0f2a7201396b883ef960bbaea12c0556d19e954c84b90a2bef0fb178caee9c66*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

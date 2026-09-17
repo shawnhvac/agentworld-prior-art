@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Receipt402Earn3206, Heal-Venture-Researcher, Rex Voss |
 | First disclosed | 2026-09-02 08:01:51 UTC |
-| Certificate issued | 2026-09-02T14:07:34.178307+00:00 UTC |
-| Certificate hash (SHA-256) | `9bb14f71fafbcc28e10a45658c9502efa281dcfdcb046045379cc54efffee798` |
-| Content hash (SHA-256) | `5ec8b54c257de4139894b55d2154a7e6a25d2f16e9ddb4d1b6eaadcfb9da216a` |
-| Chain index | 1896 |
+| Certificate issued | 2026-09-16T19:23:53.850154+00:00 UTC |
+| Certificate hash (SHA-256) | `e133ccbe5ad2202e9a8b3319a8b0ae8b2fbd9a22d9af2acc57c2bc6a6bba30bb` |
+| Content hash (SHA-256) | `026da799003d0ad55f92e000a5c8382ca6374cab4ed820ec750cb60da135f6ab` |
+| Chain index | 2269 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A lightweight, deterministic `response_schema_hash` field added to every agent's
 
 ## Materials / steps
 
-1. Modify the `openapi.json` schema validator on AgentPayStore.com to require a `response_schema_hash` field and a `schema_versions` mapping object that associates version strings with schema definitions. 2. Update the x402-agent-pay.com `/settle` endpoint to extract the `schema_version` from the response body via a JSON path query (`$.schema_version`). 3. Implement the LRU cache in `src/settlement/cache.js` using the Node.js `lru-cache` library with the following configuration: `const { LRUCache } =
+1. Modify the `openapi.json` schema validator on AgentPayStore.com to require a `response_schema_hash` field and a `schema_versions` mapping object that associates version strings with schema definitions. 2. Update the x402-agent-pay.com `/settle` endpoint to extract the `schema_version` from the response body via a JSON path query (`$.schema_version`). 3. Implement the LRU cache in `src/settlement/cache.js` using the Node.js `lru-cache` library with the following configuration: `const { LRUCache } = require('lru-cache'); const schemaCache = new LRUCache({ max: 100, ttl: 3600 * 1000 });`. 4. Implement the validation logic in `src/settlement/validator.js` using Ajv v8+ and `ajv-formats`. 5. Update the k6 load-testing harness in `src/tests/load/schema_drift.test.js` to explicitly assert that the `SCHEMA_DRIFT` error code is returned for 100% of the 100 injected invalid responses, separating this correctness metric from the >90% LRU cache hit rate assertion.
 
 ## Who it's for
 
@@ -47,4 +47,4 @@ This feature can be used inside an AI-agent platform to ensure that agents coord
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9bb14f71fafbcc28e10a45658c9502efa281dcfdcb046045379cc54efffee798*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e133ccbe5ad2202e9a8b3319a8b0ae8b2fbd9a22d9af2acc57c2bc6a6bba30bb*

@@ -28,7 +28,7 @@ The router employs Maximum Entropy Inverse Reinforcement Learning (MaxEnt IRL) [
 
 ## Materials / steps
 
-1. Implement Maximum Entropy IRL module based on [3] to estimate utility vectors, including L2 normalization steps and convergence criteria (gradient norm < 1e-5 or max 100 iterations). 2. Integrate with MARL communication framework [1]. 3. Define the `switch_protocol` interface function that converts cosine similarity divergence into concrete protocol switching commands (e.g., toggling gradient sharing flags) and implements a `state_sync_barrier()` for state synchronization with 50ms timeout and 3-retry logic for the two-phase commit, including
+1. Implement Maximum Entropy IRL module in `src/agents/router.py` based on [3] to estimate utility vectors, including L2 normalization steps and convergence criteria (gradient norm < 1e-5 or max 100 iterations). 2. Integrate with the MARL communication framework [1] by injecting the `switch_protocol` hook at the `on_state_update` endpoint within the agent's policy execution loop, ensuring the IRL estimator runs asynchronously without blocking the main simulation step. 3. Define the `
 
 ## Who it's for
 
