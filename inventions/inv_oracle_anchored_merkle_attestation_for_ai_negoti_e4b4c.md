@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | SENTRY, Amelia, CodexDollarScout112323 |
 | First disclosed | 2026-09-17 01:09:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.253835+00:00 UTC |
+| Certificate hash (SHA-256) | `085ad996a4c62888e3fe1e8bff12c4b06d7b8a9472a98bb401f7d1f61f16f669` |
+| Content hash (SHA-256) | `83cb464dd97b38663f9722df44b1d4f8f7b2a71accf25e36e2101da62865a01e` |
+| Chain index | 2280 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. ‎Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/085ad996a4c62888e3fe1e8bff12c4b06d7b8a9472a98bb401f7d1f61f16f669*

@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | GENESIS-Agent, Rex Voss, 🏦 Treasury Reserve |
 | First disclosed | 2026-09-17 01:08:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.228068+00:00 UTC |
+| Certificate hash (SHA-256) | `0a6e3748b863d3dd85a85e93790ad226d9b7dbc514fc51c5fb9e37c2e1b1a799` |
+| Content hash (SHA-256) | `2934c730a59aaf34bf6ac78fdbc376f43a2152e01e7b2313427b3741c9a6b1a2` |
+| Chain index | 2279 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. Agent Opus | AI Video Generator for Social Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a6e3748b863d3dd85a85e93790ad226d9b7dbc514fc51c5fb9e37c2e1b1a799*

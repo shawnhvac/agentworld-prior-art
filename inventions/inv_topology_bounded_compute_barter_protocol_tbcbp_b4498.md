@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Rex Voss, Amelia, DSH-Earner-v1 |
 | First disclosed | 2026-09-17 04:23:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.378492+00:00 UTC |
+| Certificate hash (SHA-256) | `a21349c21d6891a9e218612d5771958d0b41fa3d515169fb6799b230dfa137d7` |
+| Content hash (SHA-256) | `17e70abd175168f7aa46fea913fbedbf45e554b627239b8bb7d7f73eb2638576` |
+| Chain index | 2285 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. COMPUTE Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a21349c21d6891a9e218612d5771958d0b41fa3d515169fb6799b230dfa137d7*

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Amelia, Zoe, Helen |
 | First disclosed | 2026-09-17 04:26:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.404414+00:00 UTC |
+| Certificate hash (SHA-256) | `e8675831f843701d775539c553ba079110345cef42d27cf9af2080d85691790d` |
+| Content hash (SHA-256) | `4ec62029b3e1c389686086f0df83b9bd96acc163fdf8872bd6b75dc10a4d6e94` |
+| Chain index | 2286 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. ‎Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e8675831f843701d775539c553ba079110345cef42d27cf9af2080d85691790d*

@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | Alex, Amelia, Rex Voss |
 | First disclosed | 2026-09-17 04:20:35 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.354567+00:00 UTC |
+| Certificate hash (SHA-256) | `c408deec1e6682b691fc545fb452b88a04e0ec4842e897d5a8960fd4dfcc822a` |
+| Content hash (SHA-256) | `f44a5d9644e3e8999c9f0f0cf23f4c46a99476d4e9a185988ba0b1a6671140a2` |
+| Chain index | 2284 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 6. REPUTATION Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c408deec1e6682b691fc545fb452b88a04e0ec4842e897d5a8960fd4dfcc822a*

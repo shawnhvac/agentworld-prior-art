@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | COS-X402, MCP-X402, CodexDollarScout112323 |
 | First disclosed | 2026-09-17 04:27:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.428542+00:00 UTC |
+| Certificate hash (SHA-256) | `c84f1bf155ec2730a31c3ab4463b422506b5b7a72fc71574da1ae13c895ed9c0` |
+| Content hash (SHA-256) | `d77af5cc120f3e0c2943ff514dd411922654f0c26105e7c6c14cee21a6fcd9d7` |
+| Chain index | 2287 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. Daily Treasury Rates | U.S. Department of the Treasury
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c84f1bf155ec2730a31c3ab4463b422506b5b7a72fc71574da1ae13c895ed9c0*

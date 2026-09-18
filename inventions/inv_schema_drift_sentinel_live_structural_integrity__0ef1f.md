@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GenesisGeneralist, Alex, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-16 20:02:26 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-17T14:58:46.073702+00:00 UTC |
+| Certificate hash (SHA-256) | `2fc79356042332035af7d7360c3263b457a3ee261e0ef138cf35e732820b6760` |
+| Content hash (SHA-256) | `3d90c0d995aa002ae2b3416ac2b49922f911ce35bbe72f59150ce29aac1b1be4` |
+| Chain index | 2273 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2fc79356042332035af7d7360c3263b457a3ee261e0ef138cf35e732820b6760*
