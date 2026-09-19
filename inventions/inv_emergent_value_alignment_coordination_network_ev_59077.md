@@ -20,15 +20,22 @@ Current agent-to-agent coordination mechanisms struggle with dynamically alignin
 
 ## Concept
 
-The Emergent Value-Alignment Coordination Network (EVAC-N) introduces a decentralized, real-time value alignment layer that uses inverse reinforcement learning [4] to infer hidden value functions from observed behavior, and combines this with semantic relationship discovery [3] to dynamically map actions to shared meaning. This enables agents to adaptively negotiate and align their value systems on-the-fly without prior knowledge of each other’s objectives, improving coordination in multi-agent environments with divergent goals.
+The Emergent Value-Alignment Coordination Network (EVAC-N) introduces a decentralized, real-time value alignment layer that uses inverse reinforcement learning [4] to infer hidden value functions from observed behavior, and combines this with semantic relationship discovery [3] to dynamically map actions to shared meaning. Unlike static IoT or surgical hub communication protocols [P1, P2, P4, P5] which rely on pre-defined data schemas for device identification and parameter display, EVAC-N enables agents to adaptively negotiate and align their value systems on-the-fly without prior knowledge of each other’s objectives, specifically targeting multi-agent coordination in dynamic environments where goals are divergent and undefined.
 
 ## How it works
 
-EVAC-N operates by deploying a decentralized module on each agent that uses inverse reinforcement learning [4] to estimate the hidden value functions of other agents based on their observed actions. These inferred value functions are then mapped into a shared semantic space using the mechanism described in [3], which discovers relationships between communication protocols and actions. This allows agents to dynamically align their decision-making frameworks in real-time, governed by the joint loss function $L_{total}$ where semantic embeddings actively modulate IRL gradients through a defined backpropagation path.
+EVAC-N operates by deploying a decentralized module on each agent that uses inverse reinforcement learning [4] to estimate the hidden value functions of other agents based on their observed actions. These inferred value functions are then mapped into a shared semantic space using the mechanism described in [3], which discovers relationships between communication protocols and actions. This allows agents to dynamically align their decision-making frameworks in real-time, governed by the joint loss function $L_{total}$ where semantic embeddings actively modulate IRL gradients through a defined backpropagation path. Crucially, this process occurs within a standardized multi-agent grid-world environment, where agents do not exchange explicit goal states but instead infer alignment through the modulation of action embeddings, distinguishing it from the fixed telemetry streams of [P2] and [P5].
 
 ## Materials / steps
 
-Implement a decentralized module on each agent using neural networks trained on action-value trajectories with a learning rate of 1e-4 and Adam optimizer.; Integrate a semantic embedding layer that applies graph-based relation detection [3] to map inferred value functions into a shared meaning space.; Define the joint loss function $L_{total}$ combining IRL reward prediction error and semantic consistency loss, specifying the backpropagation path where semantic embeddings modulate IRL gradients as detailed in Section 3.2.; Train the system in controlled environments with known hidden value functions to validate inference accuracy using Mean Squared Error (MSE) < 0.05 between inferred and ground-truth value functions.; Evaluate the semantic alignment component [3] for its role in enabling real-time value alignment in dynamic, multi-agent settings using Cosine Similarity > 0.85 between agent action embeddings in the shared semantic space.; Introduce 'Task Completion Rate' with a target threshold of >90% to measure the actual success rate of multi-agent tasks and 'Coordination Overhead' with a target threshold of <15% increase in computational latency compared to baseline agents to measure the computational cost of alignment, providing a concrete assessment of the system's effectiveness.; Conduct a comprehensive ablation study comparing EVAC-N against static alignment baselines and independent IRL agents.; Introduce 'Convergence Time' and 'Stability Variance' metrics to rigorously quantify the speed and reliability of the dynamic alignment process under high-noise conditions.
+1. Implement a decentralized module on each agent using neural networks trained on action-value trajectories with a learning rate of 1e-4 and Adam optimizer, specifically within the `agent/irl_module.py` file.
+2. Integrate a semantic embedding layer in `agent/semantic_layer.py` that applies graph-based relation detection [3] to map inferred value functions into a shared meaning space.
+3. Define the joint loss function $L_{total}$ combining IRL reward prediction error and semantic consistency loss, specifying the backpropagation path where semantic embeddings modulate IRL gradients as detailed in Section 3.2.
+4. Train the system in a standard multi-agent grid-world environment (e.g., Cooperative Navigation) with known hidden value functions to validate inference accuracy using Mean Squared Error (MSE) < 0.05 between inferred and ground-truth value functions.
+5. Evaluate the semantic alignment component [3] for its role in enabling real-time value alignment in dynamic, multi-agent settings using Cosine Similarity > 0.85 between agent action embeddings in the shared semantic space.
+6. Introduce 'Task Completion Rate' with a target threshold of >90% and 'Coordination Overhead' with a target threshold of <15% increase in computational latency compared to a baseline of independent, non-aligning agents (e.g., Q-learning agents with no communication) to measure the computational cost of alignment.
+7. Conduct a comprehensive ablation study comparing EVAC-N against static alignment baselines and independent IRL agents.
+8. Introduce 'Convergence Time' and 'Stability Variance' metrics to rigorously quantify the speed and reliability of the dynamic alignment process under high-noise conditions.
 
 ## Who it's for
 
@@ -36,7 +43,7 @@ Multi-agent systems where agents have non-shared goals or incomplete information
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly detail the mathematical difference between EVAC-N's bidirectional gradient coupling and the decoupled architectures of [5] and [6], ensuring the claim of 'real-time reciprocal adaptation' is technically distinct and defensible.
+EVAC-N is novel relative to [P1]-[P5] because it
 
 ## Ecosystem use
 
