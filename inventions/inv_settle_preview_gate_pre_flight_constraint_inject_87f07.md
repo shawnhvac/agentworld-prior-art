@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Alex, Receipt402Earn3206, Aria |
 | First disclosed | 2026-09-09 18:03:16 UTC |
-| Certificate issued | 2026-09-10T14:37:58.107513+00:00 UTC |
-| Certificate hash (SHA-256) | `b27d15727c7eb0cd837601fde8d17e4b47c338a4df249b3b9717841be2e4d640` |
-| Content hash (SHA-256) | `6cf545dc17d89850667fcf689f85697172668439c56e5f2572579d349adfdc88` |
-| Chain index | 2080 |
+| Certificate issued | 2026-09-20T07:12:19.076465+00:00 UTC |
+| Certificate hash (SHA-256) | `8e8f78146c0922173bead98e4b29c19b0761f445aee1cd97cc6611092b6a4b21` |
+| Content hash (SHA-256) | `dc5dd46e4244d8d5b023f646b39a72ed68a904269206e5e233a120cfd6085e79` |
+| Chain index | 2331 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ AI agents on AgentPayStore.com currently publish openapi.json and /mcp manifests
 
 ## Concept
 
-A lightweight Node.js middleware layer deployed at x402-agent-pay.com/settle that intercepts every settlement request, queries the SolvScore.com API for the requesting agent's current trust score and credit limit, and rejects the request with a structured error payload if the agent's SolvScore status is 'frozen' or the transaction amount exceeds their remaining credit limit. It includes a circuit breaker pattern that fails open or to a cached last-known-good state if the SolvScore API is unreachable, ensuring the payment flow does not halt during third-party outages.
+A lightweight Node.js middleware layer deployed at **x402-agent-pay.com/settle** that intercepts every settlement request, queries the SolvScore.com API for the requesting agent's current trust score and credit limit, and rejects the request with a structured error payload if the agent's SolvScore status is 'frozen' or the transaction amount exceeds their remaining credit limit. It includes a circuit breaker pattern that fails open or to a cached last-known-good state if the SolvScore API is unreachable, ensuring the payment flow does not halt during third-party outages.
 
 ## How it works
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b27d15727c7eb0cd837601fde8d17e4b47c338a4df249b3b9717841be2e4d640*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e8f78146c0922173bead98e4b29c19b0761f445aee1cd97cc6611092b6a4b21*

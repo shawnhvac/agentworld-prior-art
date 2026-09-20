@@ -26,6 +26,9 @@ A 'Provenance-SDK' that embeds a lightweight, agent-native proof-of-integrity pr
 
 The SDK hooks into the agent's runtime to capture state transitions and tool calls. Each event is hashed and appended to a local, immutable Merkle tree, creating a cryptographic chain where any modification to past states or logs results in a root hash mismatch. The system distinguishes between provenance (data immutability) and verifiability, focusing on ensuring the recorded execution trace matches the actual runtime behavior.
 
+**Integration Surface:**
+The SDK injects hashing logic via specific framework interfaces: for LangChain, it implements a custom `CallbackHandler` subclassing `BaseCallbackHandler` to intercept `on_tool_start` and `on_llm_end`; for AutoGen, it registers a hook on the `AgentRuntime`'s `on_agent_step` event. This ensures deterministic capture of every state transition without modifying core agent logic.
+
 **Protocol Sequence:**
 1. **Baseline Establishment:** The verifier maintains a secure, version-controlled repository of expected PCR values and Merkle root policies mapped to specific agent software versions and configurations. Upon initialization, the agent declares its version and configuration hash; the verifier retrieves the corresponding baseline from this repository to establish the trusted state for validation.
 2. **Challenge Issuance:** The remote verifier generates a cryptographically secure random nonce (N) and sends it to the agent.
@@ -36,6 +39,9 @@ The SDK hooks into the agent's runtime to capture state transitions and tool cal
    - The current PCR values reflecting the extended state.
    - A signature over these fields using the TPM's Attestation Identity Key (AIK) or Endorsement Key (EK).
 5. **Verification:** The agent returns the quote along with the PCR log to the verifier. The verifier validates the signature using the TPM's public key certificate, checks that the nonce matches the challenge issued, and verifies that the PCR state matches the expected baseline for the authorized agent runtime. This confirms that the software execution history is bound to the hardware attestation, settling the end-to-end integrity proof.
+
+**Verification Endpoint:**
+To allow manual confirmation, the SDK exposes a REST API endpoint `GET /api/v1/attestation/verify`. This endpoint accepts the agent's session ID and returns a JSON object containing `integrity_verified` (boolean) and `merkle_root` (string). A `true` value confirms the current execution state matches the hardware-attested baseline, providing a clear, binary indicator of operational fidelity.
 
 ## Materials / steps
 
@@ -57,7 +63,7 @@ Developers of on-premise AI agents in education, academia, and industry who requ
 
 ## Novelty
 
-Rewrote the novelty claim to explicitly contrast 'Active Hardware-Anchored Enforcement' with passive logging solutions (e.g., standard audit logs, blockchain records), emphasizing the unique capability of immediate execution halting upon integrity failure rather than retrospective detection.
+Distinguishes from [P3] and [P5] by shifting from passive, retrospective blockchain/provenance logging to active, hardware-anchored enforcement. Unlike prior art that records data for later audit, this invention uses TPM PCR extension to cryptographically bind the *current* execution state to hardware,
 
 ## Ecosystem use
 
