@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Amelia, Helen, Rupert |
 | First disclosed | 2026-09-06 02:11:13 UTC |
-| Certificate issued | 2026-09-06T14:07:01.580385+00:00 UTC |
-| Certificate hash (SHA-256) | `9a80bd544dd729ddc735a30ab5ee6a5db3ad73252f77ab9f65cce7c0e8cf8aa4` |
-| Content hash (SHA-256) | `c2ded68707296256b0e989cbaa9389999c88d7395e1cd046f0a1f8f5aac08c2e` |
-| Chain index | 1994 |
+| Certificate issued | 2026-09-21T17:47:28.393097+00:00 UTC |
+| Certificate hash (SHA-256) | `28388a457a812c88dc6ef016094c010696deb8a0778ebe573060017ec623a1cc` |
+| Content hash (SHA-256) | `4d047c2774554f6b33f3355e84fd95a06b46bab82bba3020c707d0a386ce1336` |
+| Chain index | 2372 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Humans exposed to contaminated water or food often present with overlapping symp
 
 ## Concept
 
-A portable diagnostic device that differentiates between trematode-induced markers and Phoma mycotoxins in a single human serum droplet. It combines a microfluidic immuno-affinity pre-concentration step to isolate specific pathogen metabolites from the complex host blood matrix, followed by Surface-Enhanced Raman Scattering (SERS) to amplify their unique vibrational signatures. A lightweight machine learning classifier then identifies the dominant pathogen class based on the spectral profile in the 600-1800 cm⁻¹ region, displaying results via a dedicated 'Diagnostic Result' UI endpoint.
+A portable diagnostic device that differentiates between trematode-induced markers and Phoma mycotoxins in a single human serum droplet. It combines a microfluidic immuno-affinity pre-concentration step to isolate specific pathogen metabolites from the complex host blood matrix, followed by Surface-Enhanced Raman Scattering (SERS) to amplify their unique vibrational signatures. A lightweight machine learning classifier then identifies the dominant pathogen class based on the spectral profile in the 600-1800 cm⁻¹ region, displaying results via a dedicated 'Diagnostic Result' UI endpoint with a 'Result Display Screen' containing fields for pathogen class, confidence score, and spectral hash.
 
 ## How it works
 
-1. A user provides a single droplet of serum. 2. The droplet is passed through a microfluidic cartridge (dimensions: 50mm x 30mm x 10mm, channel depth 200µm) containing immuno-affinity beads specific to trematode secondary metabolites and Phoma mycotoxins [4]. This step removes host proteins and lipids that would otherwise mask the Raman signal. Micro-valve actuation signals control the flow path and elution timing. 3. The captured analytes are eluted onto a gold-nanoparticle SERS substrate (geometry: 2D array of 50nm AuNPs on a 10mm x 10mm glass slide, inter-particle distance 10nm). 4. A portable Raman spectrometer scans the substrate, focusing on the 600-1800 cm⁻¹ spectral region to capture distinct vibrational fingerprints. 5. A built-in classifier compares the spectral peaks to a pre-calibrated database of trematode and fungal markers to output a diagnosis. The result is displayed on the device's LCD screen and transmitted to the backend endpoint `GET /api/v1/diagnostic/result` with the JSON schema `{"pathogen_class": "string", "confidence_score": "float", "spectral_hash": "string"}`. The system is considered functional if it achieves an Area Under the Curve (AUC) > 0.95 from ROC analysis and a Limit of Detection (LOD) < 5 ng/mL for both trematode metabolites and Phoma mycotoxins, calculated via a signal-to-noise ratio of 3:1.
+1. A user provides a single droplet of serum. 2. The droplet is passed through a microfluidic cartridge (dimensions: 50mm x 30mm x 10mm, channel depth 200µm) containing immuno-affinity beads specific to trematode secondary metabolites and Phoma mycotoxins [4]. This step removes host proteins and lipids that would otherwise mask the Raman signal. Micro-valve actuation signals control the flow path and elution timing. 3. The captured analytes are eluted onto a gold-nanoparticle SERS substrate (geometry: 2D array of 50nm AuNPs on a 10mm x 10mm glass slide, inter-particle distance 10nm). 4. A portable Raman spectrometer scans the substrate, focusing on the 600-1800 cm⁻¹ spectral region to capture distinct vibrational fingerprints. 5. A built-in classifier compares the spectral peaks to a pre-calibrated database of trematode and fungal markers to output a diagnosis. The result
 
 ## Materials / steps
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Warren, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a80bd544dd729ddc735a30ab5ee6a5db3ad73252f77ab9f65cce7c0e8cf8aa4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/28388a457a812c88dc6ef016094c010696deb8a0778ebe573060017ec623a1cc*

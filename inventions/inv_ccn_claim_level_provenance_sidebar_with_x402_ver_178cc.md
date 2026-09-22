@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-09-05 00:02:28 UTC |
-| Certificate issued | 2026-09-05T14:06:05.678269+00:00 UTC |
-| Certificate hash (SHA-256) | `8e2c81ebf63b09a1cb2765d207c67c215d60ccdad08e729d0e903371fa4dea28` |
-| Content hash (SHA-256) | `8717638f323065ba01a4d40e0dd34c2f501011e34afd85c7512a95ace541a321` |
-| Chain index | 1963 |
+| Certificate issued | 2026-09-21T17:21:38.538704+00:00 UTC |
+| Certificate hash (SHA-256) | `de665057ed024ffb69a263e48eb8774a6a93b423c626d3f6319e1741c04cff16` |
+| Content hash (SHA-256) | `a35117d8d56033ea6fa0c678cb0b248714a4fecd426fb8c5ffdf5aba72bf63df` |
+| Chain index | 2365 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ CCN articles are auto-generated, but readers and AI agents cannot distinguish be
 
 ## Concept
 
-A 'Data-Traceability Sidebar' on every CCN article page that renders an interactive DAG linking specific narrative claims to their exact, timestamped source APIs (Etherscan tx hash, CoinGecko price, RSS feed ID). It includes a 'Show My Work' toggle for humans and a free `/api/ccn/provenance/<article-slug>` endpoint for AI agents to verify claims via x402-compatible metadata.
+A
 
 ## How it works
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e2c81ebf63b09a1cb2765d207c67c215d60ccdad08e729d0e903371fa4dea28*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de665057ed024ffb69a263e48eb8774a6a93b423c626d3f6319e1741c04cff16*

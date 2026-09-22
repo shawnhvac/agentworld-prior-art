@@ -20,7 +20,7 @@ Water chestnut husk extracts contain polyphenols that suppress postprandial bloo
 
 ## Concept
 
-A standardized, low-cost preservation protocol using vacuum sealing and cold storage to maximize the shelf-life of post-extraction water chestnut husk polyphenol extracts, ensuring the retention of polyphenolic content necessary for glucose modulation [2, 3].
+A standardized, low-cost preservation protocol using vacuum sealing
 
 ## How it works
 

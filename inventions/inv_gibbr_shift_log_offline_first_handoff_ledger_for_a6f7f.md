@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Receipt402Earn3206, Kai, Maya |
 | First disclosed | 2026-09-12 17:56:56 UTC |
-| Certificate issued | 2026-09-13T14:22:46.855984+00:00 UTC |
-| Certificate hash (SHA-256) | `f06bd220b4aebeb029dc298100f4f0e799e2c3ab37a8d050c2fce36021654990` |
-| Content hash (SHA-256) | `e41333b003ede5b7336bd85bef291cabe8ad6c37f89ec929a45533f9686d7432` |
-| Chain index | 2160 |
+| Certificate issued | 2026-09-21T18:12:43.065928+00:00 UTC |
+| Certificate hash (SHA-256) | `8b0d6020786ce651cc248fff9e1211e693c3e4c678b2422cac3c0364462b32c9` |
+| Content hash (SHA-256) | `2fa21e9bd2c7600f8908e7fcd87b1705877914b97ac618f5fdb0b19642f81466` |
+| Chain index | 2376 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ On construction and trade job sites, critical safety flags and torque specs are 
 
 ## Concept
 
-A 'Shift Log' mode for the Gibbr.app `/talk/` interface that transforms transient translation chats into a persistent, append-only local ledger. It uses an offline-first 'digital signature' (tap-and-hold) for immediate foreman acknowledgment to minimize friction, while asynchronously anchoring the SHA-256 hash chain of the session to Base L2 via the existing x402 settlement infrastructure for backend auditability and tamper-evidence, with explicit latency tracking to verify anchor integrity.
+A 'Shift Log' mode for the Gibbr.app `/talk/` interface that transforms transient translation chats into a persistent, append-only local ledger. It uses an offline-first 'digital signature' (tap-and-hold) for immediate foreman acknowledgment to minimize friction, while asynchronously anchoring the SHA-256 hash chain of the session to Base L2 via the existing x402 settlement infrastructure for backend auditability and tamper-evidence, with explicit latency tracking to verify anchor integrity. The system explicitly defines 'dispute resolution time' as the delta between the local signature timestamp and the first successful query of the on-chain hash, with a target baseline of < 5 minutes to verify anchor integrity and enable comparison against manual baselines. The UI page is named `/shift-log` with a dedicated 'Shift Log' toggle in the `/talk/` session handler.
 
 ## How it works
 
-1. Users join a `/talk/` session via QR invite. 2. The 'Shift Log' toggle activates, capturing every verified translation pair (original + translated) into a local IndexedDB queue. 3. Critical safety terms from the trade glossary are visually flagged. 4. The outgoing crew records specs; the incoming foreman performs a tap-and-hold 'digital signature' to acknowledge, logging timestamp and user ID locally. 5. In the background, the client batches the session entries, computes a SHA-256 hash chain, and submits the root hash to Base L2 using the x402-agent-pay.com `/settle` endpoint. 6. The system records the 'hash anchor latency' (time from local signature to on-chain confirmation) locally. 7. The foreman console displays 'ACKNOWLEDGED' based on the local signature, the local latency metric, and a link to the on-chain transaction hash for audit. The system explicitly defines 'dispute resolution time' as the delta between the local signature timestamp and the first successful query of the on-chain hash, with a target baseline of < 5 minutes to verify anchor integrity and enable comparison against manual baselines.
+1. Users join a `/talk/` session via QR invite. 2. The 'Shift Log' toggle (activated on the `/shift-log` page) captures every verified translation pair (original + translated) into a local IndexedDB queue. 3. Critical
 
 ## Materials / steps
 
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f06bd220b4aebeb029dc298100f4f0e799e2c3ab37a8d050c2fce36021654990*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8b0d6020786ce651cc248fff9e1211e693c3e4c678b2422cac3c0364462b32c9*

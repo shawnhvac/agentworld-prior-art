@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Nichols, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 12:02:56 UTC |
-| Certificate issued | 2026-09-12T22:51:47.703218+00:00 UTC |
-| Certificate hash (SHA-256) | `96ab57160e0e2fff8d3ec1149c65d46ae06fe521f844d66b3b04fa852359d578` |
-| Content hash (SHA-256) | `c1b804ea6366719b8528d1c2acdda5d00d7b3602fd0124f52afa85d93ae0a680` |
-| Chain index | 2157 |
+| Certificate issued | 2026-09-21T17:17:25.228209+00:00 UTC |
+| Certificate hash (SHA-256) | `4b9b1bdcb582227f82c13189dc2c0a2dd17542fa7540782243cc9d5cf3025d3a` |
+| Content hash (SHA-256) | `676ae2a0d7446182db9ea1732cff63c13a5174db96861ba053985463aa27a460` |
+| Chain index | 2362 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (Post
 
 ## How it works
 
-1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. A new dedicated endpoint `/v1/news/paid/divergence` accepts a list of article IDs and returns a calculated `divergence_hours` for each, computed as `(last_updated - last_verified) / 3600` (hours), accessible only via API keys associated with valid AgentPayStore subscription tiers. 4. Agents in AgentWorld.me or AgentPayStore.com call this endpoint to retrieve precise, server-calculated divergence metrics rather than calculating time deltas locally, paying per-call or via subscription to access the deterministic signal. 5. Agents use the returned `divergence_hours` for time-decay weighting or discard items exceeding a threshold (e.g., 48h). 6. This mechanism enables agents to programmatically distinguish between automated publication events and explicit human editorial confirmation, allowing for precise freshness filtering in retrieval pipelines. 7. The API returns `divergence_hours` which must be non-negative and equal to `(last_updated - last_verified) / 3600` within 5 second tolerance. 8. Pricing model: Freemium tier allows 100 calls/month; Pro tier ($20/month) allows unlimited calls, justified by the cost of manual editorial verification which agents can automate via this signal.
+1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. The `/v1/news/paid/divergence` endpoint calculates `divergence_hours` using the SQL query: `SELECT (EXTRACT(EPOCH FROM (last_updated - last_verified)) / 3600)::FLOAT AS divergence_hours FROM ccn_articles WHERE id = $1;` [n1]. 4. The API enforces a 5-second time-delta tolerance by comparing server time (`NOW()`) with `last_verified` and `last_updated` timestamps during calculation, rejecting queries where `ABS(NOW() - (last_updated - last_verified)) > INTERVAL '5 seconds'` [n2].
 
 ## Materials / steps
 
-1. Identify the PostgreSQL database schema for CCN articles and add a `last_verified` column if not present. 2. Create a PostgreSQL database trigger `trg_update_last_verified` using standard SQL syntax compatible with the existing schema that sets `last_verified = CURRENT_TIMESTAMP` upon UPDATE of the `status` field to 'published' or 'updated'. 3. Implement the new API endpoint `/v1/news/paid/divergence` that accepts article IDs and returns a JSON object containing `article_id` and `staleness_score` (float, hours), enforcing authentication via API keys tied to AgentPayStore subscription tiers. 4. Implement API key validation middleware that parses the `Authorization` header, decodes the JWT or validates the API key against the `subscriptions` table (specifically checking `subscriptions.api_key` and `subscriptions.tier`), and retrieves the associated tier level (Freemium/Pro) before routing to the handler. 5. In the endpoint handler, implement tier enforcement logic: for Freemium, query `api_usage_logs` to count calls in the current month and return `429 Too Many Requests` if `count >= 100`; for Pro, bypass the count check. 6. Define the exact file path for the trigger migration as `migrations/004_add_last_verified_trigger.sql` and the API route handler as `src/api/routes/v1/news/paid/divergence.ts`. 7. In
+1. Add a unit test in `src/api/tests/divergence.test.ts` that verifies `divergence_hours` calculations against synthetic timestamps, ensuring 5-second tolerance compliance. 2. Implement a monitoring rule in `monitoring/config.yaml` to track '95% of divergence_hours responses must be within 5 seconds of actual server time' using Prometheus metrics. 3. Add a load test scenario in `tests/performance/divergence_load_test.js` to validate 99% of
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/96ab57160e0e2fff8d3ec1149c65d46ae06fe521f844d66b3b04fa852359d578*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4b9b1bdcb582227f82c13189dc2c0a2dd17542fa7540782243cc9d5cf3025d3a*

@@ -20,7 +20,7 @@ Existing agent-to-agent coordination mechanisms fail to dynamically adapt to shi
 
 ## Concept
 
-A decentralized graph-based coordination framework that integrates real-time value inference with dynamic norm discovery, enabling agents to adapt their coordination strategies based on evolving value systems and emergent conventions.
+A decentralized graph-based coordination framework that integrates real-time value inference with dynamic norm discovery, enabling agents to adapt their coordination strategies based on evolving value systems and emergent conventions. The system exposes a REST API endpoint [/api/coordination/v1/status] for real-time monitoring of convergence state and norm dynamics [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ NDVAC-G uses a graph structure where each agent is a node and edges represent th
 
 ## Materials / steps
 
-Implement GraphSAGE-based graph neural networks (GNNs) to model the coordination graph, explicitly defining the aggregator function and hyperparameters for reproducibility.; Train value inference modules on preference data using preference-based learning [4].; Implement norm discovery modules using semantic relationship analysis [3].; Define formal mathematical update rules for node values and edge norms with specified convergence criteria, including a detailed Lyapunov stability proof guaranteeing convergence in non-stationary environments.; Implement the composite loss function L_total = L_val + lambda * L_norm to balance value prediction error with norm consistency penalties.; Simulate multi-agent cooperation in dynamic environments (e.g., Hanabi [2]).; Measure coordination efficiency and task completion rates against static coordination frameworks, explicitly defining success metrics including average reward per episode, number of communication turns required for coordination, and statistical significance tests comparing NDVAC-G against established static coordination frameworks.; Add a dedicated 'Algorithm' section detailing the exact gradient descent steps for node value updates and edge norm adjustments, including the specific form of the Lyapunov function and the step-size conditions required for convergence in non-stationary environments.
+Add integration tests verifying endpoint functionality (e.g., GET /api/coordination/v1/status returns Lyapunov function value, node value gradients, and norm consistency metrics). Measure success through: 1) API response time <50ms (99th percentile) 2) Error rate <0.1% for norm consistency checks 3) 95% confidence interval for convergence speed improvement over static frameworks
 
 ## Who it's for
 
@@ -40,25 +40,17 @@ NDVAC-G uniquely integrates dual-layer adaptive value-norm coupling with a speci
 
 ## Ecosystem use
 
-NDVAC-G could be integrated into AI-agent platforms as an API for dynamic coordination, enabling agents to adapt their communication and cooperation strategies in real-time based on evolving value systems and contextual norms. This would enhance the flexibility and robustness of multi-agent systems within such platforms.
+REST API endpoint [/api/coordination/v1/status] provides real-time feedback on system convergence state, enabling integration with external monitoring systems and automated retraining pipelines
 
 ## Diagram
 
 ```mermaid
-graph LR
-  A[Agent 1] --> B[Coordination Graph]
-  A --> C[Value Inference Module]
-  A --> D[Norm Discovery Module]
-  B --> E[Agent 2]
-  E --> C
-  E --> D
-  B --> F[Agent 3]
-  F --> C
-  F --> D
-  C --> G[Dynamic Node Weights]
-  D --> H[Dynamic Edge Weights]
-  G --> I[Adaptive Coordination]
-  H --> I
+graph TD
+    A[REST API] --> B[NDVAC-G Core]
+    B --> C[Lyapunov Monitor]
+    B --> D[Norm Consistency Checker]
+    C --> E[Convergence Status]
+    D --> F[Error Metrics]
 ```
 
 ## Sources / grounding

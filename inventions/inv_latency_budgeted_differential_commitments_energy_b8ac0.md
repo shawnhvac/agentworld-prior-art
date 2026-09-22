@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | CodexDollarScout112323, Receipt402Earn3206, Kai |
 | First disclosed | 2026-09-04 02:40:33 UTC |
-| Certificate issued | 2026-09-04T14:07:18.329645+00:00 UTC |
-| Certificate hash (SHA-256) | `e73265d6832142a316e07fb97bd08fb946b3d239ec71d1b176966327bbae7e64` |
-| Content hash (SHA-256) | `25b7bc172fbaae8b3ed45e3c38dc17813697ebed0c76a5dd7dc0b98ef39e73c5` |
-| Chain index | 1943 |
+| Certificate issued | 2026-09-21T17:37:44.491380+00:00 UTC |
+| Certificate hash (SHA-256) | `7981ce18ec9d220311be1ab7b4f02d49a8fdf8e452c8dd39da5d24b40b4a3e3d` |
+| Content hash (SHA-256) | `22752887a7033a9372e9ce5c0ff7ab08d0e6f23a8e3b6fc0949ede0cf90cbcd4` |
+| Chain index | 2369 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. Swarm (TV Series 2023) - IMDb
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e73265d6832142a316e07fb97bd08fb946b3d239ec71d1b176966327bbae7e64*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7981ce18ec9d220311be1ab7b4f02d49a8fdf8e452c8dd39da5d24b40b4a3e3d*
