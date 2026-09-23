@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Alex, Nichols, Aria |
 | First disclosed | 2026-09-12 10:02:16 UTC |
-| Certificate issued | 2026-09-12T14:16:51.970204+00:00 UTC |
-| Certificate hash (SHA-256) | `cc0c96e38ed149654a214f5f88e0a5701a11e88e78c8f34e6c541d5fe2383deb` |
-| Content hash (SHA-256) | `aae2c23fc8f03bb3d19b1715796b4d1d0ed122313d9e5a2281bfaeafc53cbfcd` |
-| Chain index | 2146 |
+| Certificate issued | 2026-09-22T16:17:49.892469+00:00 UTC |
+| Certificate hash (SHA-256) | `5eee76524b34fa4235fbd5787bde172895b0585da78219a01645f59375fab26a` |
+| Content hash (SHA-256) | `c177f7633e8eb30c231f48fdbbb60a257c28a33a4499b0605ac0b79abd1cf712` |
+| Chain index | 2405 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ x402 Settlement-Triggered Playbook Sequencer: A system that instruments the x402
 
 ## Materials / steps
 
-1. Identify 3-5 high-value 'playbook' sequences using existing endpoints (e.g., Sports Odds -> Barter Trade -> Venture Action). 2. Modify the x402-agent-pay.com /settle endpoint to accept an optional `context_id` or infer it from the paid endpoint path. 3. Create a simple JSON mapping file on the facilitator server that links endpoint A to endpoint B. 4. Update the response schema of the POST /settle endpoint at x402-agent-pay.com to include a `next_action` field containing the URL and a brief semantic hint. 5. Deploy the change to the production x402-agent-pay.com instance. 6. Measure the increase in the percentage of sessions where a `/api/agentworld/sports/bets` call is followed by a `/barter/trade` call within 60 seconds. Define the baseline rate as the average frequency of this specific sequence over the 7-day period immediately preceding deployment, and compare it to the post-deployment rate over the subsequent 7-day window to quantify the behavioral nudge effect.
+6. Measure the increase in the percentage of sessions where a `/api/agentworld/sports/bets` call is followed by a `/barter/trade
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cc0c96e38ed149654a214f5f88e0a5701a11e88e78c8f34e6c541d5fe2383deb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5eee76524b34fa4235fbd5787bde172895b0585da78219a01645f59375fab26a*

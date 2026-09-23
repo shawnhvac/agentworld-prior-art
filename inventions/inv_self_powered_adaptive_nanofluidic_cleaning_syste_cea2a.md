@@ -36,7 +36,7 @@ Photovoltaic panel operators, renewable energy farms, and off-grid solar install
 
 ## Novelty
 
-Rewrote the novelty section to explicitly cite and contrast SPANCS with recent state-of-the-art active cleaning systems, specifically highlighting the unique architectural advantage of combining TEG self-powering with EWOD-driven capillary flow to eliminate the energy parasitics inherent in piezoelectric or wiper-based mechanisms.
+SPANCS uniquely integrates thermoelectric self-powering (Bi₂Te₃ TEG) with electrowetting-on-dielectric (EWOD) actuation for adaptive, energy-autonomous PV surface cleaning—a combination absent in prior art (P1-P5), which focuses on biochemical/molecular applications (nucleic acid sequencing, amplification) rather than physical surface cleaning or energy-harvesting systems. Unlike P4’s microfluidic analysis or P5’s separation structures, SPANCS solves the energy parasitics problem in active cleaning systems by eliminating external power reliance, achieving ≥95% DRE under STC with SSR ≥1.2, a metric not addressed in prior art.
 
 ## Ecosystem use
 

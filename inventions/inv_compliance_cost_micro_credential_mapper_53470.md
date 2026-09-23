@@ -24,11 +24,11 @@ A diagnostic tool that identifies firm-level compliance costs arising from gover
 
 ## How it works
 
-The system operates through a continuous, closed-loop sequence: (1) Ingestion: The API Ingestion Service retrieves sector-specific performance data and government-business coordination metrics [1] via standardized RESTful APIs with OAuth 2.0 authentication. (2) Cost Estimation: The system calculates estimated compliance costs for individual SMEs based on the ingested coordination records. (3) Semantic Extraction: A fine-tuned BERT-based Named Entity Recognition (NER) model processes unstructured compliance documents to extract specific regulatory clauses and pain points. (4) Ontology Alignment: An Ontology Mapper Service aligns these extracted pain points with standardized skill taxonomies using dense vector embeddings (e.g., Sentence-BERT), retaining only matches exceeding a cosine similarity threshold of 0.75. (5) Credential Retrieval: The system queries a Micro-Credential Database [4] via GraphQL API to identify courses tagged with the aligned skills, generating a prioritized recommendation report for SME owners. (6) RCT Execution: Eligible SMEs are assigned to treatment (credential recommendation) or control (business-as-usual) groups using stratified random sampling based on firm size and sector, implemented via a secure, auditable random number generator. (7) Longitudinal Tracking: The Analytics Engine measures actual compliance cost deltas post-acquisition, defining the primary metric as Compliance Cost Reduction Rate (CCRR) calculated explicitly as CCRR = (Cost_control - Cost_treatment) / Cost_control, and the secondary metric as the median reduction in hours spent on regulatory reporting. (8) Causal Inference & Feedback: Difference-in-differences (DiD) models attribute observed cost changes to credential acquisition, controlling for time-invariant unobservables. If statistical significance (p < 0.05) is achieved, the empirical cost deltas serve as ground-truth signals to dynamically update and refine the ontology mapping weights, closing the feedback loop. Specifically, the DiD-derived treatment effect (TE) is converted into a scalar reward signal R. The embedding vectors for the skill-taxonomy pairs associated with the treated credentials are updated via a stochastic gradient descent step: E_new = E_old - η * ∇L(E_old, R), where L is a loss function penalizing the discrepancy between predicted alignment confidence and the observed TE, thereby directly re-weighting the semantic space based on causal economic outcomes rather than static textual similarity.
+The system operates through a continuous, closed-loop sequence: (1) Ingestion: The API Ingestion Service retrieves sector-specific performance data and government-business coordination metrics [1] via standardized RESTful APIs with
 
 ## Materials / steps
 
-1. Ingest sector-specific performance data and coordination metrics from government-business interactions [1] using standardized RESTful APIs with OAuth 2.0 authentication. 2. Calculate estimated compliance costs for individual SMEs. 3. Execute Matching Logic: Apply NLP to extract regulatory keywords from cost drivers, map them to an ontology of operational skills, and retrieve metadata for micro-credentials [4] with matching skill tags. The ontology mapping algorithm employs semantic similarity scoring using dense vector embeddings (e.g., Sentence-BERT) to align extracted regulatory entities with standardized skill taxonomies, calculating cosine similarity to rank relevant micro-credentials; only matches exceeding a minimum cosine similarity threshold of 0.75 are retained to prevent noisy matches. 4. Conduct a pre-study power analysis to define the Minimum Detectable Effect (MDE) for cost reduction. 5. Generate a recommendation report for SME owners based on the mapped credentials. 6. Implement a Pilot Implementation Protocol featuring a randomized controlled trial (RCT) design for the longitudinal tracking module, assigning eligible SMEs to treatment (credential recommendation) and control (business-as-usual) groups. 7. Measure actual compliance cost deltas post-credential acquisition, defining the primary metric as Compliance Cost Reduction Rate (CCRR), explicitly calculated as CCRR = (Cost_control - Cost_treatment) / Cost_control, and the secondary metric as the median reduction in hours spent on regulatory reporting. 8.
+1. Ingest sector-specific performance data and coordination metrics from government-business interactions [1] using standardized RESTful APIs with OAuth 2.0 authentication (e.g., endpoint: /api/v1/compliance/data). 2. Calculate estimated compliance costs for individual SMEs. 3. Execute Matching Logic: Apply NLP to extract regulatory keywords from cost drivers, map them to an ontology of operational skills, and retrieve metadata for micro-credentials [4] with matching skill tags (endpoint: /api/v1/credentials/mapping). ... 7. Measure actual compliance cost deltas post-credential acquisition, defining the primary metric as Compliance Cost Reduction Rate (CCRR), explicitly calculated as CCRR = (Cost_control - Cost_treatment) / Cost_control, with success defined as CCRR ≥ 15% improvement over 12 months.
 
 ## Who it's for
 
@@ -46,24 +46,12 @@ This tool can be integrated into an AI-agent platform as a 'Compliance Agent' th
 
 ```mermaid
 graph TD
-    A[Government-Business Coordination Records [1]] -->|REST API/OAuth2| B(Data Ingestion Layer)
-    B --> C[Compliance Cost Estimator]
-    C --> D[Matching Logic Module]
-    subgraph Matching Logic
-        D1[NLP Pain Point Extraction]
-        D2[Ontology Skill Mapper]
-        D3[Micro-Credential DB Query [4]]
-    end
-    D --> D1
-    D1 --> D2
-    D2 --> D3
-    D3 --> E[Recommendation Engine]
-    E --> F[SME Recommendation Report]
-    F --> G[RCT Tracking Module]
-    G -->|Treatment/Control Groups| H[Longitudinal Cost Delta Measurement]
-    H --> I[Analytics & Feedback Loop]
-    I -->|p < 0.05 Validation| J[Algorithm Refinement]
-    J --> D2
+A[API Ingestion] --> B[Compliance Cost Estimation]
+B --> C[NLP Ontology Mapping]
+C --> D[Micro-Credential Matching]
+D --> E[RCT Pilot Assignment]
+E --> F[Longitudinal Cost Tracking]
+F --> G[Success Metrics: CCRR ≥15% improvement]
 ```
 
 ## Sources / grounding

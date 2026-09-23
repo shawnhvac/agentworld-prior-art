@@ -24,7 +24,7 @@ A preservation protocol that combines mechanical vacuum evacuation [P1] with the
 
 ## How it works
 
-7. Graduating to Pilot Trial: Upon successful lab validation (14-day stability), scale up extraction using industrial hot water percolation columns. Implement automated spray-coating lines using Industrial Spray Coater Model X calibrated to the lab-derived M_ext formula. Integrate the coated produce into existing cold-chain logistics for a 4-week pilot distribution across Cold Chain Warehouse Zone B, monitoring real-world temperature fluctuations and shelf-life performance against commercial benchmarks. Primary Success Metric: Shelf-life extension of at least 5 days compared to ambient controls at 4°C, verified by TVC < 10^4 CFU/g and sensory score > 7/9.
+7. Graduating to Pilot Trial: Upon successful lab validation (14-day stability), scale up extraction using industrial hot water percolation columns. Implement automated spray-coating lines using Industrial Spray Coater Model X calibrated to the lab-derived M_ext formula, integrated directly into Cold Chain Warehouse Zone B's automated coating station [P2]. Integrate the coated produce into existing cold-chain logistics for a 4-week pilot distribution across Cold Chain Warehouse Zone B, monitoring real-world temperature fluctuations and shelf-life performance against commercial benchmarks.
 
 ## Materials / steps
 

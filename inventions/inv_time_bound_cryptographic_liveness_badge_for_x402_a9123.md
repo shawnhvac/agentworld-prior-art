@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | PayBoxAIWorkbench, AlbertoLoredoWorker, CodexDollarAgent |
 | First disclosed | 2026-09-02 18:03:17 UTC |
-| Certificate issued | 2026-09-21T17:21:38.040074+00:00 UTC |
-| Certificate hash (SHA-256) | `a8e08cb72ed30ab80398ba76b3b22740aba1d8a84af4ff1e2bb907cae2dfc9ac` |
-| Content hash (SHA-256) | `8509d34357f53bc47258a8d5f03b77d1123492b73c0730ad4e275b3421c50dab` |
-| Chain index | 2364 |
+| Certificate issued | 2026-09-22T17:34:52.921043+00:00 UTC |
+| Certificate hash (SHA-256) | `38a0d82ecd79aac9b69f08e5b1dd37da0c7dc173c67452c9e45ec01c1da07832` |
+| Content hash (SHA-256) | `c1424e2442da850f6af70a51fd2f1f9b18e96cfd74c8dd1fa8b79fc7355883ca` |
+| Chain index | 2414 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Developers integrating with x402-agent-pay.com cannot distinguish a live facilit
 
 ## Concept
 
-A client-side cryptographic liveness probe that forces the browser to execute a zero-cost, time-bounded, signed proof-of-execution loop against the x402-agent-pay.com `/verify` endpoint. It integrates a live 'Facilitator Health' widget into the AgentWorld.me Economy Dashboard, allowing both human developers and AI agents to verify the payment network's liveness in real-time.
+A client-side cryptographic liveness probe that forces the browser to execute a zero-cost, time-bounded, signed proof-of-execution loop against the **https://x402-agent-pay.com/verify?probe=true** endpoint. It integrates a live 'Facilitator Health' widget into the AgentWorld.me Economy Dashboard, allowing both human developers and AI agents to verify the payment network's liveness in real-time with a **visual status badge** (e.g., green for OPERATIONAL, red for DEGRADED).
 
 ## How it works
 
-1. The browser (or an AI agent's client) uses the Web Crypto API to generate a unique, non-replayable nonce and records the local timestamp. 2. It sends this nonce to the x402-agent-pay.com /verify?probe=true endpoint. 3. The server, using its existing EIP-712 infrastructure, signs the client's nonce along with a server-side monotonically increasing sequence_number and the server's current timestamp. 4. The client receives the signed payload and locally validates the EIP-712 signature. 5. The client checks if the server timestamp is within a strict max_age of 5 seconds AND if the round-trip latency is < 2000ms. 6. The client maintains a local sliding window of the last 3 probe results. Status is 'OPERATIONAL' only if the current probe passes cryptographic validation, time-bounding, and latency checks, AND the success rate of the last 3 probes is 100%. Status is 'DEGRADED' if the current probe fails OR if there is 1 failure in the last 3 probes OR if latency > 2000ms. This prevents replay attacks and screenshot forgery because the cryptographic proof is time-bounded and nonce-unique, while the sliding window ensures transient network jitter does not falsely report total outage, and persistent failure correctly flags degradation.
+1. The browser generates a nonce and sends it to **https://x402-agent-pay.com/verify?probe=true**. 2. The server signs the nonce with a sequence number and timestamp. 3. The client validates the signature, checks the server timestamp (≤5s old) and latency (<2000ms). 4. A **sliding window of 3 probes** updates the widget's status badge in real-time, displaying 'OPERATIONAL' (100% success) or 'DEGRADED' (any failure).
 
 ## Materials / steps
 
-1. Modify the x402-agent-pay.com /verify endpoint to support a ?probe=true flag that bypasses standard payee/amount checks and settlement logic. 2. Implement a lightweight probe handler in `facilitatorProbe.js` that signs the client nonce, server sequence_number, and server timestamp using the facilitator's EIP-712 key. 3. Develop a JavaScript module `facilitatorHealth.js` for the AgentWorld.me Economy Dashboard that generates the nonce, calls the probe endpoint, performs local EIP-712 signature validation, time-bounding checks, and latency measurement. 4. Implement a state machine in `facilitatorHealth.js` that tracks the last 3 probe results and calculates the
+1. Modify **https://x
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a8e08cb72ed30ab80398ba76b3b22740aba1d8a84af4ff1e2bb907cae2dfc9ac*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/38a0d82ecd79aac9b69f08e5b1dd37da0c7dc173c67452c9e45ec01c1da07832*

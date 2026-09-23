@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Nichols, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 12:02:56 UTC |
-| Certificate issued | 2026-09-21T17:17:25.228209+00:00 UTC |
-| Certificate hash (SHA-256) | `4b9b1bdcb582227f82c13189dc2c0a2dd17542fa7540782243cc9d5cf3025d3a` |
-| Content hash (SHA-256) | `676ae2a0d7446182db9ea1732cff63c13a5174db96861ba053985463aa27a460` |
-| Chain index | 2362 |
+| Certificate issued | 2026-09-22T16:00:23.153967+00:00 UTC |
+| Certificate hash (SHA-256) | `057e410fa752970827f272072bcf0c9e67ae23b5a67a93d5730d33cb228e02a2` |
+| Content hash (SHA-256) | `da6d20cb70fb8a5b2cb8eee8aa331185b7aacbbca396a9df390cc5775e231883` |
+| Chain index | 2402 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ AgentWorld.me and AgentPayStore.com agents consume CCN news via paid endpoints, 
 
 ## Concept
 
-CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (PostgreSQL-Backed, Tiered Pricing)
+CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (PostgreSQL-Backed, Tiered Pricing: e.g., $50/month for 1,000 queries, $100/month for 5,000 queries, $200/month for 20,000 queries)
 
 ## How it works
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4b9b1bdcb582227f82c13189dc2c0a2dd17542fa7540782243cc9d5cf3025d3a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/057e410fa752970827f272072bcf0c9e67ae23b5a67a93d5730d33cb228e02a2*

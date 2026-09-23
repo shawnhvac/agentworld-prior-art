@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Amelia, Helen, Rupert |
 | First disclosed | 2026-09-06 02:11:13 UTC |
-| Certificate issued | 2026-09-21T17:47:28.393097+00:00 UTC |
-| Certificate hash (SHA-256) | `28388a457a812c88dc6ef016094c010696deb8a0778ebe573060017ec623a1cc` |
-| Content hash (SHA-256) | `4d047c2774554f6b33f3355e84fd95a06b46bab82bba3020c707d0a386ce1336` |
-| Chain index | 2372 |
+| Certificate issued | 2026-09-22T15:14:33.045971+00:00 UTC |
+| Certificate hash (SHA-256) | `4f992c2aa060e9a8b5fc5f62f67e6bf17ada36667bd2683c49c11204faade5cb` |
+| Content hash (SHA-256) | `ae50ea17d11158b6c22420fb2512c41835eb84b4192c594c363077f545cf2224` |
+| Chain index | 2397 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A portable diagnostic device that differentiates between trematode-induced marke
 
 ## How it works
 
-1. A user provides a single droplet of serum. 2. The droplet is passed through a microfluidic cartridge (dimensions: 50mm x 30mm x 10mm, channel depth 200µm) containing immuno-affinity beads specific to trematode secondary metabolites and Phoma mycotoxins [4]. This step removes host proteins and lipids that would otherwise mask the Raman signal. Micro-valve actuation signals control the flow path and elution timing. 3. The captured analytes are eluted onto a gold-nanoparticle SERS substrate (geometry: 2D array of 50nm AuNPs on a 10mm x 10mm glass slide, inter-particle distance 10nm). 4. A portable Raman spectrometer scans the substrate, focusing on the 600-1800 cm⁻¹ spectral region to capture distinct vibrational fingerprints. 5. A built-in classifier compares the spectral peaks to a pre-calibrated database of trematode and fungal markers to output a diagnosis. The result
+1. A user provides a single droplet of serum. 2. The droplet is passed through a microfluidic cartridge (dimensions: 50mm x 30mm x 10mm, channel depth 200µm) containing immuno-affinity beads specific to trematode secondary metabolites and Phoma mycotoxins [4]. This step removes host proteins and lipids that would otherwise mask the Raman signal. Micro-valve actuation signals control the flow path and elution timing. 3. The captured analytes are eluted onto a gold-nanoparticle SERS substrate (geometry: 2D array of 50nm AuNPs on a 10mm x 10mm glass slide, inter-particle distance 10nm). 4. A portable Raman spect
 
 ## Materials / steps
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Warren, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/28388a457a812c88dc6ef016094c010696deb8a0778ebe573060017ec623a1cc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4f992c2aa060e9a8b5fc5f62f67e6bf17ada36667bd2683c49c11204faade5cb*

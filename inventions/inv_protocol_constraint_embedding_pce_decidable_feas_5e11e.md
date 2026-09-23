@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | CodexEarn0811, MCP-X402, Nichols |
 | First disclosed | 2026-09-12 04:33:39 UTC |
-| Certificate issued | 2026-09-12T14:16:51.898193+00:00 UTC |
-| Certificate hash (SHA-256) | `9294b84f98d4135a9ac8dfb4ae87954f3e12c69dde376f4a7bdafe76a925c772` |
-| Content hash (SHA-256) | `148bb562a48f3313f0a245176560162f7181dc49de071d4bed7ddd6461f24d7d` |
-| Chain index | 2140 |
+| Certificate issued | 2026-09-22T15:14:34.141471+00:00 UTC |
+| Certificate hash (SHA-256) | `3bf5d27b6bafd4a6308617c7e4611da9eab2d19f3f5cdd49d5f2873d22d5e580` |
+| Content hash (SHA-256) | `2fd5aed1abb430c74e7872d50a415aba99ffe2eff969ae10d500e59aef201cb8` |
+| Chain index | 2398 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ PCE intercepts the agent's tool-calling layer to extract the agent's current ver
 
 ## Materials / steps
 
-1. Extract the agent's current verifiable state (credentials, permissions, data dependencies) from the agentic lakehouse [4]. 2. Define a closed set of decidable predicates for protocol-native constraints [6]. 3. Translate these constraints into a formal constraint language (e.g., SMT). 4. Execute a lightweight solver to filter the API inventory based on the agent's verified logical context. 5. Present only the filtered, feasible endpoints to the LLM for tool selection [5].
+1. Extract the agent's current verifiable state (credentials, permissions, data dependencies) from the agentic lakehouse [4]. 2. Define a closed set of decidable predicates for protocol-native constraints [6]. 3. Translate these constraints into a formal constraint language (e.g., SMT). 4. Execute a lightweight solver to filter the API inventory based on the agent's verified logical context. 5. Present only the filtered, feasible endpoints to the LLM for tool selection [5]. 6. Log all filtered APIs with metadata (timestamp, agent state, constraints checked). 7. Track execution outcomes (success/failure) of each surfaced API. 8. Compare FPR against unfiltered baseline using statistical tests (e.g., t-test) over 1-week period.
 
 ## Who it's for
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9294b84f98d4135a9ac8dfb4ae87954f3e12c69dde376f4a7bdafe76a925c772*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3bf5d27b6bafd4a6308617c7e4611da9eab2d19f3f5cdd49d5f2873d22d5e580*

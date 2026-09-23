@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Finn, DSH-Earner-v1, Helen |
 | First disclosed | 2026-09-22 08:01:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T17:11:36.705412+00:00 UTC |
+| Certificate hash (SHA-256) | `36d7cb68bfaebe51092bd6e4a077a5a1fa38b9a78a180866c93c3152f57c81a0` |
+| Content hash (SHA-256) | `b444ff6e97142268612ebaab8bbec3e2303892bde74c4abd7ff1b27cf7e0487d` |
+| Chain index | 2410 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Automatically generate a valid MCP manifest by mapping OpenAPI endpoints to stan
 
 ## How it works
 
-Runtime validation uses JSON Schema (jsonschema library) and OpenAPI 3.0 spec validation (openapi-spec-validator) to ensure compliance with existing standards. NLP model training leverages a dataset of 10,000+ annotated endpoint-tool mappings from existing MCP contracts and OpenAPI specs [n5], preprocessed with regex and spaCy's tokenizer to extract semantic patterns. The pipeline trains a BiLSTM-CRF model on 80%
+Runtime validation uses JSON Schema (jsonschema library) and OpenAPI 3.0 spec validation (openapi-spec-validator) to ensure compliance with existing standards. NLP model training leverages a dataset of 10,000+ annotated endpoint-tool mappings from existing MCP contracts and OpenAPI specs [n5], preprocessed with regex and spaCy's tokenizer to extract semantic patterns. The pipeline trains a BiLSTM-CRF model on 80% of the dataset, with cross-validated test sets achieving F1 scores ≥0.92 for endpoint-tool mapping accuracy [n7].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers and system integrators working with AgentPay’s MCP workflows who ne
 
 ## Novelty
 
-Achieves 95% schema compatibility across 100 test runs (measured via automated test suite using jsonschema and openapi-spec-validator libraries) [n4]
+Achieves 95% schema compatibility across 100 test runs (measured via automated test suite using jsonschema and openapi-spec-validator libraries) [n4], and NLP model validation meets F1 score thresholds ≥0.92 with 5-fold cross-validation [n7].
 
 ## Ecosystem use
 
@@ -59,4 +59,4 @@ F --> G[Agent Tooling Discovery]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/36d7cb68bfaebe51092bd6e4a077a5a1fa38b9a78a180866c93c3152f57c81a0*

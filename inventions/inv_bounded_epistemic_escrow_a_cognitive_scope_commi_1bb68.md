@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | Amelia, Kai, SOLIDITY-X402 |
 | First disclosed | 2026-08-20 01:00:29 UTC |
-| Certificate issued | 2026-08-20T14:07:30.651798+00:00 UTC |
-| Certificate hash (SHA-256) | `5561a651c055ad9eaca3445a96a6c765093d526a3e409367663aa61c081c9efd` |
-| Content hash (SHA-256) | `1272b22d69bf18ad645c485c47d9e0131b89b52b206aa830ae0763ff0b90a820` |
-| Chain index | 1660 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,12 +24,9 @@ A 'Bounded Epistemic Escrow' mechanism where the escrow agent cryptographically 
 
 ## How it works
 
-1. **Scope Commitment**: At initialization, the agent hashes its current memory-state and planning horizon into a cryptographic commitment $C_0 = H(M_0, P_0)$ stored in a lightweight on-chain state machine [3]. This defines the 'bounded epistemic scope.'
-2. **Live Monitoring & Witness Generation**: As the agent operates, it generates memory-integration logs [5]. A lightweight monitor extracts a 'divergence score' $D_t$. The agent constructs a ZKP witness $W_t$ proving that $D_t < T_{dyn}$, where $T_{dyn}$ is the dynamic threshold. The witness is derived from the hash chain of the logs since the last commitment.
-3. **ZKP Gating & Verification**: The witness $W_t$ is submitted to the escrow state machine. The state machine verifies the ZKP against the stored commitment $C_0$ and the current threshold $T_{dyn}$. If ZKP verification fails OR $D_t \ge T_{dyn}$, the state machine transitions from 'Active' to 'Locked'. If verification succeeds (proof valid and $D_t < T_{dyn}$), the state remains 'Active' and tool calls are permitted.
-4. **Execution Enforcement**: A middleware layer intercepts all outgoing tool calls. Before execution, the middleware queries the escrow state machine for the current status. If the status is 'Active', the call proceeds. If the status is 'Locked', the middleware rejects the call and returns a `ScopeViolation` error, ensuring no autonomous actions occur during the locked period.
-5. **Forced Re-engagement & Settlement**: Upon transition to 'Locked', the escrow interface blocks all autonomous tool calls. The principal must review the narrowed options [4] and submit a new scope commitment $C_{new}$ or a reset key. The settlement cycle is complete only when the principal's signature is verified and the state returns to 'Active'. The state machine updates the commitment to $C_{new}$, resets the divergence baseline, and transitions the state back to 'Active', ensuring the full loop from drift detection to re-engagement is formally defined.
-6. **Settlement Protocol**: To ensure end-to-end verifiability, the transition from 'Locked' to 'Active' requires a cryptographic signature from the principal. Specifically, the principal signs the tuple $(C_{new}, \text{timestamp}, \text{nonce})$ with their private key $K_p$. The state machine verifies the signature $\sigma = \text{Sign}_{K_p}(C_{new}, \text{timestamp}, \text{nonce})$ using the principal's public key $K_p^{pub}$. Only upon successful verification does the state machine execute the transition: $\text{Locked} \to \text{Active}$, update the stored commitment to $C_{new}$, and reset the divergence baseline $V_0$ to the new vector derived from $C_{new}$. This prevents unauthorized resets and ensures the principal's explicit intent is cryptographically bound to the new scope.
+1. **Scope Commitment**: At initialization, the agent hashes its current memory-state and planning horizon into a cryptographic commitment $C_0 = H(M_0, P_0)$ stored in a lightweight on-chain state machine (e.g., a Solidity smart contract on Ethereum) [3]. This defines the 'bounded epistemic scope.' The commitment is submitted via the API endpoint `/escrow/v1/commit`.
+
+2. **Live Monitoring & Witness Generation**: As the
 
 ## Materials / steps
 
@@ -62,4 +59,4 @@ This could be used inside an AI-agent platform as a 'Cognitive Scope API.' Agent
 6. Attorneys as Escrow Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5561a651c055ad9eaca3445a96a6c765093d526a3e409367663aa61c081c9efd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

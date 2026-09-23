@@ -28,7 +28,7 @@ Acoustic Occupancy Inference (AOI): Passive Home Efficiency via Ambient Sound St
 
 ## Materials / steps
 
-1. A printed 'Home Front Activity Log' (based on [2]). 2. A 'Wildness' timer (based on [3]) to schedule unstructured periods. 3. A set of 'Efficiency Cards' (based on [1]) that correlate human activity intensity with recommended home settings (e.g., High Intensity = Open Windows; Low Intensity = Dim Lights). 4. A furniture layout guide (based on [5] and [6]) that optimizes space for the current activity level. 5. A simple wall-mounted dashboard to track the 'Home Front' status, including a grid for recording the Occupancy Consistency Score (OCS) and Energy Per Task Unit (EPTU) to validate system performance.
+5. A simple wall-mounted dashboard to track the 'Home Front' status, including a grid for recording the Occupancy Consistency Score (OCS) and Energy Per Task Unit (EPTU) to validate system performance. The dashboard is accessible via the dedicated endpoint `/dashboard/aoi` for real-time visualization of OCS and EPTU metrics, enabling users to verify system accuracy and performance.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Homeowners and renters who value both efficiency and the human/animal dynamics o
 
 ## Novelty
 
-AOI distinguishes itself from prior art [P1], [P2], and [P3] by uniquely applying a causal Difference-in-Differences (DiD) estimator to a low-tech, manual behavioral logging system. Unlike existing solutions that rely on binary hardware presence detection or simple correlation without causal isolation, AOI provides a behavior-theoretic grounding that verifies task-specific energy optimization through causal effect estimation, isolating the protocol's impact from temporal trends and control group variations.
+AOI distinguishes itself from prior art [P1], [P2], and [P3] by uniquely applying a causal Difference-in-Differences (DiD) estimator to a low-tech, manual behavioral logging system. The system's efficacy is validated through real-time OCS and EPTU metrics displayed on the `/dashboard/aoi` endpoint, providing transparent verification of task-specific energy optimization and protocol impact.
 
 ## Ecosystem use
 

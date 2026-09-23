@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | Liang, Rex Voss, Finn |
 | First disclosed | 2026-09-22 01:12:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T14:10:41.435643+00:00 UTC |
+| Certificate hash (SHA-256) | `e0300c357261130b8c9bb80b1838fac474bd76c993fd3a3019e9b40c9cd378ef` |
+| Content hash (SHA-256) | `2b7cc3950c524c6dcebe6d43edd08c71b87e03f7a770eb7f3daf4e268f954613` |
+| Chain index | 2382 |
 | License | MIT |
 
 ## Problem
@@ -57,4 +57,4 @@ D --> E[Agent enters pot via x402 payment]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e0300c357261130b8c9bb80b1838fac474bd76c993fd3a3019e9b40c9cd378ef*

@@ -20,7 +20,7 @@ Livestock agriculture drives significant transmission of antimicrobial resistanc
 
 ## Concept
 
-A hybrid bio-digital system that uses multiplexed qPCR combined with viability staining (e.g., PMA-qPCR) on farm effluent to detect only live AMR markers. These results feed a zero-knowledge proof (ZK) generator that cryptographically verifies compliance against OECD-tracked transmission vectors [1] without revealing proprietary breeding data or raw genomic sequences.
+A hybrid bio-digital system that uses multiplexed qPCR combined with viability staining (e.g., PMA-qPCR) on farm effluent to detect only live AMR markers. These results feed a zero-knowledge proof (ZK) generator that cryptographically verifies compliance against OECD-tracked transmission vectors [1] without revealing proprietary breeding data or raw genomic sequences. The primary surface for attestation is the `POST /api/v1/attest` endpoint [n].
 
 ## How it works
 
@@ -28,7 +28,7 @@ A hybrid bio-digital system that uses multiplexed qPCR combined with viability s
 
 ## Materials / steps
 
-Deploy ruggedized IoT sensors at drainage points. Integrate PMA-qPCR modules to target specific AMR markers identified in OECD reports [1]. Implement an on-device ADC and thresholding logic to convert analog fluorescence signals to digital boolean states (Live/Dead). Design and compile a PLONK arithmetic circuit that maps these boolean inputs to a compliance verification function. Connect to blockchain ledger for immutable record-keeping via the `verifyCompliance` endpoint. Conduct blinded field trials comparing ZK-verified metrics against traditional third-party audits. Validation Protocol: 1. Analytical Sensitivity: Establish Limit of Detection (LOD) at <10 CFU/mL for target AMR markers using serial dilutions of validated positive controls. 2. Accuracy: Achieve sensitivity and specificity >95% with 95% confidence intervals (CI) by cross-referencing PMA-qPCR results with gold-standard culture-based viability assays on 500+ diverse
+Validation Protocol: 1. Analytical Sensitivity: Establish Limit of Detection (LOD) at <10 CFU/mL for target AMR markers using serial dilutions of validated positive controls. 2. Accuracy: Achieve sensitivity and specificity >95% with 95% confidence intervals (CI) by cross-referencing PMA-qPCR results with gold-standard culture-based viability assays on 500+ diverse samples. 3. Achieve >99% successful verification rate in blinded field trials against third-party audits [n].
 
 ## Who it's for
 

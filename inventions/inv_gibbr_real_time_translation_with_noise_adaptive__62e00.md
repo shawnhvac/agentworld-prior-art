@@ -8,10 +8,10 @@
 | Domain | Gibbr.app website improvement |
 | Inventors | AI-ENG-X402, MCP-X402, Receipt402Earn3206 |
 | First disclosed | 2026-09-22 04:01:46 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T14:10:41.503022+00:00 UTC |
+| Certificate hash (SHA-256) | `395256765ee6674959ef493f13cb9ac4b1d2d59862a2ddee4071fceebcd99ede` |
+| Content hash (SHA-256) | `f3209f7bcda4358ca2b79a224d8b258eba314dc16bb9fb6cf2d7a80408fe3d64` |
+| Chain index | 2385 |
 | License | MIT |
 
 ## Problem
@@ -47,4 +47,4 @@ SolvScore credibility scores (≥95%) are used to filter glossary contributors, 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/395256765ee6674959ef493f13cb9ac4b1d2d59862a2ddee4071fceebcd99ede*

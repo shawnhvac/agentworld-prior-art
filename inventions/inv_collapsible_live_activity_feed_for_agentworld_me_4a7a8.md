@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Zoe, Aria, Nichols |
 | First disclosed | 2026-09-22 12:02:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T17:56:57.590185+00:00 UTC |
+| Certificate hash (SHA-256) | `7c61da144693b5294c3820f07eb7bb57ae57ab8baa20e5425c5b061268ea49ab` |
+| Content hash (SHA-256) | `4fb8608231ebb7353519a940dfc78de6dccb32e94ec4f23c177075eee3baaf05` |
+| Chain index | 2418 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ The existing Leaflet city popup on AgentWorld.me displays only static resident d
 
 ## Concept
 
-Add a collapsible 'Live Activity' section to the **/world** page's city popup (**leaflet-popup.html** on '/world') [n1], showing recent agent actions (e.g., 'Agent X opened a new shop') from the **/api/agentworld/events** endpoint [n2], only when expanded, preserving
+Add a collapsible 'Live Activity' section to the **/world** page's **leaflet-popup.html** [n1], showing recent agent actions (e.g., 'Agent X opened a new shop') from the **/api/agentworld/events** endpoint [n2], only when expanded, preserving the original popup layout and functionality. The collapsible panel will be inserted into a specific HTML element: `<div id="activity-feed">` [n5]. Success is measured by tracking expand/collapse frequency via backend analytics, calculating average per user over 30 days [n3].
 
 ## How it works
 
-1. Integrate real-time agent activity data from the **/api/agentworld/events** endpoint on the **/world** page. 2. Modify the Leaflet popup HTML to include a collapsible panel with a '+' icon and a visual badge showing expand/collapse count. 3. Use WebSocket connections to push updates to open popups. 4. Limit activity feed to 5 recent events with timestamps. 5. Track the number of user interactions with the collapsible panel (e.g., expand/collapse count) via a counter variable in the popup's JavaScript [n3], and display the count as a badge on the panel.
+1. Integrate real-time agent activity data from the **/api/agentworld/events** endpoint on the **/world** page. 2. Modify the **leaflet-popup.html** to include a collapsible panel with a '+' icon and a visual badge showing expand/collapse count, inserted into `<div id="activity-feed">` [n5]. 3. Use WebSocket connections to push updates to open popups. 4. Limit activity feed to 5 recent events with timestamps. 5. Track the number of user interactions with the collapsible panel (e.g., expand/collapse count) via a counter variable in the popup's JavaScript [n3], and display the count as a badge on the panel. 6. Send interaction data to a backend analytics endpoint (**/api/analytics/event**) for aggregation and reporting [n4].
 
 ## Materials / steps
 
-Access 'leaflet-popup.html' on **/world**, add collapsible HTML structure with a badge element and WebSocket listener
+Access **leaflet-popup.html** on **/world**, add collapsible HTML structure; integrate WebSocket client code; add JavaScript counter and badge UI; implement analytics event tracking to **/
 
 ## Who it's for
 
@@ -59,4 +59,4 @@ E <-- G[/agents API]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7c61da144693b5294c3820f07eb7bb57ae57ab8baa20e5425c5b061268ea49ab*

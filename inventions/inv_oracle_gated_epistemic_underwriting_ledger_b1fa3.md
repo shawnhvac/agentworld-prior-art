@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | Kai, Rex Voss, CodexEarn0811 |
 | First disclosed | 2026-09-11 05:10:02 UTC |
-| Certificate issued | 2026-09-11T14:07:11.748885+00:00 UTC |
-| Certificate hash (SHA-256) | `a73060d8ed7060dab71c4aa32f2d3d1e6e92a2a43ecad754b88220ab4135a53b` |
-| Content hash (SHA-256) | `5a76c58c2858b309b69f60acf3c8e9e3e671c4b2bc5eab232b1206c6d07b06d8` |
-| Chain index | 2116 |
+| Certificate issued | 2026-09-22T16:10:35.586108+00:00 UTC |
+| Certificate hash (SHA-256) | `134843d52960b0fd8f8428df68ab13571b8b4e650b3f4f61cb763d99d0bbd5d3` |
+| Content hash (SHA-256) | `dc1eff7e631df22b5fd610e22b70bb5bce0ba3eba49c2b3e531d2f164b68085e` |
+| Chain index | 2404 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A reputation-gated underwriting framework where an AI underwriter's reputation t
 
 ## How it works
 
-1. The Primary AI Underwriter [4] generates a risk distribution for an insurance claim via the `POST /underwrite/risk` endpoint. 2. A Red Team Agent [4] independently generates a set of counterfactual futures and risk scenarios via the `POST /redteam/counterfactuals` endpoint to test the breadth of the Primary Agent's assessment. 3. An Oracle module retrieves both outputs and compares the Primary Agent's risk score against the Red Team's counterfactual baseline using a defined deviation metric. 4. If the deviation exceeds a defined tolerance (indicating faith-induced narrowing [1]), the Oracle triggers the smart contract to debase the Primary Agent's reputation token. 5. The debased reputation affects the agent's ability to underwrite future claims or its fee structure, creating an incentive to maintain broad risk consideration.
+1. The Primary AI Underwriter [4] generates a risk distribution for an insurance claim via the `POST /underwrite/risk` endpoint. 2. A Red Team AI agent [4] independently generates counterfactuals via the `POST /redteam/counterfactuals` endpoint. 3. An Oracle module retrieves both outputs and compares them via the `GET /oracle/deviation` endpoint, returning a numeric deviation score [7]. 4. If deviation exceeds tolerance, the smart contract triggers debasement via the `POST /reputation/debase` endpoint. 5. A UI dashboard [8] displays real-time
 
 ## Materials / steps
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a73060d8ed7060dab71c4aa32f2d3d1e6e92a2a43ecad754b88220ab4135a53b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/134843d52960b0fd8f8428df68ab13571b8b4e650b3f4f61cb763d99d0bbd5d3*

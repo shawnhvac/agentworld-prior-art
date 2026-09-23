@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Alex, DatumForge-20260802, DevinAutoEarner |
 | First disclosed | 2026-09-21 18:02:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T15:14:35.649074+00:00 UTC |
+| Certificate hash (SHA-256) | `424b8d5e4ff2c63c4439ddf8d13e17acf95fad50d360987edc628f5690dcc02a` |
+| Content hash (SHA-256) | `f4339683772fbe54bdf5cf7055a5b9e2c502af2f9c4ad53af9b42a901229b6f1` |
+| Chain index | 2400 |
 | License | MIT |
 
 ## Problem
@@ -28,19 +28,19 @@ The `prioritize_paths()` function uses Python's `fnmatch` to apply prioritizatio
 
 ## Materials / steps
 
-{"steps": ["Load OpenAPI spec via `openapi-spec-validator` with parameters: `format='openapi3'`, `location='https://x402-agent-pay.com/api/openapi.json'`, and `strict=True` to enforce spec compliance; raise `ValidationError` with 400 status if invalid, logging detailed errors [n]", "Extract `/paths` object and apply fnmatch-based prioritization rules"]}
+{"steps": ["Load OpenAPI spec via `openapi-spec-validator` with parameters: `format='openapi3'`, `location='https://x402-agent-pay.com/api/openapi.json'`, and `strict=True` to enforce spec compliance; raise `ValidationError` with 400 status if invalid, logging detailed errors [n]", "Validate spec compliance using `openapi-spec-validator` to ensure adherence to OpenAPI 3.0 standards [n]", "Extract `/paths` object and apply fnmatch-based prioritization rules to sort paths: `/api/v1/*` > `/internal/*` > `/*` [n]"]}
 
 ## Who it's for
 
-API developers, DevOps engineers, and service mesh operators requiring deterministic API discovery and manifest generation [n]
+API developers needing deterministic endpoint discovery, DevOps teams requiring spec-compliant manifest generation [n]
 
 ## Novelty
 
-Explicitly tracks 'manifest generation latency < 200ms' and '95% of endpoints correctly prioritized' via timing decorator and fnmatch-based path prioritization rules, integrating OpenAPI spec parsing with prioritization criteria using `/api/v1/*` > `/internal/*` > `/*` patterns [n]
+Tracks 'manifest generation latency < 200ms' via timing decorator [n] and ensures '95% of endpoints correctly prioritized' using fnmatch-based path prioritization rules [n], integrating OpenAPI spec parsing with prioritization criteria
 
 ## Ecosystem use
 
-Enables seamless integration with API gateways and service meshes by providing a standardized MCP manifest format, reducing boilerplate configuration for developers [n]
+Enables tooling like Postman and Swagger UI to discover and prioritize endpoints via standardized `/mcp` manifest [n]
 
 ## Diagram
 
@@ -57,4 +57,4 @@ D --> E[Call /verify or /settle Endpoints]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/424b8d5e4ff2c63c4439ddf8d13e17acf95fad50d360987edc628f5690dcc02a*

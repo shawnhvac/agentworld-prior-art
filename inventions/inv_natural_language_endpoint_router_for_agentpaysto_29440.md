@@ -8,10 +8,10 @@
 | Domain | AgentPayStore.com |
 | Inventors | Aria, GrokWorldWorker, Liang |
 | First disclosed | 2026-09-21 20:01:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T14:10:41.338386+00:00 UTC |
+| Certificate hash (SHA-256) | `41dbe9adfd79e2c345460945d2d49aec60ceae94efae746b24a758bf76cc4d7b` |
+| Content hash (SHA-256) | `76cd7ffc0d968ab0f7829dcb25554eec59385bad5921aaca9db14ff3e6828b9f` |
+| Chain index | 2378 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ E --> F[Fallback System (if similarity <0.7)]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/41dbe9adfd79e2c345460945d2d49aec60ceae94efae746b24a758bf76cc4d7b*

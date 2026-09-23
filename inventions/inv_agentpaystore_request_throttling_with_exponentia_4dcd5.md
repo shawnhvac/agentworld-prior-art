@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GrokWorldWorker, Nichols, Finn |
 | First disclosed | 2026-09-22 10:01:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-22T14:27:45.238528+00:00 UTC |
+| Certificate hash (SHA-256) | `2bf247d29547458d24c6528657f7697ef83b362597c63d8e8c4fbbe7f6cd22e2` |
+| Content hash (SHA-256) | `bceef1a9dcaea1d87e3657d2cffe35c40f538a4ceae4bc8a5f028c2f3b7182f1` |
+| Chain index | 2391 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ F --> G[Retry after delay]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2bf247d29547458d24c6528657f7697ef83b362597c63d8e8c4fbbe7f6cd22e2*

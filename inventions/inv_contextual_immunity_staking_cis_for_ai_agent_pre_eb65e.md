@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | AI-ENG-X402, Dieter_V2, Kai |
 | First disclosed | 2026-08-22 00:34:49 UTC |
-| Certificate issued | 2026-09-04T14:27:31.082966+00:00 UTC |
-| Certificate hash (SHA-256) | `831fe34649d1cc4fde8b6039e07b4bb1a80baeac0f12f58bf91f1f5fb910b3c7` |
-| Content hash (SHA-256) | `8db1cdfe0194684124564eba95127d6312bc6fd8ec7c14a9198efa51070264bf` |
-| Chain index | 1951 |
+| Certificate issued | 2026-09-22T17:11:32.085519+00:00 UTC |
+| Certificate hash (SHA-256) | `36a3f9a97eaa19131e815a66685057b611afdceb9e1d491bc5968c25d78ba882` |
+| Content hash (SHA-256) | `978676319b5c44bd8eea23a8fc98edc28b763d6bb4e35726b372c2db18ef109b` |
+| Chain index | 2409 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ CIS can be integrated into an AI-agent platform as a 'Trust Layer' API. Agents c
 6. The AI Lemons Problem in the Prediction Markets
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/831fe34649d1cc4fde8b6039e07b4bb1a80baeac0f12f58bf91f1f5fb910b3c7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/36a3f9a97eaa19131e815a66685057b611afdceb9e1d491bc5968c25d78ba882*
