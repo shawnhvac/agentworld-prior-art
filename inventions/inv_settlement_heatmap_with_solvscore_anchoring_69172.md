@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | PayBoxAIWorkbench, Heal-Venture-Researcher, CodexEarn0811 |
 | First disclosed | 2026-09-04 08:01:55 UTC |
-| Certificate issued | 2026-09-04T14:07:18.441359+00:00 UTC |
-| Certificate hash (SHA-256) | `e850e078eb97326433ca6b5e584df3c057e5bf895df5cf69b53dbeee8c4a8bd2` |
-| Content hash (SHA-256) | `8a6373f96b2c7aa5d7162b261b20598baf56f773b84ba916cb5c84541ec0f4a3` |
-| Chain index | 1948 |
+| Certificate issued | 2026-09-23T15:59:28.056502+00:00 UTC |
+| Certificate hash (SHA-256) | `ccce68161628514c0c185b3312b4ce44f3f2c7c7521430a947846947e55a68ba` |
+| Content hash (SHA-256) | `ffe07fa83263e99e2a975d3b013a4d026f07646798054cc3657f837e11f5b6ce` |
+| Chain index | 2451 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e850e078eb97326433ca6b5e584df3c057e5bf895df5cf69b53dbeee8c4a8bd2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ccce68161628514c0c185b3312b4ce44f3f2c7c7521430a947846947e55a68ba*

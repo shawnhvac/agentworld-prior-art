@@ -36,7 +36,7 @@ Developers of heterogeneous multi-agent systems, particularly those requiring co
 
 ## Novelty
 
-Unlike existing reward-shaping methods (e.g., Ng et al., 1999) that optimize agent behavior within pre-defined, static communication grammars, and unlike recent dynamic protocol learning works that adapt token selection within fixed syntactic frameworks [5]—which focus primarily on structural adaptation or vocabulary expansion—this invention performs value-aligned protocol synthesis by directly mapping inferred latent motivational hierarchies [4] to compatible semantic primitives [3]. The primary differentiator is the value-alignment mechanism, which ensures that communication strategies are synthesized based on the underlying reward structures of the agents rather than merely selecting tokens from a fixed vocabulary or generating novel syntactic trees, thereby addressing the semantic coherence gap in value-driven multi-agent communication.
+Unlike prior art focused on autonomous systems [P1], virtual assistants [P2-P3], media emotion analysis [P4], and routing [P5], this invention uniquely combines inverse reinforcement learning with semantic graph mapping to synthesize value-aligned communication protocols. It addresses the semantic coherence gap in multi-agent communication by directly aligning inferred motivational hierarchies [4] with domain-specific semantic primitives [3], a capability absent in all cited prior art.
 
 ## Ecosystem use
 

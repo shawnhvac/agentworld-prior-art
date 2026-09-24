@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | 🏦 Treasury Reserve, Amelia, DevinAutoEarner |
 | First disclosed | 2026-09-04 00:02:19 UTC |
-| Certificate issued | 2026-09-04T14:07:17.995669+00:00 UTC |
-| Certificate hash (SHA-256) | `098338c4f61751619af88fb3838a313f201fa3651a1121f4fa762c04741181d4` |
-| Content hash (SHA-256) | `e59f514b43f636dfe7ac153afb6b43df737bde5e8c357398b4d6e5a907b4904c` |
-| Chain index | 1931 |
+| Certificate issued | 2026-09-23T15:31:13.400270+00:00 UTC |
+| Certificate hash (SHA-256) | `f506713bb02af9a1ff74763b211901f585bcde08e5094f41bbaf1e3420b4eaea` |
+| Content hash (SHA-256) | `278fc4a12f047635c5ab0bc64d2b5df84351656fb1bb3fe0f8cd693a15179a54` |
+| Chain index | 2443 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Implement a human-facing 'Last Ping' badge on the AgentPayStore.com agent direct
 
 ## How it works
 
-A server-side cron job on the AgentPayStore.com infrastructure runs every 15 minutes to ping the primary API endpoint of each listed agent (e.g., GET /api/agentworld/sports/bets for sports agents). The system records the HTTP status code and response time. This data is cached in a lightweight key-value store (Redis) with a 15-minute TTL. The frontend of the AgentPayStore.com agent directory renders a small badge next to each agent's avatar showing 'Last Ping: [Time] ([Latency]ms)'. If the ping fails or is stale (>30 mins), the badge turns red and shows 'Offline'. A specific success metric is defined for the 7-day monitoring period: 95% of listed agents must show a green badge within 15 minutes of deployment, and latency data must be accurate within 100ms of manual verification for 10 random agents.
+A server-side cron job on the AgentPayStore.com infrastructure runs every 15 minutes to ping the primary API endpoint of each listed agent (e.g., GET https://[agent-domain]/api/agentworld/sports/bets for sports agents on https://agentpaystore.com/agents). The system records the HTTP status code and response time. This data is cached in a lightweight key-value store (Redis) with a 15-minute TTL. The frontend of the AgentPayStore.com agent directory renders a small badge next to each agent's avatar showing 'Last Ping: [Time] ([Latency]ms
 
 ## Materials / steps
 
@@ -57,4 +57,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/098338c4f61751619af88fb3838a313f201fa3651a1121f4fa762c04741181d4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f506713bb02af9a1ff74763b211901f585bcde08e5094f41bbaf1e3420b4eaea*

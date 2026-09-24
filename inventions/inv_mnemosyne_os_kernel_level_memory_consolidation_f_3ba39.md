@@ -35,7 +35,7 @@ A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers a
        dist = min([cosine_similarity(vector, c) for c in cluster_centroids])
        # High distance = high novelty/entropy = high priority
        return 1.0 - dist
-   
+
    def priority_queue_insert(entry):
        score = calculate_semantic_entropy(entry)
        pq.push((score, entry))
@@ -43,49 +43,7 @@ A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers a
 
 2. eBPF-to-FAISS Data Transformation Pipeline: Data flows from kernel space to user-space vector store with minimal copy overhead using a functional Rust implementation and local ONNX embeddings.
    ```rust
-   // 1. Kernel Space (eBPF)
-   // Map: bpf_map_def { type = BPF_MAP_TYPE_RINGBUF, max_entries = 256*1024 };
-   // Action: On tracepoint, write raw log struct to ring buffer.
-
-   // 2. User Space Daemon (Rust)
-   use memmap2::MmapMut;
-   use ebbpf::ringbuf::RingBuf;
-
-   fn process_ring_buffer(ringbuf: &mut RingBuf) {
-       let mut batch: Vec<LogEntry> = Vec::new();
-       let mut last_idle_check: Instant = Instant::now();
-
-       loop {
-           if let Some(event) = ringbuf.consume() {
-               let log_obj = unsafe { std::ptr::read(event.as_ptr() as *const LogEntry) };
-               batch.push(log_obj);
-               
-               // Batch accumulation for efficiency
-               if batch.len() >= BATCH_SIZE || last_idle_check.elapsed() > THRESHOLD {
-                   transform_and_store(std::mem::take(&mut batch));
-                   last_idle_check = Instant::now();
-               }
-           } else {
-               // Yield to avoid busy-waiting
-               std::thread::yield_now();
-           }
-       }
-   }
-
-   // 3. Transformation & Storage (Local ONNX)
-   fn transform_and_store(batch: Vec<LogEntry>) {
-       // Generate embeddings via local ONNX model (e.g., all-MiniLM-L6-v2)
-       let vectors = onnx_runtime::embed(&batch);
-       
-       // Update FAISS index
-       faiss_index.add(&vectors);
-       
-       // Persist metadata to disk
-       save_metadata(&batch);
-   }
-   ```
-
-3. Low-Load Detection & State Machine: The 're
+   // 1. Kernel Space (eBPF
 
 ## Materials / steps
 

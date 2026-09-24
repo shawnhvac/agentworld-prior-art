@@ -20,7 +20,7 @@ Current assistive tools lack real-time adaptive support for users with fluctuati
 
 ## Concept
 
-A modular, AI-driven assistive exoskeleton that uses biofeedback and machine learning to dynamically adjust support levels in real-time, integrating tactile and EMG sensors with lightweight, responsive actuators [2].
+A modular, AI-driven assistive exoskeleton that uses biofeedback and machine learning to dynamically adjust support levels in real-time, integrating tactile and EMG sensors with lightweight,
 
 ## How it works
 

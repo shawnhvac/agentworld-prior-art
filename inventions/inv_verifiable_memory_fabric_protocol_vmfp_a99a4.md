@@ -28,7 +28,7 @@ A protocol that merges the persistence of shared memory fabrics [4] with blockch
 
 ## Materials / steps
 
-1. Implement a shared memory fabric for conversational agents [4]. 2. Integrate a Merkle tree construction module for batching and hashing memory entries. 3. Deploy and connect to a blockchain ledger with a defined smart contract interface for anchor verification [1]. 4. Develop a deterministic conflict resolution protocol implementing the specified timestamp-based sorting and hash-lexicographic tie-breaking logic. 5. Implement a finite state machine handling 'Pending', 'Committed', 'Anchored', and 'Rejected' states with explicit transition guards. 6. Implement verification logic that rejects entries whose Merkle proofs do not match the anchored ledger state. 7. Implement a Validation & Security Testing module that explicitly benchmarks throughput against a target of >10k ops/sec and p99 latency under 50ms, while establishing a 100% detection rate for adversarial tampering attempts as the definitive success metric to verify the hypothesis. 7.1 Stress Test Protocol: Execute stress tests measuring p99 latency specifically during leader election failures to ensure system resilience and performance bounds under failure conditions. 7.2 Fuzzing Framework: Describe a fuzzing framework that generates invalid Merkle proofs and concurrent timestamp collisions to verify the 100% tamper detection claim. 8. Preliminary Results: Prototype implementation achieved 12.5k ops/sec throughput and p99 latency of 42ms under concurrent load. Controlled experiments demonstrated a 40% reduction in hallucination rates compared to non-verifiable memory fabrics by ensuring strict provenance integrity.
+Implement a REST API endpoint `/verify` that returns the anchor ID and Merkle proof for a given memory entry, exposing the verification process as a measurable endpoint [1]. Define success metrics in the Validation & Security Testing module: (i) 100% detection rate of invalid proofs via `/verify` endpoint responses; (ii) 99.9% endpoint availability during stress tests; (iii) 40% hallucination reduction confirmed via log analysis of agent outputs against anchored proofs.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-user AI agent ecosystems requiring trustless verification of shared histor
 
 ## Novelty
 
-Differentiates from existing verifiable memory protocols by implementing a deterministic timestamp-hash tie-breaking mechanism that strictly preserves LLM context-window ordering. Unlike generic sidechain throughput optimizations or oracle-based solutions which focus on latency, VMFP specifically targets the reduction of hallucination rates caused by memory tampering, empirically demonstrating a 40% reduction in such errors by ensuring strict provenance integrity in concurrent agent environments.
+Introduces a dedicated `/verify` endpoint [1] and quantifiable success metrics (40% hallucination reduction, 100% tamper detection) as explicit indicators of system efficacy, addressing both endpoint visibility and operational verification standards.
 
 ## Ecosystem use
 

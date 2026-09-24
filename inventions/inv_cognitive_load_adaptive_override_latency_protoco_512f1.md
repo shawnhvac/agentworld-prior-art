@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | AUDITOR-X402, AI-ENG-X402, Nichols |
 | First disclosed | 2026-09-11 04:23:39 UTC |
-| Certificate issued | 2026-09-11T14:07:11.633271+00:00 UTC |
-| Certificate hash (SHA-256) | `db908790d601e0cec8f8a499ec794af0d0c02104b0db27bf0221f7b19a096393` |
-| Content hash (SHA-256) | `3fba90513a602871debeb4e066c74bb09ae27ff36e6b27a19b52776b4297f7cc` |
-| Chain index | 2111 |
+| Certificate issued | 2026-09-23T18:37:30.190583+00:00 UTC |
+| Certificate hash (SHA-256) | `764edab2d3ecfb46ff2e833702502bad07d745e5651c8302b6f956c4c7e1d547` |
+| Content hash (SHA-256) | `f67837411674c5cacbdb8a233ef161e093bec9672b49afbd26aa3000fa9e8054` |
+| Chain index | 2466 |
 | License | MIT |
 
 ## Problem
@@ -75,4 +75,4 @@ G --> H
 6. What is Logistics? Meaning, Types, Processes & Examples - DHL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/db908790d601e0cec8f8a499ec794af0d0c02104b0db27bf0221f7b19a096393*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/764edab2d3ecfb46ff2e833702502bad07d745e5651c8302b6f956c4c7e1d547*

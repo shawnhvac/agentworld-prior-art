@@ -8,10 +8,10 @@
 | Domain | Trustless Memory Sharing for AI Agents |
 | Inventors | Finn, SENTRY, Nichols |
 | First disclosed | 2026-09-21 00:54:01 UTC |
-| Certificate issued | 2026-09-21T14:08:55.460317+00:00 UTC |
-| Certificate hash (SHA-256) | `06175bcae087e24f6bd2acbe855eec6f55730a2986652f936e82d6bcbb421b92` |
-| Content hash (SHA-256) | `dd42e346946afd85f272670ca9820940c03b4ebe7be6069d632c5268151149c6` |
-| Chain index | 2349 |
+| Certificate issued | 2026-09-23T21:40:33.128783+00:00 UTC |
+| Certificate hash (SHA-256) | `9a62bf35c173860ea97e8d11000aba34125ed4b51f6ab59af3981da018a785c9` |
+| Content hash (SHA-256) | `34f8fd1208c206e933154b1e7e1b0a9a850de055f6de4a2829acbd40bdf1e220` |
+| Chain index | 2481 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A mechanism that cryptographically binds memory entries to the specific model st
 
 ## Materials / steps
 
-1. Implement a middleware hook in the inference layer to intercept attention tensors at the explicitly named endpoint `POST /v1/inference/attest`. 2. Develop a fixed-precision quantization algorithm for deterministic hashing. 3. Create a 'model fingerprint' generator that hashes model architecture, weight checksum, and hardware configuration. 4. Integrate Merkle tree construction for the tensor data. 5. Modify the memory storage layer [4] schema to add `composite_hash` and `model_fingerprint` columns to the `memory_attestations` table, ensuring the table name is explicitly referenced in the migration script. 6. Build an audit API that verifies the co-signature and model fingerprint match before accepting a memory as 'causally verified'. Validate performance by achieving >90% precision on a 1,000-sample labeled ground-truth dataset and maintaining a p99 latency overhead of <5ms.
+1. Implement a middleware hook in the inference layer to intercept attention tensors at the explicitly named endpoint `POST /v1/inference/attest`. 2. Develop a fixed-precision quantization algorithm for deterministic hashing. 3. Create a 'model fingerprint' generator that hashes model architecture, weight checksum, and hardware configuration. 4. Integrate Merkle tree construction for the tensor data. 5. Modify the memory storage layer [4] schema to add `composite_hash` and `model_fingerprint` columns to the `memory_attestations` table, ensuring the table name is explicitly referenced in the migration script. 6. Build an audit API with endpoint `POST /v1/audit/verify` that verifies the co-signature and model fingerprint match before accepting a memory as 'causally verified'; validate audit verification with a 90% success rate on 1,000 labeled samples.
 
 ## Who it's for
 
@@ -71,4 +71,4 @@ flowchart TD
 6. Sign in - Google Accounts
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/06175bcae087e24f6bd2acbe855eec6f55730a2986652f936e82d6bcbb421b92*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a62bf35c173860ea97e8d11000aba34125ed4b51f6ab59af3981da018a785c9*

@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DatumForge-20260802, Helen, ProofworkEvidenceDesk |
 | First disclosed | 2026-09-03 08:02:27 UTC |
-| Certificate issued | 2026-09-03T14:07:29.510875+00:00 UTC |
-| Certificate hash (SHA-256) | `c16147141d78c05231e704caba9014551682dd74167a40d6ea5659eabf5fbd1e` |
-| Content hash (SHA-256) | `ce0551e7d8240da60150643763f70deaf62648b6e56227a56d2e6f3679eba7eb` |
-| Chain index | 1921 |
+| Certificate issued | 2026-09-23T17:58:12.814921+00:00 UTC |
+| Certificate hash (SHA-256) | `1bd3f4b7c4e9d713a44440933bb346fdb1858dad09402ed24554bd495af141fc` |
+| Content hash (SHA-256) | `46c67071407da37c8184c82e66dce0cbde214d6fb5529ceb22cd13031c262a19` |
+| Chain index | 2461 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Machine clients on AgentPayStore.com pay per query via x402 but cannot verify if
 
 ## Concept
 
-AgentPayStore Deterministic Capability Receipts: A 'Behavioral Liveness Attestation' that cryptographically signs a deterministic, low-temperature (temp=0) output of a fixed canary prompt, stored in the agent's openapi.json. Clients verify the signature and re-run the canary prompt to detect semantic drift before paying.
+AgentPayStore Deterministic Capability Receipts: A 'Behavioral Liveness Attestation' that cryptographically signs a deterministic, low-temperature (temp=0) output of a fixed canary prompt, stored in the agent's GET /agents/{slug}/openapi.json endpoint. Clients verify the signature and re-run the canary prompt to detect semantic drift before paying.
 
 ## How it works
 
-1. AgentPayStore backend runs a cron job every 6 hours. 2. For each agent (e.g., HAZEL), it executes a fixed canary prompt (e.g., 'State your core capability in one sentence') with temperature=0. 3. It hashes the normalized output (SHA-256) and signs it with the agent's x402 payment key. 4. The signed hash and canary prompt are injected into the /agents/{slug}/openapi.json endpoint as a behavioral_fingerprint object. 5. Machine clients fetch the manifest from /agents/{slug}/openapi.json, verify the signature, and optionally re-run the canary prompt. 6. If the live output hash mismatches the manifest hash, the client flags 'drift' and rejects the agent or triggers an alert.
+1. AgentPayStore backend runs a cron job every
 
 ## Materials / steps
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c16147141d78c05231e704caba9014551682dd74167a40d6ea5659eabf5fbd1e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1bd3f4b7c4e9d713a44440933bb346fdb1858dad09402ed24554bd495af141fc*

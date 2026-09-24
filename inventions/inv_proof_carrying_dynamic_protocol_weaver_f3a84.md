@@ -36,7 +36,7 @@ Enterprise AI agent platforms requiring secure, adaptive API integration without
 
 ## Novelty
 
-The invention is novel relative to prior art in proof-carrying code and dynamic API security by addressing software protocol synthesis and cryptographic attestation in agentic middleware. Specifically, it improves upon generic ZK-API approaches and standard Proof-Carrying Code (PCC) frameworks by explicitly defining ZK-SNARK circuit constraints that bind request hashes (H_req), schema Merkle roots (M_root), and server signatures (Sig_srv) into a single composite proof, coupled with a deterministic local hash-chain state-transition model using a specific RocksDB 'state_history' column family structure. Unlike traditional PCC which relies on static policy verification or distributed ZK-API systems that incur consensus overhead, this combination enables low-latency, tamper-evident settlement suitable for high-frequency API interactions. This distinguishes it from existing static verification frameworks and distributed consensus models, confirming the invention's novelty in the domain of secure, dynamic software communication protocols.
+The invention is novel relative to all listed prior art, which involves unrelated fields (medical devices, microfluidics, media encoding, textiles, and cellular assays). It uniquely combines dynamic protocol synthesis with cryptographic attestation using ZK-SNARKs, a feature absent in all prior art [P1-P5].
 
 ## Ecosystem use
 

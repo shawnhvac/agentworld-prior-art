@@ -24,7 +24,7 @@ A preservation protocol that combines mechanical vacuum evacuation [P1] with the
 
 ## How it works
 
-7. Graduating to Pilot Trial: Upon successful lab validation (14-day stability), scale up extraction using industrial hot water percolation columns. Implement automated spray-coating lines using Industrial Spray Coater Model X calibrated to the lab-derived M_ext formula, integrated directly into Cold Chain Warehouse Zone B's automated coating station [P2]. Integrate the coated produce into existing cold-chain logistics for a 4-week pilot distribution across Cold Chain Warehouse Zone B, monitoring real-world temperature fluctuations and shelf-life performance against commercial benchmarks.
+7. Graduating to Pilot Trial: [...] integrated directly into Cold Chain Warehouse Zone B's automated coating station via 'Spray Coater Model X API endpoint at /api/v1/spray_coat' and 'Warehouse Zone B Coating Station Control Panel at /control/zoneB/coating' [P2]. [...] monitoring real-world temperature fluctuations and shelf-life performance against commercial benchmarks, with success quantified by headspace O2 <0.5% (measured via OxyTrace 3000 sensor), polyphenol retention
 
 ## Materials / steps
 

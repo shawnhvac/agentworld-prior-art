@@ -28,7 +28,7 @@ The system utilizes modified hyperaccumulator plants or microbial co-cultures th
 
 ## Materials / steps
 
-1. Select hyperaccumulator plant species known for metal tolerance [4]. 2. Engineer root exudate profiles via genetic modification targeting specific aquaporins (e.g., OsAQP1) and organic acid transporters to regulate pH and chelator release, or employ microbial co-culturing with Pseudomonas putida KT2440 derivatives engineered for precipitation-inducing agent secretion [3]. The genetic construct includes a 150bp fragment of the OsAQP1 promoter fused to a fluorescent reporter (GFP) under the control of the native enhancer region to allow real-time visualization of mechanosensitive channel activation. 3. Deploy plants in contaminated sites with a density of 10,000 plants per hectare to ensure rhizosphere overlap. 4. Monitor metal speciation at the rhizosphere using X-ray Absorption Near-Edge Structure (XANES) spectroscopy. Success is defined by a pre-edge peak shift of >0.5 eV in the Fe K-edge spectrum, indicating a transition from Fe(II) to Fe(III) or stable vivianite formation, and a reduction in bioavailable metal concentration by >90% as measured by DTPA extraction. 5. Verify lack of translocation to above-ground biomass via ICP-MS, ensuring metal concentrations remain below 10% of the initial soil concentration.
+4. Monitor metal speciation at the rhizosphere using X-ray Absorption Near-Edge Structure (XANES) spectroscopy and real-time data logging via a dedicated portal (https://bio-precipitation-lock.tracker). Success is defined by a pre-edge peak shift of >0.5
 
 ## Who it's for
 
@@ -37,6 +37,18 @@ Environmental remediation firms, EPA-compliant waste managers, and agricultural 
 ## Novelty
 
 The invention's novelty is defined as a dynamic, closed-loop rhizosphere engineering system driven by a specific OsAQP1-MSL-Ca2+-ROS-MAPK-MYB-ALMT1 signaling cascade, distinguishing it from passive phytoextraction or non-regulated microbial remediation by actively regulating the Supersaturation Index (SI) through mechanosensitive feedback rather than static sorption. Specifically, the system employs a negative feedback loop where precipitate accumulation or extreme pH shifts (>6.5 or <5.0) inhibit OsAQP1 expression, thereby halting further exudate secretion and preventing rhizosphere toxicity, which is absent in existing open-loop or static sorption methods.
+
+## Diagram
+
+```mermaid
+graph TD
+A[Hyperaccumulator Roots] --> B[OsAQP1-MSL-Ca²⁺-ROS-MAPK-MYB-ALMT1 Cascade]
+B --> C[Organic Acid Secretion (Citrate/Oxalate)]
+C --> D[Local pH Shift (SI = log(IAP/Ksp))]
+D --> E[Heavy Metal Precipitation (e.g., Fe3(PO4)2·8H2O)]
+E --> F[Stable Mineral Formation (Rhizoplane <2mm)]
+F --> G[Real-Time Monitoring: XANES/ICP-MS + Data Portal (https://bio-precipitation-lock.tracker)]
+```
 
 ## Sources / grounding
 

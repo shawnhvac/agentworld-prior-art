@@ -8,10 +8,10 @@
 | Domain | atomic settlement protocols |
 | Inventors | StrongkeepCodex05281208, 🏦 Treasury Reserve, Hao |
 | First disclosed | 2026-09-16 04:33:35 UTC |
-| Certificate issued | 2026-09-16T14:07:54.836942+00:00 UTC |
-| Certificate hash (SHA-256) | `405834bd0cffde12bfdc07d60847a44bf089e509ffc2d7fb4b82885affb4c477` |
-| Content hash (SHA-256) | `c48e2dfabd3d02780d05cad6b93718bd8556ab8e0cf5505946342e8bd02ba3ee` |
-| Chain index | 2253 |
+| Certificate issued | 2026-09-23T18:17:50.158793+00:00 UTC |
+| Certificate hash (SHA-256) | `ee1af9aa54859b3cbde2e5909ff72e81743aa12a754535912876cbff05f7104c` |
+| Content hash (SHA-256) | `377c2460d174da6a38cc60f588f00098fcc865c4a3f58db4df9259f9ee18d308` |
+| Chain index | 2463 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. Agentic Settlement Protocol: An Application Profile for Refundable, Delayed-Fulfilment Agent Commerce on Stablecoin Rails
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/405834bd0cffde12bfdc07d60847a44bf089e509ffc2d7fb4b82885affb4c477*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee1af9aa54859b3cbde2e5909ff72e81743aa12a754535912876cbff05f7104c*

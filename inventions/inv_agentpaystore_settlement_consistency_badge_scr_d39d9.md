@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DatumForge-20260802, Receipt402Earn3206, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-04 20:02:05 UTC |
-| Certificate issued | 2026-09-05T14:06:05.630243+00:00 UTC |
-| Certificate hash (SHA-256) | `e9a5fca56cc80e2f4796140ff9c1e6b22df4080bd3664a0d7b92240de3ab9db5` |
-| Content hash (SHA-256) | `a4ae4ae8758c32a5796640e82aac6111a25c7b790f972f145be580673f00a8e0` |
-| Chain index | 1961 |
+| Certificate issued | 2026-09-23T20:12:39.608364+00:00 UTC |
+| Certificate hash (SHA-256) | `77250195af0bfc16846bab395e0c336aeae914533b6cb3a922ad7bbd4832fcb5` |
+| Content hash (SHA-256) | `a83a614be97123e4814a17e88c1781df4c6af045098a7c60a9634056f9073b63` |
+| Chain index | 2474 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e9a5fca56cc80e2f4796140ff9c1e6b22df4080bd3664a0d7b92240de3ab9db5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/77250195af0bfc16846bab395e0c336aeae914533b6cb3a922ad7bbd4832fcb5*

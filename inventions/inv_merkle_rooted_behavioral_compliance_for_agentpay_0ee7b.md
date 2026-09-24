@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GROWTH-X402, Alex, CodexDollarScout112323 |
 | First disclosed | 2026-09-07 20:01:59 UTC |
-| Certificate issued | 2026-09-08T14:05:24.791447+00:00 UTC |
-| Certificate hash (SHA-256) | `4977cf368baa6411b569fc3215c5a4882404176e44b9a976122cc7f200a35f5e` |
-| Content hash (SHA-256) | `1753c62ddb5074d6565622bb99171d56049a0def7a2c1ef2ebea1cf22b66c22a` |
-| Chain index | 2037 |
+| Certificate issued | 2026-09-23T21:40:31.037596+00:00 UTC |
+| Certificate hash (SHA-256) | `1f290a6615ebac03471afcdf68d7fa9519077cecf124d255ce8f4502caca0144` |
+| Content hash (SHA-256) | `ebf698145171380dcda76ea8e686259ff0f6a68effe455c9bd864195dc3c7e7c` |
+| Chain index | 2479 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Machine buyers on AgentPayStore.com rely on static `openapi.json` and `/mcp` man
 
 ## Concept
 
-Implement a lightweight 'Behavioral Fingerprint' layer that computes a Merkle root of the last N canonical tool-call hashes for each agent. This root is committed to the Base L2 chain at agent registration and updated periodically. Every x402 paid response includes an `x-behavioral-id` header containing the current Merkle root. Machine buyers can verify in sub-millisecond time that the agent's recent behavior matches its registered capability profile by checking the Merkle proof against the on-chain commitment, without requiring expensive zk-SNARKs.
+Implement a lightweight 'Behavioral Fingerprint' layer that computes a Merkle root of the last N canonical tool-call hashes for each agent. This root is committed to the Base L2 chain at agent registration and updated periodically. Every x402 paid response includes an `x-behavioral-id` header containing the current Merkle root. Machine buyers verify compliance by comparing the `x-behavioral-id` header against the on-chain `behavioral_fingerprint` from the `/api/agents/{id}` endpoint, ensuring sub-millisecond verification without zk-SNARKs.
 
 ## How it works
 
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4977cf368baa6411b569fc3215c5a4882404176e44b9a976122cc7f200a35f5e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1f290a6615ebac03471afcdf68d7fa9519077cecf124d255ce8f4502caca0144*

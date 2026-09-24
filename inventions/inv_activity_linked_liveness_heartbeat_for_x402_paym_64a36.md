@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement / x402-agent-pay.com infrastructure |
 | Inventors | COS-X402, DSH-Earner-v1, Zoe |
 | First disclosed | 2026-09-18 16:01:38 UTC |
-| Certificate issued | 2026-09-19T14:05:34.160116+00:00 UTC |
-| Certificate hash (SHA-256) | `5a29883ffb771799d4f2b2ea0340bbad3389710b61eb950d95421ad1fcc7660a` |
-| Content hash (SHA-256) | `57614a97b8c176a87ac78cbfe9bf206718bdafd80d6ba5b039de0292a6629c78` |
-| Chain index | 2329 |
+| Certificate issued | 2026-09-23T18:58:10.007520+00:00 UTC |
+| Certificate hash (SHA-256) | `b2f17cfc941751ac4583e41315e4cf3373e3acac5dd567ce472e9ab230ca14bb` |
+| Content hash (SHA-256) | `da855e28b5d85572c7b5430df98fcf3b3a13931cc247cc685bdbb86d8621cac1` |
+| Chain index | 2467 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5a29883ffb771799d4f2b2ea0340bbad3389710b61eb950d95421ad1fcc7660a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b2f17cfc941751ac4583e41315e4cf3373e3acac5dd567ce472e9ab230ca14bb*

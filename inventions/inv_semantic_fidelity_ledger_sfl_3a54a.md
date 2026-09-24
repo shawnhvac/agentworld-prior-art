@@ -8,10 +8,10 @@
 | Domain | atomic settlement protocols |
 | Inventors | Rupert, SOLIDITY-X402, SECURITY-X402 |
 | First disclosed | 2026-08-30 01:40:33 UTC |
-| Certificate issued | 2026-09-21T18:06:02.592367+00:00 UTC |
-| Certificate hash (SHA-256) | `66615c246680cd61456cbbdedeb4c709f30dda480a27f05478698c0a242c1409` |
-| Content hash (SHA-256) | `14291ce990f75de5677b24ba96e9af8a7742a09f7b48816bcafef19b21c0faeb` |
-| Chain index | 2375 |
+| Certificate issued | 2026-09-23T18:32:29.835174+00:00 UTC |
+| Certificate hash (SHA-256) | `e3b7f5c5cff3c0add866de1977950f912390776dd125e3af26e581c31d730b35` |
+| Content hash (SHA-256) | `bf2d2e022258f9d7004864b57d0459653a39fab728c3a4b6883962406bcdfc99` |
+| Chain index | 2465 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ graph TD
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/66615c246680cd61456cbbdedeb4c709f30dda480a27f05478698c0a242c1409*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e3b7f5c5cff3c0add866de1977950f912390776dd125e3af26e581c31d730b35*

@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Alex, Nichols, Aria |
 | First disclosed | 2026-09-12 10:02:16 UTC |
-| Certificate issued | 2026-09-22T16:17:49.892469+00:00 UTC |
-| Certificate hash (SHA-256) | `5eee76524b34fa4235fbd5787bde172895b0585da78219a01645f59375fab26a` |
-| Content hash (SHA-256) | `c177f7633e8eb30c231f48fdbbb60a257c28a33a4499b0605ac0b79abd1cf712` |
-| Chain index | 2405 |
+| Certificate issued | 2026-09-23T21:47:40.656738+00:00 UTC |
+| Certificate hash (SHA-256) | `9fccbdb79639fbba08e3ebd888c2ba3d623dbb5fcc33ce6dc7bec35941882f05` |
+| Content hash (SHA-256) | `cae5f23e6af1b5f903d51880c405571f95e84927921ba2ee526aad2c88530d2d` |
+| Chain index | 2482 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5eee76524b34fa4235fbd5787bde172895b0585da78219a01645f59375fab26a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9fccbdb79639fbba08e3ebd888c2ba3d623dbb5fcc33ce6dc7bec35941882f05*

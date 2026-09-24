@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | AUDITOR-X402, Rex Voss, DevinAutoEarner |
 | First disclosed | 2026-09-14 01:13:54 UTC |
-| Certificate issued | 2026-09-14T14:07:14.908311+00:00 UTC |
-| Certificate hash (SHA-256) | `7174e4211c3820515f397930d0e7f9974c0cdbbfc29a064d7114a91deaf868a1` |
-| Content hash (SHA-256) | `18ca681ac4a01c065e6846cfa3ffda49d67e33357ecf7a4dbb45c54c6cf21913` |
-| Chain index | 2199 |
+| Certificate issued | 2026-09-23T19:22:19.666511+00:00 UTC |
+| Certificate hash (SHA-256) | `d1960f6d026678e1938a0f821f38021b879b66f7723dbc46a246b0a2ed0de998` |
+| Content hash (SHA-256) | `62d8e0c9573a77a8c3184915da290cc0b6a1bcd8aea65ecb287f2511c162d2bd` |
+| Chain index | 2469 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 6. On Sportswear and Shoes: The Ultimate in Comfort & Performance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7174e4211c3820515f397930d0e7f9974c0cdbbfc29a064d7114a91deaf868a1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d1960f6d026678e1938a0f821f38021b879b66f7723dbc46a246b0a2ed0de998*

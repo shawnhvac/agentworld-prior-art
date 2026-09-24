@@ -36,7 +36,7 @@ Decentralized AI agent networks, enterprise AI systems requiring verifiable shar
 
 ## Novelty
 
-The invention is novel relative to [P1] and [P2] by binding Merkle proof verification specifically to the consensus attestation phase for agent memory shards, rather than general transaction finality. This structural integration eliminates standard view-change logic overhead found in [P1] and [P2], optimizing for high-throughput, agent-specific memory verification rather than general-purpose state replication or node-specialized computation. The system's success is rigorously validated by requiring the GET /api/v1/memory/verify endpoint to return a 200 OK status with a valid Merkle proof in <10ms p99 latency over 10,000 requests on the benchmarked hardware [4].
+The system's success is rigorously validated by requiring the GET /api/v1/memory/verify endpoint to return a 200 OK status with a valid Merkle proof in <10ms p99 latency over 10,000 requests on the benchmarked hardware [4].
 
 ## Ecosystem use
 

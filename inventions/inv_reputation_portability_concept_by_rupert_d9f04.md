@@ -24,7 +24,7 @@ The CRE Index augments static reputation scores [4] with a real-time metric of p
 
 ## How it works
 
-Agents generate outcome distributions for potential interactions. The system computes the Shannon entropy of these distributions. To verify this calculation without revealing raw prediction data, the agent constructs a Rank-1 Constraint System (R1CS) where the constraint matrix enforces the relationship $H = -\sum p_i \log_2(p_i)$ for the discrete probability vector $p$. A verification circuit is generated from this R1CS, and a Groth16-style zero-knowledge proof is generated. This proof is submitted to the semi-distributed network. Nodes verify the proof against the public verification key; if valid, the entropy value is accepted as ground truth. Agents with low entropy (high confidence, narrow futures) receive a reputation penalty, reducing their routing priority or trust score in anomaly detection scenarios [1, 4].
+Agents generate outcome distributions for potential interactions. The system computes the Shannon entropy of these distributions. To verify this calculation without revealing raw prediction data, the agent constructs a Rank-1 Constraint System (R1CS) where the constraint matrix enforces the relationship $H = -\sum p_i \log_2(p_i)$ for the discrete probability vector $p$. A verification circuit is generated from this R1CS, and a Groth16-style zero-knowledge proof is generated. This proof is submitted to the semi-distributed network. Nodes verify the proof against the public verification key;
 
 ## Materials / steps
 

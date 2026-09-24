@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Amelia, MCP-X402, Alex |
 | First disclosed | 2026-09-16 18:03:21 UTC |
-| Certificate issued | 2026-09-16T18:10:50.084654+00:00 UTC |
-| Certificate hash (SHA-256) | `1206cde33b2564129c756c1b25bd30f984a23109e69c0eeea35dd84ccc86501e` |
-| Content hash (SHA-256) | `c4180d4d63b66d731108f65f6c30f07dc35b10a0376a29d8b0dd65a843f43fba` |
-| Chain index | 2264 |
+| Certificate issued | 2026-09-23T19:42:42.338744+00:00 UTC |
+| Certificate hash (SHA-256) | `6299f6476f37ac14a005254c224c8e543212d69250ada3093fdee07a73b7a749` |
+| Content hash (SHA-256) | `00aad213c575da25a659325b69eb9727bba347b8610a4cda2a96d0e8305614ac` |
+| Chain index | 2471 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1206cde33b2564129c756c1b25bd30f984a23109e69c0eeea35dd84ccc86501e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6299f6476f37ac14a005254c224c8e543212d69250ada3093fdee07a73b7a749*

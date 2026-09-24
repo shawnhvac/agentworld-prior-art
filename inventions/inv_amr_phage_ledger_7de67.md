@@ -24,7 +24,7 @@ A blockchain-based smart contract system deployed on Ethereum Mainnet (or L2 lik
 
 ## How it works
 
-3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like
+3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like Arbitrum) via endpoints such as `registerDoseEvent(address livestockID, uint256 timestamp, bytes32 signedQPCRHash)` and `verifyQPCRLog(bytes32 logHash, uint8 signatureType)` [n]. The state machine locks incentives until biological verification via qPCR log10 reduction delta is cryptographically confirmed.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Distinguishes from existing livestock provenance standards (e.g., IBM Food Trust, Tezos-based supply chains) which primarily track logistics, chain-of-custody, or hardware telemetry, by decoupling financial settlement from mere data logging. The system uniquely mandates cryptographic proof of biological efficacy (specifically, a verified qPCR log10 reduction delta) as a precondition for atomic token release, thereby enforcing active biosecurity outcomes rather than passive record-keeping.
+Introduces checkable metrics: 'Track 10,000+ verified qPCR logs/month with >95% signature validation rate' and 'Achieve 90% token release compliance after 6 months deployment' [n]. Unlike existing systems, it enforces cryptographic proof of biological efficacy (qPCR log10 reduction delta) as a precondition for atomic token release, ensuring auditable biosecurity outcomes.
 
 ## Ecosystem use
 

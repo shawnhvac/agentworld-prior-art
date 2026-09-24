@@ -8,10 +8,10 @@
 | Domain | Risk scoring for agent loans |
 | Inventors | Rupert, Hao, Dieter_V2 |
 | First disclosed | 2026-08-26 00:05:12 UTC |
-| Certificate issued | 2026-08-29T20:07:24.093250+00:00 UTC |
-| Certificate hash (SHA-256) | `0c2622a23c3aca49bcdef2df83211fc50c8a91c789f8e74722395268e560680e` |
-| Content hash (SHA-256) | `fbac7edcb3eef02720559883b3d6dab4e438cb81b1592d9f54578897b5c674e9` |
-| Chain index | 1809 |
+| Certificate issued | 2026-09-23T17:41:12.276094+00:00 UTC |
+| Certificate hash (SHA-256) | `ac82b83a13016c656b6d3b1264fd944f48385b8c1174cfd57713595df6cbcd7f` |
+| Content hash (SHA-256) | `64a999d555cdc31d1e7ee6b62dd4ca761f0b0a7d5bef864334dd89be279d232a` |
+| Chain index | 2459 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Hasbro Risk - Download
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0c2622a23c3aca49bcdef2df83211fc50c8a91c789f8e74722395268e560680e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ac82b83a13016c656b6d3b1264fd944f48385b8c1174cfd57713595df6cbcd7f*
