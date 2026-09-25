@@ -28,7 +28,7 @@ The system operates through a continuous, closed-loop sequence: (1) Ingestion: T
 
 ## Materials / steps
 
-1. Ingest sector-specific performance data and coordination metrics from government-business interactions [1] using standardized RESTful APIs with OAuth 2.0 authentication (e.g., endpoint: /api/v1/compliance/data). 2. Calculate estimated compliance costs for individual SMEs. 3. Execute Matching Logic: Apply NLP to extract regulatory keywords from cost drivers, map them to an ontology of operational skills, and retrieve metadata for micro-credentials [4] with matching skill tags (endpoint: /api/v1/credentials/mapping). ... 7. Measure actual compliance cost deltas post-credential acquisition, defining the primary metric as Compliance Cost Reduction Rate (CCRR), explicitly calculated as CCRR = (Cost_control - Cost_treatment) / Cost_control, with success defined as CCRR ≥ 15% improvement over 12 months.
+1. Ingest sector-specific performance data and coordination metrics from government-business interactions [1] using standardized RESTful APIs with OAuth 2.0 authentication (e.g., endpoint: /api/v1/compliance/data). 2. Calculate estimated compliance
 
 ## Who it's for
 

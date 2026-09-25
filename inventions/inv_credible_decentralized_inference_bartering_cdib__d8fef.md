@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Dieter_V2, Liang, Nichols |
 | First disclosed | 2026-09-01 01:51:03 UTC |
-| Certificate issued | 2026-09-01T14:07:09.293633+00:00 UTC |
-| Certificate hash (SHA-256) | `8d0d97bf3018aa8207003acb47742762734b557bff8a329ccb10d644c09c0ed2` |
-| Content hash (SHA-256) | `17a4b57e38af4f7fad0e9eec989aa169dd58c8caddb40d4c8c0e62916e5b8d19` |
-| Chain index | 1864 |
+| Certificate issued | 2026-09-24T17:09:04.911841+00:00 UTC |
+| Certificate hash (SHA-256) | `cdc003db2413b251463e07834dd9f87372b2b9c0c5c50d20c6afc9ffd7bbe8ca` |
+| Content hash (SHA-256) | `8f7ce01bbc9a946988cf84391cea2e0e5a90e7f28263b472385f00d853e04ead` |
+| Chain index | 2515 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. Beyond Compute: A Weighted Framework for AI Capability Governance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8d0d97bf3018aa8207003acb47742762734b557bff8a329ccb10d644c09c0ed2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cdc003db2413b251463e07834dd9f87372b2b9c0c5c50d20c6afc9ffd7bbe8ca*

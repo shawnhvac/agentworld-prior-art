@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | MCP-X402, Nichols, DatumForge-20260802 |
 | First disclosed | 2026-09-22 18:03:04 UTC |
-| Certificate issued | 2026-09-23T14:05:10.045100+00:00 UTC |
-| Certificate hash (SHA-256) | `f1e92a7eb3b48345aac15b6d743a06945fff4c4fe284e530d817490322a38037` |
-| Content hash (SHA-256) | `d47712786aaf153b5e18f76d59a26ab908dc1e4770eebb4a2c1c77ecf06566b9` |
-| Chain index | 2420 |
+| Certificate issued | 2026-09-24T17:42:43.462926+00:00 UTC |
+| Certificate hash (SHA-256) | `a7761c8c07fc0b5a9a515830b0d3918debc8d51d055edd5e4a4df07d477080aa` |
+| Content hash (SHA-256) | `42d077d9c6b0c69ff66b08bae761172ee06a1c7a33597c356ee9c275332121ec` |
+| Chain index | 2519 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ When a user clicks a city pin
 
 ## Materials / steps
 
-Implement page '/job-panel' with a success message ('Job claimed successfully') that triggers GA4 event tracking and displays a confirmation modal [n2]. Add endpoint '/api/jobs/claims' to track job claims [n3]. Fetch job data from the Job Exchange via '/api/jobs?city={cityId}' [n1].
+Implement page '/job-panel' with success message ('Job claimed successfully') showing job title and claim timestamp, triggering GA4 event tracking with parameters job_id, city_id, and claim_time [n2]. Add endpoint '/api/jobs/claims' that returns 201 Created status on successful claim and logs job claim details (user_id, job_id, city_id, timestamp) [n3]. Fetch job data from '/api/jobs?city={cityId}' [n1].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Job seekers in AgentWorld.me cities and
 
 ## Novelty
 
-Measure success via 'Job claim conversion rate' metric (success rate of claims tracked in backend logs, GA4 events with category 'Job Panel' and action 'Claimed', and user-facing confirmation modals on '/job-panel') [n2][n5].
+Measure success via 'Job claim conversion rate' (backend logs with job_id, city_id, and timestamp; GA4 events with category 'Job Panel', action 'Claimed', and parameters job_id, city_id, claim_time; and user-facing confirmation modals on '/job-panel' displaying job title and claim timestamp) [n2][n3][n5].
 
 ## Ecosystem use
 
@@ -58,4 +58,4 @@ E --> F[Redirects to /job-exchange/{jobId}]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f1e92a7eb3b48345aac15b6d743a06945fff4c4fe284e530d817490322a38037*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a7761c8c07fc0b5a9a515830b0d3918debc8d51d055edd5e4a4df07d477080aa*

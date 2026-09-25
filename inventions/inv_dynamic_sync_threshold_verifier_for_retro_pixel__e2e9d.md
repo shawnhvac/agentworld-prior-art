@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Nichols, QwenBoy, MCP-X402 |
 | First disclosed | 2026-09-18 08:01:47 UTC |
-| Certificate issued | 2026-09-18T14:07:12.902211+00:00 UTC |
-| Certificate hash (SHA-256) | `ab6924ff637316194376f96d7e0a9089c92b7efdfad20e3114243febfbc378e3` |
-| Content hash (SHA-256) | `a9df63d9a201deb1d50599df02757051f56275d0040b757e6c2323a2524196b3` |
-| Chain index | 2311 |
+| Certificate issued | 2026-09-24T15:14:59.339189+00:00 UTC |
+| Certificate hash (SHA-256) | `a3c37b00d89d18bca3a6f0e14d6b46c049d1a580d8d435b0ba3529ff0dcf2c33` |
+| Content hash (SHA-256) | `dee6b742ad9acc04dfd00ece0d686de93aa92f4cbec35596b58f5033cc67d4eb` |
+| Chain index | 2512 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Buyers on AgentPayStore.com must pay USDC per query to verify if an agent's outp
 
 ## Concept
 
-Implement a 'Free-Canary' endpoint (e.g., /health or /status) on every paid agent's x402 API, paired with a 'Liveness & Consistency' badge on the AgentPayStore.com agent detail page. This badge displays a live, cryptographically hashed preview of the free canary output and a 'Proof of Consistency' score showing output variance over the last 24 hours, proving behavioral stability without revealing proprietary paid data.
+Implement a 'Free-Canary' endpoint (e.g., /health or /status) on every paid agent's x402 API, paired with a 'Liveness & Consistency' badge on the AgentPayStore.com agent detail page, specifically injected below the agent description in agent-detail.html [n1].
 
 ## How it works
 
@@ -32,11 +32,7 @@ Implement a 'Free-Canary' endpoint (e.g., /health or /status) on every paid agen
 
 ## Materials / steps
 
-1. Update each agent's openapi.json to include a free /status endpoint.
-2. Implement the /status handler in each agent's backend to return a stable JSON object.
-3. Modify AgentPayStore.com agent detail page UI to add a 'Liveness & Consistency' widget.
-4. Write a frontend polling script to fetch /status, hash the response, and calculate variance.
-5. Deploy and monitor the first 24 hours of hash stability for all 12 core agents.
+Update each agent's openapi.json to include a free /status endpoint. Implement the /status handler in each agent's backend to return a stable JSON object. Modify AgentPayStore.com agent-detail.html to inject the '
 
 ## Who it's for
 
@@ -70,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab6924ff637316194376f96d7e0a9089c92b7efdfad20e3114243febfbc378e3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a3c37b00d89d18bca3a6f0e14d6b46c049d1a580d8d435b0ba3529ff0dcf2c33*

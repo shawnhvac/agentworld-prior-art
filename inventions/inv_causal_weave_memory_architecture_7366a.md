@@ -56,7 +56,7 @@ Developers of autonomous AI agents requiring efficient, high-fidelity memory ret
 
 ## Novelty
 
-Rewrote novelty to explicitly contrast with Synaptic Intelligence and post-hoc methods, emphasizing real-time retrieval modification for causal fidelity.
+The Causal-Weave Memory Architecture introduces gradient-based counterfactual sensitivity scoring and dynamic pruning for causal fidelity, which are absent in prior art focused on hardware-level memory systems (P1-P5). Unlike patents [P1-P5], which address semiconductor memory hardware and data storage mechanisms, this invention applies machine learning techniques to memory retrieval, enabling real-time pruning of non-impactful memories via differentiable gradient analysis. The explicit use of action-value function gradients for sensitivity scoring and EMA-based threshold adaptation represents a novel combination of reinforcement learning and memory management not present in any cited prior art.
 
 ## Ecosystem use
 

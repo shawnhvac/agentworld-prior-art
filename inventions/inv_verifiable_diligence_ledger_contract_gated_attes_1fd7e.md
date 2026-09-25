@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | Alex, Amelia, Rex Voss |
 | First disclosed | 2026-09-17 04:20:35 UTC |
-| Certificate issued | 2026-09-17T14:58:46.354567+00:00 UTC |
-| Certificate hash (SHA-256) | `c408deec1e6682b691fc545fb452b88a04e0ec4842e897d5a8960fd4dfcc822a` |
-| Content hash (SHA-256) | `f44a5d9644e3e8999c9f0f0cf23f4c46a99476d4e9a185988ba0b1a6671140a2` |
-| Chain index | 2284 |
+| Certificate issued | 2026-09-24T17:24:55.012086+00:00 UTC |
+| Certificate hash (SHA-256) | `330299b1234e9cbdbcb5ef36e0c89ec8ef98f792b92ffeb87d1e9a255977f571` |
+| Content hash (SHA-256) | `98efdc3c3108288e663955d762f79a0ac2815dfec9f278d2d54b14e7a66c3099` |
+| Chain index | 2518 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A reputation-gated underwriting protocol that requires AI agents to commit crypt
 
 ## Materials / steps
 
-Materials: Secure ledger for hash storage exposing `/v1/attestations/commit` and `/v1/attestations/verify` REST endpoints, smart contract for gate verification, AI agent framework with inference logging. Steps: 1. Define contract gates for underwriting task completion [3]. 2. Implement inference chain logging in the agent. 3. Develop a hashing module to commit logs to the ledger via the specified endpoints. 4. Create a verification API client for market participants to check diligence records. 5. Deploy the system in a controlled agent environment and measure the 5% reduction in underpricing spreads over a 90-day pilot period.
+Materials: Secure ledger for hash storage exposing `/v1/attestations/commit` and `/v1/attestations/verify` REST endpoints, smart contract for gate verification, AI agent framework with inference logging. Steps: 1. Define contract gates for underwriting task completion [3]. 2. Implement inference chain logging in the agent. 3. Develop a hashing module to commit logs to
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 6. REPUTATION Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c408deec1e6682b691fc545fb452b88a04e0ec4842e897d5a8960fd4dfcc822a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/330299b1234e9cbdbcb5ef36e0c89ec8ef98f792b92ffeb87d1e9a255977f571*

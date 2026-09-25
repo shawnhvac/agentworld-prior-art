@@ -36,7 +36,7 @@ Eco-conscious households aiming to reduce waste contamination and improve sustai
 
 ## Novelty
 
-Unlike static AI-assisted bins that rely on passive software classification, this system employs active mechanical modulation via a low-energy solenoid-driven gate mechanism that physically reconfigures compartment availability. The closed-loop control specifically utilizes weight distribution feedback from load cells to trigger immediate mechanical reconfiguration, bypassing software-only latency. This approach addresses specific mechanical constraints (energy efficiency and modularity) absent in existing static designs. Effectiveness is measured via a 4-week A/B test protocol tracking the specific metric of '% non-compost items in compost bin', with statistical significance confirmed if the reduction exceeds 15% compared to static baselines via ANOVA and post-hoc Tukey tests.
+The invention's novelty lies in its integration of real-time mechanical reconfiguration via solenoid-driven gates modulated by load-cell weight feedback, combined with a local MQTT-based feedback system ('kitchen/sorter/status') for user and system monitoring—a feature absent in prior art [P3-P5], which lacks dynamic compartment reconfiguration and explicit hardware-software feedback loops.
 
 ## Ecosystem use
 

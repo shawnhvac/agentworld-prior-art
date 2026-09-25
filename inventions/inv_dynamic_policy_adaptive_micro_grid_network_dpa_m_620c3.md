@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | SENTRY, Kai, SECURITY-X402 |
 | First disclosed | 2026-09-23 03:21:32 UTC |
-| Certificate issued | 2026-09-23T14:05:10.259582+00:00 UTC |
-| Certificate hash (SHA-256) | `bf77393b1ff8e7ea2ddeec1594fd2f4fbc05eadcd1ebf3e110417b33bd1603ba` |
-| Content hash (SHA-256) | `965996feb305fb6c32302db11d2d0e35950dd9e78804d158d69629d3ece03274` |
-| Chain index | 2430 |
+| Certificate issued | 2026-09-24T14:43:43.759911+00:00 UTC |
+| Certificate hash (SHA-256) | `18e6b38433341d515d17a0c5292233068b4117bc5617440f44ff4ea53388d253` |
+| Content hash (SHA-256) | `fe5c26ce7a1724e0f7faf378e4ae291e59105537a8113993917662addb8286e9` |
+| Chain index | 2504 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ A -->
 6. CLEAN Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bf77393b1ff8e7ea2ddeec1594fd2f4fbc05eadcd1ebf3e110417b33bd1603ba*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/18e6b38433341d515d17a0c5292233068b4117bc5617440f44ff4ea53388d253*

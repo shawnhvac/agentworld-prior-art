@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-09-05 00:02:28 UTC |
-| Certificate issued | 2026-09-21T17:21:38.538704+00:00 UTC |
-| Certificate hash (SHA-256) | `de665057ed024ffb69a263e48eb8774a6a93b423c626d3f6319e1741c04cff16` |
-| Content hash (SHA-256) | `a35117d8d56033ea6fa0c678cb0b248714a4fecd426fb8c5ffdf5aba72bf63df` |
-| Chain index | 2365 |
+| Certificate issued | 2026-09-24T17:24:52.399975+00:00 UTC |
+| Certificate hash (SHA-256) | `7b2366127da931aa9767e78d1068af10b4d27dabc1f219ce529cfc9b1a08fc60` |
+| Content hash (SHA-256) | `18ac8ef90f677eefac1a6a692e99217eabcdfa92a073f41da8f76496b4a4e204` |
+| Chain index | 2516 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ CCN articles are auto-generated, but readers and AI agents cannot distinguish be
 
 ## Concept
 
-A
+CCN Claim-Level Provenance Sidebar with x402 Verification
 
 ## How it works
 
-1. Backend: Modify the LLM generation pipeline to enforce structured output (JSON-mode) where each article is generated as a list of 'atomic claims' paired with source identifiers (UUIDs). 2. Database: Store these claims in a `claim_sources` table linked to `ccn_articles`. 3. API: Create `/api/ccn/provenance/<article-slug>` returning JSON mapping sentence IDs to raw source payloads and confidence scores. 4. Frontend: Add a collapsible sidebar to the article view that fetches this endpoint and renders a D3.js force-directed graph. 5. Verification: A 'Confidence Score' algorithm compares rendered text timestamps against stored metadata to flag mismatches.
+1. Backend: Modify the LLM generation pipeline to enforce structured output (JSON-mode) where each article is generated as a list of 'atomic claims' paired with source identifiers (UUIDs). 2. Database: Store these claims in a `claim_sources` table linked to `ccn_articles`. 3. API: Create `/api/ccn/provenance/<article-slug>` returning JSON mapping sentence IDs to raw source payloads and confidence scores. 4. Frontend: Add a collapsible sidebar to the `/article/<slug>` page that fetches this endpoint and renders a D3.js force-directed graph. 5. Verification: A 'Confidence Score' algorithm compares rendered text timestamps against stored metadata to flag mismatches.
 
 ## Materials / steps
 
-1. Instrument existing generation code to log if atomic facts are already isolated. 2. If not, rewrite prompt engineering to enforce JSON-mode structured output with explicit claim fields. 3. Create `claim_sources` database table. 4. Build `/api/ccn/provenance/<article-slug>` endpoint. 5. Implement D3.js sidebar component in the article view frontend. 6. Develop confidence score algorithm for timestamp/data mismatch detection. 7. Integrate with x402-agent-pay.com for machine verification endpoints.
+1. Instrument existing generation code to log if atomic facts are already isolated. 2. If not, rewrite prompt engineering to enforce JSON-mode structured output with explicit claim fields. 3. Create `claim_sources` database table. 4. Build `/api/ccn/provenance/<article-slug>` endpoint. 5. Implement D3.js sidebar component in the `/article/<slug>` frontend page. 6.
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de665057ed024ffb69a263e48eb8774a6a93b423c626d3f6319e1741c04cff16*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b2366127da931aa9767e78d1068af10b4d27dabc1f219ce529cfc9b1a08fc60*

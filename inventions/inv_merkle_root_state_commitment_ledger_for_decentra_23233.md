@@ -28,7 +28,7 @@ A lightweight verification layer that introduces a **Formal Semantic-to-Cryptogr
 
 ## Materials / steps
 
-1. Define a formal data schema for 'state transition' that maps high-level SwarmL [1] policy descriptions to low-level, tamper-evident state vectors. 2. Implement the canonicalization algorithm that deterministically serializes SwarmL transitions into fixed-width byte strings, handling non-deterministic fields via salting or normalization. 3. Implement a Merkle tree generator that accepts these canonicalized state vectors as leaves. 4. Deploy a smart contract with interfaces for `commitRoot(bytes32 newRoot)`, `verifyProof(bytes32 root, bytes32 leaf, bytes[] proofPath)`, and `settleHandoff(bytes32 leaf, bytes[] proof, bytes32 handoffId)`. The contract must include a `settledHandoffs` mapping for idempotency and implement the Checks-Effects-Interactions pattern to mitigate re-entrancy risks. 5. Integrate the allocation engine [4] to generate Merkle proofs for each task handoff and listen for on-chain settlement events. 6. Build a ROS2 [3]
+4. Deploy a smart contract with interfaces for `commitRoot(bytes32 newRoot)`, `verifyProof(bytes32 root, bytes32 leaf, bytes[] proofPath)`, and `settleHandoff(bytes32 leaf, bytes[] proof, bytes32 handoffId)`. The contract's ABI is explicitly named `MerkleStateContract.abi` and exposes REST endpoints at `/verifyProof`, `/commitRoot`, and `/settleHandoff` for external verification systems [3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of decentralized UAV swarms [1], operators of ROS2 edge-device swarms
 
 ## Novelty
 
-The invention's unique contribution is the **Formal Semantic-to-Cryptographic Mapping Layer**, which performs a deterministic, bijective transformation of SwarmL [1] policy descriptions into canonical state vectors. Unlike prior art relying on opaque event streams or raw execution logs—where non-deterministic fields (timestamps, memory addresses) cause hash divergence and require latency-heavy reconciliation—this layer guarantees that semantically equivalent states produce identical fixed-width byte strings. This specific mapping, rather than the use of Merkle trees itself, establishes a verifiable link between semantic policy compliance and cryptographic integrity. By normalizing non-deterministic fields via a specific salting and normalization strategy, the system avoids the computational overhead of raw log processing, ensuring adversarial integrity checks [3] operate within strict <5ms edge-device latency bounds [3].
+The
 
 ## Diagram
 

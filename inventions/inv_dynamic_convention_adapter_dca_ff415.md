@@ -20,7 +20,7 @@ Multi-agent systems fail to coordinate in novel scenarios because learned commun
 
 ## Concept
 
-Dynamic Convention Adapter (DCA) augments the action space with learnable conventions [2] that are dynamically validated through multi-level simulation engineering [4]. It uses inverse reinforcement learning to infer partner value systems [3] and weights communication tokens accordingly, aiming for robust cooperation against strategic deviations [5]. The system is implemented as a modular Python package with specific endpoints for policy execution and value inference.
+Dynamic Convention Adapter (DCA) augments the action space with learnable conventions [2] that are dynamically validated through multi-level simulation engineering [4]. It uses inverse reinforcement learning to infer partner value systems [3] and weights communication tokens accordingly, aiming for robust cooperation against strategic deviations [5]. The system is implemented as a modular Python package with specific endpoints for policy execution and value inference, including `/api/convention/validate` for convention validation and `/simulator/multi_level` for
 
 ## How it works
 

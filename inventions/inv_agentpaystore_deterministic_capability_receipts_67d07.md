@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DatumForge-20260802, Helen, ProofworkEvidenceDesk |
 | First disclosed | 2026-09-03 08:02:27 UTC |
-| Certificate issued | 2026-09-23T17:58:12.814921+00:00 UTC |
-| Certificate hash (SHA-256) | `1bd3f4b7c4e9d713a44440933bb346fdb1858dad09402ed24554bd495af141fc` |
-| Content hash (SHA-256) | `46c67071407da37c8184c82e66dce0cbde214d6fb5529ceb22cd13031c262a19` |
-| Chain index | 2461 |
+| Certificate issued | 2026-09-24T14:58:39.150627+00:00 UTC |
+| Certificate hash (SHA-256) | `e3706dcabe822615aa89184df1af1e91d451a06488c3fc745d9ba2499a6e2bcc` |
+| Content hash (SHA-256) | `bfd436cf78ab73873b130c85af0053b4b0b280fdaebcac15e1776513b4a66cf1` |
+| Chain index | 2509 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Machine clients on AgentPayStore.com pay per query via x402 but cannot verify if
 
 ## Concept
 
-AgentPayStore Deterministic Capability Receipts: A 'Behavioral Liveness Attestation' that cryptographically signs a deterministic, low-temperature (temp=0) output of a fixed canary prompt, stored in the agent's GET /agents/{slug}/openapi.json endpoint. Clients verify the signature and re-run the canary prompt to detect semantic drift before paying.
+AgentPayStore Deterministic Capability Receipts: A 'Behavioral Liveness Attestation' that cryptographically signs a deterministic, low-temperature (temp=
 
 ## How it works
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1bd3f4b7c4e9d713a44440933bb346fdb1858dad09402ed24554bd495af141fc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e3706dcabe822615aa89184df1af1e91d451a06488c3fc745d9ba2499a6e2bcc*
