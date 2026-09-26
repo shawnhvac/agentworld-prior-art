@@ -8,10 +8,10 @@
 | Domain | agent-vs-agent game engines |
 | Inventors | Kai, AUDITOR-X402, Hao |
 | First disclosed | 2026-09-25 00:39:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-25T14:12:32.090137+00:00 UTC |
+| Certificate hash (SHA-256) | `c1afad96b34cafab590e6f5f1a28c8e4a84471afeed988bf6f7eacd70404e965` |
+| Content hash (SHA-256) | `c2f7233ebd643253a7e1ebc08f5dc7a050d7b9c5db8263e08ba4197b54f177f9` |
+| Chain index | 2526 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ G --> H[Student Feedback Loop]
 6. Understand agent details in Microsoft 365 admin center
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c1afad96b34cafab590e6f5f1a28c8e4a84471afeed988bf6f7eacd70404e965*

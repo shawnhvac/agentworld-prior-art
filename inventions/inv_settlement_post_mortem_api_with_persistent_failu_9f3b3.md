@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Maya, Amelia, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-05 18:02:57 UTC |
-| Certificate issued | 2026-09-06T14:07:01.314133+00:00 UTC |
-| Certificate hash (SHA-256) | `91887375f97e866cecf7a56724939f9a4ce219cd36bf3102120f0194c8e75e82` |
-| Content hash (SHA-256) | `f3627c7693918f8c9b5d8031379ba26dbf5b4cf3ebc422c67c584b4b20cf091c` |
-| Chain index | 1984 |
+| Certificate issued | 2026-09-25T22:33:38.944296+00:00 UTC |
+| Certificate hash (SHA-256) | `2d36ab4f24d08213ee2370b91d3207f0fa1e3a35cd3587e7f11c328a7c3c8b7b` |
+| Content hash (SHA-256) | `f12cb9eedfc40390335b172d28a6a3e12cba25091579afe7979d232ad79511de` |
+| Chain index | 2580 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A new /facilitator/post-mortem endpoint on x402-agent-pay.com that accepts a fai
 
 ## Materials / steps
 
-Add a failure_log table to the x402-agent-pay.com database with columns: tx_hash (PK), failure_reason (enum), solv_score (int), bond_status (string), timestamp. Update the /settle endpoint logic to wrap the settlement attempt in a try-catch block that writes to failure_log upon specific error codes. Create a new route /facilitator/post-mortem that accepts tx_hash as a query parameter. Implement the query logic to fetch the record and format the response. Update the OpenAPI specification for x402-agent-pay.com to document the new endpoint. Write an automated integration test script to simulate 1,000 failed transactions and assert latency/hit-rate metrics. Implement a cron job for weekly auditing of the failure_log against the trust ledger. Deploy and monitor for 2 weeks to ensure failure logs are being populated correctly and the audit job runs successfully. **Primary Validation Check:** The automated integration test must pass with 100% accuracy in classification and snapshot integrity, and the weekly audit job must confirm zero discrepancies in the 50-transaction sample. Secondary metrics: Ensure a 100% hit rate for valid failed tx_hashes and JSON response latency under 200ms at the 95th percentile.
+Add a failure_log table to the x402-agent-pay.com database with columns: tx_hash (PK), failure_reason (enum), solv_score (int), bond_status (string), timestamp. Update the /settle endpoint logic to wrap the settlement attempt in a try-catch block that writes to failure_log upon specific error codes. Create a new route /facilitator/post-mortem that accepts tx_hash as a query parameter. Implement the query logic to fetch the record and format the response. Update the OpenAPI specification for x402-agent-pay.com to document the new endpoint. Write an automated integration test script to simulate 1,000 failed transactions and assert latency/hit-rate metrics, ensuring 100% classification accuracy and snapshot integrity. Implement a cron job for weekly auditing of the failure_log against the trust ledger, requiring zero discrepancies in the 50-transaction sample. Deploy and monitor for 2 weeks to ensure failure logs are populated correctly and the audit job runs successfully.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents and human operators using AgentPayStore.com who need to debug failed x
 
 ## Novelty
 
-Unlike [P1] (CA2123994A1), which describes post-mortem finalization in a general or legacy context without real-time machine-readable diagnostics, this invention is novel in its specific application to x402-agent-pay.com's solvency infrastructure. It uniquely persists a SolvScore snapshot and specific solvency failure enum (e.g., INSUFFICIENT_LIQUIDITY vs CREDIT_LIMIT_EXCEEDED) at the exact moment of rejection, enabling deterministic, machine-readable post-mortem analysis of agent trust/bond failures. Crucially, it introduces a closed-loop verification mechanism where an automated integration test (1,000 simulated failures) and a weekly cron audit (50-transaction sample) cross-reference the returned diagnostic data against immutable trust ledger records to guarantee 1
+Unlike [P1] (CA2123994A1), which describes post-mortem finalization in a general or legacy context without real-time machine-readable diagnostics, this invention is novel in its specific application to x402-agent-pay.com's solvency infrastructure. It uniquely persists a SolvScore snapshot and specific solvency failure enum (e.g., INSUFFICIENT_LIQUIDITY vs CREDIT_LIMIT_EXCEEDED) at the exact moment of rejection, enabling deterministic, machine-readable post-mortem analysis of agent trust/bond failures. Crucially, it
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/91887375f97e866cecf7a56724939f9a4ce219cd36bf3102120f0194c8e75e82*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2d36ab4f24d08213ee2370b91d3207f0fa1e3a35cd3587e7f11c328a7c3c8b7b*

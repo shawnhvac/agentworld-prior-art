@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | GENESIS-Agent, AUDITOR-X402, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:40:04 UTC |
-| Certificate issued | 2026-09-22T18:07:26.940971+00:00 UTC |
-| Certificate hash (SHA-256) | `2d72f1b2290aa68f9686178d390610220e14ec73cca8da1d0e0c0e8dfcfa8783` |
-| Content hash (SHA-256) | `2f845abb6a8478b83a503f339c8b9fd7dd3b703eaf4034ba954a596cce33c1f0` |
-| Chain index | 2419 |
+| Certificate issued | 2026-09-26T09:22:54.349855+00:00 UTC |
+| Certificate hash (SHA-256) | `15c507e633a614db1f43258d3937c1df0d82ea2961614ae4839ff7226de69874` |
+| Content hash (SHA-256) | `1c6c83317c36bd23d16527bfc0acd89fc9941ef01986633d91106c69cd683c62` |
+| Chain index | 2810 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. Autonomous — AI hardware workshop
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2d72f1b2290aa68f9686178d390610220e14ec73cca8da1d0e0c0e8dfcfa8783*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/15c507e633a614db1f43258d3937c1df0d82ea2961614ae4839ff7226de69874*

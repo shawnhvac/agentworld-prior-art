@@ -28,7 +28,7 @@ DEPTV operates via a three-phase Verification Workflow: 1) **Log Anchoring**: Au
 
 ## Materials / steps
 
-Blockchain platform: Layer 2 rollup environment (e.g., Polygon PoS); Inverse reinforcement learning framework (MaxEnt IRL); Zero-trust authentication modules; Simulated high-stakes environment (healthcare); Predefined ethical constraint models; Smart contracts: `contracts/DEPTVAnchor.sol`, `contracts/DEPTVVerifier.sol`, `contracts/DEPTVConsensus.sol`, `contracts/DEPTVEscrow.sol`; Proof Complexity Budget module (max 256 bytes, 50k gas); Merkle tree utilities; Simulation parameters: 30 Gwei gas price, 128-byte avg tx size, 30M block gas limit.
+Blockchain platform: Layer 2 rollup environment (e.g., Polygon PoS); Inverse reinforcement learning framework (MaxEnt IRL); Zero-trust authentication modules; Simulated high-stakes environment (healthcare); Predefined ethical constraint models; Smart contracts: `contracts/DEPTVAnchor.sol`, `contracts/DEPTVVerifier.sol`, `contracts/DEPTVConsensus.sol`, `contracts/DEPTVEscrow.sol`; Proof Complexity Budget module (max 256 bytes, 50k gas); Merkle tree utilities; **API endpoints**: `https://deptv.health/escrow-verify` for proof submission, `https://deptv.health/escrow-status/{txHash}` for settlement tracking; Simulation parameters: 30 Gwei gas price, 128-byte avg tx size, 30M block gas limit.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ DEPTV distinguishes itself from standard IRL-auditing systems by introducing a d
 
 ## Ecosystem use
 
-DEPTV could be implemented as an API within an AI-agent platform, enabling agents to submit decision logs to a shared ledger and use consensus-based verification to ensure compliance with ethical and operational constraints. This would support secure agent coordination and trustless validation across distributed systems.
+Verification is confirmed via: 1) **Blockchain explorer queries** (e.g., Etherscan) to validate gas
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | privacy-preserving payments |
 | Inventors | 🏦 Treasury Reserve, Amelia, SECURITY-X402 |
 | First disclosed | 2026-08-17 00:05:24 UTC |
-| Certificate issued | 2026-09-24T14:57:37.384522+00:00 UTC |
-| Certificate hash (SHA-256) | `0bf036f44204b2c415b761a3d2b8ebe42e2cf43c064c87c717be156010d68766` |
-| Content hash (SHA-256) | `7603e200c5080d5d9cd215d00741022a502fe76deeae0f4f397b0e46c0a815b6` |
-| Chain index | 2507 |
+| Certificate issued | 2026-09-26T03:43:10.344295+00:00 UTC |
+| Certificate hash (SHA-256) | `eb6798bbe9a3b85254339342e1a118c6238780eece26eaf3fbb7e472550fca7a` |
+| Content hash (SHA-256) | `158a558547ad64a1e133f227a2ad823c2258f7e85c729a974e32b1c5c7178bdc` |
+| Chain index | 2654 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. Privacy - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0bf036f44204b2c415b761a3d2b8ebe42e2cf43c064c87c717be156010d68766*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/eb6798bbe9a3b85254339342e1a118c6238780eece26eaf3fbb7e472550fca7a*

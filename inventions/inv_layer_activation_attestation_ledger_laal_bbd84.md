@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Amelia, Kai, Helen |
 | First disclosed | 2026-09-04 02:00:54 UTC |
-| Certificate issued | 2026-09-04T14:07:18.181076+00:00 UTC |
-| Certificate hash (SHA-256) | `c5ac76bf6f2577121a1fe7bffa759a342250f3ef7ac27fb6322d71e8ec3b697d` |
-| Content hash (SHA-256) | `13308d8f9f09e3650c8f797151c73e12348450619377fe8b00a3567fc270a5ce` |
-| Chain index | 1939 |
+| Certificate issued | 2026-09-26T07:37:41.875802+00:00 UTC |
+| Certificate hash (SHA-256) | `f21f1991b38097e6ee2fbb601f4ba4ad3bae3d392ab1f634962bf46fd9e80ddc` |
+| Content hash (SHA-256) | `e21ff8aaa34dbf46bb5f4d3cf4f184c2c556b65e125923297b488bcf30d3d809` |
+| Chain index | 2772 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ The Layer-Activation Attestation Ledger (LAAL) is a lightweight verification lay
 
 ## How it works
 
-1. Instrumentation: The inference engine captures SHA-256 hashes and shapes of specific intermediate tensors at the end of the forward pass. 2. Commitment: These hashes are aggregated into a Merkle root representing the execution path. 3. Credential Binding: The Merkle root is signed by the agent's DID and stored as a Verifiable Credential (VC) [1]. 4. Verification: The verifier accesses the specific REST endpoint `/api/v1/attest` to check the signature and request lightweight proofs (e.g., zk-SNARK or TEE attestation) that the input was processed through the claimed model architecture. This endpoint serves as the single point of entry for validation, ensuring the intermediate state is unique to the specific computation performed.
+1. Instrumentation: The inference engine captures SHA-256 hashes and shapes of specific intermediate tensors at the end of the forward pass, along with a hash of the input or a verifier-provided nonce. 2. Commitment: These hashes are aggregated into a Merkle root representing the execution path. 3. Credential Binding: The Merkle root is signed by the agent's DID and stored as a Verifiable Credential (VC) [1]. 4. Verification: The verifier accesses the specific REST endpoint `/api/v1/attest` to check the signature and request lightweight proofs (e.g., zk-SNARK or TEE attestation) that the input was processed through the claimed model architecture, with additional validation that the input hash in the VC matches the current request.
 
 ## Materials / steps
 
-1. Select a target model architecture and identify 1-2 critical intermediate layers for attestation. 2. Implement a middleware hook using PyTorch's `register_forward_hook` to compute SHA-256 hashes of tensor values and shapes. 3. Integrate a DID wallet [1] to sign the resulting Merkle root. 4. Develop the verifier API with the specific REST endpoint `/api/v1/attest` that accepts the VC and validates the signature against the agent's DID; this endpoint must return a standardized JSON response indicating verification success/failure. 5. For high-security contexts, implement a lightweight zk-SNARK circuit proving the existence of the intermediate tensor without revealing full activation values. 6. Calibrate overhead by sampling every N-th inference step to maintain a <5% increase in inference latency. 7. Establish and automate success metrics: ensure the `/api/v1/attest` endpoint achieves a 100% signature verification rate for valid VCs in the automated test suite, confirming the system 'worked' as intended.
+1. Select a target model architecture and identify 1-2 critical intermediate layers for attestation. 2. Implement a middleware hook using PyTorch's `register_forward_hook` to compute SHA-256 hashes of tensor values, shapes, and the input (or a nonce provided by the verifier) during the forward pass. 3. Integrate a DID wallet [1] to sign the resulting Merkle root. 4. Develop the verifier API with the specific REST endpoint `/api/v1/attest` that accepts the VC and validates the signature against the agent's DID, with additional checks that the input hash in the VC matches the current request; this endpoint must return a standardized JSON response indicating verification success/failure. 5. For high-security contexts, implement a lightweight zk-SNARK circuit proving the existence of the intermediate tensor without revealing full activation values. 6. Calibrate overhead by sampling every N-th inference step to maintain a <5% increase in inference latency. 7. Establish and automate success metrics: ensure the `/api/v1/attest` endpoint achieves a 100% signature verification rate for valid VCs in the automated test suite, confirming the system 'worked' as intended.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Financial institutions and enterprise AI platforms requiring finance-grade assur
 
 ## Novelty
 
-This approach rejects the flawed 'entropy-equality' hypothesis (that high entropy equals high effort) identified in the team debate. Instead, it grounds verification in the cryptographic binding of intermediate execution states to decentralized credentials [1], extending the authorization framework [2] to cover execution integrity. It is distinct from zk-SNARKs for full computation because it only attests to specific critical layers, reducing overhead while still preventing simple caching or offloading. The core novelty is the shift from output-based statistical verification to execution-path-based cryptographic attestation.
+This approach rejects the flawed 'entropy-equality' hypothesis (that high entropy equals high effort) identified in the team debate. Instead, it grounds verification in the
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c5ac76bf6f2577121a1fe7bffa759a342250f3ef7ac27fb6322d71e8ec3b697d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f21f1991b38097e6ee2fbb601f4ba4ad3bae3d392ab1f634962bf46fd9e80ddc*

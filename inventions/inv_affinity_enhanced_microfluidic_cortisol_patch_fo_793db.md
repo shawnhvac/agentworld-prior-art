@@ -20,7 +20,7 @@ Current screening for Cushing syndrome suffers from high false-positive rates an
 
 ## Concept
 
-A diagnostic patch that integrates reversible aptamer-based microfluidic separation with electrochemical sensing to isolate unbound cortisol from interfering metabolites before analysis. Unlike prior art relying on irreversible capture or no physical separation, this physical pre-processing step eliminates biochemical noise at the hardware level, enabling high-precision downstream interpretation and reducing signal drift [2].
+A diagnostic patch that integrates reversible aptamer-based microfluidic separation with electrochemical sensing to isolate unbound cortisol from interfering metabolites before analysis, specifically deployed via a 'skin patch interface' or 'capillary blood sample endpoint' [2].
 
 ## How it works
 
@@ -28,7 +28,7 @@ The patch uses capillary-driven flow in PDMS channels coated with reversible cor
 
 ## Materials / steps
 
-1. Fabricate PDMS microfluidic channels with hydrophobic/hydrophilic patterning and integrated thermal microvalves. 2. Coat channel surfaces with reversible cortisol-specific aptamers (Aptamer CORT-1) to replace ineffective size-exclusion mechanisms, enabling regeneration for multiple sample runs. 3. Integrate electrochemical sensors at the outlet utilizing differential pulse voltammetry (DPV) with ferrocene-labeled probes, calibrated to achieve a signal-to-noise ratio of at least 10:1. 4. Apply patch to patient skin or use with capillary blood sample. 5. Actuate thermal valves to initiate the automated cycle: 5 min capture at 10 µL/min, 2 min wash at 20 µL/min, and 3 min elution at 15 µL/min. 6. Measure electrochemical signal corresponding to isolated cortisol concentration via DPV scan. 7. Conduct pre-trial validation (n=100) quantifying non-specific binding of albumin and transferrin to PDMS channels, refining the aptamer elution buffer composition (specifically 50 mM Tris-HCl, pH 8.5, 150 mM NaCl) to ensure >95% regeneration efficiency over 5 cycles, verifying signal drift remains <5% over 24 hours, and establishing performance metrics of LOD < 1 ng/mL, CV < 10% for inter-assay precision, and >90% sensitivity/specificity against gold-standard serum assays with a 95% confidence interval; define a minimum detectable effect size for sensitivity analysis to ensure statistical rigor; calculate the Area Under the Receiver Operating Characteristic Curve (AUC) for
+4. Apply patch to patient skin via a 'skin patch interface' or use with capillary blood sample via a 'capillary blood sample endpoint'. 7. Conduct pre-trial validation (n=100) quantifying non-specific binding... verifying signal drift remains <5% over 24 hours, and establishing performance metrics of LOD < 1 ng/mL, CV < 10%... AUC >0.95 for cortisol detection with 95% confidence interval.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Primary care physicians and endocrinologists managing patients with suspected Cu
 
 ## Novelty
 
-The invention's novelty is strictly defined by the specific integration of reversible aptamer-based affinity chromatography within a capillary-driven microfluidic architecture, enabling continuous in-situ sensor regeneration and physical elimination of biochemical noise. This distinct hardware-level mechanism directly addresses the signal drift inherent in irreversible capture systems (P1) and the lack of physical interferent removal in non-separating patches (P2), providing a solution that does not rely solely on algorithmic correction for specificity, thereby differentiating it from prior art that utilizes either static capture or purely computational noise reduction.
+The invention's novelty is strictly defined by the specific integration of reversible aptamer-based
 
 ## Diagram
 

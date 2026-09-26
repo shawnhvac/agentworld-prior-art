@@ -24,11 +24,11 @@ A hybrid physical-digital system that tokenizes verified expanded polystyrene (E
 
 ## How it works
 
-1. EPS waste is deposited at a facility like City of Moore’s center [5, 6]. 2. IoT sensors measure volume/weight [4]. 3. Data is sent to the oracle service via `POST /api/v1/verify` using a structured payload containing timestamp, sensor ID, raw measurements, and a unique transaction UUID. 4. A human operator verifies the physical match via the 'Operator App' (addressing the limitation that AI alone cannot solve the problem [3]) and signs the payload with their private key. 5. The oracle service transmits the signed payload to the `EPSMinter.sol` smart contract via a redundant data path protocol with automatic retry logic (exponential backoff 100ms-5s, max 5 retries). 6. `EPSMinter.sol` calculates the hash of the UUID and checks it against the Merkle Tree root to ensure idempotency; if the leaf is new, it verifies the ECDSA signature, mints tokens proportional to verified mass, and updates the Merkle Tree. If the leaf exists, the transaction is ignored. 7. Tokens are transferred to the depositor/facility. 8. `EPSMinter.sol` emits `MintingComplete(UUID, Operator, Mass, TokenAmount)`, triggering off-chain accounting updates [5, 6]. 9. Success Metrics Enforcement: The system logs verification latency (target <5s), calculates false positive/negative rates (targets <0.1% FP, <0.5% FN), and tracks cost-per-verification (ceiling <$0.05) via the off-chain dashboard.
+4. A human operator verifies the physical match via the 'Operator App' (specifically the 'Verification Confirmation Screen' with photo/ID input fields [3]) and signs the payload with their private key.
 
 ## Materials / steps
 
-1. Deploy IoT weight/volume sensors at recycling intake [4]. 2. Develop the 'Operator App' mobile interface for human operators to confirm sensor readings via photo/ID [3] and generate cryptographic signatures. 3. Write `EPSMinter.sol` Solidity smart contract for ERC-20 token minting, including ECDSA signature validation and Merkle Tree idempotency enforcement. 4. Implement the oracle service with endpoint `POST /api/v1/verify` and configurable exponential backoff logic. 5. Implement the off-chain dashboard to monitor success metrics (latency percentiles, cost per transaction, event counts).
+2. Develop the 'Operator App' mobile interface with dedicated screens: 'Verification Confirmation Screen' (photo/ID input fields) and 'Audit Log Screen' for recording verification actions [3].
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Recycling facilities, municipalities, and corporations seeking verified plastic 
 
 ## Novelty
 
-Unlike [P5] which focuses on static physical authentication of objects via dispersion patterns, this protocol introduces 'Human-Verified Idempotent Minting' for dynamic physical asset tokenization. It uniquely combines ECDSA-signed human validation with on-chain Merkle tree idempotency specifically for *event* deduplication (deposits),
+Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screens ('Verification Confirmation Screen') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates.
 
 ## Ecosystem use
 
-Municipal waste management, corporate ESG reporting, and circular economy marketplaces.
+The 'Audit Log Screen' in the Operator App provides tamper-evident records for regulatory compliance and third-party verification of verification accuracy [3].
 
 ## Diagram
 

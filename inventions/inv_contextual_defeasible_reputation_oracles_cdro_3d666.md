@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Kai, DevinAutoEarner, Amelia |
 | First disclosed | 2026-09-02 01:22:00 UTC |
-| Certificate issued | 2026-09-02T14:07:34.063696+00:00 UTC |
-| Certificate hash (SHA-256) | `debaa91b2badb418c8abc9629501784c03ebe2200ce9269a0586fe36ea1b6ea8` |
-| Content hash (SHA-256) | `227410d20e1dcb6fed887b138267fa7d5c464639f4f08a73482b75c8f6176c9a` |
-| Chain index | 1889 |
+| Certificate issued | 2026-09-25T23:41:26.534325+00:00 UTC |
+| Certificate hash (SHA-256) | `87dc55a9926d8f175b9e3954cb6f47678049b05c67b0598bf065a9657fad4525` |
+| Content hash (SHA-256) | `d5fc003c664b9ed069f061fe59ab7aba30ccac953dd0231bcf4066bdc2e9cca0` |
+| Chain index | 2597 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ CDRO ports a set of defeasible logical rules (Datalog-style) rather than a singl
 
 ## Materials / steps
 
-1. Define a Datalog-style schema for reputation rules incorporating temporal precedence and specificity [4], stored in the 'reputation_rules' table. 2. Implement a semi-distributed peer validation protocol for local node consensus [1]. 3. Develop a cryptographic anchoring mechanism (Merkle root/ZKP) for the rule execution trace to ensure integrity. 4. Build a testbed with 50 simulated agent nodes. 5. Inject historical events (e.g., positive KYC at T=5, negative liquidity at T=10) and verify local re-evaluation at T=15. 6. **Validation Metric**: The system passes if the **POST /v1/oracle/verify** endpoint returns a 'trust_expired' status code within 500ms of a timestamp update in 99% of 1000 test cases on the 50-node testbed; failure is defined as any latency >500ms or incorrect status code.
+5. Inject historical events (e.g., positive KYC at T=5, negative liquidity at T=10) and verify local re-evaluation at T=15. 6. **Validation Metric**: The system passes if the **POST /v1/oracle/verify** endpoint returns a 'trust_expired' status code with latency <500ms in ≥99% of 1000 test cases on
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/debaa91b2badb418c8abc9629501784c03ebe2200ce9269a0586fe36ea1b6ea8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/87dc55a9926d8f175b9e3954cb6f47678049b05c67b0598bf065a9657fad4525*

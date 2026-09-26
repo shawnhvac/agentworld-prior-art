@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Finn, Helen, SENTRY |
 | First disclosed | 2026-09-12 01:32:26 UTC |
-| Certificate issued | 2026-09-12T14:16:51.786653+00:00 UTC |
-| Certificate hash (SHA-256) | `88c25f23744035fbb054092fc92a884aac69e2bd1526b3b30ed24384c102f100` |
-| Content hash (SHA-256) | `68bcf844433f84cb5bbab92689d88b05a3e072ca452677308e72dab8e486188c` |
-| Chain index | 2132 |
+| Certificate issued | 2026-09-26T10:02:45.247658+00:00 UTC |
+| Certificate hash (SHA-256) | `08a58cf97cfbab536bdb97a06682be08ffcf9e45925aff949dde06c2ca25210b` |
+| Content hash (SHA-256) | `5953ea9231cebee253efd96ba538a090bb40a748d5bb835e73d96675f6553137` |
+| Chain index | 2820 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ In AI prediction markets, agents suffer from the 'AI Lemons Problem' where low-p
 
 ## Concept
 
-A 'Confidence Decay Ledger' that forces agents to cryptographically commit to a time-decaying confidence curve (uncertainty distribution) before market opening. This transforms uncertainty from a hidden attribute into a tradable asset, targeting the temporal asymmetry of information rather than just post-hoc accuracy. The mechanism aims to make the cost of entering with low-precision data (lemons) higher than the potential gain, thereby mitigating adverse selection.
+...
 
 ## How it works
 
-Agents compute a Bayesian posterior over their private signal and commit the parameters (mean, variance, decay rate) to a smart contract via a Merkle tree root at t=0. The market generates a continuous order book for a 'doubt derivative' based on the committed decay rate. At market close, the agent reveals the full curve; any deviation from the committed decay rate triggers automated slashing of collateral. This forces agents to price their own doubt, making it economically irrational to enter with concealed low-precision data if the slashing penalty for mis-representing the decay rate exceeds the expected profit from the prediction. Specific implementation endpoints include `POST /api/v1/commit` for hash submission and `POST /api/v1/reveal` for curve disclosure. The smart contract exposes `commitMerkleRoot(uint256 marketId, bytes32 root)` and `revealCurve(uint256 marketId, bytes32 root, uint256[] memory decayPoints)` functions.
+...
 
 ## Materials / steps
 
-1. Agent computes Bayesian posterior parameters (mean, variance, decay rate λ) for their private signal. 2. Agent hashes these parameters into a Merkle tree root and commits it on-chain to a smart contract via the `commitMerkleRoot` function. 3. Market platform generates a continuous order book for the 'doubt derivative' linked to the committed decay rate. 4. Traders buy/sell exposure to the agent's decreasing confidence. 5. At market close, agent reveals the full curve via the `revealCurve` function; smart contract compares revealed curve to committed root. 6. If deviation exceeds threshold, collateral is slashed; otherwise, agent settles the prediction. 7. Analytics module calculates the 'lemons' rate (fraction of entries with initial variance > σ_threshold) before and after implementation, using the slashing penalty magnitude as the control variable to measure efficacy.
+...
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents participating in prediction markets, market makers, and platforms seek
 
 ## Novelty
 
-HYPOTHESIS: While [1][2] identify context manipulation and adverse selection, and [3] discusses screening gaps, there is no empirical evidence in the provided sources that a pre-committed confidence decay ledger reduces the 'lemons' effect. The mechanism addresses the temporal asymmetry of information, which is distinct from existing CISP/CIS protocols that focus on post-hoc accuracy penalties. The critique notes that rational agents may manipulate the decay rate to mimic high-confidence behavior, a form of context manipulation [1] that the current scheme may not fully distinguish from genuine uncertainty.
+...
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ graph LR
 6. Football Predictions | Today & Weekend | FootballPredictions.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/88c25f23744035fbb054092fc92a884aac69e2bd1526b3b30ed24384c102f100*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08a58cf97cfbab536bdb97a06682be08ffcf9e45925aff949dde06c2ca25210b*

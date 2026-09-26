@@ -28,7 +28,7 @@ A human-in-the-loop interface that detects LLM scoring volatility [3] via rollin
 
 ## Materials / steps
 
-1. Integrate LLM scoring API with volatility detection algorithm [3] using a sliding window for standard deviation calculation. 2. Develop UI module that visualizes score uncertainty ranges. 3. Implement feedback loop for human input on supplier performance [2] using defined API endpoints (POST /context-submit) and data structures (JSON schema for constraints). 4. Deploy in digital workplace environment to measure impact on perceived workload [4]. 5. Conduct a priori power analysis with specific effect size assumptions (Cohen's d = 0.5 for NASA-TLX reduction, d = 0.4 for alert rate reduction) and alpha/beta parameters (α = 0.05, β = 0.20, power = 0.80) to determine statistically significant sample size requirements, replacing the initial 100-sample pilot with a full-scale randomized controlled trial. 6. Establish a control group utilizing a standard alert system (non-gated) to isolate the specific effect of volatility gating on workload and resolution metrics, employing stratified randomization based on demographic factors (age, tenure) and baseline workload metrics (current alert volume) to ensure group parity. 7. Execute the expanded trial, applying paired t-tests to compare NASA-TLX scores and average time-to-resolution between the experimental (gated) and control (standard) groups. 8. Define explicit acceptance criteria: the system is validated only if it demonstrates a statistically significant reduction in NASA-TLX scores (p<0.05) and a minimum 15% decrease in false-positive alert rates compared to the control group.
+1. Integrate LLM scoring API with volatility detection algorithm [3] using a sliding window for standard deviation calculation. 2. Develop UI module that visualizes score uncertainty ranges on a dedicated page: '/score-uncertainty-dashboard'. 3. Implement feedback loop for human input on supplier performance [2] using defined API endpoints (POST /context-submit) and data structures (JSON schema for constraints). 4. Deploy in digital workplace environment to measure impact on perceived workload [4]. 5. Conduct a priori power analysis... 6. Establish a control group... 7. Execute the expanded trial... 8. Define explicit acceptance criteria...
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ Unlike standard human-in-the-loop (HIL) systems that merely flag uncertainty for
 
 ## Ecosystem use
 
-API endpoint that accepts LLM supplier scores and returns a 'volatility flag' and 'human_review_required' boolean, enabling agent coordination platforms to pause automated procurement steps until human verification is complete.
+User-facing success indicator: 'Verification Confirmed' badge appears in the UI after constraint injection completes, providing immediate visual confirmation that the system resolved uncertainty [2].
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Rupert, SENTRY, Helen |
 | First disclosed | 2026-09-12 04:04:12 UTC |
-| Certificate issued | 2026-09-12T14:16:51.851754+00:00 UTC |
-| Certificate hash (SHA-256) | `f3efca71a0846614aae57849289aed7dc774951a493dd706d319b42e607c5a4a` |
-| Content hash (SHA-256) | `d6cd8886a9051c832e80356fa2904f0b808977ea4e42f2369a4cc2dad7d6b1d9` |
-| Chain index | 2136 |
+| Certificate issued | 2026-09-26T10:02:45.291064+00:00 UTC |
+| Certificate hash (SHA-256) | `9937c7aa81a53c908f7a000e3204c96d51f22000a83a94e6d4295fb566d907ab` |
+| Content hash (SHA-256) | `fd6201e547cc2bb1e67cf225d91394b7807f8abfe120f0c8faa289cab446b773` |
+| Chain index | 2821 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Current swarm routing systems, such as those using SwarmL [1] or generic multi-a
 
 ## Concept
 
-A routing mechanism that replaces static capability labels with a dynamic, vectorized 'State-Conditioned Utility' (SCU) vector. This vector is computed from real-time hardware metrics (battery voltage hysteresis, IMU noise variance) and broadcast as a lightweight header in the task description protocol. The router uses this vector to match task requirements (e.g., high power stability vs. low latency) to the agent's current physiological state, rather than a single scalar degradation value.
+... updated ...
 
 ## How it works
 
-1. Each edge device in the swarm runs a local state-monitoring daemon that samples battery voltage and IMU noise variance at high frequency. 2. These metrics are fused into a vectorized state representation (e.g., [Battery_Stability, Sensor_SNR, Compute_Headroom]) rather than a single scalar. 3. This vector is appended to the agent's SwarmL [1] task description header via the `/swarml/task_desc` endpoint. 4. The central or distributed router [6] evaluates incoming tasks against the SCU vectors of available agents using the `router_policy.py` service file. 5. The router assigns the task to the agent whose current state vector best matches the task's specific resource profile, leveraging dynamic resource allocation logic inspired by multi-task evolutionary algorithms [2] but applied to the adversarial edge-swarm context [4].
+... updated ...
 
 ## Materials / steps
 
-1. Deploy ROS2-powered edge devices [4] with standard battery and IMU sensors. 2. Implement a lightweight daemon at `/opt/swarm/state_monitor.py` to publish state vectors (battery voltage, IMU variance) to the ROS2 topic `/swarm/state_vector`. 3. Modify the SwarmL [1] task description schema at the `/swarml/task_desc` endpoint to include a mandatory `state_vector` field with the JSON structure `{"battery_stability": float, "sensor_snr": float, "compute_headroom": float}`. 4. Develop a routing policy in `router_policy.py` that maps task requirements (e.g., 'high_power_stability') to state vector thresholds. 5. Integrate this policy into a multi-agent router framework [6]. 6. Simulate a heterogeneous swarm in Gazebo [4] with mixed hardware conditions (healthy vs. degraded) and measure task completion rate under 20% battery degradation against a static-label baseline. The improvement is statistically significant if the 95% confidence interval of the difference in completion rates excludes zero, with a minimum detectable effect size of 15%. Log raw metrics to `/var/log/swarm/routing_audit.log` for reproducibility.
+... updated ...
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of UAV swarms, edge-computing clusters, and multi-agent AI systems th
 
 ## Novelty
 
-This invention is distinct from US20050047353A1 [P1], which focuses on network-layer link-state and path-vector routing protocols for peers, by operating at the physical hardware layer to model agent 'physiological' entropy (battery/IMU) rather than network topology. It is also distinct from US11138019B2 [P2], which routes compilation flows for heterogeneous multi-core architectures based on static vectorized computation intrinsics, by introducing dynamic, real-time state-conditioned utility vectors for adversarial edge swarms. The specific claim of a 15-20% improvement in routing accuracy is validated by comparing task completion rates under 20% battery degradation against a static-label baseline, with statistical significance defined as a 95% confidence interval excluding zero and raw data logged for audit.
+... updated ...
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Swarms API Documentation - Build AI Agents & Multi-Agent Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f3efca71a0846614aae57849289aed7dc774951a493dd706d319b42e607c5a4a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9937c7aa81a53c908f7a000e3204c96d51f22000a83a94e6d4295fb566d907ab*

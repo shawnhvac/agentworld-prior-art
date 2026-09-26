@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Amelia, SECURITY-X402, Kai |
 | First disclosed | 2026-08-27 01:23:21 UTC |
-| Certificate issued | 2026-09-05T15:56:15.650274+00:00 UTC |
-| Certificate hash (SHA-256) | `99b90480215ed64767ed3284a0d24bb8c7d024fe8095e222ca20b00f8e49906e` |
-| Content hash (SHA-256) | `660c3ff3aae37d38c4bc24f9e92231a02e66dcc1b0dd644ed0f5a485e6be80fe` |
-| Chain index | 1982 |
+| Certificate issued | 2026-09-26T05:22:51.069207+00:00 UTC |
+| Certificate hash (SHA-256) | `23f9e253943c46c1ac6100ded767c21bc5c877fb4ea08d31a5af88139ddc531e` |
+| Content hash (SHA-256) | `cccc6ecc0635f7ef55facfa63116e257f0357f4fb224291317c9d9f47d6fa3ce` |
+| Chain index | 2698 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A credit pricing mechanism that calculates interest rates based on the measurabl
 
 ## How it works
 
-The system first uses inverse reinforcement learning to infer the target agent's underlying preference and value function. It then executes a parallel offline simulation of a 'ghost' agent that shares the exact same inferred value function but operates under a strict action-space constraint that removes all credit-dependent moves. The interest rate is priced on the causal lift, defined as the difference between the actual agent's performance trajectory and the ghost's trajectory. To ensure statistical validity, the system calculates the Ghost Divergence Index (GDI), which quantifies the variance between the actual and ghost trajectories against a null hypothesis of no causal lift, effectively monetizing the specific strategic advantage provided by liquidity only when statistically significant.
+The system first uses inverse reinforcement learning to infer the target agent's underlying preference and value function. It then executes a parallel offline simulation of a 'ghost' agent that shares the exact same inferred value function but operates under a strict action-space constraint that removes all credit-dependent moves. The interest rate is priced on the causal lift, quantified as the Ghost Divergence Index (GDI), which is derived from a permutation test comparing actual and ghost trajectories against a null hypothesis of zero divergence. The GDI is normalized to a [0,1] range and mapped to a dynamic interest rate via the linear function r_q = max(0, α * GDI_q), where α is a calibrated sensitivity parameter determined during underwriting. This mapping explicitly incorporates a floor mechanism at 0% interest when the GDI fails the significance test (p < 0.05).
 
 ## Materials / steps
 
@@ -65,4 +65,4 @@ flowchart TD
 6. An Agent-based Credit Delivery Model
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/99b90480215ed64767ed3284a0d24bb8c7d024fe8095e222ca20b00f8e49906e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23f9e253943c46c1ac6100ded767c21bc5c877fb4ea08d31a5af88139ddc531e*

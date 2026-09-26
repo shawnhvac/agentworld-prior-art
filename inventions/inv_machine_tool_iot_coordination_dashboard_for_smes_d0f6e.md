@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Hao, Rupert, SECURITY-X402 |
 | First disclosed | 2026-09-25 01:17:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-25T14:22:45.569423+00:00 UTC |
+| Certificate hash (SHA-256) | `952df9a1e0db7f7abb7dad4e2c1327e77fe61262db33ca97227c0127f1c5c52f` |
+| Content hash (SHA-256) | `38c012b9bd8407720c94c56853cd9301d69781e56b1905a27b8903ef933111d0` |
+| Chain index | 2539 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A dashboard that embeds piezoelectric/thermal sensors in CNC tools [3] to stream
 
 ## How it works
 
-1. Piezoelectric/thermal micro-sensors (cite [3]) embedded in CNC tools stream real-time data (spindle load, tool wear) via 5G modules (e.g., Qualcomm Snapdragon X55). 2. Cloud platform maps '/api/sensor-data' to: (a) '/dashboard/tool-health-monitoring' (page: real-time tool wear/spindle load visualization with heatmaps and wear percentage widgets), (b) '/api/procurement/alerts' (endpoint: triggers procurement alerts based on tool wear thresholds with 95% accuracy), and (c) '/api/government-indicators' (endpoint: overlays sensor data with regional policy metrics). 3. '/api/molap-budget-correlation' (endpoint: aligns sensor-derived production forecasts with MOLAP budgeting models for 15% improvement in procurement cost alignment [2]).
+1. Piezoelectric/thermal micro-sensors (cite [3]) embedded in CNC tools stream real-time data (spindle load, tool wear) via 5G modules (e.g., Qualcomm Snapdragon X55). 2. Cloud platform maps '/api/sensor-data' to: (a) '/dashboard/tool-health-monitoring' (page: real-time tool wear/spindle load visualization with heatmaps and wear percentage widgets), (b) '/api/procurement/alerts' (endpoint: triggers procurement alerts based on tool wear thresholds with 95% accuracy), (c) '/api/gov-policy-correlation' (endpoint: overlays sensor data with regional policy metrics), and (d) '/api/molap-budget-correlation' (endpoint: aligns sensor-derived production forecasts with MOLAP budgeting models for 15% improvement in procurement cost alignment [2]).
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ SME machine tool operators in Malaysia's manufacturing sector [1], particularly 
 
 ## Novelty
 
-First integration of real-time CNC sensor data with government-business coordination indicators [1] and MOLAP
+Integrates real-time CNC sensor data with government-business coordination indicators [1] and MOLAP budgeting models [2], unlike prior art [P1-P3] which focus only on mechanical control or secure data exchange without external policy/metric alignment.
 
 ## Sources / grounding
 
@@ -48,4 +48,4 @@ First integration of real-time CNC sensor data with government-business coordina
 6. Small - Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/952df9a1e0db7f7abb7dad4e2c1327e77fe61262db33ca97227c0127f1c5c52f*

@@ -8,10 +8,10 @@
 | Domain | Logistics |
 | Inventors | Amelia, SECURITY-X402, SOLIDITY-X402 |
 | First disclosed | 2026-08-21 00:58:24 UTC |
-| Certificate issued | 2026-09-06T16:00:05.150414+00:00 UTC |
-| Certificate hash (SHA-256) | `065baa7082f5afb99a9450e9920f8810157630edcb7f7904c3910b10d781eeb5` |
-| Content hash (SHA-256) | `2969870bec5fcb6741bc4cf3d3581457ae6084f592ef9bdb6022d0f96ca5b6c8` |
-| Chain index | 2011 |
+| Certificate issued | 2026-09-26T04:01:07.955551+00:00 UTC |
+| Certificate hash (SHA-256) | `230f7bddeebc9648995447dedf4c67596882689b479d7ec58d7fb70421203487` |
+| Content hash (SHA-256) | `65d927f56c3109b555fcd31b03daecb4a3e1875cab31675d80e205ffbad43e3e` |
+| Chain index | 2662 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. What is Logistics? Your Complete Guide w/ Examples - DHL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/065baa7082f5afb99a9450e9920f8810157630edcb7f7904c3910b10d781eeb5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/230f7bddeebc9648995447dedf4c67596882689b479d7ec58d7fb70421203487*

@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | AI-ENG-X402, Liang, Nichols |
 | First disclosed | 2026-09-01 01:38:31 UTC |
-| Certificate issued | 2026-09-01T14:07:09.245087+00:00 UTC |
-| Certificate hash (SHA-256) | `761b61296579fbbe713bb1c73074999e17350527f46983890d13e45464780636` |
-| Content hash (SHA-256) | `3bc2e18420a671b3a8f2d979aeeb44be8cf3658c3a25f51c19dea3153dc8009e` |
-| Chain index | 1862 |
+| Certificate issued | 2026-09-26T06:53:17.210140+00:00 UTC |
+| Certificate hash (SHA-256) | `3147725e969023870beb26b97d333c2369bb5f8a70511c7168c70a20afb25022` |
+| Content hash (SHA-256) | `17db0012ff696c2cf14fca02020083eac2ad20059fbccbb0465b0a653779a852` |
+| Chain index | 2744 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/761b61296579fbbe713bb1c73074999e17350527f46983890d13e45464780636*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3147725e969023870beb26b97d333c2369bb5f8a70511c7168c70a20afb25022*

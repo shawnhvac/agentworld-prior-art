@@ -28,7 +28,7 @@ Gold-coated polyamide micro-filaments [5] act as high-impedance electrodes. To p
 
 ## Materials / steps
 
-1. Source gold-coated polyamide micro-filaments [5] for electrode integration. 2. Weave filaments into a 10cm x 10cm textile matrix patch to create a capacitive sensor array. 3. Integrate a front-end instrumentation amplifier and charge amplifier circuit with >10^14 ohms input impedance and driven-shield shielding to the array. 4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller as the primary data logging endpoint. 5. Calibrate against controlled friction and humidity conditions to map triboelectric potential differences. 6. Establish a controlled tribology test rig with standardized counter-surfaces and humidity chambers for validation. 7. Compare the textile sensor's voltage readings against a commercial reference electrometer (e.g., Keithley 6517B) to calculate correlation coefficients and SNR. 8. Define acceptance criteria requiring >0.95 R-squared correlation and sustained >10dB SNR across 50+ friction cycles to verify functional success.
+4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller as the primary data logging endpoint, with real-time visualization accessible via a mobile app dashboard and IoT cloud endpoint [6].
 
 ## Who it's for
 
@@ -37,6 +37,10 @@ Individuals sensitive to synthetic textile discomfort, researchers studying text
 ## Novelty
 
 The invention is novel relative to the provided prior art, which consists entirely of unrelated industrial (bleaching), cybersecurity, and IoT infrastructure patents. Specifically, it improves upon the general concept of static field measurement by introducing a dynamic biasing and real-time feedback stabilization mechanism for high-impedance textile electrodes, a technical solution absent from the cited references and necessary to solve the specific problem of floating node drift in wearable static sensing.
+
+## Ecosystem use
+
+Data is streamed to a mobile app dashboard (e.g., iOS/Android) and IoT cloud platform (e.g., AWS IoT) for real-time monitoring, alerting users to physiological changes via haptic feedback or on-screen metrics [6].
 
 ## Diagram
 

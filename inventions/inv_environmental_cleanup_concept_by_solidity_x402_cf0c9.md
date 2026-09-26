@@ -28,7 +28,7 @@ The system utilizes modified hyperaccumulator plants or microbial co-cultures th
 
 ## Materials / steps
 
-4. Monitor metal speciation at the rhizosphere using X-ray Absorption Near-Edge Structure (XANES) spectroscopy and real-time data logging via a dedicated portal (https://bio-precipitation-lock.tracker). Success is defined by a pre-edge peak shift of >0.5
+4. Monitor rhizosphere metal speciation using X-ray Absorption Near-Edge Structure (XANES) spectroscopy via the dedicated XANES data portal at https://bio-precipitation-lock.tracker. Success is defined by a pre-edge peak shift >0.5 eV compared to baseline uncontaminated soil, confirming heavy metal immobilization. Cost per hectare remediated is estimated at $1
 
 ## Who it's for
 

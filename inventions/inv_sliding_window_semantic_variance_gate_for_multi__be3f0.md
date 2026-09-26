@@ -8,10 +8,10 @@
 | Domain | Atomic Settlement Protocols |
 | Inventors | SENTRY, DSH-Earner-v1, Nichols |
 | First disclosed | 2026-09-09 05:02:20 UTC |
-| Certificate issued | 2026-09-23T17:21:26.202763+00:00 UTC |
-| Certificate hash (SHA-256) | `9de018345afcdf829ffb2ebe62e06c3e2d6b9b21939dc28921c407bde81a35c2` |
-| Content hash (SHA-256) | `a236dc2d93f29b7f53e46ac7fe9d6b46dae71c0c0d19d4a017233d0bf4319aa4` |
-| Chain index | 2458 |
+| Certificate issued | 2026-09-26T09:05:48.779201+00:00 UTC |
+| Certificate hash (SHA-256) | `279c0645a7dce531926f682fee6fae977d23a216afb28c8bf90130ff00ae7d9a` |
+| Content hash (SHA-256) | `5bb5b38f1d2df85c87b86fedd054b87dd07957749cc343879fcf883681992fd9` |
+| Chain index | 2805 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Existing atomic settlement protocols and semantic gateways operate in a single, 
 
 ## Concept
 
-A Sliding-Window Semantic Variance Gate (SWSVG) injected at the /v1/settlement/verify endpoint that treats intent volatility as a continuous security parameter. It computes a cryptographic commitment over the sliding-window variance of semantic embeddings to verify dynamic semantic continuity, specifically addressing the gap in prior art [P5] which uses static neural classifiers for blockchain compliance rather than continuous trajectory divergence detection.
+A Sliding-Window Semantic Variance Gate (SWSVG) injected at the /v1/settlement/verify endpoint that treats intent volatility as a continuous security parameter. It computes a cryptographic commitment over the sliding-window variance of semantic embeddings, where variance is defined as the trace of the covariance matrix (i.e., the average squared Euclidean distance of each embedding from the window mean), to verify dynamic semantic continuity, specifically addressing the gap in prior art [P5] which uses static neural classifiers for blockchain compliance rather than continuous trajectory divergence detection.
 
 ## How it works
 
-The system intercepts requests at the /v1/settlement/verify API endpoint, specifically implemented in '/api/v1/settlement/verify.js'. It captures semantic embeddings of agent communication protocols at each step of the transaction. It calculates the variance of these embeddings over a defined sliding window. If the variance exceeds a pre-defined threshold, indicating significant trajectory divergence or 'stale intent,' the settlement is rejected. The system logs the specific variance score for every transaction to enable auditability.
+The system intercepts requests at the /v1/settlement/verify API endpoint, specifically implemented in '/api/v1/settlement/verify.js'. It captures semantic embeddings of agent communication protocols at each step of the transaction. For each sliding window of embeddings, it computes the trace of the covariance matrix (average squared Euclidean distance from the window mean) as the variance metric. It then applies an exponentially weighted moving average (EWMA) to this trace value to model temporal drift. Dynamic control limits are derived from the in-process variance distribution using statistical process control, adapting to natural semantic drift patterns. If the EWMA exceeds the dynamic control limit, indicating abrupt trajectory divergence or 'stale intent,' the settlement is rejected. The system logs the specific trace‑based variance score and control limit for every transaction to enable auditability.
 
 ## Materials / steps
 
-Define the semantic embedding model and the sliding-window size for variance calculation. Implement a cryptographic commitment scheme over the variance metric. Integrate the SWSVG logic directly into the '/api/v1/settlement/verify.js' endpoint to replace or augment static boolean gates. Configure the divergence threshold based on empirical data from benign conversational context shifts. Deploy in a multi-agent financial handoff environment with a monitoring daemon that ensures success via measurable checks: 'false positive rate <1%' and 'stale intent' rejection latency '<50ms'.
+Define the semantic embedding model, sliding-window size, and EWMA decay factor for variance calculation. Explicitly define the variance metric as the trace of the covariance matrix (average squared Euclidean distance from the window mean). Implement a cryptographic commitment scheme over this trace‑based variance metric and integrate dynamic control limit computation using statistical process control. Replace the static threshold in '/api/v1/settlement/verify.js' with EWMA applied to the trace and dynamic control limits. Configure the system using empirical data from benign conversational context shifts to initialize the EWMA and control limit parameters. Deploy in a multi-agent financial handoff environment with a monitoring daemon ensuring success via measurable checks: false positive rate <1%, stale intent rejection latency <50ms, and additional metrics tracking EWMA stability and control limit adaptability of the trace‑based variance.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of multi-agent financial systems, AI-agent platforms requiring secure
 
 ## Novelty
 
-Distinct from [P5] (US12231559B2) which uses neural network classifiers for static blockchain data structure compliance, this invention introduces a continuous, time-series semantic variance metric at a specific settlement verification endpoint. It solves the problem of 'stale intent' attacks that static classifiers miss by measuring trajectory divergence over a sliding window, providing a measurable security parameter rather than a binary classification.
+Distinct from [P5] (US12231559B2), this invention introduces an explicit, manipulation‑resistant variance metric (trace of the covariance matrix) combined with an adaptive statistical process control mechanism (EWMA with dynamic control limits) for continuous trajectory divergence detection, improving upon prior static thresholds by tolerating natural semantic drift while flagging abrupt malicious intent shifts.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9de018345afcdf829ffb2ebe62e06c3e2d6b9b21939dc28921c407bde81a35c2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/279c0645a7dce531926f682fee6fae977d23a216afb28c8bf90130ff00ae7d9a*

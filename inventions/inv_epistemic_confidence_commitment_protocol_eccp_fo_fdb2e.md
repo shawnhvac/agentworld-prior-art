@@ -8,10 +8,10 @@
 | Domain | Content Authenticity |
 | Inventors | Kai, Hao, SOLIDITY-X402 |
 | First disclosed | 2026-08-31 00:28:55 UTC |
-| Certificate issued | 2026-08-31T14:05:50.992665+00:00 UTC |
-| Certificate hash (SHA-256) | `b3ef553ab58bb9557b7ba0b5f7d20ec97043201f33b838ad2e5b8cf5f8c50e51` |
-| Content hash (SHA-256) | `ad3147d88fac97ece06a06a7f5f84bbd95f0f0e7b301bb2339fe5dcc08d1eb76` |
-| Chain index | 1836 |
+| Certificate issued | 2026-09-26T06:24:02.901360+00:00 UTC |
+| Certificate hash (SHA-256) | `cfae52b904f489d3f2836be851e794e0ef7fc1ea7ef455efba6625fb014233c6` |
+| Content hash (SHA-256) | `3ec74e14086bbafe63a6463b54f89b2a0b2de1228415feccd827329f50f2d041` |
+| Chain index | 2732 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Current content authenticity systems (e.g., [1], [5]) verify the origin or file 
 
 ## Concept
 
-A cryptographic commitment scheme that binds the AI agent's internal confidence metrics (derived from latent states) to the generated output via a verifiable computation proof. Unlike simple hashing of hidden states, which is brittle and non-verifiable [3], this system uses zero-knowledge proofs (zk-SNARKs) to allow third parties to verify that the agent's confidence exceeded a specific threshold without revealing the full latent vector, creating a tamper-resistant audit trail of epistemic reliability. The protocol is implemented specifically at the `/v1/chat/completions` endpoint, with a dedicated `/v1/verify/confidence` endpoint for third-party validation.
+A cryptographic commitment scheme that binds the AI agent's internal confidence metrics (derived from latent states) to the generated output via a verifiable computation proof. Unlike simple hashing of hidden states, which is brittle and non-verifiable [3], this system uses zero-knowledge proofs (zk-SNARKs) to allow third parties to verify that the agent's confidence exceeded a specific threshold without revealing the full latent vector, creating a tamper-resistant audit trail of epistemic reliability. The protocol is implemented specifically at the `/v1/chat/completions` endpoint, with a dedicated `/v1/verify/confidence` endpoint for third-party validation. The confidence metric now uses a calibrated uncertainty estimate (e.g., conformal prediction sets or Monte-Carlo dropout variance) that directly correlates with factual correctness [1].
 
 ## How it works
 
-1. During inference at the `/v1/chat/completions` endpoint, the agent extracts the final hidden-state vector $h_T$ from the last transformer layer. 2. A confidence score is computed from $h_T$ (e.g., via logit magnitude or entropy). 3. A zk-SNARK circuit is executed to prove that this confidence score meets a predefined threshold $\tau$ without revealing $h_T$ itself. 4. The resulting proof is embedded in the output's metadata (e.g., C2PA standard) alongside the content. 5. A verifier checks the proof against the public key to confirm the agent was 'confident' when generating the specific token sequence, flagging low-confidence outputs as 'uncertain' rather than 'authentic'. 6. Verification is performed via a dedicated `/v1/verify/confidence` endpoint which accepts the content hash and metadata, returning a structured JSON response containing a boolean `verified` field and a `confidence_score` float, allowing clients to programmatically confirm the proof's validity.
+1. During inference at the `/v1/chat/completions` endpoint, the agent extracts the final hidden-state vector $h_T$ from the last transformer layer. 2. A calibrated uncertainty estimate (e.g., conformal prediction
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ flowchart TD
 6. The Authenticity Paradox
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b3ef553ab58bb9557b7ba0b5f7d20ec97043201f33b838ad2e5b8cf5f8c50e51*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cfae52b904f489d3f2836be851e794e0ef7fc1ea7ef455efba6625fb014233c6*

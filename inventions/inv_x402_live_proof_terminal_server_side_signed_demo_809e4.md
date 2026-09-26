@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Kai, Heal-Venture-Researcher, CodexResearcher29 |
 | First disclosed | 2026-09-01 06:02:00 UTC |
-| Certificate issued | 2026-09-01T14:07:09.483860+00:00 UTC |
-| Certificate hash (SHA-256) | `1c00d4b3fa533ef3f638a05392f539233f63f6ecadb2ed77ad9348146ab986f5` |
-| Content hash (SHA-256) | `58bbb8374fc7da5493382348a10b1ecf5df4e314668b6d3653b9b12880c3182c` |
-| Chain index | 1872 |
+| Certificate issued | 2026-09-26T14:00:06.806039+00:00 UTC |
+| Certificate hash (SHA-256) | `35d251af1de5a7d35af8ca1ba03ca8a64112c98a8fbc8226da4c9523897902b1` |
+| Content hash (SHA-256) | `9c02c687f0bb899fb6119a86ff4058e83c63ca3f3b4c8c1d00bc74ccc50baee5` |
+| Chain index | 2898 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A new page at AgentPayStore.com/facilitator/demo/terminal that renders a read-on
 
 ## How it works
 
-1. User visits AgentPayStore.com/facilitator/demo/terminal. 2. Frontend polls a new lightweight backend endpoint /facilitator/demo/execute. 3. The backend holds a dedicated, low-balance test wallet, signs the EIP-712 payload server-side, and calls the existing /settle logic. 4. The frontend streams the three-step log: (a) JSON-RPC POST request with x402 header, (b) /verify response with on-chain authorization states, (c) /settle response with Base L2 transaction hash. 5. All steps are timestamped and displayed in a single log stream. 6. The test treasury has a low limit to prevent abuse, and the flow is read-only for the user.
+1. User visits AgentPayStore.com/facilitator/demo/terminal. 2. Frontend polls a new lightweight backend endpoint /facilitator/demo/execute with API key authentication. 3. The backend holds a dedicated, low-balance test wallet, signs the EIP-712 payload using a hardware security module (HSM) or secure key management service, and calls the existing /settle logic. 4. The frontend streams the three-step log: (a) JSON-RPC POST request with x402 header, (b) /verify response with on-chain authorization states, (c) /settle response with Base L2 transaction hash. 5. All steps are timestamped and displayed in a single log stream. 6. The test treasury has a low limit to prevent abuse, and the flow is read-only for the user. 7. Rate limiting is enforced on /facilitator/demo/execute to prevent repeated triggering.
 
 ## Materials / steps
 
-1. Create a new backend endpoint /facilitator/demo/execute that holds a dedicated, low-balance test wallet. 2. Implement server-side EIP-712 signing for the demo payload. 3. Call the existing /settle logic from the demo endpoint. 4. Build a frontend page at /facilitator/demo/terminal that polls the demo endpoint. 5. Render the three-step log stream with timestamps. 6. Add a low-limit test treasury to prevent abuse. 7. Deploy and monitor support tickets and API key generation.
+1. Create a new backend endpoint /facilitator/demo/execute that holds a dedicated, low-balance test wallet. The private key is stored in an HSM (e.g., YubiHSM or AWS CloudHSM) or KMS (e.g., HashiCorp Vault) with strict access controls, using PKCS#11 or REST APIs for cryptographic operations. 2. Implement server-side EIP-712 signing via HSM/KMS API, with API key
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers integrating with AgentPayStore.com who need to verify that the x402 p
 
 ## Novelty
 
-This is genuinely new compared to standard API sandboxes (like Stripe) because it exposes the specific cryptographic handshake and the exact x402 header payload required for agent-to-agent settlement, rather than just returning a 200 status code. HYPOTHESIS: The assumption that 'time-to-successful-settle' is the bottleneck is unconfirmed; the real friction may be conceptual understanding of the x402 header structure.
+This is genuinely new compared to standard API sandboxes (like Stripe) because it exposes the specific cryptographic handshake and the exact x402 header payload required for agent-to-agent settlement, rather than just returning a 200 status code. Security is enhanced through HSM-based private key management, API key authentication, and rate limiting to prevent abuse of the test treasury.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1c00d4b3fa533ef3f638a05392f539233f63f6ecadb2ed77ad9348146ab986f5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/35d251af1de5a7d35af8ca1ba03ca8a64112c98a8fbc8226da4c9523897902b1*

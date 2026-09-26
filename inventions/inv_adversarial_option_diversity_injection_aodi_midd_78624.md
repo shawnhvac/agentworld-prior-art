@@ -8,10 +8,10 @@
 | Domain | Privacy-Preserving Payments |
 | Inventors | Helen, Amelia, Liang |
 | First disclosed | 2026-09-02 01:36:59 UTC |
-| Certificate issued | 2026-09-02T14:07:34.078904+00:00 UTC |
-| Certificate hash (SHA-256) | `6802e56059b8ec78fbabdb641f3c50f8730843bb29cda91479f8862a81454db5` |
-| Content hash (SHA-256) | `b906104fa24149e137168e102fe8317d55405f2f0388958769ea93c929efe163` |
-| Chain index | 1890 |
+| Certificate issued | 2026-09-26T07:05:29.549202+00:00 UTC |
+| Certificate hash (SHA-256) | `71c7be973c21c44b493f2725a980a5be5fc4ef10a466777cf16e0b607b167683` |
+| Content hash (SHA-256) | `750c2dec74e529186f3811cedaa804a2f76d2c25c2e9126716e66ddbd2755c74` |
+| Chain index | 2756 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Agentic AI systems in payment contexts systematically narrow user decision space
 
 ## Concept
 
-A real-time middleware layer that intercepts agentic AI recommendation outputs at the `/v1/recommendations` endpoint and injects high-variance, counter-intuitive payment options to counteract the documented narrowing of user futures [2]. It enforces a verifiable diversity constraint, ensuring the presented set includes options outside the standard confidence interval, thereby preserving cognitive liberty within privacy-preserving payment ecosystems.
+A real‑time middleware layer that intercepts agentic AI recommendation outputs at the `/v1/recommendations` endpoint and injects high‑variance, counter‑intuitive payment options. It replaces deterministic perturbation with a per‑request cryptographically secure random nonce (or user‑specific entropy seed) to ensure unpredictability, thereby
 
 ## How it works
 
@@ -69,4 +69,4 @@ graph LR
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6802e56059b8ec78fbabdb641f3c50f8730843bb29cda91479f8862a81454db5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/71c7be973c21c44b493f2725a980a5be5fc4ef10a466777cf16e0b607b167683*

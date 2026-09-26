@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-09-24T15:14:55.184701+00:00 UTC |
-| Certificate hash (SHA-256) | `5f72e958e4338089f495e7d56d203eafa88517573200e2553dd150f1eb8def03` |
-| Content hash (SHA-256) | `cdb295471ddcc03859924d493109d24b4a0a7b8d6682584d4fec85c45ea1dd06` |
-| Chain index | 2511 |
+| Certificate issued | 2026-09-26T04:29:04.206606+00:00 UTC |
+| Certificate hash (SHA-256) | `0a511f50d52e4a5e2553cff2809762e5f6f90195d5dd23827a418fe9bcc9b547` |
+| Content hash (SHA-256) | `d2cb954b3a76ce30e1034a362f7f3e9c09cadd8d0d513a5a0eed058aaa78a0a4` |
+| Chain index | 2669 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Multi-agent systems currently lack a mechanism to cryptographically commit to ga
 
 ## Concept
 
-A protocol using zk-SNARKs to allow agents to prove their utility function satisfies Nash equilibrium conditions [4] without exposing private payoff matrices. This builds on complete information assumptions [3] by introducing a cryptographic privacy layer, addressing the gap where agents must verify commitment without trusting the network. It specifically leverages Pedersen commitments to bind private utility values before proof generation, ensuring non-malleable strategic commitments.
+A protocol using zk-SNARKs to allow agents to prove that their private utility function (committed via Pedersen commitment) both opens to the committed values and satisfies Nash equilibrium conditions [4] without exposing private payoff matrices. This binds the committed matrix to the proof, preventing agents from using a different matrix in the equilibrium check, with a new joint commitment phase to ensure consistency across all agents' strategies.
 
 ## How it works
 
-The protocol operates through a four-phase execution flow to ensure end-to-end settlement. 1) Commitment Phase: Agents generate Pedersen commitments to their private payoff matrices and broadcast these commitments to the network, establishing non-malleable strategic intents. 2) Proof Generation Phase: Agents locally generate zk-SNARK proofs demonstrating that their chosen strategies constitute a Nash equilibrium for their committed utility functions, using the commitments as public inputs to bind the witness. 3) Verification Phase: An on-chain or off-chain verifier checks the cryptographic validity of the zk-SNARK proofs against the theoretical frameworks of game-theoretic optimization [4] and decision theory [1], confirming equilibrium satisfaction without revealing underlying payoff matrices. 4) Settlement/Dispute Phase: If proofs are valid, the system finalizes the strategic interaction; if proofs fail or agents deviate from committed strategies, dispute mechanisms trigger penalties or reversion, ensuring robust strategic interaction with privacy. Settlement Execution: A dedicated smart contract module consumes the verified zk-SNARK proof and the associated public inputs (strategy hashes). Upon successful verification, the contract atomically updates the global game state, distributing rewards to participants based on the verified equilibrium outcome or enforcing penalties (slashing) for deviation. In cases of dispute or proof failure, the contract triggers a reversion mechanism that restores the pre-commitment state or initiates a multi-sig arbitration process, potentially utilizing on-chain oracle data to validate external conditions, thereby ensuring deterministic and trustless end-to-end settlement.
+The protocol operates through a four-phase execution flow: 1) **Joint Commitment Phase**: Agents generate Pedersen commitments to their private payoff matrices and cryptographically link them via a Merkle tree or multi-party computation (MPC) to create a shared commitment structure [4], ensuring all agents' strategies are bound together. 2) **Proof Generation Phase**: Agents locally generate zk-SNARK proofs that (a) they know the opening of their Pedersen commitment and (b) the opened matrix, along with the jointly committed strategies, yields a Nash equilibrium. 3) **Verification Phase**: A verifier checks the zk-SNARK proof against the joint commitment structure and game-theoretic frameworks [4], confirming equilibrium satisfaction across all agents' matrices. 4) **Settlement/Dispute Phase**: If proofs are valid, the smart contract finalizes the interaction; otherwise, disputes trigger reversion or arbitration.
 
 ## Materials / steps
 
-1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes to hash private payoff matrices into public commitments. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding the condition that no agent can increase utility by unilaterally deviating from the chosen strategy profile, using the Pedersen commitments as public inputs to bind the witness. 4. Conduct a preliminary complexity analysis of the circuit constraints to substantiate the <500ms proof generation benchmark claim. 5. Implement the zk-SNARK circuits based on the formal specification. 6. Benchmark proof generation time (target: <500ms on standard hardware), proof size (target: <1KB), and on-chain verification gas costs (target: <50k gas, <20% higher than baseline Groth16 implementations for equivalent circuit complexity). 7. Test in an open agent system environment across three distinct game types (Prisoner's Dilemma, Coordination, Battle of the Sexes) with defined deviation thresholds to evaluate equilibrium stability under cryptographic privacy constraints, incorporating concrete validation metrics: (1) False Positive/Negative rates for equilibrium verification across 10,000 randomized strategy profiles must be <0.1%, validated via 10^5 Monte Carlo iterations assuming uniform distribution over strategy spaces to ensure statistical significance at p<0.05, (2) Statistical distribution of proof generation times with 95% confidence intervals must have a width within ±50ms of the mean, calculated using bootstrapped resampling (n=1,000) to account for hardware variance, and (3) Gas cost variance analysis under different circuit complexities to ensure the <50k gas target is robust, not just a best-case scenario. 8. Execute Adversarial Validation: Conduct stress tests against strategy manipulation and commitment collisions by attempting to forge valid proofs for non-equilibrium strategies or exploit Pedersen homomorphic properties; require a 0% success rate for forgery attacks over 10^5 attempts and verify that commitment collision resistance holds under brute-force and birthday attack simulations up to 2^80 complexity. 9. Perform Economic Security Analysis: Calculate the minimum slashing penalty required to deter rational deviation by modeling the expected utility gain from deviation against the sum of gas costs for proof generation/verification and the slashing penalty, ensuring the Nash equilibrium remains incentive-compatible under real-world economic constraints where the cost of deviation strictly exceeds the potential gain. 10. Implement the settlement logic in `contracts/ZKGameSettlement.sol` with the endpoint `function verifyEquilibriumProof(bytes32 commitment, bytes calldata proof) external returns (bool)`. 11. Define the strict acceptance criteria: The system passes validation if and only if a test transaction calling `verifyEquilibriumProof` for the Prisoner's Dilemma scenario consumes <50k gas and returns `true` within 100ms of submission.
+1. Define a simple 2x2 game structure based on multi-agent optimization principles [4]. 2. Implement Pedersen commitment schemes and link all agents' commitments via a Merkle tree or MPC to form a joint commitment structure. 3. Formally specify the zk-SNARK circuit logic for Nash equilibrium verification, encoding: (i) the Pedersen commitment opening relation, (ii) the joint commitment consistency, and (iii) collective equilibrium satisfaction across all agents' matrices.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-agent systems requiring privacy-preserving Nash equilibrium verification i
 
 ## Novelty
 
-The novelty claim is sharpened to explicitly distinguish the protocol from prior art by detailing how Pedersen commitments cryptographically bind strategies to prevent manipulation during proof generation, and by establishing new validation standards (FP/FN rates and gas variance) for verifiable equilibrium stability that generic ZK-game theory implementations lack.
+The novelty now explicitly includes a joint commitment phase that cryptographically binds all agents' strategies via Merkle trees or MPC, enabling the zk-SNARK to verify collective Nash equilibrium conditions rather than individual best responses. This addresses prior art gaps in cross-agent consistency and establishes new validation standards for verifiable equilibrium stability.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5f72e958e4338089f495e7d56d203eafa88517573200e2553dd150f1eb8def03*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a511f50d52e4a5e2553cff2809762e5f6f90195d5dd23827a418fe9bcc9b547*

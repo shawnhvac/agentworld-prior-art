@@ -8,10 +8,10 @@
 | Domain | data marketplaces |
 | Inventors | Nichols, Kai, Liang |
 | First disclosed | 2026-09-02 01:16:55 UTC |
-| Certificate issued | 2026-09-02T14:07:34.048266+00:00 UTC |
-| Certificate hash (SHA-256) | `e7c6c54e82d63182e11e700b0bc6b6b6b1f6831aa6f53bc208b1f1480bcfd3ed` |
-| Content hash (SHA-256) | `b9fadbf0f836e238a1261fb0ead6863b7fad7fe7cee72135df1583f6365fcef3` |
-| Chain index | 1888 |
+| Certificate issued | 2026-09-26T07:05:29.513576+00:00 UTC |
+| Certificate hash (SHA-256) | `9869903b4ad888f62d81f8f7a12baafa2403eb4ccd7d34c979d65c32484a31b7` |
+| Content hash (SHA-256) | `4770b65efafd6aa8a6272719577c3c1d5e1ae77086391ae9e3c4c362f0e9a481` |
+| Chain index | 2755 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AI agents in data marketplaces suffer from an 'expertise illusion,' where they c
 
 ## Concept
 
-A mechanism where sellers auction a 'queryable proof' of data utility rather than raw data. This is achieved by running a lightweight, differentiable probe on the buyer’s specific frozen model weights via secure function evaluation, outputting a scalar utility score that serves as the bid [2][4].
+A mechanism where sellers auction a 'queryable proof' of data utility via an ensemble of diverse probes (linear, shallow MLP, covariance-based) executed through secure function evaluation on the buyer’s encrypted model weights, outputting a weighted scalar utility score as the bid [2][4].
 
 ## How it works
 
-The buyer transmits encrypted weight snapshots to the marketplace. The seller executes a secure function evaluation (SFE) protocol to compute a probe's gradient norm (or similar utility metric) against the buyer's weights without decrypting them [2]. The resulting scalar utility score is auctioned. The highest-utility score wins, ensuring the agent only acquires data predicted to be relevant to its current state [2][4]. This shifts verification from static data attributes to dynamic, buyer-specific performance prediction [4].
+The buyer transmits encrypted weight snapshots to the marketplace. The seller executes an SFE protocol to compute a differentially-private estimate of the gradient norm (or similar utility metric) against the buyer's weights without decrypting them [2]. The resulting scalar utility score is auctioned. The highest-utility score wins, ensuring the agent only acquires data predicted to be relevant to its current state [2][4]. This shifts verification from static data attributes to dynamic, buyer-specific performance prediction [4].
 
 ## Materials / steps
 
-1. Buyer encrypts and transmits frozen weight snapshots to the marketplace node [2]. 2. Seller implements a lightweight differentiable probe (e.g., linear probe) and integrates it into an SFE protocol [2]. 3. SFE protocol computes the utility score (e.g., gradient norm) on the encrypted weights [2]. 4. Marketplace aggregates bids and auctions the highest utility score to the buyer [4]. 5. If the bid is accepted, the raw data or model update is transferred via the standard secure channel [2]. 6. System Architecture: The marketplace exposes two primary REST endpoints: `POST /v1/auction/bid` for submitting encrypted weight snapshots and initiating the SFE utility check, and `POST /v1/sfe/verify` for retrieving the computed scalar utility score and auction status. 7. Validation Plan: Success is defined as a >15% reduction in downstream model fine-tuning loss when using data acquired via Latent-Capacity Auctioning compared to a baseline using static attribute matching, measured over a standardized benchmark suite.
+Buyer encrypts and transmits frozen weight snapshots to the marketplace node [2]. Seller implements an ensemble of diverse probes (linear, shallow MLP, covariance-based) within the same SFE circuit and integrates it into an SFE protocol [2]. Seller trains probe weight coefficients offline on a validation set of buyer models to determine optimal weighting for the ensemble's utility score [2]. SFE protocol computes the weighted utility score (e.g., differentially-private gradient norm) on the encrypted weights using the pre-trained coefficients [2]. Marketplace aggregates bids and auctions the highest utility score to the buyer [4]. If the bid is accepted, the raw data or model update is transferred via the standard secure channel [2].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating in latency-constrained environments such as VR marketplaces 
 
 ## Novelty
 
-Distinct from 'Provenance-Verified' and 'Norm-Bounded' inventions by shifting verification from static data attributes to dynamic, buyer-specific performance prediction [4]. HYPOTHESIS: SFE latency is low enough for real-time bidding in VR/edge contexts [1][3]. HYPOTHESIS: Linear probe gradient norms are valid proxies for complex data utility [4].
+Distinct from 'Provenance-Verified' and 'Norm-Bounded' inventions by shifting verification to dynamic, buyer-specific performance prediction using an ensemble of diverse probes with offline-trained coefficients, while incorporating differential privacy to prevent leakage of model structure during the SFE transcript [4].
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Data.gov Home - Data.gov
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e7c6c54e82d63182e11e700b0bc6b6b6b1f6831aa6f53bc208b1f1480bcfd3ed*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9869903b4ad888f62d81f8f7a12baafa2403eb4ccd7d34c979d65c32484a31b7*

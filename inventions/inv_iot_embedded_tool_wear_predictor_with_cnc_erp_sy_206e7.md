@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Kai, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-09-25 00:27:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-09-25T14:22:45.511129+00:00 UTC |
+| Certificate hash (SHA-256) | `d4312a4b7c64a194228846c4fcdfcf06b69ea127380e45e8f571256fa266f2f8` |
+| Content hash (SHA-256) | `40ac2c8892b2a67c158cfed57f9cf78445b3faf115a53f283a305feba5dd94e7` |
+| Chain index | 2538 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ An IoT system that embeds strain sensors and thermal imaging on CNC tools to pre
 
 ## How it works
 
-Strain gauges (Vishay 6020-100) and thermal cameras (FLIR A655sc) monitor tool deformation and heat. LoRaWAN (SX1276) transmits data to a local server, where TensorFlow Lite predicts wear (e.g., 0.01 mm flank wear). This triggers ERP (SAP B1) updates via new custom endpoints like '/api/tool/wear-data' (for real-time sensor data ingestion) and '/api/erp/update' (for synchronizing production schedules and budgets). These endpoints integrate with SAP B1's 'Tool Wear Dashboard' screen (page 73) and 'Maintenance Log' table (page 58), using API methods described in SAP B1 v10.0 API docs [2].
+Strain gauges (Vishay 6020-100) and thermal cameras (FLIR A655sc) monitor tool deformation and heat. LoRaWAN (SX1276) transmits data to a local server, where TensorFlow Lite predicts wear (e.g., 0.01 mm flank wear). This triggers ERP (SAP B1) updates via endpoints like '/api/tool/wear-data' (ingests sensor data) and '/api/erp/update' (syncs schedules/budgets). These endpoints integrate with SAP B1's 'Tool Wear Dashboard' (page 73) and 'Maintenance Log' (page 58) tables, using API methods described in SAP B1 v10.0 API docs [2]. Success is measured via metrics: tool life extended by 30% (verified via wear
 
 ## Materials / steps
 
@@ -65,4 +65,4 @@ F --> H[Reallocated Labor Hours]
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d4312a4b7c64a194228846c4fcdfcf06b69ea127380e45e8f571256fa266f2f8*

@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | 🏦 Treasury Reserve, Hao, Rupert |
 | First disclosed | 2026-09-14 00:26:43 UTC |
-| Certificate issued | 2026-09-23T16:32:42.177242+00:00 UTC |
-| Certificate hash (SHA-256) | `14046068ca714e43a020de95e5b21bf67ae824788aa3d6ba35b266178f2ac795` |
-| Content hash (SHA-256) | `27b31bafbc1ff8c4ac627a8d4d9097c2a14973974d4f88d69d26aa729c12697f` |
-| Chain index | 2455 |
+| Certificate issued | 2026-09-26T10:34:06.461108+00:00 UTC |
+| Certificate hash (SHA-256) | `0ed7fcb7b61c1f2acbbab36f2fe93733d240cabbac7d4091e8536cd8c0049407` |
+| Content hash (SHA-256) | `1b81923c119dd62d5368e9a26f26e1b4ad188d4f01572c2b1e8c0882fe2fc822` |
+| Chain index | 2830 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Current API discovery mechanisms treat security metadata as static attributes, c
 
 ## Concept
 
-A discovery layer that exposes a server-side 'Authorization Oracle' endpoint. Unlike static metadata, this oracle accepts a signed capability token from the agent and returns a boolean feasibility response without exposing the underlying policy logic. This inverts the flawed 'local policy execution' model by keeping security rules opaque on the server while providing the proactive, protocol-native check required for autonomous agents [2].
+A discovery layer that exposes a server-side 'Authorization Oracle' endpoint. Unlike static metadata, this oracle accepts a signed capability token from the agent and returns a short-lived, signed authorization artifact (e.g., a JWT or macaroon with a 5–30 s TTL) instead of a bare boolean, keeping the underlying policy logic opaque while providing a protocol-native, proactive check for autonomous agents [2].
 
 ## How it works
 
-1. The agent identifies a target API via standard discovery [5]. 2. Instead of immediately invoking the API, the agent sends a signed capability token and context parameters to the server-side Oracle endpoint. 3. The server evaluates the opaque policy logic (e.g., OPA Rego or Cedar) against the agent's specific tenant context. 4. The server returns a simple boolean (true/false) indicating feasibility. 5. If true, the agent proceeds with the API invocation; if false, the agent aborts or requests different permissions, preventing 403 errors [3].
+1. The agent identifies a target API via standard discovery [5]. 2. Instead of immediately invoking the API, the
 
 ## Materials / steps
 
@@ -66,4 +66,4 @@ flowchart TD
 6. American Petroleum Institute | API
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/14046068ca714e43a020de95e5b21bf67ae824788aa3d6ba35b266178f2ac795*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0ed7fcb7b61c1f2acbbab36f2fe93733d240cabbac7d4091e8536cd8c0049407*

@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-09-03T14:52:21.898283+00:00 UTC |
-| Certificate hash (SHA-256) | `fcf52b9e635bb40d4e115ebeb70c95e54afde21e4105c02d512bb90aa57f3d85` |
-| Content hash (SHA-256) | `2a3927c466c31d927adf6f156aec3680a84f7d6b284198fbe0ff6b1aedc9e8cf` |
-| Chain index | 1924 |
+| Certificate issued | 2026-09-26T04:24:09.643880+00:00 UTC |
+| Certificate hash (SHA-256) | `499c6920909af141d4ec3397c75a0a12e796de820bef4b9f3c2347989a08d6a8` |
+| Content hash (SHA-256) | `6e320769dbe7f1094de1dfbb25a1909aff003816810b338c3289de734d87a64d` |
+| Chain index | 2668 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A dynamic weighting system that treats scoring volatility as a feature for calib
 
 ## How it works
 
-1. Collect parallel supplier evaluation scores from human coordinators and GAI models, ensuring both inputs are normalized to a common scale (e.g., min-max scaling to [0, 1] or Z-score standardization) before further processing. 2. Implement a 'Warm-up Phase' where static equal weights (w_human = 0.5, w_GAI = 0.5) are applied until the initial 7-day rolling temporal window is fully populated. 3. Once the window is full, calculate the standard deviation of the difference scores (S_human - S_GAI) over the 7-day rolling temporal window to quantify discrepancy volatility [3]. 4. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: if the coefficient of variation (CV) between human and GAI scores exceeds a threshold of 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-lambda * t)), where k is a sensitivity constant (k=0.5), lambda is a decay rate (lambda=0.1), and t is explicitly defined as the integer count of days elapsed since the most recent day within the current 7-day window where CV > 0.15 occurred (t resets to 0 on the day of the spike); if no spike occurred within the current window, the exponential decay term e^(-lambda * t) defaults to 1 to ensure deterministic baseline weighting [3]. The human weight is derived as w_human = 1 - w_GAI. 5. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3]. 6. Compute the final hybrid score using the formula S_final = w_human * S_human + w_GAI * S_GAI at the end of each evaluation period, utilizing the stabilized weights derived from the final day of the rolling window to produce the actionable evaluation metric.
+4. Apply a dynamic weighting algorithm where weights are adjusted based on calculated volatility: the coefficient of variation (CV) is computed as CV = (σ_diff / μ_diff), where σ_diff is the rolling standard deviation of (S_human - S_GAI) over the adaptive temporal window, and μ_diff is the mean of (S_human - S_GAI) over the same window. If CV exceeds 0.15, the GAI weight is calculated as w_GAI = max(0.2, 1 - k*(CV - 0.15) * e^(-λ * t)), where k=0.5 (moderate responsiveness to volatility), λ=0.1 (gradual trust recovery over time), and t is the integer count of days elapsed since the most recent day within the current adaptive temporal window where CV > 0.15 occurred (t resets to 0 on the day of the spike). If no spike occurred within the current window, e^(-λ * t) defaults to 1 for deterministic baseline weighting. The human weight is w_human = 1 - w_GAI. 5. Treat high volatility (CV > 0.25) as a signal for uncertainty requiring mandatory human-in-the-loop review, rather than discarding divergent inputs [3].
 
 ## Materials / steps
 
-1. Integrate GAI supplier evaluation module with existing supply chain planning software [1]. 2. Implement a real-time analytics engine to compute the standard deviation of difference scores (human - GAI) and the coefficient of variation between human and AI scores [3]. 3. Deploy the 'Supplier Detail View' UI component in the Logistics Dashboard, which renders the volatility-adjusted score and an explicit 'Override' button; this view is served via the API endpoint POST /api/v1/supplier/score/hybrid [4]. 4. Conduct a sensitivity analysis to determine optimal values for the sensitivity constant k and decay rate lambda by testing a range of parameters against historical data to maximize planning accuracy, augmented by a Monte Carlo simulation to assess parameter stability and robustness under stochastic input variations. 5. Execute a back-testing protocol using Supplier Selection Accuracy (defined as the percentage of selected suppliers who meet delivery and quality SLAs) as the primary concrete metric, and Mean Absolute Percentage Error (MAPE) as a secondary technical metric against historical supply chain data, targeting a concrete reduction of at least 5% MAPE compared to the static baseline with a p-value < 0.05. 6. Implement tracking for 'Weight Convergence Rate' to measure the speed at which dynamic weights stabilize, and 'Human Override Frequency' to quantify the efficiency of the human-in-the-loop process, ensuring the volatility metric reduces cognitive load. 7. Perform a formal power analysis prior to the pilot to ensure the sample size is sufficient to detect the improvement in Supplier Selection Accuracy and the 5% MAPE reduction with 80% statistical power, explicitly detailing the power analysis results and assumptions in the methodology to justify the sample size of 50 coordinators, and explicitly designate Supplier Selection Accuracy as the primary efficacy endpoint for the study. 8. Conduct a real-world pilot trial over a 90-day period with a cohort of 50 logistics coordinators, comparing the volatility-anchored system against a static weighting baseline, using a randomized controlled trial design to measure statistical significance in planning accuracy and user trust scores; the primary success metric is defined as a statistically significant reduction in MAPE (target: >5% reduction with p < 0.05) compared to the control group within the 90-day pilot duration.
+2. Implement a real-time analytics engine to compute the rolling standard deviation (σ_diff) of (S_human - S_GAI) and the coefficient of variation (CV = σ_diff / μ_diff) between human and AI scores, with the temporal window length dynamically adjusted based on supplier evaluation frequency (e.g., 14 days for monthly evaluations, 3
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Supply chain planners, logistics coordinators, and procurement managers who util
 
 ## Novelty
 
-Unlike static Bayesian updating or standard weighted averages that treat variance as noise to be smoothed post-hoc, this invention uniquely integrates a time-dependent exponential decay function for trust recovery triggered by specific Coefficient of Variation (CV) thresholds, explicitly modeling the temporal dynamics of confidence restoration in a way absent in static or simple moving average baselines [3].
+The invention uniquely integrates a time-dependent exponential decay function with domain-justified sensitivity parameters (k=0.5, lambda=0.1) and an adaptive temporal window that scales with supplier evaluation frequency, explicitly modeling the temporal dynamics of confidence restoration while avoiding biases from fixed window lengths [3].
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fcf52b9e635bb40d4e115ebeb70c95e54afde21e4105c02d512bb90aa57f3d85*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/499c6920909af141d4ec3397c75a0a12e796de820bef4b9f3c2347989a08d6a8*

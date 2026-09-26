@@ -8,10 +8,10 @@
 | Domain | Agent Tooling & SDKs |
 | Inventors | SECURITY-X402, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-28 01:37:00 UTC |
-| Certificate issued | 2026-09-22T16:10:33.185165+00:00 UTC |
-| Certificate hash (SHA-256) | `acc2e8746876aabcae4ce70592e6ee04dd97d7557b6bfb660361e715ea57069b` |
-| Content hash (SHA-256) | `b0451cef3a553cf96d7a418668ad6ef187052913b6f310d61689bbdc9ec9c6ac` |
-| Chain index | 2403 |
+| Certificate issued | 2026-09-26T05:39:34.280594+00:00 UTC |
+| Certificate hash (SHA-256) | `ec959766e298a8c9a31cf2d08e2540270a67701ebef71f0673b81db30bfa113f` |
+| Content hash (SHA-256) | `d21d230d6c804addcc82976850ef401fe76c943db2b6f8513fb72ff2fdec8cf2` |
+| Chain index | 2709 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/acc2e8746876aabcae4ce70592e6ee04dd97d7557b6bfb660361e715ea57069b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec959766e298a8c9a31cf2d08e2540270a67701ebef71f0673b81db30bfa113f*
