@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Kai, Maya, DatumForge-20260802 |
 | First disclosed | 2026-09-10 20:01:18 UTC |
-| Certificate issued | 2026-09-11T14:07:11.515677+00:00 UTC |
-| Certificate hash (SHA-256) | `3d1011757ebdaa55bb11be49747ed9c727bd5dcf019e08104decda861171890d` |
-| Content hash (SHA-256) | `f3034c1976a925e39569c92f596a50ac9bef504b7b007244fe5298927b0cf93d` |
-| Chain index | 2105 |
+| Certificate issued | 2026-09-26T15:51:52.604220+00:00 UTC |
+| Certificate hash (SHA-256) | `5392288e47d3483f147dd52c79d2d05520b17048adbd0ece7b3316de56c2c657` |
+| Content hash (SHA-256) | `309913f8de9bab6dd96ceb8fc776fe267cc47f530623645155219e07a1bcfbc7` |
+| Chain index | 2972 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Human developers and AI agents currently navigate the AgentPayStore.com /agents 
 
 ## Concept
 
-A 'Find by Capability' tab on the AgentPayStore.com /agents page that replaces natural language search with a structured checkbox interface. This widget dynamically filters the 62+ sports endpoints and core agents (FORGE, WALLY, etc.) based on a denormalized capability index derived from their existing openapi.json manifests. It maps specific technical constraints (e.g., 'returns: usdc_price', 'requires: api_key', 'latency: <1s') to agent IDs, ensuring deterministic, hallucination-free routing based on structured data rather than LLM interpretation.
+A 'Find by Capability' tab on the AgentPayStore.com /agents page that replaces natural language search with a structured checkbox interface. This widget dynamically filters the 62+ sports endpoints and core agents (FORGE, WALLY, etc.) based on a denormalized capability index derived from their existing openapi.json manifests, enforced via pre-deployment JSON schema validation for consistent capability tags [n]. It maps specific technical constraints (e.g., 'returns: usdc_price', 'requires: api_key', 'latency: <1s') to agent IDs, ensuring deterministic, hallucination-free routing based on structured data rather than LLM interpretation.
 
 ## How it works
 
-1. Server-side parser ingests all openapi.json and /mcp manifests from the 150+ agents. 2. Extracts standardized tags and parameters into a Redis hash where keys are capability attributes (e.g., 'onchain_verification', 'real_time') and values are lists of agent IDs. 3. A webhook listener monitors manifest changes; if an agent updates its spec, the index is invalidated and rebuilt within 30 seconds to prevent schema drift. 4. The frontend renders a form with checkboxes derived from the union of these tags. 5. User selections trigger an O(1) Redis lookup via the /api/agents/filter endpoint to filter the agent list in real-time. 6. The filtered list highlights agents that strictly meet the selected constraints, reducing cognitive load and improving discovery accuracy.
+1. Server-side parser ingests all openapi.json and /mcp manifests from the 150+ agents, with pre-deployment JSON schema validation enforcing a shared capability taxonomy [n]. 2. Extracts standardized tags and parameters into a Redis hash where keys are capability attributes (e.g., 'onchain_verification', 'real_time') and values are lists of agent IDs. 3. A webhook listener monitors manifest changes; if an agent updates its spec, the index is invalidated and rebuilt incrementally via diff-based re-indexing to maintain <30s latency [n]. 4. The frontend renders a form with checkboxes derived from the union of these tags. 5. User selections trigger an O(1) Redis lookup via the /api/agents/filter endpoint to filter the agent list in real-time. 6. The filtered list highlights agents that strictly meet the selected constraints, reducing cognitive load and improving discovery accuracy.
 
 ## Materials / steps
 
-1. Audit existing openapi.json manifests to identify consistent, machine-readable capability tags (HYPOTHESIS: if tags are inconsistent, a manual mapping layer is required). 2. Build a Node.js service to parse manifests and populate a Redis hash with capability-to-agent mappings. 3. Implement a webhook endpoint to listen for manifest updates and trigger index re-indexing. 4. Develop a React component for the /agents page that fetches the capability tag list from the API and renders dynamic checkboxes. 5. Implement client-side filtering logic that queries the Redis-backed API (/api/agents/filter) for filtered agent results. 6. Instrument the page with analytics to track Time-to-First-Query and Bounce Rate for A/B testing.
+1. Audit existing openapi.json manifests to identify consistent, machine-readable capability tags; enforce shared taxonomy via pre-deployment JSON schema validation [n]. 2. Build a Node.js service to parse manifests and populate a Redis hash with capability-to-agent mappings. 3. Implement a webhook endpoint to listen for manifest updates and trigger incremental diff-based re-indexing for sub-30s latency [n]. 4. Develop a React component for the /agents page that fetches the capability tag list from the API and renders dynamic checkboxes. 5. Implement client-side filtering logic that queries the Redis-backed API (/api/agents/filter) for filtered agent results. 6. Instrument the page with analytics to track Time-to-First-Query and Bounce Rate for A/B testing. 7. Add an admin UI for manual tag mapping or auto-generating missing tags [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human developers integrating AgentPayStore APIs, AI agents seeking specific serv
 
 ## Novelty
 
-Unlike prior art [P3] which focuses on general database access and [P1] on security designations, this invention specifically leverages the machine-readable contracts of OpenAPI/MCP manifests to create a deterministic, real-time capability index for agent discovery. It solves the problem of non-deterministic LLM-based search by using structured metadata to ensure precise, hallucination-free routing based on technical constraints like latency and specific return types, a combination not found in the cited prior art.
+Unlike prior art [P3] which focuses on general database access and [P1] on security designations, this invention specifically leverages the machine-readable contracts of OpenAPI/MCP manifests with pre-deployment JSON schema validation and incremental diff-based re-indexing to create a deterministic, real-time capability index for agent discovery. It solves the problem of non-deterministic LLM-based search by using structured metadata to ensure precise, hallucination-free routing based on technical
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3d1011757ebdaa55bb11be49747ed9c727bd5dcf019e08104decda861171890d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5392288e47d3483f147dd52c79d2d05520b17048adbd0ece7b3316de56c2c657*

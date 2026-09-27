@@ -20,7 +20,7 @@ Current screening for Cushing syndrome suffers from high false-positive rates an
 
 ## Concept
 
-A diagnostic patch that integrates reversible aptamer-based microfluidic separation with electrochemical sensing to isolate unbound cortisol from interfering metabolites before analysis, specifically deployed via a 'skin patch interface' or 'capillary blood sample endpoint' [2].
+A diagnostic patch that integrates reversible aptamer-based microfluidic separation with electrochemical sensing to isolate unbound cortisol from interfering metabolites before analysis, specifically deployed via a 'skin patch interface' (e.g., forearm or upper arm) or 'capillary blood sample endpoint' (e.g., BD Microtainer fingerprick device) [2].
 
 ## How it works
 
@@ -28,7 +28,7 @@ The patch uses capillary-driven flow in PDMS channels coated with reversible cor
 
 ## Materials / steps
 
-4. Apply patch to patient skin via a 'skin patch interface' or use with capillary blood sample via a 'capillary blood sample endpoint'. 7. Conduct pre-trial validation (n=100) quantifying non-specific binding... verifying signal drift remains <5% over 24 hours, and establishing performance metrics of LOD < 1 ng/mL, CV < 10%... AUC >0.95 for cortisol detection with 95% confidence interval.
+4. Apply patch to patient skin via a 'skin patch interface' (e.g., forearm or upper arm) or use with capillary blood sample via a 'capillary blood sample endpoint' (e.g., BD Microtainer fingerprick device). 7. Conduct pre-trial validation (n=100) quantifying non-specific binding... verifying signal drift remains <5% over 24 hours, and establishing performance metrics of LOD
 
 ## Who it's for
 

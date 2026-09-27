@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | Alex, Finn, Zoe |
 | First disclosed | 2026-09-13 02:09:18 UTC |
-| Certificate issued | 2026-09-26T10:27:56.754469+00:00 UTC |
-| Certificate hash (SHA-256) | `5d2387c060cafc1253d4f7ca0f46f39237ee5ce826f6a2a129c9b5b5ad6fb5ad` |
-| Content hash (SHA-256) | `4f77d6c8d4ebb508064ae9f97d003bbdb8315d3e87d083cec25629c81dc36e5e` |
-| Chain index | 2828 |
+| Certificate issued | 2026-09-26T21:29:49.016927+00:00 UTC |
+| Certificate hash (SHA-256) | `8657480ff8b538edb9c94fa7fd796bd7b72cc4498344a15916f447c3e05c7c5b` |
+| Content hash (SHA-256) | `248442d77b6214882b9e1dce63ec2fc7fb63f0905f298d1ff1c49cacaa61d0db` |
+| Chain index | 3126 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A 'Sensory-Collateral Handshake' protocol that gates the release of treasury cap
 
 ## Materials / steps
 
-1. Deploy federated IoT sensor mesh with HSMs and threshold signature capabilities (e.g., 3-of-5 signing quorum). 2. Implement consensus algorithm with drift compensation (e.g., Kalman filtering for sensor fusion) and randomized challenge protocols (e.g., 10% random sensor re-attestation requests per minute). 3. Develop Treasury AI Agent with threshold signature verification and challenge-response validation logic. 4. Code drift compensation algorithms [3] to adjust for environmental factors (temperature, vibration, etc.) in state hash generation. 5. Establish latency threshold (<500ms) and configure watchdog system to detect sensor mesh anomalies (e.g., >15% deviation in consensus hash frequency). 6. Integrate with stateful monitoring systems [1] to log verification attempts, drift adjustments, and challenge outcomes. 7. Monitor `block_rate` and `drift_compensation_rate` metrics to ensure gate efficacy and sensor mesh integrity.
+7. ... Implement success criteria: 95% of consensus hashes validated within 500ms, 10% reduction in drift-compensated errors (measured via `drift_compensation_rate` metric).
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ The invention introduces threshold signature-based consensus and environmental d
 
 ## Ecosystem use
 
-This system can be integrated into an AI-agent platform as a 'Physical Verification Service' API. The Treasury Agent calls this API before executing a capital deployment. The API returns a boolean 'verified' status and the cryptographic proof. This allows other agents in the ecosystem (e.g., risk management, compliance) to access the same verified physical state data, ensuring consistency across the agent swarm. It can also be used in payment systems where physical collateral is required for high-value transactions.
+Sensor mesh configuration files: `/api/v1/config/sensor-mesh` (defines HSM threshold quorum, drift compensation parameters), consensus algorithm interfaces: `/api/v1/consensus/pbft` (exposes drift-compensated state hash generation), and monitoring endpoints: `/api/v1/monitor/metrics` (logs `block_rate`, `drift_compensation_rate`, and validation latency).
 
 ## Diagram
 
@@ -67,4 +67,4 @@ flowchart TD
 6. The official site of the NBA for the latest NBA Scores, Stats & News ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5d2387c060cafc1253d4f7ca0f46f39237ee5ce826f6a2a129c9b5b5ad6fb5ad*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8657480ff8b538edb9c94fa7fd796bd7b72cc4498344a15916f447c3e05c7c5b*

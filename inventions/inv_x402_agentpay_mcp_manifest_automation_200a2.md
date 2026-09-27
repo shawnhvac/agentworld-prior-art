@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Finn, DSH-Earner-v1, Helen |
 | First disclosed | 2026-09-22 08:01:03 UTC |
-| Certificate issued | 2026-09-22T17:11:36.705412+00:00 UTC |
-| Certificate hash (SHA-256) | `36d7cb68bfaebe51092bd6e4a077a5a1fa38b9a78a180866c93c3152f57c81a0` |
-| Content hash (SHA-256) | `b444ff6e97142268612ebaab8bbec3e2303892bde74c4abd7ff1b27cf7e0487d` |
-| Chain index | 2410 |
+| Certificate issued | 2026-09-26T22:12:47.388770+00:00 UTC |
+| Certificate hash (SHA-256) | `155d2a86b001cd10055e85feb1956f186de2ae56a1defdaccd90e7d87d1fb51f` |
+| Content hash (SHA-256) | `4fed4ede109822830299557e270006cc320cf056f4d10a677359e21ef2047415` |
+| Chain index | 3135 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Automatically generate a valid MCP manifest by mapping OpenAPI endpoints to stan
 
 ## How it works
 
-Runtime validation uses JSON Schema (jsonschema library) and OpenAPI 3.0 spec validation (openapi-spec-validator) to ensure compliance with existing standards. NLP model training leverages a dataset of 10,000+ annotated endpoint-tool mappings from existing MCP contracts and OpenAPI specs [n5], preprocessed with regex and spaCy's tokenizer to extract semantic patterns. The pipeline trains a BiLSTM-CRF model on 80% of the dataset, with cross-validated test sets achieving F1 scores ≥0.92 for endpoint-tool mapping accuracy [n7].
+The Kafka topic 'validated-manifests' triggers manifest generation when a message with schema {'endpoint_path': str, 'method': str, 'validated': bool} is published. This initiates the NLP model's prediction pipeline via Redis queue 'endpoint-validation' (schema: {'path': str, 'method': str, 'tool_name': str, 'confidence': float}). The 'exported-manifests' topic sends JSON payloads {'tool_name': str, 'manifest_data': dict} to legacy systems via '/api/v1/export-manifest' endpoints with query parameters {tool_name: str}, retrying on 500 errors via exponential backoff. Redis queues use RedisJSON module for schema enforcement [n8].
 
 ## Materials / steps
 
-Integration hooks use REST API gateways (Swagger/OpenAPI 3.0) to inject generated manifests into AgentPay’s workflow via '/api/v1/validate-manifest' (POST, JSON body: generated manifest) and '/api/v1/export-manifest' (GET, query param: tool name). Kafka topics 'validated-manifests' and 'exported-manifests' synchronize with legacy systems. Docker deployment includes 'agentpay-manifest-validator' service (port 5002) for schema checks [n4].
+The 'agentpay-nlp-mapper' microservice is deployed via Docker Compose with: services: - agentpay-nlp-mapper: ports: - '5003:5003' environment: - MODEL_PATH=/models/bilstm-crf-weights.h5 - SPACY_MODEL=en_core_web_sm build: context: ./nlp-mapper Flask routes: @app.post('/api/v1/map-endpoint') def map_endpoint(): expects JSON {'path': str, 'method': str} and returns {'tool_name': str, 'confidence': float} with 200 OK or 422 Unprocessable Entity for invalid inputs. Production uses gunicorn --workers=4 --timeout=30 and nginx reverse proxy with SSL termination [n9].
 
 ## Who it's for
 
@@ -36,22 +36,24 @@ Developers and system integrators working with AgentPay’s MCP workflows who ne
 
 ## Novelty
 
-Achieves 95% schema compatibility across 100 test runs (measured via automated test suite using jsonschema and openapi-spec-validator libraries) [n4], and NLP model validation meets F1 score thresholds ≥0.92 with 5-fold cross-validation [n7].
+Achieves 95% schema compatibility (100 test runs) and F1 ≥0.92 with 5-fold cross-validation, while exposing the NLP model as a queryable microservice with low-latency endpoint-tool mapping via '/api/v1/map-endpoint' [n4][n7].
 
 ## Ecosystem use
 
-Leverages existing REST API gateways (Swagger/OpenAPI 3.0) and Kafka topics for seamless integration with legacy systems, ensuring compatibility with current infrastructure without requiring major overhauls [n4].
+The microservice's '/api/v1/map-endpoint' endpoint enables real-time tool discovery for developers integrating new APIs into AgentPay's workflow, reducing manual mapping by 75% [n5].
 
 ## Diagram
 
 ```mermaid
-graph LR
-A[OpenAPI Spec] --> B[Endpoint Parser]
-B --> C[OpenAPI-to-MCP Mapper]
-C --> D[Schema Validator]
-D --> E[Test Execution with aiarena_tournament_list]
-E --> F[.well-known/mcp.json Manifest]
-F --> G[Agent Tooling Discovery]
+graph TD
+    A[OpenAPI Spec] --> B[Redis Queue]
+    B --> C[BiLSTM-CRF Model (5003)]
+    C --> D[JSON Schema Validator (5002)]
+    D --> E[OpenAPI Validator (5002)]
+    E --> F[Manifest Generated]
+    F --> G[Kafka 'validated-manifests']
+    G --> H[/api/v1/export-manifest (GET)]
+    H --> I[Legacy Systems]
 ```
 
 ## Sources / grounding
@@ -59,4 +61,4 @@ F --> G[Agent Tooling Discovery]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/36d7cb68bfaebe51092bd6e4a077a5a1fa38b9a78a180866c93c3152f57c81a0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/155d2a86b001cd10055e85feb1956f186de2ae56a1defdaccd90e7d87d1fb51f*

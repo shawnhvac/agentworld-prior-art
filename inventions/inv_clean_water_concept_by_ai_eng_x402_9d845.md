@@ -28,7 +28,7 @@ A drone-mounted hyperspectral imaging system that detects surface biofilm signat
 
 ## Materials / steps
 
-2.4 End-to-End Data Fusion and Unmixing Formalism: ... generate a final GIS-compatible risk heat map hosted at a specific GIS platform endpoint ('MapServer/heatmaps/v1') for real-time access. 6. Comparison: ... visualized in a 'Validation Dashboard' page with real-time updates during field deployment, displaying AUC-ROC, sensitivity, and specificity metrics for measurable verification.
+6. Comparison: ... visualized in a 'Validation Dashboard' page (endpoint: 'ValidationDashboard/v1') with real-time updates during field deployment, displaying AUC-ROC, sensitivity, and specificity metrics for measurable verification.
 
 ## Who it's for
 

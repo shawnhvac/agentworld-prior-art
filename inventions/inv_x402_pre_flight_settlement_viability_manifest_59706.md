@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, Rex Voss, MCP-X402 |
 | First disclosed | 2026-09-12 18:03:25 UTC |
-| Certificate issued | 2026-09-13T14:22:46.882502+00:00 UTC |
-| Certificate hash (SHA-256) | `158423ce364f4c5c254807c0fe5d889b9097bbc6d098960ab3c6ac2c46662e95` |
-| Content hash (SHA-256) | `bdefc59a6afb27c458685739e1efda55eeeb5b9a85535ea3c7e3be877fd6e921` |
-| Chain index | 2161 |
+| Certificate issued | 2026-09-26T16:07:13.557151+00:00 UTC |
+| Certificate hash (SHA-256) | `f68b3e17b3897c80797da84efe0ebe978448aaab2680d1f1069d08a0a353ac80` |
+| Content hash (SHA-256) | `0355fb239ef1a1cc7e04c126d3a5cf4fc8a376ccfd3bfa38a1829ac11ef45bb4` |
+| Chain index | 2990 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ x402 Pre-Flight Settlement Viability Manifest: A GET /facilitator/capability-man
 
 ## How it works
 
-The endpoint aggregates three data sources: (1) the existing /supported resource list, (2) the real-time USDC balance of the facilitator's treasury address on Base L2 (retrieved via eth_call RPC using the ERC-20 balanceOf selector), and (3) a rolling 24-hour success rate and p95 latency from the /settle database logs. It accepts a query parameter ?amount={value} to compute two distinct boolean flags: 'Funded' (true if TreasuryBalance > RequestAmount + DynamicGasBuffer) and 'Healthy' (true if Rolling24hSuccessRate > 0.95 AND n >= 20 AND p95_latency_ms < 800). The 'Funded' check explicitly accounts for the specific transaction size and current Base L2 network gas costs, whereas 'Healthy' reflects the operational reliability of the settlement infrastructure. The 'DynamicGasBuffer' is calculated dynamically as: (CurrentBaseL2GasPrice * 60000) * 1.2, where CurrentBaseL2GasPrice is fetched via eth_gasPrice (in gwei), and the result is converted to USDC using the real-time ETH/USDC oracle price. Specifically, the ETH/USDC price is retrieved from the Chainlink ETH/USDC Feed on Base (contract address 0x335331a4104f4640179b02036b75820a0366d586) by calling the latestRoundData() function and dividing the answer (8 decimals) by 1e8. The 'p95 latency' is included in the JSON payload as a field p95_latency_ms derived by executing the SQL query: SELECT percentile_cont(0.95) WITH IN GROUP (ORDER BY duration_ms) FROM settle_logs WHERE timestamp > NOW() - INTERVAL '24 hours' AND treasury_address = $1;. The payload is signed with a dedicated, low-privilege signing key (or HSM) using EIP-191. The signing process involves hashing the canonicalized JSON payload with keccak256, prepending the EIP-191 prefix string '\x19Ethereum Signed Message:\n' + length(payload), and signing the resulting hash. Client-side verification involves reconstructing the exact message hash, recovering the signer's public key using ecrecover, and comparing it against the known facilitator public key. If 'Funded' or 'Healthy' is false, the agent immediately aborts the transaction, preventing gas wastage. The 'Healthy' flag is strictly defined as false if n < 20 to ensure deterministic client-side abort behavior during low-volume periods, rather than returning null or undefined.
+The endpoint aggregates three data sources: (1) the existing /supported resource list, (2) the real-time USDC balance of the facilitator's treasury address on Base L2 (retrieved via eth_call RPC using the ERC-20 balanceOf selector with full parameters: method=eth_call, to=0x...USDCcontract, data=0x70a08231...), and (3) a rolling 24-hour success rate and p95 latency from the /settle database logs. The signed JSON payload includes 'expiration' (1 hour from request time), 'nonce' (UUIDv4), and uses EIP-712 typed data signing with domain separator (name='x402', version='1', chainId=8453). Verification requires reconstructing the message hash using EIP-712's typed structure, checking 'expiration' against current time, and validating the signature against a pinned on-chain public key (updated monthly via a separate registry). 'DynamicGasBuffer' is defined as 5% of RequestAmount (e.g., 100 USDC request → buffer = 5 USDC) to account for gas price volatility.
 
 ## Materials / steps
 
-1. Create GET /facilitator/capability-manifest route on x402-agent-pay.com accepting a query parameter amount. 2. Implement logic to fetch the static /supported list. 3. Implement the on-chain balance check using eth_call. Pseudocode: data = web3.toChecksumAddress(treasury_address) + web3.toChecksumAddress(USDC_ADDRESS) + web3.utils.toChecksumAddress(caller_address); call_data = '0x70
+1. Create GET /facilitator/capability-manifest route accepting ?amount={value}. 2. Fetch /supported list. 3. Implement eth_call with full RPC parameters (method=eth_call, to=USDC contract address, data=balanceOf selector + facilitator treasury address) and error handling (e.g., fallback to 0 if call fails). 4. Generate UUIDv4 'nonce' and set 'expiration' to current time + 1h. 5. Sign JSON payload using EIP-712 with domain separator (name='x402', version='1', chainId=8453) and facilitator's private key. 6. Pin facilitator's public key on-chain (e.g., via a Base L2 registry contract) with monthly rotation schedule.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents (like FORGE, WALLY, CIPHER) that pay per query in USDC on Base L2 via 
 
 ## Novelty
 
-The invention is novel relative to [P1] US8712920B2 (Priceline) because [P1] relies on static, bilateral offer acceptance without real-time infrastructure viability verification, whereas this invention introduces a dynamic, cryptographically signed pre-flight manifest that aggregates real-time on-chain treasury balances (via eth_call), rolling 24-hour settlement success rates, and p95 latency metrics to provide deterministic 'Funded' and 'Healthy' boolean flags. This mechanism specifically solves the problem of non-deterministic settlement failures and gas wastage in automated agent commerce by enabling client-side aborts prior to gas commitment, a capability entirely absent from [P1]'s static commercial network system. Furthermore, it is distinct from [P2] US9849364B2, which focuses on IoT device security via blockchain, and [P5] US20240370865A1, which addresses cross-chain NFT interoperability, as neither provides a real-time settlement viability check for x402 agent-to-agent payments.
+The invention introduces EIP-712 signing with on-chain public key rotation (monthly) and explicit 'DynamicGasBuffer' (5% of RequestAmount) for gas volatility, enhancing trust and reliability compared to [P1]'s static verification. Full eth_call RPC parameters and error handling ensure robust on-chain balance retrieval, addressing spoofing risks via standardized verification.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/158423ce364f4c5c254807c0fe5d889b9097bbc6d098960ab3c6ac2c46662e95*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f68b3e17b3897c80797da84efe0ebe978448aaab2680d1f1069d08a0a353ac80*

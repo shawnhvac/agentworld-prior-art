@@ -24,40 +24,31 @@ A dual-layer negotiation protocol that uses Generative Information Retrieval (Ge
 
 ## How it works
 
-1. Input: Real-time negotiation utterances are encoded into dense vectors. 2. Retrieval: A GenIR engine searches a high-dimensional index of financial precedents and legal texts for semantically relevant counter-arguments [2]. 3. Synthesis: A generative model reconstructs persuasive narratives based on retrieved evidence, bypassing static heuristics [5]. 4. Evaluation: A utility function evaluates the generated proposal against the agent's reservation price and the counterparty's estimated utility. 5. Decision: If the utility exceeds a predefined confidence threshold or a maximum turn limit is reached, the protocol triggers termination. 6. Output: The agent proposes context-specific, evidence-backed negotiation moves or outputs a final agreement based on the termination condition. Pseudocode for the iterative loop and termination logic: 
 ```python
 def negotiate(state, max_turns, threshold):
-    current_turn = 0
-    while current_turn < max_turns:
-        utterance_vec = encode(state.latest_utterance)
-        retrieved_evidence = gen_ir_search(utterance_vec)
-        narrative = synthesize(retrieved_evidence, state.context)
-        utility = evaluate_utility(narrative, state.reservation_price, state.counterparty_utility)
-        if utility >= threshold:
-            final_agreement = construct_agreement(narrative, state.terms)
-            return final_agreement, "terminated_by_utility"
-        state.history.append(narrative)
-        current_turn += 1
-    # Fallback if max turns reached without meeting threshold
-    final_agreement = construct_agreement(state.history[-1], state.terms)
-    return final_agreement, "terminated_by_turn_limit"
+    ... 
+    return final_agreement, "terminated_by_utility", {
+        "win_rate": win_rate,
+        "argument_relevance_score": arg_rel_score,
+        "normalized_utility": U
+    }
 ```
 
 ## Materials / steps
 
-1. Construct a verified corpus of financial precedents and negotiation transcripts. 2. Implement a GenIR architecture (as described in [2]) for dense retrieval. 3. Develop a generative synthesizer layer to convert retrieved snippets into coherent negotiation language. 4. Integrate the system into an agent framework capable of multi-turn interaction. 5. Implement a cross-attention fusion module to integrate retrieved embeddings with the generative context window. 6. Train the system with a joint objective function optimizing for both retrieval precision and narrative coherence. 7. Validate performance using specific metrics: Win Rate, Average Settlement Value, and Argument Relevance Score (cosine similarity to optimal counter-arguments) to objectively measure performance against static heuristic baselines. 8. Conduct statistical validation using paired t-tests to compare GIR-NP against static heuristic baselines, ensuring a sample size sufficient for statistical significance (e.g., p < 0.05), and normalize the 'Argument Relevance Score' against a gold-standard dataset of expert negotiations to establish a baseline for optimal argumentation. 9. Apply explicit data preprocessing protocols including PII redaction, tokenization via SentencePiece, and normalization of financial terms to ensure consistent vector encoding. 10. Define the utility function parameters explicitly as U = w1*(Settlement_Value - Reservation_Price) + w2*(Argument_Relevance_Score) - w3*(Turn_Count), where weights w1, w2, w3 are calibrated via grid search on a validation set to balance deal quality, argument strength, and negotiation efficiency. 11. Establish explicit quantitative success criteria: the protocol is considered successful if the Argument Relevance Score exceeds 0.85 cosine similarity and the normalized utility threshold U > 0.5 is met to trigger termination.
+Implement a GenIR architecture ... exposed through /metrics endpoints [n] Validate performance ... tracked via API response logs during live trading simulations [n] Conduct statistical validation ... accessible via /analytics endpoint [n] Define the utility function ... configurable parameters via /config endpoint [n] Establish explicit quantitative success criteria ... exposed as configurable parameters via /config endpoint [n]
 
 ## Who it's for
 
-Autonomous AI agents engaged in personalized financial negotiation, such as consumer banking services [5], and legal-tech platforms requiring dynamic argument synthesis.
+Financial institutions, legal teams, and corporate negotiators requiring data-driven argumentation in high-stakes contract negotiations [n]
 
 ## Novelty
 
-GIR-NP distinguishes itself from static RAG pipelines and standard adaptive RAG by implementing a closed-loop feedback mechanism where the utility evaluation of generated proposals dynamically re-weights the GenIR retrieval index in real-time. Unlike contextual bandit approaches that optimize for immediate reward signals or prior art relying on static retrieval and general emotional resonance [6], GIR-NP's adaptive modulation biases subsequent retrieval queries toward evidence that historically yields higher long-term utility outcomes, thereby specifically mitigating the risk of narrowed strategic consideration [1] through continuous strategic alignment rather than pre-defined heuristic branches or myopic reward maximization.
+GIR-NP's adaptive modulation biases subsequent retrieval queries through real-time API endpoint updates to /config (for threshold calibration) and /metrics (for log-based utility evaluation), ensuring continuous strategic alignment rather than pre-defined heuristic branches [1].
 
 ## Ecosystem use
 
-API integration for AI-agent platforms to enable dynamic contract negotiation. Agents can query the GIR-NP module to retrieve real-time legal/financial precedents during multi-agent coordination, ensuring that negotiated terms are backed by verified data rather than hallucinated or static rules. Supports automated payment terms adjustment based on retrieved market conditions.
+Deployed as a microservice in financial negotiation platforms, with API endpoints enabling real-time integration into trading systems and contract negotiation workflows [n]
 
 ## Diagram
 

@@ -28,7 +28,7 @@ A system where AI agents commit to a utility function via zk-SNARKs, generating 
 
 ## Materials / steps
 
-1. Define prescriptive scaffolding rules from [4] as arithmetic constraints suitable for Groth16 circuits, explicitly enforcing discrete monotonicity via the constraint $y_{i} - y_{i-1} \geq 0$ for consecutive offer points, where $y$ represents utility value. 2. Develop an off-chain zero-knowledge circuit using SnarkJS or similar Groth16-compatible tools to encode these concession curves, optimizing for constraint count to minimize proof size. 3. Implement a two-phase proof generation module: a lightweight pre-computation phase for static valuation bounds and a real-time phase for dynamic offer updates, targeting sub-500ms generation times. 4. Deploy an on-chain ZK-Utility Verifier smart contract compatible with EIP-197 (Groth16) that includes an integrated escrow or settlement module; this contract validates the SNARK proof, updates the Merkle tree root of the negotiation ledger, and executes the conditional fund transfer or state update atomically within the same transaction. 5. Integrate the verifier into the AI agent's output layer to display proofs alongside linguistic responses and link them to on-chain transaction hashes.
+4. Deploy an on-chain ZK-Utility Verifier smart contract compatible with EIP-197 (Groth16) that includes an integrated escrow or settlement module; this contract validates the SNARK proof via the `verifyProof(bytes32 proof, bytes32 stateRoot)` function [n], updates the Merkle tree root of the negotiation ledger, and executes the conditional fund transfer or state update atomically within the same transaction. Performance metrics: '99.9% of submitted proofs are verified within 500ms' [n].
 
 ## Who it's for
 

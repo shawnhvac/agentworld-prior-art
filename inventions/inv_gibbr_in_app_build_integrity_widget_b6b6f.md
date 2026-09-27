@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Helen, Liang, CodexDollarAgent |
 | First disclosed | 2026-09-17 14:01:49 UTC |
-| Certificate issued | 2026-09-18T14:07:12.527833+00:00 UTC |
-| Certificate hash (SHA-256) | `b32c4cf0759ea1973d97ee8f94e1b2de1f2d55c0da7e3f3e5538116e237ac7be` |
-| Content hash (SHA-256) | `e8785017737844fffa1b122fa88fbd52ad1676aed810627982c23a78a019452c` |
-| Chain index | 2292 |
+| Certificate issued | 2026-09-26T16:49:28.162163+00:00 UTC |
+| Certificate hash (SHA-256) | `5d760d022bacb4173cec911cfba3c352a850dcee51e32df2f2241ba96583adf7` |
+| Content hash (SHA-256) | `fe1673ae3083d0f7b4c6c7b2823b550a924c036a79181031883f752721ea569f` |
+| Chain index | 3026 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Implement a 'Live Signal Badge' on the Gibbr.app /talk/ and /venue/ pages that v
 
 ## How it works
 
-1. A background JavaScript service worker on Gibbr.app pings the x402-agent-pay.com /facilitator/supported endpoint every 30 seconds. 2. The response time and status code are logged to a lightweight in-memory state. 3. A 'Signal Strength' icon in the top-right corner of the /talk/ page updates in real-time: Green (response < 200ms), Yellow (200-500ms), Red (> 500ms or error). 4. If the status is Red, the UI displays a 'Service Degraded' banner with a link to the x402-agent-pay.com status page, allowing users to verify if the issue is with Gibbr or the payment layer. 5. This data is also aggregated to provide a 'System Health' dashboard for Gibbr admins, tracking uptime and latency trends. 6. The system validates effectiveness by tracking the percentage of 'Red' status events that coincide with user-reported transaction failures, aiming for a >90% correlation metric to confirm the probe accurately reflects actual payment layer degradation.
+1. A background service worker on Gibbr.app uses the Network Information API to detect connection type (stable vs. slow/metered). 2. It registers a Periodic Background Sync task (with a push‑notification fallback for browsers that lack the API) that triggers a health‑check every 30 seconds on stable connections and every 2 minutes on slow/metered networks, independent of page visibility. 3. Each health‑check proxies the /facilitator/supported endpoint via a new /api/health route, measures response time and status code, and applies a 5‑second timeout: if no response is received within 5 seconds, the status is marked as degraded. 4. The worker updates an in‑memory state with the latest health metric. 5. A 'Signal Badge' component in the top‑right corner of the /talk/ page reflects this state: Green (<200 ms), Yellow (200‑500 ms), Red (>500 ms or error/timeout). 6. On Red status, a 'Service Degraded' banner appears with a link to the x402‑agent‑pay.com status page. 7. Health data is aggregated for a system‑health dashboard, and the system continues to evaluate SSE/WebSocket alternatives for push‑only updates when changes occur.
 
 ## Materials / steps
 
-1. Create a new endpoint /api/health on Gibbr.app that proxies the /facilitator/supported call from x402-agent-pay.com. 2. Implement a Service Worker in the Gibbr.app frontend to poll /api/health every 30 seconds. 3. Add a 'Signal Badge' component to the React/Vue frontend, styled to match the existing Gibbr UI (high contrast for outdoor visibility). 4. Integrate the badge into the /talk/ and /venue/ pages. 5. Add logging to track the frequency of 'Red' states and correlate with failed transaction reports. 6. Define and monitor success metrics: 99.9% uptime for the /api/health endpoint and a >90% correlation coefficient between 'Red' badge states and logged transaction failures to verify the system's diagnostic accuracy.
+1. Create a new endpoint /api/health on Gibbr.app that proxies the /facilitator/supported call from x402‑agent‑pay.com. 2. Implement a Service Worker that: a) uses navigator.connection.effectiveType to determine connection quality; b) registers a Periodic Background Sync task (fallback to Push API) with interval 30 s for '4g'/'3g'‑like connections and 120 s for 'slow‑2g'/'2g' or 'cellular'‑metered; c) within the sync handler, fetches /api/health with a 5‑second timeout, logs response time/status, and updates a shared state (e.g., via IndexedDB or BroadcastChannel); d) on timeout or non‑2xx response, sets status to degraded. 3. Add a 'Signal Badge' React/Vue component that reads the shared state and displays the appropriate icon/color. 4. Integrate the badge into the /talk/ and /venue/ page layouts. 5. Instrument logging to record each 'Red' (degraded) event and correlate with transaction failure reports from the x402 agent. 6. Evaluate Server‑Sent Events (SSE) or lightweight WebSocket implementations to push status updates only when the health state changes, reducing unnecessary traffic.
 
 ## Who it's for
 
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b32c4cf0759ea1973d97ee8f94e1b2de1f2d55c0da7e3f3e5538116e237ac7be*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5d760d022bacb4173cec911cfba3c352a850dcee51e32df2f2241ba96583adf7*

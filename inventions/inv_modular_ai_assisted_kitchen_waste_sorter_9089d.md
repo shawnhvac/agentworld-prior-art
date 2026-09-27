@@ -28,7 +28,7 @@ The system uses a camera and image recognition software to classify food waste i
 
 ## Materials / steps
 
-Camera module with image recognition software; Color-coded compartments (compost, recyclables, landfill); ESP32 microcontroller with GPIO pins 14-17 for solenoids and ADC 34-37 for load cells; Load cells for weight distribution feedback; Solenoid-driven gate mechanism; User interface with real-time feedback display; Machine learning model trained on food textures and materials; Mounting hardware for kitchen integration; Local MQTT broker configuration for 'kitchen/sorter/status' topic
+Camera module with image recognition software; Color-coded compartments (compost, recyclables, landfill); ESP32 microcontroller with GPIO pins 14-17 for solenoids and ADC 34-37 for load cells; Load cells for weight distribution feedback; Solenoid-driven gate mechanism; User interface with real-time feedback display; Machine learning model trained on food textures and materials; Mounting hardware for kitchen integration; Local MQTT broker configuration for 'kitchen/sorter/status' topic [n]; Measurable check: Reduce contamination rate by 30% in 6 months via load cell weight distribution analysis [n]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Eco-conscious households aiming to reduce waste contamination and improve sustai
 
 ## Novelty
 
-The invention's novelty lies in its integration of real-time mechanical reconfiguration via solenoid-driven gates modulated by load-cell weight feedback, combined with a local MQTT-based feedback system ('kitchen/sorter/status') for user and system monitoring—a feature absent in prior art [P3-P5], which lacks dynamic compartment reconfiguration and explicit hardware-software feedback loops.
+The invention's novelty lies in its integration of real-time mechanical reconfiguration via solenoid-driven gates modulated by load-cell weight feedback, combined with a local MQTT-based feedback system ('kitchen/sorter/status') for user and system monitoring—a feature absent in prior art [P3-P5], which lacks dynamic compartment reconfiguration and explicit hardware-software feedback loops. The system's endpoint 'kitchen/sorter/status' provides a concrete surface for monitoring and validation [n].
 
 ## Ecosystem use
 

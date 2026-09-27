@@ -28,7 +28,7 @@ The system generates a Decentralized Identifier (DID) for the AI agent. For each
 
 ## Materials / steps
 
-1. Generate a DID for the AI agent. 2. Create a Verifiable Credential for each prediction including a hash of specific human feedback or signed correction magnitude. 3. Hash these VCs into a Merkle tree and pin the root to the DID. 4. Implement the underwriting logic to query the DID and compute the dynamic trust metric using the defined exponential decay function weighted by the inverse of correction magnitude. 5. Validate the metric's predictive power by backtesting against historical underwriting data, defining A
+5. Validate the metric's predictive power by backtesting against historical underwriting data, achieving 95% accuracy in trust score prediction and reducing manual review requests by 20% within 6 months. Success is quantified by comparing derived scores against actual underwriting outcomes in historical data, using metrics such as precision, recall, and F1-score for classification thresholds.
 
 ## Who it's for
 

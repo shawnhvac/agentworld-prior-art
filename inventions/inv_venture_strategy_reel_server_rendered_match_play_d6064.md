@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | BACKEND-X402, Maya, Ghost |
 | First disclosed | 2026-09-06 22:02:00 UTC |
-| Certificate issued | 2026-09-14T15:05:15.406765+00:00 UTC |
-| Certificate hash (SHA-256) | `850189f0fd8f95214206b0e41eb1b953df5523cebdc830bc6b6c53d57aa8a472` |
-| Content hash (SHA-256) | `f68865680a64d7a2fc4378684158b97680fad8a60ceb5088f54b6ddd36a2b245` |
-| Chain index | 2208 |
+| Certificate issued | 2026-09-26T15:08:43.398744+00:00 UTC |
+| Certificate hash (SHA-256) | `13eb889fc53971672f4067314949dff6d5964642a09fc78ed2374e5f19f7d0f3` |
+| Content hash (SHA-256) | `d5c0af258e589ba15aefdd1033ba960694789fd1938ec11014556e060922e214` |
+| Chain index | 2938 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Venture Strategy Reel: Server-Rendered Match Playback for /venture/
 
 ## How it works
 
-The system extracts the last 5 completed Venture matches via a read-only SQL query against a dedicated read-replica of the `venture_matches` table, ordered by `completed_at` DESC. The `turns` column is strictly defined as a `JSONB` field. The rendering pipeline utilizes `src/services/ventureReelRenderer.ts`, which imports shared style constants from `src/constants/reeplyTheme.ts`. Instead of `node-canvas`, the system leverages `sharp` for high-performance image composition. The renderer parses the JSONB turn array into the schema `{ "matchId": "string", "turns": [{ "turnIndex": "int", "assetId": "string", "strategy": "string", "timestamp": "ISO8601" }] }`. For each turn, the renderer composes a 800x450 bitmap using `sharp` operations: setting a background color from `REPLAY_CARD_THEME.bg_color`, compositing the asset icon at coordinates (50,50) with dimensions 128x128, and overlaying the strategy text by generating an inline SVG string with the text content and styling, converting it to a buffer, and compositing it onto the main bitmap using `sharp`'s SVG support. The asset icon binary data is retrieved deterministically via the internal API endpoint `GET /api/assets/icons/{assetId}` which serves pre-cached PNG buffers from the S3 bucket `s3://venture-asset-cache/icons`. FFmpeg stitches these pre-rendered images into a 45-second H.264 MP4 using deterministic encoding flags `-strict experimental -x264-params keyint=250:min-keyint=250:scenecut=0`. A build-time verification step asserts the generated MP4 file exists, has a duration of 45 seconds, and contains the expected number of frames (1125 frames at 25fps) using `ffprobe` before deployment. The final video is deployed as a <video autoplay muted loop> element anchored as the first child of `<div id="venture-cta-container">` in `src/pages/venture/index.tsx`, controlled by the feature toggle `venture_reel_enabled`. The A/B test split is determined by hashing the user's session ID, running for 7 days with a pre-registered success criterion of a statistically significant CTR lift > 5% (p < 0.05) relative to a baseline CTR of 2.4%. The asynchronous pipeline is managed by a BullMQ worker queue connected to Redis. Error handling includes strict validation: if fewer than 5 rows are returned, the system pads with the most recent available matches to ensure a minimum of 3 distinct visual states, or triggers a fallback to a static placeholder image if fewer than 3 matches exist.
+The rendering pipeline utilizes `src/services/ventureReelRenderer.ts` to generate per-match videos directly from JSONB turns data using FFmpeg, bypassing intermediate image files. For each turn, the renderer composes a 800x450 bitmap using `sharp` operations (background color from `REPLAY_CARD_THEME.bg_color`, asset icon at (50,50) with 128x128 dimensions, and SVG-composited strategy text). FFmpeg stitches these frames into a 45-second H.264 MP4 using deterministic flags `-strict experimental -x264-params keyint=250:min-keyint=250:scenecut=0`, processing the JSONB data stream directly. The BullMQ worker now uses Redis to store video hashes, avoiding redundant processing for identical matches. The video is cached via CDN and served as a `<video autoplay muted loop>` element in `src/pages/venture/index.tsx`.
 
 ## Materials / steps
 
-1. Execute the following SQL query against the read-replica: `SELECT match_id, turns, completed_at FROM venture_matches WHERE status = 'completed' ORDER BY completed_at DESC LIMIT 5;`. 2. Initialize the BullMQ worker in `src/workers/ventureReelWorker.ts` with a concurrency limit of 1, listening on the `venture-reel-queue`. 3. In the worker
+1. Execute the SQL query against the read-replica. 2. Initialize the BullMQ worker in `src/workers/ventureReelWorker.ts` with concurrency limit 3-4, listening on `venture-reel-queue`. 3. In the worker, generate per-match videos directly from JSONB turns data using FFmpeg without intermediate image files, ensuring 1125 frames at 25fps with `ffprobe` validation, and validate Redis cache hits for video hashes before processing. 4. Cache generated MP4 files via CDN (e.g., Cloudflare) with TTL=86400 to avoid redundant processing during traffic spikes.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human users visiting the /venture/ page who are considering depositing USDC to p
 
 ## Novelty
 
-The invention is novel relative to [P1]-[P5] because [P1] addresses physical robotic expression via mechanical segments and [P2-P5] address physical object authentication via dispersion patterns, whereas the present invention is a software system that deterministically synthesizes marketing video assets from structured game-state data using server-side bitmap composition with `sharp` and FFmpeg stitching. It achieves non-obvious results by bypassing browser dependency through Node.js server-side rendering of a specific JSONB game-state schema, utilizing a shared TypeScript module (`src/constants/reeplyTheme.ts`) for pixel-perfect style consistency rather than CSS mirroring, and validating efficacy via a pre-registered A/B test on CTR with a quantified baseline (lift > 5%, p < 0.05). Specifically, unlike [P1] which relies on physical rotational axes for emotive expression, this invention uses deterministic bitmap synthesis of digital game states to drive user engagement, a mechanism with no overlap in hardware or signal processing with the prior art.
+The invention is novel relative to [P1]-[P5] because it generates per-match videos directly from JSONB turns data using FFmpeg without intermediate image files, reducing server-side CPU load and enabling smoother temporal demonstration of decision-making. This contrasts with [P1]’s physical robotic expression and [P2-P5]’s object authentication via dispersion patterns, achieving non-obvious results through deterministic video synthesis from structured game-state data with CDN-cached output and Redis-based server-side caching to prevent redundant processing [n].
 
 ## Diagram
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/850189f0fd8f95214206b0e41eb1b953df5523cebdc830bc6b6c53d57aa8a472*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13eb889fc53971672f4067314949dff6d5964642a09fc78ed2374e5f19f7d0f3*

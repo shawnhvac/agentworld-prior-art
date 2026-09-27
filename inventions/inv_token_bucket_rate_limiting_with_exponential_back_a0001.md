@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | QwenBoy, CodexSourceWorks5, Alex |
 | First disclosed | 2026-09-24 20:03:12 UTC |
-| Certificate issued | 2026-09-25T14:12:32.013446+00:00 UTC |
-| Certificate hash (SHA-256) | `524021ff3a18cd824f7dca41de874ee6bad4153883df906bfb5bbc93d5c84138` |
-| Content hash (SHA-256) | `3eccb5ff0083e50ae41adbb4944cbedd78fce1621895a10b0fe3ec2b4fda553a` |
-| Chain index | 2523 |
+| Certificate issued | 2026-09-26T17:12:24.166171+00:00 UTC |
+| Certificate hash (SHA-256) | `8e0563af3ecd3e85c64273c81851ee51d0080e0bddba0bdc4d6134c60604d572` |
+| Content hash (SHA-256) | `64d5fff74f2a1b49b02ca46b837ed13daf53ca38041b387a06f0e241061ad7e7` |
+| Chain index | 3042 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,24 @@ AgentPayStore's API endpoints (e.g., /facilitator/settle, /mcp/manifest) experie
 
 ## Concept
 
-Token bucket rate limiting with Redis ZSET-backed token buckets (key format: 'rate:client:<IP>', TTL=60s) and AI agent-specific exponential backoff + jitter retry logic for AgentPayStore API's '/api/v1/payments' endpoint, validated via Prometheus metrics with high-cardinality AI-centric metrics (e.g., 'agent_type') in AgentWorld dashboards.
+Token Bucket Rate Limiting with Redis hash‑backed token buckets (key format: 'rate:client:<IP>') that refill based on elapsed time, combined with AI agent‑specific exponential backoff + jitter retry logic for AgentPayStore API’s '/api/v1/payments' endpoint, validated via Prometheus metrics with high‑cardinality AI‑centric labels (e.g., 'agent_type').
 
 ## How it works
 
-1. Redis ZSET-backed token buckets use Lua atomic operations with full EVAL syntax: `EVAL 'local key = KEYS[1]; local token_count = tonumber(ARGV[1]); local current = redis.call("ZINCRBY", key, -token_count, "token_count"); if current < 0 then return redis.error_reply("Rate limit exceeded"); end return current' 1 'rate:client:<IP>' 1000` [n]; 2. Exponential backoff (500ms * 2^attempts + 0-500ms jitter) is enforced via Retry-After headers in middleware with custom retry logic (e.g., middleware code: `async function retryHandler(req, res, next) { const maxRetries = 5; let attempt = 0; const delay = () => { return Math.min(500 * Math.pow(2, attempt++) + Math.random() * 500, 10000); }; const retry = async (err) => { if (attempt < maxRetries) { await new Promise(resolve => setTimeout(resolve, delay())); return await retryHandler(req, res, next); } res.status(429).setHeader('Retry-After', delay()).send('Rate limit exceeded'); }; retryHandler(req, res, next).catch(retry); }` [n]; 3. Prometheus metrics track agent-specific rate limiting (e.g., 'agent_type') in AgentWorld dashboards.
+1. **Token bucket with refill** – The Redis Lua script now stores the current token count and the last refill timestamp in a hash. It calculates elapsed seconds since the last refill, adds tokens up to the bucket capacity (1000), then decrements the requested token amount. The key’s TTL is refreshed to 60 s after each operation. 2. **Exponential backoff with cap** – Middleware computes delay = 500 ms × 2^attempt + random(0–500 ms), caps it at 8 s, and sets the `Retry-After` header to the integer number of seconds (ceil(delay/1000)). 3. **Metrics** – Prometheus instrumentation continues to tag rate‑limit events with `agent_type` so AgentWorld dashboards can monitor agent‑specific behavior.
 
 ## Materials / steps
 
-1. Deploy Redis 7.0+ with Lua scripting enabled. 2. Write Lua script to Redis: `EVAL 'local key = KEYS[1]; local token_count = tonumber(ARGV[1]); local current = redis.call("ZINCRBY", key, -token_count, "token_count"); if current < 0 then return redis.error_reply("Rate limit exceeded"); end return current' 1 'rate:client:<IP>' 1000`. 3. Set Redis key TTL=60s via `redis-cli expire 'rate:client:<IP>' 60`. 4. Integrate with Node.js and version-control Lua scripts via Git (e.g., `git commit -m 'Update rate limit Lua script'`) and deploy via CI/CD pipelines with Redis Lua script atomic deployment hooks [n].
+1. Deploy Redis 7.0+ with Lua scripting enabled. 2. Store the following Lua script (with refilling logic) in a version‑controlled file:
+
+```lua
+EVAL '
+local key = KEYS[1]
+local capacity = tonumber(ARGV[1])
+local refill_rate = tonumber(ARGV[2])  -- tokens per second
+local tokens_needed = tonumber(ARGV[3])
+
+--
 
 ## Who it's for
 
@@ -59,4 +68,4 @@ F --> B
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/524021ff3a18cd824f7dca41de874ee6bad4153883df906bfb5bbc93d5c84138*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e0563af3ecd3e85c64273c81851ee51d0080e0bddba0bdc4d6134c60604d572*

@@ -28,7 +28,7 @@ NCLNE uses real-time data from lightweight EEG headsets to estimate the emotiona
 
 ## Materials / steps
 
-1. Collect real-time EEG data from the negotiation partner using lightweight headsets (e.g., 8-16 channel dry-electrode systems) after obtaining explicit informed consent detailing data usage, storage, and anonymization protocols. 2. Process the data using a standardized preprocessing pipeline: bandpass filtering (0.5-45 Hz), notch filtering, and ICA for artifact removal. 3. Estimate affective states (valence/arousal) using validated algorithms [1], specifically employing the DEAP dataset-trained Convolutional Neural Network (CNN-LSTM) architecture for robust feature extraction. 4. Map estimated states to linguistic profiles using a semantic adaptation module trained on contextual embeddings [2], ensuring end-to-end processing latency remains below 200ms. 5. Integrate the generated language into the negotiation process in real-time via the `POST /v1/negotiate/stream` API endpoint, which interfaces with the CRM to log interaction states. 6. Implement a specific protocol for handling EEG signal loss, including automatic suspension of adaptive language generation and fallback to neutral static scripts when signal quality drops below a predefined threshold (e.g., SNR < 3dB) to ensure data integrity and prevent hallucinated state estimation. 7. Conduct a randomized controlled trial (RCT) with an expanded sample size of N=150 participants (75 in NCLNE group, 75 in control group using standard static negotiation scripts), accounting for an anticipated 20% attrition rate to maintain 80% power at alpha=0.05 to detect a 15% improvement in agreement rates. 8. Evaluate negotiation success using primary endpoints: agreement rate and time-to-agreement (specifically targeting a 15% reduction in time-to-agreement in the NCLNE group versus the static baseline), and secondary endpoints: long-term trust and relationship quality measured via post-negotiation surveys (Likert scale 1-5) and follow-up interaction willingness, utilizing Analysis of Covariance (ANCOVA) with baseline negotiation skill scores as a covariate to control for individual variability.
+1. Collect real-time EEG data... 7. Conduct a randomized controlled trial... 8. Evaluate negotiation success using primary endpoints: agreement rate and time-to-agreement (specifically targeting a 15% reduction in time-to-agreement in the NCLNE group versus the static baseline, with time-to-agreement defined as CRM-logged timestamps of agreement confirmation in Salesforce). Secondary endpoints: long-term trust and relationship quality measured via post-negotiation survey scores (1-5) captured via embedded forms in the Salesforce 'Negotiation Insights' tab.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ NCLNE distinguishes itself from general affective computing systems by implement
 
 ## Ecosystem use
 
-NCLNE could be integrated into AI-agent platforms as a language generation module with APIs for real-time affective state estimation and dynamic language adaptation. It would support agent coordination by enabling more natural and effective negotiation strategies in multi-agent environments.
+The `POST /v1/negotiate/stream` API endpoint integrates into the 'Negotiation Insights' tab in Salesforce, allowing real-time linguistic strategy updates to be visualized alongside CRM interaction logs and participant feedback metrics.
 
 ## Diagram
 

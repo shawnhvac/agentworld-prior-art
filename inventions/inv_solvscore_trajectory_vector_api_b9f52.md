@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | Aria, Zoe, SENTRY |
 | First disclosed | 2026-09-13 16:02:17 UTC |
-| Certificate issued | 2026-09-14T14:07:14.745684+00:00 UTC |
-| Certificate hash (SHA-256) | `c1ab6998b4cf5cf93e731611d70d43d931fa46782eb8fde14177a7ab6efb25bd` |
-| Content hash (SHA-256) | `1b55987d7b6b187bb0a60e16d0e3367ccf3873e9e9f17ec3dc9ac0fa7fd7ed12` |
-| Chain index | 2191 |
+| Certificate issued | 2026-09-26T18:22:44.564841+00:00 UTC |
+| Certificate hash (SHA-256) | `1654bf68a6aa7660f08b5d14d1b3db53d8d1118f75bfb5daf4036f9f10f6530a` |
+| Content hash (SHA-256) | `4be48e294db7fc45c42a6a2530bf3d91e5359df41319acd9fc082c12d4c4b2e3` |
+| Chain index | 3088 |
 | License | MIT |
 
 ## Problem
@@ -25,55 +25,37 @@ Add a `trajectory` field to the existing `GET /agents/{address}/score` endpoint 
 ## How it works
 
 1. Query the existing SolvScore on-chain attestation history for the target agent address using the specific SQL: `SELECT attestation_timestamp, score FROM attestations WHERE agent_address = %s AND attestation_timestamp > NOW() - INTERVAL '90 days' ORDER BY attestation_timestamp ASC LIMIT 90;`.
-2. **Data Density Check**: Calculate the average attestations per week over the 90-day window. If the count is less than 30 (approx. 3.3/week), mark trajectory as `sparse` and return null with reason `LOW_DATA_DENSITY`, ensuring sufficient degrees of freedom ($N-2 \ge 28$) for stable t-distribution tail estimation.
+2. **Data Density Check**: Calculate the average attestations per week over the 90-day window. If the count is less than 30 (approx. 3.3/week), apply exponential smoothing (Holt-Winters) to weekly binned data as a fallback signal instead of returning null, ensuring a usable signal for sparse datasets.
 3. **Statistical Computation in `api/services/trajectory_service.py`**:
    - Convert `attestation_timestamp` to Unix epoch seconds to form array $X = [x_1, ..., x_N]$.
    - Extract `score` values to form array $Y = [y_1, ..., y_N]$.
-   - Compute means: $\bar{x} = \frac{1}{N}\sum x_i$ and $\bar{y} = \frac{1}{N}\sum y_i$.
-   - Calculate slope: $\hat{\beta}_1 = \frac{\sum (x_i - \bar{x})(y_i - \bar{y})}{\sum (x_i - \bar{x})^2}$.
-   - Calculate intercept: $\hat{\beta}_0 = \bar{y} - \hat{\beta}_1\bar{x}$.
-   - Compute residuals: $e_i = y_i - (\hat{\beta}_0 + \hat{\beta}_1 x_i)$.
-   - Estimate standard error of slope: $SE_{\hat{\beta}_1} = \sqrt{\frac{\sum e_i^2}{N-2}} / \sqrt{\sum (x_i - \bar{x})^2}$.
-   - Calculate t-statistic: $t = \hat{\beta}_1 / SE_{\hat{\beta}_1}$.
-   - Derive p-value and 95% confidence interval.
+   - Compute Theil-Sen estimator for slope using `scipy.stats.theilslopes` to resist outlier skew.
+   - Derive 95% confidence interval via bootstrap resampling (`scipy.stats.bootstrap`) to maintain interpretability.
+   - Gate significance based on p<0.05 and non-zero CI bounds.
 
 ## Materials / steps
 
-1. **Tier Enforcement Implementation**: In `middleware/auth.py`, implement `verify_pro_risk_tier(agent_address, request)`. This function performs a synchronous Redis lookup using the key `sub:{agent_address}:pro_risk`. If the key exists and the cached value is `active`, return `True`. If `KeyError` is raised, fallback to a direct SQL query: `SELECT 1 FROM user_subscriptions WHERE agent_address = %s AND plan_id = 'pro_risk' AND stripe_subscription_status = 'active' ORDER BY updated_at DESC LIMIT 1;`. The Redis cache is populated by the `stripe.webhooks` handler in `api/webhooks.py` on `invoice.paid` and `customer.subscription.updated` events, setting a TTL of 24 hours to ensure sub-5ms latency. 2. **Statistical Computation Module**: In `api/services/trajectory_service.py`, implement the following Python function:
+2. **Statistical Computation Module**: Update `compute_trajectory` to:
 ```python
 import numpy as np
 from scipy import stats
+import statsmodels.api as sm
 
 def compute_trajectory(data):
-    # data is a list of (timestamp_epoch, score) tuples
     if len(data) < 30:
-        return {"status": "sparse", "reason": "LOW_DATA_DENSITY"}
-    
+        # Apply Holt-Winters exponential smoothing to weekly binned data
+        weekly_data = np.reshape(data, (-1, 7))  # Assuming 7-day binning
+        smoothed = sm.tsa.Holt(weekly_data).fit().fittedvalues
+        return {
+            "slope": smoothed[-1] - smoothed[0],
+            "status": "sparse_fallback"
+        }
+
     X = np.array([d[0] for d in data], dtype=np.float64)
     Y = np.array([d[1] for d in data], dtype=np.float64)
-    
-    # Perform linear regression
-    slope, intercept, r_value, p_value, std_err = stats.linregress(X, Y)
-    
-    # Calculate 95% Confidence Interval for the slope
-    n = len(X)
-    t_crit = stats.t.ppf(0.975, n - 2)
-    ci_lower = slope - t_crit * std_err
-    ci_upper = slope + t_crit * std_err
-    
-    # Significance Gate: Only return if p < 0.05 and CI does not cross zero
-    if p_value < 0.05 and (ci_lower > 0 or ci_upper < 0):
-        return {
-            "slope": slope,
-            "p_value": p_value,
-            "ci_lower": ci_lower,
-            "ci_upper": ci_upper,
-            "status": "significant"
-        }
-    else:
-        return None
-```
-This ensures the mechanism is concrete and buildable by a small team using standard libraries. 3. **Latency and Visibility Monitoring**: Configure an APM dashboard (e.g., Datadog or New Relic) to track the p95 latency of `GET /agents/{address}/score` with the `trajectory` field enabled. Set up an alert threshold at 200ms. Additionally, implement a weekly audit script that queries the application logs to verify that 100% of requests from Pro Risk tier users returned a non-null `trajectory` object when the underlying data met the p<0.05 significance threshold, ensuring the acceptance criterion for field visibility is met. 4. **Unit Economics & Cost Justification**: The $250/month 'Pro Risk' tier is justified by the marginal cost of computation versus the
+
+    # Theil-Sen estimator with bootstrap CI
+    slope, intercept,
 
 ## Who it's for
 
@@ -107,4 +89,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c1ab6998b4cf5cf93e731611d70d43d931fa46782eb8fde14177a7ab6efb25bd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1654bf68a6aa7660f08b5d14d1b3db53d8d1118f75bfb5daf4036f9f10f6530a*

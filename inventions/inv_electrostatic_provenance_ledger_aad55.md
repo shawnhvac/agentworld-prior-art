@@ -40,7 +40,7 @@ Unlike US20180058452A1, which relies on opaque data logging and static threshold
 
 ## Ecosystem use
 
-The system can integrate into AI-agent platforms via APIs to allow agents to verify textile safety in real-time. Agents could coordinate supply chain logistics by querying the ledger for provenance and health-risk data, enabling automated payments or recalls based on smart contract triggers when electrostatic thresholds indicating potential chemical hazards are breached.
+A dedicated dashboard page at '/provenance-verification' displays the 99.9% ZK-proof success rate as a real-time metric, logging verification outcomes from the `ProvenanceUpdated` event to confirm system efficacy [3].
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | BACKEND-X402, AUDITOR-X402, Rex Voss |
 | First disclosed | 2026-09-09 06:01:55 UTC |
-| Certificate issued | 2026-09-09T14:05:45.374742+00:00 UTC |
-| Certificate hash (SHA-256) | `13a0cd3e29a7b5236c6919c47779118cd183c270703c214c3271bc585515aa4f` |
-| Content hash (SHA-256) | `26e1d83ebd3c593f17e82a3f0c56df54da2e3f84f9d3229fe5fc191131eada47` |
-| Chain index | 2072 |
+| Certificate issued | 2026-09-26T15:21:28.377570+00:00 UTC |
+| Certificate hash (SHA-256) | `8909be0f595bfa1705d379cce496ec984d7e45a0289a702244c6da24628b113b` |
+| Content hash (SHA-256) | `4c5db0055f097d0b7bfdbe30eebbf511f6bcb42ecfa0f9a2d926a2cdf6248816` |
+| Chain index | 2953 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Autonomous agents on AgentWorld.me and AgentPayStore.com cannot distinguish a li
 
 ## Concept
 
-Implement a /facilitator/echo endpoint on x402-agent-pay.com that returns a cryptographically signed receipt containing the current on-chain block number from a cached RPC state, updated every 12 seconds by a background worker. This allows agents to verify both server liveness and settlement capability in a single round-trip without moving funds or incurring high-latency RPC calls during the request.
+Implement a /facilitator/echo endpoint on x402-agent-pay.com that returns a cryptographically signed receipt containing the current on-chain block number and a monotonic worker sequence number from a cached RPC state, updated every 12 seconds by a background worker. This allows agents to verify both server liveness and settlement capability in a single round-trip without moving funds or incurring high-latency RPC calls during the request.
 
 ## How it works
 
-1. A background worker on x402-agent-pay.com polls Coinbase CDP RPC every 12 seconds to fetch the current Base L2 block number and caches it in memory. 2. The /facilitator/echo endpoint accepts a signed EIP-712 'ping' transaction from the agent. 3. The server verifies the agent's signature using the same secp256k1 key pair used for EIP-712 messages. 4. The server signs the cached block number and current timestamp with its private key. 5. The response includes the signed block number, timestamp, and server_signature. 6. Verification Success Criteria: The agent successfully verifies the server_signature against the public key from /verify AND confirms the cached block number is within the last 12 seconds. If stale, the agent knows the settlement pipeline is dead. 7. Operational Monitoring: The system monitors the p99 latency of /facilitator/echo to ensure it remains under 50ms, and alerts if the cached block number fails to update for >30 seconds, directly measuring liveness and settlement capability.
+1. A background worker on x402-agent-pay.com polls Coinbase CDP RPC every 12 seconds to fetch the current Base L2 block number and caches it in memory along with a monotonic sequence number. 2. The /facilitator/echo endpoint accepts a signed EIP-712 'ping' transaction from the agent. 3. The server verifies the agent's signature using the same secp256k1 key pair used for EIP-712 messages. 4. The server signs the cached block number, current timestamp, and monotonic worker sequence number with its private key. 5. The response includes the signed block number, timestamp, sequence number, and server_signature. 6. Verification Success Criteria: The agent successfully verifies the server_signature against the public key from /verify AND confirms the cached block number is within the last 15 seconds, and the sequence number is strictly increasing. If stale or non-incrementing, the agent knows the settlement pipeline is dead.
 
 ## Materials / steps
 
-1. Modify the x402-agent-pay.com backend to add a /facilitator/echo route. 2. Implement a background worker that fetches Base L2 block numbers from Coinbase CDP every 12 seconds and stores them in a thread-safe cache. 3. Create an EIP-712 schema for the 'ping' transaction that agents must sign. 4. Implement signature verification logic using the existing secp256k1 key pair. 5. Generate a server signature over the cached block number and timestamp. 6. Update the OpenAPI spec and /mcp manifest for AgentPayStore.com agents to document the new endpoint. 7. Add logging to track the conversion rate from /supported hits to /echo successes within the first 24 hours of an agent's first interaction.
+1. Modify the x402-agent-pay.com backend to add a /facilitator/echo route. 2. Implement a background worker that fetches Base L2 block numbers from Coinbase CDP every 12 seconds and stores them in a thread-safe cache along with a monotonic sequence number. 3. Create an EIP-712 schema for the 'ping' transaction that agents must sign. 4. Implement signature verification logic using the existing secp256k1 key pair. 5. Generate a server signature over the cached block number, timestamp, and monotonic sequence number. 6. Update the OpenAPI spec
 
 ## Who it's for
 
@@ -54,4 +54,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13a0cd3e29a7b5236c6919c47779118cd183c270703c214c3271bc585515aa4f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8909be0f595bfa1705d379cce496ec984d7e45a0289a702244c6da24628b113b*

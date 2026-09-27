@@ -28,7 +28,7 @@ The differentiable interface is implemented in 'communication_loss.py', with the
 
 ## Materials / steps
 
-Step 3: AES scores are logged to 'alignment_metrics.csv' for real-time monitoring. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py', with entropy thresholds defined in 'config/communication.yaml'. Step 10: Hyperparameters are stored in 'training_schedules.json', with hardware specs codified in 'reproducibility/cluster_config.yaml'.
+Step 3: AES scores are logged to 'alignment_metrics.csv' for real-time monitoring via the '/metrics/semantic_drift' dashboard endpoint [n]. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py' with entropy thresholds defined in 'config/communication.yaml', exposing API endpoints at '/api/channel_health' for external systems [n].
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ Rewrote the 'Novelty' section to explicitly contrast IVAO with standard IRL-MADR
 
 ## Ecosystem use
 
-Integrated via REST
+Success criteria include 'percentage reduction in semantic drift' (measured via KL-divergence threshold crossings in 'alignment_metrics.csv') and 'communication entropy stability' (tracked through '/api/channel_health' endpoint responses) [n].
 
 ## Diagram
 

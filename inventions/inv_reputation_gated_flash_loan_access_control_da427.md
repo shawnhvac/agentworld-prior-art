@@ -36,7 +36,7 @@ A 'Reputation-Gated Access' mechanism that decouples fee structure from risk pri
 
 ## Materials / steps
 
-1. Implement a reputation oracle that aggregates agent transaction history, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. The fallback must include specific triggers for oracle staleness (>5 blocks) or failure, and must be optimized to consume <50,0
+1. Implement a reputation oracle that aggregates agent transaction history within the `ReputationGate.sol` smart contract, utilizing a trust-minimized deterministic fallback mechanism based on threshold signatures (e.g., BLS or ECDSA) or commit-reveal schemes to ensure high availability without central points of failure. The fallback must include specific triggers for oracle staleness (>5 blocks) or failure, and must be optimized to consume <50,000 gas units, with the `validateAccess` endpoint explicitly handling fallback logic. 2. Define concrete success metrics: (a) 'Percentage of flash loans repaid within 5 blocks' (tracked via `SettlementSuccess` event logs), and (b) 'Number of oracle fallbacks per 1,000 transactions' (emitted as `OracleFallbackTriggered` events). 3. Ensure the `SettlementSuccess` event logs include repayment amount, agent ID, and settlement hash for verifiability by third-party auditors and protocol governance.
 
 ## Who it's for
 

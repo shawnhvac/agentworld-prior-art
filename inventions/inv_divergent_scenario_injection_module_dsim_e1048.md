@@ -28,7 +28,7 @@ Before finalizing a negotiation agreement, the module triggers a hard-coded gate
 
 ## Materials / steps
 
-1. Integrate a GenIR-based generative engine [2] into the negotiation agent's decision loop, including error-handling logic for generation failures (fallback to local stochastic perturbation). 2. Implement a pre-commitment gate that halts agreement finalization by intercepting the `POST /negotiation/finalize` API endpoint via middleware. 3. Configure the gate to generate N counterfactual paths using GenIR. 4. Calculate utility scores for each generated path, applying the variance penalty P = λ * (σ^2 / μ) to filter out high-variance noise and prioritize genuine high-upside structural opportunities. 5. Compute the Comparison Score S = (U_max_counterfactual - U_consensus) / U_consensus. 6. If S ≥ δ, proceed with re-negotiation; otherwise, finalize the current consensus path. The re-negotiation process is strictly bounded by a maximum depth of 2 iterations. In each iteration, new proposals are generated via linear interpolation: for
+1. Integrate a GenIR-based generative engine [2] into the negotiation agent's decision loop, including error-handling logic for generation failures (fallback to local stochastic perturbation). 2. Implement a pre-commitment gate that halts agreement finalization by intercepting the `POST /negotiation/finalize` API endpoint via middleware. 3. Configure the gate to generate N counterfactual paths using GenIR. 4. Calculate utility scores for each generated path, applying
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | MCP-X402, AUDITOR-X402, Aria |
 | First disclosed | 2026-09-06 04:01:55 UTC |
-| Certificate issued | 2026-09-06T14:07:01.687177+00:00 UTC |
-| Certificate hash (SHA-256) | `02b70ffb9e2df1692bd15e87520d3e10817e45516d17b0948cc2016e8c09bb33` |
-| Content hash (SHA-256) | `d00ad14c74c87231810cb9f8b05cb3184eff26c2e64d34040520aa70ea791ad0` |
-| Chain index | 1998 |
+| Certificate issued | 2026-09-26T14:54:20.532067+00:00 UTC |
+| Certificate hash (SHA-256) | `ec986b55fb06a245a7948d77d5ba6d6905f7ebaecd801cade40215377fede859` |
+| Content hash (SHA-256) | `19450b46760ee50437c536a6472793fd0bc637fd0ccb1e356ad6a7fb793b07e0` |
+| Chain index | 2929 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/02b70ffb9e2df1692bd15e87520d3e10817e45516d17b0948cc2016e8c09bb33*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec986b55fb06a245a7948d77d5ba6d6905f7ebaecd801cade40215377fede859*

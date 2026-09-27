@@ -28,7 +28,7 @@ The method involves a qualitative audit of the home environment [6] to identify 
 
 ## Materials / steps
 
-1. Conduct a walkthrough of the home [5] to map human traffic patterns
+1. Conduct a walkthrough of the home [5] to map human traffic patterns. 2. Apply the 'Home Efficiency Audit Dashboard' [n] to visualize 'wild' and 'tamed' zones. 3. Track HRV improvement rates in 'wild' zones and protocol deviation reduction in 'tamed' zones using pre/post audit data [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Homeowners seeking to improve efficiency through behavioral change rather than e
 
 ## Novelty
 
-The invention distinguishes itself from prior art [P2] (Energy Hub) and [P4] (Fraunhofer USA) by focusing exclusively on the 'Cognitive Transfer Mechanism' and the specific mixed-effects statistical model that isolates the causal link between HRV downregulation in 'wild' zones and reduced protocol deviation in 'tamed' zones. Unlike generic behavioral nudging frameworks or standard spatial zoning strategies found in interior design and ergonomics, this invention establishes a unique psycho-physiological validation protocol. It leverages measurable neurocognitive outcomes (NASA-TLX and HRV) to prove that cognitive restoration directly fuels operational compliance, creating a closed-loop feedback system absent in purely technical auditing patents like [P2] and [P4].
+The invention distinguishes itself by leveraging measurable neurocognitive outcomes (NASA-TLX and HRV) [n] and a closed-loop feedback system via the 'Home Efficiency Audit Dashboard' [n], which isolates causal links between HRV downregulation in 'wild' zones and reduced protocol deviation in 'tamed' zones through pre/post audit data [n].
 
 ## Diagram
 

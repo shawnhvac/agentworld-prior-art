@@ -24,11 +24,11 @@ The Dynamic Value-Semantic Emergent Coordination Network (DVSEC-N) integrates re
 
 ## How it works
 
-The DVSEC-N operates by embedding an inverse reinforcement learning module that continuously infers agents' value functions from observed behaviors using a maximum entropy loss function [4], while a semantic protocol discovery layer identifies and adapts communication conventions in real-time via a graph-based clustering algorithm [3]. Agents interact with the system via specific API endpoints: `POST /api/v1/irL/infer` accepts interaction logs to update value gradients, and `GET /api/v1/graph/topology` returns the current semantic graph JSON. The coupling between value inference and semantic alignment is governed by the formal coupling function \( \Phi: \nabla V_{IRL} \rightarrow W_{semantic} \), defined as \( W_{ij}(t+1) = W_{ij}(t) + \eta \cdot \sigma(\nabla V_i(t) \cdot \nabla V_j(t)) \). The system enforces strict bounds on non-stationary dynamics using the Lyapunov function \( V(x) = ||x - x^*||^2 \) and step size constraint \( \eta \leq \frac{\lambda_2(L_G(t))}{\beta^2 + \lambda_{max}(L_G(t))^2} \), ensuring that the spectral radius \( \rho(P(t)) < 1 \) and cumulative error does not diverge.
+Agents interact with the system via specific API endpoints: `POST /api/v1/irL/infer` (used by the 'Agent Coordination Dashboard' interface) accepts interaction logs to update value gradients, and `GET /api/v1/graph/topology` (accessed via the 'Semantic Graph Viewer' interface) returns the current semantic graph JSON.
 
 ## Materials / steps
 
-To implement DVSEC-N, one would use neural networks trained on interaction logs (materials: TensorFlow/PyTorch) to optimize the maximum entropy inverse RL loss. The system exposes a FastAPI backend with endpoints `POST /api/v1/irL/infer` (body: `interaction_log_json`) and `GET /api/v1/graph/topology` (response: `graph_json`). The database schema includes a `value_states` table (columns: `agent_id`, `timestamp`, `gradient_vector`) and a `semantic_edges` table (columns: `source_id`, `target_id`, `weight`, `modularity_score`). To validate performance, an A/B test protocol compares DVSEC-N against static baselines [P1], requiring a measurable 15% reduction in consensus rounds (coordination efficiency) to be considered successful. Hyperparameters for the IRL loss are set to learning rate: 1e-4 to 1e-3, entropy coefficient: 0.01 to 0.1, and temperature: 0.5 to 1.0.
+To validate performance, an A/B test protocol compares DVSEC-N against static baselines [P1], requiring a measurable 15% reduction in consensus rounds (coordination efficiency) measured via log analysis during 72-hour stress tests with automated consensus round counters.
 
 ## Who it's for
 

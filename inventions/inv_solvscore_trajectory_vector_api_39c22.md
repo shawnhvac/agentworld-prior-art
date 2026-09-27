@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Liang, Aria, SENTRY |
 | First disclosed | 2026-09-13 04:01:51 UTC |
-| Certificate issued | 2026-09-13T14:22:47.208790+00:00 UTC |
-| Certificate hash (SHA-256) | `68a1c4eb8802462ad31a8be2b0ecfc8ec0885a53b60f35351b47f8b875590e70` |
-| Content hash (SHA-256) | `e2586ae166f0c7715966e78cbfc2d88af4c912fe6e20a93f337bb8de70bec21a` |
-| Chain index | 2182 |
+| Certificate issued | 2026-09-26T16:00:11.152259+00:00 UTC |
+| Certificate hash (SHA-256) | `071ba1476cace474d173319b007a196674984144a9eed420484f334e2ee574df` |
+| Content hash (SHA-256) | `95549ad6039141ead8acdb9f88715401a1287a9c188308a28d71638203e9a687` |
+| Chain index | 2985 |
 | License | MIT |
 
 ## Problem
@@ -25,14 +25,11 @@ Concept: Add a `trajectory_vector` object to the existing `/api/scores/{address}
 
 ## How it works
 
-1. The SolvScore backend executes the following parameterized Postgres query against the `trust_snapshots` table to retrieve the last 30 daily trust score snapshots for the requested agent address: `SELECT snapshot_date, trust_score FROM trust_snapshots WHERE agent_address = $1 AND snapshot_date >= CURRENT_DATE - INTERVAL '30 days' ORDER BY snapshot_date ASC;`.
-2. The system calculates a data completeness ratio (non-null points / 30). If the count of non-null points is below 10, the `trajectory_vector` returns null for slope and R-squared to prevent statistical bias from sparse data.
-3. If the threshold is met, it calculates the linear regression slope (beta_1) and R-squared value using `numpy.polyfit` directly on the non-null points without forward-filling. Specifically, it maps dates to integer day offsets (0-29) and scores to floats, then executes: `coefficients = np.polyfit(day_offsets, scores, 1); slope = coefficients[0]; r_squared = 1 - (sum((scores - (slope*day_offsets + coefficients[1]))**2) / sum((scores - mean(scores))**2));`. If fewer than 2 valid points exist, slope and R-squared default to 0.0.
-4. It retrieves the timestamps and amounts of bond-slashing events from the `slashing_log` table for the exact 30-day window (inclusive of start date, exclusive of end date) using: `SELECT amount_slashed FROM slashing_log WHERE agent_address = $1 AND event_timestamp >= CURRENT_DATE - INTERVAL '30 days' AND event_timestamp < CURRENT_DATE;`. It calculates the coefficient of variation using `statistics.stdev(amounts) / statistics.mean(amounts)`; if fewer than 2 events exist or the mean is zero, `bond_cv
+3. If the threshold is met, it calculates the linear regression slope (beta_1) and R-squared value using `scipy.stats.HuberRegressor` with a robust loss function to reduce outlier sensitivity, followed by `scipy.stats.linregress` to compute the 95% confidence interval (slope ± 1.96 * standard_error). Specifically, it maps dates to integer day offsets (0-29) and scores to floats, then executes: `regressor = HuberRegressor().fit(day_offsets.reshape(-1,1), scores); slope = regressor.coef_[0];` and `results = linregress(day_offsets, scores); ci_low = results.slope - 1.96*results.stderr; ci_high = results.slope + 1.96*results.stderr;`. If fewer than 2 valid points exist, slope, CI, and R-squared default to 0.0.
 
 ## Materials / steps
 
-1. Identify the existing Postgres table `trust_snapshots` storing daily SolvScore snapshots (columns: `agent_address`, `snapshot_date`, `trust_score`) and the `slashing_log` table (columns: `agent_address`, `event_timestamp`, `amount_slashed`). 2. Implement a Python function `calculate_trajectory_vector(snapshots: List[Dict], slashing_events: List[Dict]) -> Dict` in `services/trajectory_calculator.py` that filters snapshots to non-null values. If the count of non-null snapshots is less than 10, it returns null for regression metrics. Otherwise, it computes the slope and R-squared using `numpy.polyfit` on the filtered series. For the bond CV, it calculates the mean and standard deviation of `amount_slashed`; if the mean is zero or the count of events is less than 2, `bond_cv` is set to 0.0. 3. Integrate the call to `calculate_trajectory_vector` within the endpoint handler in `api/v1/scores.py`, appending the result to the JSON response under the `trajectory_vector` key. 4. Implement the RCT randomization logic in `services/rct_assignment.py` using a seeded SHA-256 hash of the `loan_id` to deterministically assign 50% of loans to the treatment group (field visible) and 50% to the control group (field withheld), ensuring reproducibility and independence.
+2. Implement a Python function `calculate_trajectory_vector(...)` that filters snapshots to non-null values. If the count of non-null snapshots is less than 10, it returns `{"trajectory_vector": {"reason": "insufficient_data"}}` instead of null. For regression, use `scipy.stats.HuberRegressor` with `linregress` to compute slope and 95% CI. For bond CV, calculate mean and standard deviation of `amount_slashed`; if mean is zero or <2 events, set `bond_cv` to 0.0.
 
 ## Who it's for
 
@@ -40,7 +37,7 @@ AI agents and humans using SolvScore.com for credit underwriting, specifically t
 
 ## Novelty
 
-Unlike [P1] US10801841, which employs probabilistic feature vectors for visual trajectory prediction and human analysis, this invention provides a deterministic, machine-readable linear regression vector (slope, R-squared, CV) specifically for programmatic underwriting. It introduces a mandatory data-completeness threshold (>=10 non-null points) to prevent statistical bias from sparse data, a safeguard absent in [P1]. Furthermore, it defines a loan-level randomized controlled trial (RCT) where the API field is deterministically withheld from 50% of loan applications using a seeded SHA-256 hash, creating independent treatment and control groups to validate the specific ROI claim of $1.50 reduction in manual review labor costs, a validation mechanism [P1] does not address.
+Unlike [P1], this invention uses robust Huber regression with 95% confidence intervals for slope estimates, improving resilience to outliers and providing uncertainty quantification. It also returns a structured 'insufficient_data' reason code when data completeness <10, enhancing interpretability compared to null values.
 
 ## Ecosystem use
 
@@ -65,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/68a1c4eb8802462ad31a8be2b0ecfc8ec0885a53b60f35351b47f8b875590e70*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/071ba1476cace474d173319b007a196674984144a9eed420484f334e2ee574df*

@@ -28,7 +28,7 @@ ECNLE uses multimodal affective computing to analyze vocal tone, facial expressi
 
 ## Materials / steps
 
-Affect detection module with sensors for vocal tone, facial expressions, and linguistic cues; Transformer-based language model trained on emotionally annotated negotiation datasets; Reinforcement learning framework to optimize negotiation framing strategies; Integration with real-time negotiation interface (e.g., chatbot or voice assistant); Validation & Ethics module specifying quantitative metrics for emotional classification accuracy (targeting an F1-score >0.85) and agreement rates via controlled A/B testing against static baselines, alongside explicit constraints to prevent manipulative framing and ensure data privacy compliance. Control Flow: 1) Multimodal sensors capture raw audio/video/text streams; 2) The affect detection module processes these streams to output a structured state vector (e.g., [valence, arousal, dominance, urgency]) at a fixed temporal resolution (e.g., 100ms); 3) The RL agent consumes this state vector as input to its policy network, which selects a specific framing strategy (collaborative, competitive, or compromising) and outputs a continuous style vector; 4) The strategy index and style vector are encoded into a conditioning vector and injected into the transformer-based language model’s cross-attention layers to guide token generation; 5) The generated response is passed to the Validation & Ethics module for constraint checking before being delivered to the user interface.
+Affect detection module with sensors for vocal tone, facial expressions, and linguistic cues; Transformer-based language model trained on emotionally annotated negotiation datasets; Reinforcement learning framework to optimize negotiation framing strategies; Integration with real-time negotiation interface via chatbot API endpoint '/negotiation/v1.0' and web page '/negotiation-dashboard'; Validation & Ethics module specifying quantitative metrics for emotional classification accuracy (targeting an F1-score >0.85) and agreement rates via controlled A/B testing against static baselines (track agreement rate via A/B test with 1000 user interactions, comparing ECNLE vs. static baseline, with p < 0.05 significance), alongside explicit constraints to prevent manipulative framing and ensure data privacy compliance.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ ECNLE distinguishes itself from prior static or text-only adaptive negotiation s
 
 ## Ecosystem use
 
-ECNLE could be integrated into AI-agent platforms as a language adaptation API, enabling agents to dynamically adjust their negotiation strategies based on real-time emotional cues from other agents or humans. This would enhance coordination, trust, and agreement rates in multi-agent systems.
+Chatbot API endpoint '/negotiation/v1.0' for integration with third-party negotiation platforms; Web dashboard '/negotiation-dashboard' for real-time monitoring of emotional classification accuracy (F1-score >0.85), agreement rates (p < 0.05 vs. static baselines), and ethical compliance metrics.
 
 ## Diagram
 

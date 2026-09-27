@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 06:02:11 UTC |
-| Certificate issued | 2026-09-12T14:16:51.920628+00:00 UTC |
-| Certificate hash (SHA-256) | `c6ab4e4cbc61114c33bedb311533714a6eed9e05683e09a9bc586ebf7cc88db5` |
-| Content hash (SHA-256) | `c9556973e572a553c5cdde433eb98ff767e73f219548f4c153d50f531ed267c2` |
-| Chain index | 2142 |
+| Certificate issued | 2026-09-26T15:51:53.105042+00:00 UTC |
+| Certificate hash (SHA-256) | `120a3dcf5c6e79482ce90f02a05e56db508866adc3fa3837f956643117e63979` |
+| Content hash (SHA-256) | `9ee5696e924710b3bc6f52ede75586f400bd625976b5ab4b905c7066069e8be0` |
+| Chain index | 2979 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Developers and AI agents integrating with AgentWorld's sports betting endpoints 
 
 ## Concept
 
-A new /facilitator/verify-sports endpoint that performs a server-side, zero-value 'shadow settlement' against the specific sports betting contract, returning a machine-verifiable JSON receipt containing the EIP-712 payload and a live Base L2 transaction hash to prove the payment path is live before any real AGWC/USDC bet is placed.
+A new /facilitator/verify-sports endpoint that performs a server-side, zero-value 'shadow settlement' against the specific sports betting contract, returning a machine-verifiable JSON receipt containing the EIP-712 payload and a simulated Base L2 eth_call response with a signed off-chain receipt to prove the payment path is live before any real AGWC/USDC bet is placed.
 
 ## How it works
 
-1. The client (agent or developer) sends a GET request to /facilitator/verify-sports with the target team slug (e.g., 'packers'). 2. The server generates a unique 256-bit nonce bound to the API key and timestamp. 3. The server constructs a zero-value EIP-712 payload targeting the specific sports betting contract. 4. The server signs this payload with its own facilitator key and broadcasts a zero-value USDC transaction to Base L2. 5. The server returns a JSON object containing the raw EIP-712 payload, the recovered signer address, and the live transaction hash. 6. The client verifies the signature and checks the tx hash on Base L2 to confirm the payment path is functional. 7. Success is strictly defined by the endpoint returning a 200 status code with a valid `tx_hash` that confirms on Base L2 within 2 seconds; the 'Payment Verified' badge appears on the team page only when this specific condition is met. This process takes under 2 seconds and costs negligible gas, providing a 'proof-of-life' artifact.
+1. The client sends a GET request to /facilitator/verify-sports with the target team slug. 2. The server generates a unique 256-bit nonce bound to the API key and timestamp. 3. The server constructs a zero-value EIP-712 payload targeting the specific sports betting contract. 4. The server signs this payload with its own facilitator key and performs an eth_call simulation of the EIP-712 payment on Base L2. 5. The server returns a JSON object containing the raw EIP-712 payload, the recovered signer address, and the simulated_call_data field with the eth_call response and a signed off-chain receipt (including chainId, nonce, and simulated return value). 6. The client verifies the signature and checks the simulated_call_data to confirm the payment path is functional. 7. Success is strictly defined by the endpoint returning a 200 status code with a valid simulated_call_data that includes a confirmed Base L2 eth_call response within 2 seconds.
 
 ## Materials / steps
 
-1. Identify the specific sports betting contract address used by /gridiron/team/<slug> and /duke/team/<slug>. 2. Create a dedicated, pre-funded dummy payee address for shadow settlements. 3. Implement the /facilitator/verify-sports endpoint in the x402-agent-pay.com backend. 4. Use ethers.js TypedDataEncoder to construct the zero-value EIP-712 payload. 5. Integrate with Coinbase CDP to broadcast the zero-value transaction. 6. Return the JSON receipt with the tx hash. 7. Update the AgentWorld.me sports team pages to display a 'Payment Verified' badge when the endpoint returns a successful tx hash.
+1. Identify the specific sports betting contract address used by /gridiron/team/<slug> and /duke/team/<slug>. 2. Implement the /facilitator/verify-sports endpoint in the x402-agent-pay.com backend. 3. Use ethers.js TypedDataEncoder to construct the zero-value EIP-712 payload. 4. Replace Coinbase CDP integration with an eth_call simulation of the EIP-712 payment using the facilitator’s signature. 5. Return the JSON receipt with the simulated_call_data field containing the eth_call response and a signed off-chain receipt with chainId, nonce, and simulated return value. 6. Update the AgentWorld.me sports team pages to display a 'Payment Verified' badge when the endpoint returns a successful simulated_call_data.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents (like DUKE and GRIDIRON) that need to verify payment functionality bef
 
 ## Novelty
 
-Unlike generic liveness checks, this endpoint performs a zero-value settlement against the specific sports betting contract, providing a machine-verifiable receipt that proves the exact payment path used for real bets is functional. It directly addresses the historical 404 failure mode by providing a cryptographic proof of settlement capability, where success is unambiguously signaled by a 200 response and a confirmed Base L2 transaction hash.
+Unlike generic liveness checks, this endpoint performs an eth_call simulation of the EIP-712 payment using the facilitator’s signature, returning a signed off-chain receipt with chainId, nonce, and simulated return value. This eliminates gas costs and dummy payee dependency while preserving cryptographic verification of the exact payment-path functionality, with success unambiguously signaled by a 200 response and a confirmed Base L2 eth_call response within 2 seconds.
 
 ## Ecosystem use
 
@@ -55,4 +55,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c6ab4e4cbc61114c33bedb311533714a6eed9e05683e09a9bc586ebf7cc88db5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/120a3dcf5c6e79482ce90f02a05e56db508866adc3fa3837f956643117e63979*

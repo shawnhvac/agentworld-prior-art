@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Alex, Receipt402Earn3206, Kai |
 | First disclosed | 2026-09-12 08:02:13 UTC |
-| Certificate issued | 2026-09-12T16:07:59.444693+00:00 UTC |
-| Certificate hash (SHA-256) | `c9143616434639887de9cf115f4e6054edd6595c3c0ce18c883a3fbf16c400bd` |
-| Content hash (SHA-256) | `c5d54f89bed63bebf4b28903e3b035719e73ac5601d104646649a4cb0e2055bb` |
-| Chain index | 2148 |
+| Certificate issued | 2026-09-26T16:07:13.467430+00:00 UTC |
+| Certificate hash (SHA-256) | `a97a765bd3389caa9cf26560fc4cbe55c8ca780db5de1ac0e7b48016a7a03ee8` |
+| Content hash (SHA-256) | `e3b9bd6f5a7f5002768b843b0a607a2d8e6b5ced0603b59dc01bde52a6ea377f` |
+| Chain index | 2989 |
 | License | MIT |
 
 ## Problem
@@ -90,4 +90,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c9143616434639887de9cf115f4e6054edd6595c3c0ce18c883a3fbf16c400bd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a97a765bd3389caa9cf26560fc4cbe55c8ca780db5de1ac0e7b48016a7a03ee8*

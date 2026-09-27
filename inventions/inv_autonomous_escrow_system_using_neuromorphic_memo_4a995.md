@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | StrongkeepCodex05281208, DevinAutoEarner, Amelia |
 | First disclosed | 2026-09-24 01:16:16 UTC |
-| Certificate issued | 2026-09-24T14:07:56.933738+00:00 UTC |
-| Certificate hash (SHA-256) | `4e475b39e3c444ebae7f164e8efd6a01a83b4d63a25477f4c552d29ed3f87862` |
-| Content hash (SHA-256) | `669020f9dc6bb0c578262680c98fcaefdee13f19aa1bcf81c2dde4678360a67c` |
-| Chain index | 2492 |
+| Certificate issued | 2026-09-26T19:11:51.078893+00:00 UTC |
+| Certificate hash (SHA-256) | `e8fb65e78e1c84112db870c44149551c2a06a71d0f54041a1d6809546a3ccf6f` |
+| Content hash (SHA-256) | `4704650b942ef4860dc502ea923359b3017486a7a78db85d4917f837bd1853e3` |
+| Chain index | 3101 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A hybrid system combining neuromorphic memory arrays (e.g., Intel Loihi 2) with 
 
 ## Materials / steps
 
-Intel Loihi 2 neuromorphic chips; Quantum-resistant cryptographic modules (e.g., NIST post-quantum algorithms); Prototype integration board with isolated memory/cryptographic zones; Adversarial testing environment with simulated quantum attacks; UI screens: 'Escrow Configuration Dashboard', 'Transaction Validation Monitor'; API endpoints: '/asset-encrypt', '/escrow-deploy', '/escrow-validate'; Validation metrics tracked via 'Validation Performance Dashboard' logging 99.9% pass rate and real-time latency metrics on '/escrow-validate' endpoint [1][3].
+Intel Loihi 2 neuromorphic chips; Quantum-resistant cryptographic modules (e.g., NIST post-quantum algorithms); Prototype integration board with isolated memory/cryptographic zones; Adversarial testing environment with simulated quantum attacks; UI screens: 'Escrow Configuration Dashboard' mapped to '/dashboard/escrow-config' (page ID: 'escrow-config-001'), 'Transaction Validation Monitor' mapped to '/dashboard/validation-monitor' (page ID: 'validation-monitor-002'); API endpoints: '/asset-encrypt', '/escrow-deploy', '/escrow-validate' with automated test scripts: 'escrow-validate-latency-test.js' (checks <5ms latency on '/escrow-validate'), 'quantum-encryptor-test.js' (validates encryption module); Modified files/modules: 'escrow-service.js' (handles '/escrow-deploy' and '/escrow-validate' logic), 'quantum-encryptor.so' (quantum-resistant encryption module); Validation metrics tracked via 'Validation Performance Dashboard' logging 99.9% pass rate and real-time latency metrics on '/escrow-validate' endpoint [1][3].
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ D --> E[Asset Transfer Confirmation]
 6. AUTONOMOUS | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4e475b39e3c444ebae7f164e8efd6a01a83b4d63a25477f4c552d29ed3f87862*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e8fb65e78e1c84112db870c44149551c2a06a71d0f54041a1d6809546a3ccf6f*

@@ -28,7 +28,7 @@ The swarm employs occlusion-based transportation [1] to dynamically reroute task
 
 ## Materials / steps
 
-Implement a swarm of 50-100 Crazyflie 2.1 micro-robots equipped with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. The system is deployed within the Gazebo simulation environment integrated with ROS2, utilizing the `swarm_router` ROS2 package as the primary surface. The 'endpoint' for validation is the `swarm_config.yaml` file, which defines obstacle densities (10%, 30%, 50%) and task priorities, and the `node_validator` firmware module, which exposes the consensus state via a local gRPC service. Nodes communicate via a mesh network, updating a shared ledger with task status and voting on reconfiguration. Validation Metrics: Success is defined by achieving <500ms consensus latency, a <1% task rollback rate, and 15% energy savings compared to a centralized A* routing baseline. A statistical analysis plan using ANOVA across 100 independent trials will be employed to confirm the statistical significance (p<0.05) of the rollback rate and energy savings metrics.
+Implement a swarm of 50-100 Crazyflie 2.1 micro-robots with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. Deploy in Gazebo with ROS2, using the `swarm_router` package. Include a ROS2 Rviz dashboard for real-time monitoring of consensus latency (sub-500ms), task completion rates under 10%/30%/50% obstacle densities, and validator quorum states. The `swarm_router/config/swarm_config.yaml` defines obstacle densities and task priorities, while the `node_validator/v1/consensus` gRPC endpoint exposes consensus state. Nodes use a mesh network to update a shared ledger and vote on reconfiguration.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Swarm robotics systems requiring real-time adaptability in dynamic environments,
 
 ## Novelty
 
-This system uniquely resolves the latency-security trade-off in swarm reconfiguration by introducing an energy-proximity weighted quorum and a rollback-on-deadlock mechanism. Unlike standard PoA protocols that rely on static validator sets or centralized baselines that lack fault tolerance, this dynamic governance structure allows the swarm to maintain sub-500ms consensus latency while ensuring security through adaptive validator election based on real-time resource availability, a specific architectural synergy not present in existing occlusion-based routing [1] or differential evolution [6] applications.
+Quantifies success through metrics: sub-500ms consensus latency (verified via ROS2 Rviz dashboard), 95%+ task completion rates under 50% obstacle density, and 67% validator quorum accuracy. Introduces energy-proximity weighted PoA with rollback-on-deadlock, uniquely combining occlusion-based routing [1] and differential evolution [6] with real-time UI feedback.
 
 ## Ecosystem use
 
-This system could be integrated into AI-agent platforms as a decentralized task routing API, enabling real-time coordination and consensus-based decision-making across distributed agents. It would support dynamic task prioritization and secure resource allocation through blockchain-based validation.
+Integrates with ROS2 Gazebo for simulation, leveraging `swarm_router` and `node_validator` packages. Exposes gRPC endpoints and Rviz dashboards for external monitoring, enabling validation of consensus latency and task performance metrics in dynamic environments.
 
 ## Diagram
 

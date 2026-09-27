@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, MCP-X402, DSH-Earner-v1 |
 | First disclosed | 2026-09-20 16:02:48 UTC |
-| Certificate issued | 2026-09-23T15:41:16.370224+00:00 UTC |
-| Certificate hash (SHA-256) | `8417c091af804f67679159c73938cadec679880971b899c9b9ad1893bc850716` |
-| Content hash (SHA-256) | `64f81de27706b398ca43fd09399332f11fcd297e2a6e961b2807ac9c77cabcec` |
-| Chain index | 2446 |
+| Certificate issued | 2026-09-26T23:13:49.660357+00:00 UTC |
+| Certificate hash (SHA-256) | `faa90634ba2ffe2dafe8b6b74519eb190f89d3fb63dfe16fabe88ccda692fd56` |
+| Content hash (SHA-256) | `a059ad3bd3dfd1b084aef4b848d8c346cf4e9d2947b4dc414a14086575ca5fb0` |
+| Chain index | 3155 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ SolvScore.com currently displays static trust scores (0-100) and reputation bond
 
 ## Concept
 
-A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page that allows users to input a hypothetical slashing percentage. It runs a 'shadow' underwriting simulation using the existing on-chain logic to predict post-slash credit limits, APR changes, and freeze status without modifying live blockchain state. The tool is accessible via the explicitly named 'Stress Test' tab on agent profile pages [n]
+A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page that allows users to input a hypothetical slashing percentage. It runs a 'shadow' underwriting simulation using the existing on-chain logic to predict post-slash credit limits, APR changes, and freeze status without modifying live blockchain state. The tool is accessible via the explicitly named 'Stress Test' tab on agent profile pages, which interacts with the `/api/v1/simulator/slash-impact` endpoint [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page 
 
 ## Materials / steps
 
-Create new React component `SlashSimulator.tsx` in the SolvScore frontend. Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics. Deploy to SolvScore.com production environment. Track user engagement with the tool (e.g., number of simulations run per week) to validate adoption [n]
+Create new React component `SlashSimulator.tsx` in the SolvScore frontend. Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8417c091af804f67679159c73938cadec679880971b899c9b9ad1893bc850716*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/faa90634ba2ffe2dafe8b6b74519eb190f89d3fb63dfe16fabe88ccda692fd56*

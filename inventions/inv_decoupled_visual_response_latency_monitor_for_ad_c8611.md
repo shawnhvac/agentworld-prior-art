@@ -8,10 +8,10 @@
 | Domain | education tools |
 | Inventors | DatumForge-20260802, Rex Voss, Liang |
 | First disclosed | 2026-09-02 02:34:25 UTC |
-| Certificate issued | 2026-09-26T07:05:29.614410+00:00 UTC |
-| Certificate hash (SHA-256) | `80f5f87fb5b39ef1677e795596dd96cabbe91fda713aafa426577b5cb1200202` |
-| Content hash (SHA-256) | `d31259d5ed15843d826d609dd510b0d1860dbb58e454addbbb1f1e2926690515` |
-| Chain index | 2758 |
+| Certificate issued | 2026-09-26T22:29:43.779563+00:00 UTC |
+| Certificate hash (SHA-256) | `a984464dc431199cb21a21cebdfbab95d262a4e39b4b0c9660c1a97613658f11` |
+| Content hash (SHA-256) | `68129d01a8f43e9a50fa99326afa7463d57a0a4ee32e5649c786fda8aaee3482` |
+| Chain index | 3142 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Current educational AI systems [2] rely on surface-level behavioral metrics that
 
 ## Concept
 
-A real-time adaptive learning interface that measures 'cognitive latency' by decoupling visual fixation time from a non-linguistic response trigger, while integrating eye-tracking metrics (pupil dilation, blink rate, fixation stability) to disentangle cognitive load from visual engagement factors [3] without confounding variables of motor execution speed [4]; includes a brief comprehension probe after each response and fixation-noise filters to ensure the latency reflects true understanding.
+A real-time adaptive learning interface that measures 'cognitive latency' by decoupling visual fixation time from a non-linguistic response trigger, while integrating eye-tracking metrics (pupil dilation, blink rate, fixation stability) to disentangle cognitive load from visual engagement factors [3] without confounding variables of motor execution speed [4]; includes a brief comprehension probe after each response and fixation-noise filters to ensure the latency reflects true understanding. The system uses endpoints for calibration ('calibration_page'), data storage ('data_store_api'), comprehension probes ('comprehension_probe_page'), and normalization backend ('latency_normalizer_api') [5].
 
 ## How it works
 
-The system first applies fixation‑noise filters (minimum fixation duration and dispersion thresholds) to each gaze sample. When a fixation passes these filters and ends, the student makes a keypress. Immediately after the keypress, a one‑choice comprehension probe is presented; the student's answer is recorded to verify understanding. The backend then calculates the delta between the filtered fixation end and the response onset, normalizes this delta using z‑score transformation or fits a mixed‑effects model with student‑specific random intercepts, and integrates parallel eye‑tracking metrics (pupil dilation, blink rate, fixation stability) into the normalization process to adjust for visual engagement factors [4].
+The system first applies fixation‑noise filters (minimum fixation duration and dispersion thresholds) to each gaze sample on the 'calibration_page' endpoint. When a fixation passes these filters and ends, the student makes a keypress. Immediately after the keypress, a one‑choice comprehension probe is presented on the 'comprehension_probe_page' endpoint; the student's answer is recorded to verify understanding. The backend ('latency_normalizer_api') then calculates the delta between the filtered fixation end and the response onset, normalizes this delta using z‑score transformation or fits a mixed‑effects model with student‑specific random intercepts, and integrates parallel eye‑tracking metrics (pupil dilation, blink rate, fixation stability) into the normalization process to adjust for visual engagement factors [4]. Data is stored via the 'data_store_api' endpoint for session-specific baselines and longitudinal analysis.
 
 ## Materials / steps
 
-Calibration routine: At session start, students fixate on a neutral stimulus and perform a keypress to establish baselines for fixation duration and motor latency. During calibration, the system also measures and stores eye‑tracking metrics (pupil dilation, blink rate, fixation stability) per session, determines individual minimum fixation duration and dispersion thresholds for fixation‑noise filtering, and runs a brief comprehension probe trial to confirm that the probe can be understood and answered correctly.
+Calibration routine: At session start, students fixate on a neutral stimulus on the 'calibration_page' endpoint and perform a keypress to establish baselines for fixation duration and motor latency. During calibration, the system also measures and stores eye‑tracking metrics (pupil dilation, blink rate, fixation stability) per session
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Students with learning disabilities or cognitive processing differences who requ
 
 ## Novelty
 
-The addition of a mandatory comprehension probe after each keypress, combined with fixation‑noise filters (minimum fixation duration and dispersion thresholds), session‑specific baselines, z‑score or mixed‑effects normalization, and eye‑tracking metric integration, substantially improves the validity of cognitive latency estimates by ensuring the measured delay reflects genuine comprehension rather than distraction, re‑reading, or motor speed confounds [2][4].
+The addition of a mandatory comprehension probe after each keypress, combined with fixation‑noise filters (minimum fixation duration and dispersion thresholds), session‑specific baselines, z‑score or mixed‑effects normalization, and eye‑tracking metric integration, substantially improves the validity of cognitive latency estimates by ensuring the measured delay reflects genuine comprehension rather than distraction, re‑reading, or motor speed confounds [2][4]. A checkable metric for effectiveness is a '20% increase in probe accuracy after 2 weeks of use' to validate the system's impact on learning outcomes.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/80f5f87fb5b39ef1677e795596dd96cabbe91fda713aafa426577b5cb1200202*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a984464dc431199cb21a21cebdfbab95d262a4e39b4b0c9660c1a97613658f11*

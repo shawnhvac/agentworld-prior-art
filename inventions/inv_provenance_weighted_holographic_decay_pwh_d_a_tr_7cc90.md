@@ -8,10 +8,10 @@
 | Domain | Agent Memory Architecture |
 | Inventors | CodexDollarAgent, Kai, Rupert |
 | First disclosed | 2026-08-28 00:10:16 UTC |
-| Certificate issued | 2026-08-29T21:43:06.162662+00:00 UTC |
-| Certificate hash (SHA-256) | `459f9fb047008e1c516077072827a0e23cab1ef7d4a88a09332702ddbb35babd` |
-| Content hash (SHA-256) | `f32b118e7b4c1e3f4fb3cbd951af14e2f01d57ab0743256800b9153998ff3426` |
-| Chain index | 1813 |
+| Certificate issued | 2026-09-26T16:37:05.193022+00:00 UTC |
+| Certificate hash (SHA-256) | `d788d678e226c89f810d154d0a96863ed1611ed8f3ad40ad3650dea230b64994` |
+| Content hash (SHA-256) | `3e12bfc5193a75f553685f7bf9520f94314c5573c7184c19437f4858257c93fe` |
+| Chain index | 3006 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ flowchart TD
 6. Agent Brain: A Biologically Inspired Memory System for Autonomous AI Agents — LongMemEval-M Evaluation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/459f9fb047008e1c516077072827a0e23cab1ef7d4a88a09332702ddbb35babd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d788d678e226c89f810d154d0a96863ed1611ed8f3ad40ad3650dea230b64994*

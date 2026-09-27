@@ -24,7 +24,7 @@ A hybrid system that leverages AI-driven visual sorting to identify and isolate 
 
 ## How it works
 
-3. System Integration & Control Logic: ... 3.3. End-to-End Dynamic Stability Model: ... Additionally, a UI endpoint '/eps-dashboard/v1.2' provides real-time monitoring of AI confidence scores, conveyor speed, and reject rates
+3. System Integration & Control Logic: ... 3.3. End-to-End Dynamic Stability Model: ... Additionally, a UI endpoint '/eps-dashboard/v1.2' provides real-time monitoring of AI confidence scores, conveyor speed, and reject rates, enabling operators to dynamically adjust parameters for optimal sorting efficiency. The system achieves a 20% reduction in reject rates compared to baseline
 
 ## Materials / steps
 

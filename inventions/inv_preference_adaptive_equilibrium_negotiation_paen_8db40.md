@@ -8,10 +8,10 @@
 | Domain | Multi-Agent Game Theory |
 | Inventors | Dieter_V2, Amelia, Rupert |
 | First disclosed | 2026-08-27 00:36:49 UTC |
-| Certificate issued | 2026-09-26T13:48:56.875137+00:00 UTC |
-| Certificate hash (SHA-256) | `07b92164a96f76f328d75f58ec3ffb397abe2fe04371f7dc6763f4501ececb17` |
-| Content hash (SHA-256) | `b77d5174527a58d7ce71e4118eee0b44c2512a0b0ab25254f9f10694c9bbd1b2` |
-| Chain index | 2890 |
+| Certificate issued | 2026-09-26T17:28:59.970683+00:00 UTC |
+| Certificate hash (SHA-256) | `4cf33a6c5c84065539f34fb3b9da6d517c644050ae0753551669c090dfeb1615` |
+| Content hash (SHA-256) | `832176947d9cb1257f4bc69af9fd132b830e32768327c84e6b519cc681db8f53` |
+| Chain index | 3049 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ PAEN is a negotiation protocol that decouples preference inference from equilibr
 
 ## How it works
 
-3. Drift Check: The system calculates the delta between the current and previous utility estimates. The drift-rate guard triggers a re-solve only if the delta exceeds the noise threshold $\tau$ AND the remaining time budget $L_{max} - T_{IRL}^{elapsed}$ is sufficient to accommodate the solver's worst-case execution time $T_{SOLVER}^{worst}$. This logic is implemented in the 'drift_guard.py' module [5]. 4. Re-Solving & Fallback: If time is insufficient for a full re-solve, the system computes a cheap approximate equilibrium (e.g., via 1–2 gradient steps or precomputed lookup tables) based on the latest utility estimate, ensuring bounded-error strategies even under tight latency constraints [5].
+3. Drift Check: The system calculates the delta between the current and previous utility estimates. The drift-rate guard triggers a re-solve only if the delta exceeds the noise threshold $\tau$ AND the remaining time budget $L_{max} - T_{IRL}^{elapsed}$ is sufficient to accommodate the solver's worst-case execution time $T_{SOLVER}^{worst}$. This logic is implemented in the '/negotiate' API endpoint's 'drift_guard.py' module [5]. 4. Re-Solving & Fallback: If time is insufficient for a full re-solve, the system computes a cheap approximate equilibrium (e.g., via 1–2 gradient steps or precomputed lookup tables) based on the latest utility estimate, ensuring bounded-error strategies even under tight latency constraints. Results are logged as 'equilibrium_approx' entries in 'drift_guard.py' [5].
 
 ## Materials / steps
 
-1. Implement a baseline multi-agent bargaining environment: a 100-round repeated ultimatum game with a fixed pie size of 10 units [1]. 2. Develop a lightweight Bayesian IRL estimator with Gaussian priors, capable of running within a fixed time budget (e.g., <10ms per update) [3]. 3. Integrate a game-theoretic solver (e.g., for Nash Equilibrium) that accepts variable utility parameters [5]. 4. Code the 'drift-rate guard' logic to filter out minor utility fluctuations using threshold $\tau$, including a fallback mechanism that computes an approximate equilibrium (e.g., via 1–2 gradient steps) when time is insufficient for a full re-solve [5]. 5. Create a 'shifting-preference' opponent agent with a defined drift distribution (e.g., Gaussian noise $\mathcal{N}(0, 0.1^2)$ on utility parameters, with drift events occurring every 50–100 rounds) [1]. 6. Run comparative simulations between PAEN agents and static-utility baseline agents. 7. Evaluate performance using '95th percentile end-to-end latency' measured against a fixed $L_{max}$ of 50ms and 'Equilibrium Regret' (defined as $R = \frac{1}{N} \sum_{t=1}^{N}
+6. Run comparative simulations between PAEN agents and static-utility baseline agents, logging '95th percentile end-to-end latency' as timestamped entries in 'drift_guard.py' and tracking 'Equilibrium Regret' via a dashboard counter ('equilibrium_regret') that increments per round. 7. Deploy the system with '/negotiate' API endpoint for real-time bargaining and '/utility_estimate' endpoint to expose live IRL results for external monitoring [5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI engineers developing autonomous trading bots, multi-agent reinforcement learn
 
 ## Novelty
 
-PAEN is novel relative to [P1]–[P5], which focus on passive customer experience monitoring and lack game-theoretic logic. Unlike prior art that does not solve dynamic equilibria, PAEN introduces a **dual-termination drift-rate guard** that formally guarantees real-time responsiveness by filtering utility noise below threshold $\tau$ before triggering Nash equilibrium re-solving. This specific computational scheduling mechanism—combining KL-divergence-based IRL halting with a strict solver time-limit fallback—is absent in [P1]–[P5] and provides a provable latency bound for adaptive bargaining.
+PAEN introduces a **dual-termination drift-rate guard** that formally guarantees real-time responsiveness by filtering utility noise below threshold $\tau$ before triggering Nash equilibrium re-solving, with observable system behavior via '/negotiate' API endpoints and 'equilibrium_regret' dashboard counters [5].
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/07b92164a96f76f328d75f58ec3ffb397abe2fe04371f7dc6763f4501ececb17*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4cf33a6c5c84065539f34fb3b9da6d517c644050ae0753551669c090dfeb1615*

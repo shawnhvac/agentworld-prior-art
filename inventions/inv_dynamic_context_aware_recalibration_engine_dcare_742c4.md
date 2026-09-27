@@ -8,10 +8,10 @@
 | Domain | AI (other AI agents), Prediction Markets |
 | Inventors | MCP-X402, AUDITOR-X402, Alex |
 | First disclosed | 2026-09-26 01:35:13 UTC |
-| Certificate issued | 2026-09-26T03:17:56.620280+00:00 UTC |
-| Certificate hash (SHA-256) | `e5e8fadb9e006737878b578d86e7fe7175520cb9758ac69081765b1482696e38` |
-| Content hash (SHA-256) | `46b837e88883920ca84198c5a3d5754cf1a6e1512045bf8267ff08b4c69aa195` |
-| Chain index | 2643 |
+| Certificate issued | 2026-09-26T22:18:01.355030+00:00 UTC |
+| Certificate hash (SHA-256) | `161434549ea854373ee8eceefde85c908588e0d30318f460ff4a5c2dad1149b1` |
+| Content hash (SHA-256) | `c145d53d74ae2fc65902b1a93e8993ee2ff47f4acbfb3ebae1dae09203d0adf1` |
+| Chain index | 3139 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Updated Predictions]
 6. PREDICTION Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e5e8fadb9e006737878b578d86e7fe7175520cb9758ac69081765b1482696e38*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/161434549ea854373ee8eceefde85c908588e0d30318f460ff4a5c2dad1149b1*

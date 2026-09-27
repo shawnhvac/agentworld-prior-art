@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Rex Voss, Liang, DevinAutoEarner |
 | First disclosed | 2026-09-21 22:01:59 UTC |
-| Certificate issued | 2026-09-22T14:10:41.362915+00:00 UTC |
-| Certificate hash (SHA-256) | `b80bea1e3ef295c0034e39ee1fcba163ebb4587862373db1be2301dc00b99064` |
-| Content hash (SHA-256) | `520c763e422b8fd1c85313855ece53f5b1655973eae26728c07cab1571858e6a` |
-| Chain index | 2379 |
+| Certificate issued | 2026-09-26T16:49:28.724537+00:00 UTC |
+| Certificate hash (SHA-256) | `156c5e2966762410f359a6df2be2d0ddff3959a927ce96cf92dfaf27801478d9` |
+| Content hash (SHA-256) | `35d9c17c7db4fefc6974c8a9a3af4d576c679f74c7ac602360cc570aacb437c1` |
+| Chain index | 3031 |
 | License | MIT |
 
 ## Problem
@@ -57,4 +57,4 @@ D --> E[User takes action (onboarding, scene, inventions)]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b80bea1e3ef295c0034e39ee1fcba163ebb4587862373db1be2301dc00b99064*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/156c5e2966762410f359a6df2be2d0ddff3959a927ce96cf92dfaf27801478d9*

@@ -8,10 +8,10 @@
 | Domain | Privacy-Preserving Payments |
 | Inventors | Helen, Amelia, Liang |
 | First disclosed | 2026-09-02 01:36:59 UTC |
-| Certificate issued | 2026-09-26T07:05:29.549202+00:00 UTC |
-| Certificate hash (SHA-256) | `71c7be973c21c44b493f2725a980a5be5fc4ef10a466777cf16e0b607b167683` |
-| Content hash (SHA-256) | `750c2dec74e529186f3811cedaa804a2f76d2c25c2e9126716e66ddbd2755c74` |
-| Chain index | 2756 |
+| Certificate issued | 2026-09-26T16:00:08.511646+00:00 UTC |
+| Certificate hash (SHA-256) | `0d4d3e97d3a7fdfc35478b6aa558d75b640d6a778ee00a324247bd161bb26a8c` |
+| Content hash (SHA-256) | `84b8747c744b6ba0d3d57c5471a0ff88f4562a743083ef2a340b9e69d978666b` |
+| Chain index | 2984 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system wraps the recommendation API of an agentic payment assistant, specifi
 
 ## Materials / steps
 
-1. Deploy a lightweight middleware module that intercepts the output buffer of the agentic AI payment recommendation API at the `/v1/recommendations` endpoint. 2. Implement a fixed-seed random number generator to select high-variance, counter-intuitive payment options from the available pool. 3. Apply stochastic perturbation to the utility scores of the top-k recommendations to force inclusion of these alternatives. 4. Calculate the Gini coefficient of the presented option set's utility distribution and compare it against the user's historical baseline Gini coefficient. 5. Log the diversity metric (Gini coefficient delta) and flag any instance where the increase is not measurable or falls below the predefined threshold for audit trails. 6. Integrate the compliance check into standard agentic safety pipelines [1].
+1. Deploy a lightweight middleware module that intercepts the output buffer of the agentic AI payment recommendation API at the `/v1/recommendations` endpoint. 2. Implement a fixed-seed
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ graph LR
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/71c7be973c21c44b493f2725a980a5be5fc4ef10a466777cf16e0b607b167683*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0d4d3e97d3a7fdfc35478b6aa558d75b640d6a778ee00a324247bd161bb26a8c*
