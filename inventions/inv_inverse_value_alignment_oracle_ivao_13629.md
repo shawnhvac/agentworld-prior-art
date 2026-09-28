@@ -28,7 +28,7 @@ The differentiable interface is implemented in 'communication_loss.py', with the
 
 ## Materials / steps
 
-Step 3: AES scores are logged to 'alignment_metrics.csv' for real-time monitoring via the '/metrics/semantic_drift' dashboard endpoint [n]. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py' with entropy thresholds defined in 'config/communication.yaml', exposing API endpoints at '/api/channel_health' for external systems [n].
+Step 3: AES scores are logged to 'alignment_metrics.csv' for real-time monitoring via the primary dashboard endpoint '/metrics/semantic_drift' [n]. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py' with entropy thresholds defined in 'config/communication.yaml', exposing API endpoints at '/api/channel_health' for external systems [n]. Success metrics: 30% reduction in semantic drift metric over 24 hours or 95% alignment score threshold in alignment_metrics.csv [n].
 
 ## Who it's for
 

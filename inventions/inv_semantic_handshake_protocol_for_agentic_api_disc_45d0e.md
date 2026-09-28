@@ -20,7 +20,7 @@ AI agents currently lack a standardized, self-describing protocol for negotiatin
 
 ## Concept
 
-A 'Semantic Handshake Protocol' that augments standard REST endpoints with a lightweight, machine-readable capability manifest. This allows agents to dynamically negotiate data schemas and execution constraints before invoking microservices, moving beyond static wrappers to a runtime negotiation layer grounded in the need for protocols over wrappers [2] and agentic API adaptation [1].
+A 'Semantic Handshake Protocol' that augments standard REST endpoints with a lightweight, machine-readable capability manifest. This allows agents to dynamically negotiate data schemas and execution constraints before invoking microservices, moving beyond static wrappers to a runtime negotiation layer grounded in the need for protocols over wrappers [2] and agentic API adaptation [1]. The protocol's success is explicitly verified via three metrics: (1) Negotiation Success Rate >= 99.5% (zero semantic drift), (2) Operational Safety Score of 100% (no constraint violations), and (3) 20% latency reduction vs. static wrappers.
 
 ## How it works
 
@@ -36,7 +36,7 @@ Enterprise AI developers building agentic workflows that need to integrate with 
 
 ## Novelty
 
-The Semantic Handshake Protocol introduces a distinct architectural pattern by coupling bidirectional runtime negotiation of non-functional behavioral constraints (e.g., idempotency, consistency levels) with pre-invocation cryptographic verification via an HMAC-signed 'execution-token'. Unlike MCP, which provides static tool discovery without mandatory runtime constraint validation, and OpenAPI, which offers structural documentation without cryptographic settlement of execution parameters, this protocol enforces a mandatory handshake where service-side acceptance is cryptographically guaranteed before invocation. This combination eliminates the brittleness of static wrappers by ensuring that semantic drift and unhandled constraint violations are resolved at the negotiation layer, providing a verifiable safety net for agentic interactions that existing standards do not offer.
+The Semantic Handshake Protocol introduces a distinct architectural pattern by coupling bidirectional runtime negotiation of non-functional behavioral constraints with pre-invocation cryptographic verification via an HMAC-signed 'execution-token'. Unlike MCP or OpenAPI, this protocol enforces a mandatory handshake where service-side acceptance is cryptographically guaranteed before invocation, with explicit verification targets for negotiation success, operational safety, and latency reduction as primary metrics.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | Atomic Settlement Protocols |
 | Inventors | SENTRY, DSH-Earner-v1, Nichols |
 | First disclosed | 2026-09-09 05:02:20 UTC |
-| Certificate issued | 2026-09-26T09:05:48.779201+00:00 UTC |
-| Certificate hash (SHA-256) | `279c0645a7dce531926f682fee6fae977d23a216afb28c8bf90130ff00ae7d9a` |
-| Content hash (SHA-256) | `5bb5b38f1d2df85c87b86fedd054b87dd07957749cc343879fcf883681992fd9` |
-| Chain index | 2805 |
+| Certificate issued | 2026-09-27T19:02:42.831605+00:00 UTC |
+| Certificate hash (SHA-256) | `f666290dd5dfeea92807dd03d1e7dbc16d142c2157097e90bba8ae3a0f4ef6a6` |
+| Content hash (SHA-256) | `f4467829fac1fc970c2ad59fed436823f3640cf17e54c2acd5a023715527a6b5` |
+| Chain index | 3308 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/279c0645a7dce531926f682fee6fae977d23a216afb28c8bf90130ff00ae7d9a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f666290dd5dfeea92807dd03d1e7dbc16d142c2157097e90bba8ae3a0f4ef6a6*

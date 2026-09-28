@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | Amelia, Helen, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:13:06 UTC |
-| Certificate issued | 2026-09-10T14:37:58.387012+00:00 UTC |
-| Certificate hash (SHA-256) | `5c9c57d121cd9ebfa2b3b8bced7621562dfb8052ba02f1c86f3f3e170a5d8305` |
-| Content hash (SHA-256) | `e6a2cacb1179e7cde86580153f876c4118c0adb0b8afefb044f68c17a6282b79` |
-| Chain index | 2090 |
+| Certificate issued | 2026-09-27T21:14:14.698495+00:00 UTC |
+| Certificate hash (SHA-256) | `bd99f0fb77953f5df1b57962263e804a58f003b4e1d125dd1a3a6a289b935d47` |
+| Content hash (SHA-256) | `c2ed3c700706748ce8d885f25b1411a06ec510439c1c1e98b3c386fff51a5447` |
+| Chain index | 3343 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Current Computer Integrated Manufacturing (CIM) systems, as described in [1] and
 
 ## Concept
 
-A 'Causal-Attribution Yield Ledger' that pairs time-synchronized haptic operator logs with a controlled experimental design to statistically isolate human interventions. Instead of claiming cryptographic immutability of causality (which is scientifically invalid), it uses a randomized controlled trial (RCT) logic within the production line: the system logs operator inputs [1][2] and compares yield deltas against a baseline of similar conditions where no human adjustment was made, using sensor data to control for environmental variables [3].
+A 'Causal-Attribution Yield Ledger' that pairs time-synchronized haptic operator logs with a controlled experimental design to statistically isolate human interventions via the POST /api/v1/haptic-log endpoint [1][2], and uses a randomized controlled trial (RCT) logic within the production line: the system logs operator inputs and compares yield deltas against a baseline of similar conditions where no human adjustment was made, using sensor data to control for environmental variables via the POST /api/v1/statistical-analysis/validate endpoint [3].
 
 ## How it works
 
@@ -28,7 +28,7 @@ A 'Causal-Attribution Yield Ledger' that pairs time-synchronized haptic operator
 
 ## Materials / steps
 
-1. Integrate haptic sensors into the operator workstation to log adjustment timestamps and magnitudes via the POST /api/v1/haptic-log endpoint [1]. 2. Deploy environmental sensors (temperature, pressure, vibration) to capture confounding variables [3]. 3. Implement a software layer that tags each batch with 'Human-Adjusted' or 'Standard' status based on haptic logs. 4. Configure a statistical engine to run difference-in-differences analysis on yield data via the POST /api/v1/statistical-analysis/validate endpoint, using environmental sensor data as covariates. 5. Create a digital ledger database that records only statistically validated interventions with operator attribution. 6. Define a validation check: a 5% increase in the 'Validated Skill Event' acceptance rate over a 30-day pilot period compared to the baseline, measured against the existing batch yield database.
+1. Integrate haptic sensors into the operator workstation to log adjustment timestamps and magnitudes via the POST /api/v1/haptic-log endpoint [1]. 2. Deploy environmental sensors (temperature, pressure, vibration) to capture confounding variables [3]. 3. Implement a software layer that tags each batch with 'Human-Adjusted' or 'Standard' status based on haptic logs. 4. Configure a statistical engine to run difference-in-differences analysis on yield data via the POST /api/v1/statistical-analysis/validate endpoint, using environmental sensor data as covariates. 5. Create a digital ledger database that records only statistically validated interventions with operator attribution. 6. Define a validation check: a 5% increase in the 'Validated Skill Event' acceptance rate over a 30-day pilot period compared to the baseline, measured against the existing batch yield database and the digital ledger's audit logs.
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Manufacturing | Definition, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5c9c57d121cd9ebfa2b3b8bced7621562dfb8052ba02f1c86f3f3e170a5d8305*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bd99f0fb77953f5df1b57962263e804a58f003b4e1d125dd1a3a6a289b935d47*

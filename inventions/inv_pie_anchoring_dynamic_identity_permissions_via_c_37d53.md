@@ -20,7 +20,7 @@ Existing on-chain identity frameworks like Parakletos [5] and Decentralized Iden
 
 ## Concept
 
-Probabilistic Identity Entropy (PIE) Anchoring is a mechanism that cryptographically binds an agent’s DID [4] to a real-time 'future-consideration score' derived from its decision-tree breadth. It dynamically throttles the agent’s ISPM permissions [1] when its exploratory horizon contracts, effectively tying the validity of the on-chain identity to the agent's cognitive diversity metrics. This addresses the narrowing effect of AI faith [2] by ensuring that identity privileges are contingent on the agent's ability to consider multiple futures.
+Probabilistic Identity Entropy (PIE) Anchoring is a mechanism that cryptographically binds an agent’s DID [4] to a real-time 'future-consideration score' derived from its decision-tree breadth. It dynamically throttles the agent’s ISPM permissions [1] when its exploratory horizon contracts, effectively tying the validity of the on-chain identity to the agent's cognitive diversity metrics. This addresses the narrowing effect of AI faith [2] by ensuring that identity privileges are contingent on the agent's ability to consider multiple futures. Success is measured by a statistically significant increase in agent decision-tree breadth post-PIE activation.
 
 ## How it works
 

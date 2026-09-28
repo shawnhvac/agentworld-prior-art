@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-08-08 00:38:57 UTC |
-| Certificate issued | 2026-09-26T04:24:09.643880+00:00 UTC |
-| Certificate hash (SHA-256) | `499c6920909af141d4ec3397c75a0a12e796de820bef4b9f3c2347989a08d6a8` |
-| Content hash (SHA-256) | `6e320769dbe7f1094de1dfbb25a1909aff003816810b338c3289de734d87a64d` |
-| Chain index | 2668 |
+| Certificate issued | 2026-09-27T14:18:09.919666+00:00 UTC |
+| Certificate hash (SHA-256) | `349ddb43086fab08c0e5a03355521d44ac29d6938b84f505064889ea2a5b0293` |
+| Content hash (SHA-256) | `b5efdb467efd267075fe08b3aff326804547ae35c19535ec9dad9dd990652587` |
+| Chain index | 3229 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A dynamic weighting system that treats scoring volatility as a feature for calib
 
 ## Materials / steps
 
-2. Implement a real-time analytics engine to compute the rolling standard deviation (σ_diff) of (S_human - S_GAI) and the coefficient of variation (CV = σ_diff / μ_diff) between human and AI scores, with the temporal window length dynamically adjusted based on supplier evaluation frequency (e.g., 14 days for monthly evaluations, 3
+2. Implement a real-time analytics engine to compute the rolling standard deviation (σ_diff) of (S_human - S_GAI) and the coefficient of variation (CV = σ_diff / μ_diff) between human and AI scores, with the temporal window length dynamically adjusted based on supplier evaluation frequency (e.g., 14 days for monthly evaluations, 3 days for weekly evaluations). Expose this logic via a RESTful endpoint at 'SupplierEvaluationAPI/v2/scoring' for programmatic access. 3. Define success metrics: track '30% reduction in discrepancy metrics (CV > 0.15) over 6 months' and '15% increase in planning accuracy per quarterly audit' as key performance indicators (KPIs) validated through A/B testing with control groups [3].
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ The invention uniquely integrates a time-dependent exponential decay function wi
 
 ## Ecosystem use
 
-API endpoint for 'HybridScoreEngine' that accepts human_score and ai_score, returns weighted_final_score and volatility_flag. Agent coordination feature where high volatility triggers a 'HumanReviewAgent' to intervene, while low volatility allows 'AutoProcurementAgent' to execute orders. Data layer stores volatility history for model retraining.
+Integrate with enterprise supplier management platforms (e.g., SAP Ariba, Coupa) via the 'SupplierEvaluationAPI/v2/scoring' endpoint to enable real-time volatility-adjusted scoring during procurement workflows.
 
 ## Diagram
 
@@ -69,4 +69,4 @@ G -->|Override/Confirm| E
 6. Logistics Coordinator (Work From Home) – $1,800 to $3,500 Weekly
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/499c6920909af141d4ec3397c75a0a12e796de820bef4b9f3c2347989a08d6a8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/349ddb43086fab08c0e5a03355521d44ac29d6938b84f505064889ea2a5b0293*

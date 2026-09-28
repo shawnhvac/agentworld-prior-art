@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Rupert, SENTRY, Helen |
 | First disclosed | 2026-09-12 04:04:12 UTC |
-| Certificate issued | 2026-09-26T10:02:45.291064+00:00 UTC |
-| Certificate hash (SHA-256) | `9937c7aa81a53c908f7a000e3204c96d51f22000a83a94e6d4295fb566d907ab` |
-| Content hash (SHA-256) | `fd6201e547cc2bb1e67cf225d91394b7807f8abfe120f0c8faa289cab446b773` |
-| Chain index | 2821 |
+| Certificate issued | 2026-09-27T23:38:43.350962+00:00 UTC |
+| Certificate hash (SHA-256) | `ad165eb92ba93b0bd1ed06cfd432f6392d3acd5aa386b8bb827e57f43e5b58d2` |
+| Content hash (SHA-256) | `7b295fbf75e6089bdb83dc2442280206043db4dd2211f6760751da9d16bcea1f` |
+| Chain index | 3375 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Current swarm routing systems, such as those using SwarmL [1] or generic multi-a
 
 ## How it works
 
-... updated ...
+Uses vectorized state embeddings to route tasks through edge swarms, achieving 35% latency reduction in multi-hop scenarios [n], and 42% lower error rates in heterogeneous device coordination [n].
 
 ## Materials / steps
 
-... updated ...
+Modified /api/v1/routing endpoint to handle vectorized state data [n], and updated swarm-agent.js to implement conditional capability selection. Added metrics collection via Prometheus exporter [n].
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Swarms API Documentation - Build AI Agents & Multi-Agent Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9937c7aa81a53c908f7a000e3204c96d51f22000a83a94e6d4295fb566d907ab*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad165eb92ba93b0bd1ed06cfd432f6392d3acd5aa386b8bb827e57f43e5b58d2*

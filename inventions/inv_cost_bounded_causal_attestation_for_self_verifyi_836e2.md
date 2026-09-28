@@ -28,7 +28,7 @@ A hybrid verification mechanism that combines off-chain cryptographic causal lin
 
 ## Materials / steps
 
-1. Implement a causal graph signer for off-chain data producers (cryptographic module). 2. Develop a verification engine that supports both full causal traversal and shallow semantic checks [3]. 3. Create a value-assessment module that maps transaction value to a verification budget. 4. Develop an off-chain succinct proof generator (e.g., SNARK prover or Merkle proof generator) that outputs a 'Verification Receipt' attesting to the verified causal graph's integrity. 5. Implement the `CausalAttestationRegistry.sol` smart contract, specifically the `verifyReceipt` function, which includes the `gasleft()` check logic and cryptographic verification routines. 6. Define measurable success metrics: The system is considered operational if it achieves a 99.9% success rate for high-value proof verifications within the allocated gas limit and maintains a transaction latency of <50ms for low-value rejections (reverts) to ensure efficient resource management.
+Implement a causal graph signer for off-chain data producers (cryptographic module). Develop a verification engine that supports both full causal traversal and shallow semantic checks [3]. Create a value-assessment module that maps transaction value to a verification budget. Develop an off-chain succinct proof generator (e.g., SNARK prover or Merkle proof generator) that outputs a 'Verification Receipt' attesting to the verified causal graph's integrity. Implement the `CausalAttestationRegistry.sol` smart contract, specifically the `verifyReceipt` function, which includes the `gasleft()` check logic and cryptographic verification routines. Define measurable success metrics: The system is considered operational if it achieves a 99.9% success rate for high-value proof verifications within the allocated gas limit and maintains a transaction latency of <50ms for low-value rejections (reverts) to ensure efficient resource management. Introduce a 'Verification Dashboard' UI screen and a `/verifyReceipt` API endpoint to observe system behavior, including on-chain event logs for 'Accepted'/'Rejected' status, external latency monitoring tools, and gas-usage counters in the contract.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ The invention is novel relative to closest prior art [P1] (US20250259075A1) and 
 
 ## Ecosystem use
 
-In an AI-agent platform, this feature can be implemented as a 'Data Integrity API' that agents call before ingesting external data. The API returns a 'verification confidence score' and a 'cost breakdown' of the verification process. Agents can use this score to decide whether to trust the data, coordinate with other agents to share verification costs, or trigger a payment to the data producer for higher-fidelity verification. This enables agent coordination where high-value tasks trigger deeper verification, and low-value tasks use cached or shallow verification, optimizing platform-wide resource usage.
+The 'Verification Dashboard' provides real-time observability of verification outcomes, gas usage, and data feed status. The `/verifyReceipt` API endpoint allows external systems to query verification results programmatically, ensuring transparency and auditability.
 
 ## Diagram
 

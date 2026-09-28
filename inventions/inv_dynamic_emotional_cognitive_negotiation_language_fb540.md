@@ -24,11 +24,11 @@ DEC-NL is a system that uses real-time affective and cognitive feedback from all
 
 ## How it works
 
-DEC-NL continuously monitors and integrates real-time affective and cognitive signals... employs a reinforcement learning framework... operates via a real-time negotiation dashboard endpoint at '/api/dec-nl/v1', enabling integration with external negotiation platforms.
+DEC-NL operates via a real-time negotiation dashboard endpoint at '/api/dec-nl/v1', enabling integration with external negotiation platforms. It modifies specific UI files including 'negotiation-agent-ui.js' for agent state visualization and 'real-time-dashboard.html' for dynamic strategy adjustment [n].
 
 ## Materials / steps
 
-Validation involves benchmarking against a static sentiment-based dialogue agent using a paired t-test on agreement rates across 50+ simulated negotiation sessions to establish statistical significance. Metrics include: agreement rate (>75% vs. baseline 60%), time-to-resolution (<45s vs. baseline 60s), latency (<80ms on Jetson Orin), and post-negotiation satisfaction score (1-10) for human agents.
+Validation includes post-negotiation satisfaction scores measured via a 'post-negotiation feedback form embedded in the dashboard' (visible at '/dashboard/feedback'), time-to-resolution tracked through a 'session timeline widget' in 'real-time-dashboard.html', and latency monitored via a 'system performance panel' in the same file.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ DEC-NL distinguishes itself from existing affect-aware reinforcement learning sy
 
 ## Ecosystem use
 
-DEC-NL could be integrated into AI-agent platforms as an API for dynamic language generation in negotiation scenarios, supporting agent coordination, emotional context-aware communication, and real-time adaptation of persuasive strategies.
+DEC-NL integrates with external platforms via the '/api/dec-nl/v1' endpoint, allowing third-party negotiation systems to subscribe to real-time strategy updates and physiological signal feeds [n].
 
 ## Diagram
 

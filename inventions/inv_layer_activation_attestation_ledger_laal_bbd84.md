@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Amelia, Kai, Helen |
 | First disclosed | 2026-09-04 02:00:54 UTC |
-| Certificate issued | 2026-09-26T07:37:41.875802+00:00 UTC |
-| Certificate hash (SHA-256) | `f21f1991b38097e6ee2fbb601f4ba4ad3bae3d392ab1f634962bf46fd9e80ddc` |
-| Content hash (SHA-256) | `e21ff8aaa34dbf46bb5f4d3cf4f184c2c556b65e125923297b488bcf30d3d809` |
-| Chain index | 2772 |
+| Certificate issued | 2026-09-27T15:02:52.076551+00:00 UTC |
+| Certificate hash (SHA-256) | `a7578388a5daf971fca35b8c567b7e4de87530377eeeeae5dc4cde079fc89a63` |
+| Content hash (SHA-256) | `9db5f3d788647aa623b7087087d4cc8962f8ef421b1048f2270022104c1af36f` |
+| Chain index | 3243 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Current agent-to-agent transactions lack a mechanism to prove that a counterpart
 
 ## Concept
 
-The Layer-Activation Attestation Ledger (LAAL) is a lightweight verification layer that binds specific intermediate layer activations to a verifiable credential. Unlike statistical entropy methods, LAAL requires the agent to generate a cryptographic commitment to the dimensions and hash of specific intermediate tensors during the forward pass. This commitment is signed and appended to a decentralized identifier (DID) credential [1], extending the cryptographically verifiable authorization framework [2]. It provides a forensic trace of the execution path, addressing the liability gap in [5] by proving the model processed the input through the claimed architecture, with explicit success criteria defined by a <5% latency overhead and 100% signature verification rate.
+The Layer-Activation Attestation Ledger (LAAL) is a lightweight verification layer that binds specific intermediate layer activations to a verifiable credential. Unlike statistical entropy methods, LAAL requires the agent to generate a cryptographic commitment to the dimensions and hash of specific intermediate tensors during the forward pass. This commitment is signed and appended to a decentralized identifier (DID) credential [1], extending the cryptographically verifiable authorization framework [2]. It provides a forensic trace of the execution path, addressing the liability gap in [5] by proving the model processed the input through the claimed architecture, with explicit success criteria defined by a <5% latency overhead and 100% signature verification rate. Verification occurs via the `/api/v1/attest` endpoint [n].
 
 ## How it works
 
@@ -28,7 +28,7 @@ The Layer-Activation Attestation Ledger (LAAL) is a lightweight verification lay
 
 ## Materials / steps
 
-1. Select a target model architecture and identify 1-2 critical intermediate layers for attestation. 2. Implement a middleware hook using PyTorch's `register_forward_hook` to compute SHA-256 hashes of tensor values, shapes, and the input (or a nonce provided by the verifier) during the forward pass. 3. Integrate a DID wallet [1] to sign the resulting Merkle root. 4. Develop the verifier API with the specific REST endpoint `/api/v1/attest` that accepts the VC and validates the signature against the agent's DID, with additional checks that the input hash in the VC matches the current request; this endpoint must return a standardized JSON response indicating verification success/failure. 5. For high-security contexts, implement a lightweight zk-SNARK circuit proving the existence of the intermediate tensor without revealing full activation values. 6. Calibrate overhead by sampling every N-th inference step to maintain a <5% increase in inference latency. 7. Establish and automate success metrics: ensure the `/api/v1/attest` endpoint achieves a 100% signature verification rate for valid VCs in the automated test suite, confirming the system 'worked' as intended.
+7. Establish and automate success metrics: ensure the `/api/v1/attest` endpoint achieves a 100% signature verification rate for valid VCs in the automated test suite (log this rate explicitly in test logs), and track latency overhead via automated timing logs (e.g., Prometheus metrics) to confirm the <5% threshold is maintained.
 
 ## Who it's for
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f21f1991b38097e6ee2fbb601f4ba4ad3bae3d392ab1f634962bf46fd9e80ddc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a7578388a5daf971fca35b8c567b7e4de87530377eeeeae5dc4cde079fc89a63*

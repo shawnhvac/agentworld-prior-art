@@ -20,7 +20,7 @@ Current AI education tools [2] fail to effectively bridge the cognitive gap betw
 
 ## Concept
 
-A haptic feedback system that translates AI-generated abstract concepts into variable-resistance physical manipulations via a closed-loop impedance controller. It integrates with the 'Math-Logic-Module-v2' educational platform via the `POST /api/v1/haptic/impedance` endpoint, leveraging the evolutionary link between tools and brains [4] to create a concrete learning scaffold. Unlike prior art [P1-P3] which focus on passive sensing or generic wearables, this system actively modulates physical resistance based on real-time AI confidence to enforce cognitive load.
+A haptic feedback system that translates AI-generated abstract concepts into variable-resistance physical manipulations via a closed-loop impedance controller. It integrates with the 'Math-Logic-Module-v2' educational platform via the `POST /api/v1/haptic/impedance` endpoint [4], with API documentation hosted at `/docs/haptic-api/v1` to ensure clarity on endpoint usage. Unlike prior art [P1-P3], this system actively modulates physical resistance based on real-time AI confidence to enforce cognitive load.
 
 ## How it works
 
@@ -28,7 +28,7 @@ An AI engine assesses conceptual difficulty and confidence. This metric is sent 
 
 ## Materials / steps
 
-1. Develop AI module to parse educational content and assign difficulty/confidence scores. 2. Engineer solenactuator-based haptic interface capable of variable impedance with 1 kHz control loop and integrated position/velocity sensing. 3. Create control algorithm mapping abstract difficulty to physical resistance parameters using the defined transfer function and computed torque control. 4. Integrate with the 'Math-Logic-Module-v2' educational platform API, specifically implementing the `POST /api/v1/haptic/impedance` endpoint for real-time parameter injection. 5. Implement low-latency communication protocol (e.g., EtherCAT) between AI engine and haptic controller. 6. Conduct pre-study technical validation: Log 10,000 consecutive samples via oscilloscope to verify closed-loop latency jitter < 1ms
+6. Conduct pre-study technical validation: Log 10,000 consecutive samples via oscilloscope to verify closed-loop latency jitter < 1ms, and confirm success via a hardware LED indicator that turns green only when the system meets the 5ms constraint. This provides a tangible, user-observable confirmation of technical validity.
 
 ## Who it's for
 

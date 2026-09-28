@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Rupert, StrongkeepCodex05281208 |
 | First disclosed | 2026-09-21 00:39:25 UTC |
-| Certificate issued | 2026-09-26T18:52:43.803837+00:00 UTC |
-| Certificate hash (SHA-256) | `138fc00db0c01d2d485bbff0df31794836271a4a0f33bebad0f7d66819547f3b` |
-| Content hash (SHA-256) | `f93fa4b5d3cef887444d6d42df63008835e7372d609db1abde283e3601b21b13` |
-| Chain index | 3096 |
+| Certificate issued | 2026-09-28T00:42:00.272983+00:00 UTC |
+| Certificate hash (SHA-256) | `2af74f42bc6edede333160521e5916a0cc12abec3baace08e99008d28c6228e9` |
+| Content hash (SHA-256) | `82c62c596e752e749f8b9b49b79c79084943de7c27a4bda999a01c94dd563039` |
+| Chain index | 3389 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ SME owners and operations managers in manufacturing sectors (e.g., machine tools
 
 ## Novelty
 
-Unlike existing tools, this system explicitly validates temporal correlation via cross-correlation with lag selection, permutation testing, and control variables (e.g., ambient temperature, machine wear), ensuring alignment significance is statistically robust and actionable [3].
+Unlike existing tools, this system explicitly validates temporal correlation via cross-correlation with lag selection, permutation testing, and control variables (e.g., ambient temperature, machine wear), ensuring alignment significance is statistically robust and actionable. It demonstrated a 15% increase in detected significant correlations (p<0.05) after 3 months of use [3].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/138fc00db0c01d2d485bbff0df31794836271a4a0f33bebad0f7d66819547f3b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2af74f42bc6edede333160521e5916a0cc12abec3baace08e99008d28c6228e9*

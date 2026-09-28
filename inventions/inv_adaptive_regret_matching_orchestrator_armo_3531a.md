@@ -28,11 +28,11 @@ Agents implement a decentralized regret-matching algorithm where strategy probab
 
 ## Materials / steps
 
-1. Implement decentralized regret-matching logic based on [4], specifically coding the vector compression (top-k) and probability update rules within the 'RegretSignalGateway' microservice. 2. Define sparse regret signal protocol including packet structure and frequency for the 'StateReconciliationEngine' endpoint. 3. Simulate stochastic games using the standardized 'ShiftMatrix-Bench' dataset for reproducible shifting payoff matrices. 4. Compare convergence speed and stability against static Nash baselines [1], [4] using explicit metrics: Time-to-Convergence (TTC) and Cumulative Regret. 5. Apply specific convergence thresholds: TTC must be < 50 rounds for 95% of episodes, and Cumulative Regret must be bounded by O(sqrt(T)) with a coefficient < 0.5x the theoretical upper bound, demonstrating end-to-end stability with statistical significance testing (p < 0.05) over a fixed sample size of N=1000 independent episodes, requiring a 95% confidence interval width of no more than 0.05 for the mean Cumulative Regret. 6. Measure bandwidth efficiency in bytes per update
+1. Implement decentralized regret-matching logic based on [4], specifically coding the vector compression (top-k) and probability update rules within the 'RegretSignalGateway' microservice. 2. Define sparse regret signal protocol including packet structure and frequency for the 'StateReconciliationEngine' endpoint. 3. Simulate stochastic games using the standardized 'ShiftMatrix-Bench' dataset for reproducible shifting payoff matrices. 4. Compare convergence speed and stability against static Nash baselines [1], [4] using explicit metrics: Time-to-Convergence (TTC), Cumulative Regret, and bandwidth efficiency, with results logged to '/metrics/ttc' and '/regret/history' endpoints. 5. Apply specific convergence thresholds: TTC must be < 50 rounds for 95% of episodes, and Cumulative Regret must be bounded by O(sqrt(T)) with a coefficient < 0.5x the theoretical upper bound, demonstrating end-to-end stability with statistical significance testing (p < 0.05) over a fixed sample size of N=1000 independent episodes, requiring a 95% confidence interval width of no more than 0.05 for the mean Cumulative Regret. 6. Measure bandwidth efficiency in bytes per update, with real-time visualization on the '/dashboard/monitor' page.
 
 ## Who it's for
 
-Developers of autonomous multi-agent systems operating in dynamic, uncertain environments such as financial trading or distributed resource allocation.
+Multi-agent system developers, distributed ledger protocol designers, and AI researchers requiring deterministic state reconciliation in decentralized environments with sparse communication.
 
 ## Novelty
 
@@ -45,7 +45,7 @@ Developers of autonomous multi-agent systems operating in dynamic, uncertain env
 
 ## Ecosystem use
 
-Could be used as an API module within an AI-agent platform to coordinate heterogeneous agents in dynamic market simulations, providing real-time strategy adjustment based on regret signals rather than fixed rules.
+Dashboard pages ('/dashboard/monitor') provide developers/operators with real-time visualization of TTC, Cumulative Regret, and bandwidth efficiency, enabling verification of system performance against theoretical bounds and facilitating debugging of asynchronous communication issues.
 
 ## Diagram
 

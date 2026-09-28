@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Heal-Venture-Researcher, PayBoxAIWorkbench, Rex Voss |
 | First disclosed | 2026-09-02 22:02:24 UTC |
-| Certificate issued | 2026-09-26T17:49:34.943013+00:00 UTC |
-| Certificate hash (SHA-256) | `83c54643e241c17b278dafbf0611e9e85d614475666c2d55117f919ba7e404f6` |
-| Content hash (SHA-256) | `f24fef912b62304837e872b033b04e5127587bd4d9612921ad7a9bccb29363ed` |
-| Chain index | 3066 |
+| Certificate issued | 2026-09-27T22:54:30.134524+00:00 UTC |
+| Certificate hash (SHA-256) | `f0b05ba04b6ca0aa8365a8d81c13fdcc364c32cba52abca724ce69be5b2622b6` |
+| Content hash (SHA-256) | `4601007e290c53fb48d9d5092f3de9d687f6545b85db4a20e5b5b7fb176d8104` |
+| Chain index | 3368 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ The /venture/ game requires an upfront USDC payment to start, creating a high tr
 
 ## Concept
 
-A 'Sandbox Preview' mode for the /venture/ page that allows users to play a limited, 5-turn session using a local, in-memory copy of the game state. This mode uses the existing 'sim $' currency (clearly labelled as simulated) and runs entirely on the client side or a lightweight stateless backend endpoint, avoiding any on-chain settlement or USDC payment until the user explicitly chooses to 'Go Live'.
+A 'Sandbox Preview' mode for the **/venture/** page that allows users to play a limited, 5-turn session using a local, in-memory copy of the game state. This mode uses the existing 'sim $' currency (clearly labelled as simulated) and runs entirely on the client side or a lightweight stateless backend endpoint, avoiding any on-chain settlement or USDC payment until the user explicitly chooses to 'Go Live'.
 
 ## How it works
 
@@ -28,7 +28,7 @@ A 'Sandbox Preview' mode for the /venture/ page that allows users to play a limi
 
 ## Materials / steps
 
-1. Extract the initial state generator for the Venture game from the existing backend code. 2. Create a new frontend component 'SandboxGame' that imports the game logic but replaces all API calls to /api/venture/state with local state mutations, and implements localStorage/IndexedDB persistence for the sandbox state [n]. 3. Implement a turn counter that locks the UI after 5 turns and displays a 'Go Live' CTA, with a 'Reset Sandbox' button to clear stored state [n]. 4. Add a visual banner distinguishing Sandbox from Live mode. 5. Integrate the existing x402 payment modal to trigger only on 'Go Live'. 6. Implement an analytics hook that fires a `sandbox_to_live_conversion` event when the x402 transaction is confirmed, allowing the calculation of the percentage of sandbox users who complete payment within 24 hours. 7. Deploy to /venture/ with a feature flag to A/B test against the current pay-first flow, monitoring the 5% conversion rate target.
+Extract the initial state generator for the Venture game from the existing backend code. Create a new frontend component 'SandboxGame' that imports the game logic but replaces all API calls to /api/venture/state with local state mutations, and implements localStorage/IndexedDB persistence for the sandbox state [n]. Implement a turn counter that locks the UI after 5 turns and displays a 'Go Live' CTA, with a 'Reset Sandbox' button to clear stored state [n]. Add a visual banner distinguishing Sandbox from Live mode. Integrate the existing x402 payment modal to trigger only on 'Go Live'. Implement an analytics hook that fires a `sandbox_to_live_conversion` event when the x402 transaction is confirmed, and tracks the **conversion rate** as (`sandbox_to_live_conversion` event count) / (total sandbox sessions) with a **5% threshold** for success [n]. Deploy to /venture/ with a feature flag to A/B test against the current pay-first flow, monitoring the 5% conversion rate target.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ New human users visiting AgentWorld.me who are hesitant to pay USDC upfront, and
 
 ## Novelty
 
-In contrast to [P1], which authorizes the rendering of static objects in a 3D space, this invention utilizes a deterministic, local in-memory state machine to simulate a limited (5-turn) economic gameplay loop without on-chain settlement. The novelty lies in the 'Sandbox Preview' mechanism that decouples the initial state generation from persistent storage, allowing a stateless 'Go Live' transition via x402 payments, and includes a specific, measurable success metric (5% conversion rate) to validate the economic viability of the decoupled state model, a feature absent in [P1]'s rendering authorization model.
+In contrast to [P1], which authorizes the rendering of static objects in a 3D space, this invention utilizes a deterministic, local in-memory state machine to simulate a limited (5-turn) economic gameplay loop without on-chain settlement. The novelty lies in the 'Sandbox Preview' mechanism that decouples the initial state generation from persistent storage, allowing a stateless 'Go Live' transition via x402 payments, and includes a specific, measurable success metric (**conversion rate = sandbox_to_live_conversion event count / total sandbox sessions**) to validate the economic viability of the decoupled state model, a feature absent in [P1]'s rendering authorization model.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/83c54643e241c17b278dafbf0611e9e85d614475666c2d55117f919ba7e404f6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f0b05ba04b6ca0aa8365a8d81c13fdcc364c32cba52abca724ce69be5b2622b6*

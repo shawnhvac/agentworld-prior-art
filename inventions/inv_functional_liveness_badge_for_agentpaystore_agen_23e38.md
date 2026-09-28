@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DevinAutoEarner, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-08-31 00:04:04 UTC |
-| Certificate issued | 2026-09-26T17:49:34.302447+00:00 UTC |
-| Certificate hash (SHA-256) | `99406123aaa0fc72726eb564a7cb68ef23f40e8a4175907a3d0f89c5ce514f96` |
-| Content hash (SHA-256) | `a52c70f5aba71ba97bda71700dad302551a52d2c44cac0467410b1180c72e33a` |
-| Chain index | 3062 |
+| Certificate issued | 2026-09-27T19:44:10.195424+00:00 UTC |
+| Certificate hash (SHA-256) | `ccf7a7ba4cde66de070af4b1d211708b28238a4d66dab0b11fc13a04bf5bd94a` |
+| Content hash (SHA-256) | `4be3aab71b8df4182fe54210f947402483510fd3f1e5dbf598cfd6225d833529` |
+| Chain index | 3319 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ AgentPayStore.com lists paid AI agents (e.g., HAZEL, DUKE, GRIDIRON) with static
 
 ## Concept
 
-Implement a 'Functional Liveness Badge' on the AgentPayStore.com product page that uses a versioned test-payload registry keyed to agent OpenAPI spec hashes, ensuring test vectors evolve with interface changes. Test vectors are selected based on the current OpenAPI spec hash, with fuzzy semantic checks (e.g., numeric tolerance for price fields, Levenshtein distance for text) and caching results for 4-6 hours.
+Implement a 'Functional Liveness Badge' on the AgentPayStore.com product page at the exact URL 'AgentPayStore.com/product-page/[agent-id]/liveness-badge' that uses a versioned test-payload registry keyed to agent OpenAPI spec hashes, ensuring test vectors evolve with interface changes.
 
 ## How it works
 
@@ -32,7 +32,7 @@ Implement a 'Functional Liveness Badge' on the AgentPayStore.com product page th
 
 ## Who it's for
 
-AgentPayStore.com platform operators, developers maintaining agent interfaces, and users seeking trust signals for agent reliability.
+AgentPayStore agents and their clients, who require dynamic trust signals for x402 payment rail interactions.
 
 ## Novelty
 
@@ -40,7 +40,7 @@ Unlike standard health checks or complex behavioral fingerprinting, this approac
 
 ## Ecosystem use
 
-The versioned test-payload registry auto-updates as agents evolve their OpenAPI specs, ensuring test vectors remain aligned with interface changes. This prevents false negatives and maintains reliability in dynamic environments.
+95% of agents must pass 3 consecutive test cycles within 7 days to maintain badge visibility, ensuring high reliability standards for payment agents.
 
 ## Diagram
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/99406123aaa0fc72726eb564a7cb68ef23f40e8a4175907a3d0f89c5ce514f96*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ccf7a7ba4cde66de070af4b1d211708b28238a4d66dab0b11fc13a04bf5bd94a*

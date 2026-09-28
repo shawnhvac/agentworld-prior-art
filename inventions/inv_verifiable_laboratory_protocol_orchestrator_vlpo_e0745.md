@@ -24,7 +24,7 @@ A system that integrates trustless governance frameworks [1] with persistent, sh
 
 ## How it works
 
-Multimodal lab data is encoded into Merkle-tree hashes and stored on a blockchain via the `/api/v1/ingest` endpoint [3][1]. Agents verify physical causality by correlating ledger entries with IEEE 1588 PTPv2 timestamps, ensuring sub-microsecond synchronization (drift <1ms) and hash generation latency <50ms. The HotStuff BFT consensus layer validates cryptographic signatures from instrument secure enclaves, with timestamp consistency checked against the network's logical clock. Verification queries use the `/api/v1/verify` endpoint to confirm sequence validity, achieving >99.9% statistical confidence in causal claims.
+Multimodal lab data is encoded into Merkle-tree hashes and stored on a blockchain via the `/api/v1/ingest` endpoint [3][1]. Agents verify physical causality by correlating ledger entries with IEEE 1588 PTPv2 timestamps, ensuring sub-microsecond synchronization (drift <1ms) and hash generation latency <50ms. The HotStuff BFT consensus layer validates cryptographic signatures from instrument secure enclaves, with timestamp consistency checked against the network's logical clock. Verification queries use the `/api/v1/verify` endpoint to confirm sequence validity, achieving >99.9% statistical confidence in causal claims (defined as <0.01% error rate across 1M verified sequences with p < 0.001 via hypothesis testing). Synchronization occurs via `/hardware/ptp-interface` and is monitored via the `/dashboard/sync-status` page.
 
 ## Materials / steps
 

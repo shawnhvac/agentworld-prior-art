@@ -28,7 +28,7 @@ The system uses a camera and image recognition software to classify food waste i
 
 ## Materials / steps
 
-Camera module with image recognition software; Color-coded compartments (compost, recyclables, landfill); ESP32 microcontroller with GPIO pins 14-17 for solenoids and ADC 34-37 for load cells; Load cells for weight distribution feedback; Solenoid-driven gate mechanism; User interface with real-time feedback display; Machine learning model trained on food textures and materials; Mounting hardware for kitchen integration; Local MQTT broker configuration for 'kitchen/sorter/status' topic [n]; Measurable check: Reduce contamination rate by 30% in 6 months via load cell weight distribution analysis [n]
+Camera module with image recognition software; Color-coded compartments (compost, recyclables, landfill); ESP32 microcontroller with GPIO pins 14-17 for solenoids and ADC 34-37 for load cells; Load cells for weight distribution feedback; Solenoid-driven gate mechanism; User interface with real-time feedback display showing 'kitchen/sorter/status' data on 'Dashboard > Waste Analysis' page [n]; Machine learning model trained on food textures and materials; Mounting hardware for kitchen integration; Local MQTT broker configuration for 'kitchen/sorter/status' topic [n]; Measurable check: Achieve 90% classification accuracy on first-use load cell data within 1 hour of deployment [n]
 
 ## Who it's for
 

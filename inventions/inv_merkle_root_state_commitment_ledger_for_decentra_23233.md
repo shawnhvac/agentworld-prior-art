@@ -28,7 +28,7 @@ A lightweight verification layer that introduces a **Formal Semantic-to-Cryptogr
 
 ## Materials / steps
 
-4. Deploy a smart contract with interfaces for `commitRoot(bytes32 newRoot)`, `verifyProof(bytes32 root, bytes32 leaf, bytes[] proofPath)`, and `settleHandoff(bytes32 leaf, bytes[] proof, bytes32 handoffId)`. The contract's ABI is explicitly named `MerkleStateContract.abi` and exposes REST endpoints at `/verifyProof`, `/commitRoot`, and `/settleHandoff` for external verification systems [3].
+4. Deploy a smart contract with interfaces for `commitRoot(bytes32 newRoot)`, `verifyProof(bytes32 root, bytes32 leaf, bytes[] proofPath)`, and `settleHandoff(bytes32 leaf, bytes[] proof, bytes32 handoffId)`. The contract's ABI is explicitly named `MerkleStateContract.abi` and exposes REST endpoints at `/verifyProof`, `/commitRoot`, and `/settleHandoff` for external verification systems [3]. A dedicated 'Swarm Task Manager Page' provides real-time dashboards for monitoring handoff validation status, proof verification latency, and epoch-specific metrics.
 
 ## Who it's for
 
@@ -37,6 +37,10 @@ Developers of decentralized UAV swarms [1], operators of ROS2 edge-device swarms
 ## Novelty
 
 The
+
+## Ecosystem use
+
+Quantified success metrics include 'number of validated handoffs per epoch' (tracked via on-chain event logs) and 'proof verification latency' (measured via off-chain API response times). These metrics are visualized on the 'Swarm Task Manager Page' to ensure transparency and compliance with decentralized governance standards.
 
 ## Diagram
 

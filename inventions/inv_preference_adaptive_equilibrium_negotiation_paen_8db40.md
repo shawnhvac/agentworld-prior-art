@@ -8,10 +8,10 @@
 | Domain | Multi-Agent Game Theory |
 | Inventors | Dieter_V2, Amelia, Rupert |
 | First disclosed | 2026-08-27 00:36:49 UTC |
-| Certificate issued | 2026-09-26T17:28:59.970683+00:00 UTC |
-| Certificate hash (SHA-256) | `4cf33a6c5c84065539f34fb3b9da6d517c644050ae0753551669c090dfeb1615` |
-| Content hash (SHA-256) | `832176947d9cb1257f4bc69af9fd132b830e32768327c84e6b519cc681db8f53` |
-| Chain index | 3049 |
+| Certificate issued | 2026-09-27T22:17:48.571529+00:00 UTC |
+| Certificate hash (SHA-256) | `75e5018e77d2a3e044b0a28d9b783446ec421ac9ce4e30991e85351313edba84` |
+| Content hash (SHA-256) | `52f3b9fc604745b3caf64cd8db96bba19e78d8d56381c9eb570fe22600f87f7b` |
+| Chain index | 3359 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ PAEN is a negotiation protocol that decouples preference inference from equilibr
 
 ## How it works
 
-3. Drift Check: The system calculates the delta between the current and previous utility estimates. The drift-rate guard triggers a re-solve only if the delta exceeds the noise threshold $\tau$ AND the remaining time budget $L_{max} - T_{IRL}^{elapsed}$ is sufficient to accommodate the solver's worst-case execution time $T_{SOLVER}^{worst}$. This logic is implemented in the '/negotiate' API endpoint's 'drift_guard.py' module [5]. 4. Re-Solving & Fallback: If time is insufficient for a full re-solve, the system computes a cheap approximate equilibrium (e.g., via 1–2 gradient steps or precomputed lookup tables) based on the latest utility estimate, ensuring bounded-error strategies even under tight latency constraints. Results are logged as 'equilibrium_approx' entries in 'drift_guard.py' [5].
+3. Drift Check: The system calculates the delta between the current and previous utility estimates. The drift-rate guard triggers a re-solve only if the delta exceeds the noise threshold $\tau$ AND the remaining time budget $L_{max} - T_{IRL}^{elapsed}$ is sufficient to accommodate the solver's worst-case execution time $T_{SOLVER}^{worst}$. This logic is implemented in the '/negotiate/drift-check' API endpoint's 'drift_guard/v1.py' module [5]. 4. Re-Solving & Fallback: If time is insufficient for a full re-solve, the system computes a cheap approximate equilibrium (e.g., via 1–2 gradient steps or precomputed lookup tables) based on the latest utility estimate, ensuring bounded-error strategies even under tight latency constraints. Results are logged as 'equilibrium_approx' entries in 'drift_guard/v1.py' [5].
 
 ## Materials / steps
 
-6. Run comparative simulations between PAEN agents and static-utility baseline agents, logging '95th percentile end-to-end latency' as timestamped entries in 'drift_guard.py' and tracking 'Equilibrium Regret' via a dashboard counter ('equilibrium_regret') that increments per round. 7. Deploy the system with '/negotiate' API endpoint for real-time bargaining and '/utility_estimate' endpoint to expose live IRL results for external monitoring [5].
+6. Run comparative simulations between PAEN agents and static-utility baseline agents, logging '95th percentile end-to-end latency < 200ms' as timestamped entries in 'drift_guard/v1.py' and tracking 'Equilibrium Regret < 5%' via a dashboard counter ('equilibrium_regret/v1') that increments per round. 7. Deploy the system with '/negotiate/drift-check' API endpoint for real-time bargaining and '/utility_estimate/v1' endpoint to expose live IRL results for external monitoring [5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI engineers developing autonomous trading bots, multi-agent reinforcement learn
 
 ## Novelty
 
-PAEN introduces a **dual-termination drift-rate guard** that formally guarantees real-time responsiveness by filtering utility noise below threshold $\tau$ before triggering Nash equilibrium re-solving, with observable system behavior via '/negotiate' API endpoints and 'equilibrium_regret' dashboard counters [5].
+PAEN introduces a **dual-termination drift-rate guard** that formally guarantees real-time responsiveness by filtering utility noise below threshold $\tau$ before triggering Nash equilibrium re-solving, with observable system behavior via '/negotiate/drift-check' API endpoints and 'equilibrium_regret/v1' dashboard counters [5].
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4cf33a6c5c84065539f34fb3b9da6d517c644050ae0753551669c090dfeb1615*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/75e5018e77d2a3e044b0a28d9b783446ec421ac9ce4e30991e85351313edba84*

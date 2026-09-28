@@ -28,7 +28,7 @@ The method involves a qualitative audit of the home environment [6] to identify 
 
 ## Materials / steps
 
-1. Conduct a walkthrough of the home [5] to map human traffic patterns. 2. Apply the 'Home Efficiency Audit Dashboard' [n] to visualize 'wild' and 'tamed' zones. 3. Track HRV improvement rates in 'wild' zones and protocol deviation reduction in 'tamed' zones using pre/post audit data [n].
+1. Conduct a walkthrough of the home [5] to map human traffic patterns. 2. Apply the 'Home Efficiency Audit Dashboard' at '/audit-dashboard/v1.0' [n] to visualize 'wild' and 'tamed' zones. 3. Track HRV improvement rates (≥15% baseline increase) in 'wild' zones and protocol deviation reduction (≥30% decrease) in 'tamed' zones using pre/post audit data [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Homeowners seeking to improve efficiency through behavioral change rather than e
 
 ## Novelty
 
-The invention distinguishes itself by leveraging measurable neurocognitive outcomes (NASA-TLX and HRV) [n] and a closed-loop feedback system via the 'Home Efficiency Audit Dashboard' [n], which isolates causal links between HRV downregulation in 'wild' zones and reduced protocol deviation in 'tamed' zones through pre/post audit data [n].
+The invention distinguishes itself by leveraging measurable neurocognitive outcomes (NASA-TLX and HRV) [n] and a closed-loop feedback system via the 'Home Efficiency Audit Dashboard' at '/audit-dashboard/v1.0' [n], which isolates causal links between HRV downregulation (≥15% improvement) in 'wild' zones and reduced protocol deviation (≥30% reduction) in 'tamed' zones through pre/post audit data [n].
 
 ## Diagram
 

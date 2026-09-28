@@ -24,11 +24,11 @@ The Dynamic Waste-Contextual Adaptive Tool Interface (DWATI) is a modular system
 
 ## How it works
 
-DWATI employs a hybrid material lifecycle architecture. It utilizes a network of lightweight, disposable biodegradable sensors made from cellulose nanocrystals and conductive graphene oxide composites, encapsulated in a hydrophobic biopolymer coating. These consumable sensor nodes monitor waste type, volume, and user interaction patterns, transmitting data via BLE 5.0 Low Energy to a durable, non-biodegradable core module containing a low-power AI microcontroller (running TensorFlow Lite) and shape-memory alloy (SMA) actuators. The firmware update endpoint for the core module is explicitly defined as /dwati/firmware/v1.0 using the BLE 5.0 Low Energy protocol with a UUID of 0000110A-0000-1000-8000-00805F9B34FB for secure device pairing.
+DWATI employs a hybrid material lifecycle architecture. It utilizes a network of lightweight, disposable biodegradable sensors... firmware update endpoint for the core module is explicitly defined as /dwati/firmware/v1.0 using the BLE 5.0 Low Energy protocol... user-facing dashboard endpoint (/dwati/dashboard/v1.0) provides real-time feedback... additional user-facing endpoints include /dwati/settings/v1.0 for configuration and /dwati/status/v1.0 for system health checks.
 
 ## Materials / steps
 
-Cellulose nanocrystals and conductive graphene oxide composites with hydrophobic biopolymer encapsulation for disposable biodegradable sensor nodes; Thermoplastic elastomers for durable modular grips; Shape-memory alloy actuators for durable reconfiguration; Low-power microcontroller with TensorFlow Lite for durable AI processing; BLE 5.0 Low Energy transceivers for durable data communication; Periodic replacement protocol for biodegradable sensor nodes; Integration of disposable sensors with durable actuators and communication modules into a modular tool interface
+Cellulose nanocrystals and conductive graphene oxide composites with hydrophobic biopolymer encapsulation for disposable biodegradable sensor nodes; Thermoplastic elastomers for durable modular grips; Shape-memory alloy actuators for durable reconfiguration; Low-power microcontroller with TensorFlow Lite for durable AI processing; BLE 5.0 Low Energy transceivers for durable data communication; Periodic replacement protocol for biodegradable sensor nodes; Integration of disposable sensors with durable actuators, communication modules, and a BLE-connected UI/UX dashboard into a modular tool interface.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Eco-conscious households seeking to optimize waste management and tool efficienc
 
 ## Novelty
 
-DWATI distinguishes itself from prior art [P1], [P2], and [P3] by establishing a closed-loop physical actuation mechanism where transient biodegradable sensor nodes directly drive durable shape-memory alloy (SMA) actuators for real-time ergonomic reconfiguration. This integration uniquely mitigates user fatigue and improves sorting accuracy through active, tangible support, with primary validation focused on sorting accuracy (% correct) and SMA actuator durability (actuation cycles before >5% drop).
+DWATI distinguishes itself... primary validation focused on sorting accuracy (must reach 95% in 3 months) and SMA actuator durability (10,000 actuation cycles before 5% drop), alongside secondary metrics...
 
 ## Ecosystem use
 
-DWATI integrates into smart home ecosystems via BLE 5.0 Low Energy and firmware update endpoints, enabling seamless interoperability with IoT platforms for waste management analytics and user feedback loops.
+The /dwati/dashboard/v1.0 endpoint enables users to monitor system performance, receive personalized sorting guidance, and track sustainability metrics (e.g., waste reduction, energy saved). This interface aligns with standards for user feedback and system verification.
 
 ## Diagram
 

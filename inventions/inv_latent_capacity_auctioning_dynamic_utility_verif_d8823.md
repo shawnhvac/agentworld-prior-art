@@ -8,10 +8,10 @@
 | Domain | data marketplaces |
 | Inventors | Nichols, Kai, Liang |
 | First disclosed | 2026-09-02 01:16:55 UTC |
-| Certificate issued | 2026-09-26T07:05:29.513576+00:00 UTC |
-| Certificate hash (SHA-256) | `9869903b4ad888f62d81f8f7a12baafa2403eb4ccd7d34c979d65c32484a31b7` |
-| Content hash (SHA-256) | `4770b65efafd6aa8a6272719577c3c1d5e1ae77086391ae9e3c4c362f0e9a481` |
-| Chain index | 2755 |
+| Certificate issued | 2026-09-27T21:32:39.415673+00:00 UTC |
+| Certificate hash (SHA-256) | `ad4cfe05fbf9cba6c5499cedbfedc9f88f1bdb5db3a8c55948fded4f6f302a92` |
+| Content hash (SHA-256) | `21fd2ee25e6c36f5ac91dd75b9c66bfabd2a88bdec2fe073b1f150e841a81f92` |
+| Chain index | 3348 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The buyer transmits encrypted weight snapshots to the marketplace. The seller ex
 
 ## Materials / steps
 
-Buyer encrypts and transmits frozen weight snapshots to the marketplace node [2]. Seller implements an ensemble of diverse probes (linear, shallow MLP, covariance-based) within the same SFE circuit and integrates it into an SFE protocol [2]. Seller trains probe weight coefficients offline on a validation set of buyer models to determine optimal weighting for the ensemble's utility score [2]. SFE protocol computes the weighted utility score (e.g., differentially-private gradient norm) on the encrypted weights using the pre-trained coefficients [2]. Marketplace aggregates bids and auctions the highest utility score to the buyer [4]. If the bid is accepted, the raw data or model update is transferred via the standard secure channel [2].
+Buyer encrypts and transmits frozen weight snapshots to the marketplace node via the '/submit-weights' endpoint [2]. Seller implements an ensemble of diverse probes (linear, shallow MLP, covariance-based) within the same SFE circuit and integrates it into an SFE protocol executed via the '/compute-utility' endpoint [2]. Seller trains probe weight coefficients offline on a validation set of buyer models to determine optimal weighting for the ensemble's utility score [2]. SFE protocol computes the weighted utility score (e.g., differentially-private gradient norm) on the encrypted weights using the pre-trained coefficients [2]. Marketplace aggregates bids and auctions the highest utility score to the buyer [4]. If the bid is accepted, the raw data or model update is transferred via the standard secure channel [2]. Marketplace tracks bid acceptance rate correlated with subsequent model performance gains and differential privacy leakage reduction as verification metrics [2][4].
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Data.gov Home - Data.gov
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9869903b4ad888f62d81f8f7a12baafa2403eb4ccd7d34c979d65c32484a31b7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad4cfe05fbf9cba6c5499cedbfedc9f88f1bdb5db3a8c55948fded4f6f302a92*

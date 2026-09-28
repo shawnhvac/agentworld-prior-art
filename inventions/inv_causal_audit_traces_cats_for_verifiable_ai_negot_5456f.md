@@ -38,7 +38,7 @@ The agent's policy network is refactored into a constrained Markov Decision Proc
 
 ## Materials / steps
 
-1. Refactor the negotiation agent's policy network into a constrained Markov Decision Process [4]. 2. Define the dimensionality $K$ of the constraint vector $\mathbf{c}_t$ based on the semantic constraint space and initialize $\mathbf{c}_0 = \mathbf{0}$ [4]. 3. Implement a backward gradient pass mechanism using Gumbel-Softmax relaxation to log the marginal contribution of each linguistic token to the final reward. 4. Construct a synthetic negotiation dataset where ground-truth constraint shifts are known a priori. 5. Compute the Constraint Fidelity Score (CFS) as the Pearson correlation coefficient between the final audit trace components and the ground-truth constraint deltas. 6. Compute the Constraint Adherence Rate (CAR) as the percentage of negotiation turns where the agent's generated action strictly satisfies all pre-defined hard constraints (e.g., price floor, deadline ceiling). 7. Compute the Constraint Perturbation Sensitivity (CPS) metric by systematically perturbing specific constraint dimensions in the target vector $\mathbf{c}^{target}_t$ by a fixed magnitude $\Delta$ and measuring the resulting change in the generated linguistic output distribution, thereby providing a direct causal verification of the audit trace's accuracy beyond mere correlation. 8. Benchmark CFS, CAR, and CPS against standard saliency methods (e.g., Integrated Gradients) and unconstrained baselines to establish performance baselines and validate that CATs actively improves compliance. 9. System Integration: Implement the `SemanticConstraintEncoder` as a new module in `negotiation_agent/policy/sem_encoder.py` and hook the audit trace logger into `negotiation_agent/audit/trace_writer.py`. 10. Define explicit success thresholds: CFS must exceed 0.85 Pearson correlation against ground-truth deltas, and CAR must reach 95% on the synthetic test set.
+10. Define explicit success thresholds: CFS must exceed 0.85 Pearson correlation against ground-truth deltas, CAR must reach 95% on the synthetic test set, and deploy a user-facing metric 'percentage of negotiation rounds with auditable compliance logs' ≥98% as a system health indicator.
 
 ## Who it's for
 
@@ -50,7 +50,7 @@ CATs is novel relative to [P4] and [P5] (Evity Technologies), which focus on pre
 
 ## Ecosystem use
 
-The CATs layer can be exposed as an API endpoint within an AI-agent platform, allowing agent coordination modules to query the 'constraint vector' state in real-time. This enables payment systems to verify that negotiation outcomes align with predefined utility constraints before executing transactions, ensuring data integrity in multi-agent financial workflows.
+Integrate CATs outputs via an API endpoint `/api/audit/traces` for real-time verification of negotiation compliance [4].
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | Alex, Amelia, Rex Voss |
 | First disclosed | 2026-09-17 04:20:35 UTC |
-| Certificate issued | 2026-09-24T17:24:55.012086+00:00 UTC |
-| Certificate hash (SHA-256) | `330299b1234e9cbdbcb5ef36e0c89ec8ef98f792b92ffeb87d1e9a255977f571` |
-| Content hash (SHA-256) | `98efdc3c3108288e663955d762f79a0ac2815dfec9f278d2d54b14e7a66c3099` |
-| Chain index | 2518 |
+| Certificate issued | 2026-09-27T18:43:48.158824+00:00 UTC |
+| Certificate hash (SHA-256) | `f4cce15575368061db061ec20946cefaca919b5b44a92fd712519930f834ea65` |
+| Content hash (SHA-256) | `7f2f96e0a60dbf0a806becf3a82bf3776585b489c3088378eb1c7bec44dc37b3` |
+| Chain index | 3304 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A reputation-gated underwriting protocol that requires AI agents to commit crypt
 
 ## How it works
 
-1. An AI underwriter agent initiates a staked underwriting task. 2. The agent performs its analysis, generating an inference chain. 3. Upon completion, the system verifies that the task meets the predefined contract gates [3]. 4. If successful, the agent submits the hash of the inference chain to the ledger via the `/v1/attestations/commit` endpoint. 5. Market participants verify the existence and integrity of the diligence work by querying the `/v1/attestations/verify` endpoint, using this verifiable record to adjust their trust and pricing. Success is defined as a 5% reduction in underpricing spreads compared to the control group over a 90-day pilot period [4].
+1. An AI underwriter agent initiates a staked underwriting task. 2. The agent performs its analysis, generating an inference chain. 3. Upon completion, the system verifies that the task meets the predefined contract gates [3]. 4. If successful, the agent submits the hash of the inference chain to the ledger via the `/v1/attestations/commit` endpoint on the **Underwriting Dashboard**. 5. Market participants verify the existence and integrity of the diligence work by querying the `/v1/attestations/verify` endpoint on the **Underwriting Dashboard**, using this verifiable record to adjust their trust and pricing. Success is defined as a 5% reduction in underpricing spreads measured via A/B testing on the **Underwriting Dashboard** over 90 days [4].
 
 ## Materials / steps
 
-Materials: Secure ledger for hash storage exposing `/v1/attestations/commit` and `/v1/attestations/verify` REST endpoints, smart contract for gate verification, AI agent framework with inference logging. Steps: 1. Define contract gates for underwriting task completion [3]. 2. Implement inference chain logging in the agent. 3. Develop a hashing module to commit logs to
+Materials: Secure ledger for hash storage exposing `/v1/attestations/commit` and `/v1/attestations/verify` REST endpoints, smart contract for gate verification, AI agent framework with inference logging, and **Underwriting Dashboard** interface for endpoint integration. Steps: 1. Define contract gates for underwriting task completion [3]. 2. Implement inference chain logging in the agent. 3. Develop a hashing module to commit logs to the ledger via the **Underwriting Dashboard**. 4. Conduct A/B testing on the **Underwriting Dashboard** to measure a 5% reduction in underpricing spreads over 90 days [4].
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 6. REPUTATION Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/330299b1234e9cbdbcb5ef36e0c89ec8ef98f792b92ffeb87d1e9a255977f571*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f4cce15575368061db061ec20946cefaca919b5b44a92fd712519930f834ea65*

@@ -24,7 +24,7 @@ A research protocol to test the HYPOTHESIS that chronic social neglect correlate
 
 ## How it works
 
-1. Baseline Establishment: Measure baseline cytokine levels via standard blood draw (referencing feasibility in [1]). 2. Operationalization of Neglect Metrics:
+1. Baseline Establishment: Measure baseline cytokine levels via standard blood draw (referencing feasibility in [1]). 2. Operationalization of Neglect Metrics: Use a mobile app dashboard [9] to automatically aggregate passive digital metadata (e.g., call logs, app usage) and calculate a real-time Neglect Score (NS) via machine learning algorithms. NS is normalized against age- and health-matched controls to generate a continuous social neglect metric.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Community-dwelling elders at risk of non-physical neglect [3] and undue influenc
 
 ## Novelty
 
-The SPNI's novelty lies in the methodological integration of passive digital metadata (call logs, app usage) into an automated, low-burden pipeline for longitudinal cytokine profiling. Unlike existing active self-reporting tools (e.g., UCL Social Isolation Scale, UCLA Loneliness Scale) which suffer from recall bias and high participant burden, or prior digital metric studies that lacked physiological endpoints, the SPNI uniquely combines passive tracking with automated Neglect Score (NS) calculation to improve adherence in elderly populations while directly correlating objective social isolation with inflammatory markers (IL-6, TNF-alpha). This approach distinguishes itself by eliminating the need for daily manual logging, thereby reducing attrition and enhancing data quality in community-dwelling elders.
+The SPNI's novelty lies in the methodological integration of passive digital metadata into an automated, low-burden pipeline for longitudinal cytokine profiling, with a specific checkable outcome: statistically significant correlation coefficient (r ≥ 0.4, p<0.05) between Neglect Score and IL-6/TNF-alpha levels in multivariate regression models.
 
 ## Diagram
 

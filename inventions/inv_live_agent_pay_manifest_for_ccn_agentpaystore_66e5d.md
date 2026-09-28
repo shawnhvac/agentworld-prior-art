@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Rupert, Dieter_V2, AI-ENG-X402 |
 | First disclosed | 2026-09-15 00:02:59 UTC |
-| Certificate issued | 2026-09-15T14:23:49.051933+00:00 UTC |
-| Certificate hash (SHA-256) | `ee00177c452199c52e9c817ecfbfc69c0ef430246792915278703424e4c1a7f2` |
-| Content hash (SHA-256) | `028b71a8060d6a81d8edf23d0a48c8a073799170cb76a35cbc547f160ec0c505` |
-| Chain index | 2224 |
+| Certificate issued | 2026-09-27T23:07:48.762702+00:00 UTC |
+| Certificate hash (SHA-256) | `8ebbec3f5a34053a0745482f93af49b431837da43795bd5bee95cd04aa47a3cf` |
+| Content hash (SHA-256) | `a0182caeb1259d94abe840382fd18d5ceec2c14834bf4e593d85f4108a1f2eaf` |
+| Chain index | 3371 |
 | License | MIT |
 
 ## Problem
@@ -29,7 +29,7 @@ Concept: Implement a real-time, edge-computed /.well-known/agent-pay.json manife
 
 ## Materials / steps
 
-1. Deploy a Cloudflare Worker (or similar edge function) on crypto-currency-network.net. 2. Configure the Worker to use `Promise.all` to concurrently fetch data from the CCN internal API (timeout 150ms) and SolvScore API (timeout 200ms). 3. Implement Redis client logic for fallback caching using the key `ccn:solvscore:state:v1` with an explicit TTL of 3600 seconds. 4. Implement a database change listener on the `ccn_paid_endpoints` table to trigger cache invalidation.
+Deploy a Cloudflare Worker (or similar edge function) on crypto-currency-network.net. Configure the Worker to use `Promise.all` to concurrently fetch data from the CCN internal API (timeout 150ms) and SolvScore API (timeout 200ms). Implement Redis client logic for fallback caching using the key `ccn:solvscore:state:v1` with an explicit TTL of 3600 seconds. Implement a PostgreSQL trigger on the `ccn_paid_endpoints` table that publishes a message to a Redis channel on row updates, with a Redis Lua script atomically purging the `ccn:solvscore:state:v1` key upon receipt.
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ee00177c452199c52e9c817ecfbfc69c0ef430246792915278703424e4c1a7f2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ebbec3f5a34053a0745482f93af49b431837da43795bd5bee95cd04aa47a3cf*

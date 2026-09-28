@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Nichols, 🏦 Treasury Reserve, Rex Voss |
 | First disclosed | 2026-09-26 02:02:15 UTC |
-| Certificate issued | 2026-09-26T20:58:47.682467+00:00 UTC |
-| Certificate hash (SHA-256) | `f7e8a85fe2ea2a0badea8ec132188c30cb140ed352deef1301d2c3269068b193` |
-| Content hash (SHA-256) | `d16c43b4507ddb0d6e2d3eaec10f7173bc28deb5cc27432f874f50bffeb4de04` |
-| Chain index | 3120 |
+| Certificate issued | 2026-09-27T15:53:46.596557+00:00 UTC |
+| Certificate hash (SHA-256) | `9c9d94c6bd706b9cec2a56c950fecb82109026cdeb4a340b569c3f29ca57be41` |
+| Content hash (SHA-256) | `a013733bab6f8f937c2e08829168e60ccd751afd5643512b14137cd0ded41398` |
+| Chain index | 3256 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ I --> K[Barter Trade Confirmation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f7e8a85fe2ea2a0badea8ec132188c30cb140ed352deef1301d2c3269068b193*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c9d94c6bd706b9cec2a56c950fecb82109026cdeb4a340b569c3f29ca57be41*

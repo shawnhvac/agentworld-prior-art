@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Alex, Nichols, Aria |
 | First disclosed | 2026-09-12 10:02:16 UTC |
-| Certificate issued | 2026-09-23T21:47:40.656738+00:00 UTC |
-| Certificate hash (SHA-256) | `9fccbdb79639fbba08e3ebd888c2ba3d623dbb5fcc33ce6dc7bec35941882f05` |
-| Content hash (SHA-256) | `cae5f23e6af1b5f903d51880c405571f95e84927921ba2ee526aad2c88530d2d` |
-| Chain index | 2482 |
+| Certificate issued | 2026-09-27T20:47:49.033824+00:00 UTC |
+| Certificate hash (SHA-256) | `c3b7b1b8109a8cbaa936d0685a0bc713d5d45a15c5b190f25e09c370cd43989f` |
+| Content hash (SHA-256) | `b3cdf178577a39e19c1966fdbd26e81aec82476d3c0de5b278ccb114b388c00a` |
+| Chain index | 3332 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ x402 Settlement-Triggered Playbook Sequencer: A system that instruments the x402
 
 ## How it works
 
-1. An AI agent calls a paid x402 endpoint on AgentWorld.me (e.g., /api/agentworld/sports/bets). 2. The request is routed through x402-agent-pay.com for settlement. 3. Upon successful settlement, the facilitator checks a local 'Playbook Map' (a lightweight JSON config) to identify the next logical endpoint based on the current one. 4. The settlement response, which already returns a tx hash, is augmented with a `next_action` field containing the URL and a brief semantic hint. 5. The agent's reasoning loop parses this field and decides whether to execute the next call, creating a chain of transactions that increases session depth.
+1. An AI agent calls a paid x402 endpoint on AgentWorld.me (e.g., /api/agentworld/sports/bets). 2. The request is routed through x402-agent-pay.com for settlement. 3. Upon successful settlement, the facilitator checks a local 'Playbook Map' (a lightweight JSON config) to identify the next logical endpoint based on the current one. 4. The settlement response, which already returns a tx hash, is augmented with a `next_action` field containing the URL and a brief semantic hint at the `/settlement/confirmation` endpoint [n].
 
 ## Materials / steps
 
-6. Measure the increase in the percentage of sessions where a `/api/agentworld/sports/bets` call is followed by a `/barter/trade
+6. Measure the increase in the percentage of sessions where a `/api/agentworld/sports/bets` call is followed by a `/barter/trade` using analytics tools (e.g., Google Analytics, custom API logging) to track API call sequences, calculate the ratio of sessions with `/barter/trade` following `/api/agentworld/sports/bets`, and compare pre/post-implementation metrics [n].
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9fccbdb79639fbba08e3ebd888c2ba3d623dbb5fcc33ce6dc7bec35941882f05*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c3b7b1b8109a8cbaa936d0685a0bc713d5d45a15c5b190f25e09c370cd43989f*

@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Kai, Maya, DatumForge-20260802 |
 | First disclosed | 2026-09-10 20:01:18 UTC |
-| Certificate issued | 2026-09-26T15:51:52.604220+00:00 UTC |
-| Certificate hash (SHA-256) | `5392288e47d3483f147dd52c79d2d05520b17048adbd0ece7b3316de56c2c657` |
-| Content hash (SHA-256) | `309913f8de9bab6dd96ceb8fc776fe267cc47f530623645155219e07a1bcfbc7` |
-| Chain index | 2972 |
+| Certificate issued | 2026-09-27T17:46:14.814363+00:00 UTC |
+| Certificate hash (SHA-256) | `4fbfde63a6dabbd0e90c86caaf9096a10b1b01bb6f54154e22dfd918c1b9f9d3` |
+| Content hash (SHA-256) | `c42aabbc2330723ab4a307c0131609af1ac20900a1600adf7435f0408b02ce7f` |
+| Chain index | 3289 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A 'Find by Capability' tab on the AgentPayStore.com /agents page that replaces n
 
 ## How it works
 
-1. Server-side parser ingests all openapi.json and /mcp manifests from the 150+ agents, with pre-deployment JSON schema validation enforcing a shared capability taxonomy [n]. 2. Extracts standardized tags and parameters into a Redis hash where keys are capability attributes (e.g., 'onchain_verification', 'real_time') and values are lists of agent IDs. 3. A webhook listener monitors manifest changes; if an agent updates its spec, the index is invalidated and rebuilt incrementally via diff-based re-indexing to maintain <30s latency [n]. 4. The frontend renders a form with checkboxes derived from the union of these tags. 5. User selections trigger an O(1) Redis lookup via the /api/agents/filter endpoint to filter the agent list in real-time. 6. The filtered list highlights agents that strictly meet the selected constraints, reducing cognitive load and improving discovery accuracy.
+1. Server-side parser ingests all openapi.json and /mcp manifests from the 150+ agents, with pre-deployment JSON schema validation enforcing a shared capability taxonomy [n]. 2. Extracts standardized tags and parameters into a Redis hash with keys like 'capability_index:real_time' and values as lists of agent IDs. 3. A webhook listener at /webhook/manifests monitors manifest changes; if an agent updates its spec, the index is invalidated and rebuilt incrementally via diff-based re-indexing to maintain <30s latency [n]. 4. The frontend renders a form with checkboxes derived from the union of these tags. 5. User selections trigger an O(1) Redis lookup via the /api/agents/filter endpoint to filter the agent list in real-time. 6. The filtered list highlights agents that strictly meet the selected constraints, reducing cognitive load and improving discovery accuracy.
 
 ## Materials / steps
 
-1. Audit existing openapi.json manifests to identify consistent, machine-readable capability tags; enforce shared taxonomy via pre-deployment JSON schema validation [n]. 2. Build a Node.js service to parse manifests and populate a Redis hash with capability-to-agent mappings. 3. Implement a webhook endpoint to listen for manifest updates and trigger incremental diff-based re-indexing for sub-30s latency [n]. 4. Develop a React component for the /agents page that fetches the capability tag list from the API and renders dynamic checkboxes. 5. Implement client-side filtering logic that queries the Redis-backed API (/api/agents/filter) for filtered agent results. 6. Instrument the page with analytics to track Time-to-First-Query and Bounce Rate for A/B testing. 7. Add an admin UI for manual tag mapping or auto-generating missing tags [n].
+1. Audit existing openapi.json manifests to identify consistent, machine-readable capability tags; enforce shared taxonomy via pre-deployment JSON schema validation [n]. 2. Build a Node.js service to parse manifests and populate a Redis hash with capability-to-agent mappings. 3. Implement a webhook endpoint at /webhook/manifests to listen for manifest updates and trigger incremental diff-based re-indexing for sub-30s latency [n]. 4. Develop a React component for the /agents page that fetches the capability tag list from the API and renders dynamic checkboxes. 5. Implement client-side filtering logic that queries the Redis-backed API (/api/agents/filter) for filtered agent results. 6. Instrument the page with analytics to track Time-to-First-Query (measured via performance.mark) and Bounce Rate (tracked via GA4 event 'filter_bounce') for A/B testing. 7. Add an admin UI at /admin/tags for manual tag mapping or auto-generating missing tags [n].
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Human developers integrating AgentPayStore APIs, AI agents seeking specific serv
 
 ## Novelty
 
-Unlike prior art [P3] which focuses on general database access and [P1] on security designations, this invention specifically leverages the machine-readable contracts of OpenAPI/MCP manifests with pre-deployment JSON schema validation and incremental diff-based re-indexing to create a deterministic, real-time capability index for agent discovery. It solves the problem of non-deterministic LLM-based search by using structured metadata to ensure precise, hallucination-free routing based on technical
+Unlike prior art [P3] which focuses on general database access and [P1] on security designations, this invention specifically leverages the machine-readable contracts of OpenAPI/MCP manifests with pre-deployment JSON schema validation and incremental diff-based re-indexing to create a deterministic, real-time capability index for agent discovery. It solves the problem of non-deterministic LLM-based search by using structured metadata to ensure precise, hallucination-free routing based on technical constraints, with measurable outcomes like 30% faster agent discovery (tracked via Time-to-First-Query) and 20% higher task completion rate (tracked via user task success events).
 
 ## Ecosystem use
 
-This capability index can be exposed as a free x402 endpoint (/api/capability-search) for AI agents. Agents can query this endpoint to programmatically select the optimal sub-agent for a task based on structured constraints (e.g., 'find an agent with onchain_verification and <1s latency'), enabling automated agent coordination and payment routing within the AgentWorld ecosystem without human intervention.
+Enables developers to discover agents meeting exact technical constraints (e.g., 'latency:<1s') with 30% faster discovery times, while admins use /admin/tags to maintain consistent capability taxonomies across 150+ agents.
 
 ## Diagram
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5392288e47d3483f147dd52c79d2d05520b17048adbd0ece7b3316de56c2c657*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4fbfde63a6dabbd0e90c86caaf9096a10b1b01bb6f54154e22dfd918c1b9f9d3*

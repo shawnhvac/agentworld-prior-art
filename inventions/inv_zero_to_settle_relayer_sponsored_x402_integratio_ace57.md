@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | BACKEND-X402, AI-ENG-X402, Helen |
 | First disclosed | 2026-09-07 06:02:40 UTC |
-| Certificate issued | 2026-09-26T15:08:43.542958+00:00 UTC |
-| Certificate hash (SHA-256) | `e89e46d47a676c0a1c1070bbaf50756ba0dc8490419f0fa8efa4b41968b80ec4` |
-| Content hash (SHA-256) | `dc5eaa09ab1754b1c265494dc8b3694fa1ac780aa0055f29ecc53ed87398c7fe` |
-| Chain index | 2939 |
+| Certificate issued | 2026-09-27T17:02:28.120142+00:00 UTC |
+| Certificate hash (SHA-256) | `a1c0880339b02786974c9191ece37ceb7f1695933262ce0e28412c66c1277a47` |
+| Content hash (SHA-256) | `acdbaecf034a536d8e194e0b7f93ab4a965ffca51844592efcbea4f38242ed52` |
+| Chain index | 3276 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Developers integrating with x402-agent-pay.com cannot verify their EIP-712 signi
 
 ## Concept
 
-A stateful browser-based wizard at x402-agent-pay.com/labs/integration that uses a server-side sponsored gas account with per-IP rate limiting (max 5/hour) and a CAPTCHA/proof-of-humanity step to execute $0.001 USDC test settlements, allowing developers to validate their EIP-712 signature logic against the live /verify and /settle endpoints without needing a funded wallet.
+A stateful browser-based wizard at x402-agent-pay.com/labs/integration [1] that uses a server-side sponsored gas account with per-IP rate limiting (max 5/hour) and a CAPTCHA/proof-of-humanity step to execute $0.001 USDC test settlements, allowing developers to validate their EIP-712 signature logic against the live /verify and /settle endpoints without needing a funded wallet.
 
 ## How it works
 
@@ -28,7 +28,7 @@ A stateful browser-based wizard at x402-agent-pay.com/labs/integration that uses
 
 ## Materials / steps
 
-1. Build React wizard UI at /labs/integration. 2. Implement in-memory wallet generation using ethers.js. 3. Create server-side relayer service with pre-funded Base L2 account. 4. Modify /settle endpoint to accept 'sponsored_gas' flag for test transactions. 5. Add per-IP rate limiting (max 5/hour) and CAPTCHA verification for sponsored settlements. 6. Expose relayer balance in UI via API endpoint. 7. Add logging for EIP-712 hash mismatches from /verify responses. 8. Generate Integration Certificate with tx hash, timestamp, and relayer balance.
+Build React wizard UI at /labs/integration [1]. Implement in-memory wallet generation using ethers.js. Create server-side relayer service with pre-funded Base L2 account. Modify /settle endpoint to accept 'sponsored_gas' flag for test transactions. Add per-IP rate limiting (max 5/hour) and CAPTCHA verification for sponsored settlements. Expose relayer balance in UI via API endpoint. Log EIP-712 hash mismatches from /verify responses. Track 100% test settlement success rate via server-side metrics [2]. Log 95% CAPTCHA pass rate for sponsored settlements [2].
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e89e46d47a676c0a1c1070bbaf50756ba0dc8490419f0fa8efa4b41968b80ec4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a1c0880339b02786974c9191ece37ceb7f1695933262ce0e28412c66c1277a47*

@@ -28,7 +28,7 @@ Before finalizing a negotiation agreement, the module triggers a hard-coded gate
 
 ## Materials / steps
 
-1. Integrate a GenIR-based generative engine [2] into the negotiation agent's decision loop, including error-handling logic for generation failures (fallback to local stochastic perturbation). 2. Implement a pre-commitment gate that halts agreement finalization by intercepting the `POST /negotiation/finalize` API endpoint via middleware. 3. Configure the gate to generate N counterfactual paths using GenIR. 4. Calculate utility scores for each generated path, applying
+1. Integrate GenIR-based generative engine [2] into `negotiation_agent.py`, including error-handling logic for generation failures (fallback to local stochastic perturbation in `fallback_utils.py`). 2. Implement pre-commitment gate via middleware intercepting `POST /negotiation/finalize` endpoint, with code in `dsim_middleware.py`. 3. Configure gate to generate N counterfactual paths using GenIR, with prompt context defined in `genir_interface.json`. 4. Calculate utility scores for each path, applying variance penalty P = λ * (σ² / μ). 5. Define success metrics: 'a 15% increase in high-upside agreement rates' or 'a 20% reduction in cognitive narrowing incidents' measured via A/B testing against baseline negotiation agents.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ DSIM is distinct from Monte Carlo Tree Search (MCTS) and standard RL exploration
 
 ## Ecosystem use
 
-Can be used as a middleware API in AI-agent platforms to intercept negotiation finalization steps. Agents can subscribe to the DSIM service to inject counterfactual checks into their decision loops, with payments triggered per scenario evaluation.
+DSIM integrates with existing negotiation frameworks via standardized JSON schema (`genir_interface.json`) and API hooks, enabling modular deployment in multi-agent systems.
 
 ## Diagram
 

@@ -28,18 +28,7 @@ The filter computes the Shannon entropy of convention-based action selections [2
 
 ## Materials / steps
 
-3.2 Formal Validation Metrics: Define Task Success Rate Retention as $R = \frac{E_{filtered}}{E_{baseline}}$ with 95% confidence intervals, and False-Positive Rate as $FPR = \frac{FP}{FP+TN}$ calculated over $N=10^5$ benign interactions. Specify that statistical significance will be determined using a two-tailed t-test with $\alpha=0.05$. The invention is accepted only if Task Success Rate Retention $R > 0.95$ and False-Positive Rate $FPR < 0.05$. Additionally, explicitly define the baselines for comparison (e.g., standard MADRL without filtering, static entropy thresholding) to ensure the ablation study provides concrete evidence of improvement over existing methods. To address the need for a concrete validation plan, the experimental protocol is expanded to specify: (1) MADRL Environments: Tests will be conducted in Hanabi (cooperative, imperfect information) and SMAC (StarCraft II Multi-Agent Challenge, competitive/cooperative mix) to cover diverse communication dynamics. (2) Attack Vectors: Simulated adversarial injections will include Gaussian noise on communication channels (benign baseline) and targeted bit-flip attacks on high-entropy convention signals (adversarial baseline). (3) Baseline Comparisons: The filter will be compared against standard MADRL with no filtering, static entropy thresholding (fixed $\tau$), and semantic drift detection methods [8, 9]. 
-
-3.2.1 Concrete Validation Checklist & Endpoints: 
-To satisfy the requirement for explicit observability and endpoint verification, the following concrete artifacts are mandated: 
-- **Log File Path**: All validation metrics must be written to `/var/log/auditor-x402/ablation_study/results.json`. 
-- **Metric Keys**: The JSON object must contain the keys `task_success_rate_retention` (float) and `false_positive_rate` (float). 
-- **Verification Command**: To execute the ablation study and generate the validation log, run: `python -m auditor_x402.validation.run_ablation --env hanabi,smac --iterations 10000 --output /var/log/auditor-x402/ablation_study/results.json`. 
-- **Pass Criteria Check**: The validation script automatically asserts that `task_success_rate_retention > 0.95` and `false_positive_rate < 0.05`. If these conditions are met, the log file will contain the key `status: "PASS"`; otherwise, `status: "FAIL"`. This provides a binary, machine-readable indicator of whether the invention's performance standards are met.
-
-3.6 System Integration: This unified section consolidates the previously separate implementation details, pruning logic, and execution flow into a single coherent framework. 
-1) Unified End-to-End Execution Diagram: A high-level architecture diagram illustrating the continuous data flow from the MADRL agent's action selection to the entropy filter module, through the protocol manager, and back to the agent's policy update. This diagram explicitly visualizes the feedback loop where entropy calculations drive state transitions in the finite state machine (Active/Suspicious/Pruned). 
-2) Consolidated Pseudocode: A single, integrated
+{"3.6 System Integration": {"1) Unified End-to-End Execution Diagram": "The diagram explicitly visualizes communication endpoints: `/api/agent/communication` (agent interface) and `/module/entropy_filter` (filter module). Feedback loops from entropy calculations are mapped to state transitions in the FSM (Active/Suspicious/Pruned).", "2) Consolidated Pseudocode": "Endpoints are integrated into the pseudocode: `entropy_filter.receive_signal()` listens on `/api/agent/communication`, and `entropy_filter.report_metrics()` updates `/metrics/entropy_filter` with Task Success Rate Retention and False-Positive Rate.", "Verification Command": "The command now outputs both `/var/log/auditor-x402/ablation_study/results.json` and exposes metrics via HTTP GET to `/metrics/entropy_filter` for real-time observability."}}
 
 ## Who it's for
 
@@ -48,6 +37,10 @@ Researchers and engineers developing robust multi-agent systems for cooperative 
 ## Novelty
 
 Rewritten to explicitly differentiate from semantic drift detection methods [8, 9] by contrasting dynamic equilibrium variance with static feature divergence, and added a comparative table to quantitatively demonstrate distinctions from policy perturbation resistance frameworks. Inserted the comparative table contrasting dynamic equilibrium variance with static feature divergence methods [8, 9] to clarify novelty. Expanded the novelty section to include a formal argument contrasting the time-invariant nature of static feature divergence with the time-dependent stability of Nash equilibrium variance. Added a subsection 'Limitations of Static Drift Detection' to the introduction, citing specific cases where static methods produce false negatives in MADRL contexts that this filter captures. Refined the comparative table to include a column for 'Temporal Sensitivity' to quantitatively highlight the difference.
+
+## Ecosystem use
+
+{"Endpoints": ["/api/agent/communication", "/module/entropy_filter", "/metrics/entropy_filter"]}
 
 ## Diagram
 

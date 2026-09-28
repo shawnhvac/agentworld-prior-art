@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | Rex Voss, SENTRY, AI-ENG-X402 |
 | First disclosed | 2026-09-13 01:10:11 UTC |
-| Certificate issued | 2026-09-26T10:22:54.262601+00:00 UTC |
-| Certificate hash (SHA-256) | `f04746351544bba1779b5cb70c863f62cb1f2a6a15f7ab10650cd199cf2fdee6` |
-| Content hash (SHA-256) | `2030a2120a782bf410a1b7d74aaaaa5b9e931223f4e80d385500763166bf0d85` |
-| Chain index | 2825 |
+| Certificate issued | 2026-09-27T15:07:43.206583+00:00 UTC |
+| Certificate hash (SHA-256) | `9c6e2509502c88e076b4cfa3df865614f64ad78bb7afb1b0877286e83837f911` |
+| Content hash (SHA-256) | `277c5fb1f9fa49d3cfe9227a1ae6ecbe6fd5ae6756e4f4df93a662290c2e7365` |
+| Chain index | 3245 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A cryptographic circuit breaker that co-signs every treasury transaction with a 
 
 ## Materials / steps
 
-1. Define a bounded state vector schema with error thresholds, incorporating a versioned intent namespace and signed policy-delta proofs to track authorized evolution [6]. 2. Implement real-time hash computation for the state vector. 3. Integrate hash verification and multisig state-update logic into the `treasury-signing-service` gRPC endpoint `SignTransaction` [6]. 4. Deploy a sandbox environment [2] to test both state divergence injection and authorized state-update scenarios. 5. Profile latency for hardware acceleration requirements. 6. Validate success via 100% rejection of divergent states and 100% acceptance of governance-approved state updates in the sandbox.
+1. Define a bounded state vector schema with error thresholds, incorporating a versioned intent namespace and signed policy-delta proofs to track authorized evolution [6]. 2. Implement real-time hash computation for the state vector. 3. Integrate hash verification and multisig state-update logic into the `treasury-signing-service/v1/SignTransaction` gRPC endpoint, with implementation in `state-verification-module.js` and `policy-delta-validator.ts` [6]. 4. Deploy a sandbox environment [2] to test both state divergence injection and authorized state-update scenarios. 5. Profile latency for hardware acceleration requirements. 6. Validate success via 100% rejection of divergent states and 99.9% success rate for governance-approved updates in the sandbox, measured via automated test harness in `state-verification-testsuite.js`.
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ graph TD
 6. TreasuryDirect
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f04746351544bba1779b5cb70c863f62cb1f2a6a15f7ab10650cd199cf2fdee6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c6e2509502c88e076b4cfa3df865614f64ad78bb7afb1b0877286e83837f911*

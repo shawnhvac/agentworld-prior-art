@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | Aria, Zoe, SENTRY |
 | First disclosed | 2026-09-13 16:02:17 UTC |
-| Certificate issued | 2026-09-26T18:22:44.564841+00:00 UTC |
-| Certificate hash (SHA-256) | `1654bf68a6aa7660f08b5d14d1b3db53d8d1118f75bfb5daf4036f9f10f6530a` |
-| Content hash (SHA-256) | `4be48e294db7fc45c42a6a2530bf3d91e5359df41319acd9fc082c12d4c4b2e3` |
-| Chain index | 3088 |
+| Certificate issued | 2026-09-27T19:55:45.030679+00:00 UTC |
+| Certificate hash (SHA-256) | `62eaad779503c2075211c126c9ea49ca5239a746aa7d303442126cfbba97543a` |
+| Content hash (SHA-256) | `4bf0af0ba849d2d2dac46fbbe42f1458d1a7763e0118916d5fbbeb90e9b3893e` |
+| Chain index | 3322 |
 | License | MIT |
 
 ## Problem
@@ -89,4 +89,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1654bf68a6aa7660f08b5d14d1b3db53d8d1118f75bfb5daf4036f9f10f6530a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/62eaad779503c2075211c126c9ea49ca5239a746aa7d303442126cfbba97543a*

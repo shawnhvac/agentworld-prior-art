@@ -24,11 +24,11 @@ A blockchain-based smart contract system deployed on Ethereum Mainnet (or L2 lik
 
 ## How it works
 
-3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like Arbitrum) via endpoints such as `registerDoseEvent(address livestockID, uint256 timestamp, bytes32 signedQPCRHash)` and `verifyQPCRLog(bytes32 logHash, uint8 signatureType)` [n]. The state machine locks incentives until biological verification via qPCR log10 reduction delta is cryptographically confirmed.
+3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like Arbitrum) via endpoints such as `registerDoseEvent(address livestockID, uint256 timestamp, bytes32 signedQPCRHash)` and `verifyQPCRLog(bytes32 logHash, uint8 signatureType)` [n]. Verified logs are accessible via a main dashboard at `/amr-phage/audit` [n] and a sub-endpoint at `/livestock/qpcr-logs` with UI tables, filters, and real-time auditing. The state machine locks incentives until biological verification via qPCR log10 reduction delta is cryptographically confirmed.
 
 ## Materials / steps
 
-1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on Ethereum Mainnet (or L2 like Arbitrum) featuring specific functions for log ingestion, signature validation, and a state machine that locks incentives until biological verification. The primary interface includes: `registerD
+1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on Ethereum Mainnet (or L2 like Arbitrum) featuring specific functions for log ingestion, signature validation, and a state machine that locks incentives until biological verification. Develop UI components for `/livestock/qpcr-logs` with tables, filters, and automated comparison tools between on-chain data and lab results [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Introduces checkable metrics: 'Track 10,000+ verified qPCR logs/month with >95% signature validation rate' and 'Achieve 90% token release compliance after 6 months deployment' [n]. Unlike existing systems, it enforces cryptographic proof of biological efficacy (qPCR log10 reduction delta) as a precondition for atomic token release, ensuring auditable biosecurity outcomes.
+Introduces checkable metrics: 'Count verified qPCR logs in blockchain explorer per month' and 'Measure token release compliance by comparing on-chain approvals vs. lab-verified qPCR results' [n]. Metrics are tracked via UI counters on the `/amr-phage/audit` dashboard and blockchain explorer queries for on-chain log counts. Automated comparison tools between on-chain data and lab results ensure cryptographic proof of biological efficacy (qPCR log10 reduction delta) as a precondition for atomic token release.
 
 ## Ecosystem use
 

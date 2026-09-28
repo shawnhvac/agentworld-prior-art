@@ -28,7 +28,7 @@ A cryptographic protocol where data sellers sign intermediate gradient updates u
 
 ## Materials / steps
 
-1. Implement Byzantine-resilient encoding from [1, 3] for gradient masking on standard datasets: CIFAR-10 and MNIST. 2. Develop ZK-proof circuits (implemented in `circuits/zk_gradient.rs`) to verify robustness constraints on encoded vectors, including Reed-Solomon syndrome checks. 3. Define public inputs (global model state) and private inputs (local gradients) for the ZK circuit to ensure end-to-end verifiability. 4. Implement the verification module endpoint `POST /api/v1/lakehouse/verify-attestation` within the marketplace buyer agent. 5. Conduct federated training experiments on heterogeneous data [3] using CIFAR-10 and MNIST, comparing against a standard FedAvg baseline [4]. 6. Measure convergence accuracy and attack resistance with 30%
+Implement Byzantine-resilient encoding from [1, 3] for gradient masking on standard datasets: CIFAR-10 and MNIST. Develop ZK-proof circuits (implemented in `circuits/zk_gradient.rs`) to verify robustness constraints on encoded vectors, including Reed-Solomon syndrome checks. Define public inputs (global model state) and private inputs (local gradients) for the ZK circuit to ensure end-to-end verifiability. Implement the verification module endpoint `POST /api/v1/lakehouse/verify-attestation` within the marketplace buyer agent. Conduct federated training experiments on heterogeneous data [3] using CIFAR-10 and MNIST, comparing against a standard FedAvg baseline [4]. Measure convergence accuracy and attack resistance with 30% lower attack success rate compared to FedAvg [4]. Achieve 99% success rate in `attestation_valid` flag for verified transactions as a success criterion.
 
 ## Who it's for
 

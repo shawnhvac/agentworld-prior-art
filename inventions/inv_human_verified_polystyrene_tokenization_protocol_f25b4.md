@@ -20,15 +20,15 @@ Current recycling systems lack transparent, tamper-proof verification of waste v
 
 ## Concept
 
-A hybrid physical-digital system that tokenizes verified expanded polystyrene (EPS) recycling volumes. It uses IoT sensors for initial measurement but requires mandatory human-in-the-loop validation [3] to mint ERC-20 tokens representing recycled mass. The protocol defines specific system components (EPSMinter.sol, POST /api/v1/verify, Operator App) and success metrics to ensure operational feasibility and verifiable success.
+A hybrid physical-digital system that tokenizes verified expanded polystyrene (EPS) recycling volumes. It uses IoT sensors for initial measurement but requires mandatory human-in-the-loop validation [3] to mint ERC-20 tokens representing recycled mass. The protocol defines specific system components (EPSMinter.sol, POST /api/v1/verify/eps-verification/v1 [3], Operator App) and success metrics to ensure operational feasibility and verifiable success.
 
 ## How it works
 
-4. A human operator verifies the physical match via the 'Operator App' (specifically the 'Verification Confirmation Screen' with photo/ID input fields [3]) and signs the payload with their private key.
+4. A human operator verifies the physical match via the 'Operator App' (specifically the 'screen.operator.verification.confirmation' UI with photo/ID input fields [3]) and signs the payload with their private key.
 
 ## Materials / steps
 
-2. Develop the 'Operator App' mobile interface with dedicated screens: 'Verification Confirmation Screen' (photo/ID input fields) and 'Audit Log Screen' for recording verification actions [3].
+2. Develop the 'Operator App' mobile interface with dedicated screens: 'screen.operator.verification.confirmation' (photo/ID input fields) and 'screen.operator.audit.log' for recording verification actions [3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Recycling facilities, municipalities, and corporations seeking verified plastic 
 
 ## Novelty
 
-Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screens ('Verification Confirmation Screen') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates.
+Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screen IDs ('screen.operator.verification.confirmation') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates (target: 95% monthly accuracy in verification payloads [3]).
 
 ## Ecosystem use
 

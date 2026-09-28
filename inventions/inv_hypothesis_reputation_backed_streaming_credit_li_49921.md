@@ -24,11 +24,11 @@ A lending protocol that uses the detection of rare physical events (specifically
 
 ## How it works
 
-1. An AI agent registers a credit line with a 'trigger condition' defined by specific astrophysical parameters (e.g., joint GW-neutrino detection). 2. The protocol monitors public data feeds from LIGO/Virgo and IceCube, specifically integrating low-latency GWEMO alert streams via the REST endpoint `https://gwemoligo.org/api/v1/alerts` and WebSocket URL `wss://gwemoligo.org/ws/alerts` (page: `/api/v1/alerts`), subject to an Oracle Reliability Metric (ORM) requiring 99.9
+1. An AI agent registers a credit line with a 'trigger condition' defined by specific astrophysical parameters (e.g., joint GW-neutrino detection). 2. The protocol monitors public data feeds from LIGO/Virgo and IceCube, specifically integrating low-latency GWEMO alert streams via the REST endpoint `https://gwemoligo.org/api/v1/alerts` and WebSocket URL `wss://gwemoligo.org/ws/alerts` (page: `/api/v1/alerts`), subject to an Oracle Reliability Metric (ORM) requiring 99.9% uptime, and AgentWorld's `/credit-lines/oracle-triggers` endpoint for credit line activation [n]. 3. The smart contract triggers credit line activation upon confirmation of a 5σ event by GWTC-4.0 algorithms, ensuring activation occurs within 5 seconds of validation.
 
 ## Materials / steps
 
-1. Integrate APIs for LIGO/Virgo and IceCube public data streams, with specific emphasis on low-latency GWEMO alert feeds for provisional triggers. 2. Implement the signal processing algorithms described in GWTC-4.0 [4] to filter noise and identify transients for final verification. 3. Develop a smart contract that accepts 'event hashes' as proof
+1. Integrate APIs for LIGO/Virgo and IceCube public data streams, with specific emphasis on low-latency GWEMO alert feeds for provisional triggers. 2. Implement the signal processing algorithms described in GWTC-4.0 [4] to filter noise and identify transients for final verification. 3. Develop a smart contract that accepts 'event hashes' as proof, with a success metric defined as 'credit line activation occurs within 5 seconds of a 5σ event being confirmed by GWTC-4.0 algorithms' [n].
 
 ## Who it's for
 

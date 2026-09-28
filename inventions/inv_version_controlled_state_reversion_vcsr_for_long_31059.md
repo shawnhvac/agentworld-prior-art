@@ -20,7 +20,7 @@ Long-running autonomous agents suffer from context drift, where isolated memory 
 
 ## Concept
 
-A memory management layer that implements version-controlled state reversion. It tags memory writes with monotonic timestamps and validates them against a sliding-window consistency check. If a write violates the agent's established operational history (defined by a consistency threshold), the system reverts the state to the last valid version, treating memory as a versioned state machine rather than a simple append-only log. Crucially, the system operates in a 'warm-up' phase where the first K writes are accepted unconditionally to populate the baseline centroid and initial threshold, ensuring the mechanism settles before active rejection begins.
+A memory management layer that implements version-controlled state reversion (VCSR) for Long-Horizon Agent Memory, explicitly integrated into `memory_store.py` [2] and validated via the `/api/v1/state/validate` endpoint [1]. It tags memory writes with monotonic timestamps and validates them against a sliding-window consistency check. Primary success metric: 'percentage of reversion events that restore valid states within 10ms' (target ≥99.5%).
 
 ## How it works
 

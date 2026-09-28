@@ -28,7 +28,7 @@ A mechanism where agents partition memory logs into discrete shards and bind the
 
 ## Materials / steps
 
-1. Implement DID infrastructure for agents as per [4], including schema extension for 'merkleRoot' storage. 2. Develop sharding algorithm for memory logs. 3. Integrate Merkle Tree library to generate privacy-preserving path proofs for shard boundaries. 4. Build credential issuer/verifier module enforcing the specific VC schema ('merkleRoot', 'merklePath', 'leaf
+1. Implement DID infrastructure for agents as per [4], including schema extension for 'merkleRoot' storage and anchoring to 'DID_REGISTRY_ENDPOINT' [5]. 2. Develop sharding algorithm for memory logs. 3. Integrate Merkle Tree library to generate privacy-preserving path proofs for shard boundaries. 4. Build 'VC_ISSUER_MODULE' for credential generation enforcing the specific VC schema ('merkleRoot', 'merklePath', 'leafIndex'). 5. Deploy 'STATE_TRANSITION_SERVICE' to handle incremental SMT root updates and signed anchoring to DID Documents.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ The invention is distinguished from static document integrity checks and generic
 
 ## Ecosystem use
 
-API endpoint `verify_memory_shard(agent_did, shard_id, proof)` returns boolean integrity check. Enables agent coordination platforms to audit agent history without storing raw logs, supporting decentralized governance models [5] and trustless autonomy.
+Success metrics: 95% of shard verifications complete within 200ms with <0.1% false positives [5]. Verification endpoints: 'DID_REGISTRY_ENDPOINT' for root anchoring, 'VC_VERIFIER_MODULE' for credential validation. Metrics tracked via on-chain events and off-chain monitoring tools.
 
 ## Sources / grounding
 

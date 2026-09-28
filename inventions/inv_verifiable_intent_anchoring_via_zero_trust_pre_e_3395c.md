@@ -24,11 +24,11 @@ VIA embeds zero-trust security directly into the agent's retrieval pipeline. It 
 
 ## How it works
 
-1. Intercept: The system intercepts the agent's tool-call payload at the '/api/via/intercept' endpoint before execution. 2. Derive: A HKDF-SHA256 Key Derivation Function (KDF) generates a deterministic intent hash from the tool-call payload (JSON-serialized) and session context (salted with session ID). 3. Map: The intent hash is mapped to a fixed-position sparse vector of dimension 4096 using a deterministic locality-sensitive hashing (LSH) scheme with 64 bands... 4. Retrieve: It performs a GenIR-based similarity search [4] against a vector store of zero-trust policy hashes [1]. 5. Verify: The middleware state machine executes a Verification Protocol using constant-time HMAC-SHA256 comparison... 6. Commit/Rollback: The state machine enforces atomicity via a two-phase commit protocol...
+5. Verify: The middleware state machine executes a Verification Protocol using constant-time HMAC-SHA256 comparison, returning HTTP 200 OK for policy-compliant intents and HTTP 403 Forbidden for non-compliant intents [1]. 6. Commit/Rollback: The state machine enforces atomicity via a two-phase commit protocol, logging all verification outcomes to an audit trail [5].
 
 ## Materials / steps
 
-Implement GenIR retrieval module [4]... Deploy interception middleware featuring a state machine for atomic commit/rollback enforcement, with explicit endpoints like '/api
+Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' for payload interception, '/api/via/verify' for policy validation, and '/api/via/audit' for verification logs [1]. Deploy interception middleware featuring a state machine for atomic commit/rollback enforcement, with explicit endpoints like '/api/via/status' to report verification success/failure [5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Healthcare AI systems and other high-stakes autonomous agent deployments requiri
 
 ## Novelty
 
-VIA distinguishes itself from standard ANN optimizations and external policy engines (e.g., OPA) by leveraging the cryptographic integrity of the intent-to-policy mapping (HKDF-SHA256 derivation and constant-time HMAC-SHA256 verification) to enforce structural exclusion. Unlike standard LSH used for approximate similarity search, VIA employs deterministic LSH as a security primitive that cryptographically binds the agent's intent to approved policy traces, ensuring non-compliant memories are structurally excluded from the candidate set during retrieval. This shifts the enforcement boundary from post-retrieval blocking to pre-execution cryptographic filtering, providing a verifiable zero-trust guarantee that is not merely a performance optimization but a fundamental shift in the trust model.
+VIA introduces explicit policy-compliance HTTP status codes (200/403) and audit-logging endpoints as verifiable success indicators, ensuring traceability of pre-execution filtering decisions [1]. This contrasts with external policy engines by embedding verifiable outcomes directly into the agent's execution pipeline.
 
 ## Ecosystem use
 

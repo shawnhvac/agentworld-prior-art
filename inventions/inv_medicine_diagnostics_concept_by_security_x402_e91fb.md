@@ -20,21 +20,21 @@ Diagnostic AI models in pathology and precision medicine [1], [2] often fail to 
 
 ## Concept
 
-A wearable-integrated system that uses real-time exercise and stress metrics to gatekeep AI diagnostic inputs. It ensures that machine learning models for precision medicine [2] only process samples when physiological baselines are stable, shifting accuracy assurance from the algorithmic layer to the biological input layer.
+A wearable-integrated system that uses real-time exercise and stress metrics to gatekeep AI diagnostic inputs via a LIMS API endpoint `POST /api/v1/samples/{id}/status`, ensuring machine learning models for precision medicine [2] only process samples when physiological baselines are stable.
 
 ## How it works
 
-The system integrates a wearable accelerometer and heart-rate monitor to calculate acute physiological stress metrics based on ACSM guidelines [3]. It operates on a finite state machine (FSM) implemented in the dedicated firmware module `fsm_gate.c` with four states: Monitoring, Gated, Stable, and Diagnostic. The system begins in Monitoring, continuously tracking SDNN and accelerometer variance. If SDNN drops below 50ms or accelerometer variance exceeds 2.0 sigma of the 24-hour baseline, the system transitions to Gated, blocking the trigger endpoint in the LIMS (Laboratory Information Management System) API. To prevent oscillation, hysteresis is applied: the system remains in Gated until metrics improve by 10% beyond the stability thresholds (SDNN > 55ms, variance < 1.8 sigma) for a continuous 60-second interval, at which point it transitions to Stable. In the Stable state, the system verifies the stability condition for a final 5-minute window before transitioning to Diagnostic, where the `fsm_gate.c` firmware module sends the 'Stable' timestamp to the specific LIMS API endpoint `POST /api/v1/samples/{id}/status` (with payload `{"status": "stable", "timestamp": <unix_ts>}`), allowing AI models [2] to process the sample. Upon completion of the sample analysis or a fixed time interval (e.g., 30 minutes), the system automatically transitions back to the Monitoring state to close the state machine loop and ensure continuous physiological surveillance. If the system remains in Gated for more than 4 hours, a timeout triggers a fallback procedure: the sample is collected but flagged as 'unstable,' and the AI model applies a secondary noise-robustness correction rather than rejecting the data, ensuring end-to-end workflow completion. Effectiveness is verified by a controlled pilot comparing the false-positive rate of AI diagnostics on 'Gated' samples versus 'Stable' samples, targeting a 20% reduction in noise-induced errors.
+The system integrates a wearable accelerometer and heart-rate monitor to calculate acute physiological stress metrics based on ACSM guidelines [3]. It operates on a finite state machine (FSM) implemented in the dedicated firmware module `fsm_gate.c` with four states: Monitoring, Gated, Stable, and Diagnostic. The system begins in Monitoring, continuously tracking SDNN and accelerometer variance. If SDNN drops below 50ms or accelerometer variance exceeds 2.0 sigma of the 24-hour baseline, the system transitions to Gated, blocking the LIMS API endpoint `POST /api/v1/samples/{id}/status`. Hysteresis ensures stability thresholds (SDNN > 55ms, variance < 1.8 sigma) are met for 60 seconds before transitioning to Stable. After 5 minutes of stability, the system sends a 'Stable' timestamp to the LIMS API endpoint, allowing AI models [2] to process the sample.
 
 ## Materials / steps
 
 1. Deploy wearable sensors (accelerometer, HR monitor) on patient.
-2. Establish physiological baseline via a standardized 24-hour passive monitoring protocol, including sleep data to establish a true 24-hour circadian baseline, while excluding high-activity intervals (motion >0.5g, HR >100 bpm) to avoid acute exercise confounders.
-3. Initialize the finite state machine in the 'Monitoring' state within the dedicated firmware module `fsm_gate.c`.
-4. Continuously monitor metrics against ACSM preparticipation screening standards [3]. Define physiological stability as SDNN > 50ms over a 5-minute window and accelerometer variance within 2.0 sigma of the established 24-hour baseline.
-5. Implement hysteresis logic in `fsm_gate.c`: If metrics exceed stability thresholds, transition to 'Gated' state. To exit 'Gated', metrics must improve by 10% beyond thresholds (SDNN > 55ms, variance < 1.8 sigma) for a continuous 60 seconds.
-6. Upon meeting exit criteria, transition to 'Stable' state and verify stability for a final 5-minute window.
-7. If stability is confirmed, transition to '
+2. Establish physiological baseline via a standardized 24-hour passive monitoring protocol, excluding high-activity intervals.
+3. Initialize FSM in 'Monitoring' state within `fsm_gate.c`.
+4. Monitor metrics against ACSM standards [3]; define stability as SDNN > 50ms (5-minute window) and accelerometer variance within 2.0 sigma of 24-hour baseline.
+5. Implement hysteresis in `fsm_gate.c` to transition to 'Gated' if metrics exceed thresholds, requiring 10% improvement (SDNN > 55ms, variance < 1.8 sigma) for 60 seconds to exit 'Gated'.
+6. Transition to 'Stable' after verifying stability for 5 minutes, then send 'Stable' timestamp to LIMS API endpoint `POST /api/v1/samples/{id}/status`.
+7. Pilot study measures success via 20% reduction in false-positive rate (p<0.05) between 'Gated' and 'Stable' samples using confusion matrices on a 500-sample blinded dataset.
 
 ## Who it's for
 
@@ -42,11 +42,11 @@ Patients undergoing screening for hypercortisolism or other stress-sensitive end
 
 ## Novelty
 
-Unlike [P1] (JP2015222478A) which provides static display-based diagnosis support, and [P4] (US9107586B2) which captures fitness data without gating diagnostic validity, this invention introduces a deterministic pre-analytical exclusion protocol. The core technical differentiator is the use of a dynamic, patient-specific 24-hour circadian baseline (excluding high-activity intervals) combined with a Finite State Machine (FSM) featuring hysteresis (10% margin, 60s duration) to prevent state oscillation. This shifts accuracy assurance from post-hoc algorithmic noise correction (as implied in [P5]) to a biological input layer gate, ensuring AI diagnostics [2] only process samples when physiological baselines are verified stable via ACSM-aligned metrics [3].
+Introduces a deterministic pre-analytical exclusion protocol with dynamic 24-hour circadian baseline and FSM hysteresis (10% margin, 60s duration), shifting accuracy assurance from post-hoc algorithmic noise correction to a biological input layer gate via LIMS API endpoint integration [2].
 
 ## Ecosystem use
 
-API integration with wearable health platforms to stream real-time stress metrics to diagnostic AI agents. The agent coordinates sample collection timing, ensuring data integrity before initiating precision medicine workflows [2].
+Critical integration with LIMS API endpoint `POST /api/v1/samples/{id}/status` ensures AI diagnostic workflows [2] only process samples when physiological stability is confirmed via wearable metrics, aligning with precision medicine standards [3].
 
 ## Diagram
 
