@@ -28,7 +28,7 @@ A blockchain-based smart contract system deployed on Ethereum Mainnet (or L2 lik
 
 ## Materials / steps
 
-1. Develop IoT-enabled prophage injection hardware equipped with Trusted Platform Modules (TPMs) for secure cryptographic key generation and signing. 2. Deploy smart contracts on Ethereum Mainnet (or L2 like Arbitrum) featuring specific functions for log ingestion, signature validation, and a state machine that locks incentives until biological verification. Develop UI components for `/livestock/qpcr-logs` with tables, filters, and automated comparison tools between on-chain data and lab results [n].
+1. Develop IoT-enabled prophage injection hardware with TPMs for cryptographic key generation. 2. Deploy smart contracts on Ethereum Mainnet/L2 with log ingestion, signature validation, and state machine functions. 3. Implement specific UI components: `AuditDashboard.jsx` for `/amr-phage/audit` [n], `QpcrLogTable.vue` for `/livestock/qpcr-logs` [n], and `LogComparisonTool.tsx` for automated on-chain vs lab result comparisons [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Livestock farmers, meat processors, regulatory bodies, and consumers concerned w
 
 ## Novelty
 
-Introduces checkable metrics: 'Count verified qPCR logs in blockchain explorer per month' and 'Measure token release compliance by comparing on-chain approvals vs. lab-verified qPCR results' [n]. Metrics are tracked via UI counters on the `/amr-phage/audit` dashboard and blockchain explorer queries for on-chain log counts. Automated comparison tools between on-chain data and lab results ensure cryptographic proof of biological efficacy (qPCR log10 reduction delta) as a precondition for atomic token release.
+Introduces checkable metrics: 'MonthlyVerifiedLogsCounter' (query tool: `getBlockchainExplorerLogCount(month)` [n]) and 'TokenReleaseComplianceValidator' (automated comparison tool: `compareQpcrDelta(logHash, labResult)` [n]). Metrics are visualized via UI counters on `/amr-phage/audit` and queryable via blockchain explorer APIs.
 
 ## Ecosystem use
 

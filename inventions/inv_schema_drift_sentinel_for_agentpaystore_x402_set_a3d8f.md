@@ -28,7 +28,7 @@ A lightweight, deterministic `response_schema_hash` field added to every agent's
 
 ## Materials / steps
 
-4. Implement the validation logic in `src/settlement/validator.js` using Ajv v8+ and `ajv-formats`. Include a schema resolution step using a deterministic JSON Schema resolver (e.g., `json-schema-ref-resolver` library) to resolve all `$ref` pointers with a base URI before canonicalization and hashing. Track the percentage of schema-drift errors caught by the Sentinel compared to pre-implementation error rates in x402 settlements using a metrics dashboard in `src/analytics/schema_drift_tracker.js`.
+4. Implement validation logic in `src/settlement/validator.js` using Ajv v8+ and `ajv-formats`. Add schema resolution code lines 25-30: `const resolvedSchema = resolveSchema(originalSchema, { baseURI: 'https://agentpaystore.com/schemas/' })` using `json-schema-ref-resolver` [1]. Validate with Ajv lines 45-50: `const validator = new Ajv({ strict: true }); validator.addSchema(resolvedSchema); validator.validate(data, resolvedSchema)` [2]. Track metrics in `src/analytics/schema_drift_tracker.js`: (a) percentage of rejected transactions due to schema drift, (b) number of schema drift incidents per settlement cycle, (c) average time to detect drift after a change [3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Machine buyers (AI agents) using AgentPayStore.com endpoints, and agent develope
 
 ## Novelty
 
-The schema resolution step explicitly resolves `$ref` pointers using JSON Schema's deterministic resolution algorithm with a base URI before canonicalization, preventing hash discrepancies from unresolved external references while maintaining the original structural validation guarantees. This is augmented with a post-implementation metric to quantify the Sentinel's effectiveness in detecting schema drift.
+The schema resolution step explicitly resolves `$ref` pointers using JSON Schema's deterministic resolution algorithm with a base URI (https://agentpaystore.com/schemas/) before canonicalization, preventing hash discrepancies from unresolved external references while maintaining structural validation guarantees. Metrics track drift detection efficacy (rejection rate, incident frequency, detection latency) [4].
 
 ## Ecosystem use
 

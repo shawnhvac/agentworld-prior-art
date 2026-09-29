@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Nichols, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 12:02:56 UTC |
-| Certificate issued | 2026-09-22T16:00:23.153967+00:00 UTC |
-| Certificate hash (SHA-256) | `057e410fa752970827f272072bcf0c9e67ae23b5a67a93d5730d33cb228e02a2` |
-| Content hash (SHA-256) | `da6d20cb70fb8a5b2cb8eee8aa331185b7aacbbca396a9df390cc5775e231883` |
-| Chain index | 2402 |
+| Certificate issued | 2026-09-28T15:02:46.068511+00:00 UTC |
+| Certificate hash (SHA-256) | `df58e1d933e117114d243bd258271016214b1452a6af087b3e1b9bfd2e88dc67` |
+| Content hash (SHA-256) | `7849c867b42e8a2fe7230f11412bfd028e4f12bc9d4ac5411017f91976a44cf3` |
+| Chain index | 3437 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (Post
 
 ## How it works
 
-1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. The `/v1/news/paid/divergence` endpoint calculates `divergence_hours` using the SQL query: `SELECT (EXTRACT(EPOCH FROM (last_updated - last_verified)) / 3600)::FLOAT AS divergence_hours FROM ccn_articles WHERE id = $1;` [n1]. 4. The API enforces a 5-second time-delta tolerance by comparing server time (`NOW()`) with `last_verified` and `last_updated` timestamps during calculation, rejecting queries where `ABS(NOW() - (last_updated - last_verified)) > INTERVAL '5 seconds'` [n2].
+1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. The `/v1/news/paid/divergence` endpoint calculates `divergence_hours` using the SQL query: `SELECT (EXTRACT(EPOCH FROM (last_updated - last_verified)) / 3600)::FLOAT AS divergence_hours FROM ccn_articles WHERE id = $1 AND ABS(NOW() - (last_updated - last_verified)) <= INTERVAL '5 seconds' ELSE RAISE EXCEPTION 'Time delta exceeds 5-second tolerance';` [n1]. 4. The API enforces a 5-second time-delta tolerance by comparing server time (`NOW()`) with `last_verified` and `last_updated` timestamps during calculation, rejecting queries where `ABS(NOW() - (last_updated - last_verified)) > INTERVAL '5 seconds'` [n2].
 
 ## Materials / steps
 
-1. Add a unit test in `src/api/tests/divergence.test.ts` that verifies `divergence_hours` calculations against synthetic timestamps, ensuring 5-second tolerance compliance. 2. Implement a monitoring rule in `monitoring/config.yaml` to track '95% of divergence_hours responses must be within 5 seconds of actual server time' using Prometheus metrics. 3. Add a load test scenario in `tests/performance/divergence_load_test.js` to validate 99% of
+1. Add a unit test in `src/api/tests/divergence.test.ts` that verifies `divergence_hours` calculations against synthetic timestamps (e.g., 4.9s delta: passes, 5.0s delta: passes, 5.1s delta: fails) to ensure 5-second tolerance compliance. 2. Implement a monitoring rule in `monitoring/config.yaml` to track '95% of divergence_hours responses must be within 5 seconds of actual server time' using Prometheus metric `ccn_divergence_time_accuracy` with alert threshold 0.95. 3. Add a load test scenario in `tests/performance/divergence_load_test.js` to validate 99% of...
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents in AgentWorld.me and AgentPayStore.com that consume CCN news data, and
 
 ## Novelty
 
-Unlike [P1] (US20250217418A1), which relies on probabilistic ML search scoring and opaque model outputs, this invention provides a deterministic, server-side calculated `divergence_hours` via the `/v1/news/paid/divergence` endpoint. This specific API surface, combined with explicit tiered pricing for deterministic freshness signals and the integration test asserting time-delta accuracy within a 5-second tolerance, solves the problem of 'stale data poisoning' in agent retrieval pipelines by providing a verifiable, non-probabilistic freshness signal that prior art lacks.
+Unlike [P1] (US20250217418A1), which relies on probabilistic ML search scoring and opaque model outputs, this invention provides a deterministic, server-side calculated `divergence_hours` via the `/v1/news/paid/divergence` endpoint with explicit 5-second time-delta enforcement and Prometheus-based compliance monitoring. This specific API surface, combined with explicit tiered pricing for deterministic freshness signals and the integration test asserting time-delta accuracy within a 5-second tolerance, solves the problem of 'stale data poisoning' in agent retrieval pipelines by providing a verifiable, non-probabilistic freshness signal that prior art lacks.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/057e410fa752970827f272072bcf0c9e67ae23b5a67a93d5730d33cb228e02a2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/df58e1d933e117114d243bd258271016214b1452a6af087b3e1b9bfd2e88dc67*

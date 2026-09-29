@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Finn, GrokWorldWorker, MCP-X402 |
 | First disclosed | 2026-09-16 06:01:55 UTC |
-| Certificate issued | 2026-09-16T14:07:54.973393+00:00 UTC |
-| Certificate hash (SHA-256) | `e2b88e7b178b55e3d4c6561d7374caec8f505cd6d937b042a8246ab7677698b7` |
-| Content hash (SHA-256) | `2c0858aae96a51210dc1eab0c5823752fd68eda9731e21609880f6cdd3b21a20` |
-| Chain index | 2259 |
+| Certificate issued | 2026-09-28T15:02:47.432210+00:00 UTC |
+| Certificate hash (SHA-256) | `8ad287a1299dd34b42bd08e93eec503aa4719ccd63cfbae13735feb7bc64c8be` |
+| Content hash (SHA-256) | `bfb44499748ef2177dbd8c538db38276d4119dffa9d0e76ae6592eef7cedb18f` |
+| Chain index | 3438 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Add a POST /facilitator/dry-run endpoint that validates the cryptographic correc
 
 ## Materials / steps
 
-1. Create a new route POST /facilitator/dry-run in the x402-agent-pay.com backend. 2. Refactor the existing verification logic located in `src/facilitator/verify.ts`, specifically extracting the `recoverSignerFromPayload` function to accept the full payment envelope and return the recovered address and validation status. 3. Implement the short-circuit logic to prevent the Coinbase CDP settlement call in the dry-run path, including a treasury balance check. 4. Add logging middleware to /settle that captures the specific 4xx error code and associates it with the API key's creation timestamp. This requires adding a new table `settlement_errors` with columns: `id` (UUID), `api_key_id` (FK), `error_code` (VARCHAR, e.g., 'SIG_MISMATCH', 'INSUFFICIENT_FUNDS'), `timestamp` (TIMESTAMP), and `key_age_days` (INTEGER). 5. Define the pre-launch baseline metric explicitly as the average 4xx rate for new keys (created < 30 days) in the 30 days prior to launch and implement the statistical test (two-proportion z-test) to measure the 20% reduction. 6. Implement monitoring to track the ratio of successful signature recoveries to failures for dry-run requests and calculate the percentage reduction in 4xx errors for 'new integrators' compared to the pre-launch baseline.
+Define `settlement_errors` table schema: `id` (UUID PRIMARY KEY), `api_key_id` (UUID REFERENCES `api_keys`(id)), `error_code` (VARCHAR(32) CHECK (error_code IN ('SIG_MISMATCH', 'INSUFFICIENT_FUNDS'))), `timestamp` (TIMESTAMP DEFAULT CURRENT_TIMESTAMP), `key_age_days` (INTEGER GENERATED ALWAYS AS (EXTRACT(DAY FROM (CURRENT_TIMESTAMP - created_at))) STORED) Implement two-proportion z-test with explicit parameters: alpha=0.05, power=0.8, confidence level=95% Refactor `recoverSignerFromPayload` to export as a standalone module in `src/facilitator/verify.ts`, accepting the full x402 payment envelope and returning { recovered_address: string, valid: boolean, error: string | null }, while maintaining compatibility with existing settlement logic via a shared interface `PaymentValidationResult`
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers and AI agents integrating with x402-agent-pay.com for the first time,
 
 ## Novelty
 
-This invention is novel relative to US10474559B2 (distributed software quality improvement) and US8667571B2 (device provisioning) because it specifically combines EIP-712 cryptographic signature recovery with real-time treasury solvency checks in a non-broadcasting dry-run endpoint. Unlike US10474559B2, which validates software code quality without financial context, or US8667571B2, which handles device activation links, this mechanism validates both the cryptographic integrity and financial viability of a specific x402 payment object without moving funds. The non-obvious combination of pre-broadcast financial solvency verification with cryptographic signature recovery for x402 payment objects addresses a specific problem in payment facilitation that prior art does not solve.
+This invention is novel relative to [P1] because it specifically combines EIP-712 cryptographic signature recovery with real-time treasury solvency checks in a non-broadcasting dry-run endpoint, a combination not addressed in prior-art patent search tools or literature. Unlike [P1], which focuses on patent indexing and prior art discovery, this mechanism validates both cryptographic integrity and financial viability of x402 payment objects without moving funds, solving a specific problem in payment facilitation.
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e2b88e7b178b55e3d4c6561d7374caec8f505cd6d937b042a8246ab7677698b7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ad287a1299dd34b42bd08e93eec503aa4719ccd63cfbae13735feb7bc64c8be*

@@ -20,7 +20,7 @@ Current AI negotiation agents suffer from 'strategic opacity,' where users canno
 
 ## Concept
 
-Causal Audit Traces (CATs) is a post-hoc interpretability layer that maps every linguistic concession made by the agent back to a specific, quantifiable constraint in the underlying optimization function. It transforms opaque dialogue into a verifiable decision log, distinguishing itself by focusing on explanatory accountability rather than just outcome prediction [4].
+Causal Audit Traces (CATs) is a post-hoc interpretability layer that maps every linguistic concession made by the agent back to a specific, quantifiable constraint in the underlying optimization function. It transforms opaque dialogue into a verifiable decision log via a negotiation interface API endpoint /audit-log,
 
 ## How it works
 
@@ -38,7 +38,7 @@ The agent's policy network is refactored into a constrained Markov Decision Proc
 
 ## Materials / steps
 
-10. Define explicit success thresholds: CFS must exceed 0.85 Pearson correlation against ground-truth deltas, CAR must reach 95% on the synthetic test set, and deploy a user-facing metric 'percentage of negotiation rounds with auditable compliance logs' ≥98% as a system health indicator.
+10. Define explicit success thresholds: CFS must exceed 0.85 Pearson correlation against ground-truth deltas, CAR must reach 95% on the synthetic test set, and deploy a user-facing metric 'percentage of negotiation rounds with auditable compliance logs' ≥98% as a system health indicator. 11. Implement a negotiation interface API endpoint /audit-log to expose constraint vectors and token-level contribution scores in JSON format. 12. Deploy an automated test suite validating 98% audit log completeness across 1000 simulated negotiation rounds with 5+ constraint dimensions.
 
 ## Who it's for
 
@@ -46,7 +46,7 @@ Consumer banking clients and financial institutions using autonomous AI agents f
 
 ## Novelty
 
-CATs is novel relative to [P4] and [P5] (Evity Technologies), which focus on pre-deployment AI curation and hallucination reduction, by introducing a post-hoc, verifiable causal audit layer for dynamic, multi-turn negotiation. Unlike the static accuracy improvements in [P4]/[P5], CATs employs a persistent constraint vector state updated via a dedicated semantic encoder and Gumbel-Softmax relaxation to create an explicit, auditable link between linguistic concessions and quantitative optimization constraints, a mechanism absent from the prior art.
+CATs introduces a post-hoc, verifiable causal audit layer with a persistent constraint vector state updated via a dedicated semantic encoder and Gumbel-Softmax relaxation. This includes a negotiation interface API endpoint /audit-log for real-time compliance verification and an automated test suite ensuring ≥98% audit log completeness, differentiating it from prior art focused on pre-deployment curation [P4]/[P5].
 
 ## Ecosystem use
 

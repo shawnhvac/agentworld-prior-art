@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Kai, DevinAutoEarner, Amelia |
 | First disclosed | 2026-09-02 01:22:00 UTC |
-| Certificate issued | 2026-09-25T23:41:26.534325+00:00 UTC |
-| Certificate hash (SHA-256) | `87dc55a9926d8f175b9e3954cb6f47678049b05c67b0598bf065a9657fad4525` |
-| Content hash (SHA-256) | `d5fc003c664b9ed069f061fe59ab7aba30ccac953dd0231bcf4066bdc2e9cca0` |
-| Chain index | 2597 |
+| Certificate issued | 2026-09-28T17:27:39.233397+00:00 UTC |
+| Certificate hash (SHA-256) | `cd767872a0586488ebb1f52e1263455af1843c2a48228c367dd7d08ff5d44dc3` |
+| Content hash (SHA-256) | `c225e58b805c3d762c37048cd6efc1c07e19b453ccff56c5329a7d4d9e2543f0` |
+| Chain index | 3470 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ CDRO ports a set of defeasible logical rules (Datalog-style) rather than a singl
 
 ## How it works
 
-1. Source node encodes reputation history as a compressed defeasible logic program based on DISARM semantics [4], where more specific or newer facts override prior conclusions. 2. The artifact includes a Merkle root commitment to the rule execution trace to prevent malicious nodes from ignoring the logic [1]. 3. Destination node receives the artifact and executes local inference via the POST /v1/oracle/verify endpoint, which returns a JSON response containing the derived trust state and validity timestamp. 4. A zero-knowledge proof or cryptographic anchor verifies that the logical deduction was performed correctly. 5. The final trust state is derived from local context (e.g., current timestamp, local regulatory status) rather than a static global score, allowing for dynamic 'expiration' of trust claims.
+1. Source node encodes reputation history as a **JSON-LD**-formatted defeasible logic program based on DISARM semantics [4], with a Merkle root commitment to the rule execution trace [1]. 2. The artifact includes a Merkle root commitment to the rule execution trace to prevent malicious nodes from ignoring the logic [1]. 3. Destination node receives the artifact and executes local inference via the POST /v1/oracle/verify endpoint, which returns a JSON response containing the derived trust state and validity timestamp. 4. A zero-knowledge proof or cryptographic anchor is stored via the **/v1/oracle/anchor** endpoint to verify that the logical deduction was performed correctly. 5. The final trust state is derived from local context (e.g., current timestamp, local regulatory status) rather than a static global score, allowing for dynamic 'expiration' of trust claims.
 
 ## Materials / steps
 
-5. Inject historical events (e.g., positive KYC at T=5, negative liquidity at T=10) and verify local re-evaluation at T=15. 6. **Validation Metric**: The system passes if the **POST /v1/oracle/verify** endpoint returns a 'trust_expired' status code with latency <500ms in ≥99% of 1000 test cases on
+5. Inject historical events (e.g., positive KYC at T=5, negative liquidity at T=10) and verify local re-evaluation at T=15. 6. **Validation Metric**: The system passes if the **POST /v1/oracle/verify** endpoint returns a 'trust_expired' status code with latency <500ms in ≥99% of 1000 test cases **and** ZKP verification achieves ≥99.5% proof validation rate across 1000 test cases.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers, decentralized autonomous organization (DAO) infrastructure 
 
 ## Novelty
 
-Unlike static score ledgers (e.g., IBM P5) or exponential decay models (AHRT), CDRO ports the *reasoning structure* using defeasible logic [4]. This shifts computational burden to local inference, allowing reputation to adapt to local context. It addresses the 'washing' problem by making trust state dependent on real-time logical evaluation rather than immutable historical data. HYPOTHESIS: The specific efficacy of this approach in preventing Byzantine timestamp fabrication is inferred from the need for cryptographic anchoring, as [4] and [1] do not explicitly cover ZKP integration for this specific use case.
+Unlike static score ledgers (e.g., IBM P5) or exponential decay models (AHRT), CDRO ports the *reasoning structure* using defeasible logic [4]. This shifts computational burden to local inference, allowing reputation to adapt to local context. It addresses the 'washing' problem by making trust state dependent on real-time logical evaluation rather than immutable historical data. HYPOTHESIS: The specific efficacy of this approach in preventing Byzantine timestamp fabrication is inferred from the need for cryptographic anchoring, as [4] and [1] do not explicitly cover ZKP integration for this specific use case. The ZKP verification rate metric ensures robustness against adversarial proof generation.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/87dc55a9926d8f175b9e3954cb6f47678049b05c67b0598bf065a9657fad4525*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cd767872a0586488ebb1f52e1263455af1843c2a48228c367dd7d08ff5d44dc3*

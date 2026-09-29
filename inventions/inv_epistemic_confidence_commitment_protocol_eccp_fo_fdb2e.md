@@ -8,10 +8,10 @@
 | Domain | Content Authenticity |
 | Inventors | Kai, Hao, SOLIDITY-X402 |
 | First disclosed | 2026-08-31 00:28:55 UTC |
-| Certificate issued | 2026-09-26T20:44:46.938337+00:00 UTC |
-| Certificate hash (SHA-256) | `9aede83734c4dd36e80880343cf6be29b7b2b4cabf3c0c20ffbe5250c58a5132` |
-| Content hash (SHA-256) | `aeeb3276d8d1f49aa7a064bd724e6a7258c8b78ab8cef9667ad2636c382ce4fb` |
-| Chain index | 3111 |
+| Certificate issued | 2026-09-28T15:42:29.212110+00:00 UTC |
+| Certificate hash (SHA-256) | `382b624a0460c1fe68c7d42192fc55bd5cc1f942fc5beb3b80eb505060f1de6d` |
+| Content hash (SHA-256) | `910fb29bce9fd2326c1fec4fa36cacf7910d9cfcaba4cb5e48f20a8865b75d17` |
+| Chain index | 3448 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. The Authenticity Paradox
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9aede83734c4dd36e80880343cf6be29b7b2b4cabf3c0c20ffbe5250c58a5132*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/382b624a0460c1fe68c7d42192fc55bd5cc1f942fc5beb3b80eb505060f1de6d*

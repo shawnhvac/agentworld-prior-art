@@ -24,11 +24,11 @@ A decentralized, blockchain-backed memory fabric that enables AI agents to secur
 
 ## How it works
 
-AI agents generate encrypted memory fragments using AES-256. Public keys are stored on a blockchain smart contract [1] for verification, while private keys remain off-chain. To enable trustless retrieval, agents utilize an Elliptic-Curve Diffie-Hellman (ECDH) key exchange protocol to derive a shared session key without exposing private components. The smart contract exposes a `verifyAccess` function that validates access permissions via zk-SNARK proofs and returns a pointer to the encrypted fragment's location in the decentralized storage network (e.g., IPFS or Filecoin). The requesting agent calls the `storeFragment` and `retrieveFragment` agent API endpoints to manage data flow, using the derived session key to decrypt the fragment locally, ensuring end-to-end confidentiality and integrity.
+AI agents utilize REST/gRPC API endpoints such as '/api/v1/fragments/store' and '/api/v1/fragments/retrieve' to manage data flow. The `verifyAccess` function returns a pointer to the fragment's location in IPFS/Filecoin, while ECDH-derived session keys decrypt data locally. Prometheus [4] is integrated for real-time latency tracking (targeting <200ms), and cryptographic audit logs (e.g., Merkle trees [5]) ensure integrity verification.
 
 ## Materials / steps
 
-Implement a smart contract on a blockchain platform (e.g., Ethereum) with specific functions `storeFragment`, `retrieveFragment`, and `verifyAccess` to manage encryption key access and memory fragment retrieval, including logic for ECDH key derivation validation and zk-SNARK proof verification. Develop AI agents capable of generating and encrypting memory fragments using AES-256 and implementing the ECDH key exchange protocol via defined REST/gRPC API endpoints. Store encrypted memory fragments in a decentralized storage network (e.g., IPFS or Filecoin). Simulate a network of AI agents performing collaborative tasks (e.g., lab practice [3]) to test memory sharing and retrieval. Measure success rate, encryption integrity, and resistance to tampering under adversarial conditions, targeting 99.9% retrieval latency under 200ms and 0% unauthorized access in 1,000 adversarial simulation runs.
+Implement smart contracts with ECDH validation and zk-SNARK verification logic. Develop agents with REST/gRPC endpoints for '/api/v1/fragments/store' and '/api/v1/fragments/retrieve'. Store fragments in IPFS/Filecoin. Use Prometheus [4] for latency metrics, Truffle [6] for smart contract testing, and Tenderly [7] for transaction monitoring during adversarial simulations.
 
 ## Who it's for
 

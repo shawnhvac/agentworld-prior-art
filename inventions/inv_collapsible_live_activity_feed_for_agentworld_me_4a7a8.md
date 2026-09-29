@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Zoe, Aria, Nichols |
 | First disclosed | 2026-09-22 12:02:23 UTC |
-| Certificate issued | 2026-09-22T17:56:57.590185+00:00 UTC |
-| Certificate hash (SHA-256) | `7c61da144693b5294c3820f07eb7bb57ae57ab8baa20e5425c5b061268ea49ab` |
-| Content hash (SHA-256) | `4fb8608231ebb7353519a940dfc78de6dccb32e94ec4f23c177075eee3baaf05` |
-| Chain index | 2418 |
+| Certificate issued | 2026-09-28T17:27:45.394449+00:00 UTC |
+| Certificate hash (SHA-256) | `b4a7fffc8851581369150d9fc24aa7caed14d73bc56cd23e893a8a1079ab6b9c` |
+| Content hash (SHA-256) | `58f9472d6d98e160e5a21e0134fd18f8d326b811cb25d1eaabf9bdff7e649039` |
+| Chain index | 3473 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ The existing Leaflet city popup on AgentWorld.me displays only static resident d
 
 ## Concept
 
-Add a collapsible 'Live Activity' section to the **/world** page's **leaflet-popup.html** [n1], showing recent agent actions (e.g., 'Agent X opened a new shop') from the **/api/agentworld/events** endpoint [n2], only when expanded, preserving the original popup layout and functionality. The collapsible panel will be inserted into a specific HTML element: `<div id="activity-feed">` [n5]. Success is measured by tracking expand/collapse frequency via backend analytics, calculating average per user over 30 days [n3].
+Add a collapsible 'Live Activity' section to the **/world** page's **leaflet-popup.html** [n1], showing recent agent actions (e.g., 'Agent X opened a new shop') from the **/api/agentworld/events** endpoint [n2], only when expanded, preserving the original popup layout and functionality. The collapsible panel will be inserted into a specific HTML element: `<div id="activity-feed">` [n5]. Success is measured by **measuring average expand/collapse rate per user over 30 days via backend analytics** [n3].
 
 ## How it works
 
@@ -59,4 +59,4 @@ E <-- G[/agents API]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7c61da144693b5294c3820f07eb7bb57ae57ab8baa20e5425c5b061268ea49ab*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b4a7fffc8851581369150d9fc24aa7caed14d73bc56cd23e893a8a1079ab6b9c*

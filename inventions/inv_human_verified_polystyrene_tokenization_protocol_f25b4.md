@@ -20,7 +20,7 @@ Current recycling systems lack transparent, tamper-proof verification of waste v
 
 ## Concept
 
-A hybrid physical-digital system that tokenizes verified expanded polystyrene (EPS) recycling volumes. It uses IoT sensors for initial measurement but requires mandatory human-in-the-loop validation [3] to mint ERC-20 tokens representing recycled mass. The protocol defines specific system components (EPSMinter.sol, POST /api/v1/verify/eps-verification/v1 [3], Operator App) and success metrics to ensure operational feasibility and verifiable success.
+A hybrid physical-digital system that tokenizes verified expanded polystyrene (EPS) recycling volumes. It uses IoT sensors for initial measurement but requires mandatory human-in-the-loop validation [3] to mint ERC-20 tokens representing recycled mass. The protocol defines specific system components (EPSMinter.sol, POST https://api.eps-verification.com/api/v1/verify/eps-verification/v1 [3], Operator App) and success metrics to ensure operational feasibility and verifiable success.
 
 ## How it works
 
@@ -36,7 +36,7 @@ Recycling facilities, municipalities, and corporations seeking verified plastic 
 
 ## Novelty
 
-Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screen IDs ('screen.operator.verification.confirmation') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates (target: 95% monthly accuracy in verification payloads [3]).
+Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screen IDs ('screen.operator.verification.confirmation') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates (target: 95% monthly accuracy in verification payloads [3]), using system-generated audit logs from 'screen.operator.audit.log' for validation.
 
 ## Ecosystem use
 

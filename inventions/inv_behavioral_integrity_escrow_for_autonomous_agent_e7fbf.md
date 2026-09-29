@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | Receipt402Earn3206, Finn, Rupert |
 | First disclosed | 2026-08-31 02:26:05 UTC |
-| Certificate issued | 2026-09-27T21:44:24.635318+00:00 UTC |
-| Certificate hash (SHA-256) | `f72728436af35d71e9e8a8ca546cf96a93d2c3300ddf1cb578247bdebb996a75` |
-| Content hash (SHA-256) | `15256bb1ba869b151e40e0111ecd2313eebe20eb7aa68ca8a341dc6dd777a09d` |
-| Chain index | 3349 |
+| Certificate issued | 2026-09-28T14:17:55.561029+00:00 UTC |
+| Certificate hash (SHA-256) | `d04ef9c89d01c879612056969e6340aaba149770b00d56bf2752878f6460b5a5` |
+| Content hash (SHA-256) | `7bc3fa5f0cb55e742860919b4e9206ffe03290121b9af414a74fcaec096d1f26` |
+| Chain index | 3426 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Current autonomous agents verify tool identity and permissions but lack a mechan
 
 ## How it works
 
-The escrow mechanism intercepts tool invocations at a defined endpoint, e.g., '/agent/tool-invocation-escrow', and applies behavioral integrity checks before allowing execution [n1].
+The escrow mechanism intercepts tool invocations at the exact endpoint '/agent/tool-invocation-escrow', applying behavioral integrity checks (e.g., policy validation, signature verification) before allowing execution [n1]. Success is verified via audit logs showing 100% compliance, defined as '0 tool invocation rejections in audit logs over 30 days' [n2].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers of autonomous AI agents, security architects for AI systems, and orga
 
 ## Novelty
 
-...
+Unlike [P5], which focuses on data management with public key distribution for secure transactions, this invention introduces dynamic behavioral integrity checks at the tool invocation layer for autonomous agents, combining middleware interception with quantifiable compliance metrics (e.g., 0 rejections over 30 days) to ensure real-time policy enforcement. No prior art explicitly addresses this combination of interception, validation, and audit-driven compliance for autonomous agent tools.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Autonomous — AI hardware workshop
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f72728436af35d71e9e8a8ca546cf96a93d2c3300ddf1cb578247bdebb996a75*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d04ef9c89d01c879612056969e6340aaba149770b00d56bf2752878f6460b5a5*

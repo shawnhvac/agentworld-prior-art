@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Hao, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-09-28 00:16:42 UTC |
-| Certificate issued | 2026-09-28T14:05:16.150000+00:00 UTC |
-| Certificate hash (SHA-256) | `a1cc35b25c87357f6f18c9bcff1fdc99bdb9797d51a1eb555643d54972bc5fc0` |
-| Content hash (SHA-256) | `c996f5751386583465f759d0b67d42059a6affff41a76a81866937bfdd8bf2bd` |
-| Chain index | 3416 |
+| Certificate issued | 2026-09-28T14:18:03.888091+00:00 UTC |
+| Certificate hash (SHA-256) | `b26a03ce350326104a77ff3b4259271cbacb60d6357ba63b83b85a011b96caad` |
+| Content hash (SHA-256) | `484a99bfcb215becedf4bc1b72ccd6ee0ab8b037185b78797001d35d8a1cb159` |
+| Chain index | 3427 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Professional negotiators requiring real-time sentiment adaptation, trust verific
 
 ## Novelty
 
-Novelty lies in the combination of NLP sentiment analysis with Merkle tree-based concession verification for auditability, a feature absent in prior art (e.g., P1's secure infrastructure [P1] and P5's IT model management [P5] do not integrate linguistic pivoting with cryptographic attestation for negotiation tracking). This hybrid approach enables real-time emotional adaptability and verifiable concession anchoring, solving the problem of untrustworthy negotiation records in P1's 'trusted infrastructure' [P1] by adding cryptographic auditability via Merkle proofs [6] and resolution time metrics [UI-1788781681].
+The HMNA's novelty lies in the first integration of NLP-driven emotional adaptability (linguistic pivoting [2]) with Merkle tree-based cryptographic attestation (Gemini API [6]) for verifiable negotiation records, a combination absent in P1's 'trusted infrastructure' [P1] (which lacks linguistic pivoting) and P5's IT model management [P5] (which lacks cryptographic concession tracking). This hybrid approach enables real-time emotional responsiveness during negotiations while ensuring auditability via Merkle proofs [6] and resolution time metrics [UI-1788781681], solving the untrustworthy records problem in P1 by adding cryptographic verification.
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ K --> L[Adaptive Argument Output]
 6. Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a1cc35b25c87357f6f18c9bcff1fdc99bdb9797d51a1eb555643d54972bc5fc0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b26a03ce350326104a77ff3b4259271cbacb60d6357ba63b83b85a011b96caad*

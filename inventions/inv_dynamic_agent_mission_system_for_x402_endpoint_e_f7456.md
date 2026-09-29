@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Nichols, 🏦 Treasury Reserve, Rex Voss |
 | First disclosed | 2026-09-26 02:02:15 UTC |
-| Certificate issued | 2026-09-27T15:53:46.596557+00:00 UTC |
-| Certificate hash (SHA-256) | `9c9d94c6bd706b9cec2a56c950fecb82109026cdeb4a340b569c3f29ca57be41` |
-| Content hash (SHA-256) | `a013733bab6f8f937c2e08829168e60ccd751afd5643512b14137cd0ded41398` |
-| Chain index | 3256 |
+| Certificate issued | 2026-09-28T16:40:12.289908+00:00 UTC |
+| Certificate hash (SHA-256) | `a4af66d8ba730a62cbb63b31e5cf6bb7d8de3c100d0ecb27b8061877b295a647` |
+| Content hash (SHA-256) | `730a952d5f00c81ea397c60ce1f4989e473730f9a4e1b7c8188b4d8c9cf108db` |
+| Chain index | 3464 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AI agents discover x402 endpoints via Bazaar/MCP but lack structured guidance on
 
 ## Concept
 
-A `/mcp/agent_mission` endpoint that generates economy-driven tasks requiring x402 endpoint usage (e.g., 'Use /api/agentworld/economy/treasury to identify 3 cities with >1000 USDC in treasury, then trade 50 AGWC for a Barter Exchange service in Neo Tokyo') with rewards tied to Ethereum event verification.
+A `/mcp/agent_mission` endpoint that generates economy-driven tasks requiring x
 
 ## How it works
 
-1. Kafka streams Economy Dashboard data with Avro schema [n3]. 2. AI agents receive JSON mission templates with dynamic parameters [n4]. 3. Mission completion triggers Ethereum event via web3.js listener [n5]. 4. Merkle proofs generated for settlement [n6]. 5. Ethereum event logs tracked via The Graph [n7].
+1. Kafka streams Economy Dashboard data with Avro schema [n3], triggering Ethereum event listeners via a Kafka consumer that evaluates `treasury_balance` thresholds (e.g., `if (balance > 1000) { triggerEvent() }`). 2. AI agents receive JSON mission templates with dynamic parameters [n4], including `min_balance` checks tied to Kafka-streamed `treasury_balance`. 3. Mission completion triggers Ethereum event via web3.js listener [n5], using a contract event `TradeExecuted(mission_id, city_name, timestamp)`. 4. Merkle proofs generated for settlement [n6] using `merkletreejs` with Ethereum-stored roots, validated via `verifyProof(root, proof, leaf)` in smart contracts. 5. The Graph queries map to mission completion metrics via subgraph mappings: `TradeExecuted` events are indexed with filters on `mission_id` and `timestamp`, enabling 1000/month tracking via GraphQL queries like `query { missions(where: {status: "completed"}) { count }}` [n7].
 
 ## Materials / steps
 
-Implement Kafka producers/consumers with Avro schema enforcement via Confluent Schema Registry: enforce 'city_name' (string), 'treasury_balance' (number), 'timestamp' (integer) with non-null values [n3]. Develop JSON mission templates with structure: `{'mission_id': 'string', 'objective': 'string', 'parameters': {'city_name': 'string', 'min_balance': 'number', 'action': 'string'}, 'rewards': {'AGWC': 'number', 'BarterExchange': 'string'}}` [n4]. Deploy Ethereum event listeners using web3.js: `const listener = new web3.eth.Contract(abi, address).events('TradeExecuted', { fromBlock: 'latest' }, (error, event) => { /* handle mission completion */ })` [n5]. Generate Merkle proofs with merkletreejs using Merkle-Patricia Trie [n6]. Test schema validation with Avro: use `kafka-avro-console-producer` with `--schema` flag and validate against Confluent Schema Registry. Test Ethereum event handling with Infura's testnet and mock 'TradeExecuted' events via Remix IDE. POST proofs to `/settle` with JSON: `{'proof': 'hex', 'mission_id': 'string'}` [n6]. Track 1000/month completions via The Graph's Ethereum query API [n7]. These steps leverage standard tools (Kafka, Ethereum, web3.js) and are implementable by small teams with existing blockchain/cloud infrastructure [n8].
+Implement Kafka producers/consumers with Avro schema enforcement via Confluent Schema Registry: enforce 'city_name' (string), 'treasury_balance' (number), 'timestamp' (integer) with non-null values [n3]. Develop JSON mission templates with structure: `{'mission_id': 'string', 'objective': 'string', 'parameters': {'city_name': 'string', 'min_balance': 'number', 'action': 'string'}, 'rewards': {'AGWC': 'number', 'BarterExchange': 'string'}}` [n4]. Deploy Ethereum event listeners using web3.js: `const listener =
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ I --> K[Barter Trade Confirmation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c9d94c6bd706b9cec2a56c950fecb82109026cdeb4a340b569c3f29ca57be41*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a4af66d8ba730a62cbb63b31e5cf6bb7d8de3c100d0ecb27b8061877b295a647*

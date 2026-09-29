@@ -20,7 +20,7 @@ Current human-robot task allocation in integrated manufacturing relies on static
 
 ## Concept
 
-A closed-loop control system that dynamically modulates the allocation of manufacturing tasks between humans and robots based on live performance telemetry (error rates and reaction times) rather than static roles, utilizing a discrete state machine with hysteresis to ensure deterministic task handover from continuous control signals.
+A closed-loop control system that dynamically modulates the allocation of manufacturing tasks between humans and robots based on live performance telemetry, utilizing a discrete state machine with hysteresis to ensure deterministic task handover from continuous control signals. The system exposes a REST endpoint `POST /api/v1/task-router/assign` for task assignment decisions.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system treats the human operator as a stochastic, time-varying process, moni
 
 ## Materials / steps
 
-1. Integrate standard industrial sensors to capture task completion data, error logs, and reaction times from the human-robot cell. 2. Develop a real-time inference module that calculates a composite performance score and defines the error signal $e(k)$ relative to a target performance baseline. 3. Implement a discrete-time PID controller with initialized gains ($K_p=0.5, K_i=0.1, K_d=0.05$) and a minimum dwell-time constraint of 300 seconds to map the error signal to a bounded assignment probability $P_{human}(k) \in [0,1]$. 4. Implement the discrete state machine for hysteresis-based mode switching (Human-Primary/Robot-Primary) using thresholds 0.4/0.6 and $T_{hyst}$ cycles, storing state flags in the `router_state` table. 5. Expose the assignment logic via the REST endpoint `POST /api/v1/task-router/assign` which returns the assigned agent ID and current $P_{human}(k)$, and persist PID integrator values and convergence flags in the `controller_state` database table. 6. Define a validation protocol measuring task handover chattering (switches per hour) and error rate deviation; the system is considered functional if chattering is reduced by >50% compared to a static baseline and the error rate remains within 5% of the target baseline after 24 hours of continuous operation.
+6. Define a validation protocol measuring task handover chattering (switches per hour, stored in `router_state` flags) and error rate deviation (tracked via `controller_state` integrator values and convergence flags); the system is considered functional if chattering is reduced by >50% compared to a static baseline and the error rate remains within 5% of the target baseline after 24 hours of continuous operation.
 
 ## Who it's for
 

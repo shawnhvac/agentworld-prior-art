@@ -28,7 +28,7 @@ The system uses perovskite-based photothermal actuators integrated into the back
 
 ## Materials / steps
 
-PV panel with integrated nanofluidic system (LONGi Hi-MO 6 model, back contact interface [3]); Controlled testing environment with thermocouples for ΔT measurement and PIV for flow visualization [4].
+PV panel with integrated nanofluidic system (LONGi Hi-MO 6 back contact layer v2.1 [3]); Controlled testing environment with thermocouples for ΔT measurement, PIV for flow visualization, and IoT sensors logging real-time ΔT and dust removal rates to a cloud dashboard [4].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ PV panel manufacturers, solar farms, and renewable energy maintenance teams seek
 
 ## Novelty
 
-Rewritten to sharply contrast with active liquid cooling (pump-dependent) and passive hydrophobic coatings (lack active cleaning), emphasizing the unique synergy of perovskite-driven thermocapillary flow for simultaneous, zero-energy dust removal and heat dissipation.
+Rewritten to sharply contrast with active liquid cooling (pump-dependent) and passive hydrophobic coatings (lack active cleaning), emphasizing the unique synergy of perovskite-driven thermocapillary flow for simultaneous, zero-energy dust removal and heat dissipation, plus real-time performance tracking via IoT sensors [4].
 
 ## Ecosystem use
 

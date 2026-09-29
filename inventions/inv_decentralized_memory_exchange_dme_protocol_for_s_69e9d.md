@@ -28,13 +28,7 @@ The DME protocol employs cryptographic hashing and zero-knowledge proofs to frag
 
 ## Materials / steps
 
-1. **Fragment Generation & Hashing:** ... pinned to IPFS via the `POST /api/v0/add` endpoint, returning a Content Identifier (CID). **Success Indicator:** IPFS returns a 200 OK status with CID.
-
-2. **Smart Contract Registration & Policy Encoding:** ... transaction to the `registerMemoryFragment` function on the DME smart contract registry. **Success Indicator:** Transaction receipt includes `status: 0x0` and emits `FragmentRegistered` event.
-
-3. **ZK-SNARK Proof Generation for Access Requests:** ... proof submitted to the `verifyAccess` function on the DME verifier contract. **Success Indicator:** Contract emits `AccessAuthorized` event with MAT.
-
-4. **Decryption & Integration upon successful verification:** ... contract verifies the ZK-SNARK proof. If valid, it emits an `AccessGranted` event with encrypted decryption key pointer. **Success Indicator:** Requester receives `AccessGranted` event and verifies SHA-3 hash match.
+{'step': 1, 'description': 'Fragment Generation & Hashing: Memory fragments are hashed using SHA-3 and pinned to IPFS via the IPFS API endpoint POST /api/v0/add, returning a Content Identifier (CID).', 'success_indicator': 'IPFS API endpoint returns 200 OK status with CID.'} {'step': 2, 'description': 'Smart Contract Registration & Policy Encoding: Memory fragments are registered on the Ethereum-based DME smart contract registry via the `registerMemoryFragment` function.', 'success_indicator': 'Transaction receipt includes `status: 0x0` and emits `FragmentRegistered` event on the DME smart contract registry.'} {'step': 3, 'description': 'ZK-SNARK Proof Generation for Access Requests: Zero-knowledge proofs are generated and submitted to the DME verifier contract on Ethereum via the `verifyAccess` function.', 'success_indicator': 'DME verifier contract emits `AccessAuthorized` event with MAT.'} {'step': 4, 'description': 'Decryption & Integration upon successful verification: The DME decryption contract on Ethereum verifies the ZK-SNARK proof and emits an `AccessGranted` event with encrypted decryption key pointer.', 'success_indicator': 'Requester receives `AccessGranted` event and verifies SHA-3 hash match.'} {'step': 5, 'description': 'System-level check: 95% of memory access requests are authorized within 500ms, verified via blockchain transaction latency metrics and IPFS retrieval success rates.'}
 
 ## Who it's for
 

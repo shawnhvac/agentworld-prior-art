@@ -24,11 +24,11 @@ CPES uses semantic relationship discovery mechanisms [3] to map the communicatio
 
 ## How it works
 
-10. Data-Flow Serialization and Endpoint Exposure: The system serializes the current entropy state {tick_timestamp, H(t), Θ(t), R_f, state, affected_agent_cluster_ids} into a standardized JSON envelope. This envelope is published to the Kafka topic 'cpes_risk_signals' and exposed via
+10. Data-Flow Serialization and Endpoint Exposure: The system serializes the current entropy state {tick_timestamp, H(t), Θ(t), R_f, state, affected_agent_cluster_ids} into a standardized JSON envelope. This envelope is published to the Kafka topic 'cpes_risk_signals' [n] and exposed via the dashboard page '/dashboard/cvar-reduction-tracker' [n] for real-time monitoring.
 
 ## Materials / steps
 
-12. VaR/CVaR Integration and Success Validation: The Portfolio Risk Engine ingests the signals to recalculate VaR/CVaR. System efficacy is validated via a live success check: a real-time, daily reduction in the portfolio's 99% CVaR compared to a control group of non-CPES managed loans, targeting a 5% reduction in 99% CVaR over 30 days. Automated API calls to '/v1/metrics/cvar' measure this reduction, with results visualized on the 'Portfolio Risk Dashboard - CVaR Reduction Tracker' (e.g., 'Daily CVaR Reduction Chart Page') in real-time.
+12. VaR/CVaR Integration and Success Validation: The Portfolio Risk Engine ingests the signals to recalculate VaR/CVaR. System efficacy is validated via a live success check: a real-time, daily API call to '/v1/metrics/cvar' [n] returning a numeric delta vs. control group, logged in the database table 'cvar_reduction_logs' [n] for auditability. Results are visualized on the dashboard page '/dashboard/cvar-reduction-tracker' [n] (e.g., 'Daily CVaR Reduction Chart Page') in real-time.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Financial institutions deploying multi-agent AI systems for loan underwriting an
 
 ## Novelty
 
-CPES uniquely integrates semantic embedding-based protocol diversity measurement with a closed-loop actuation system, validated via automated API calls to '/v1/metrics/cvar' and visualized on the 'Portfolio Risk Dashboard - CVaR Reduction Tracker', providing concrete success metrics absent in prior art.
+CPES uniquely integrates semantic embedding-based protocol diversity measurement with a closed-loop actuation system, validated via automated API calls to '/v1/metrics/cvar' [n] and visualized on the dashboard page '/dashboard/cvar-reduction-tracker' [n], with success metrics logged in 'cvar_reduction_logs' [n] for concrete auditability absent in prior art.
 
 ## Ecosystem use
 

@@ -45,17 +45,7 @@ To allow manual confirmation, the SDK exposes a REST API endpoint `GET /api/v1/a
 
 ## Materials / steps
 
-1. Integrate SDK into agent framework (e.g., LangChain, AutoGen). 2. Configure hooks for tool invocations and LLM state outputs. 3. Initialize local Merkle tree storage and bind to TPM/Secure Enclave for root-of-trust signing. 4. Run agent workflow with SDK enabled. 5. Attempt to replay or modify transcript. 6. Verify that hash mismatches or signature failures trigger execution halts or alerts. 7. Execute Validation Plan: 
-   a. Benchmark Dataset: Utilize the 'AgentBench' suite (locked to v1.0.0 release) of 500 deterministic agent trajectories across standard tasks (web browsing, code generation, data analysis) to establish baseline latency and integrity metrics. Hardware Configuration: AWS c5.large instances equipped with AWS Nitro Enclaves supporting TPM 2.0 virtualization for consistent hardware attestation capabilities.
-   b. Adversarial Attack Vectors: Simulate three specific attack classes: (i) Log Injection: Attempt to insert synthetic tool calls into the Merkle tree without corresponding runtime execution; (ii) TPM Side-Channel: Introduce noise/delays to the TPM quote generation to test nonce-timeout handling and replay detection; (iii) State Replay: Attempt to replay a previous valid Merkle root with a modified current state to test PCR baseline alignment.
-   c. Quantitative Success Thresholds: 
-      - Primary Metric - Integrity Verification Success Rate (IVSR): Defined as the percentage of benign AgentBench trajectories that pass verification without false positives. Target: >99.9% IVSR across the 500-trajectory benchmark to ensure operational stability.
-      - Latency: p95 overhead per tool invocation must remain <5% of total step time on AWS c5.large instances, with a strict sub-budget of <50ms for TPM quote generation and PCR extension.
-      - Detection Accuracy: 100% detection rate (zero false negatives) for Log Injection and State Replay attacks across 1,000 simulated adversarial runs.
-      - Statistical Power Analysis: Conduct a formal power analysis (G*Power or equivalent) to determine the minimum sample size required to detect a medium effect size (Cohen's d = 0.5) with 80% power (β=0.2) at α=0.05. The final trial must meet or exceed this calculated sample size to ensure statistical validity, replacing arbitrary thresholds.
-      - False Positive Rate: <0.1% for benign execution variations to ensure operational stability.
-   d. Trusted Computing Base (TCB) Assumptions: Explicitly define the TCB boundary as comprising the TPM hardware, the SDK's isolated termination handler, and the OS kernel signals. Acknowledge that side-channel attacks targeting the TPM's physical implementation or the OS kernel's signal handling are outside the scope of this software-defined integrity model, mitigating risk by assuming the TCB itself is uncompromised per standard hardware attestation models.
-   e. Dogfooding Phase: Deploy the SDK in internal production-like environments for a 4-week period. Internal Use Cases: (i) Automated Compliance Reporting Agent: Verify that all data retrieval steps adhere to privacy policy constraints; (ii) Code Review Agent: Ensure that generated code patches do
+1. Int
 
 ## Who it's for
 

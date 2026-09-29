@@ -24,11 +24,11 @@ A decentralized, offline-first mesh network protocol that captures localized voi
 
 ## How it works
 
-7. ...submitting a binary feedback signal (valid/invalid) via the specific endpoint `POST /api/v1/triage/feedback` on the **Responder Triage Confirmation Page** (UI screen #3) of the responder device's local interface...
+7. ...submitting a binary feedback signal (valid/invalid) via the specific endpoint `POST /api/v1/triage/feedback` on the **Responder Triage Confirmation Page** (UI screen #3) of the responder device's local interface, which logs feedback to the `edge/processor.py` module's audit trail page (UI screen #5).
 
 ## Materials / steps
 
-2. ...implement the `edge/processor.py` module with lightweight on-device audio processing. 9. Validate system performance via: - At least 85% of responder feedback signals must be successfully logged within 10 minutes of alert transmission. - Model accuracy improves by 15% after 1000 feedback samples.
+2. ...implement the `edge/processor.py` module with lightweight on-device audio processing, accessible via the **Edge Processor Configuration Page** (UI screen #2). 9. Validate system performance via: - At least 85% of responder feedback signals must be successfully logged within 10 minutes of alert transmission via `POST /api/v1/triage/feedback` on screen #3. - Model accuracy improves by 15% after 1000 feedback samples, verifiable through the `edge/processor.py` audit trail (UI screen #5).
 
 ## Who it's for
 

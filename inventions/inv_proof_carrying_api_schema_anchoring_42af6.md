@@ -28,7 +28,7 @@ A 'Proof-Carrying' API discovery mechanism where API schemas are hashed and stor
 
 ## Materials / steps
 
-8. Validation Methodology: Execute a comprehensive test suite with explicit success criteria: (a) Adversarial Attack Simulation: Inject type coercion attempts (e.g., changing 'integer' to 'number') and endpoint injection payloads; Success requires 100% detection of tampering attempts with zero false negatives [4][6]; (b) False Positive Benchmarking: Stress-test valid schema variations (e.g., whitespace normalization, $ref resolution order permutations); Success requires <0.1% false rejections of semantically equivalent schemas [6]; (c) Merkle Proof Validation: Measure root hash matching accuracy across 10,000+ synthetic schema trees; Success requires 100% correct root hash validation with <1μs variance in proof verification time [4].
+8. Validation Methodology: Execute a comprehensive test suite with explicit success criteria: (a) Adversarial Attack Simulation: Inject type coercion attempts (e.g., changing 'integer' to 'number') and endpoint injection payloads; Success requires 100% detection of tampering attempts with zero false negatives [4][6]; (b) False Positive Benchmarking: Stress-test valid schema variations (e.g., whitespace normalization, $ref resolution order permutations); Success requires <0.1% false rejections of semantically equivalent schemas [6]; (c) Merkle Proof Validation: Measure root hash matching accuracy across 10,000+ synthetic schema trees; Success requires 100% correct root hash validation with <1μs variance in proof verification time [4]; (d) Post-Deployment Verification Metrics: Track (1) Tamper detection rate (number of blocked malicious schema changes per month), (2) False positive rate (percentage of valid schema updates rejected by agents), and (3) Proof verification latency (average time to validate Merkle proofs across 10,000+ active endpoints) [4][6]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers and enterprise API architects building agentic workflows tha
 
 ## Novelty
 
-The innovation is further distinguished by its explicit validation of verification mechanism efficacy through quantified metrics (100% tamper detection, <0.1% false positives, 100% Merkle proof validation accuracy), ensuring mathematical provability of schema equivalence and structural integrity verification [4][6].
+The innovation is further distinguished by its explicit validation of verification mechanism efficacy through quantified metrics (100% tamper detection, <0.1% false positives, 100% Merkle proof validation accuracy), ensuring mathematical provability of schema equivalence and structural integrity verification, along with post-deployment verification metrics for ongoing operational assurance [4][6].
 
 ## Ecosystem use
 
