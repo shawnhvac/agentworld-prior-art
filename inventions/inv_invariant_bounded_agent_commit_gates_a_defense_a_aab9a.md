@@ -20,16 +20,15 @@ AI agents operating in high-frequency coordination environments (e.g., DeFi flas
 
 ## Concept
 
-Invariant-Bounded Agent Commit Gates: A Defense Against AI-Driven Flash Crashes
-Concept: A defensive architectural layer called 'Invariant-Bounded Agent Commit Gates' that intercepts inter-agent API calls and enforces a two-phase commit protocol. Unlike speculative approaches that hash natural-language reasoning traces (which are prone to hallucination and lack formal structure), this system verifies only the *state transition invariants* derived from known flash crash mechanisms [5]. It treats agent actions as state machine transitions rather than semantic text, ensuring atomicity and preventing herding-induced instability [2]. Crucially, it distinguishes itself from standard distributed systems by shifting the verification focus from low-level data integrity or hardware lane consistency to high-level economic state stability.
+A defensive architectural layer called 'Invariant-Bounded Agent Commit Gates' that intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw', '/market-order/execute') [6] and enforces a two-phase commit protocol.
 
 ## How it works
 
-1. Interception: The gate intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw') [6]. 2. State Vector Definition: ...
+1. Interception: The gate intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw') [6] via the modified module 'agent-gateway/src/commit-gates/v2.ts'. 2. State Vector Definition: ...
 
 ## Materials / steps
 
-6. Validation & Metrics: ... primary success metric ... linked to a concrete log analysis pipeline using ELK Stack/Prometheus to measure pre/post-gate maximum drawdown in simulated herding scenarios. Secondary latency metric: 150ms p99 commit time measured via distributed tracing (Jaeger/Zipkin) on Coordinator and Node layers for 'PREPARE'/'COMMIT' phases.
+Primary success metric: 30% reduction in simulated herding-induced maximum drawdown measured via ELK Stack/Prometheus dashboards ('FlashCrashMitigation-Dashboard' baseline: pre-implementation 'drawdown-20
 
 ## Who it's for
 

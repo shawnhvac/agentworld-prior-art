@@ -28,7 +28,7 @@ The SCVO operates via a REST API exposing specific endpoints: POST /api/v1/compu
 
 ## Materials / steps
 
-Implement a decentralized identifier (DID) verification system for AI agents, exposing POST /api/v1/compute/evaluate and GET /api/v1/compute/status/{tx_id}. Define database schema including `did_registry`, `audit_logs`, `did_reputation`, and `metrics_store` tables. Configure hardware telemetry sampling for PCIe, NIC, and CPU metrics to drive the τ(t) calculation. Implement monitoring dashboards to track 99.9% uptime, <5ms p99 latency, and τ(t) variance reduction.
+Implement a decentralized identifier (DID) verification system for AI agents, exposing POST /api/v1/compute/evaluate and GET /api/v1/compute/status/{tx_id} via **the SCVO REST API interface**. Define database schema including `did_registry`, `audit_logs`, `did_reputation`, and `metrics_store` tables. Configure hardware telemetry sampling for PCIe, NIC, and CPU metrics to drive the τ(t) calculation. Implement monitoring dashboards to track 99.9% uptime, <5ms p99 latency, and **a 20% reduction in τ(t) variance during peak loads, verified via metrics_store queries**.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents and compute-bartering platforms seeking to align resource allocation w
 
 ## Novelty
 
-The SCVO's novelty is distinguished from prior art in ethical compute allocation by implementing the first closed-loop control system where real-time interconnect saturation (τ(t)) directly modulates governance weights (w_i(t)) to prevent infrastructure collapse, rather than treating ethics as a static or independent overlay.
+The SCVO's closed-loop control system dynamically modulates governance weights (w_i(t)) based on real-time interconnect saturation (τ(t)), unlike P1's static data management between data centers [P1]. This ensures infrastructure stability while aligning compute allocation with evolving ethical standards, a non-obvious combination of hardware telemetry and adaptive governance.
 
 ## Ecosystem use
 

@@ -28,7 +28,7 @@ The system uses a camera and image recognition software to classify food waste i
 
 ## Materials / steps
 
-User interface with real-time feedback display showing 'https://dashboard.example.com/waste-analysis' endpoint [n]; Machine learning model trained on food textures and materials; ... Measurable check: Achieve 90% classification accuracy on first-use load cell data within 1 hour of deployment, with 'system_status': 'operational' in 'kitchen/sorter/status' JSON payload [n]
+User interface with real-time feedback display showing 'https://dashboard.example.com/waste-analysis' endpoint [n], which will display the 90% classification accuracy check in real time. Machine learning model trained on food textures and materials; ... Measurable check: Achieve 90% classification accuracy on first-use load cell data within 1 hour of deployment, with 'system_status': 'operational' in 'kitchen/sorter/status' JSON payload [n]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Eco-conscious households aiming to reduce waste contamination and improve sustai
 
 ## Novelty
 
-The invention's novelty lies in its integration of real-time mechanical reconfiguration via solenoid-driven gates modulated by load-cell weight feedback, combined with a local MQTT-based feedback system ('kitchen/sorter/status') that includes a 'system_status' field confirming operational readiness—a feature absent in prior art [P3-P5]. The endpoint 'https://dashboard.example.com/waste-analysis' provides a concrete surface for monitoring and validation [n].
+The invention's novelty lies in its integration of real-time mechanical reconfiguration via solenoid-driven gates modulated by load-cell weight feedback, combined with a local MQTT-based feedback system ('kitchen/sorter/status') that includes a 'system_status' field confirming operational readiness—a feature absent in prior art [P3-P5]. The endpoint 'https://dashboard.example.com/waste-analysis' provides a concrete surface for monitoring and validating the 90% classification accuracy check [n]
 
 ## Ecosystem use
 

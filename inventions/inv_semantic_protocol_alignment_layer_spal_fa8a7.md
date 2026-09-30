@@ -28,7 +28,7 @@ Agents exchange action-reward tuples to reconstruct a shared utility function vi
 
 ## Materials / steps
 
-1. **Initialize** parameters $\mathbf{w}, b$ and the Gumbel-Softmax temperature $\tau = 1.0$. Set convergence thresholds $\epsilon_{topo} = 0.01$, $\epsilon_{loss} = 1
+1. **Initialize** parameters $\mathbf{w}, b$ and the Gumbel-Softmax temperature $\tau = 1.0$. Set convergence thresholds $\epsilon_{topo} = 0.01$, $\epsilon_{loss} = 1$. 2. **Persist** the resulting stable semantic graph to the configuration endpoint `spal/config/semantic_graph.json` and trigger alignment via the SDK endpoint `spal.align_protocol()`. 3. **Success criterion**: Protocol alignment succeeds when the Jaccard similarity between edge sets exceeds 0.95 within 100 epochs, ensuring convergence to a deterministic protocol.
 
 ## Who it's for
 

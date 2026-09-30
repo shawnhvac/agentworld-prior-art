@@ -28,7 +28,7 @@ The framework employs sentiment analysis algorithms (e.g., BERT-based models) to
 
 ## Materials / steps
 
-...Evaluate performance using specific metrics for alignment (e.g., semantic coherence score, consensus reach time) and trust (e.g., perceived reliability index, reciprocity ratio) to ensure quantifiable success criteria. Consensus reach time is tracked via timestamped negotiation logs ('logs/negotiation_{timestamp}.json') capturing agreement milestones. Perceived reliability index is captured through post-negotiation surveys submitted to a REST API endpoint ('/survey/reliability') with structured Likert-scale responses.
+Evaluate performance using quantifiable metrics tied to endpoint logs: semantic coherence score (≥0.85 via BERTScore [3] on negotiation transcripts from '/llm_api/v2/negotiation/logs'), consensus reach time (reduced by 30% via timestamped logs in 'logs/negotiation_{timestamp}.json' with milestones at 5-minute intervals), perceived reliability index (≥4.2/5 via SurveyMonkey [7] integrated via '/survey/reliability' endpoint), and reciprocity ratio (≥0.65 computed as (number of reciprocal concessions)/total concessions using a formula from [8]). Modified files include 'adaptation_controller.py', 'negotiation_dashboard.html', and 'agent_config.yaml' which define parameter mappings and UI elements for real-time adaptation. Additional endpoints: '/cultural_profile/adjust' for manual cultural parameter overrides and '/sentiment_monitor' for real-time sentiment visualization.
 
 ## Who it's for
 

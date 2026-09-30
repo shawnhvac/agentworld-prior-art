@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | Amelia, Helen, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:13:06 UTC |
-| Certificate issued | 2026-09-27T21:14:14.698495+00:00 UTC |
-| Certificate hash (SHA-256) | `bd99f0fb77953f5df1b57962263e804a58f003b4e1d125dd1a3a6a289b935d47` |
-| Content hash (SHA-256) | `c2ed3c700706748ce8d885f25b1411a06ec510439c1c1e98b3c386fff51a5447` |
-| Chain index | 3343 |
+| Certificate issued | 2026-09-29T15:19:30.135374+00:00 UTC |
+| Certificate hash (SHA-256) | `bac5d99937a415fe9bdce3190821d3497fce9f10df67ec045001b375048c2ed2` |
+| Content hash (SHA-256) | `0d6a7d7e597bfbf39a3dc30a1345c385592fb5a9ea5d59ea0aeb99131b034419` |
+| Chain index | 3524 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Current Computer Integrated Manufacturing (CIM) systems, as described in [1] and
 
 ## Concept
 
-A 'Causal-Attribution Yield Ledger' that pairs time-synchronized haptic operator logs with a controlled experimental design to statistically isolate human interventions via the POST /api/v1/haptic-log endpoint [1][2], and uses a randomized controlled trial (RCT) logic within the production line: the system logs operator inputs and compares yield deltas against a baseline of similar conditions where no human adjustment was made, using sensor data to control for environmental variables via the POST /api/v1/statistical-analysis/validate endpoint [3].
+A 'Causal-Attribution Yield Ledger' that pairs time-synchronized haptic operator logs with a controlled experimental design to statistically isolate human interventions via the POST /api/v1/haptic-log endpoint [1][2], using the 'Operator Dashboard' UI surface, and applies randomized controlled trial (RCT) logic within the production line. The system logs operator inputs and compares yield deltas against a baseline of similar conditions where no human adjustment was made, using sensor data to control for environmental variables via the POST /api/v1/statistical-analysis/validate endpoint [3], accessible through the 'Yield Analysis Panel' UI surface.
 
 ## How it works
 
-1. Data Capture: The system records operator haptic inputs (e.g., valve adjustments, speed changes) via the human-computer interface [1][2]. 2. Baseline Control: The system uses machine sensors to log environmental variables (temperature, pressure) to serve as control variables [3]. 3. Causal Isolation: It applies a difference-in-differences statistical model to compare the yield of batches with operator intervention vs. identical batches without intervention, controlling for the logged environmental variables. 4. Ledger Entry: Only interventions that show a statistically significant positive yield delta (p < 0.05) are logged as 'Validated Skill Events' in a digital ledger, linking the operator ID to the specific process improvement.
+1. Data Capture: The system records operator haptic inputs (e.g., valve adjustments, speed changes) via the 'Operator Dashboard' interface, logging timestamps and magnitudes via the POST /api/v1/haptic-log endpoint [1][2]. 2. Baseline Control: Environmental sensors (temperature, pressure, vibration) log confounding variables [3]. 3. Causal Isolation: A difference-in-differences model compares yield of 'Human-Adjusted' vs. 'Standard' batches, controlling for environmental variables. 4. Ledger Entry: Only interventions with statistically significant positive yield deltas (p < 0.05) are logged as 'Validated Skill Events' in the digital ledger, linking operator ID to process improvements.
 
 ## Materials / steps
 
-1. Integrate haptic sensors into the operator workstation to log adjustment timestamps and magnitudes via the POST /api/v1/haptic-log endpoint [1]. 2. Deploy environmental sensors (temperature, pressure, vibration) to capture confounding variables [3]. 3. Implement a software layer that tags each batch with 'Human-Adjusted' or 'Standard' status based on haptic logs. 4. Configure a statistical engine to run difference-in-differences analysis on yield data via the POST /api/v1/statistical-analysis/validate endpoint, using environmental sensor data as covariates. 5. Create a digital ledger database that records only statistically validated interventions with operator attribution. 6. Define a validation check: a 5% increase in the 'Validated Skill Event' acceptance rate over a 30-day pilot period compared to the baseline, measured against the existing batch yield database and the digital ledger's audit logs.
+1. Integrate haptic sensors into the operator workstation to log adjustments via the 'Operator Dashboard' and POST /api/v1/haptic-log endpoint [1]. 2. Deploy environmental sensors to capture confounding variables [3]. 3. Implement software to tag batches as 'Human-Adjusted' or 'Standard' based on haptic logs. 4. Use the 'Yield Analysis Panel' to run difference-in-differences analysis via POST /api/v1/statistical-analysis/validate endpoint, using environmental data as covariates. 5. Create a digital ledger
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Manufacturing | Definition, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bd99f0fb77953f5df1b57962263e804a58f003b4e1d125dd1a3a6a289b935d47*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bac5d99937a415fe9bdce3190821d3497fce9f10df67ec045001b375048c2ed2*

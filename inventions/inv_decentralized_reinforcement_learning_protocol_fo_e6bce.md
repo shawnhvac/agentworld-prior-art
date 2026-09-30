@@ -24,23 +24,23 @@ A decentralized, self-optimizing language negotiation protocol for AI agents tha
 
 ## How it works
 
-The protocol initializes RL agents using Proximal Policy Optimization (PPO) with pre-trained language models (specifically Llama-3-8B-Instruct) and deploys them in simulated multilingual negotiation scenarios. A real-time monitoring dashboard at `src/ui/monitoring_dashboard.py` exposes a `/realtime_metrics` endpoint, providing live visualizations of KL divergence thresholds, reward signal stability, and ethical compliance rates. Contextual embeddings and sentiment analysis generate reward signals via the sentiment-based reward function r = α·S_lex + (1-α)·S_prag (α=0.4), with the Sentiment Reward Engine in `src/reward/engine.py` calculating scalar values r ∈ [-1, 1]. The Ledger Consensus Layer in `src/ledger/consensus.py` accepts `propose_update(policy_gradient, r)` via Proof-of-Adaptation consensus, finalizing updates
+The protocol initializes RL agents using Proximal Policy Optimization (PPO) with pre-trained language models (specifically Llama-3-8B-Instruct) and deploys them in simulated multilingual negotiation scenarios. A real-time monitoring dashboard at `src/ui/monitoring_dashboard.py` exposes a `/realtime_metrics` endpoint, providing live visualizations of KL divergence thresholds (tracked via `kl_divergence_monitor()` in `src/metrics/kl_monitor.py`), reward signal stability, and ethical compliance rates (calculated by `ethical_compliance_checker()` in `src/ethics/checker.py`). Contextual embeddings and sentiment analysis generate reward signals via the sentiment-based reward function r = α·S_lex + (1-α)·S_prag (α=0.4), with the Sentiment Reward Engine in `src/reward/engine.py` using `calculate_sentiment_reward()` to compute scalar values r ∈ [-1, 1]. The Ledger Consensus Layer in `src/ledger/consensus.py` accepts `propose_update(policy_gradient, r)` via Proof-of-Adaptation consensus, finalizing updates through `finalize_policy_update()`.
 
 ## Materials / steps
 
-Pre-trained neural language models from [2] (specifically Llama-3-8B-Instruct and Dist
+Pre-trained neural language models from [2] (specifically Llama-3-8B-Instruct and DistilBERT) are integrated via the `load_pretrained_model()` function in `src/models/loader.py`.
 
 ## Who it's for
 
-AI agents engaged in multilingual or evolving communication contexts, such as international business negotiations, cross-cultural customer service, or autonomous diplomatic systems.
+Multinational corporations, AI ethics boards, and decentralized autonomous organizations (DAOs) requiring real-time, culturally adaptive language negotiation systems.
 
 ## Novelty
 
-Unlike prior decentralized RL protocols that aggregate utility rewards for global strategy optimization or rely on centralized ethical oversight, this invention introduces a localized, sentiment-driven reward function that decouples ethical compliance metrics from transactional efficiency. By treating cultural nuance and speaker intent as primary state-space variables rather than secondary constraints, the protocol achieves granular, real-time language term selection that existing utility-maximization models cannot support without centralized control, specifically addressing the limitation of prior art that fails to dynamically adapt to contextual ethical norms in decentralized settings.
+Unlike prior decentralized RL protocols that aggregate utility rewards for global strategy optimization or rely on centralized ethical oversight, this invention introduces a localized, sentiment-driven reward function that decouples ethical compliance metrics from transactional efficiency. By treating cultural nuance and speaker intent as primary state-space variables rather than secondary constraints, the protocol achieves granular, real-time language term selection that existing utility-maximization models cannot support without centralized control, specifically addressing the limitation of prior art that fails to dynamically adapt to contextual ethical norms in decentralized settings. Key implementation files include `src/reward/engine.py`'s `calculate_sentiment_reward()` and `src/ledger/consensus.py`'s `propose_update()` API.
 
 ## Ecosystem use
 
-This protocol can be integrated into AI-agent platforms as an API for dynamic language negotiation, enabling agents to autonomously adapt their communication strategies during interactions. It could be used in agent coordination layers to ensure ethical and effective cross-agent communication.
+The `/realtime_metrics` endpoint enables third-party systems to query negotiation health via HTTP GET requests, while `src/ledger/consensus.py`'s `finalize_policy_update()` provides a standardized interface for blockchain-based policy validation.
 
 ## Diagram
 

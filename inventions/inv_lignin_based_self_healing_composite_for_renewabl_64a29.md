@@ -20,7 +20,7 @@ Renewable energy infrastructure (e.g., wind turbine blades, solar frames) curren
 
 ## Concept
 
-A Bio-Epoxy Composite Self-Healing Lattice (BESHL) that integrates lignin-based thermoset precursors with microencapsulated liquid monomers to autonomously repair micro-fractures, aiming to create a closed-loop lifecycle for energy hardware [2][3].
+A Bio-Epoxy Composite Self-Healing Lattice (BESHL) that integrates lignin-based thermoset precursors with microencapsulated liquid monomers to autonomously repair micro-fractures, aiming to create a closed-loop lifecycle for energy hardware, specifically targeting wind turbine blade leading edge laminates [2][3].
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system operates via a distinct separation between the bulk lignin-based ther
 
 ## Materials / steps
 
-1. Extract lignin-based thermoset precursors from renewable biomass [2][3]. 2. Synthesize silica-shell microcapsules containing a liquid crosslinker monomer (e.g., bisphenol A diglycidyl ether or a bio-based glycidyl ether) and a photo-initiator (e.g., acylphosphine oxide or benzophenone) to ensure rapid curing kinetics under UV exposure. 3. Surface-functionalize the microcapsules with silane coupling agents (e.g., 3-glycidoxypropyltrimethoxysilane) to ensure compatibility with the lignin matrix. 4. Mix the cured lignin precursor with the microcapsules to form a composite matrix. Note: The monomer-excess formulation (20-30% excess) applies specifically to the healing reaction within the crack volume to account for variable surface chemistry, not the bulk material formulation. 5. Cure the matrix to create a structural lattice specifically for the wind turbine blade leading edge laminate. 6. Conduct mechanical validation per ASTM D3039 (Standard Test Method for Tensile Properties of Polymer Matrix Composite Materials) to establish baseline tensile strength and modulus. 7. Execute a specific UV aging protocol: expose samples to 365 nm monochromatic UV light at an intensity of 5 mW/cm² for 10,000 hours (simulating 10 years of outdoor exposure), while simultaneously applying cyclic wind loading (0-50 Hz, 0-100 MPa stress
+1. Extract lignin-based thermoset precursors from renewable biomass [2][3]. 2. Synthesize silica-shell microcapsules containing a liquid crosslinker monomer (e.g., bisphenol A diglycidyl ether or a bio-based glycidyl ether) and a photo-initiator (e.g., acylphosphine oxide or benzophenone) to ensure rapid curing kinetics under UV exposure. 3. Surface-functionalize the microcapsules with silane coupling agents (e.g., 3-glycidoxypropyltrimethoxysilane) to ensure compatibility with the lignin matrix. 4. Mix the cured lignin precursor with the microcapsules to form a composite matrix. Note: The monomer-excess formulation (20-30% excess) applies specifically to the healing reaction within the crack volume to account for variable surface chemistry, not the bulk material formulation. 5. Cure the matrix to create a structural lattice specifically for the wind turbine blade leading edge laminate. 6. Conduct mechanical validation per ASTM D3039 (Standard Test Method for Tensile Properties of Polymer Matrix Composite Materials) to establish baseline tensile strength and modulus, with quantifiable success metrics including ≥90% restoration of original tensile strength post-healing and ≥85% retention of initial modulus after 10,000 hours of UV aging. 7. Execute a specific UV aging protocol: expose samples to 365 nm monochromatic UV light at an intensity of 5 mW/cm² for 10,000 hours (simulating 10 years of outdoor exposure), while simultaneously applying cyclic wind loading (0-50 Hz, 0-100 MPa stress).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Manufacturers of renewable energy infrastructure, specifically wind turbine blad
 
 ## Novelty
 
-The BESHL innovation uniquely combines acylphosphine oxide photo‑initiator with lignin phenolic hydroxyl groups to enable rapid ambient‑UV‑triggered radical polymerization, and employs a monomer‑excess (20‑30%) healing formulation that guarantees complete crosslinking despite variable phenolic hydroxyl density on fracture surfaces.
+The BESHL innovation uniquely combines acylphosphine oxide photo-initiator with lignin phenolic hydroxyl groups to enable rapid ambient-UV-triggered radical polymerization, and employs a monomer-excess (20-30%) healing formulation that guarantees complete crosslinking despite variable phenolic hydroxyl density on fracture surfaces, with quantifiable success metrics including ≥90% restoration of original tensile strength post-healing and ≥85% retention
 
 ## Diagram
 

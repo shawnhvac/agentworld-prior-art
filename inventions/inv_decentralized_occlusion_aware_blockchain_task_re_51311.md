@@ -24,11 +24,11 @@ A decentralized system that integrates real-time occlusion detection, blockchain
 
 ## How it works
 
-Each swarm agent is equipped with occlusion-sensing modules (e.g., LIDAR or vision-based systems) that continuously monitor the environment. When an occlusion is detected, the agent generates a task-reassignment request that is recorded on a decentralized blockchain ledger. Federated differential evolution then optimizes the task reallocation across the swarm by aggregating local model updates from each agent without central coordination. The system follows a strict end-to-end workflow: (1) LIDAR data is processed locally to identify occlusion vectors; (2) a transaction proposal containing the occlusion vector and affected task IDs is submitted to the Hyperledger Fabric network; (3) upon Raft consensus approval (target <50ms), the local agent initiates a Federated Differential Evolution (FDE) cycle; (4) the FDE uses a fitness function defined as f(x) = α*(1/T_latency) + β*(1/C_cost) - γ*(Occlusion_Penalty), where x represents task assignment parameters, T_latency is estimated completion time, C_cost is energy consumption, and Occlusion_Penalty scales with occlusion severity; (5) optimized task assignments are broadcast and executed. The latency budget is strictly allocated as 50ms for consensus and 150ms for the FDE optimization phase to meet the <200ms total reassignment target.
+When an occlusion is detected, the agent generates a task-reassignment request via a REST API endpoint (e.g., `/api/v1/task-reassignment` with POST method) that includes the occlusion vector and affected task IDs. This request is submitted to the Hyperledger Fabric network. Real-time monitoring is enabled through Prometheus metrics exported by each agent, tracking key indicators such as `task_reassignment_latency` (histogram) and `consensus_time` (gauge).
 
 ## Materials / steps
 
-Deploy a swarm of miniature robots equipped with LIDAR for occlusion detection, a lightweight blockchain node for consensus, and a federated differential evolution framework for task optimization. Train the system using a multi-agent simulation with occlusion-prone environments and validate through task completion latency and reassignment accuracy. Specifically, benchmark against centralized task allocation baselines, requiring a mean time-to-reassignment < 200ms and consensus latency < 50ms to validate efficiency gains. Statistical validation will include paired t-tests comparing DOABT-RFDE against centralized planners, reporting 95% confidence intervals for latency metrics, and defining a clear baseline for improvement as a >15% reduction in reassignment time. A formal power analysis is conducted to determine the required sample size: assuming a baseline mean reassignment time of 240ms with a standard deviation of 30ms (based on preliminary centralized planner runs), and targeting a 95% confidence level with 80% statistical power to detect a 15% improvement (effect size d ≈ 0.5), a minimum of n=64 independent simulation runs per condition is required. The null hypothesis for the paired t-test is defined as H0: μ_DOABT - μ_Centralized ≤ 0, where μ represents the mean reassignment latency; rejection of H0 at α=0.05 confirms the significant improvement. Reproducibility Protocol: Use Isaac Sim v4.0.0 with a fixed swarm size of N=50 agents, an occlusion density distribution following a Poisson process with lambda=0.5 occlusions/m^2, and a blockchain node configuration of Hyperledger Fabric v2.5 with Raft consensus and 5 ordering nodes. Physical Deployment Protocol: For real-world trials, deploy units equipped with Ouster OS1 LIDAR sensors and NVIDIA Jetson Orin NX edge computing modules running Ubuntu 22.04. Network topology shall consist of a dedicated 5GHz Wi-Fi 6 mesh network with <10ms internal hop latency to support Hyperledger Fabric node communication. Success criteria for the physical trial phase include maintaining a mean time-to-reassignment < 250ms (accounting for physical actuation delays), achieving >95% task completion rate under dynamic occlusion, and demonstrating stable blockchain consensus with no fork events over a 1-hour continuous operation period.
+During validation, Prometheus metrics are scraped every 100ms to ensure the system meets the <200ms total reassignment target. The physical deployment protocol specifies using Prometheus v2.40.3 with Grafana v10.1.5 for visualizing latency metrics and blockchain node health.
 
 ## Who it's for
 
@@ -40,18 +40,18 @@ This system introduces a novel integration of occlusion-aware routing with decen
 
 ## Ecosystem use
 
-This system could be used within an AI-agent platform as a task routing API that integrates real-time occlusion detection, decentralized consensus, and federated optimization for dynamic task reassignment. It could be implemented as a microservice that accepts task requests and environmental sensor data, and returns optimized task assignments via a blockchain-based consensus layer.
+The system integrates with Prometheus for real-time monitoring and Grafana for dashboard visualization, enabling end-users to observe task reassignment performance and consensus health through predefined API routes and metrics.
 
 ## Diagram
 
 ```mermaid
-graph LR
-A[Swarm Agent with LIDAR] --> B(Occlusion Detection)
-B --> C(Task Reassignment Request)
-C --> D(Blockchain Ledger)
-D --> E(Federated Differential Evolution)
-E --> F(Optimized Task Assignment)
-F --> G(Swarm Agent Execution)
+graph TD
+A[Occlusion Detection] --> B[REST API: /api/v1/task-reassignment]
+B --> C[Hyperledger Fabric Network]
+C --> D[Federated Differential Evolution]
+D --> E[Task Execution]
+C --> F[Prometheus Metrics Export]
+F --> G[Grafana Dashboard]
 ```
 
 ## Sources / grounding

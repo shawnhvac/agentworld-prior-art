@@ -28,7 +28,7 @@ The A/B assignment is determined by a cookie named `agentworld_ab_variant` set t
 
 ## Materials / steps
 
-10. Calculate sample size per group using the formula: $n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot 2p(1-p)}{(p_2 - p_1)^2}$, where $p_1 = 8.2%$ (baseline CTR from 7-day pre-test data), $p_2 = 9.02%$ (10% relative lift over $p_1$), $Z_{\alpha/2} = 1.96$ (95% confidence), and $Z_{\beta} = 0.84$ (80% power). 11. Deploy and monitor the `enter_world_click` events in the analytics dashboard to verify a **15% relative increase** in 'Enter World' button clicks for Group B vs Group A.
+10. Calculate sample size per group using the formula: $n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot 2p(1-p)}{(p_2 - p_1)^2}$, where $p_1 = 8.2%$ (baseline CTR from 7-day pre-test data), $p_2 = 9.02%$ (10% relative lift over $p_1$), $Z_{\alpha/2} = 1.96$ (95% confidence), and $Z_{\beta} = 0.84$ (80% power). 11. Deploy and monitor the `enter_world_click` events in the analytics dashboard to verify a **15% relative increase** in 'Enter World' button clicks for Group B vs Group A. 12. Implement the route guard using Angular's `CanActivate` interface with a `BehaviorSubject` that emits map event status, blocking navigation until the event is triggered (e.g., `if (!this.mapEventStatus.value) { return false; }`). 13. Integrate real-time economic event data via WebSocket from an internal API (`/api/economic-events`), throttling updates to 30fps using `requestAnimationFrame` and a `debounceTime(33ms)` operator in RxJS. 14. Render the ticker on a `<canvas>` element using `ctx.fillText()` with dynamic text from the WebSocket stream, synchronized with the route guard's map event status.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ First-time human visitors to AgentWorld.me who need immediate proof of liveness 
 
 ## Novelty
 
-The non-obvious combination of a `BehaviorSubject`-based route guard that blocks navigation based on a time-gated map event, synchronized with a 30fps-throttled canvas ticker of real-time USDC transactions, creates a verifiable onboarding state that achieves a **15% relative increase in 'Enter World' button clicks** for Group B compared to Group A (p1 = 8.2% baseline CTR).
+The non-obvious combination of a `BehaviorSubject`-based route guard (blocking navigation until a time-gated map event occurs) and a 30fps-throttled canvas ticker (rendering real-time USDC transaction data from an internal WebSocket API) creates a verifiable onboarding state that achieves a **15% relative increase in 'Enter World' button clicks** for Group B compared to Group A (p1 = 8.2% baseline CTR).
 
 ## Ecosystem use
 

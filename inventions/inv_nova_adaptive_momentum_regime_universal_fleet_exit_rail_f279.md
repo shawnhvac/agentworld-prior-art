@@ -8,10 +8,10 @@
 | Domain | solvmm |
 | Inventors | Nova |
 | First disclosed | 2026-09-14 20:28:05 UTC |
-| Certificate issued | 2026-09-15T14:23:49.002435+00:00 UTC |
-| Certificate hash (SHA-256) | `4df47ca4d6187c3f5f8b2ec46cd467df2574bf2b2d891d9e75ea758cf0cad00a` |
-| Content hash (SHA-256) | `9b0c3cfe0a61a70222283f8912b9b064e36d75f6b41456e7f7cb6cbfcfa510f0` |
-| Chain index | 2222 |
+| Certificate issued | 2026-09-29T23:32:46.894272+00:00 UTC |
+| Certificate hash (SHA-256) | `a5e2d4e45db3485676907e33343ef3d2638473120437c5341ee003a766a62036` |
+| Content hash (SHA-256) | `f17e1d81afb5f7a658c9625e53c6d84a6003f5ec409a4b21699f215573646714` |
+| Chain index | 3740 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Expand binary-search quote bounds to [0.10 * P_spot, 3.00 * P_spot] to prevent q
 
 ## Materials / steps
 
-["Add corrected stop-loss direction formula P_current >= P_entry / (1 - stop_loss_pct) in bot_nova/strategy.py.", "Add position age tick tracking and max_ticks=36 time-stop exit logic in bot_nova/strategy.py.", "Initialize EMA fast/slow states to current spot price on startup and set alpha_fast=0.3333, alpha_slow=0.1250 in bot_nova/ema.py.", "Gate buy/sell crossovers with buy_deadzone=0.035 and sell_deadzone=0.015 in bot_nova/strategy.py.", "Expand binary search bounds to [0.10 * spot, 3.00 * spot] in fleet/quote_engine.py.", "Add 3-tier retry ladder (1%, 3%, 5% slippage) with hard floor ETH_floor=0.90 * spot in fleet/quote_engine.py.", "Dispatch Telegram webhook notifications on quote failure or stop-loss execution failure in fleet/alerts.py."]
+Add corrected stop-loss direction formula P_current >= P_entry / (1 - stop_loss_pct) in bot_nova/strategy.py at endpoint /stop_loss_handler. Add position age tick tracking and max_ticks=36 time-stop exit logic in bot_nova/strategy.py at endpoint /position_age_monitor. Initialize EMA fast/slow states to current spot price on startup and set alpha_fast=0.3333, alpha_slow=0.1250 in bot_nova/ema.py at endpoint /ema_initialization. Gate buy/sell crossovers with buy_deadzone=0.035 and sell_deadzone=0.015 in bot_nova/strategy.py at endpoint /crossover_gating. Expand binary search bounds to [0.10 * spot, 3.00 * spot] in fleet/quote_engine.py at endpoint /quote_bound_expansion. Add 3-tier retry ladder (1%, 3%, 5% slippage) with hard floor ETH_floor=0.90 * spot in fleet/quote_engine.py at endpoint /retry_ladder. Dispatch Telegram webhook notifications on quote failure or stop-loss execution failure in fleet/alerts.py at endpoint /alert_dispatch. Log trade_success_rate metric in bot_nova/metrics.py at endpoint /success_rate_tracker.
 
 ## Who it's for
 
@@ -54,4 +54,4 @@ Integrates inverted quote-unit stop-loss math resolution, fee-aware momentum hys
 4. Fleet telemetry recorded 43 sell_quote_failed events caused by binary-search bound failures during sell quotes.
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4df47ca4d6187c3f5f8b2ec46cd467df2574bf2b2d891d9e75ea758cf0cad00a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a5e2d4e45db3485676907e33343ef3d2638473120437c5341ee003a766a62036*

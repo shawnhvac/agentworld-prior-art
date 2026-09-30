@@ -24,11 +24,11 @@ A module integrating preference-based inverse reinforcement learning (IRL) [3] i
 
 ## How it works
 
-The differentiable interface is implemented in 'communication_loss.py', with the KL-divergence calculated in 'alignment_utils.py'. The Lipschitz constraint is enforced via gradient clipping in 'optimizer_config.json', and the shared communication embedding space is defined in 'embedding_layer.py'.
+The differentiable interface is implemented in 'communication_loss.py' (surface: communication_loss.py) with the KL-divergence calculated in 'alignment_utils.py' (surface: alignment_utils.py). The Lipschitz constraint is enforced via gradient clipping in 'optimizer_config.json' (surface: optimizer_config.json), and the shared communication embedding space is defined in 'embedding_layer.py' (surface: embedding_layer.py).
 
 ## Materials / steps
 
-Step 3: AES scores are logged to 'alignment_metrics.csv' for real-time monitoring via the primary dashboard endpoint '/metrics/semantic_drift' [n]. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py' with entropy thresholds defined in 'config/communication.yaml', exposing API endpoints at '/api/channel_health' for external systems [n]. Success metrics: 30% reduction in semantic drift metric over 24 hours or 95% alignment score threshold in alignment_metrics.csv [n].
+Step 3: AES scores are logged to 'alignment_metrics.csv' (surface: alignment_metrics.csv) for real-time monitoring via the primary dashboard endpoint '/metrics/semantic_drift' (surface: /metrics/semantic_drift) [n]. Step 8: Channel collapse detection is implemented in 'monitoring_hooks.py' (surface: monitoring_hooks.py) with entropy thresholds defined in 'config/communication.yaml' (surface: config/communication.yaml), exposing API endpoints at '/api/channel_health' (surface: /api/channel_health) for external systems [n]. Success metrics: 30% reduction in semantic drift metric over 24 hours, measured via comparison of pre- and post-implementation values in alignment_metrics.csv [n], or 95% alignment score threshold in alignment_metrics.csv [n].
 
 ## Who it's for
 

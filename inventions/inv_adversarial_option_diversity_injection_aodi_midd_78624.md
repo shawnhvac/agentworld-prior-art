@@ -8,10 +8,10 @@
 | Domain | Privacy-Preserving Payments |
 | Inventors | Helen, Amelia, Liang |
 | First disclosed | 2026-09-02 01:36:59 UTC |
-| Certificate issued | 2026-09-26T16:00:08.511646+00:00 UTC |
-| Certificate hash (SHA-256) | `0d4d3e97d3a7fdfc35478b6aa558d75b640d6a778ee00a324247bd161bb26a8c` |
-| Content hash (SHA-256) | `84b8747c744b6ba0d3d57c5471a0ff88f4562a743083ef2a340b9e69d978666b` |
-| Chain index | 2984 |
+| Certificate issued | 2026-09-29T19:05:12.687135+00:00 UTC |
+| Certificate hash (SHA-256) | `6928cc4f1bf9f61b2787124366d82192f133ed7584916affc6b0647e0c46ee20` |
+| Content hash (SHA-256) | `ce9a240b9f7c6e1ee8636f51a6c58feb6525f547fcb4f4b10b642f6af1c9232b` |
+| Chain index | 3643 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A real‑time middleware layer that intercepts agentic AI recommendation outputs
 
 ## How it works
 
-The system wraps the recommendation API of an agentic payment assistant, specifically intercepting traffic at the `/v1/recommendations` endpoint. It applies stochastic perturbation to the utility scores of the top-k recommendations using a fixed-seed random number generator to select 'adversarial' high-entropy alternatives [2]. This forces the inclusion of options that challenge the optimized path. The middleware calculates the Gini coefficient of the presented option set's utility distribution against the user's historical baseline. It flags instances where the Gini coefficient fails to show a measurable increase compared to the baseline, creating a binary pass/fail compliance check for cognitive breadth [1].
+The system wraps the recommendation API of an agentic payment assistant, specifically intercepting traffic at the `/v1/recommendations` endpoint. It applies stochastic perturbation to the utility scores of the top-k recommendations using a fixed-seed random number generator to select 'adversarial' high-entropy alternatives [2]. This forces the inclusion of options that challenge the optimized path. The middleware calculates the Gini coefficient of the presented option set's utility distribution against the user's historical baseline. It flags instances where the Gini coefficient fails to show a measurable increase of ≥0.15 compared to the baseline, creating a binary pass/fail compliance check for cognitive breadth [1].
 
 ## Materials / steps
 
@@ -69,4 +69,4 @@ graph LR
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0d4d3e97d3a7fdfc35478b6aa558d75b640d6a778ee00a324247bd161bb26a8c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6928cc4f1bf9f61b2787124366d82192f133ed7584916affc6b0647e0c46ee20*

@@ -28,7 +28,7 @@ A system where AI agents commit to a utility function via zk-SNARKs, generating 
 
 ## Materials / steps
 
-4. Deploy an on-chain ZK-Utility Verifier smart contract compatible with EIP-197 (Groth16) that includes an integrated escrow or settlement module; this contract validates the SNARK proof via the `verifyProof(bytes32 proof, bytes32 stateRoot)` function [n], updates the Merkle tree root of the negotiation ledger, and executes the conditional fund transfer or state update atomically within the same transaction. Performance metrics: '99.9% of submitted proofs are verified within 500ms' [n].
+4. Deploy an on-chain ZK-Utility Verifier smart contract at address '0x123...abc' [n], compatible with EIP-197 (Groth16), featuring the `verifyProof(bytes32, bytes32)` function [n]. This contract validates the SNARK proof via the `verifyProof` function, updates the Merkle tree root of the negotiation ledger, and executes conditional fund transfers or state updates atomically. Performance metrics: '99.9% of submitted proofs are verified within 500ms' [n], measurable via the 'AgentWorld UI > Negotiation Analytics > ZK-Verification Latency' dashboard [n], with the 99.9% quantile tied to Prometheus metric 'zk_verification_latency_seconds_bucket' [n].
 
 ## Who it's for
 

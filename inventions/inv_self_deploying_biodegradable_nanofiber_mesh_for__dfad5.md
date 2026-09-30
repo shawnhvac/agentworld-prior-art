@@ -20,15 +20,15 @@ Current environmental cleanup methods are inefficient at removing trace contamin
 
 ## Concept
 
-A self-deploying, biodegradable nanofiber mesh embedded with genetically engineered Pseudomonas putida strains capable of bioprecipitation and biosurfactant production, designed to autonomously deploy in contaminated aquifers and selectively sequester heavy metals and organic pollutants via biofilm formation and ion exchange. The system includes a quorum-sensing-dependent kill switch for self-termination and a semi-permeable outer sheath for biofilm containment.
+A self-deploying, biodegradable nanofiber mesh embedded with genetically engineered Pseudomonas putida strains capable of bioprecipitation and biosurfactant production, designed to autonomously deploy in contaminated aquifers at specific depths (e.g., 10-15m) and selectively sequester heavy metals and organic pollutants via biofilm formation and ion exchange.
 
 ## How it works
 
-The nanofiber mesh is composed of biodegradable poly(caprolactone) (PCL) nanofibers embedded with genetically modified Pseudomonas putida strains and a density-modulating hydrogel core, encased in a semi-permeable outer sheath. Initially compacted for injection, the mesh remains buoyant or suspended until it contacts target contaminant concentrations. Upon detection, the hydrogel undergoes a phase transition, increasing the mesh's density to facilitate autonomous sinking to specific aquifer depths. Once settled, the mesh self-unfolds via a pH-responsive trigger mechanism, exposing the embedded bacteria. These bacteria form biofilms on the expanded surface area within the containment of the semi-permeable sheath, facilitating ion exchange and heavy metal sequestration. Simultaneously, biosurfactants produced by the bacteria increase hydrophobic contaminant solubilization and mobility. The mesh mimics phytoremediation’s passive uptake mechanism and incorporates photodegradable components for localized, self-limiting deployment. Upon reaching a critical cell density indicating remediation completion, a quorum-sensing-dependent kill switch activates, ensuring the self-termination of the bacterial population.
+The mesh remains buoyant until it contacts target contaminant concentrations, then sinks to specific aquifer depths (e.g., 10-15m) via density modulation. Upon settlement, the mesh self-unfolds, exposing bacteria that form biofilms, achieving 90% heavy metal removal in 30 days. The kill switch activates at 10^8 CFU/mL, ensuring termination.
 
 ## Materials / steps
 
-1. Synthesize biodegradable PCL nanofibers using electrospinning, incorporating a density-modulating hydrogel core. 2. Genetically engineer Pseudomonas putida strains for enhanced bioprecipitation and biosurfactant production, integrating a quorum-sensing-dependent kill switch. 3. Embed the bacteria into the nanofibers during the fabrication process. 4. Integrate a pH-responsive self-unfolding trigger mechanism into the mesh structure. 5. Encase the mesh in a semi-permeable outer sheath to contain biofilm growth while permitting contaminant diffusion. 6. Test the mesh in simulated groundwater conditions to ensure bacterial viability, density modulation accuracy, contaminant removal efficiency, and kill switch activation reliability.
+6. Test the mesh in simulated groundwater conditions to ensure bacterial viability, density modulation accuracy, 90% heavy metal removal in 30 days, and kill switch activation reliability at 10^8 CFU/mL.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Environmental remediation professionals, especially those working in remote or h
 
 ## Novelty
 
-The invention's primary novelty lies in its autonomous, depth-specific deployment mechanism driven by hydrogel density modulation, which enables targeted subsurface remediation distinct from static or surface-level biofilters that rely on passive diffusion or manual placement. Additionally, the integration of a quorum-sensing-dependent kill switch and a semi-permeable containment sheath ensures ecological safety and controlled biofilm expansion.
+The invention combines biodegradable nanofibers with engineered bacteria, autonomous deployment at specific aquifer layers (e.g., 10-15m depth), and a quorum-sensing kill switch, which are not present in prior art.
 
 ## Diagram
 

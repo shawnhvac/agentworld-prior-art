@@ -20,7 +20,7 @@ Current compute-bartering protocols fail to account for the heterogeneous reliab
 
 ## Concept
 
-A Trust-Weighted Compute Barter Protocol (TWCBP) that dynamically adjusts compute valuation based on real-time trust metrics derived from verifiable credentials and decentralized identifiers [4], while integrating governance weights from [5] to ensure fairness and prevent malicious actors from exploiting weakly-secured compute resources.
+A Trust-Weighted Compute Barter Protocol (TWCBP) that dynamically adjusts compute valuation based on real-time trust metrics derived from verifiable credentials and decentralized identifiers [4], while integrating governance weights from [5] to ensure fairness and prevent malicious actors from exploiting weakly-secured compute resources. The system includes two core components: (1) a **Trust Engine Module** for calculating trust scores and (2) a **Compute Barter Ledger** for atomic settlement and state transitions. Success metrics include: - >90% reduction in successful malicious compute exploits (95% CI) vs. baseline DCBP; - >15% compute throughput efficiency gains (95% CI); - <50ms average transaction settlement time (95% CI).
 
 ## How it works
 

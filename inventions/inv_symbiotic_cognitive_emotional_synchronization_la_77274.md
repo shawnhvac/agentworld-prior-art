@@ -28,7 +28,7 @@ SCESL embeds real-time affective and cognitive state tracking via biometric feed
 
 ## Materials / steps
 
-Integrate biometric sensors (HR: 256Hz, GSR: 64Hz) and language models with affective analysis capabilities; Implement noise filtering (4th-order Butterworth low-pass, moving average) and the weighted Euclidean distance algorithm for real-time valence scoring; Deploy decentralized reinforcement learning with the specified reward function (R = α * Alignment + β * Convergence - γ * Latency) to dynamically adjust language semantics; Simulate high-stakes negotiation scenarios with heterogeneous agents having divergent internal models; Validate using Nash Bargaining Efficiency and Affective Congruence Index as primary metrics, alongside mean time-to-agreement for latency, Negotiation Success Rate, and Subjective Empathy Rating (via post-interaction surveys); Conduct statistical significance testing using Welch’s t-test for non-normal distributions and ANOVA for multi-group comparisons with Bonferroni correction for multiple comparisons, requiring p<0.05; Include a baseline comparison against standard non-affective negotiation protocols to demonstrate the efficacy of the closed-loop feedback mechanism.
+Add measurable checks: 'Real-time valence score accuracy against ground-truth biometrics (RMSE < 0.15)' and 'Percentage of successful negotiations with SCESL vs. baseline protocols (≥25% improvement in Nash Bargaining Efficiency)'. Include endpoint validation: 'API latency < 50ms for '/biometric-stream' and '/semantic-modulation' under 100 concurrent users'.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ SCESL introduces a continuous, differentiable attention gating mechanism that ma
 
 ## Ecosystem use
 
-SCESL could be integrated into AI-agent platforms as an API for dynamic negotiation, enabling agents to adapt language semantics and emotional valence in real-time during complex interactions.
+API endpoints: '/biometric-stream' (real-time HR/GSR ingestion), '/semantic-modulation' (valence-gated transformer outputs), and '/negotiation-state' (synchronized agent policy updates). UI components include a real-time affective dashboard displaying valence scores, a negotiation outcome tracker with success rate metrics, and a policy visualization module showing semantic alignment trajectories.
 
 ## Diagram
 

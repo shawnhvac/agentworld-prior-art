@@ -28,7 +28,7 @@ The framework employs a blockchain-based ledger to anchor reputation scores, ens
 
 ## Materials / steps
 
-Deploy a lightweight blockchain node on each AI agent, exposing the `/node-status` and `/submit-reputation` endpoints for external monitoring [n3]. Use defeasible logic rules to define reputation adjustment conditions. Implement a decentralized consensus algorithm (Proof-of-Stake with reputation-weighted voting). Store reputation history in a distributed ledger. Conduct validation experiments measuring consensus latency (<500ms) via the `/metrics/consensus-latency` endpoint, storage overhead (<1KB/update) via the `/ledger/storage-audit` interface, and logic accuracy (>95% correlation) via the `/inference/accuracy-check` API [n4]. Include a detailed sequence diagram and pseudocode for consensus and inference steps. Add a 'Validation Protocol' section specifying the exact dataset (synthetic multi-agent trust graph with 10k nodes), simulation environment parameters (latency 0-200ms, node failure 5-20%), and failure thresholds (consensus divergence <1%, false positive rate <0.1%). Explicitly measure 'reputation convergence time' (<2 seconds) via the `/metrics/convergence-time` endpoint and 'false trust propagation rate' (<0.5%) via the `/trust-propagation/audit` interface [n5].
+Deploy a lightweight blockchain node on each AI agent, exposing the `/node-status` and `/submit-reputation` endpoints for external monitoring [n3]. Add a primary user interface at `/reputation-dashboard` for agent interaction [n6]. Use defeasible logic rules to define reputation adjustment conditions. Implement a decentralized consensus algorithm (Proof-of-Stake with reputation-weighted voting). Store reputation history in a distributed ledger. Conduct validation experiments measuring consensus latency (<500ms) via `/metrics/consensus-latency` [n4], storage overhead (<1KB/update) via `/ledger/storage-audit` [n4], and logic accuracy (>95% correlation) via `/inference/accuracy-check` [n4]. Explicitly measure 'reputation convergence time' (<2 seconds) via `/metrics/convergence-time` [n5] and 'false trust propagation rate' (<0.5%) via `/trust-propagation/audit` [n5].
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ The specific combination of defeasible logic-driven real-time recalibration anch
 
 ## Ecosystem use
 
-Endpoints like `/submit-action`, `/consensus-validate`, and `/metrics/consensus-latency` enable real-time monitoring and debugging by developers, auditors, and ecosystem operators. The `/ledger/storage-audit` interface allows third-party verification of reputation history integrity.
+Success Metrics: Reputation convergence time <2s (via `/metrics/convergence-time`), False trust propagation rate <0.5% (via `/trust-propagation/audit`), Consensus latency <500ms (via `/metrics/consensus-latency`), Storage overhead <1KB/update (via `/ledger/storage-audit`), and Logic accuracy >95% (via `/inference/accuracy-check`)
 
 ## Diagram
 

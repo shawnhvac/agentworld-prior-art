@@ -28,7 +28,7 @@ The module operates via a unified state machine anchored by a unique, cryptograp
 
 ## Materials / steps
 
-1. Integrate middleware into the AI agent's output pipeline at the `/v1/chat/completions` endpoint of the inference server, specifically implemented in the file `inference_server/middleware/friction_module.py`, establishing a State Queue and Transaction ID (TxID) generation system with cryptographic signature verification to link the token generation logits hook with the final text assembly stage, ensuring the State Queue cannot be bypassed or manipulated by malicious agents. 2. Configure confidence thresholds (T) and scaling constants (k, alpha) based on model self-assessment calibration. 3. Implement latency
+1. Integrate middleware into the AI agent's output pipeline at the `/v1/chat/completions` endpoint of the inference server, specifically implemented in the file `inference_server/middleware/friction_module.py`, establishing a State Queue and Transaction ID (TxID) generation system with cryptographic signature verification to link the token generation logits hook with the final text assembly stage, ensuring the State Queue cannot be bypassed or manipulated by malicious agents. 2. Configure confidence thresholds (T) and scaling constants (k, alpha) based on model self-assessment calibration. 3. Implement latency calculation and verification with cryptographic state machine transitions. 4. Track 20% reduction in over-trust incidents via user feedback surveys and log 95% latency verification success rate in production to demonstrate efficacy.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Users of autonomous AI agents for personalized financial negotiation in consumer
 
 ## Novelty
 
-This invention distinguishes itself from prior art [P2] (US8306885B2), which applies stochastic modeling to financial projections for planning, by operating on linguistic output streams to inject controlled latency and semantic ambiguity as a verifiable anti-over-trust signal. Unlike [P2], which models economic uncertainty, the Stochastic Friction Module uses a cryptographically secured state machine to atomically link confidence-driven latency with deterministic semantic hedging, specifically to counter cognitive narrowing [1] and over-trust [1] in AI negotiation dynamics [6], a problem [P2] does not address.
+This invention distinguishes itself from prior art [P2] (US8306885B2), which applies stochastic modeling to financial projections for planning, by operating on linguistic output streams to inject controlled latency and semantic ambiguity as a verifiable anti-over-trust signal. Unlike [P2], which models economic uncertainty, the Stochastic Friction Module uses a cryptographically secured state machine to atomically link confidence-driven latency with deterministic semantic hedging, specifically to counter cognitive narrowing [1] and over-trust [1] in AI negotiation dynamics [6], a problem [P2] does not address. Success is verified via 20% reduction in over-trust incidents and 95% latency verification success rate in production.
 
 ## Ecosystem use
 

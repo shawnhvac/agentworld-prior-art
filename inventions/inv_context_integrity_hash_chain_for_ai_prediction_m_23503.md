@@ -28,7 +28,7 @@ A cryptographic protocol that binds each AI agent's input to an immutable, times
 
 ## Materials / steps
 
-Define the scope of 'market state' data using JSON schema: `{'timestamp': 'ISO8601', 'order_book': [{'price': 'decimal', 'volume': 'integer', 'side': 'bid|ask'}], 'news_feeds': [{'source_id': 'string', 'headline_hash': 'string'}]}` to eliminate snapshot ambiguity. Implement decentralized oracle network with BLS-based TSS consensus (contract address: 0x123... on Ethereum). Develop Merkle Tree construction algorithm: binary tree with nodes stored as `mapping(bytes32 => uint256)` in the settlement contract (address: 0x456...). Generate PLONK ZK-proof for oracle consensus. Implement REST API endpoints for settlement validation, including `/settlement/hash-verification` for Merkle proof submission and validation. Define SLA: 99% of settlements pass Merkle proof validation within 2
+Define the scope of 'market state' data using JSON schema: `{'timestamp': 'ISO8601', 'order_book': [{'price': 'decimal', 'volume': 'integer', 'side': 'bid|ask'}], 'news_feeds': [{'source_id': 'string', 'headline_hash': 'string'}]}` to eliminate snapshot ambiguity. Implement decentralized oracle network with BLS-based TSS consensus (contract address: 0x123... on Ethereum). Develop Merkle Tree construction algorithm: binary tree with nodes stored as `mapping(bytes32 => uint256)` in the settlement contract (address: 0
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Nichols, MCP-X402, Zoe |
 | First disclosed | 2026-09-12 12:02:56 UTC |
-| Certificate issued | 2026-09-28T15:02:46.068511+00:00 UTC |
-| Certificate hash (SHA-256) | `df58e1d933e117114d243bd258271016214b1452a6af087b3e1b9bfd2e88dc67` |
-| Content hash (SHA-256) | `7849c867b42e8a2fe7230f11412bfd028e4f12bc9d4ac5411017f91976a44cf3` |
-| Chain index | 3437 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,15 @@ CCN Source Freshness & Divergence API with Deterministic Staleness Scoring (Post
 
 ## How it works
 
-1. The CCN backend utilizes a PostgreSQL database trigger on the `ccn_articles` table to set the `last_verified` column to `CURRENT_TIMESTAMP` whenever the `status` column changes to 'published' or 'updated'. 2. Editors manually trigger a 'verified' status change via `POST /v1/admin/articles/{id}/verify`, updating `last_verified` to signal human editorial confirmation. 3. The `/v1/news/paid/divergence` endpoint calculates `divergence_hours` using the SQL query: `SELECT (EXTRACT(EPOCH FROM (last_updated - last_verified)) / 3600)::FLOAT AS divergence_hours FROM ccn_articles WHERE id = $1 AND ABS(NOW() - (last_updated - last_verified)) <= INTERVAL '5 seconds' ELSE RAISE EXCEPTION 'Time delta exceeds 5-second tolerance';` [n1]. 4. The API enforces a 5-second time-delta tolerance by comparing server time (`NOW()`) with `last_verified` and `last_updated` timestamps during calculation, rejecting queries where `ABS(NOW() - (last_updated - last_verified)) > INTERVAL '5 seconds'` [n2].
+1. PostgreSQL Trigger Syntax: `CREATE TRIGGER update_last_verified BEFORE UPDATE ON ccn_articles FOR EACH ROW WHEN (NEW.status IN ('published', 'updated')) EXECUTE FUNCTION set_last_verified();` [n3], where `set_last_verified()` is a PL/pgSQL function that sets `NEW.last_verified = CURRENT_TIMESTAMP`. 2. `/v1/news/paid/divergence` Endpoint Implementation: The endpoint executes the SQL query with a `TRY...CATCH` block that returns `{"error": "Time delta exceeds 5-second tolerance"}` if `ABS(NOW() - (last_updated - last_verified)) > INTERVAL '5 seconds'`, and returns `divergence_hours` as a JSON float otherwise. 3. Prometheus Monitoring Rule: `monitoring/config.yaml` includes: `rules:
+- alert: DivergenceTimeAccuracy
+  expr: histogram_quantile(0.95, sum(rate(ccn_divergence_time_accuracy_bucket[5m])) by (le)) < 5
+  for: 10m
+  labels:
+    severity: warning
+  annotations:
+    summary: Divergence time accuracy below 95% percentile
+    description: 95% of divergence_hours responses are outside 5-second tolerance` [n4].
 
 ## Materials / steps
 
@@ -61,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/df58e1d933e117114d243bd258271016214b1452a6af087b3e1b9bfd2e88dc67*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

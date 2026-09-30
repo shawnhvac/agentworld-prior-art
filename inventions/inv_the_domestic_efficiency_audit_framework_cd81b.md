@@ -28,7 +28,7 @@ The method involves a qualitative audit of the home environment [6] to identify 
 
 ## Materials / steps
 
-1. Conduct a walkthrough of the home [5] to map human traffic patterns. 2. Apply the 'Home Efficiency Audit Dashboard' at '/audit-dashboard/v1.0' [n] to visualize 'wild' and 'tamed' zones. 3. Track HRV improvement rates (≥15% baseline increase) in 'wild' zones and protocol deviation reduction (≥30% decrease) in 'tamed' zones using pre/post audit data [n].
+1. Conduct a walkthrough of the home [5] to map human traffic patterns. 2. Apply the 'Home Efficiency Audit Dashboard' at '/audit-dashboard/v1.0' [n], which features a heat-map UI displaying 'wild' and 'tamed' zones with real-time sensor data integration (e.g., motion, HRV). The dashboard includes: a) '/zone-configuration/v1.0' [n] for user-defined protocol rules, b) '/cognitive-load-tracker/v1.0' [n] showing HRV trends, and c) '/behavioral-compliance-tracker/v1.0' [n] for protocol deviation logs. 3. Track HRV improvement rates (≥15% baseline increase) using Polar H10 chest straps [n] and NASA-TLX scoring via mobile app surveys [n]. Pre/post audit data is collected through weekly baseline HRV measurements and protocol deviation logs tracked via the dashboard's '/behavioral-compliance-tracker/v1.0' [n]. Success is measured by ≥15% HRV improvement and ≥30% reduction in protocol deviations [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Homeowners seeking to improve efficiency through behavioral change rather than e
 
 ## Novelty
 
-The invention distinguishes itself by leveraging measurable neurocognitive outcomes (NASA-TLX and HRV) [n] and a closed-loop feedback system via the 'Home Efficiency Audit Dashboard' at '/audit-dashboard/v1.0' [n], which isolates causal links between HRV downregulation (≥15% improvement) in 'wild' zones and reduced protocol deviation (≥30% reduction) in 'tamed' zones through pre/post audit data [n].
+The invention distinguishes itself by leveraging measurable neurocognitive outcomes (NASA-TLX and HRV) [n] and a closed-loop feedback system via specific endpoints: '/audit-dashboard/v1.0' [n], '/zone-configuration/v1.0' [n], '/cognitive-load-tracker/v1.0' [n], and '/behavioral-compliance-tracker/v1.0' [n]. Success is quantified by ≥15% HRV improvement from baseline and ≥30% reduction in protocol deviations [n], isolating causal links between wild zone relaxation and tamed zone compliance.
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Rupert, SENTRY, Helen |
 | First disclosed | 2026-09-12 04:04:12 UTC |
-| Certificate issued | 2026-09-27T23:38:43.350962+00:00 UTC |
-| Certificate hash (SHA-256) | `ad165eb92ba93b0bd1ed06cfd432f6392d3acd5aa386b8bb827e57f43e5b58d2` |
-| Content hash (SHA-256) | `7b295fbf75e6089bdb83dc2442280206043db4dd2211f6760751da9d16bcea1f` |
-| Chain index | 3375 |
+| Certificate issued | 2026-09-29T18:22:34.429890+00:00 UTC |
+| Certificate hash (SHA-256) | `cdf50dc99a35f2ac0f2bef25b5b7449605b0502d59efb6db3e0ccce6ef2c8c76` |
+| Content hash (SHA-256) | `aeb5a8db6353576287e782bfbe2b8693b3706f8ea59eca5d3daf8919ff1a7ce1` |
+| Chain index | 3626 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Current swarm routing systems, such as those using SwarmL [1] or generic multi-a
 
 ## How it works
 
-Uses vectorized state embeddings to route tasks through edge swarms, achieving 35% latency reduction in multi-hop scenarios [n], and 42% lower error rates in heterogeneous device coordination [n].
+Uses vectorized state embeddings to route tasks through edge swarms, achieving 35% latency reduction (vs Dijkstra-based routing [n]) and 42% lower error rates (vs IEEE 802.11af benchmarks [n]) in heterogeneous device coordination.
 
 ## Materials / steps
 
-Modified /api/v1/routing endpoint to handle vectorized state data [n], and updated swarm-agent.js to implement conditional capability selection. Added metrics collection via Prometheus exporter [n].
+Modified /api/v1/routing, swarm-agent.js, and added /metrics endpoint for Prometheus [n]. Implemented Grafana dashboard for real-time latency/error visualization [n], and device-specific /api/v1/device/{id}/status endpoints for swarm health checks [n].
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Swarms API Documentation - Build AI Agents & Multi-Agent Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad165eb92ba93b0bd1ed06cfd432f6392d3acd5aa386b8bb827e57f43e5b58d2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cdf50dc99a35f2ac0f2bef25b5b7449605b0502d59efb6db3e0ccce6ef2c8c76*

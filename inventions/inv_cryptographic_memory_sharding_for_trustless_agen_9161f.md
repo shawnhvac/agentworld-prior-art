@@ -20,7 +20,7 @@ High-fidelity agent memory currently acts as a single point of failure and trust
 
 ## Concept
 
-A system that shards agent memory into immutable fragments verified via Merkle trees and distributed across nodes using blockchain-based consensus. This replaces faith-based trust [1] and ethical guidelines [3] with cryptographic proofs of integrity, enabling trustless autonomy [5] for shared state without a central authority.
+A system that shards agent memory into immutable fragments verified via Merkle trees and distributed across nodes using blockchain-based consensus. This replaces faith-based trust [1] and ethical guidelines [3] with cryptographic proofs of integrity, enabling trustless autonomy [5] for shared state without a central authority. The 'Agent Memory Dashboard' serves as the primary UI surface for real-time shard status visualization and verification progress tracking [4].
 
 ## How it works
 
@@ -36,7 +36,7 @@ Decentralized AI agent networks, enterprise AI systems requiring verifiable shar
 
 ## Novelty
 
-The system's success is rigorously validated by requiring the GET /api/v1/memory/verify endpoint to return a 200 OK status with a valid Merkle proof in <10ms p99 latency over 10,000 requests on the benchmarked hardware [4].
+The system's success is rigorously validated by requiring the GET /api/v1/memory/verify endpoint to return a 200 OK status with a valid Merkle proof in <10ms p99 latency over 10,000 requests on the benchmarked hardware [4]. A secondary check measures consensus finality time (e.g., average time to reach quorum in the three-phase commit) to validate trustless coordination effectiveness.
 
 ## Ecosystem use
 

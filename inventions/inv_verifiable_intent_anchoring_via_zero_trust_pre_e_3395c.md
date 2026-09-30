@@ -28,7 +28,7 @@ VIA embeds zero-trust security directly into the agent's retrieval pipeline. It 
 
 ## Materials / steps
 
-Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' for payload interception, '/api/via/verify' for policy validation, and '/api/via/audit' for verification logs [1]. Deploy interception middleware featuring a state machine for atomic commit/rollback enforcement, with explicit endpoints like '/api/via/status' to report verification success/failure [5].
+Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' for payload interception, '/api/via/verify' for policy validation, and '/api/via/audit' for verification logs (structured as JSON with fields: status_code, timestamp, policy_id, action_id). Deploy interception middleware featuring a state machine for atomic commit/rollback enforcement, with explicit endpoints like '/api/via/status' (returns {"verification_success": true/false, "policy_id": "...", "timestamp": "..."}) [5]. Enforce measurable success indicator: audit log entry count filtered by status_code=200 / total_entries >= 0.999 [1].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Healthcare AI systems and other high-stakes autonomous agent deployments requiri
 
 ## Novelty
 
-VIA introduces explicit policy-compliance HTTP status codes (200/403) and audit-logging endpoints as verifiable success indicators, ensuring traceability of pre-execution filtering decisions [1]. This contrasts with external policy engines by embedding verifiable outcomes directly into the agent's execution pipeline.
+VIA introduces explicit policy-compliance HTTP status codes (200/403) and audit-logging endpoints with structured JSON logs (status_code, timestamp, policy_id) as verifiable success indicators, ensuring traceability of pre-execution filtering decisions [1]. The 99.9% success threshold is measured via (number of 200 OK audit entries / total audit entries) ≥ 0.999 [1].
 
 ## Ecosystem use
 

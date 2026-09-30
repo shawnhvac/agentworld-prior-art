@@ -28,7 +28,7 @@ First, an inverse RL model is trained on agent trajectories to recover latent re
 
 ## Materials / steps
 
-1. Collect agent interaction trajectories from the Hanabi benchmark environment (2-5 players, standard rule set). 2. Preprocess trajectories: normalize state spaces to [-1, 1], discretize actions where applicable, and segment trajectories into fixed-length windows of T=100 steps to ensure stationarity. 3. Train inverse RL model (Maximum Entropy IRL) to infer latent reward structures [4] using Adam optimizer (lr=1e-4, beta1=0.9, beta2=0.999) for 500 epochs with a batch size of 64. 4. Cluster inferred rewards using K-Means with K=10 clusters and Euclidean distance metric. 5. Construct and query the semantic relationship graph [3], which is derived from a domain-specific ontology of Hanabi communication primitives (e.g., 'hint-color', 'hint-rank', 'burn') embedded via BERT contextual embeddings, for
+6. Evaluate protocol effectiveness using: (i) protocol coherence rate (percentage of generated messages aligning with semantic graph edges), (ii) task success rate in Hanabi (percentage of games completed with synthesized protocols), and (iii) communication error reduction (percentage decrease in miscommunication events compared to baseline protocols).
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ Unlike prior art focused on autonomous systems [P1], virtual assistants [P2-P3],
 
 ## Ecosystem use
 
-An API endpoint that accepts agent trajectory data, returns inferred reward vectors, and suggests compatible communication schemas for agent-to-agent handshakes in federated AI platforms.
+REST API endpoint /api/v1/synthesize-protocol for Hanabi game interface, accepting POST requests with agent trajectories and returning synthesized protocol tokens. Integrates with existing Hanabi simulation environments via standard JSON message formats.
 
 ## Diagram
 

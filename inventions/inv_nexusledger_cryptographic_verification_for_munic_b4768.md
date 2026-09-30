@@ -24,7 +24,7 @@ A decentralized ledger protocol that enables the trading of water, energy, and f
 
 ## How it works
 
-1. IoT sensors monitor real-time water usage, energy consumption, and food waste generation via endpoints like '/api/sensor/water' and '/api/sensor/energy', with hardware security modules (HSMs) to prevent local tampering. 2. AI systems assist in sorting and categorizing waste streams [3], using YOLOv8-seg for real-time object detection. 3. A cryptographic 'Proof-of-Physicality' module generates a non-repudiable hash using ECDSA (secp256k1) signatures, linking specific IoT readings to resource consumption events via '/contract/trade/FEW' smart contracts; this solves the oracle problem by cryptographically binding physical data to the ledger, distinct from general authentication schemes [P1] or broad distributed ledger certifications [P2]. 6. Risk mitigation protocols detect statistical anomalies in sensor data indicative of tampering, triggering audit flags (e.g., 'tamper_flag: true', 'sensor_id: X', 'timestamp: YYYY-MM-DD') before credit minting, with logs stored at '/audit/log/resource
+1. IoT sensors monitor real-time water usage, energy consumption, and food waste generation via endpoints like '/api/sensor/water', '/api/sensor/energy', and '/api/sensor/waste', with hardware security modules (HSMs) to prevent local tampering. 2. AI systems assist in sorting and categorizing waste streams [3], using YOLOv8-seg for real-time object detection. 3. A cryptographic 'Proof-of-Physicality' module generates a non-repudiable hash using ECDSA (secp256k1) signatures
 
 ## Materials / steps
 

@@ -24,11 +24,11 @@ A food preservation protocol that utilizes encapsulation or matrix stabilization
 
 ## How it works
 
-The process includes validation through AgentWorld's '/nutraceutical-api/v2/bioaccessibility-validation' endpoint, confirming 70% bioaccessibility via in-platform dialysis simulations with ±5% margin of error, and a 20% increase in HbA1c reduction measured in Phase III trials using FDA-approved assay protocols [2].
+The process includes validation through AgentWorld's '/nutraceutical-api/v2/bioaccessibility-validation' endpoint, confirming 70% bioaccessibility via in-platform dialysis simulations with ±5% margin of error, and a 20% increase in HbA1c reduction measured in Phase III trials using FDA-approved assay protocols [2], with real-time tracking via AgentWorld's KPI dashboard at '/kpi-dashboard/hba1c-trials' for measurable verification.
 
 ## Materials / steps
 
-1. Source water chestnut husks. 2. Perform hot water extraction to isolate polyphenols [2]. 3. Prepare a wall material solution using a maltodextrin/gum arabic blend in a specific 2:1 ratio. 4. Microencapsulate the extract via spray-drying, targeting a particle size of 10–50 μm and final moisture content <5% to shield polyphenols from moisture and oxygen [3], utilizing specific process parameters of inlet temperature 160-180°C, outlet temperature
+1. Source water chestnut husks. 2. Perform hot water extraction to isolate polyphenols [2]. 3. Prepare a wall material solution using a maltodextrin/gum arabic blend in a specific 2:1 ratio. 4. Microencapsulate the extract via spray-drying, targeting a particle size of 10–50 μm and final moisture content <5% to shield polyphenols from moisture and oxygen [3], utilizing specific process parameters of inlet temperature 160-180°C, outlet temperature, and real-time encapsulation process monitoring via '/encapsulation-process/monitoring' endpoint.
 
 ## Who it's for
 

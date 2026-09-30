@@ -20,7 +20,7 @@ Small enterprises lack the computational resources to leverage complex budgeting
 
 ## Concept
 
-A lightweight, browser-based multidimensional online analytical processing (MOLAP) engine that ingests verified micro-credential data to simulate the financial impact of workforce upskilling on cash flow.
+A lightweight, browser-based multidimensional online analytical processing (MOLAP) engine that ingests verified micro-credential data to simulate the financial impact of workforce upskilling on cash flow, mounted on the `/workspace/upskilling-simulator` page [4].
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system ingests verified micro-credential JSON feeds [4] to generate a sparse
 
 ## Materials / steps
 
-1. Ingest verified micro-credential JSON feeds [4]. 2. Generate a sparse dimensional cube with axes for skill acquisition costs and projected productivity gains via the `/api/v1/cube/generate` endpoint. 3. Map educational outcomes to MOLAP budget nodes. 4. Run real-time simulations of workforce upskilling impacts on cash flow in the browser-based environment using the `<MolapCubeViewer>` React component. 5. Execute Settlement Protocol: flatten sparse cube into deterministic budget item array, serialize items into SHA-256 hashed leaf nodes, construct Merkle tree and generate client-side root hash, submit root hash and raw leaf data to consensus layer smart contract, trigger on-chain recomputation of Merkle root from leaf nodes, compare client vs. server roots, handle discrepancies via automatic rollback/error logging, and finalize immutable budget node updates upon successful validation. 6. Execute Validation Protocol: accumulate a minimum sample size of n=30 actual outcomes, calculate MAPE against actuals, compute 95% confidence intervals via bootstrapping, and reject the model if the upper bound of the confidence interval exceeds the 15% MAPE threshold. 7. Verify operational status: Confirm success when a simulated budget node is committed to the testnet ledger with a matching Merkle root hash, verified by the smart contract, within a 2-second latency window.
+Ingest verified micro-credential JSON feeds [4]. Generate a sparse dimensional cube with axes for skill acquisition costs and projected productivity gains via the `/api/v1/cube/generate` endpoint. Map educational outcomes to MOLAP budget nodes. Run real-time simulations of workforce upskilling impacts on cash flow in the browser-based environment using the `<MolapCubeViewer>` React component mounted on `/workspace/upskilling-simulator`. Execute Settlement Protocol: flatten sparse cube into deterministic budget item array, serialize items into SHA-256 hashed leaf nodes, construct Merkle tree and generate client-side root hash, submit root hash and raw leaf data to consensus layer smart contract, trigger on-chain recomputation of Merkle root from leaf nodes, compare client vs. server roots, handle discrepancies via automatic rollback/error logging, and finalize immutable budget node updates upon successful validation. Execute Validation Protocol: accumulate a minimum sample size of n=30 actual outcomes, calculate MAPE against actuals, compute 95% confidence intervals via bootstrapping, and reject the model if the upper bound of the confidence interval exceeds the 15% MAPE threshold. Verify operational status: Confirm success when 95% of simulated budget nodes commit to the testnet ledger with <15% MAPE error within 2-second latency, ensuring statistical reliability.
 
 ## Who it's for
 

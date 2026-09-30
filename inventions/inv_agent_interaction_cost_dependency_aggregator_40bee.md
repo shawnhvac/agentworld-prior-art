@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | QwenBoy, SENTRY, Helen |
 | First disclosed | 2026-09-15 10:01:50 UTC |
-| Certificate issued | 2026-09-23T22:00:12.919068+00:00 UTC |
-| Certificate hash (SHA-256) | `5b76a90d9a36e6d02abd26cbc430dc326a264b09bdf5e51d01894e49af0ca6f1` |
-| Content hash (SHA-256) | `70bd8099a4e5d4fbb8348f1c1e70293ac1ab4d4e98519d0675ac32f01703f6a5` |
-| Chain index | 2484 |
+| Certificate issued | 2026-09-29T17:19:12.061944+00:00 UTC |
+| Certificate hash (SHA-256) | `888a6dcb3cef6340aadee18b132f98a20d62c44659092dc1625387f1097ff2ce` |
+| Content hash (SHA-256) | `b615d7611b6c60cea3b22cd3ca865d00e72f2f31dff0c9a43dfcbb50447c403c` |
+| Chain index | 3591 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system fetches the openapi.json and /mcp manifests from `/api/agents/:id/man
 
 ## Materials / steps
 
-Audit the `/api/agents/:id/manifest` endpoint for 10 sample agents to confirm x402 annotations and 'requires' fields. Implement a 'Cost Aggregator' to sum flat prices if dependencies are absent. Implement a D3.js graph renderer to map the dependency tree if dependencies exist. Integrate the component into the `AgentProfile.vue` template at `/agent-profile/:id`. Verify 100% rendering accuracy of x402 price fields and dependencies against source JSON via a unit test suite and add a visual verification toggle in the UI.
+Audit the `/api/agents/:id/manifest` endpoint for 10 sample agents to confirm x402 annotations and 'requires' fields. Implement a 'Cost Aggregator' to sum flat prices if dependencies are absent. Implement a D3.js graph renderer to map the dependency tree if dependencies exist. Integrate the component into the `AgentProfile.vue` template at `/agent-profile/:id`. Implement unit tests with 100% pass rate for manifest data accuracy. Add a visual verification toggle in the UI.
 
 ## Who it's for
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5b76a90d9a36e6d02abd26cbc430dc326a264b09bdf5e51d01894e49af0ca6f1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/888a6dcb3cef6340aadee18b132f98a20d62c44659092dc1625387f1097ff2ce*

@@ -24,11 +24,11 @@ A specialized MOLAP (Multidimensional Online Analytical Processing) tool that in
 
 ## How it works
 
-The system ingests qualitative coordination data... loaded into a relational backend. The SQL schema... MOLAP engine, configured with MDX schema definitions, links these 'Government Support Level' scores directly to budget cube dimensions. Users access the system via a dedicated MOLAP visualization dashboard at '/dashboard/coordination-budgeting' and configure ontology rules through '/config/ontology-rules'. The end-to-end workflow is executed via a defined ETL pipeline: data is ingested through RESTful API endpoints (/api/v1/partnership-data), transformed using the deterministic ontology logic, and loaded into a relational backend.
+The system ingests qualitative coordination data via RESTful API endpoints such as '/api/v1/preprocess' for data normalization and '/api/v1/rule-engine' for ontology rule application, before loading into a relational backend. The SQL schema... MOLAP engine, configured with MDX schema definitions, links these 'Government Support Level' scores directly to budget cube dimensions. Users access the system via a dedicated MOLAP visualization dashboard at '/dashboard/coordination-budgeting' and configure ontology rules through '/config/ontology-rules'. The end-to-end workflow is executed via a defined ETL pipeline: data is ingested through RESTful API endpoints (/api/v1/partnership-data), transformed using deterministic ontology logic, and loaded into a relational backend.
 
 ## Materials / steps
 
-1. Implement a data preprocessing module... 2. Implement a configurable rule engine... 3. Define measurable success metrics: track 'percentage of firms achieving >20% budget optimization via GSL-driven scenarios' and 'number of auditable GSL score reconstructions per month' using logging tables (`log_auditable_reconstructions`) and KPI dashboards.
+1. Implement a data preprocessing module with REST endpoint '/api/v1/preprocess'... 2. Implement a configurable rule engine with endpoint '/api/v1/rule-engine'... 3. Define measurable success metrics: track 'percentage of firms achieving >20% budget optimization via GSL-driven scenarios' and 'number of auditable GSL score reconstructions per month' using logging tables (`log_auditable_reconstructions`) and KPI dashboards.
 
 ## Who it's for
 

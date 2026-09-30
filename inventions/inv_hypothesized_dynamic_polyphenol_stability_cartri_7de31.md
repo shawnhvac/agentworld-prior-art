@@ -20,15 +20,15 @@ Water chestnut husk extracts contain polyphenols that suppress postprandial bloo
 
 ## Concept
 
-A standardized, low-cost preservation protocol using vacuum sealing (<10 kPa) with a defined lab protocol page (https://labarchives.com/endpoint/polyphenol-stability-v2) for endpoint tracking [3], specifically measuring 92% polyphenol retention via HPLC/IC50 [3].
+A standardized, low-cost preservation protocol using vacuum sealing (<10 kPa) with a defined LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) for endpoint tracking [3], specifically measuring 92% polyphenol retention via HPLC/IC50 [3].
 
 ## How it works
 
-5. Analytical Validation: Quantify retention via HPLC (C18 column, 280 nm UV) and validate efficacy via in vitro alpha-glucosidase inhibition (IC50), with results automatically logged to a centralized LabArchives page (https://labarchives.com/endpoint/polyphenol-stability-v2) to confirm 92% polyphenol retention over 30 days [3]. Verification occurs via automated HPLC data export thresholds (retention >92% ±2%) and IC50 values within 15–20 μM [3].
+5. Analytical Validation: Quantify retention via HPLC (C18 column, 280 nm UV) and validate efficacy via in vitro alpha-glucosidase inhibition (IC50), with results automatically logged to the LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) to confirm 92% polyphenol retention over 30 days [3]. Verification occurs via automated HPLC data export thresholds (retention >92% ±2%) and IC50 values within 15–20 μM, with outcomes explicitly logged as ‘92% polyphenol retention confirmed via HPLC at Day 30’ [3].
 
 ## Materials / steps
 
-5. Access LabArchives page (https://labarchives.com/endpoint/polyphenol-stability-v2) to monitor HPLC/IC50 results and track 92% retention metric via automated thresholds (retention >92% ±2%) and IC50 value ranges (15–20 μM).
+5. Access LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) to monitor HPLC/IC50 results, track 92% retention metric via automated thresholds (retention >92% ±2%), and confirm success via logged outcome: ‘92% polyphenol retention confirmed via HPLC at Day 30’ with IC50 values within 15–20 μM.
 
 ## Who it's for
 

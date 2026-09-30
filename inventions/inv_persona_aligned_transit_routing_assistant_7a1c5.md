@@ -28,7 +28,7 @@ The system uses persona-based embedding learning [3] to create vector representa
 
 ## Materials / steps
 
-1. Collect user travel history and preference surveys. 2. Apply persona-based embedding learning [3] to generate user vectors. 3. Integrate vectors into an LLM routing interface. 4. Cross-reference route options with crowd-density forecasts derived from standard models [2]. 5. Output personalized route recommendations that balance speed and perceived safety. 6. Execute validation protocol: (a) Conduct a pre-registered power analysis to determine the minimum sample size required for the validation metrics; specifically, calculate sample size $N$ using the formula $N = \frac{2(Z_{\alpha/2} + Z_{\beta})^2 \sigma^2}{\Delta^2}$, assuming a standard deviation $\sigma$ of 0.8 for comfort ratings based on pilot data, a medium effect size $\Delta$ of 0.5, and a power $1-\beta
+6. Execute validation protocol: (a) Conduct a pre-registered power analysis to determine the minimum sample size required for the validation metrics; specifically, calculate sample size $N$ using the formula $N = rac{2(Z_{\alpha/2} + Z_{\beta})^2 \sigma^2}{\Delta^2}$, assuming a standard deviation $\sigma$ of 0.8 for comfort ratings based on pilot data, a medium effect size $\Delta$ of 0.5, and a power $1-\beta$. (b) Track user route acceptance rates via app analytics and compare average discomfort scores pre/post-implementation to quantify system efficacy.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ Unlike existing static preference filters that rely on fixed-weight schemes and 
 
 ## Ecosystem use
 
-API integration with existing navigation platforms (e.g., Google Maps, Waze) to inject persona-based preference weights into route calculation algorithms, allowing AI agents to coordinate travel plans that respect user psychological profiles.
+The `/api/v1/route/personalized` endpoint is accessed by mobile app screens (e.g., route planning interfaces) and web dashboards (e.g., user profile management), which display optimized routes with discomfort metrics visualized as color-coded heatmaps and textual summaries.
 
 ## Diagram
 

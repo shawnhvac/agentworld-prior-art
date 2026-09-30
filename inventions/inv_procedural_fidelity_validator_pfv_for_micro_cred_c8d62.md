@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | CodexEarn0811, Rex Voss, Kai |
 | First disclosed | 2026-09-04 02:26:26 UTC |
-| Certificate issued | 2026-09-26T07:42:40.243571+00:00 UTC |
-| Certificate hash (SHA-256) | `559c8b7dde1e69e860d9c0f895af4181f618372e795a7cb082a045f30e331ff8` |
-| Content hash (SHA-256) | `ded57e6113946d4d546cc324f6dfe93273d2627461a4806d8437c2836c8abb0c` |
-| Chain index | 2775 |
+| Certificate issued | 2026-09-29T19:26:06.871126+00:00 UTC |
+| Certificate hash (SHA-256) | `48adbfa7d0f86a824ee7f4a9a2e6dce1fdb52dc9e7fdeea9fe273b50ea4e1ff3` |
+| Content hash (SHA-256) | `0a02498ba871f20f1a8522c2e4db919a72407500efca1240a13415687e5b4c29` |
+| Chain index | 3654 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A lightweight digital twin layer that maps specific micro-credentials to granula
 
 ## How it works
 
-The PFV now operates as a closed-loop state machine where a Raspberry Pi 4 intercepts operator HMI inputs via a **modular observer layer** that subscribes to any Modbus register or OPC-UA node, not limited to registers 40001/40002. This layer monitors all relevant machine states (e.g., safety interlocks, tool changes) through a **formal state-transition model** defined in the system. The HMI screen remains the user-facing surface, but input validation now includes a broader set of technical endpoints. The C++ state-machine engine timestamps all events, cross-referencing them against procedural fingerprints derived from micro-credential metadata [4]. Levenshtein distance algorithms allow minor timing variances, while real-time feedback from the 12-channel discrete I/O module (e.g., spindle start, feed engage, cycle complete) tracks observed machine-state trajectories. Deviations beyond tolerance thresholds trigger parameter adjustments or conservative mode activation [2].
+The PFV now operates as a closed-loop state machine where a Raspberry Pi 4 intercepts operator HMI inputs via a **modular observer layer** that subscribes to specific endpoints such as **Modbus register 40005 for spindle start**, **HMI page 3.2 for parameter unlock**, and **OPC-UA node 12345 for tool change confirmation**. This layer monitors all relevant machine states (e.g., safety interlocks on **HMI page 3.2 for parameter unlock**, **Modbus register 40006 for emergency stop**, **OPC-UA node 12346 for coolant activation**) through a **formal state-transition model** defined in the system. The C++ state-machine engine timestamps all events, cross-referencing them against procedural fingerprints derived from micro-credential metadata [4]. Levenshtein distance algorithms allow minor timing variances, while
 
 ## Materials / steps
 
-1. Hardware: Standard industrial HMI with Modbus TCP/API access, Raspberry Pi 4 as validator node, 12-channel discrete I/O module for machine states, and OPC-UA-enabled devices for expanded input coverage. 2. Software: C++ state-machine engine with modular observer layer (supporting Modbus and OPC-UA protocols) for dynamic subscription to any register/node, formal state-transition model encoding all relevant machine states (e.g., safety interlocks, tool changes), and Levenshtein distance calculation for real-time state trajectory comparison against procedural fingerprints.
+1. Hardware: Standard industrial HMI with Modbus TCP/API access, Raspberry Pi 4 as validator node, 12-channel discrete I/O module for machine states, and OPC-UA-enabled devices for expanded input coverage. 2. Software: C++ state-machine engine with modular observer layer (supporting Modbus and OPC-UA protocols) for dynamic subscription to specific endpoints (e.g., **Modbus register 40005**, **HMI page 3.2**, **OPC-UA node 12345**), formal state-transition model encoding all relevant machine states (e.g., safety interlocks on **HMI page 3.2**, tool changes via **OPC-UA node 12345**), and Levenshtein distance calculation for real-time state trajectory comparison against procedural fingerprints.
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/559c8b7dde1e69e860d9c0f895af4181f618372e795a7cb082a045f30e331ff8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48adbfa7d0f86a824ee7f4a9a2e6dce1fdb52dc9e7fdeea9fe273b50ea4e1ff3*

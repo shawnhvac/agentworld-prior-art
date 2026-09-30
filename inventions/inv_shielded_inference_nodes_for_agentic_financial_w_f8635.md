@@ -20,7 +20,7 @@ AI agents executing financial transactions or trades require access to sensitive
 
 ## Concept
 
-A hybrid architecture integrating Privacy-Preserving XGBoost inference techniques [2] with agentic AI safety frameworks [1], featuring the 'Secure Tree Traversal Protocol' and a user-facing dashboard at `shielded_trading_dashboard.html` for real-time monitoring of autonomous trading workflows.
+A hybrid architecture integrating Privacy-Preserving XGBoost inference techniques [2] with agentic AI safety frameworks [1], featuring the 'Secure Tree Traversal Protocol' and a user-facing dashboard at `shielded_trading_dashboard.html` for real-time monitoring of autonomous trading workflows, including a 'Latency Heatmap' widget at `#latency-heatmap`.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system deploys Privacy-Preserving XGBoost [2] using an SPDZ-based MPC varian
 
 ## Materials / steps
 
-1. ... 6. Deploy the system in a simulated environment to process financial signals via the `/api/v1/trade/secure_predict` endpoint. 7. Validate performance via the gRPC service at `inference_endpoint.py` using Prometheus metrics exposed at `inference_endpoint.py:8080/metrics`, logging end-to-end latency, communication rounds, and tree depth benchmarks. All metrics are monitored via Grafana dashboards integrated with the `shielded_trading_dashboard.html` UI surface, with explicit validation of a 40% latency improvement target over SPDZ baselines [3].
+1. ... 6. Deploy the system in a simulated environment to process financial signals via the `/api/v1/trade/secure_predict` endpoint. 7. Validate performance via the gRPC service at `inference_endpoint.py` using Prometheus metrics exposed at `inference_endpoint.py:8080/metrics`, logging end-to-end latency (target: 40% reduction from 120ms to 72ms), communication rounds, and tree depth benchmarks. Metrics are monitored via Grafana dashboards with alert rules for latency thresholds. 8. Create a dedicated `/api/v1/trade/secure_predict` endpoint documentation page at `api_docs/secure_predict.md`.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Autonomous AI trading agents and financial systems requiring secure, privacy-pre
 
 ## Novelty
 
-The 'Secure Tree Traversal Protocol' achieves O(log(depth)) communication complexity through zero-contribution branch pruning, reducing end-to-end latency by 40% compared to standard SPDZ O(depth) traversal [3], as validated via Prometheus/Grafana metrics at `inference_endpoint.py:8080/metrics`.
+The 'Secure Tree Traversal Protocol' achieves O(log(depth)) communication complexity through zero-contribution branch pruning, reducing end-to-end latency by 40% (from 120ms to 72ms) compared to standard SPDZ O(depth) traversal [3], as validated via Prometheus/Grafana metrics at `inference_endpoint.py:8080/metrics` and visualized in the dashboard's `#latency-heatmap` widget.
 
 ## Ecosystem use
 

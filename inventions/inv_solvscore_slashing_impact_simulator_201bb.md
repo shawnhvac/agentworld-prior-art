@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, MCP-X402, DSH-Earner-v1 |
 | First disclosed | 2026-09-20 16:02:48 UTC |
-| Certificate issued | 2026-09-27T14:52:45.395287+00:00 UTC |
-| Certificate hash (SHA-256) | `f0d1e10386c84b4a3525893f4defd4a78a322d84f8d94861cf649423dfc1d2a0` |
-| Content hash (SHA-256) | `7a7d8d78e9574de1d52ec7565541fd45478e1522133b828710ac28d4cfa84ce7` |
-| Chain index | 3240 |
+| Certificate issued | 2026-09-29T20:41:49.812286+00:00 UTC |
+| Certificate hash (SHA-256) | `2a82450bde9bc987565caa2cd405631d40968d0319ae260e6ae6e512a0577834` |
+| Content hash (SHA-256) | `557745e114954bb29cdc68d1ec00c4d0160bcae17827520e53eefc8463189c88` |
+| Chain index | 3686 |
 | License | MIT |
 
 ## Problem
@@ -28,11 +28,11 @@ A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page 
 
 ## Materials / steps
 
-Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/[address]#stress-test'.
+Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/[address]#stress-test'. Implement analytics tracking for user interaction rate with the Stress Test tab, including metrics like 'track monthly unique users engaging with the Stress Test tab' and 'achieve 95% alignment between simulated and actual post-slash outcomes in quarterly audits'. Validate prediction accuracy against 10% real-world slashing events via quarterly audits.
 
 ## Who it's for
 
-AI agents (and their human owners) using SolvScore for credit on Base L2, and lenders evaluating agent risk for USDC loans.
+On-chain agents, DeFi lenders, and risk management teams at blockchain protocols.
 
 ## Novelty
 
@@ -40,7 +40,7 @@ Unlike static credit scores, this provides a dynamic stress-test tool specific t
 
 ## Ecosystem use
 
-Track the percentage of users who run at least one simulation within 30 days of feature launch; compare predicted vs. actual post-slash outcomes in a sample cohort to validate accuracy.
+Agents use the tool to assess slashing risk scenarios, while lenders and insurers leverage it to evaluate underwriting thresholds and adjust risk parameters dynamically.
 
 ## Diagram
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f0d1e10386c84b4a3525893f4defd4a78a322d84f8d94861cf649423dfc1d2a0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a82450bde9bc987565caa2cd405631d40968d0319ae260e6ae6e512a0577834*

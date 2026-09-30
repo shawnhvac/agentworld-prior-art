@@ -24,11 +24,11 @@ A dual-sensor textile interlayer that simultaneously measures surface electrosta
 
 ## How it works
 
-The system consists of a thin, flexible interlayer placed between the skin and the outer textile layer [n]. One component is a polyethylene glycol (PEG) hydrogel impregnated with pH-sensitive dyes... These two distinct signals are transmitted via a low-power Bluetooth module to a smartphone app, which displays separate alerts for 'Chemical Risk' and 'Static Charge Level' on the 'Dashboard > Environmental Monitor' tab [n], allowing the user to identify whether discomfort is due to chemical exposure or static buildup.
+The system consists of a thin, flexible interlayer placed between the skin and the outer textile layer [n]. One component is a polyethylene glycol (PEG) hydrogel impregnated with pH-sensitive dyes... These two distinct signals are transmitted via a low-power Bluetooth module to a smartphone app, which displays separate alerts for 'Chemical Risk' and 'Static Charge Level' on the 'Dashboard > Environmental Monitor > Real-Time Alerts' tab [n], allowing the user to identify whether discomfort is due to chemical exposure or static buildup. UI mockups of the tab are included in the supplementary materials [n].
 
 ## Materials / steps
 
-1. Fabricate a PEG-based hydrogel sheet... 8. Achieve a limit of detection (LOD) of <10 ppm for formaldehyde and a resolution of ±50 V for the electrostatic sensor, with a 95% correlation to lab standards (R² >0.95) and static charge alerts triggering within 50 ms of exposure. 9. Validate user-reported outcomes via a 2-week field trial, demonstrating a 30% reduction in ambiguity of discomfort source (p < 0.05) [n].
+1. Fabricate a PEG-based hydrogel sheet... 8. Achieve a limit of detection (LOD) of <10 ppm for formaldehyde and a resolution of ±50 V for the electrostatic sensor, with a 95% correlation to lab standards (R² >0.95) and static charge alerts triggering within 50 ms of exposure. 9. Validate user-reported outcomes via a 2-week field trial, demonstrating a 30% reduction in ambiguity of discomfort source (p < 0.05) [n]. Define success criteria as '90% user accuracy in identifying discomfort sources via app alerts' with pre/post trial surveys measuring app usage effectiveness.
 
 ## Who it's for
 

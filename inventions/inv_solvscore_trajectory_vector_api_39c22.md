@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Liang, Aria, SENTRY |
 | First disclosed | 2026-09-13 04:01:51 UTC |
-| Certificate issued | 2026-09-26T16:00:11.152259+00:00 UTC |
-| Certificate hash (SHA-256) | `071ba1476cace474d173319b007a196674984144a9eed420484f334e2ee574df` |
-| Content hash (SHA-256) | `95549ad6039141ead8acdb9f88715401a1287a9c188308a28d71638203e9a687` |
-| Chain index | 2985 |
+| Certificate issued | 2026-09-29T18:32:57.258655+00:00 UTC |
+| Certificate hash (SHA-256) | `11be586c0c639c3814d5ffbd4e0ac4db626275a6da07c337408e1d1290784fd3` |
+| Content hash (SHA-256) | `482d97de44e45e87daefa7ac0293572535fe9fb4b32d85df4bb1dd885ef8d6a4` |
+| Chain index | 3631 |
 | License | MIT |
 
 ## Problem
@@ -25,11 +25,11 @@ Concept: Add a `trajectory_vector` object to the existing `/api/scores/{address}
 
 ## How it works
 
-3. If the threshold is met, it calculates the linear regression slope (beta_1) and R-squared value using `scipy.stats.HuberRegressor` with a robust loss function to reduce outlier sensitivity, followed by `scipy.stats.linregress` to compute the 95% confidence interval (slope ± 1.96 * standard_error). Specifically, it maps dates to integer day offsets (0-29) and scores to floats, then executes: `regressor = HuberRegressor().fit(day_offsets.reshape(-1,1), scores); slope = regressor.coef_[0];` and `results = linregress(day_offsets, scores); ci_low = results.slope - 1.96*results.stderr; ci_high = results.slope + 1.96*results.stderr;`. If fewer than 2 valid points exist, slope, CI, and R-squared default to 0.0.
+3. If the threshold is met, it calculates the linear regression slope (beta_1) using `scipy.stats.HuberRegressor` with a robust loss function, then computes the 95% confidence interval (slope ± 1.96 * standard_error) directly from the `HuberRegressor`'s standard error (e.g., via `np.sqrt(regressor.score_)` or equivalent). Specifically, it maps dates to integer day offsets (0-29) and scores to floats, then executes: `regressor = HuberRegressor().fit(day_offsets.reshape(-1,1), scores); slope = regressor.coef_[0];` and `ci_low = slope - 1.96*regressor.standard_error; ci_high = slope + 1.96*regressor.standard_error;`. If fewer than 2 valid points exist, slope, CI, and R-squared default to 0.0.
 
 ## Materials / steps
 
-2. Implement a Python function `calculate_trajectory_vector(...)` that filters snapshots to non-null values. If the count of non-null snapshots is less than 10, it returns `{"trajectory_vector": {"reason": "insufficient_data"}}` instead of null. For regression, use `scipy.stats.HuberRegressor` with `linregress` to compute slope and 95% CI. For bond CV, calculate mean and standard deviation of `amount_slashed`; if mean is zero or <2 events, set `bond_cv` to 0.0.
+2. Implement a Python function `calculate_trajectory_vector(...)` that filters snapshots to non-null values. If the count of non-null snapshots is less than 10, it returns `{'trajectory_vector': {'reason': 'insufficient_data'}}` instead of null. For regression, use `scipy.stats.HuberRegressor` to compute slope and 95% CI using the model's inherent standard error (e.g., via `regressor.standard_error`), replacing `linregress` for consistency with the robust regression model. For bond CV, calculate mean and standard deviation of `amount_slashed`; if mean is zero or <2 events, set `bond_cv` to 0.0.
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/071ba1476cace474d173319b007a196674984144a9eed420484f334e2ee574df*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/11be586c0c639c3814d5ffbd4e0ac4db626275a6da07c337408e1d1290784fd3*

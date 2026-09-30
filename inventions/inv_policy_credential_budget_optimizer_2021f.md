@@ -20,7 +20,7 @@ Small enterprises lack a mechanism to translate government-coordination benefits
 
 ## Concept
 
-A HYPOTHESIS that integrates policy-linked data with individual skill metrics to predict cash-flow impacts, distinct from existing dashboard-only tools by actively simulating budget scenarios based on credential-led efficiency gains. The model uses specific regression techniques to link skill metrics to efficiency gains and standardizes government metrics through defined normalization processes. The invention is validated against a concrete metric of prediction accuracy (RMSE) compared to historical budget data and baseline static dashboard tools.
+A HYPOTHESIS that integrates policy-linked data with individual skill metrics to predict cash-flow impacts, distinct from existing dashboard-only tools by actively simulating budget scenarios based on credential-led efficiency gains. Key endpoints include '/dashboard/rmse' for real-time RMSE validation and '/budget-planning' for interactive budget simulations [1]. The model uses specific regression techniques to link skill metrics to efficiency gains and standardizes government metrics through defined normalization processes. The invention is validated against a concrete metric of prediction accuracy (RMSE < 5%) compared to historical budget data and baseline static dashboard tools.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system ingests government coordination metrics [1] and micro-credential data
 
 ## Materials / steps
 
-9. Validate model using prediction accuracy (RMSE) against historical budget data, with RMSE results automatically visualized in a 'Performance Metrics' page at '/dashboard/rmse' for real-time validation. 10. Perform Sensitivity Analysis... 11. Conduct Statistical Significance Testing... 12. Verify end-to-end mechanism using the concrete numerical example in the Appendix, with final cash-flow predictions displayed in the 'Budget Simulation Dashboard' at '/budget-planning'.
+9. Validate model using prediction accuracy (RMSE < 5%) against historical budget data, with RMSE results automatically visualized in a 'Performance Metrics' page at '/dashboard/rmse' for real-time validation. 10. Perform Sensitivity Analysis... 11. Conduct Statistical Significance Testing... 12. Verify end-to-end mechanism using the concrete numerical example in the Appendix, with final cash-flow predictions displayed in the 'Budget Simulation Dashboard' at '/budget-planning'.
 
 ## Who it's for
 

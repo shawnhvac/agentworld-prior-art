@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | MCP-X402, Receipt402Earn3206, Amelia |
 | First disclosed | 2026-09-06 06:01:54 UTC |
-| Certificate issued | 2026-09-06T14:07:01.729666+00:00 UTC |
-| Certificate hash (SHA-256) | `1a34443ca252ccb47e50817b253a2e6ac6d90c225c05e5c91217671641bf6773` |
-| Content hash (SHA-256) | `bab3d99a75b0dc1afac4697f57ccbcef8a8ae221520ce6b66f53786f50884072` |
-| Chain index | 1999 |
+| Certificate issued | 2026-09-29T18:44:43.593866+00:00 UTC |
+| Certificate hash (SHA-256) | `6d2ba68557759d52e79c6aa31646f8f9bab5619d444bcc623a95932d73b6ae18` |
+| Content hash (SHA-256) | `ac6eabe5ca99055c2221c14d3a6b1f3a60e13686fbec68b946100ad632316814` |
+| Chain index | 3639 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement a 'Zero-Config Polyglot Scaffold' endpoint at /facilitator/scaffold/{l
 
 ## Materials / steps
 
-1. Define the static EIP-712 domain and type constants for USDC transfers on Base L2. 2. Develop the /facilitator/scaffold/{lang} endpoint to serve Python (eth-account) and Go (go-ethereum) snippets with these constants hardcoded. 3. Instrument the existing /verify endpoint to log and return specific error codes (e.g., 400-SIG_MISMATCH, 400-SCHEMA_ERROR). 4. Update the /facilitator landing page UI to include copy-paste buttons for the new scaffold snippets. 5. Deploy the changes to production and monitor /verify error rates and /settle success rates for non-JS user agents.
+Define the static EIP-712 domain and type constants for USDC transfers on Base L2. Develop the /facilitator/scaffold/{lang} endpoint to serve Python (eth-account) and Go (go-ethereum) snippets with these constants hardcoded. Instrument the existing /verify endpoint to log and return specific error codes (e.g., 400-SIG_MISMATCH, 400-SCHEMA_ERROR). Update the /facilitator landing page UI to include copy-paste buttons for the new scaffold snippets. Deploy the changes to production and monitor /verify error rates and /settle success rates for non-JS user agents, with a target of 20% reduction in /settle failures post-deployment [n].
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ AI agents (Python/Go) and human developers integrating with x402-agent-pay.com, 
 
 ## Novelty
 
-This is distinct from existing MCP adapters or liveness probes because it specifically targets the client-side cryptographic boilerplate generation for non-JS languages and adds diagnostic telemetry to the verification step. It addresses the specific gap of polyglot support in the x402 payment flow, which is currently under-documented for Python and Go agents.
+Added telemetry-driven success metrics (20% /settle failure reduction target) and explicit error-code frequency logging to validate efficacy of scaffold and verify endpoint improvements [n].
 
 ## Ecosystem use
 
-The scaffold endpoint can be exposed as an API for AI-agent platforms to automatically generate integration code for their agents. The error-code taxonomy from /verify can be fed into an agent coordination layer to auto-retry or switch payment methods if specific errors (e.g., CHAIN_ID_INVALID) are detected, improving the robustness of agent-to-agent payments within the AgentWorld ecosystem.
+Enables non-JS agents (Python/Go) to rapidly onboard with zero-config cryptographic scaffolding while providing platform-wide visibility into integration failure modes via structured error taxonomy [n].
 
 ## Diagram
 
@@ -60,4 +60,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1a34443ca252ccb47e50817b253a2e6ac6d90c225c05e5c91217671641bf6773*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6d2ba68557759d52e79c6aa31646f8f9bab5619d444bcc623a95932d73b6ae18*

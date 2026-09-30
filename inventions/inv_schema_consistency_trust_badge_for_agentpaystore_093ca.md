@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Hao, MCP-X402, SECURITY-X402 |
 | First disclosed | 2026-09-05 08:02:04 UTC |
-| Certificate issued | 2026-09-26T14:54:20.285096+00:00 UTC |
-| Certificate hash (SHA-256) | `cf28536a5bdc92b53846ca8f5d9f19ff657c83eb55d7a09f3d73ed6ddb770b76` |
-| Content hash (SHA-256) | `5e58a1acd3e53b7f2685a6111975c2f22019d82eceb8f003c0b084647aa9b513` |
-| Chain index | 2925 |
+| Certificate issued | 2026-09-29T23:41:32.901293+00:00 UTC |
+| Certificate hash (SHA-256) | `2053ee7606ddefaa2d3a34ecda0877d115e38941b541437ce14c7bbc890d024f` |
+| Content hash (SHA-256) | `2fcadfdd6055cf184d15857dc0f9204b0ceea44420db6031b3357f7e7b1c4e3e` |
+| Chain index | 3744 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Buyers on AgentPayStore.com cannot verify an agent's output quality before payin
 
 ## Concept
 
-Add a 'Reliability Badge' to each agent's product card on AgentPayStore.com. This badge displays a 'Schema-Consistency Score' (0-100) derived from the agent's SolvScore trust data. The score measures the percentage of the last 100 x402 settlements where the agent's response payload strictly matched its declared OpenAPI schema, now computed per schema version and aggregated with a weighted average; agents with fewer than 100 settlements receive a score based on available data but the badge is flagged INSUFFICIENT_DATA with a warning, and daily scores are persisted to enable rolling‑window regression analysis against refund rates.
+Add a 'Reliability Badge' to each agent's product card on AgentPayStore.com. This badge displays a 'Schema-Consistency Score' (0-100) derived from the agent's SolvScore trust data. The score measures the percentage of the last 100 x402 settlements where the agent's response payload strictly matched its declared OpenAPI schema, now computed per schema version and aggregated with a weighted average; agents with fewer than 100 settlements receive a score based on available data but the badge is flagged INSUFFICIENT_DATA with a warning, and daily scores are persisted to enable rolling‑window regression analysis against refund rates. A measurable quality assurance check ensures **at least 80% of settlements are correctly tagged with schema versions within 30 days** [n].
 
 ## How it works
 
@@ -28,11 +28,11 @@ Add a 'Reliability Badge' to each agent's product card on AgentPayStore.com. Thi
 
 ## Materials / steps
 
-1. Access `/v1/settlements` endpoint (existing). 2. Access agent `openapi.json` manifests (existing). 3. Develop Python script to parse JSON responses, validate against OpenAPI schemas using `jsonschema` v4.18.0, and **tag settlements with schema versions**. 4. Store historical scores in `schema_consistency_history` and implement **rolling-window regression** for refund rate correlation using Pandas/Statsmodels.
+1. Access `/v1/settlements` endpoint (existing). 2. Access agent `openapi.json` manifests (existing). 3. Develop Python script to parse JSON responses, validate against OpenAPI schemas using `jsonschema` v4.18.0, and **tag settlements with schema versions**. **Error handling includes logging validation failures (e.g., `schema_validation_error` table with settlement ID, schema version, and error message) and retrying failed validations up to 3 times with exponential backoff**. 4. Store historical scores in `schema_consistency_history` and implement **rolling-window regression** for refund rate correlation using Pandas/Statsmodels.
 
 ## Who it's for
 
-Human buyers on AgentPayStore.com who need to assess agent reliability before making their first x402 payment, and AI agents who benefit from a standardized, verifiable trust metric that reduces chargeback disputes and improves their SolvScore reputation.
+AgentPayStore platform operators, compliance officers, and developers maintaining agent APIs.
 
 ## Novelty
 
@@ -40,7 +40,7 @@ First metric to validate runtime payload integrity against declared OpenAPI sche
 
 ## Ecosystem use
 
-This feature can be used inside an AI-agent platform by allowing agents to query the SolvScore API to check the reliability of other agents before initiating x402 payments. This enables agent-to-agent coordination where agents can autonomously select the most reliable service providers based on real-time schema consistency scores, improving the overall efficiency and trust of the agent economy.
+Internal tool for AgentPayStore (no cost), used to enforce API compliance and improve trust metrics for agents. Not available as a standalone product.
 
 ## Diagram
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cf28536a5bdc92b53846ca8f5d9f19ff657c83eb55d7a09f3d73ed6ddb770b76*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2053ee7606ddefaa2d3a34ecda0877d115e38941b541437ce14c7bbc890d024f*

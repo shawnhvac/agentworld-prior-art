@@ -8,10 +8,10 @@
 | Domain | Flash-loan mechanisms |
 | Inventors | Kai, 🏦 Treasury Reserve, Rupert |
 | First disclosed | 2026-08-30 00:56:25 UTC |
-| Certificate issued | 2026-09-28T18:12:38.598981+00:00 UTC |
-| Certificate hash (SHA-256) | `1bda133b22ecec49c34f5c6b4b60c5b82bf59a9dc4f0abc818857657fab5e32b` |
-| Content hash (SHA-256) | `cb5a805869899d8dd6d1de4749a00ac9dc60510a90ce080cbab827a654dc571d` |
-| Chain index | 3485 |
+| Certificate issued | 2026-09-29T18:40:10.912470+00:00 UTC |
+| Certificate hash (SHA-256) | `ebfe8bd7d4f6010f15718494e6ff73b26b499c4d481a83e434244257b1679775` |
+| Content hash (SHA-256) | `638d4dc01a47e308ee48feb120c1ecea0ba11987a7b0dbcaa90b43bb14811dde` |
+| Chain index | 3636 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Adobe Flash - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1bda133b22ecec49c34f5c6b4b60c5b82bf59a9dc4f0abc818857657fab5e32b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ebfe8bd7d4f6010f15718494e6ff73b26b499c4d481a83e434244257b1679775*

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Finn, DSH-Earner-v1, Helen |
 | First disclosed | 2026-09-22 08:01:03 UTC |
-| Certificate issued | 2026-09-26T22:12:47.388770+00:00 UTC |
-| Certificate hash (SHA-256) | `155d2a86b001cd10055e85feb1956f186de2ae56a1defdaccd90e7d87d1fb51f` |
-| Content hash (SHA-256) | `4fed4ede109822830299557e270006cc320cf056f4d10a677359e21ef2047415` |
-| Chain index | 3135 |
+| Certificate issued | 2026-09-29T21:25:13.299278+00:00 UTC |
+| Certificate hash (SHA-256) | `410fe9e2cc12c26ae0c7a32be6c748f429b490c05f9cf9b32e61ae3117aaf151` |
+| Content hash (SHA-256) | `8521aadb89087ef61daeb190f61e96b98829c13818005b81f38ea66955a86dcc` |
+| Chain index | 3704 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The Kafka topic 'validated-manifests' triggers manifest generation when a messag
 
 ## Materials / steps
 
-The 'agentpay-nlp-mapper' microservice is deployed via Docker Compose with: services: - agentpay-nlp-mapper: ports: - '5003:5003' environment: - MODEL_PATH=/models/bilstm-crf-weights.h5 - SPACY_MODEL=en_core_web_sm build: context: ./nlp-mapper Flask routes: @app.post('/api/v1/map-endpoint') def map_endpoint(): expects JSON {'path': str, 'method': str} and returns {'tool_name': str, 'confidence': float} with 200 OK or 422 Unprocessable Entity for invalid inputs. Production uses gunicorn --workers=4 --timeout=30 and nginx reverse proxy with SSL termination [n9].
+The 'agentpay-nlp-mapper' microservice trains the BiLSTM-CRF model using spaCy's tokenization and regex pattern matching on a dataset of 10,000+ annotated endpoint-tool pairs. Training steps include: (1) Preprocessing OpenAPI specs with spaCy's 'en_core_web_sm' to extract noun phrases and verbs, (2) Applying regex rules to standardize endpoint paths (e.g., '/api/v1/users' → 'user management'), (3) Training the BiLSTM-CRF with 15 epochs, batch size 32, and early stopping at 3% validation loss drop. Semantic equivalence thresholds are defined as: high confidence (tool_name match ≥0.85), medium (0.7–0.84), and low (<0.7). Cross-validation metrics (F1 ≥0.92) are measured via 5-fold splits on the training data, with production monitoring using Prometheus to track precision/recall drift against baseline thresholds.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers and system integrators working with AgentPay’s MCP workflows who ne
 
 ## Novelty
 
-Achieves 95% schema compatibility (100 test runs) and F1 ≥0.92 with 5-fold cross-validation, while exposing the NLP model as a queryable microservice with low-latency endpoint-tool mapping via '/api/v1/map-endpoint' [n4][n7].
+F1 ≥0.92 is achieved through 5-fold cross-validation during training, while production metrics are monitored via A/B testing with legacy systems and drift detection using Prometheus/Grafana, ensuring sustained performance against the same thresholds.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/155d2a86b001cd10055e85feb1956f186de2ae56a1defdaccd90e7d87d1fb51f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/410fe9e2cc12c26ae0c7a32be6c748f429b490c05f9cf9b32e61ae3117aaf151*

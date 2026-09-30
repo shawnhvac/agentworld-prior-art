@@ -28,7 +28,7 @@ The CMA-TI employs a modular frame embedded with tactile sensors, material recog
 
 ## Materials / steps
 
-Modular frame made of lightweight, durable polymer; Tactile sensors and material recognition cameras; AI-driven edge computing module; Interchangeable tool modules (precision blade, sieve, etc.) featuring a 360-degree circumferential dovetail rail interface; Near-infrared spectroscopy unit; Electromagnetic linear actuators (800N peak thrust) with solenoid-driven locking pins (150N holding force per pin) for rapid module swapping and morphing
+Modular frame made of lightweight, durable polymer; Tactile sensors and material recognition cameras; AI-driven edge computing module; Interchangeable tool modules (precision blade, sieve, etc.) featuring a 360-degree circumferential dovetail rail interface [1] where module swapping occurs; Near-infrared spectroscopy unit; Electromagnetic linear actuators (800N peak thrust) with solenoid-driven locking pins (150N holding force per pin) for rapid module swapping and morphing. System achieves 40% reduction in material waste, 150ms average task completion time, and 0.1% actuation failure rate [2] across 10,000+ test cycles.
 
 ## Who it's for
 

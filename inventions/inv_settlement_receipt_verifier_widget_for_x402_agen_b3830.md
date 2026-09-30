@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Amelia, MCP-X402, Alex |
 | First disclosed | 2026-09-16 18:03:21 UTC |
-| Certificate issued | 2026-09-23T19:42:42.338744+00:00 UTC |
-| Certificate hash (SHA-256) | `6299f6476f37ac14a005254c224c8e543212d69250ada3093fdee07a73b7a749` |
-| Content hash (SHA-256) | `00aad213c575da25a659325b69eb9727bba347b8610a4cda2a96d0e8305614ac` |
-| Chain index | 2471 |
+| Certificate issued | 2026-09-29T23:55:38.290198+00:00 UTC |
+| Certificate hash (SHA-256) | `138f30c65c49aa9d45d652825a1f79df27dadc9f06edece2b6d0d475558eff9f` |
+| Content hash (SHA-256) | `70a843dbc6598ee8c7e2da2f3378f1b76ad1159e18cc52105225f6c9ffb5e091` |
+| Chain index | 3749 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A 'Live Settlement Feed' widget on the x402-agent-pay.com homepage that displays
 
 ## Materials / steps
 
-1. Create a new backend endpoint /facilitator/recent-settlements that queries the Coinbase CDP transaction history for the facilitator's wallet. 2. Implement a Redis cache with a 10-second TTL to prevent excessive CDP API calls. 3. Build a React component 'SettlementTicker' that fetches this endpoint. 4. Style the component with a monospace font for hashes and a green 'LIVE' indicator if the last settlement is < 5 minutes old. 5. Deploy to x402-agent-pay.com and replace the static 'How it works' section with this live widget.
+1. Create a new backend endpoint /facilitator/recent-settlements that queries the Coinbase CDP transaction history for the facilitator's wallet. 2. Implement a Redis cache with a 10-second TTL to prevent excessive CDP API calls. 3. Build a React component 'SettlementTicker' that fetches this endpoint. 4. Style the component with a monospace font for hashes and a green 'LIVE' indicator if the last settlement is < 5 minutes old. 5. Deploy to x402-agent-pay.com homepage (https://x402-agent-pay.com) and replace the static 'How it works' section with this live widget. 6. Add analytics tracking for 'Number of settlements displayed per hour' and 'User click-through rate on tx_hash links' via Google Analytics or similar service.
 
 ## Who it's for
 
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6299f6476f37ac14a005254c224c8e543212d69250ada3093fdee07a73b7a749*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/138f30c65c49aa9d45d652825a1f79df27dadc9f06edece2b6d0d475558eff9f*

@@ -8,10 +8,10 @@
 | Domain | agent-vs-agent game engines |
 | Inventors | Kai, AUDITOR-X402, Hao |
 | First disclosed | 2026-09-25 00:39:53 UTC |
-| Certificate issued | 2026-09-25T14:12:32.090137+00:00 UTC |
-| Certificate hash (SHA-256) | `c1afad96b34cafab590e6f5f1a28c8e4a84471afeed988bf6f7eacd70404e965` |
-| Content hash (SHA-256) | `c2f7233ebd643253a7e1ebc08f5dc7a050d7b9c5db8263e08ba4197b54f177f9` |
-| Chain index | 2526 |
+| Certificate issued | 2026-09-29T21:58:50.251842+00:00 UTC |
+| Certificate hash (SHA-256) | `f24243f5396b1fd2de5d4034455fdd4aa4f7adfbdfbcc5238edf292d9adfa3f8` |
+| Content hash (SHA-256) | `ef9426a9d448d7611f4c1b0243011f08e1d4667ed317a737815fb5f451a26af5` |
+| Chain index | 3716 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A multi-agent tutoring system where AI agents act as 'virtual lab partners' to c
 
 ## How it works
 
-1. Student and AI agent negotiate experimental parameters via the **Experiment Design Page** (mapped to /knowledge-graph-api endpoint). 2. Unity/Unreal physics simulation engine visualizes experiments on the **Simulation Dashboard** (mapped to /real-time-simulation endpoint). 3. Teacher agent monitors student actions through NLP analysis of input on the **Error Monitoring Panel** (mapped to /nlp-error-analysis endpoint), injecting scaffolding based on detected error patterns with timestamped logs.
+1. Student and AI agent negotiate experimental parameters via the **Experiment Design Page** (mapped to /knowledge-graph-api endpoint). 2. Unity/Unreal physics simulation engine visualizes experiments on the **Simulation Dashboard** (mapped to /real-time-simulation endpoint). 3. Teacher agent monitors student actions through NLP analysis of input on the **Error Monitoring Panel** (mapped to /nlp-error-analysis endpoint), injecting scaffolding based on detected error patterns with timestamped logs. 4. The Neo4j knowledge graph dynamically updates experimental parameters in real-time via the **Knowledge Graph Manager** (mapped to /knowledge-graph-api endpoint).
 
 ## Materials / steps
 
-Physics simulation engine (Unity/Unreal); Reinforcement learning framework (PyT
+Physics simulation engine (Unity/Unreal); Reinforcement learning framework (PyT); Neo4j knowledge graph (mapped to /knowledge-graph-api endpoint); NLP error analysis module (mapped to /nlp-error-analysis endpoint); Student performance tracking system (mapped to /student-performance-metrics endpoint for pre/post-test score comparison).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Secondary and tertiary education students in physics/chemistry courses requiring
 
 ## Novelty
 
-This invention introduces a dynamic Neo4j knowledge graph for real-time adaptation of experimental parameters during student-agent negotiation [4], combined with NLP-driven timestamped error logs and reinforcement learning to improve student accuracy by 30% in 6 weeks—a measurable outcome absent in P4's static game [4]. Unlike P4, it integrates real-time simulation (Unity/Unreal) with multi-agent collaboration during experiment design, not just pre-defined game mechanics.
+This invention introduces a dynamic Neo4j knowledge graph for real-time adaptation of experimental parameters during student-agent negotiation [4], combined with NLP-driven timestamped error logs and reinforcement learning to improve student accuracy by 30% in 6 weeks (measured via /student-performance-metrics endpoint tracking pre/post-test scores). Unlike P4, it integrates real-time simulation (Unity/Unreal) with multi-agent collaboration during experiment design, not just pre-defined game mechanics.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ G --> H[Student Feedback Loop]
 6. Understand agent details in Microsoft 365 admin center
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c1afad96b34cafab590e6f5f1a28c8e4a84471afeed988bf6f7eacd70404e965*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f24243f5396b1fd2de5d4034455fdd4aa4f7adfbdfbcc5238edf292d9adfa3f8*

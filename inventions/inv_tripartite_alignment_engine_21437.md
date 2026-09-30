@@ -28,7 +28,7 @@ The engine executes an ETL pipeline to merge MOLAP cubes with credential APIs: i
 
 ## Materials / steps
 
-5. Validate predictions using walk-forward cross-validation, calculating MAPE, R-squared, Brier scores, and financial ratios (Sharpe, Sortino, ROIC). Success metrics are exposed via the '/api/v1/alignment/score' endpoint and a dedicated dashboard at '/dashboard/alignment/performance' [5] for real-time monitoring of model performance and financial benchmarks. KPIs include 'improvement in SME ROI prediction accuracy by 15%' and 'reduction in fiscal-competency misalignment by 20%' [6].
+5. Validate predictions using walk-forward cross-validation, calculating MAPE, R-squared, Brier scores, and financial ratios (Sharpe, Sortino, ROIC). Success metrics are exposed via the '/api/v1/alignment/score' endpoint and a dedicated dashboard at '/dashboard/alignment/performance' [5] for real-time monitoring of model performance and financial benchmarks. Database schema files are explicitly defined as 'schema/unified_warehouse.sql' [7]. KPIs include 'MAPE reduction from 25% to 10% in Q3' and 'fiscal-competency misalignment reduction from 30% to 10% by Q4' [8].
 
 ## Who it's for
 

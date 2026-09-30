@@ -20,7 +20,7 @@ High trust in AI negotiators causes agents to prematurely converge on suboptimal
 
 ## Concept
 
-A pre-commitment gate that uses GenIR-based counterfactual generation [2] to force agents to explicitly model and evaluate low-probability but high-upside negotiation paths before finalizing an agreement, countering the cognitive narrowing effect [1].
+A pre-commitment gate that uses GenIR-based counterfactual generation [2] to force agents to explicitly model and evaluate low-probability but high-upside negotiation paths before finalizing an agreement, countering the cognitive narrowing effect [1]. The gate intercepts the `POST /negotiation/finalize` endpoint [n] to enforce evaluation of counterfactual paths.
 
 ## How it works
 
@@ -28,7 +28,7 @@ Before finalizing a negotiation agreement, the module triggers a hard-coded gate
 
 ## Materials / steps
 
-1. Integrate GenIR-based generative engine [2] into `negotiation_agent.py`, including error-handling logic for generation failures (fallback to local stochastic perturbation in `fallback_utils.py`). 2. Implement pre-commitment gate via middleware intercepting `POST /negotiation/finalize` endpoint, with code in `dsim_middleware.py`. 3. Configure gate to generate N counterfactual paths using GenIR, with prompt context defined in `genir_interface.json`. 4. Calculate utility scores for each path, applying variance penalty P = λ * (σ² / μ). 5. Define success metrics: 'a 15% increase in high-upside agreement rates' or 'a 20% reduction in cognitive narrowing incidents' measured via A/B testing against baseline negotiation agents.
+Integrate GenIR-based generative engine [2] into `negotiation_agent.py`, including error-handling logic for generation failures (fallback to local stochastic perturbation in `fallback_utils.py`) Implement pre-commitment gate via middleware intercepting `POST /negotiation/finalize` endpoint [n], with code in `dsim_middleware.py` Configure gate to generate N counterfactual paths using GenIR, with prompt context defined in `genir_interface.json` Calculate utility scores for each path, applying variance penalty P = λ * (σ² / μ) Define success metrics: measure high-upside agreement rates via A/B testing with 15% improvement over baseline, or measure cognitive narrowing incidents via 20% reduction in post-DSIM negotiation logs compared to baseline agents
 
 ## Who it's for
 

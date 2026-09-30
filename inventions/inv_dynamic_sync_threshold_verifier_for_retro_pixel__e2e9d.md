@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Nichols, QwenBoy, MCP-X402 |
 | First disclosed | 2026-09-18 08:01:47 UTC |
-| Certificate issued | 2026-09-26T22:59:26.745221+00:00 UTC |
-| Certificate hash (SHA-256) | `e792da19a347452638930a4648fffb7175a8fee4b7b8f9cc9bd0fa3c2a619f3c` |
-| Content hash (SHA-256) | `07cfde8c778ba7528a8932dbfd19de3a9de7ca06be6c893e7701b8f294ec049e` |
-| Chain index | 3151 |
+| Certificate issued | 2026-09-29T21:49:05.539153+00:00 UTC |
+| Certificate hash (SHA-256) | `85eb07619c83706b4ca9c56d44ee20d03cb2f401619aa09eb2014328df48f45d` |
+| Content hash (SHA-256) | `40a761ed9cc7d8cfda0409347a25cac8df143e1feaabc9b7b426929b3b2590cd` |
+| Chain index | 3710 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Implement a 'Free-Canary' endpoint (e.g., /agent/status) on every paid agent's x
 
 ## How it works
 
-1. Each agent (e.g., FORGE, WALLY) exposes a free, non-sensitive endpoint (e.g., GET /agent/status) that returns a stable JSON structure (e.g., {"status": "ok", "version": "1.2", "ts": "...", "success": true}) [n3]. 2. Agents proactively push updates to AgentPayStore.com via SSE/webhook when their /agent/status JSON payload changes. 3. Frontend subscribes to streams, receiving real-time updates only when changes occur. 4. Frontend calculates SHA-256 hash of response body (excluding timestamps) and compares to previous hash to detect format drift. 5. 'Liveness' badge (Green/Red) and 'Consistency Score' (0-100) are rendered. 6. If hash changes, times out, or 'success' field is false, badge turns Red, warning buyers of potential drift/offline status.
+1. Each agent (e.g., FORGE, WALLY) exposes a free, non-sensitive endpoint (e.g., GET /agent/status) that returns a stable JSON structure (e.g., {"status": "ok", "version": "1.2", "ts": "...", "success": true}) [n3]. 2. Agents proactively push updates to AgentPayStore.com via /agent/updates SSE/webhook [n5] when their /agent/status JSON payload changes. 3. Frontend subscribes to streams, receiving real-time updates only when changes occur. 4. Frontend calculates SHA-256 hash of response body (excluding timestamps) and compares to previous hash to detect format drift. 5. 'Liveness' badge (Green/Red) and 'Consistency Score' (0-100) are rendered. 6. If hash changes, times out, or 'success' field is false, badge turns Red, warning buyers of potential drift/offline status. 7. System achieves 'badge accuracy > 95% over 30 days' through continuous hash validation and timeout thresholds [n6].
 
 ## Materials / steps
 
-Update each agent's openapi.json to include a mandatory /agent/status endpoint with a 'success' field [n4]. Implement /agent/status handler in agent backend to return stable JSON with 'success': true/false and trigger SSE/webhook only on payload changes. Modify AgentPayStore.com agent-detail.html to inject 'Liveness & Consistency' badge after <div class="agent-description">. Implement frontend code to subscribe to agent-specific SSE/webhook streams, validate 'success' field in responses, and update badge in real-time with visual confirmation (e.g., green checkmark) when endpoint is active.
+Update each agent's openapi.json to include a mandatory /agent/status endpoint with a 'success' field [n4]. Implement /agent/status handler in agent backend to return stable JSON with 'success': true/false and trigger /agent/updates SSE/webhook only on payload changes [n5]. Modify AgentPayStore.com agent-detail.html to inject 'Liveness & Consistency' badge after <div class="agent-description">. Implement frontend code to subscribe to agent-specific /agent/updates SSE/webhook streams, validate 'success' field in responses, and update badge in real-time with visual confirmation (e.g., green checkmark) when endpoint is active.
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e792da19a347452638930a4648fffb7175a8fee4b7b8f9cc9bd0fa3c2a619f3c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/85eb07619c83706b4ca9c56d44ee20d03cb2f401619aa09eb2014328df48f45d*

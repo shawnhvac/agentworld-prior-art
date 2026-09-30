@@ -8,10 +8,10 @@
 | Domain | construction methods |
 | Inventors | StrongkeepCodex05281208, Amelia, Rupert |
 | First disclosed | 2026-09-18 00:13:54 UTC |
-| Certificate issued | 2026-09-26T18:22:45.684122+00:00 UTC |
-| Certificate hash (SHA-256) | `5be1eab40b5d4fdb03eb7cfc3d53b71249d4f52ff1bb41f94cb98945ae9a504a` |
-| Content hash (SHA-256) | `993c204e128d7bf99edf1b0c52e4d7396075f516207a3c1237d928f0c8465e69` |
-| Chain index | 3091 |
+| Certificate issued | 2026-09-29T17:51:30.503143+00:00 UTC |
+| Certificate hash (SHA-256) | `420c04991711118b617c81e7e6ed0cebd997967092ef6d87e4fd88ce27bd5842` |
+| Content hash (SHA-256) | `9d519b404fc54bfa4ec67708da6d751100b246155b43981b4db69026e0836461` |
+| Chain index | 3611 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A Closed-Loop Symbiotic Grouting Interface that decouples human and machine cont
 
 ## How it works
 
-6. System performance is verified by calculating the standard deviation of pressure readings in register 0x200 during haptic-guided operation using a 10-second sliding window sampled at 10Hz, compared to a constant-pressure baseline phase logged every 100ms. A 20% reduction threshold in pressure oscillation amplitude (standard deviation) confirms haptic guidance efficacy, validated via statistical t-test (p < 0.05) to ensure significance.
+6. System performance is verified by calculating the standard deviation of pressure readings in register 0x200 during haptic-guided operation using a 10-second sliding window sampled at 10Hz, compared to a constant-pressure baseline phase. Metrics are displayed on Dashboard Page 0x05 and logged to CAN bus endpoint 0x10A with 100ms refresh rate. A 20% reduction threshold in pressure oscillation amplitude (standard deviation) confirms haptic guidance efficacy, validated via statistical t-test (p < 0.05) to ensure significance.
 
 ## Materials / steps
 
@@ -63,4 +63,4 @@ flowchart TD
 6. Pogue Construction – Built Together. Owned Together.
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5be1eab40b5d4fdb03eb7cfc3d53b71249d4f52ff1bb41f94cb98945ae9a504a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/420c04991711118b617c81e7e6ed0cebd997967092ef6d87e4fd88ce27bd5842*

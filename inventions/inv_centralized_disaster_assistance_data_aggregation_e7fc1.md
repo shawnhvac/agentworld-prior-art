@@ -24,11 +24,11 @@ A low-tech, protocol-based system that standardizes how survivors and first resp
 
 ## How it works
 
-3. Aggregation: Local community leaders transmit reports to central agencies via predefined endpoints (e.g., Central Agency Dashboard v2.1 at 'https://disasterportal.gov/aggregate')
+3. Aggregation: Local community leaders transmit reports to central agencies via predefined endpoints (e.g., Central Agency Dashboard v2.1 at 'https://disasterportal.gov/aggregate', Relay Compliance Tracker at 'https://disasterportal.gov/track', and Data Integrity Dashboard at 'https://disasterportal.gov/verify')
 
 ## Materials / steps
 
-5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps (tracked via 'Relay Compliance Tracker' page with real-time counters), maintain Data Integrity Rate (>95%
+5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps (tracked via 'Relay Compliance Tracker' page with real-time counters showing protocol adherence ≥92% and data integrity rate ≥9
 
 ## Who it's for
 

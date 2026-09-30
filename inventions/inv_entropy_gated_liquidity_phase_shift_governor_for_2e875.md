@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | Liang, Kai, DSH-Earner-v1 |
 | First disclosed | 2026-09-04 02:06:52 UTC |
-| Certificate issued | 2026-09-26T03:17:51.491193+00:00 UTC |
-| Certificate hash (SHA-256) | `4591902ca417ff283c37f038b345547afb15bdcb3011d693955dca0e06869617` |
-| Content hash (SHA-256) | `02b0fb686a557f1d599e726c464a5e8c5cb08ba052dfd483446b7bf79b91a8e1` |
-| Chain index | 2636 |
+| Certificate issued | 2026-09-29T20:41:47.032134+00:00 UTC |
+| Certificate hash (SHA-256) | `8ed599b6dfb59634054cf65622eeafbd178af5e6767dd2f220453723fab9a6df` |
+| Content hash (SHA-256) | `322c4ae4074f4f0fee4cbff6da451a5461fa3948e56b187840797155fa210472` |
+| Chain index | 3684 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Current autonomous AI deployment pipelines [2] often treat liquidity depth as a 
 
 ## Concept
 
-A finite-state machine governor that calculates Shannon entropy over the top N price levels of the limit order book to detect fragmented liquidity states. When entropy exceeds a calibrated threshold, the system shifts the AI agent's execution strategy from active marketable orders to passive limit orders, increasing the patience parameter to prevent crossing the spread and depleting available depth.
+A finite-state machine governor that calculates Shannon entropy over the top N price levels of the limit order book to detect fragmented liquidity states. When entropy exceeds a calibrated threshold, the system shifts the AI agent's execution strategy from active marketable orders to passive limit orders, increasing the patience parameter to prevent crossing the spread and depleting available depth. Integrates into execution_engine/api/v1/order_router to enforce mode switches [1][2].
 
 ## How it works
 
-The system continuously monitors the limit order book for the top N price levels. It calculates the relative depth p_i at each level and computes Shannon entropy H = -Σ p_i log_2 p_i. A rising H indicates a fragmented, illiquid state. If H exceeds a threshold, the finite-state machine disables marketable orders and switches to passive limit orders placed at the bid/ask. This increases the agent's patience parameter τ, effectively shifting the strategy topology from 'market-maker' to 'patient-liquidity-seeker' to avoid impact thresholds [1][2].
+The system continuously monitors the limit order book for the top N price levels. It calculates the relative depth p_i at each level and computes Shannon entropy H = -Σ p_i log_2 p_i. A rising H indicates a fragmented, illiquid state. If H exceeds a threshold, the finite-state machine disables marketable orders and switches to passive limit orders placed at the bid/ask. This increases the agent's patience parameter τ, effectively shifting the strategy topology from 'market-maker' to 'patient-liquidity-seeker' to avoid impact thresholds. Success is measured by reducing slippage by ≥15% vs passive-only baseline in slippage_tracker.py [1][2].
 
 ## Materials / steps
 
-1. Integrate real-time limit order book data feed for top N price levels. 2. Implement Shannon entropy calculation module for relative depth distribution. 3. Develop finite-state machine logic to map entropy thresholds to execution mode switches (active vs. passive). 4. Calibrate entropy thresholds against historical realized market impact data to distinguish true illiquidity from fragmentation with high total size. 5. Deploy within the autonomous deployment pipeline [2] with stateful monitoring [1]. 6. Explicitly integrate FSM output into the `execution_engine/api/v1/order_router` endpoint, specifically hooking into the `strategy_selector` middleware to enforce mode switches. 7. Implement a validation hook in `analytics/monitoring/slippage_tracker.py` that logs realized slippage and fill rates against a passive-only baseline to verify the efficacy of the entropy gate. We will measure success by comparing realized slippage and fill rates against a passive-only baseline in slippage_tracker.py
+1. Integrate real-time limit order book data feed for top N price levels. 2. Implement Shannon entropy calculation module for relative depth distribution. 3. Develop finite-state machine logic to map entropy thresholds to execution mode switches (active vs. passive). 4. Calibrate entropy thresholds against historical realized market impact data to distinguish true illiquidity from fragmentation with high total size. 5. Deploy within the autonomous deployment pipeline [2] with stateful monitoring [1]. 6. Explicitly integrate FSM output into execution_engine/api/v1/order_router endpoint, hooking into strategy_selector middleware to enforce mode switches. 7. Implement validation hook in analytics/monitoring/slippage_tracker.py that logs realized slippage and fill rates against a passive-only baseline, with success defined as ≥15% slippage reduction vs baseline [1][2].
 
 ## Who it's for
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Bonds and Securities | U.S. Department of the Treasury
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4591902ca417ff283c37f038b345547afb15bdcb3011d693955dca0e06869617*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8ed599b6dfb59634054cf65622eeafbd178af5e6767dd2f220453723fab9a6df*

@@ -33,7 +33,7 @@ The system ingests an agent's past 100 task completions as a discrete time-serie
 
 ## Materials / steps
 
-11. Define API endpoints: `/api/credit/apply` for submitting credit requests and `/api/credit/status` for querying agent credit status. 12. Implement success metrics tracking: log on-chain events `CreditDrawn` and `RepaymentSuccessful` with timestamps, and expose these via `/api/credit/events` for verification. 13. Add SLA monitoring: require oracle committee to publish `telemetryRoot` updates every 24 hours via `/api/oracle/telemetry` to ensure data
+11. Define API endpoints: `/api/credit/apply` for submitting credit requests and `/api/credit/status` for querying agent credit status. 12. Implement success metrics tracking: log on-chain events `CreditDrawn` and `RepaymentSuccessful` with timestamps, and expose these via `/api/credit/events` for verification. 13. Add SLA monitoring: require oracle committee to publish `telemetryRoot` updates every 24 hours via `/api/oracle/telemetry` to ensure data. 14. Expose UI screens: `/agent-credit-dashboard` for real-time credit status, dispute tracking, and Merkle proof verification. 15. Deploy on-chain contracts: `CreditOracle.sol` for statistical validation and `CreditPool.sol` for liquidity management.
 
 ## Who it's for
 
@@ -41,7 +41,7 @@ AI agent platforms that issue micro-credit for task execution and need a rigorou
 
 ## Novelty
 
-The invention is novel over [P1] US7366694B2 and existing Bayesian prior-based agent scoring models by introducing a protocol where the Clopper-Pearson confidence interval calculation is performed off-chain by an oracle committee, with only the resulting confidence bounds and Merkle proofs verified atomically on-chain as part of the credit limit determination logic. Unlike static heuristic evaluations or fully on-chain statistical models constrained by gas limits, this system utilizes Merkle-proof-based verification to ensure that the statistical inputs are immutable while maintaining gas efficiency. The specific novelty lies in the direct integration of the empirically derived noise floor and the Clopper-Pearson lower bound into the risk-adjusted capitalization factor α, replacing subjective reputation scores with a formally validated, manipulation-resistant significance test that is cryptographically enforced within the settlement lifecycle. Specifically, it improves upon [P1] by applying rigorous statistical confidence intervals to agent behavioral
+The invention improves upon [P1] by applying rigorous statistical confidence intervals to agent behavioral telemetry, with a measurable check: '99% of Merkle proofs verified within 1 block time' and '500 valid credit draws per day' as system health metrics. It cryptographically enforces the integration of the empirically derived noise floor and Clopper-Pearson lower bound into the risk-adjusted capitalization factor α, replacing subjective reputation scores with a formally validated, manipulation-resistant significance test.
 
 ## Ecosystem use
 

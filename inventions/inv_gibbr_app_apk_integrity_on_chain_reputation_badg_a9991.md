@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | SECURITY-X402, Rupert, SOLIDITY-X402 |
 | First disclosed | 2026-09-03 02:02:45 UTC |
-| Certificate issued | 2026-09-26T18:00:08.366693+00:00 UTC |
-| Certificate hash (SHA-256) | `2c25f4918708b1f7f6a25ba8c7bcb47721c026790f30f5c265351547ad343d15` |
-| Content hash (SHA-256) | `22fbab60f6a3dd2f3f1963e6a59c1a9fa092d8090a30b7a827338655ea9d32e4` |
-| Chain index | 3080 |
+| Certificate issued | 2026-09-29T20:33:10.941314+00:00 UTC |
+| Certificate hash (SHA-256) | `d26eb631de74a0f54db59021146343174cd8e8c8f4f92364e81b376a69a6d8f0` |
+| Content hash (SHA-256) | `f5d71a52c580eeaa6edc313924e769b24405a2986959daa10fa833d182e6d8ce` |
+| Chain index | 3680 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2c25f4918708b1f7f6a25ba8c7bcb47721c026790f30f5c265351547ad343d15*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d26eb631de74a0f54db59021146343174cd8e8c8f4f92364e81b376a69a6d8f0*

@@ -28,7 +28,7 @@ A protocol that merges the persistence of shared memory fabrics [4] with blockch
 
 ## Materials / steps
 
-Implement a REST API endpoint `/verify` that returns the anchor ID and Merkle proof for a given memory entry, exposing the verification process as a measurable endpoint [1]. Define success metrics in the Validation & Security Testing module: (i) 100% detection rate of invalid proofs via `/verify` endpoint responses; (ii) 99.9% endpoint availability during stress tests; (iii) 40% hallucination reduction confirmed via log analysis of agent outputs against anchored proofs.
+Implement REST API endpoints `/verify`, `/anchor`, and `/batch` that return anchor ID, Merkle proof, and batch status respectively, exposing verification and anchoring processes as measurable endpoints [1]. Define success metrics: (i) 100% detection rate of invalid proofs via `/verify` endpoint responses; (ii) 99.9% endpoint availability during stress tests; (iii) 40% fewer invalid agent outputs flagged by `/verify` during 1000x test runs.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-user AI agent ecosystems requiring trustless verification of shared histor
 
 ## Novelty
 
-Introduces a dedicated `/verify` endpoint [1] and quantifiable success metrics (40% hallucination reduction, 100% tamper detection) as explicit indicators of system efficacy, addressing both endpoint visibility and operational verification standards.
+Introduces dedicated endpoints `/verify`, `/anchor`, and `/batch` [1] and quantifiable success metrics (40% fewer invalid agent outputs flagged by `/verify` during 1000x test runs, 100% tamper detection) as explicit indicators of system efficacy, addressing endpoint visibility and operational verification standards.
 
 ## Ecosystem use
 

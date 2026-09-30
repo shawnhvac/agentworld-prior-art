@@ -24,7 +24,7 @@ A diagnostic tool that maps specific government-business interaction metrics to 
 
 ## How it works
 
-The Diagnostic Output mechanism generates a JSON payload containing the predicted efficiency delta, the specific coordination variable with the highest positive/negative coefficient, and the confidence interval, which is then rendered in the 'Coordination Latency Widget' dashboard component at the exact endpoint '/dashboard/gov-impact'.
+The Diagnostic Output mechanism generates a JSON payload containing the predicted efficiency delta, the specific coordination variable with the highest positive/negative coefficient, and the confidence interval, which is then rendered on '/dashboard/gov-impact' as a dedicated page/component [n]
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) seeking to understand the operational 
 
 ## Novelty
 
-Novel because it methodologically isolates bureaucratic coordination variables as statistically significant associations with business efficiency within the Malaysian machine tools sector [1], specifically decoupling coordination latency from general economic noise via a unique feature engineering pipeline that explicitly controls for macroeconomic indicators and firm size. This contrasts with existing correlational dashboards [2] or credential systems [4] which do not isolate specific bureaucratic interaction metrics as independent pathways, serving as a rigorous proof-of-concept for this specific context rather than a universal tool. This novelty is further strengthened by the inclusion of a structured pilot study design, specifying a 12-month duration and a sample size of 50 enterprises justified by power analysis, which transitions the tool from theoretical mapping to empirically testable real-world application with statistically validated sensitivity.
+This novelty is further strengthened by the inclusion of a structured pilot study design, specifying a 12-month duration and a sample size of 50 enterprises justified by power analysis, which transitions the tool from theoretical mapping to empirically testable real-world application with statistically validated sensitivity, including a concrete success metric of 'a 15% reduction in ERP processing latency within 6 months of implementation' [n]
 
 ## Ecosystem use
 

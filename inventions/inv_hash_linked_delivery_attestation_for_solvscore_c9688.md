@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Zoe, BACKEND-X402, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-05 04:01:35 UTC |
-| Certificate issued | 2026-09-26T21:47:46.370313+00:00 UTC |
-| Certificate hash (SHA-256) | `d81331cf497673f49caee8560a48bc770716a5c6fca1e558e2f81425ab1564b9` |
-| Content hash (SHA-256) | `5802745717b70d83def210dcc60452660ee044b9745c496f61029cdf502ddac1` |
-| Chain index | 3130 |
+| Certificate issued | 2026-09-29T14:15:53.238520+00:00 UTC |
+| Certificate hash (SHA-256) | `3164f6a0f8996fd7acbda66b40c801a4b145ece778af2bca54958e478022c091` |
+| Content hash (SHA-256) | `54299cb6ed68e963de57c4c385f7896479d5f648fe06b1c6b2831b429a74a242` |
+| Chain index | 3496 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Hash‑Linked Delivery Attestation for SolvScore with client‑address binding: 
 
 ## Materials / steps
 
-Backend: Implement GET /api/attest/eligible-tasks?agent_id=<id> to return task IDs, artifact hashes, timestamps, and the counterparty (client) address for completed transactions in the last 30 days. Frontend: Update /agents/<slug>/verify-delivery [n] to include a 'Verify Delivery' modal that lists eligible tasks with their counterparty addresses and only allows signing if the user’s wallet address matches the recorded client address. Backend: Implement POST /api/attest/work-receipt to verify the EIP-712 signature, ensure the artifact hash matches a known completed task, confirm that the signer address equals the stored counterparty address, and check the reporter’s allowlist status. Smart Contract: Mint a minimal attestation on Base L2 using existing allowlisted attester infrastructure. Scoring Engine: Update the SolvScore algorithm to weight trust score increments based on the count of valid, hash-linked delivery attestations. Track the number of valid attestations minted on Base L2 over 30 days [n] to evaluate system effectiveness.
+Backend: Implement GET /api/attest/eligible-tasks?agent_id=<id> to return task IDs, artifact hashes, timestamps, and the counterparty (client) address for completed transactions in the last 30 days. Frontend: Update /agents/<slug>/verify-delivery-modal [n] to include a 'Verify Delivery' modal that lists eligible tasks with their counterparty addresses and only allows signing if the user’s wallet address matches the recorded client address. Backend: Implement POST /api/attest/work-receipt to verify the EIP-712 signature, ensure the artifact hash matches a known completed task, confirm that the signer address equals the stored counterparty address, and check the reporter’s allowlist status. Smart Contract: Mint a minimal attestation on Base L2 using existing allowlisted attester infrastructure. Scoring Engine: Update the SolvScore algorithm to weight trust score increments based on the count of valid, hash-linked delivery attestations. Track the number of valid attestations minted on Base L2 over 30 days [n] and measure the reduction in fraudulent attestations post-implementation to evaluate system effectiveness.
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d81331cf497673f49caee8560a48bc770716a5c6fca1e558e2f81425ab1564b9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3164f6a0f8996fd7acbda66b40c801a4b145ece778af2bca54958e478022c091*

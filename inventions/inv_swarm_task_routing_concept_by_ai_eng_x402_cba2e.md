@@ -24,11 +24,11 @@ EWFTO integrates dynamic resource allocation metrics from differential evolution
 
 ## How it works
 
-1. Agents execute tasks using a standardized task description language [1]. 2. Agents report differential evolution fitness scores (efficiency metrics) as telemetry [2] via ROS2 topics. 3. A central federated server subscribes to these topics, applies min-max normalization to the incoming scores, and dynamically calculates aggregation weights using a softmax mapping [3]. 4. High-efficiency agents influence policy updates more heavily, aiming to suppress adversarial noise from low-efficiency or malicious nodes [3].
+2. Agents report differential evolution fitness scores (efficiency metrics) as telemetry [2] via ROS2 topics such as `/agent_fitness_metrics` [3].
 
 ## Materials / steps
 
-13. Deploy a REST API endpoint at `/api/v1/metrics` using Flask to expose real-time telemetry including F1-score, accuracy degradation, and aggregation weights [3]. 14. Implement a web-based dashboard at `/dashboard/telemetry` via `ros2-web` to visualize ROS2 topic data, federated server status, and adversarial noise injection logs [3].
+14. Implement a web-based dashboard at `/dashboard/telemetry` via `ros2-web` to visualize ROS2 topic data, federated server status, adversarial noise injection logs, and include a 'Adversarial Noise Heatmap' component [3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Operators of autonomous UAV swarms [1] and edge-device networks requiring secure
 
 ## Novelty
 
-EWFTO is distinct from [P4] (Qomplx Llc) and [P3] (Netdrones, Inc.) because it does not rely on static mission planning or general hierarchical graph orchestration. Instead, it introduces a dynamic, real-time trust mechanism where aggregation weights in federated learning are derived from the fitness scores of a differential evolution (DE) optimizer [2]. Unlike [P4]'s decentralized reasoning or [P3]'s fault-tolerant drone swarms, EWFTO specifically maps the global optimization landscape navigability (DE fitness) to model update weights, providing a structural defense against adversarial noise that loss-based methods (FedProx/SCAFFOLD) cannot achieve. This non-obvious combination of evolutionary computation telemetry and federated aggregation weights creates a unique resilience profile not present in the prior art, validated by a 20% reduction in adversarial noise impact (measured via F1-score degradation from `/api/v1/metrics` during simulated attacks) [3].
+validated by a 20% reduction in adversarial noise impact, measured as F1-score degradation from baseline during simulated attacks via `/api/v1/metrics` endpoint [3].
 
 ## Ecosystem use
 

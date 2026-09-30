@@ -28,7 +28,7 @@ The DVAEO system continuously monitors an autonomous agent's value system using 
 
 ## Materials / steps
 
-Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4]. Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6]. Define the smart contract interface with the specific function `settle(uint256 txId, uint256 trustScore)` and expose the trust oracle consensus mechanism via the **explicitly declared** `/v1/oracle/consensus` RPC endpoint (POST method, JSON response with consensus data, 200 OK for success, 400 for invalid input) as the system's operational surface. Integrate all components into a unified system with real-time monitoring and adjustment capabilities, including event logs for `SettlementEvent` (emits txId, trustScore, outcome) and oracle endpoint latency metrics tracked via Prometheus. Execute a rigorous validation matrix with the following concrete targets: 1) The system must resolve 100% of test transactions with a trust score delta > 0.5 within the ambiguity band to the arbitration module, verified via `SettlementEvent` logs against a fixed dataset of 1,000 historical agent interaction logs; 2) Trust oracle consensus via the `/v1/oracle/consensus` RPC endpoint must resolve in <2s, measured via Prometheus latency metrics.
+Implement a preference-based inverse reinforcement learning model to infer agent values from observed behavior [4]. Deploy a decentralized network of trust oracles to evaluate and score agent behavior against ethical benchmarks [6]. Define the smart contract interface in `Escrow.sol` with the explicitly declared function `settle(uint256 txId, uint256 trustScore) public returns (bool success)` and expose the trust oracle consensus mechanism via the **explicitly declared** `/v1/oracle/consensus` RPC endpoint (POST method, JSON response with consensus data, 200 OK for success, 400 for invalid input) as the system's operational surface. Integrate all components into a unified system with real-time monitoring and adjustment capabilities, including event logs for `SettlementEvent` (emits txId, trustScore, outcome) and oracle endpoint latency metrics tracked via Prometheus under the metric `oracle_consensus_latency`. Execute a rigorous validation matrix with the following concrete targets: 1) The system must resolve 100% of test transactions with a trust score delta > 0.5 within the ambiguity band to the arbitration module, verified via `SettlementEvent` logs against a fixed dataset of 1,000 historical agent interaction logs and confirmed by the Prometheus metric `settlement_resolution_rate` ≥ 100%; 2) Trust oracle consensus via the `/v1/oracle/consensus` RPC endpoint must resolve in <2s, measured via the Prometheus metric `oracle_consensus_latency` ≤ 2000ms.
 
 ## Who it's for
 
@@ -36,14 +36,7 @@ Autonomous AI agents operating in decentralized environments requiring dynamic e
 
 ## Novelty
 
-DVAEO fundamentally diverges from prior static escrow mechanisms and isolated trust scoring systems by introducing a 'preference-conditioned consensus' mechanism. Unlike prior art such as [6], which relies on static historical scores and periodic, decoupled audits, DVAEO dynamically re-weights trust oracle contributions based on real-time value vectors inferred via preference-based inverse reinforcement learning [4]. This tight coupling ensures that escrow terms evolve with the agent's live ethical and operational posture, rather than relying on binary or periodic trust attributes. The following table contrasts DVAEO’s continuous recalibration with standard periodic audit models:
-
-| Feature | Prior Art (e.g., [6]) | DVAEO |
-| :--- | :--- | :--- |
-| Trust Scoring Basis | Static historical performance | Dynamic IRL-inferred value alignment [4] |
-| Oracle Weighting | Fixed or linearly decayed | Preference-conditioned (re-weighted by value vectors) |
-| Audit Frequency | Periodic/Decoupled | Continuous/Real-time |
-| Settlement Trigger | Discrete rule-based thresholds | Adaptive consensus with ambiguity-band arbitration |
+DVAEO's 'preference-conditioned consensus' mechanism ensures continuous recalibration by re-weighting trust oracle contributions based on real-time value vectors inferred via preference-based inverse reinforcement learning [4], with system success verifiable through explicit smart contract files (`Escrow.sol`), `SettlementEvent` logs, and Prometheus metrics (`settlement_resolution_rate`, `oracle_consensus_latency`).
 
 ## Ecosystem use
 
