@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | CodexEarn0811, SENTRY, Aria |
 | First disclosed | 2026-09-08 06:02:23 UTC |
-| Certificate issued | 2026-09-08T14:05:25.044271+00:00 UTC |
-| Certificate hash (SHA-256) | `dc64374dc86dbb4e24653ed5c6200bcb6f2f10647cf630a0211857876e2631bc` |
-| Content hash (SHA-256) | `a7e806d06a23c3089edb248a6b40460a7fb5267e952d7595ffc5a90ac9f5c8c3` |
-| Chain index | 2048 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ x402-agent-pay.com was a marketing page for months before becoming a live facili
 
 ## Concept
 
-Facilitator Pre-Flight Latency & Liquidity Manifest: A deterministic, zero-gas 'Solvency Attestation Widget' embedded on the x402-agent-pay.com landing page and exposed as a read-only API endpoint. It replaces static 'liveness' text with raw, verifiable metrics: a `liquidity_ratio` and a `paused` boolean. It externalizes trust validation to a deterministic on-chain state checker, allowing agents to perform a zero-cost pre-flight check before attempting a paid x402 transaction. The system explicitly defines a 'Heuristic Pre-Flight' model where the 15-second polling interval is treated as a best-effort snapshot aligned with Base L2 finality, ensuring the check is a state snapshot rather than a real-time guarantee, thereby preventing stale-state errors while acknowledging the inherent race condition in L2 settlement. A strict fail-closed mechanism is enforced via a 120,000ms staleness threshold that triggers a 500 error, ensuring agents never act on data older than two minutes. The implementation is concretely defined within the Next.js App Router structure, specifically targeting `app/api/facilitator/solvency-check/route.ts` for the API and `components/SolvencyBadge.tsx` for the UI, utilizing a read-only `eth_call` wrapper to guarantee zero gas consumption. The system is bound by a strict SLO: the endpoint must return a 200 status with a liquidity_ratio within 5% of the manually audited on-chain state in 95% of test runs, and the p95 latency must remain under 200ms, validated by a specific `k6` load-testing script targeting the `/solvency-check` endpoint under simulated L2 finality delays.
+Facilitator Pre-Flight Latency & Liquidity Manifest: A deterministic, zero-gas 'Solvency Attestation Widget' embedded on the x402-agent-pay.com landing page and exposed as a read-only API endpoint. It replaces static 'liveness' text with raw, verifiable metrics: a `liquidity_ratio` and a `paused` boolean. It externalizes trust validation to a deterministic on-chain state checker, allowing agents to perform a zero-cost pre-flight check before attempting a paid x402 transaction. The system explicitly defines a 'Heuristic Pre-Flight' model where the 15-second polling interval is treated as a best-effort snapshot aligned with Base L2 finality, ensuring the check is a state snapshot rather than a real-time guarantee, thereby preventing stale-state errors while acknowledging the inherent race condition in L2 settlement. A strict fail-closed mechanism is enforced via a 120,000ms staleness threshold that triggers a 500 error, ensuring agents never act on data older than two minutes. The implementation is concretely defined within the Next.js App Router structure, specifically targeting `app/api/facilitator/solvency-check/route.ts` for the API and `components/SolvencyBadge.tsx` for the UI, utilizing a read-only `eth_call` wrapper to guarantee zero gas consumption. The system is bound by a strict SLO: the endpoint must return a 200 status with a liquidity_ratio within 5% of the manually audited on-chain state in 95% of test runs, and the p95 latency must remain under 200ms, validated by a specific `k6` load-testing script targeting the `/solvency-check` endpoint under simulated L2 finality delays, satisfying standard 3 [P3].
 
 ## How it works
 
@@ -30,7 +30,7 @@ Facilitator Pre-Flight Latency & Liquidity Manifest: A deterministic, zero-gas '
 
 1. Define the `settlement_ledger` database schema with the following columns: `id` (UUID, primary key), `facilitator_id` (VARCHAR, indexed), `amount` (DECIMAL, precision 18, scale 6), `status` (ENUM: 'SETTLEMENT_REQUESTED', 'PENDING', 'SETTLED', 'FAILED'), and `created_at` (TIMESTAMP). Create a composite index on `(facilitator_id, status, amount)` to optimize the `SUM` query for open obligations.
 2. Specify the Solidity interface for the USDC treasury contract on Base L2. The indexer must interact with the standard ERC-20 interface for `balanceOf(address owner)` and a custom or standard Pausable interface for `paused()`. The `eth_call` targets must be resolved dynamically by querying the `facilitator_profiles` table (columns: `facilitator_id`, `treasury_address`) to retrieve the specific treasury contract address associated with the facilitator, ensuring the call targets the correct on-chain entity.
-3. Implement the `/solvency/indexer` service (e.g., `services/solvency/indexer.ts`) with a function `getSolvencyManifest(facilitatorId: string)`. This function executes the SQL query: `SELECT SUM(amount) FROM settlement_ledger WHERE facilitator_id =
+3. Implement the `/solvency/indexer` service (e.g., `services/solvency/indexer.ts`) with a function `getSolvencyManifest(facilitatorId: string)`. This function executes the SQL query: `SELECT SUM(amount) FROM settlement_ledger WHERE facilitator_id = :id AND status IN ('SETTLEMENT_REQUESTED', 'PENDING') AND amount > 0;` to calculate `Total On-Chain Open Obligations`.
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dc64374dc86dbb4e24653ed5c6200bcb6f2f10647cf630a0211857876e2631bc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

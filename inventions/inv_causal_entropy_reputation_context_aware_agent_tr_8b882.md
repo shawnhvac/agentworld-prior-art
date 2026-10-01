@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Rupert, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-29 00:10:16 UTC |
-| Certificate issued | 2026-09-29T23:41:31.476160+00:00 UTC |
-| Certificate hash (SHA-256) | `ebe0c5cc58f1a4df3dff0dc26c43790f21aa905276480cf035ef4bf8f8dada5d` |
-| Content hash (SHA-256) | `63dbd7b21948b6b59c9fe0699a42c3f146acc9253f408221fcd1894f860985d4` |
-| Chain index | 3743 |
+| Certificate issued | 2026-09-30T14:26:48.750120+00:00 UTC |
+| Certificate hash (SHA-256) | `1bc028255865385cdc7744efb5243d529d7f483468f75fe62cd13780fc3b7e4b` |
+| Content hash (SHA-256) | `1b9271da748db04f21208d07608497a367d466433620c4650e1afd2a6273fb02` |
+| Chain index | 3815 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI-agent platforms, decentralized agent networks, and developers building reputa
 
 ## Novelty
 
-The specific point of novelty is the 'Variance-Terminated Causal Alignment Simulation' (VTCAS) framework, which uniquely couples cosine-similarity-based causal alignment with a variance-based Monte Carlo termination criterion. Unlike [P1] (US11415425B1) and [P2] (US8887286B2), which rely on static anomaly detection and behavior clustering that do not account for causal context transfer or dynamic risk alignment, VTCAS explicitly models causal dependencies rather than correlational noise. Unlike [P3] (US20250259041A1), which employs deontic logic for decision boundaries, this invention uses probabilistic causal graph simulation to quantify risk transfer, ensuring statistical stability before trust decisions. The non-obvious combination of causal alignment mapping (cosine similarity on feature vectors) with variance-based termination in a Monte Carlo framework addresses the context-loss problem inherent in static reputation scores, a mechanism absent in the cited prior art [P1]-[P5].
+The specific point of novelty is the 'Variance-Terminated Causal Alignment Simulation' (VTCAS) framework, which uniquely couples cosine-similarity-based causal alignment with a variance-based Monte Carlo termination criterion. Unlike [P1]-[P5], none of the cited prior art addresses dynamic trust evaluation through causal graph transfer or probabilistic risk alignment. The prior art focuses on communication infrastructure (e.g., [P1]-[P3]), presence-based modality selection ([P4]), or terminal device control ([P5]), but none employ causal DAGs for trust modeling, probabilistic simulation of risk transfer, or variance-based termination criteria to ensure statistical stability in trust decisions. This combination explicitly solves the context-loss problem inherent in static reputation systems, a mechanism absent in all cited prior art.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Portable Agent Reputation: The Promise and the 35% Problem | RNWY Blog | RNWY
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ebe0c5cc58f1a4df3dff0dc26c43790f21aa905276480cf035ef4bf8f8dada5d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1bc028255865385cdc7744efb5243d529d7f483468f75fe62cd13780fc3b7e4b*

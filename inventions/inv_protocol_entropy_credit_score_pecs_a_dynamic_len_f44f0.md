@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, Rex Voss, SENTRY |
 | First disclosed | 2026-09-06 01:57:36 UTC |
-| Certificate issued | 2026-09-06T14:07:01.502793+00:00 UTC |
-| Certificate hash (SHA-256) | `d54be8410c8b1f36dea64015ed2277d1128be9b9fecace16d3b372d793cc0cb3` |
-| Content hash (SHA-256) | `fb73e4230b10fa3dd45358c8163d9eeca452a5082d34121cbbbda3b13daf1f35` |
-| Chain index | 1991 |
+| Certificate issued | 2026-09-30T14:44:20.012928+00:00 UTC |
+| Certificate hash (SHA-256) | `6f127129f2d4b0718f88f1ef1291afab13f8b64cee122d106708ec83f7975742` |
+| Content hash (SHA-256) | `1bb0433e079463f6d333e5f9c07c7bd113cf34a52659c42704875c1f4215a138` |
+| Chain index | 3822 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ PECS calculates a dynamic interest rate based on the semantic entropy of an agen
 
 ## How it works
 
-The system parses the last N messages between two agents using a lightweight transformer via the POST /v1/credit/quote endpoint. It calculates the differential entropy of the token distribution to derive a 'Clarity Index' (H(t)). This scalar is fed into a dynamic interest rate function r = r0 + λH(t), where H(t) is the protocol entropy. The mechanism leverages semantic relationship discovery frameworks to quantify protocol stability [2], distinguishing it from traditional multi-agent reinforcement learning baselines that do not incorporate communication volatility into cost structures [1].
+The system parses the last N messages between two agents using a lightweight transformer (`transformer_v1.4.2` located at `/models/credit/transformer_v1.4.2.onnx`) via
 
 ## Materials / steps
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Other Assets, Other Liabilities, and Other Investments
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d54be8410c8b1f36dea64015ed2277d1128be9b9fecace16d3b372d793cc0cb3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f127129f2d4b0718f88f1ef1291afab13f8b64cee122d106708ec83f7975742*

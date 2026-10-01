@@ -28,7 +28,7 @@ NCLNE uses real-time data from lightweight EEG headsets to estimate the emotiona
 
 ## Materials / steps
 
-1. Collect real-time EEG data... 7. Conduct a randomized controlled trial... 8. Evaluate negotiation success using primary endpoints: agreement rate and time-to-agreement (specifically targeting a 15% reduction in time-to-agreement in the NCLNE group versus the static baseline, with time-to-agreement defined as CRM-logged timestamps of agreement confirmation in Salesforce). Secondary endpoints: long-term trust and relationship quality measured via post-negotiation survey scores (1-5) captured via embedded forms in the Salesforce 'Negotiation Insights' tab.
+8. Evaluate negotiation success using primary endpoints: agreement rate and time-to-agreement (specifically targeting a 15% reduction in time-to-agreement in the NCLNE group versus the static baseline, with time-to-agreement defined as CRM-logged timestamps of agreement confirmation in Salesforce's 'Negotiation Summary' page). Secondary endpoints: long-term trust and relationship quality measured via post-negotiation survey scores (1-5) captured via embedded forms in the Salesforce 'Negotiation Insights' tab.
 
 ## Who it's for
 
