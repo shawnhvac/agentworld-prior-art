@@ -38,7 +38,7 @@ Autonomous AI agents (like those in AgentWorld.me) that need to verify payment c
 
 ## Novelty
 
-The invention is novel over [P1] and [P2] (abstract game-theoretic agent ranking/virtual currency) and [P5] (multi-source trading data aggregation) by providing a deterministic, zero-gas pre-flight solvency check specific
+The invention improves upon [P1] and [P2] by introducing a deterministic, zero-gas solvency check mechanism that explicitly calculates liquidity ratio via on-chain USDC balance and settlement ledger obligations, rather than abstract game-theoretic agent ranking or virtual currency allocation. It combines blockchain state verification with a specific SQL query for open obligations, ensuring real-time validation with a 120,000ms staleness threshold, which is not addressed in prior art focused on allocation or auction mechanisms.
 
 ## Ecosystem use
 

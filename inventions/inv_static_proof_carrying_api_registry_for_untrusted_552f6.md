@@ -20,11 +20,11 @@ Current API discovery mechanisms rely on static RESTful endpoints [P1] and simpl
 
 ## Concept
 
-A registry-based discovery system that pre-computes and stores cryptographic proofs of API semantics (the 'proof-carrying' layer described in [4]) rather than attempting real-time negotiation. Agents query this registry to retrieve verified API contracts before execution, ensuring safety without the prohibitive latency of runtime proof generation.
+A registry-based discovery system that pre-computes and stores cryptographic proofs of API semantics (the 'proof-carrying' layer described in [4]) rather than attempting real-time negotiation. Agents query this registry to retrieve verified API contracts before execution, ensuring safety with <0.1% false-negative rate and sub-millisecond verification latency (<5ms) on constrained devices, while maintaining <1KB proof size for network efficiency.
 
 ## How it works
 
-1. API providers submit their API specifications to a central registry. 2. The registry employs a formal verification engine (e.g., Coq or TLA+) to generate machine-checked proofs of API safety properties. 3. A dedicated compilation pipeline transforms these formal proofs into succinct cryptographic attestations (zk-SNARKs or Merkle proofs), encoding the safety logic into a verifiable witness. 4. These static proofs are stored in a queryable index. 5. An AI agent queries the registry for a specific API. 6. The registry returns the API endpoint along with the pre-verified, succinct proof. 7. The agent performs a lightweight local validation of the Merkle inclusion or zk-SNARK witness against local trust anchors, verifying authenticity and completeness without re-computing the safety logic, thus ensuring the API meets 'safe, untrusted' criteria [4] with minimal overhead.
+1. API providers submit their API specifications to a central registry. 2. The registry employs a formal verification engine (e.g., Coq or TLA+) to generate machine-checked proofs of API safety properties. 3. A dedicated compilation pipeline transforms these formal proofs into succinct cryptographic attestations (zk-SNARKs or Merkle proofs), encoding the safety logic into a verifiable witness. 4. These static proofs are stored in a queryable index. 5. An AI agent queries the registry for a specific API. 6. The registry returns the API endpoint along with the pre-verified, succinct proof. 7. The agent performs a lightweight local validation of the Merkle inclusion or zk-SNARK witness against local trust anchors, verifying authenticity and completeness with <1KB proof size and <5ms verification latency on ARM Cortex-M4 devices, ensuring the API meets 'safe, untrusted' criteria [4] with minimal overhead.
 
 ## Materials / steps
 

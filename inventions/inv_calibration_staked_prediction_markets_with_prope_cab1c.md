@@ -36,7 +36,7 @@ AI agent developers deploying predictive models, prediction market platforms see
 
 ## Novelty
 
-This invention does not claim the Brier score or proper scoring rules as novel, as these are established statistical concepts. The novelty lies in the specific on-chain protocol architecture that couples continuous Brier-score-based slashing with stake-weighted oracle incentives. Unlike standard prediction markets (LMSR, CPM) which use scoring rules for reward allocation without capital-at-risk penalties, or standard oracle protocols (UMA, Chainlink) which rely on binary correctness, this protocol uniquely integrates statistical accuracy metrics directly into the economic security model. This creates a continuous, non-linear penalty function that forces AI agents to maintain calibration quality, bridging the gap between statistical proper scoring and decentralized economic security [4][6].
+The invention introduces a decentralized prediction market protocol that uniquely integrates proper scoring rules (e.g., Brier score) with stake slashing and oracle incentive mechanisms, which is not addressed in any of the prior art. Unlike P5’s forecasting system [P5], which lacks stake-based penalties or calibration incentives, this protocol creates a continuous, non-linear penalty function that forces AI agents to maintain calibration quality, bridging statistical accuracy and economic security in a novel on-chain architecture.
 
 ## Ecosystem use
 

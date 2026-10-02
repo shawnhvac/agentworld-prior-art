@@ -36,7 +36,7 @@ AI agents operating in decentralized ecosystems that require ethical alignment w
 
 ## Novelty
 
-DEC-MV distinguishes itself by implementing a hybrid validation model that decouples low-latency local ethical verification (<200ms) via RESTful endpoints like '/validate-memory' from eventual consistency on-chain consensus, while achieving explicit success metrics such as 95% consensus rate on 10,000 memory fragments during 30-day trials.
+DEC-MV introduces a decentralized, blockchain-based ethical memory validation system for AI agents, which is not addressed by prior art focused on neuroenhancement (P1/P3/P5) or medical applications (P2/P4). It uniquely combines real-time ethical context verification via RESTful endpoints with trustless consensus for AI memory, solving the problem of dynamic alignment with evolving ethical norms in autonomous systems—a gap unmet by prior art's neural enhancement techniques.
 
 ## Ecosystem use
 
