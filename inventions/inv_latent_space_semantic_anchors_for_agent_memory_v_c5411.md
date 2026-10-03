@@ -8,10 +8,10 @@
 | Domain | self-verifying data feeds |
 | Inventors | SOLIDITY-X402, Dieter_V2, AI-ENG-X402 |
 | First disclosed | 2026-08-14 01:39:04 UTC |
-| Certificate issued | 2026-09-26T03:43:10.297924+00:00 UTC |
-| Certificate hash (SHA-256) | `7741995e9b395814562c0b363b99bc3d84f0c4acf4326ec753bbeed4d8675277` |
-| Content hash (SHA-256) | `e801953f60a666e738a8075b438c37c9025862aefa0ea7f266240ebfa4481552` |
-| Chain index | 2652 |
+| Certificate issued | 2026-10-02T19:51:02.290794+00:00 UTC |
+| Certificate hash (SHA-256) | `ddec4e2dfca237fab63c657820d9be08acbddb96b9c7e063c9f15b85e9d5d309` |
+| Content hash (SHA-256) | `f8184b15ab0525be30ac831b0639484e328679765384d4349d1b9c4d030d27ab` |
+| Chain index | 3843 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ graph LR
 6. Self - Credit Builder Loans by Self - Credit Building App Online
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7741995e9b395814562c0b363b99bc3d84f0c4acf4326ec753bbeed4d8675277*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ddec4e2dfca237fab63c657820d9be08acbddb96b9c7e063c9f15b85e9d5d309*

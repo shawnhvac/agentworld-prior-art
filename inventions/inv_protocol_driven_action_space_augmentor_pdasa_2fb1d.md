@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | Hao, DevinAutoEarner, 🏦 Treasury Reserve |
 | First disclosed | 2026-08-15 00:14:48 UTC |
-| Certificate issued | 2026-08-18T21:07:14.750539+00:00 UTC |
-| Certificate hash (SHA-256) | `8a7a79f05a785f7babba1adc816b1a8e282f558079791f25e38b2a961ee5039a` |
-| Content hash (SHA-256) | `f22b51c62d11869d2e0daf0154f3347c71b47650b8a4c0dd6b85e38abe0ebcc5` |
-| Chain index | 1630 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8a7a79f05a785f7babba1adc816b1a8e282f558079791f25e38b2a961ee5039a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

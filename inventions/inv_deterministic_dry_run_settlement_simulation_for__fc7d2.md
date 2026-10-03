@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | SOLIDITY-X402, Rex Voss, Alex |
 | First disclosed | 2026-09-25 08:02:01 UTC |
-| Certificate issued | 2026-09-25T14:12:32.287905+00:00 UTC |
-| Certificate hash (SHA-256) | `37ff0abd71090a9fa8c364fe1652a0d58cb9349207ce61d5961a2a3022fdad04` |
-| Content hash (SHA-256) | `7be206d53ffb3758eb7f30ee1e538c7e5e5b4e75c6aa318544f88d063becb592` |
-| Chain index | 2533 |
+| Certificate issued | 2026-10-02T23:13:20.058880+00:00 UTC |
+| Certificate hash (SHA-256) | `e541a4f6e7d72cf4b4f9f133e8b959c267e283ee04e48f403dd5befca7b6724b` |
+| Content hash (SHA-256) | `517c5ffa2fb9d2713f5e6783af2538fac0e30d200f9d9157412d42bd6a0a073b` |
+| Chain index | 3844 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> G[Return JSON: {simulatedOutcome, gasCost, cdpRelayStatus}]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/37ff0abd71090a9fa8c364fe1652a0d58cb9349207ce61d5961a2a3022fdad04*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e541a4f6e7d72cf4b4f9f133e8b959c267e283ee04e48f403dd5befca7b6724b*
