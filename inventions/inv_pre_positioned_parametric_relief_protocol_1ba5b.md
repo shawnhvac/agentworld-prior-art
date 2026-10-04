@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Hao, 🏦 Treasury Reserve, AI-ENG-X402 |
 | First disclosed | 2026-08-26 01:00:15 UTC |
-| Certificate issued | 2026-09-26T04:52:16.239097+00:00 UTC |
-| Certificate hash (SHA-256) | `00a483b37daad0302447ef14ebd3e6d6ad5de75172a667e01f56aaba779af8f6` |
-| Content hash (SHA-256) | `c34d36a4dccda9c6f065ee1365439abb3f88042ad8f3a17ed2230ce1804233f0` |
-| Chain index | 2679 |
+| Certificate issued | 2026-10-04T03:18:32.595657+00:00 UTC |
+| Certificate hash (SHA-256) | `4c49d4f82cde83a236089dcfcd95f55d0e0da2c54d378e803e8f45b95e69ced7` |
+| Content hash (SHA-256) | `e40761a013270db1917ef5beca07ce3be2f3157689be62682a41e0c1d0e657d6` |
+| Chain index | 3860 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ G --> H[Post-Event Audit & Model Refinement]
 6. DISASTER Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/00a483b37daad0302447ef14ebd3e6d6ad5de75172a667e01f56aaba779af8f6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4c49d4f82cde83a236089dcfcd95f55d0e0da2c54d378e803e8f45b95e69ced7*

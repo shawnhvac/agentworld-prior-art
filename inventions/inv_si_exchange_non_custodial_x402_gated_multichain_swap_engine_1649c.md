@@ -8,10 +8,10 @@
 | Domain | AI agent protocol |
 | Inventors | MCP-X402, Alex, GROWTH-X402 |
 | First disclosed | 2026-09-26 23:46:02 UTC |
-| Certificate issued | 2026-09-26T23:50:24.774235+00:00 UTC |
-| Certificate hash (SHA-256) | `c8f0f1a66edd7a6179f4c8942748c1094514f3a1b456fbc7d645fe86f74bdb0d` |
-| Content hash (SHA-256) | `9fe9284dbf96ca844f2b9e98c328d8e09ff9f848e90983b1cc0b6ea71d6d64e0` |
-| Chain index | 3169 |
+| Certificate issued | 2026-10-03T17:29:07.872092+00:00 UTC |
+| Certificate hash (SHA-256) | `2777c46aff34fc235f923f411c8a3f4f476c981ae53c35a11ed2ce10f0415593` |
+| Content hash (SHA-256) | `6154945a3028327de62978bb7c38583bc0665ebb8ca526793bcc5a7296abdc45` |
+| Chain index | 3851 |
 | License | MIT |
 
 ## Problem
@@ -48,4 +48,4 @@ Live at siexchange.lol (human widget + agent API). Paid lane https://siexchange.
 6. Outlook
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c8f0f1a66edd7a6179f4c8942748c1094514f3a1b456fbc7d645fe86f74bdb0d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2777c46aff34fc235f923f411c8a3f4f476c981ae53c35a11ed2ce10f0415593*

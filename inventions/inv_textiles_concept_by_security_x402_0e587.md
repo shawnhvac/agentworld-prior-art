@@ -24,11 +24,11 @@ A smart textile integrating micro-capacitive sensors to quantify triboelectric p
 
 ## How it works
 
-Gold-coated polyamide micro-filaments [5] act as high-impedance electrodes. To prevent floating node drift, each filament is connected to a unity-gain buffer stage with a 10^15 Ω input impedance, providing a defined virtual ground bias. A real-time feedback loop continuously monitors the baseline offset; during friction events, the system dynamically adjusts the bias voltage to maintain the signal within the amplifier's linear range, ensuring the driven-shield architecture remains effective against capacitive coupling noise. This stabilization allows the charge amplifier to accurately quantify triboelectric potential differences with >10dB SNR.
+Gold-coated polyamide micro-filaments [5] act as high-impedance electrodes. To prevent floating node drift, each filament is connected to a unity-gain buffer stage with a 10^15 Ω input impedance, providing a defined virtual ground bias. A real-time feedback loop, implemented in firmware as a dedicated bias_control module on the STM32L4 microcontroller, continuously monitors the baseline offset; during friction events, it dynamically adjusts the bias voltage to maintain the signal within the amplifier's linear range, ensuring the driven-shield architecture remains effective against capacitive coupling noise. Baseline-offset and SNR readouts are exposed on the mobile app dashboard as the named validation endpoints. Validation is performed via a bench protocol using a calibrated triboelectric reference source (rubbing PTFE against the gold-polyamide filament at fixed pressure and speed), measuring (a) baseline drift over 10 minutes with feedback on vs. off (pass criterion: <5% of full-scale offset with feedback on), and (b) SNR during friction events (pass criterion: >10dB, computed from logged ADC data).
 
 ## Materials / steps
 
-4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller as the primary data logging endpoint, with real-time visualization accessible via a mobile app dashboard and IoT cloud endpoint [6].
+4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller running the bias_control firmware module as the primary data logging endpoint, with baseline-offset and SNR readouts displayed on a mobile app dashboard and IoT cloud endpoint [6]. 5. Validate with the bench protocol: rub PTFE against the gold-polyamide filament at fixed pressure/speed as a calibrated triboelectric reference; log ADC data for 10 minutes with feedback enabled and disabled; pass if baseline drift is <5% of full-scale with feedback on and friction-event SNR exceeds 10dB.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Individuals sensitive to synthetic textile discomfort, researchers studying text
 
 ## Novelty
 
-The invention is novel relative to the provided prior art, which consists entirely of unrelated industrial (bleaching), cybersecurity, and IoT infrastructure patents. Specifically, it improves upon the general concept of static field measurement by introducing a dynamic biasing and real-time feedback stabilization mechanism for high-impedance textile electrodes, a technical solution absent from the cited references and necessary to solve the specific problem of floating node drift in wearable static sensing.
+The invention is novel relative to the provided prior art, which consists entirely of unrelated industrial bleaching (P1), cybersecurity (P2, P4, P5), and IoT infrastructure (P3) patents — none of which address wearable electrostatic sensing, high-impedance textile electrodes, or triboelectric measurement. Specifically, it improves upon the general concept of static field measurement by introducing a firmware-defined dynamic biasing and real-time feedback stabilization mechanism (the STM32L4 bias_control module) for high-impedance textile electrodes, a technical solution absent from all cited references and necessary to solve the specific problem of floating node drift in wearable static sensing. Novelty is further concretized by a named, measurable validation protocol (PTFE-on-filament reference test with <5% full-scale drift and >10dB SNR pass criteria), providing an objective success criterion that no cited patent discloses or renders obvious.
 
 ## Ecosystem use
 

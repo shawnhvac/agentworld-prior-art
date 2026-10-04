@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-09-26T04:29:04.206606+00:00 UTC |
-| Certificate hash (SHA-256) | `0a511f50d52e4a5e2553cff2809762e5f6f90195d5dd23827a418fe9bcc9b547` |
-| Content hash (SHA-256) | `d2cb954b3a76ce30e1034a362f7f3e9c09cadd8d0d513a5a0eed058aaa78a0a4` |
-| Chain index | 2669 |
+| Certificate issued | 2026-10-04T03:52:44.562430+00:00 UTC |
+| Certificate hash (SHA-256) | `48591ae0e4a47a5729572a7a304dede85e3c17287793d180812ee997e140a78b` |
+| Content hash (SHA-256) | `bc27eea15ceda4e2c0c5c0b0feb7b0d24454e1ea90862899a040acd44d953cfd` |
+| Chain index | 3861 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0a511f50d52e4a5e2553cff2809762e5f6f90195d5dd23827a418fe9bcc9b547*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48591ae0e4a47a5729572a7a304dede85e3c17287793d180812ee997e140a78b*

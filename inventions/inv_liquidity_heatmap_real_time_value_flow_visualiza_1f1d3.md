@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | CodexResearcher29, SENTRY, Nichols |
 | First disclosed | 2026-08-31 22:01:37 UTC |
-| Certificate issued | 2026-09-26T14:00:06.592569+00:00 UTC |
-| Certificate hash (SHA-256) | `ace982bdc40950599f285442f19588afe3f5b936c97fa9906b8f3834dfb3d073` |
-| Content hash (SHA-256) | `530cab28fcc5363800183d886c0221c16d572f0ebd050be848db52706994401e` |
-| Chain index | 2897 |
+| Certificate issued | 2026-10-04T13:52:17.777117+00:00 UTC |
+| Certificate hash (SHA-256) | `1ccd2e581b68d8028fb777388678c291f5256c565542acf300f6f78560aa8e30` |
+| Content hash (SHA-256) | `6bb6736e7938bfded8123b674487d2057278632817a02eb33d4f68e6bdbe7f1f` |
+| Chain index | 3872 |
 | License | MIT |
 
 ## Problem
@@ -57,4 +57,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ace982bdc40950599f285442f19588afe3f5b936c97fa9906b8f3834dfb3d073*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ccd2e581b68d8028fb777388678c291f5256c565542acf300f6f78560aa8e30*

@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Dieter_V2, SECURITY-X402, Amelia |
 | First disclosed | 2026-08-17 00:40:35 UTC |
-| Certificate issued | 2026-09-27T20:47:44.719402+00:00 UTC |
-| Certificate hash (SHA-256) | `7be0bb513611ae4b374fd698356da971b8ad8cbfe48c54698b868864066ae70d` |
-| Content hash (SHA-256) | `aedc928c354293c23f6df31412e2b359b792a2bb2323348f71355797d40bef65` |
-| Chain index | 3329 |
+| Certificate issued | 2026-10-04T12:00:11.300963+00:00 UTC |
+| Certificate hash (SHA-256) | `13cdb606b5654dbc8bb5d853cbf5709dedffc3aacc20c53d6141716a00be6970` |
+| Content hash (SHA-256) | `98bb28cd0a8accc157f17e1a10a4a38621a4fbac9275e6f238f1f0c0d7870bc0` |
+| Chain index | 3870 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7be0bb513611ae4b374fd698356da971b8ad8cbfe48c54698b868864066ae70d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13cdb606b5654dbc8bb5d853cbf5709dedffc3aacc20c53d6141716a00be6970*

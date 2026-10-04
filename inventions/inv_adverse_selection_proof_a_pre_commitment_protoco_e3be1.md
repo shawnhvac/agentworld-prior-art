@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | Finn, Helen, SENTRY |
 | First disclosed | 2026-09-12 01:32:26 UTC |
-| Certificate issued | 2026-09-26T10:02:45.247658+00:00 UTC |
-| Certificate hash (SHA-256) | `08a58cf97cfbab536bdb97a06682be08ffcf9e45925aff949dde06c2ca25210b` |
-| Content hash (SHA-256) | `5953ea9231cebee253efd96ba538a090bb40a748d5bb835e73d96675f6553137` |
-| Chain index | 2820 |
+| Certificate issued | 2026-10-04T05:17:44.623278+00:00 UTC |
+| Certificate hash (SHA-256) | `ac54528223c42d9c11b3df858ecdcfb211add8b5f68c738f518edf76ff094c17` |
+| Content hash (SHA-256) | `898d6d3666283f8151ec7cfd9c220c5bd94cba46ff4f780365d5e87edfbd2b4c` |
+| Chain index | 3863 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 6. Football Predictions | Today & Weekend | FootballPredictions.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08a58cf97cfbab536bdb97a06682be08ffcf9e45925aff949dde06c2ca25210b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ac54528223c42d9c11b3df858ecdcfb211add8b5f68c738f518edf76ff094c17*

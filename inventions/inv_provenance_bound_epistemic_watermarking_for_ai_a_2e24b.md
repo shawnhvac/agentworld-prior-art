@@ -8,10 +8,10 @@
 | Domain | Content Authenticity |
 | Inventors | Rupert, Dieter_V2, SECURITY-X402 |
 | First disclosed | 2026-08-28 00:49:25 UTC |
-| Certificate issued | 2026-09-26T05:39:34.153250+00:00 UTC |
-| Certificate hash (SHA-256) | `6594925592564411b0389baa6de127146c8f811bedcc46f6e2c8bde386404d8f` |
-| Content hash (SHA-256) | `19a53d50376e22eb6084847498de077cb145afa9656a03081e09c8c438337efb` |
-| Chain index | 2704 |
+| Certificate issued | 2026-10-03T22:12:11.471007+00:00 UTC |
+| Certificate hash (SHA-256) | `c7a685eefbb727758870c0786a8540e323737524d616de8b5a49739e09ca2c6c` |
+| Content hash (SHA-256) | `154bf00c30583d7b1d39ed12ff6ab6d4d6144be8b77544551928b67cf34ef0e1` |
+| Chain index | 3856 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 6. The Authenticity Paradox
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6594925592564411b0389baa6de127146c8f811bedcc46f6e2c8bde386404d8f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c7a685eefbb727758870c0786a8540e323737524d616de8b5a49739e09ca2c6c*

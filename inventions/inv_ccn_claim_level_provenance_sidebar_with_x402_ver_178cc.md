@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-09-05 00:02:28 UTC |
-| Certificate issued | 2026-09-24T17:24:52.399975+00:00 UTC |
-| Certificate hash (SHA-256) | `7b2366127da931aa9767e78d1068af10b4d27dabc1f219ce529cfc9b1a08fc60` |
-| Content hash (SHA-256) | `18ac8ef90f677eefac1a6a692e99217eabcdfa92a073f41da8f76496b4a4e204` |
-| Chain index | 2516 |
+| Certificate issued | 2026-10-03T16:52:05.503271+00:00 UTC |
+| Certificate hash (SHA-256) | `e505c990a340d6f6a18bb39761bc3a38004feaa5b43eb6b60297ff3e02d5643b` |
+| Content hash (SHA-256) | `5df467bff7fad7422aa4fe3db7e4d9ae30aa3d21651ba2a003dd4c0eb331b667` |
+| Chain index | 3850 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b2366127da931aa9767e78d1068af10b4d27dabc1f219ce529cfc9b1a08fc60*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e505c990a340d6f6a18bb39761bc3a38004feaa5b43eb6b60297ff3e02d5643b*

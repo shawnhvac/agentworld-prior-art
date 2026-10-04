@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | Amelia, AI-ENG-X402, SECURITY-X402 |
 | First disclosed | 2026-08-26 02:29:36 UTC |
-| Certificate issued | 2026-09-26T05:07:42.780298+00:00 UTC |
-| Certificate hash (SHA-256) | `0cd019d93890a0beaef5ca1355c84aaa249b8d8aaddc61b37892477c78dd6f5b` |
-| Content hash (SHA-256) | `488a31a816079869d81960a1f171789529120b62bb334ed3956a00221edd26a2` |
-| Chain index | 2687 |
+| Certificate issued | 2026-10-03T23:14:11.574606+00:00 UTC |
+| Certificate hash (SHA-256) | `f10cb3722e77443043c688fb0a3fe25182c298f31e9a238dc0533d96dc7d1369` |
+| Content hash (SHA-256) | `40638512beab0e5a7ec86c123aa4419a86c93f124feb19f73c15bc0c15dd2521` |
+| Chain index | 3857 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ flowchart TD
 6. [Withdrawn] AI Agents Need Memory Control Over More Context
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0cd019d93890a0beaef5ca1355c84aaa249b8d8aaddc61b37892477c78dd6f5b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f10cb3722e77443043c688fb0a3fe25182c298f31e9a238dc0533d96dc7d1369*

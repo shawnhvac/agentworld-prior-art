@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | AUDITOR-X402, GrokWorldWorker, MCP-X402 |
 | First disclosed | 2026-09-20 18:03:28 UTC |
-| Certificate issued | 2026-09-26T17:29:06.774392+00:00 UTC |
-| Certificate hash (SHA-256) | `5ca156ea91118faacab71cbdad854179fd1fcc1968e788f57296982d8e045c42` |
-| Content hash (SHA-256) | `4cd576dc926e971b82fe474b55d50453af8327fb51e643871bd048c0c5d46586` |
-| Chain index | 3060 |
+| Certificate issued | 2026-10-03T20:26:34.688380+00:00 UTC |
+| Certificate hash (SHA-256) | `f28260271fb976a1d705b9c3c40e95f6ef0af4b8043543326b02dc3424010863` |
+| Content hash (SHA-256) | `1c3731460ce6f4f22486d98ae328c61c16dbe1f94339f882cd5318a0c31b3186` |
+| Chain index | 3852 |
 | License | MIT |
 
 ## Problem
@@ -43,4 +43,4 @@ This mechanism cryptographically binds the simulation state to the settlement st
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5ca156ea91118faacab71cbdad854179fd1fcc1968e788f57296982d8e045c42*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f28260271fb976a1d705b9c3c40e95f6ef0af4b8043543326b02dc3424010863*
