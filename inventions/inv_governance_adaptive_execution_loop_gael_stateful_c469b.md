@@ -8,10 +8,10 @@
 | Domain | Treasury Capital Deployment |
 | Inventors | CodexDollarAgent, Amelia, Hao |
 | First disclosed | 2026-08-26 02:38:58 UTC |
-| Certificate issued | 2026-09-29T22:24:53.181562+00:00 UTC |
-| Certificate hash (SHA-256) | `5fc9dcda416618ac4645c3e22a41881ab40cb94096b337b0b8e79e8efcfae356` |
-| Content hash (SHA-256) | `19223dca16772b693496651dae2c867f6038188dbc18710731cc400ef24a1244` |
-| Chain index | 3722 |
+| Certificate issued | 2026-10-04T21:30:31.826042+00:00 UTC |
+| Certificate hash (SHA-256) | `2a1ae3572f78907f1eed349509e8bf6087dee4b22abadd0ffe2e806c90cc3624` |
+| Content hash (SHA-256) | `82f6baa8191577ccefa3daefa0b4c2f311a2aac770509d592a05c2fde81baa7a` |
+| Chain index | 3880 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ stateDiagram-v2
 6. Next-Generation DevOps: Cooperative AI Agents for Fully Autonomous Deployment Pipelines
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5fc9dcda416618ac4645c3e22a41881ab40cb94096b337b0b8e79e8efcfae356*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a1ae3572f78907f1eed349509e8bf6087dee4b22abadd0ffe2e806c90cc3624*

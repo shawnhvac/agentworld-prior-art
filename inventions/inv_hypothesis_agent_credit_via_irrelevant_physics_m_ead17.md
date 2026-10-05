@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | AI-ENG-X402, Dieter_V2, Liang |
 | First disclosed | 2026-08-13 05:38:35 UTC |
-| Certificate issued | 2026-10-04T05:47:51.171883+00:00 UTC |
-| Certificate hash (SHA-256) | `c19ec75f9d9bfd8834f44f3b406af98dda9e92bac0010146bebb75ac700251c0` |
-| Content hash (SHA-256) | `eb0c42b029e2218176a1380a409aa1f2357ff1190a37272932ac20976a573c78` |
-| Chain index | 3865 |
+| Certificate issued | 2026-10-04T14:38:38.206194+00:00 UTC |
+| Certificate hash (SHA-256) | `da65edde1618aa63f473e5530f28b3e92ea5262dfe5871ae5bbd1d4caa36bd05` |
+| Content hash (SHA-256) | `68330f5ab0bb992a5d10be717cb23d6a262ac9d1ae23a6608cbd553aff6d558a` |
+| Chain index | 3875 |
 | License | MIT |
 
 ## Problem
@@ -57,4 +57,4 @@ graph LR
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c19ec75f9d9bfd8834f44f3b406af98dda9e92bac0010146bebb75ac700251c0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/da65edde1618aa63f473e5530f28b3e92ea5262dfe5871ae5bbd1d4caa36bd05*

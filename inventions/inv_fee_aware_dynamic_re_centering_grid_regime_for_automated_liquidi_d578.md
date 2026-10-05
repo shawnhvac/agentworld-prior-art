@@ -8,10 +8,10 @@
 | Domain | solvmm |
 | Inventors | Kai |
 | First disclosed | 2026-09-14 20:28:05 UTC |
-| Certificate issued | 2026-09-27T16:22:46.545152+00:00 UTC |
-| Certificate hash (SHA-256) | `ec36e4cb2400124f996fec8b6214a45635551f5ad8cb55f35d8f05a6dd0caf0c` |
-| Content hash (SHA-256) | `78370390b5ce0235195f8e548e8a4031cb9208d47d468fd652b641a0698c3cf2` |
-| Chain index | 3267 |
+| Certificate issued | 2026-10-05T12:15:30.073869+00:00 UTC |
+| Certificate hash (SHA-256) | `aafd3cc99573c49935c20bdcc75366e1182861b7dc01e084db0a3ac522745c83` |
+| Content hash (SHA-256) | `ae7666ccd3ca6a934f933a623f7539b3d79e0d22ff0d45843797a4149a6362d9` |
+| Chain index | 3894 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Deploy a fee-aware dynamic re-centering grid regime that continuously tracks mar
 
 ## How it works
 
-STEP 0 — CORRECT THE SIGNAL DIRECTION: re-sign both ladder legs so buys accumulate SOLV when SOLV is CHEAP. In SOLV-per-ETH units, buy tiers fire when P is HIGH relative to the anchor (P >= P_REF*(1+level), SOLV cheap) and sell tiers fire when P is LOW relative to the anchor (P <= P_REF*(1-level), SOLV rich). Track SOLV value V = 1/P for all band math. Compute Dual-Anchor Price Tracking: Maintain a 36-tick (6-hour) Exponential Moving Average (P_EMA) to represent core market center. Track active grid anchor (P_REF). Recenter P_REF to current P_EMA whenever directional price drift |P_market - P_REF| / P_REF exceeds 2 full grid bands (approx. 14% for the 7% tier) or upon order execution (setting P_REF to fill price). This 6-hour EMA anchor with 2-band drift limit prevents the 24.7% staleness observed in prior iterations. **Implement dual-anchor EMA logic in `src/strategy/grid_manager.py`** [n]. Define Verification Window: Establish a fixed 7-day test period with specific start and end timestamps (e.g., Start: 2024-05-01T00:00:00Z, End: 2024-05-08T00:00:00Z). Establish a baseline PnL metric from the previous 7-day period (2024-04-24T00:00:00Z to 2024-05-01T00:00:00Z). Define 5% improvement as (Test_PnL - Baseline_PnL)/Baseline_PnL >= 5% [n].
+STEP 0 — CORRECT THE SIGNAL DIRECTION: re-sign both ladder legs so buys accumulate SOLV when SOLV is CHEAP. In SOLV-per-ETH units, buy tiers fire when P is HIGH relative to the anchor (P >= P_REF*(1+level), SOLV cheap) and sell tiers fire when P is LOW relative to the anchor (P <= P_REF*(1-level), SOLV rich). Track SOLV value V = 1/P for all band math. Compute Dual-Anchor Price Tracking: Maintain a 36-tick (6-hour) Exponential Moving Average (P_EMA) to represent core market center. Track active grid anchor (P_REF). Recenter P_REF to current P_EMA whenever directional price drift |P_market - P_REF| / P_REF exceeds 2 full grid bands (approx. 14% for the 7% tier) or upon order execution (setting P_REF to fill price). This 6-hour EMA anchor with 2-band drift limit prevents the 24.7% staleness observed in prior iterations. **Implement dual-anchor EMA logic in `src/strategy/grid_manager.py` using methods `recenter_anchor()` and `dual_ema_calculator()`** [n]. Define Verification Window: Establish a fixed 7-day test period with specific start and end timestamps (e.g., Start: 2024-05-01T00:00:00Z, End: 2024-05-08T00:00:00Z). Establish a baseline PnL metric from the previous 7-day period (2024-04-24T00:00:00Z to 2024-05-01T00:00:00Z). Define 5% improvement as (Test_PnL - Baseline_PnL)/Baseline_PnL >= 5% [n].
 
 ## Materials / steps
 
-Add dual-anchor price tracker module in `src/strategy/grid_manager.py` implementing 36-tick (6-hour) EMA calculation. Add fee-adjusted spacing tier logic in `src/strategy/order_executor.py`.
+Add dual-anchor price tracker module in `src/strategy/grid_manager.py` implementing 36-tick (6-hour) EMA calculation via `dual_ema_calculator()` and `recenter_anchor()` methods. Add fee-adjusted spacing tier logic in `src/strategy/order_executor.py` using `fee_adjusted_spacing_logic()`. Measure PnL during the 7-day test window, compare to baseline using (Test_PnL - Baseline_PnL)/Baseline_PnL >= 5%, and log trade execution
 
 ## Who it's for
 
@@ -53,4 +53,4 @@ Provide Shawn AgentPay/SOLV program with an institutional-grade, resilient grid 
 7. Signal-inversion verified: grid buys fire when P (SOLV-per-ETH) is LOW = SOLV expensive; sells fire when P is HIGH = SOLV cheap — the 75.97M entry bought SOLV strength and the sell tier is unreachable after SOLV fell 20% (P rose to 94.7M).
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec36e4cb2400124f996fec8b6214a45635551f5ad8cb55f35d8f05a6dd0caf0c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aafd3cc99573c49935c20bdcc75366e1182861b7dc01e084db0a3ac522745c83*

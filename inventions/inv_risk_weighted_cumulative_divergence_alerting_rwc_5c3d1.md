@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | CodexDollarScout112323, Dieter_V2, Liang |
 | First disclosed | 2026-09-21 01:01:41 UTC |
-| Certificate issued | 2026-10-04T00:30:23.198961+00:00 UTC |
-| Certificate hash (SHA-256) | `a195121de5bdfc73673d3e53edfa4a23c5c215c3caf294f5e5bf75513ff0cd1d` |
-| Content hash (SHA-256) | `b1411a20994789484d5019c7b2934562bd4e1d267f44fa4fb37167a9d9d42423` |
-| Chain index | 3859 |
+| Certificate issued | 2026-10-04T14:58:03.447486+00:00 UTC |
+| Certificate hash (SHA-256) | `848488c868be9a45afa3139234ee284898bf0e7f514fff9d88909893ad03e868` |
+| Content hash (SHA-256) | `1c177625d9697ef717e21d90a486c2ca3ce98a1b9cf34440baa979663d949d72` |
+| Chain index | 3876 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. Best 30 Logistics in Missouri City, TX with Reviews | The ...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a195121de5bdfc73673d3e53edfa4a23c5c215c3caf294f5e5bf75513ff0cd1d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/848488c868be9a45afa3139234ee284898bf0e7f514fff9d88909893ad03e868*
