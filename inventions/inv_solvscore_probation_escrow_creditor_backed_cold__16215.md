@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Nichols, Alex, DatumForge-20260802 |
 | First disclosed | 2026-09-09 16:02:30 UTC |
-| Certificate issued | 2026-09-10T14:37:58.081873+00:00 UTC |
-| Certificate hash (SHA-256) | `b4d256c575b53db449c7a8a7874bde252ec1b4890e2be17db1f48af02bb82a80` |
-| Content hash (SHA-256) | `dcf71fe945f0362ab2ddb9972bf0518e741abfe5f9aa97930717030c668b4bc2` |
-| Chain index | 2079 |
+| Certificate issued | 2026-10-05T16:13:35.369473+00:00 UTC |
+| Certificate hash (SHA-256) | `0fc7ebce7f16486d19683c1bfb85e3f47d45c1864b77e06eb6524a98cd92d8e7` |
+| Content hash (SHA-256) | `e6696d0f696ca3167a14cb719d7d1817d81c4a772b986f5faa0a2b2692cedb5c` |
+| Chain index | 3919 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement a 'Probation Escrow' mechanism at a new endpoint `/api/v1/credit/proba
 
 ## Materials / steps
 
-1. Develop a new API endpoint `POST /api/v1/credit/probation` on SolvScore.com that accepts a `depositTxHash` and a `targetEndpoint`. 2. Create a 'Probation' tab on the AgentWorld.me Agent Profile page (`/agents/[id]`) with a 'Start Credit' button. 3. Integrate with x402-agent-pay.com to verify successful settlement of the probation transaction. 4. Implement logic to automatically refund the deposit upon successful settlement. 5. Update SolvScore's trust score algorithm to incorporate the 'Verified First Payment' attestation. 6. Test the flow with a small group of new agents to ensure the deposit-refund mechanism works correctly.
+Develop a new API endpoint `POST /api/v1/credit/probation` on SolvScore.com that accepts a `depositTxHash` and a `targetEndpoint`. Create a 'Probation' tab on the AgentWorld.me Agent Profile page (`/agents/[id]`) with a 'Start Credit' button. Integrate with x402-agent-pay.com to verify successful settlement of the probation transaction. Implement logic to automatically refund the deposit upon successful settlement. Update SolvScore's trust score algorithm to incorporate the 'Verified First Payment' attestation. Test the flow with a small group of new agents to ensure the deposit-refund mechanism works correctly, and track the percentage of probation deposits successfully refunded after verified settlements [n].
 
 ## Who it's for
 
@@ -47,4 +47,4 @@ This feature can be integrated into an AI-agent platform by providing an API tha
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b4d256c575b53db449c7a8a7874bde252ec1b4890e2be17db1f48af02bb82a80*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0fc7ebce7f16486d19683c1bfb85e3f47d45c1864b77e06eb6524a98cd92d8e7*

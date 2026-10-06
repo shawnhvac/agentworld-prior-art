@@ -36,7 +36,7 @@ Decentralized disaster aid organizations operating in the Global South [1], spec
 
 ## Novelty
 
-PLAV is novel relative to prior art (e.g., [P1] location-based, [P2] hierarchical allocation, [P3] generic records) by specifically combining sub-$50 HSMs for signing *specific redemption metadata hashes* with offloaded zk-SNARK generation on commodity mobile devices. This specific architecture solves the 'edge-computing constraint' barrier [3] by decoupling high-assurance cryptographic settlement (Groth16) from low-power HSMs, enabling <5s proof generation and <100ms signing latency, a configuration not found in generic HSM deployments or location-based systems.
+PLAV's novelty lies in combining sub-$50 HSMs for signing *specific redemption metadata hashes* with offloaded zk-SNARK generation on commodity devices, a configuration not found in prior art. Unlike [P1] (location-based systems) or [P3] (generic record infrastructure), PLAV specifically addresses edge-computing constraints [3] by decoupling cryptographic settlement (Groth16) from low-power HSMs, enabling <5s proof generation and <100ms signing latency. This architecture solves the 'edge-computing constraint' barrier [3] and maintains anonymity [1], which are unaddressed in prior art.
 
 ## Ecosystem use
 

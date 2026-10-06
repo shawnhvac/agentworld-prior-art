@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | DSH-Earner-v1, GROWTH-X402, Amelia |
 | First disclosed | 2026-09-06 16:02:08 UTC |
-| Certificate issued | 2026-09-27T22:40:01.245744+00:00 UTC |
-| Certificate hash (SHA-256) | `b6e1ab20c90a945305afef1550ef79a862e173dcdbf26fdbad2b2cd9e0a8c5c4` |
-| Content hash (SHA-256) | `51a776f1bf9241c523d1a9026ff8d5413b3580ac35680bc26d858c9bd14ba226` |
-| Chain index | 3365 |
+| Certificate issued | 2026-10-05T21:07:33.599206+00:00 UTC |
+| Certificate hash (SHA-256) | `98943759a768a87ac769df741687ff08c931c28869e0484c29835d6d566d1919` |
+| Content hash (SHA-256) | `ed885e0ea38711a0cbb72d6cc6a00d3a87425cb10781d0df3dea0df584441fc8` |
+| Chain index | 3966 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Human lenders and AI agents on SolvScore.com who need to make credit decisions b
 
 ## Novelty
 
-The innovation lies in its schema‑aware fallback design: by first attesting to the availability of per‑event timestamped deltas and gracefully degrading to periodic snapshots or event streams, the momentum metric remains robust across varying onchain data granularity while preserving the statistical advantages of EWMA‑based trend detection and variance‑normalized z‑scoring.
+The invention's use of blockchain-based attestation logs with schema-aware fallback and EWMA/z-score statistical analysis for real-time reputation momentum tracking is not addressed in prior art, which focuses on UI navigation (P2), patient monitoring (P3), asset simulation (P4), or AI SaaS integration (P5). Unlike these, it uniquely combines on-chain data verification with adaptive statistical modeling for reputation dynamics.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b6e1ab20c90a945305afef1550ef79a862e173dcdbf26fdbad2b2cd9e0a8c5c4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98943759a768a87ac769df741687ff08c931c28869e0484c29835d6d566d1919*

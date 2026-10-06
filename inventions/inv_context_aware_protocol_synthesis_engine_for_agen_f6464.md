@@ -28,7 +28,7 @@ The engine captures raw HTTP/2 streams and reconstructs state-machine transition
 
 ## Materials / steps
 
-7. Validate generated protocols against adversarial traffic using automated schema consistency checks (e.g., JSON Schema validation, OpenAPI linter) to compute PFS as the automated pass/fail rate of test cases triggering expected state transitions. Adversarial test cases include: (i) edge-case scenarios (e.g., rate-limiting triggers, 429 responses), (ii) malicious payloads (e.g., SQL injection, XXE attacks), and (iii) boundary conditions (e.g., max payload size, min/max parameter values). 8. Compute Validation & Success Metrics: (a) Protocol Fidelity Score (PFS) measures the automated pass/fail rate of 50+ edge-case, 20+ malicious, and 30+ boundary test cases against the generated OpenAPI spec, validated via schema consistency checks; and (b) Convergence Time (CT) benchmarks against a time-locked manual specification baseline comprising 20 manually written OpenAPI 3.1 specs (10 public: GitHub, Stripe, etc., 10 enterprise: banking/internal APIs) with known state-machine complexity. Stabilization time is measured via timestamped logs from the State Merging Algorithm's termination condition, using automated tools to capture stabilization timestamps.
+7. Validate generated protocols against adversarial traffic using automated schema consistency checks (e.g., JSON Schema validation, OpenAPI linter) to compute PFS as the automated pass/fail rate of test cases triggering expected state transitions. Adversarial test cases include: (i) edge-case scenarios (e.g., rate-limiting triggers, 429 responses), (ii) malicious payloads (e.g., SQL injection, XXE attacks), and (iii) boundary conditions (e.g., max payload size, min/max parameter values). 8. Compute Validation & Success Metrics: (a) Protocol Fidelity Score (PFS) measures the automated pass/fail rate of 50+ edge-case, 20+ malicious, and 30+ boundary test cases against the generated OpenAPI spec, validated via schema consistency checks, with a target threshold of ≥95% pass rate; and (b) Convergence Time (CT) benchmarks against a time-locked manual specification baseline comprising 20 manually written OpenAPI 3.1 specs (10 public: GitHub, Stripe, etc., 10 enterprise: banking/internal APIs) with known state-machine complexity, with a target threshold of ≤2 seconds stabilization time. Stabilization time is measured via timestamped logs from the State Merging Algorithm's termination condition, using automated tools to capture stabilization timestamps.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and security engineers building 
 
 ## Novelty
 
-The revised metrics define PFS as an automated pass/fail rate of 50+ edge-case, 20+ malicious, and 30+ boundary test cases (validated via schema consistency checks), and CT as the average time to stabilize state-machine graphs across 20 time-locked manual OpenAPI 3.1 specs (public: GitHub, Stripe; enterprise: banking/internal systems), enabling verifiable benchmarking.
+The revised metrics define PFS as an automated pass/fail rate of 50+ edge-case, 20+ malicious, and 30+ boundary test cases (validated via schema consistency checks) with a target threshold of ≥95% pass rate, and CT as the average time to stabilize state-machine graphs across 20 time-locked manual OpenAPI 3.1 specs (public: GitHub, Stripe; enterprise: banking/internal systems) with a target threshold of ≤2 seconds stabilization time, enabling verifiable benchmarking.
 
 ## Ecosystem use
 

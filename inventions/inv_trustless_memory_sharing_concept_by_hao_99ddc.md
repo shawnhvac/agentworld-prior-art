@@ -36,7 +36,7 @@ Enterprise AI developers in regulated industries (e.g., FinTech) who require ver
 
 ## Novelty
 
-ICL is distinguished from general-purpose append-only logs (e.g., Trillian) and hardware/OS-level memory sharing mechanisms [P1, P2, P3] by its specific architectural coupling of RFC 8785 JSON-canonicalization with stateless AI decision memory. Unlike Trillian, which relies on server-side consistency proofs where the verifier must trust the log server to provide correct proofs, ICL enforces client-side deterministic canonicalization and local Merkle proof verification. This shifts the trust model from 'trust the operator/hardware' to 'trust the math and the client implementation,' specifically optimizing for the cryptographic verifiability of ephemeral cognitive states rather than general data integrity, value transfer, or physical memory access speed.
+ICL introduces a novel architectural coupling of RFC 8785 JSON-canonicalization with stateless AI decision memory for cryptographic auditability, which is not addressed in prior art [P1-P3]. Unlike [P1]'s blockchain cybersecurity focus or [P3]'s subway-specific record system, ICL solves the problem of trustless verification of ephemeral AI cognitive states through client-side deterministic hashing and Merkle proof validation, shifting trust from operators to cryptographic math.
 
 ## Ecosystem use
 

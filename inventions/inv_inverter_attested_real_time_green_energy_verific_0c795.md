@@ -28,7 +28,7 @@ The module captures raw voltage and frequency data from the inverter. A secure e
 
 ## Materials / steps
 
-1. Identify an inverter microcontroller with TEE capabilities (e.g., ARMv8-A). 2. Implement a firmware routine to capture voltage/frequency telemetry at fixed intervals. 3. Develop a cryptographic signing routine within the secure enclave. 4. Integrate a communication interface to transmit signed telemetry to a verification platform. 5. Deploy a BFT-based verification ledger and implement smart contract logic that validates TEE signatures against registered keys and emits settlement events. The smart contract emits a 'SettlementEvent' with the JSON schema: {"event_type": "SETTLEMENT", "inverter_id": "string", "nonce": "uint256", "verified_energy_kWh": "decimal", "signature": "bytes", "timestamp": "unix"}. Upon emission, the system sends an API POST request to the clearing house with payload: {"inverter_id": "string", "verified_energy_kWh": "decimal", "signature": "bytes", "nonce": "uint256"}. The 'verified energy quantity' is calculated by integrating instantaneous power (derived from voltage and frequency) over the fixed interval within the TEE before signing. 6. Conduct a differential power analysis (DPA) attack simulation to test for private key extraction via side-channels, with a strict success criterion of zero key recovery attempts after collecting 10,000 power traces, ensuring a 95% confidence interval for the failure rate of key extraction. 7. Execute a physical substitution test protocol by swapping the inverter hardware with a compromised unit while monitoring the BFT ledger for signature verification failures, requiring a 100% detection rate of unauthorized signatures within one settlement interval to validate supply-chain integrity.
+6. Conduct a differential power analysis (DPA) attack simulation to test for private key extraction via side-channels, with a strict success criterion of 0/10,000 successful key extractions (95% CI) after collecting 10,000 power traces. 7. Execute a physical substitution test protocol by swapping the inverter hardware with a compromised unit while monitoring the BFT ledger for signature verification failures, requiring 100% detection rate of unauthorized signatures within 5 settlement intervals to validate supply-chain integrity. 8. The clearing house logs each settlement event outcome (success, failure, retry) with timestamps and error codes, and generates daily reports with metrics: success rate (%), failure rate (%), and average processing time (ms) for settlement API calls.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Distributed energy market operators, grid balancing authorities, and renewable e
 
 ## Novelty
 
-The specific point of novelty relative to the closest prior art [P1] lies in the integration of a TEE-based synchronous cryptographic handshake (challenge-response with nonce) directly within the inverter to generate hardware-anchored proof-of-production, combined with a specified, authenticated API contract for real-time
+The specific point of novelty relative to the closest prior art [P1] lies in the integration of a TEE-based synchronous cryptographic handshake (challenge-response with nonce) directly within the inverter to generate hardware-anchored proof-of-production, combined with a specified, authenticated API contract for real-time settlement via endpoints like '/v1/ledger/submit' (BFT ledger) and '/v1/contracts/verify' (smart contract interface).
 
 ## Ecosystem use
 
-This module could be integrated into an AI-agent platform for grid management, where agents use the cryptographic signatures to autonomously execute real-time energy trades. The API would expose the signed telemetry and verification status, allowing agents to make decisions based on verified production data. This use case is a HYPOTHESIS, as the sources do not discuss AI-agent integration with inverter hardware.
+The BFT ledger nodes communicate via '/v1/ledger/submit' to submit signed telemetry, while the smart contract verification interface uses '/v1/contracts/verify' to validate signatures against registered keys. The clearing house processes settlement requests at '/v1/settlements/execute' with JWT authentication and nonce-based replay protection.
 
 ## Diagram
 

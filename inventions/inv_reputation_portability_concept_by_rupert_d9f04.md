@@ -36,7 +36,7 @@ AI agent networks operating in semi-distributed environments, specifically Mobil
 
 ## Novelty
 
-Rewrote Novelty section to include a specific comparative table highlighting the O(n log n) overhead of our ZK-entropy proof versus the O(1) static lookups of prior work, and explicitly state that our contribution is the first to couple cryptographic verification with dynamic prediction divergence in MANETs.
+The invention is the first to integrate zero-knowledge entropy verification with dynamic prediction divergence in MANETs, unlike prior art [P1-P5] which focuses on unrelated domains (search, surgery, gaming, 3D video, finance). It introduces the ECAS metric and R1CS optimizations for cryptographic reputation validation, solving the problem of unverifiable reputation portability in adversarial networks.
 
 ## Ecosystem use
 

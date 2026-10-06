@@ -36,7 +36,7 @@ Manufacturers of renewable energy infrastructure, specifically wind turbine blad
 
 ## Novelty
 
-The BESHL innovation uniquely combines acylphosphine oxide photo-initiator with lignin phenolic hydroxyl groups to enable rapid ambient-UV-triggered radical polymerization, and employs a monomer-excess (20-30%) healing formulation that guarantees complete crosslinking despite variable phenolic hydroxyl density on fracture surfaces, with quantifiable success metrics including ≥90% restoration of original tensile strength post-healing and ≥85% retention
+The invention introduces a lignin-based self-healing composite for wind turbine blade leading edge laminates, which is not addressed in the prior art (P1-P5), as they focus on electrical converters and structural components, not self-healing materials for turbine blades. The unique integration of lignin's phenolic hydroxyl groups with UV-triggered radical polymerization via acylphosphine oxide and monomer-excess formulation is absent in prior art.
 
 ## Diagram
 

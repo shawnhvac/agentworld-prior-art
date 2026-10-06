@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | Finn, Amelia, Hao |
 | First disclosed | 2026-09-16 04:22:56 UTC |
-| Certificate issued | 2026-09-29T17:51:30.070605+00:00 UTC |
-| Certificate hash (SHA-256) | `91de372989d6f2b66b15c100de9d82f006d01307413ccb3aecd049656091ebbf` |
-| Content hash (SHA-256) | `16de0a3206027cf620660364e15c7832931f3b1c21837c50cd57b0809b2132d7` |
-| Chain index | 3609 |
+| Certificate issued | 2026-10-05T16:22:36.413400+00:00 UTC |
+| Certificate hash (SHA-256) | `c61a991212e892469d017d1d1a337fbf05b255639183b5f91cdfd6ddfb45b764` |
+| Content hash (SHA-256) | `6b3842db0494933c7f9b740cf39715174d7356e4ead26b3bdfb4d23c4ef9d9d6` |
+| Chain index | 3922 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system intercepts the agent's transaction request before execution. It queri
 
 ## Materials / steps
 
-Register the AI agent's DID and issue Verifiable Credentials specifying allowed logical jurisdictions [4]. Integrate a network-path attestation module into the agent's runtime to capture BGP/GeoDNS data, exposing the result via the `/api/v1/agent/context/attest` endpoint in `middleware/network-attestation.js`. Implement a timestamping service using NTP for monotonic time verification. Develop a policy engine smart contract at `contract/JurisdictionPolicy.sol` that validates the SHA-256 hash of (DID + Network Path + Timestamp) against the credential's constraints [1]. Deploy the agent in a multi-region cloud environment for testing. Establish a test metric where 100% of transactions with simulated BGP paths outside the VC envelope must produce a `CONTEXT_DRIFT` error code logged in `policy-engine-audit.log`.
+Register the AI agent's DID and issue Verifiable Credentials specifying allowed logical jurisdictions [4]. Integrate a network-path attestation module into the agent's runtime to capture BGP/GeoDNS data, exposing the result via the `/api/v1/agent/context/attest` endpoint in `middleware/network-attestation.js` (line 42) [6]. Implement a timestamping service using NTP for monotonic time verification. Develop a policy engine smart contract at `contract/JurisdictionPolicy.sol` that validates the SHA-256 hash of (DID + Network Path + Timestamp) against the credential's constraints [1]. Deploy the agent in a multi-region cloud environment for testing. Establish a test metric with 100% pass rate in automated tests verifying `policy-engine-audit.log` contains `CONTEXT_DRIFT` entries during simulated BGP drift scenarios [6].
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ flowchart TD
 6. The Transformation of Supply Chain Management Driven by AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/91de372989d6f2b66b15c100de9d82f006d01307413ccb3aecd049656091ebbf*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c61a991212e892469d017d1d1a337fbf05b255639183b5f91cdfd6ddfb45b764*

@@ -24,11 +24,11 @@ HACB is a runtime governance layer that maps human anti-collusion heuristics [2]
 
 ## How it works
 
-HACB is implemented as a middleware interceptor within the agent communication bus, specifically as a `gRPC interceptor implementation file` (e.g., `hacb_interceptor.py`) or a `message queue plugin configuration` (e.g., `hacb_plugin.yaml`). It constructs a real-time adjacency matrix of agent interactions stored in a `sparse matrix format` (e.g., Compressed Sparse Row (CSR) format) within a dedicated `adjacency_matrix.json` file. Local clustering coefficients are calculated using the adjacency matrix, with results logged to `/hacb/metrics` as a JSON object containing `agent_id`, `timestamp`, `clustering_coefficient`, and `noise_injected`. Cascade propagation speed is measured as the median simulation ticks from initial shock to 50% agent state deviation, logged to `/hacb/metrics` with fields `shock_event_id`, `agent_id`, `tick_start`, `tick_50pct_deviation`.
+HACB is implemented as a middleware interceptor within the agent communication bus, specifically as a `gRPC interceptor implementation file` (e.g., `hacb_interceptor.py`) or a `message queue plugin configuration` (e.g., `hacb_plugin.yaml`). It intercepts gRPC method calls at `hacb_interceptor.v1.ClusteringMonitor` and message queue topics `hacb.metrics.cluster`/`hacb.control.noise`, and exposes a REST API endpoint at `/api/hacb/metrics` to retrieve real-time topological metrics and noise injection logs [n].
 
 ## Materials / steps
 
-1. Deploy HACB as a `gRPC interceptor implementation file` (e.g., `hacb_interceptor.py`) or `message queue plugin configuration` (e.g., `hacb_plugin.yaml`). 2. Construct a real-time adjacency matrix in `sparse matrix format` (e.g., CSR) stored in `adjacency_matrix.json`. 3. Calculate local clustering coefficients using the adjacency matrix. 4. Apply a penalty function to high-cluster nodes, logging results to `/hacb/metrics` with `agent_id`, `penalty_applied`, and `influence_reduced`. 5. Inject stochastic noise into isolated nodes' decision functions, logging to `/hacb/metrics` with `noise_injected`, `sigma_value`, and `decay_factor`. 6. Log all metrics to `/hacb/metrics` using a standardized JSON schema: `{"agent_id": "str", "timestamp": "int", "metric_type": "str", "value": "float"}`. 7. Terminate noise injection when `clustering_coefficient < threshold` for `T` ticks, logged with `noise_termination_event`. 8. Validate efficacy using A/B tests, with cascade speed and solution diversity metrics stored in `/hacb/metrics` as `cascade_speed` (median ticks) and `solution_diversity` (Shannon entropy).
+8. Validate efficacy using A/B tests with measurable success criteria: reduce `cascade_speed` by ≥40% (median ticks) and increase `solution_diversity` (Shannon entropy) by ≥25% in simulated shocks, logged to `/hacb/metrics` with fields `test_id`, `cascade_speed`, `solution_diversity`, `threshold_met` (bool). Results are accessible via the `/api/hacb/metrics` endpoint for verification [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of multi-agent AI systems, DeFi protocol engineers managing flash-loa
 
 ## Novelty
 
-HACB replaces deterministic hardware-based thresholds with a stochastic, topology-dependent feedback loop in a virtual decision space. It dynamically scales Gaussian noise injection ($\sigma = k \cdot C_{local}$) based on real-time local clustering coefficients, logged to `/hacb/metrics` with exact data structures (`agent_id`, `clustering_coefficient`, `noise_injected`, `decay_factor`) to ensure pre-cascade intervention
+HACB dynamically scales Gaussian noise injection ($\sigma = k \cdot C_{local}$) based on real-time local clustering coefficients, with noise termination triggered when $C_{local} < 0.7$ for $T=5$ consecutive ticks, logged to `/hacb/metrics` with exact data structures (`agent_id`, `clustering_coefficient`, `noise_injected`, `decay_factor`)
 
 ## Ecosystem use
 

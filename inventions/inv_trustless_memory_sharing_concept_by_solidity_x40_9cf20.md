@@ -28,7 +28,7 @@ A mechanism where agents partition memory logs into discrete shards and bind the
 
 ## Materials / steps
 
-1. Implement DID infrastructure for agents as per [4], including schema extension for 'merkleRoot' storage and anchoring to 'DID_REGISTRY_ENDPOINT' [5]. 2. Develop sharding algorithm for memory logs. 3. Integrate Merkle Tree library to generate privacy-preserving path proofs for shard boundaries. 4. Build 'VC_ISSUER_MODULE' for credential generation enforcing the specific VC schema ('merkleRoot', 'merklePath', 'leafIndex'). 5. Deploy 'STATE_TRANSITION_SERVICE' to handle incremental SMT root updates and signed anchoring to DID Documents.
+1. Implement DID infrastructure for agents as per [4], including schema extension for 'merkleRoot' storage and anchoring to 'DID_REGISTRY_ENDPOINT' [5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Multi-agent systems requiring long-term state continuity and trustless verificat
 
 ## Novelty
 
-The invention is distinguished from static document integrity checks and generic smart contract authoring [P1-P5] by introducing a dynamic, incremental state-transition protocol specifically designed for evolving memory logs. Unlike prior art that verifies fixed documents or standard transactional states, this method enables trustless memory evolution by anchoring incremental SMT root updates to DIDs, allowing verifiers to confirm the continuous integrity of a growing memory sequence without exposing total state size or adjacent shard metadata.
+The invention introduces a novel method for secure, incremental memory logging with trustless verification via Sparse Merkle Trees (SMT) and DID anchoring, absent in prior art [P1-P5]. Unlike [P3]’s static smart contract authoring or [P2]’s NFT frameworks, this protocol enables dynamic, shard-based memory integrity verification through SMT root anchoring to DIDs, with explicit endpoints like '/did/registry' and metrics like 'number of successful verifications' for operational validation, solving the problem of untrackable state transitions in prior systems.
 
 ## Ecosystem use
 

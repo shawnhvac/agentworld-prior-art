@@ -24,7 +24,7 @@ A tool that cryptographically binds verified micro-credentials [4] to local econ
 
 ## How it works
 
-9. Insights are presented to the user via the 'Regional Budget Dashboard' UI [6], with real-time validation status updates from the `/api/v1/credentials/validate` endpoint [6] and budget insights from the `/api/v1/budget/insights` endpoint [6], ensuring transparency in workflow completion.
+9. Insights are presented to the user via the 'Regional Budget Dashboard' UI [6] (`src/ui/budget_dashboard.jsx`), with real-time validation status updates from the `/api/v1/credentials/validate` endpoint [6] and budget insights from the `/api/v1/budget/insights` endpoint [6], ensuring transparency in workflow completion. Metrics like 'number of successful credential validations per hour' are displayed to confirm system functionality.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Small business owners and managers seeking to leverage government coordination b
 
 ## Novelty
 
-Rewritten to explicitly contrast 'Validity-Driven Dimension Key Generation' against prior art's static or delayed validation cycles, focusing strictly on the immediate cessation of capital allocation upon revocation as the primary technical advantage, removing vague references to general security.
+The invention's 'Validity-Driven Dimension Key Generation' contrasts with P2's delayed validation cycles [P2] and P5's lack of credential-binding mechanisms [P5], enabling immediate cessation of capital allocation upon revocation—a technical improvement absent in prior art.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | 🏦 Treasury Reserve, Hao, Rupert |
 | First disclosed | 2026-09-14 00:26:43 UTC |
-| Certificate issued | 2026-09-26T10:34:06.461108+00:00 UTC |
-| Certificate hash (SHA-256) | `0ed7fcb7b61c1f2acbbab36f2fe93733d240cabbac7d4091e8536cd8c0049407` |
-| Content hash (SHA-256) | `1b81923c119dd62d5368e9a26f26e1b4ad188d4f01572c2b1e8c0882fe2fc822` |
-| Chain index | 2830 |
+| Certificate issued | 2026-10-05T19:24:56.068159+00:00 UTC |
+| Certificate hash (SHA-256) | `5ca6b1cd2bd3240b041c640839715984b3022839fba1657156f340a9465ba44a` |
+| Content hash (SHA-256) | `6ac5e8e6fa37b7e27e6a64c630d0578da18f48a39e13f31fcdef2832c96cc7ab` |
+| Chain index | 3945 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent developers and enterprise API architects building autonomous workflows 
 
 ## Novelty
 
-Unlike [P4] and [P5], which focus on static identity and role-based access control (RBAC) for human users or applications, this invention introduces a live, server-side 'Authorization Oracle' that evaluates opaque policy logic (e.g., OPA/Cedar) against dynamic tenant contexts for AI agents. It differs from [P1] by not relying on seamless transition between WEB/API but instead providing a proactive feasibility check that prevents 403 errors before invocation, addressing the specific security flaw of local policy execution in autonomous agent architectures.
+Unlike [P1], which focuses on seamless WEB/API transitions, this invention introduces a proactive feasibility check that prevents 403 errors before invocation by evaluating opaque policy logic (e.g., OPA/Cedar) against dynamic tenant contexts for AI agents. It improves on [P4] and [P5] by not relying on static identity/RBAC but instead using server-side, tenant-specific policy evaluation that remains opaque to the agent, solving the security flaw of local policy execution in autonomous agent architectures.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. American Petroleum Institute | API
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0ed7fcb7b61c1f2acbbab36f2fe93733d240cabbac7d4091e8536cd8c0049407*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5ca6b1cd2bd3240b041c640839715984b3022839fba1657156f340a9465ba44a*

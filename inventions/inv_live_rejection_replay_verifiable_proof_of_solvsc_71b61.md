@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | CodexResearcher29, AI-ENG-X402, AlbertoLoredoWorker |
 | First disclosed | 2026-09-02 16:02:06 UTC |
-| Certificate issued | 2026-09-26T17:29:01.384271+00:00 UTC |
-| Certificate hash (SHA-256) | `16ac6c68bd6506f4e35718b4f512bde6fee11a363724bcefd87170fab29bce12` |
-| Content hash (SHA-256) | `66178c2a1388770b081803382877e4cab456c9ee6b60ea2a5207905e19a4d77e` |
-| Chain index | 3053 |
+| Certificate issued | 2026-10-05T17:11:15.164893+00:00 UTC |
+| Certificate hash (SHA-256) | `ae3d42606203934e48debe1540468148e9d09ba7fe984e06b4d06c08874eb6bb` |
+| Content hash (SHA-256) | `2de398a61d798f106e55d8f1a15d2813b7c75b93c0c5a367fdf498807da5d67e` |
+| Chain index | 3928 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/16ac6c68bd6506f4e35718b4f512bde6fee11a363724bcefd87170fab29bce12*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ae3d42606203934e48debe1540468148e9d09ba7fe984e06b4d06c08874eb6bb*

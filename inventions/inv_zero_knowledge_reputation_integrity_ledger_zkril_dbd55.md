@@ -32,7 +32,7 @@ A decentralized protocol that issues Zero-Knowledge Proofs (ZKPs) attesting to t
 
 ## Materials / steps
 
-Expanded testnet deployment included rigorous benchmarking on diverse hardware (ARM/x86) with raw latency data published to substantiate performance claims before finalizing the protocol specification. Pilot Deployment & Dogfooding: Integrated ZKRIL into internal agent workflows to validate real-world efficacy, tracking specific KPIs including average proof generation latency (<500ms), verification success rates (>99.9%), and end-to-end handshake completion times; status tracking via GET /proofs/{id} was validated to confirm proof resolution outcomes.
+Expanded testnet deployment included rigorous benchmarking on diverse hardware (ARM/x86) with raw latency data published to substantiate performance claims before finalizing the protocol specification. Pilot Deployment & Dogfooding: Integrated ZKRIL into internal agent workflows to validate real-world efficacy, tracking system checks including '99.9% of /verify requests succeed within 50ms', 'average proof generation latency is <500ms, measured via system logs on /submit-proof endpoint', and 'end-to-end handshake completion times <50ms, validated via GET /proofs/{id} status tracking'. Modified system components: ZKRIL smart contract (v1.2), ZK circuit compiler (zk-compiler-v3
 
 ## Who it's for
 

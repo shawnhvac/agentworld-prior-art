@@ -20,7 +20,7 @@ AI agents in multi-agent environments lack a verifiable, tamper-evident trail fo
 
 ## Concept
 
-Proof-of-Recall is a mechanism that commits cryptographic hashes of memory state transitions to a lightweight trustless ledger [1], using the 'Memory Fabric' architecture [4] to index these hashes. It secures the content integrity of conversational context over time by employing a hash-chaining mechanism where each state hash includes the previous state's hash, making memory corruption detectable without centralized trust.
+Proof-of-Recall is a mechanism that commits cryptographic hashes of memory state transitions to a lightweight trustless ledger [1], using the 'Memory Fabric' architecture [4] to index these hashes. It secures the content integrity of conversational context over time by employing a hash-chaining mechanism where each state hash includes the previous state's hash, making memory corruption detectable without centralized trust. The primary user-facing page/endpoint is explicitly labeled as /v1/dashboard [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ Proof-of-Recall is a mechanism that commits cryptographic hashes of memory state
 
 ## Materials / steps
 
-1. Implement a lightweight trustless ledger compatible with [1]. 2. Integrate with a Memory Fabric architecture [4] for indexing. 3. Develop hashing logic for memory state transitions that explicitly includes the previous state's hash to establish chaining. 4. Create an API for agents to commit and verify hashes, including a verification algorithm that validates the entire chain from genesis to current state. **API Specification:** Implement `POST /v1/memory/commit` (accepts JSON body with `state_data` and `prev_hash`, returns `new_hash` and `ledger_tx_id`) and `GET /v1/memory/verify/:hash` (accepts hash parameter, returns `is_valid` boolean, `chain_depth`, and `verification_latency_ms`). Add `GET /v1/dashboard` as the primary user-facing page/endpoint to display real-time metrics: chain depth, verification latency, and corruption alerts. 5. Conduct rigorous benchmarking with **specific, quantifiable success metrics** (e.g., '99.9% verification accuracy under 10ms latency') using automated benchmarking tools to ensure operational guarantees.
+1. Implement a lightweight trustless ledger compatible with [1]. 2. Integrate with a Memory Fabric architecture [4] for indexing. 3. Develop hashing logic for memory state transitions that explicitly includes the previous state's hash to establish chaining. 4. Create an API for agents to commit and verify hashes, including a verification algorithm that validates the entire chain from genesis to current state. **API Specification:** Implement `POST /v1/memory/commit` (accepts JSON body with `state_data` and `prev_hash`, returns `new_hash` and `ledger_tx_id`) and `GET /v1/memory/verify/:hash` (accepts hash parameter, returns `is_valid` boolean, `chain_depth`, and `verification_latency_ms`). Add `GET /v1/dashboard` as the primary user-facing page/endpoint to display real-time metrics: chain depth, verification latency, and corruption alerts. 5. Conduct rigorous benchmarking with **specific, quantifiable success metrics** (e.g., '0.1% hash mismatch rate in 10,000 transactions' and 'system must return is_valid=false for any tampered state within 50ms') using automated benchmarking tools to ensure operational guarantees.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Enterprise AI systems requiring high-integrity multi-agent coordination, specifi
 
 ## Novelty
 
-Proof-of-Recall introduces a non-obvious architectural coupling... dashboard at `/v1/dashboard` provides real-time integrity metrics with user-defined performance thresholds (e.g., 99.9% accuracy under 10ms latency) for operational assurance.
+Proof-of-Recall introduces a non-obvious architectural coupling... dashboard at /v1/dashboard provides real-time integrity metrics with user-defined performance thresholds (e.g., 0.1% hash mismatch rate in 10,000 transactions and 50ms tamper detection latency) for operational assurance.
 
 ## Ecosystem use
 

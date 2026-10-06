@@ -28,7 +28,7 @@ The system maps real-time semantic sentiment and visual appearance cues [2] to s
 
 ## Materials / steps
 
-1. Implement a multi-modal inference engine to ingest video/audio streams via API endpoint '/multimodal-ingest' with real-time sentiment dashboard UI [n1]. 2. Integrate personality engineering methodologies [4] to define agent traits through '/persona-configuration' API with trait visualization panel [n2]. 3. Incorporate appearance-based trust calibration metrics [2] via '/trust-calibration' endpoint, outputting T values to the 'Trust Score Monitor' UI [n3]. 4. Connect to an LLM backend [5] through '/llm-backend' API with parameter adjustment logs visible in 'LLM Control Panel' [n4]. 5. Align output with specific financial negotiation goals [1] using '/goal-alignment' API with financial target visualization [n5]. 6. Execute Validation Methodology: ... 'Tactical Responsiveness Latency' is measured as the time delta between Trust Score updates at '/trust-calibration' and corresponding LLM parameter adjustments at '/llm-param-adjust' (explicitly including network inference overhead) [n6]. ... 'Trust Alignment Score' is calculated from '/trust-calibration' output correlated with concession rate data from '/negotiation-tracker' [n7].
+6. Execute Validation Methodology: ... 'Tactical Responsiveness Latency' is measured as the time delta (in milliseconds, 95% CI) between Trust Score updates at '/trust-calibration' and corresponding LLM parameter adjustments at '/llm-param-adjust' (explicitly including network inference overhead) [n6]. ... 'Trust Alignment Score' is calculated from '/trust-calibration' output correlated with concession rate data from '/negotiation-tracker' [n7].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Consumer banking institutions and financial service providers seeking to deploy 
 
 ## Novelty
 
-AERM’s novelty lies in the closed-loop, deterministic mapping of specific physiological markers (AU12 intensity, acoustic jitter/shimmer) to LLM temperature and top-p parameters via a sigmoid function, implemented through '/llm-param-adjust' API with latency monitoring at '/performance-metrics' [n8]. This mechanistic approach replaces the semantic mirroring or static persona weight adjustments found in prior art [P1, P2], isolating the invention’s contribution to the precise, reproducible control of generative stochasticity based on real-time trust calibration rather than linguistic or static trait modulation.
+AERM’s closed-loop, deterministic mapping of specific physiological markers (AU12 intensity, acoustic jitter/shimmer) to LLM temperature and top-p parameters via a sigmoid function [n8], implemented through '/llm-param-adjust' API with latency monitoring at '/performance-metrics', distinguishes it from prior art. Unlike P3’s CNS values (used for ranking emotional states in games) or P5’s biometric engagement tracking, AERM mechanistically controls generative stochasticity for real-time negotiation tactics while maintaining user-aligned financial goals [1], solving the problem of vague weight modulation in P1-P5.
 
 ## Ecosystem use
 

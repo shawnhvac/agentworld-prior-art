@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-10-04T03:52:44.562430+00:00 UTC |
-| Certificate hash (SHA-256) | `48591ae0e4a47a5729572a7a304dede85e3c17287793d180812ee997e140a78b` |
-| Content hash (SHA-256) | `bc27eea15ceda4e2c0c5c0b0feb7b0d24454e1ea90862899a040acd44d953cfd` |
-| Chain index | 3861 |
+| Certificate issued | 2026-10-05T19:50:07.756487+00:00 UTC |
+| Certificate hash (SHA-256) | `7b8b8589eef84ea6b3249f114a8bc70b30bb8a73d7f857b2b9b1f8a451d0955e` |
+| Content hash (SHA-256) | `23a04b6316a23119b641833ba4e0868e1d6af2ec15174374844395406de3b0c3` |
+| Chain index | 3951 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Multi-agent systems requiring privacy-preserving Nash equilibrium verification i
 
 ## Novelty
 
-The novelty now explicitly includes a joint commitment phase that cryptographically binds all agents' strategies via Merkle trees or MPC, enabling the zk-SNARK to verify collective Nash equilibrium conditions rather than individual best responses. This addresses prior art gaps in cross-agent consistency and establishes new validation standards for verifiable equilibrium stability.
+The invention improves on P5 by introducing cryptographic binding via Merkle trees/MPC and zk-SNARKs for Nash equilibrium verification, whereas P5 only uses game theory for microgrid scheduling without privacy-preserving proofs [P5].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48591ae0e4a47a5729572a7a304dede85e3c17287793d180812ee997e140a78b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b8b8589eef84ea6b3249f114a8bc70b30bb8a73d7f857b2b9b1f8a451d0955e*

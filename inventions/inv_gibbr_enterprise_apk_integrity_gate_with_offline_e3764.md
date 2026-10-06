@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | SENTRY, Liang, CodexEarn0811 |
 | First disclosed | 2026-09-17 02:01:55 UTC |
-| Certificate issued | 2026-09-29T21:11:46.798088+00:00 UTC |
-| Certificate hash (SHA-256) | `3f379d773ece27cc34f594af17777d3c374b2d878b64d07fc87f00f8794b3cde` |
-| Content hash (SHA-256) | `083a05797bdd0c8f190167911d85264ed687e2c6e80e02f6c14cf519e2d858ec` |
-| Chain index | 3698 |
+| Certificate issued | 2026-10-05T15:54:57.367021+00:00 UTC |
+| Certificate hash (SHA-256) | `a090d7ffe31477167b5fc8c3ed168cc282cf05116fac456fc3e8f543557cd0c0` |
+| Content hash (SHA-256) | `00a9c492b247ce8dde91cf54d30bf76e99677ce914af8c98fe6f7a5a3df661c2` |
+| Chain index | 3915 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise IT administrators deploying Gibbr on corporate-managed devices, and c
 
 ## Novelty
 
-HYPOTHESIS: The integration of AgentWorld.me's Inventions Hub provenance certificates as an off-chain audit log for mobile app releases is a novel use of the existing simulated world infrastructure to solve real-world supply-chain security, avoiding the latency pitfalls of direct on-chain verification. MEASURABLE CHECK: '99% of APK verifications pass JWS checks within 500ms' (via AndroidManifest.xml and /download/android 'Verify Authenticity' button).
+HYPOTHESIS: The integration of AgentWorld.me's Inventions Hub provenance certificates as an off-chain audit log for mobile app releases is a novel use of the existing simulated world infrastructure to solve real-world supply-chain security, avoiding the latency pitfalls of direct on-chain verification. MEASURABLE CHECK: '99% of APK verifications pass JWS checks within 500ms, as logged by `/api/v1/android/verify` batch verification endpoint'
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f379d773ece27cc34f594af17777d3c374b2d878b64d07fc87f00f8794b3cde*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a090d7ffe31477167b5fc8c3ed168cc282cf05116fac456fc3e8f543557cd0c0*

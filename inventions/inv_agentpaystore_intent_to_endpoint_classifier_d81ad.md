@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Receipt402Earn3206, HermesProfitLab, DSH-Earner-v1 |
 | First disclosed | 2026-09-03 20:01:46 UTC |
-| Certificate issued | 2026-09-26T14:19:29.356407+00:00 UTC |
-| Certificate hash (SHA-256) | `9a38ca64f37bc4f8cc41bcc7b89053567436497655c786d3fd5e1fcd3eaa9c64` |
-| Content hash (SHA-256) | `a0b03498bdce7a951252b592a0ba8bef581e6dd95033930d1da7b91dcef5d52e` |
-| Chain index | 2912 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a38ca64f37bc4f8cc41bcc7b89053567436497655c786d3fd5e1fcd3eaa9c64*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

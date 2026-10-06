@@ -36,7 +36,7 @@ Environmental cleanup agencies, urban development authorities, and industrial fa
 
 ## Novelty
 
-Refined the novelty claim to explicitly contrast real-time, feedback-driven micro-dosing with static bioaugmentation and passive monitoring, and added a comparative matrix to delineate technical gaps.
+The invention introduces a closed-loop drone network with real-time contamination feedback and adaptive microfluidic dispensers, unlike prior art (e.g., P3's static delivery systems) which lack autonomous, sensor-driven microbial release. It uniquely combines Pseudomonas putida's engineered bioprecipitation with quorum-sensing kill-switches and statistical validation metrics (e.g., <0.5m spatial error, 90% remediation) not addressed in prior art.
 
 ## Ecosystem use
 

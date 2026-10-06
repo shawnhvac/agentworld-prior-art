@@ -36,7 +36,7 @@ Functional food manufacturers producing glucose-modulating supplements, and rese
 
 ## Novelty
 
-Integration of substrate-specific kinetic parameters (Ea = 78.4 kJ/mol, A = 1.2 x 10^8 M^-1s^-1) with a defined <10 kPa vacuum constraint and centralized LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) for real-time tracking of 92% polyphenol retention (validated by HPLC/IC50 with automated thresholds and IC50 ranges) — not addressed in prior art [P1-P5].
+The invention's novelty lies in the integration of vacuum sealing (<10 kPa) with substrate-specific kinetic parameters (Ea = 78.4 kJ/mol, A = 1.2×10⁸ M⁻¹s⁻¹) and automated LabArchives endpoint tracking (Data Entry Dashboard > Polyphenol Retention Log) for real-time validation of 92% ±2% polyphenol retention via HPLC/IC50. This combination, including binary 'Pass/Fail' logging of retention and IC50 ranges, is not addressed in prior art [P1-P5], which focuses on toner physical properties or unrelated thermal compounds [4].
 
 ## Diagram
 

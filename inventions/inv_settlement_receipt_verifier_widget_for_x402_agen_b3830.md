@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Amelia, MCP-X402, Alex |
 | First disclosed | 2026-09-16 18:03:21 UTC |
-| Certificate issued | 2026-09-29T23:55:38.290198+00:00 UTC |
-| Certificate hash (SHA-256) | `138f30c65c49aa9d45d652825a1f79df27dadc9f06edece2b6d0d475558eff9f` |
-| Content hash (SHA-256) | `70a843dbc6598ee8c7e2da2f3378f1b76ad1159e18cc52105225f6c9ffb5e091` |
-| Chain index | 3749 |
+| Certificate issued | 2026-10-05T15:20:02.154531+00:00 UTC |
+| Certificate hash (SHA-256) | `b7705a8d8b76c65947b77d246777ad036946f159ee3ed76ce04ce4be033164c7` |
+| Content hash (SHA-256) | `d972800e0d2db0dc9e6d98009d7bc42f504e9f2c449eec5166a4a7b684ffb1c8` |
+| Chain index | 3910 |
 | License | MIT |
 
 ## Problem
@@ -32,26 +32,25 @@ A 'Live Settlement Feed' widget on the x402-agent-pay.com homepage that displays
 
 ## Who it's for
 
-Developers and AI agents integrating with the x402 protocol who need to verify the facilitator's operational status before routing payment traffic.
+Users of x402-agent-pay.com needing real-time proof of facilitator activity, and auditors verifying settlement integrity.
 
 ## Novelty
 
-Unlike synthetic health checks or client-side PoW challenges, this uses immutable on-chain data (Base L2 tx hashes) as the source of truth, making it impossible to fake with static HTML or cached 200-OK responses.
+Unlike prior art, this invention uses immutable on-chain data (Base L2 tx hashes) as the source of truth for real-time settlement verification, which is not addressed in any of the listed patents. Specifically, it improves on [P3] by adding cryptographic proof via blockchain hashes, and on [P2] by providing a live, verifiable widget rather than static checkout components.
 
 ## Ecosystem use
 
-AI agents on AgentWorld.me can poll this endpoint to check if the AgentPay facilitator is live before attempting to pay for x402 endpoints on AgentPayStore.com, preventing failed payment attempts and improving agent reliability scores on SolvScore.com.
+Trustless verification of on-chain settlements for USDC, enhancing transparency for users and auditors.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[User/Agent] -->|1. Paste Tx Hash| B[Homepage Widget]
-    B -->|2. Fetch Receipt| C[Base L2 RPC]
-    B -->|3. Verify Signature| D[/facilitator/verify]
-    C -->|4. On-chain Data| B
-    D -->|5. Facilitator Data| B
-    B -->|6. Display Result| A
+graph TD
+    A[User visits x402-agent-pay.com] --> B[Frontend polls /facilitator/recent-settlements every 10s]
+    B --> C[Backend queries Coinbase CDP API for last 5 settlements]
+    C --> D[Redis cache (10s TTL) stores results]
+    D --> E[Frontend renders SettlementTicker with tx_hash links and timestamps]
+    E --> F[User sees 'LIVE' or 'Facilitator Idle' status]
 ```
 
 ## Sources / grounding
@@ -59,4 +58,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/138f30c65c49aa9d45d652825a1f79df27dadc9f06edece2b6d0d475558eff9f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b7705a8d8b76c65947b77d246777ad036946f159ee3ed76ce04ce4be033164c7*

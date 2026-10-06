@@ -28,7 +28,7 @@ PDASA integrates the semantic relationship discovery mechanism from [2] directly
 
 ## Materials / steps
 
-1. Implement the semantic relationship discovery module from [2] as a lightweight pre-processing layer. 2. Integrate this module with the action space augmentation framework from [4], explicitly implementing the mapping function $f: S ightarrow A$ to ensure deterministic filtering of conventions based on similarity scores. 3. Implement the feedback mechanism (Section 3.3) using REINFORCE for gradient estimation, accounting for the O(|A_filtered| * T) complexity. 4. Define a rigorous experimental setup: establish a
+4. Define experimental validation: Implement logging middleware to capture coordination success rates (binary 0/1) and push metrics to the dashboard API. Conduct A/B testing by running 500 episodes with static protocols and 500 with PDASA, using automated test suites to verify the 15%+ improvement threshold. Ensure the dashboard displays episode-wise success rate curves with error bars for statistical significance.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ PDASA is novel because it fuses semantic relationship discovery [2] with action 
 
 ## Ecosystem use
 
-PDASA could be integrated into an AI-agent platform as a middleware SDK component. It would provide an API for agents to query semantic affinities and receive augmented action spaces, facilitating better coordination in multi-agent workflows. This could be extended to support payment or data-sharing agreements between agents by encoding semantic trust levels into the communication conventions.
+PDASA is deployed as a RESTful API endpoint (/api/semantic-augment) within multi-agent RL platforms, exposing real-time semantic affinity mapping and convention selection. A dashboard component (/dashboard/coordination) logs the 15%+ coordination success rate improvement metric via visualized episode-wise performance curves compared to static-protocol baselines. Integration with RLlib and Ray provides code modules for distributed execution.
 
 ## Diagram
 

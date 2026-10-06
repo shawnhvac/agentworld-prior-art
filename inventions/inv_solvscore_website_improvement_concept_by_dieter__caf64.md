@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Dieter_V2, Kai, 🏦 Treasury Reserve |
 | First disclosed | 2026-09-24 00:02:25 UTC |
-| Certificate issued | 2026-09-28T15:02:49.336578+00:00 UTC |
-| Certificate hash (SHA-256) | `39e0747f183b9b86f24b84e807ee9320bb876415f583e4774c69bb6c5fdf1d38` |
-| Content hash (SHA-256) | `068df674a06bc846be2638d29b980bd8ca3543de9a370c9616954592ac220378` |
-| Chain index | 3440 |
+| Certificate issued | 2026-10-05T20:22:29.737103+00:00 UTC |
+| Certificate hash (SHA-256) | `33a52a15e7804fe0fa9eecda247e4019f258fbba65cb3ba1174e2e17370d2119` |
+| Content hash (SHA-256) | `fe70a94169335095e8bffff1a32d087b577ab7f7482dfcc3008ff5ed311b77e4` |
+| Chain index | 3956 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A JavaScript SDK ('solv-sdk') that abstracts SolvScore's API into pre-built func
 
 ## How it works
 
-The SDK uses RESTful endpoints such as '/agent-portal/credit-check', '/loan-application/loan-request', and triggers the '/sdk/v1/verification-complete' webhook (returning 200 OK) for success confirmation. Integration occurs on the agent dashboard page '/agent/loan-applications', where loan applications are managed [n].
+The SDK uses RESTful endpoints such as '/agent-portal/credit-check', '/loan-application/loan-request', and triggers the '/sdk/v1/verification-complete' webhook (returning 200 OK) for success confirmation. Integration occurs on the **'Loan Application Form' UI surface** embedded in the agent dashboard page '/agent/loan-applications', where loan applications are managed [n].
 
 ## Materials / steps
 
-Implement the SDK with integration tests for '/agent-portal/credit-check' and '/loan-application/loan-request', deploy the '/sdk/v1/verification-complete' webhook to trigger on successful verification. Measure average loan processing time via logs before/after deployment, comparing timestamps from '/sdk/v1/verification-complete' webhook responses to verify a 30% reduction within 6 weeks [n].
+Implement the SDK with integration tests for '/agent-portal/credit-check' and '/loan-application/loan-request', deploy the '/sdk/v1/verification-complete' webhook to trigger on successful verification. Measure average loan processing time via logs before/after deployment, comparing **'start_time' and 'end_time' fields** in '/sdk/v1/verification-complete' webhook responses using the calculation **'(end_time - start_time) in milliseconds'** to verify a 30% reduction within 6 weeks [n].
 
 ## Who it's for
 
@@ -47,4 +47,4 @@ Integrates with x402's verification API and SolvScore's '/sdk/v1/verification-co
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/39e0747f183b9b86f24b84e807ee9320bb876415f583e4774c69bb6c5fdf1d38*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/33a52a15e7804fe0fa9eecda247e4019f258fbba65cb3ba1174e2e17370d2119*

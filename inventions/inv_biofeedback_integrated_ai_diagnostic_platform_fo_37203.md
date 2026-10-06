@@ -36,7 +36,7 @@ Patients undergoing diagnostic testing for stress-sensitive conditions such as C
 
 ## Novelty
 
-This system integrates real-time physiological and psychological feedback with AI-driven diagnostic adjustments, improving accuracy in conditions where stress significantly affects test outcomes.
+The invention's key novelty lies in its integration of real-time cortisol prediction via LSTM networks with a decision matrix-driven control logic interface (/diagnostic/adjust) to dynamically adjust diagnostic protocols, a feature absent in prior art. For example, P1 (EP3271776B1) focuses on AR displays for diagnostics but lacks AI-driven adaptive testing; P3 (US11615600B1) mentions XR health platforms but does not incorporate cortisol trajectory prediction or protocol adjustment based on physiological feedback. The system's use of a dedicated 'Validation Metrics' section with quantifiable success criteria (e.g., >0.9 correlation between predicted/actual cortisol, <10% deviation in 90% of tests) further distinguishes it by providing measurable clinical outcomes.
 
 ## Ecosystem use
 

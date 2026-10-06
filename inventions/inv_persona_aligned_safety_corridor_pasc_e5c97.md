@@ -24,11 +24,11 @@ A routing system that integrates persona-based embedding learning [3] with crowd
 
 ## How it works
 
-The system ingests user persona embeddings [3] to determine individual risk aversion profiles. These profiles weight edge costs in a transit graph, where weights are dynamically adjusted by real-time fear-density metrics derived from crowd-modeling principles [2]. The algorithm computes paths that minimize cumulative exposure to high-anxiety triggers, treating psychological safety as a quantifiable constraint alongside travel time. The integration point is the `/v1/route/plan` endpoint within the `transit-router` service, which is linked to UI map layers (e.g., fear-density heatmaps) and backend storage (e.g., `fear_vectors.db` schema for fear-attribute vectors).
+The system ingests user persona embeddings [3] to determine individual risk aversion profiles. These profiles weight edge costs in a transit graph, where weights are dynamically adjusted by real-time fear-density metrics derived from crowd-modeling principles [2]. The algorithm computes paths that minimize cumulative exposure to high-anxiety triggers, treating psychological safety as a quantifiable constraint alongside travel time. The `/v1/route/plan` endpoint triggers fear-density heatmap updates and logs RDP values in `fear_vectors.db`, initiating `reoptimize_route.py` when RDP exceeds 10%.
 
 ## Materials / steps
 
-1. Implement persona-based embedding learning module based on [3]. 2. Integrate crowd-modeling fear metrics from [2] to quantify anxiety triggers in transit nodes. 3. Develop a transfer function ... 8. Expand simulation module ... Add a real-time dashboard (e.g., `aes_rdp_dashboard.py`) to log AES/RDP values and trigger automated route reoptimization if RDP exceeds 10% (e.g., via `reoptimize_route.py` with threshold checks).
+1. Implement persona-based embedding learning module based on [3]. 2. Integrate crowd-modeling fear metrics from [2] to quantify anxiety triggers in transit nodes. 3. Develop a transfer function mapping fear-attribute vectors to edge weights. 8. Expand simulation module with RDP threshold checks. Add a real-time dashboard (`aes_rdp_dashboard.py`) to log 95% of routes with RDP < 10% and trigger `reoptimize_route.py` via `/v1/route/plan` endpoint.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Transit users with high risk aversion or anxiety regarding crowd density, and mu
 
 ## Novelty
 
-PASC distinguishes itself from prior art by introducing a real-time, high-dimensional vector-interaction mechanism that dynamically modulates edge weights through the continuous intersection of individual persona embeddings [3] and live crowd fear metrics [2]. This architecture generates a non-linear adaptive response, where the sigmoid-based projection of persona-fear alignment creates dynamic edge weight fluctuations that static personalized routing systems [3]—relying on fixed user preferences—and aggregate safety routing models [2]—utilizing population averages—cannot achieve. By treating psychological safety as a quantifiable, continuously varying constraint rather than a static filter, PASC overcomes the rigidity of static profiles and the insensitivity of aggregate models, providing a unique solution for granular, adaptive anxiety mitigation in transit networks.
+PASC introduces a psychological safety-first routing framework that integrates persona-based embedding learning [3] and crowd fear metrics [2] into dynamic edge-weight modulation, unlike P2/P4's focus on physical navigation constraints. It uniquely quantifies anxiety triggers via fear-density heatmaps [2] and enforces RDP < 10% via `/v1/route/plan` endpoint checks, solving the absence of psychological safety optimization in prior robotic/path-planning art.
 
 ## Diagram
 

@@ -24,7 +24,7 @@ A Self-Adaptive Bioelectrochemical Phytosensor-Driven Nanofiber-Encapsulated Myc
 
 ## How it works
 
-The SAB-PD-MES operates via a nanofiber-encapsulated mycorrhizal network embedded with phytosensors derived from *Thlaspi caerulescens*. These sensors detect heavy metals and pH shifts in real time and relay signals to a custom electrochemical interface (Ag/AgCl reference, graphene-modified carbon paste working electrode, and counter electrode). An impedance matching circuitry (high-input-impedance instrumentation amplifier with 100x gain and 10 Hz low-pass filter) ensures signal integrity before transmission to a microcontroller running `sab_pd_mes_control.ino` firmware. The microcontroller processes potentials against Nernstian calibration curves (E = E0 + (RT/nF)ln[C]) for Pb²⁺ and Cd²⁺, triggering a piezoelectric micro-pump to modulate nutrient fluxes (e.g., phosphate and chelating agents) and microbial activity. System performance is validated via the `/api/v1/sab-pd-mes/telemetry` endpoint, which logs sensor data, actuation events, and success metrics (e.g., 80% Pb²⁺ reduction with ±5% variance, 95% actuation accuracy under 10% noise, <60 s response latency).
+The microcontroller processes potentials against Nernstian calibration curves (E = E0 + (RT/nF)ln[C]) for Pb²⁺ and Cd²⁺, triggering a piezoelectric micro-pump to modulate nutrient fluxes (e.g., phosphate and chelating agents) and microbial activity. System performance is validated via the `/api/v1/sab-pd-mes/telemetry` endpoint, which logs sensor data, actuation events, and success metrics (e.g., 80% Pb²⁺ reduction with ±5% variance, 95% actuation accuracy under 10% noise, <60 s response latency) in real time. Metrics are exposed as JSON payloads with timestamped entries for traceability, and user-facing dashboards (e.g., Grafana or custom web UIs) visualize Pb²⁺/Cd²⁺ concentration trends, pump actuation success rates, and mycorrhizal network health indicators [n]
 
 ## Materials / steps
 
@@ -37,6 +37,10 @@ Environmental remediation professionals, waste management companies, and researc
 ## Novelty
 
 The novelty of SAB-PD-MES is defined by its closed-loop cyber-physical architecture that couples *Thlaspi caerulescens*-derived bioelectrochemical phytosensors with a nanofiber-encapsulated mycorrhizal network to achieve autonomous, sub-60-second modulation of nutrient fluxes and microbial activity. This distinguishes the system from passive phytoremediation (which relies on time-lagged bioaccumulation) and general IoT soil sensors (which lack biologically integrated actuation for localized bioremediation), establishing real-time, biologically mediated electrochemical feedback as the primary technical differentiator.
+
+## Ecosystem use
+
+User-facing dashboards (e.g., Grafana or custom web UIs) display real-time Pb²⁺/Cd²⁺ concentration trends, pump actuation success rates, and mycorrhizal network health indicators, enabling remote monitoring and validation of bioremediation efficacy [n]
 
 ## Diagram
 

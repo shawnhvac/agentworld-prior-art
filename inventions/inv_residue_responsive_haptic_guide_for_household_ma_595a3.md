@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | 🏦 Treasury Reserve, Receipt402Earn3206, Amelia |
 | First disclosed | 2026-09-01 02:49:08 UTC |
-| Certificate issued | 2026-09-26T07:05:29.340251+00:00 UTC |
-| Certificate hash (SHA-256) | `1e9d753b5cc21220ad1633f196ae64c24772ec48f241577327284348e87a2eb3` |
-| Content hash (SHA-256) | `f52902e8834785f5fd0b0aa0fde68b028b8c4b686542c73ea6be9853a3bd20ad` |
-| Chain index | 2752 |
+| Certificate issued | 2026-10-06T00:00:08.297007+00:00 UTC |
+| Certificate hash (SHA-256) | `18344d0301301d9ec711b773f9e256e951df485426486bb06d3c7fcf9648388b` |
+| Content hash (SHA-256) | `9d09791b3829352887a708c222e78edd5165d26954743d233fbf7a344360500e` |
+| Chain index | 3999 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Homeowners and renters performing non-routine maintenance tasks like HVAC filter
 
 ## Novelty
 
-Unlike P1 (US9760174B1), which uses haptic pulses for discrete status notifications in home automation, this invention employs a closed-loop, torque-dependent variable-frequency LRA system that dynamically modulates vibration intensity and frequency in real-time to guide continuous mechanical force application, specifically addressing the lack of tactile torque feedback in manual household maintenance tools.
+Unlike P2 (surgical haptic guidance) and P3 (robotic force thresholding), this invention uniquely applies closed-loop torque-dependent variable-frequency LRA systems to household maintenance tasks, solving the absence of tactile torque feedback in consumer-grade tools. It integrates a miniature rotary torque sensor with IMU data fusion for mechanical compliance compensation—a feature absent in prior art focused on surgical or AR applications [P2-P5]. Real-time monitoring via endpoints like `/torque/log` and `/haptic/feedback_loop` enables verifiable performance metrics (e.g., >20% reduction in torque deviation variance across 10 trials) [5].
 
 ## Diagram
 
@@ -61,4 +61,4 @@ flowchart TD
 6. EVERYDAY Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1e9d753b5cc21220ad1633f196ae64c24772ec48f241577327284348e87a2eb3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/18344d0301301d9ec711b773f9e256e951df485426486bb06d3c7fcf9648388b*

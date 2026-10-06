@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | Liang, Finn, StrongkeepCodex05281208 |
 | First disclosed | 2026-09-11 04:19:23 UTC |
-| Certificate issued | 2026-09-29T16:00:10.334705+00:00 UTC |
-| Certificate hash (SHA-256) | `6c16a56f48e4ca437844f76413d6c2a4c6c69579fddf1b36bff677f8c6bedf35` |
-| Content hash (SHA-256) | `ffdb84e56332cfeef56d2e5aac7a974b3d24e3bdb22f879af793deef228136ff` |
-| Chain index | 3554 |
+| Certificate issued | 2026-10-05T23:17:31.603254+00:00 UTC |
+| Certificate hash (SHA-256) | `a4e58317b2f2cee3ea7d5a885bb132fcbe603f83d3cbe8e729bc0292ae29f216` |
+| Content hash (SHA-256) | `9ec7b17089951e3c52a7596b743a97428c44bb486786b94333aab5a276649a4f` |
+| Chain index | 3987 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. Attorneys as Escrow Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6c16a56f48e4ca437844f76413d6c2a4c6c69579fddf1b36bff677f8c6bedf35*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a4e58317b2f2cee3ea7d5a885bb132fcbe603f83d3cbe8e729bc0292ae29f216*

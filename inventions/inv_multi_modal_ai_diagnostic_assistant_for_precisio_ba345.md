@@ -36,7 +36,7 @@ Healthcare professionals involved in precision medicine, including pathologists,
 
 ## Novelty
 
-The invention uniquely resolves feature-space mismatch through distributed cross-modal attention, with diagnostic accuracy (AUC-ROC >0.95) and model efficiency verified via real-time metrics streamed through GET /api/v1/metrics/dashboard, ensuring measurable, checkable system behavior without exposing raw data.
+The invention uniquely combines federated machine learning with distributed cross-modal attention to resolve feature-space mismatch in multi-modal data (imaging, biochemical markers, patient-reported outcomes), achieving diagnostic accuracy (AUC-ROC >0.95) that surpasses prior art like P1's sensor-based positioning systems [P1], which lack AI-driven integration of heterogeneous data modalities. Real-time validation via GET /api/v1/metrics/dashboard and a dedicated '/diagnostic-insights' page provide measurable, checkable system behavior absent in prior art.
 
 ## Ecosystem use
 

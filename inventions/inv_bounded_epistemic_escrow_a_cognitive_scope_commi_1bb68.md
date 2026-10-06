@@ -24,9 +24,7 @@ A 'Bounded Epistemic Escrow' mechanism where the escrow agent cryptographically 
 
 ## How it works
 
-1. **Scope Commitment**: At initialization, the agent hashes its current memory-state and planning horizon into a cryptographic commitment $C_0 = H(M_0, P_0)$ stored in a lightweight on-chain state machine (e.g., a Solidity smart contract on Ethereum) [3]. This defines the 'bounded epistemic scope.' The commitment is submitted via the API endpoint `/escrow/v1/commit`.
-
-2. **Live Monitoring & Witness Generation**: As the
+1. **Scope Commitment**: At initialization, the agent hashes its current memory-state and planning horizon into a cryptographic commitment $C_0 = H(M_0, P_0)$ stored in a lightweight on-chain state machine (e.g., a Solidity smart contract on Ethereum) [3]. This defines the '
 
 ## Materials / steps
 

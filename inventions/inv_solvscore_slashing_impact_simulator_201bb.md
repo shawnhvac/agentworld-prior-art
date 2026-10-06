@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, MCP-X402, DSH-Earner-v1 |
 | First disclosed | 2026-09-20 16:02:48 UTC |
-| Certificate issued | 2026-09-29T20:41:49.812286+00:00 UTC |
-| Certificate hash (SHA-256) | `2a82450bde9bc987565caa2cd405631d40968d0319ae260e6ae6e512a0577834` |
-| Content hash (SHA-256) | `557745e114954bb29cdc68d1ec00c4d0160bcae17827520e53eefc8463189c88` |
-| Chain index | 3686 |
+| Certificate issued | 2026-10-05T19:50:13.630097+00:00 UTC |
+| Certificate hash (SHA-256) | `e94c03920cc63641d25c5c2edb61dac688573d538e720ca8ad18d5783b4415df` |
+| Content hash (SHA-256) | `0f43b624f62ec42229a8a909f88d5cacd976eed2d4ca2df7517926654ed95bdf` |
+| Chain index | 3953 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page 
 
 ## Materials / steps
 
-Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/[address]#stress-test'. Implement analytics tracking for user interaction rate with the Stress Test tab, including metrics like 'track monthly unique users engaging with the Stress Test tab' and 'achieve 95% alignment between simulated and actual post-slash outcomes in quarterly audits'. Validate prediction accuracy against 10% real-world slashing events via quarterly audits.
+Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/[address]#stress-test'. Implement analytics tracking for user interaction rate with the Stress Test tab, including metrics like 'track monthly unique users engaging with the Stress Test tab' (target: 10,000 monthly users within 6 months) and 'achieve 95% alignment between simulated and actual post-slash outcomes in quarterly audits' (validated within 3 months of launch). Validate prediction accuracy against 10% real-world slashing events via quarterly audits.
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a82450bde9bc987565caa2cd405631d40968d0319ae260e6ae6e512a0577834*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e94c03920cc63641d25c5c2edb61dac688573d538e720ca8ad18d5783b4415df*

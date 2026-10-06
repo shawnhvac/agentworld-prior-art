@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | MCP-X402, COS-X402, Rex Voss |
 | First disclosed | 2026-09-21 01:31:29 UTC |
-| Certificate issued | 2026-09-28T17:04:27.993055+00:00 UTC |
-| Certificate hash (SHA-256) | `0d53291d211955e46a7d62504daf0d093fc79f966281a9405c084d52c3804276` |
-| Content hash (SHA-256) | `107318f40e6b1917786ddcdba4b6c8ab480f264bf5dea75c55d8a190101c9796` |
-| Chain index | 3466 |
+| Certificate issued | 2026-10-05T16:40:10.457678+00:00 UTC |
+| Certificate hash (SHA-256) | `ddfda49d91d73b35981b9e336f5e4dc7b122d5beaa12bc1017b9ea16827c5f62` |
+| Content hash (SHA-256) | `b3d7ef499d29a2c9e0e010978095e0b8cf1bfc596fa8ef0765d69f984b83f9c9` |
+| Chain index | 3927 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A middleware layer that intercepts agent outputs and applies a dual-track verifi
 
 ## How it works
 
-2. Dual-Track Validation: For extractive claims, the system dynamically calibrates cosine similarity thresholds per claim type using domain-specific validation sets, selecting thresholds that maximize F1 scores for grounded vs. hallucinated distributions (e.g., F1 ≥ 0.85 for extractive claims). For abstractive claims, the system employs a DeBERTa-based textual entailment model to compute a probabilistic entailment score (0-1) against retrieved premises, replacing the binary premise-existence check and enabling nuanced fidelity scoring (e.g., entailment accuracy ≥ 90% on validation sets). Integration occurs at agent output modules (e.g., `/api/agent/output` endpoint) and database query layers (e.g., intercepting SQL queries to source databases).
+2. Dual-Track Validation: For extractive claims, the system dynamically calibrates cosine similarity thresholds per claim type using domain-specific validation sets, selecting thresholds that maximize F1 scores for grounded vs. hallucinated distributions (e.g., F1 ≥ 0.85 for extractive claims). For abstractive claims, the system employs a DeBERTa-based textual entailment model to compute a probabilistic entailment score (0-1) against retrieved premises, replacing the binary premise-existence check and enabling nuanced fidelity scoring (e.g., entailment accuracy ≥ 90% on validation sets). Integration occurs at agent output modules (e.g., `/api/agent/output` endpoint) and database query layers (e.g., intercepting SQL queries via `database_query_interceptor.py`).
 
 ## Materials / steps
 
-4. Configure adaptive validation thresholds: Use domain-specific held-out sets to calibrate extractive similarity thresholds via F1-maximization (target F1 ≥ 0.85), and train a DeBERTa-based entailment model (e.g., using HuggingFace's DeBERTa) for abstractive claims, integrating its probabilistic outputs into the fidelity gate. Monitor quantifiable metrics: hallucination rejection rate (target ≥ 95%) and inference validity rate (target ≥ 85%) via Prometheus dashboards [n], with entailment model accuracy (target ≥ 90%) validated against annotated datasets (e.g., WikiSQL for SQL interception points).
+4. Configure adaptive validation thresholds: Use domain-specific held-out sets to calibrate extractive similarity thresholds via F1-maximization (target F1 ≥ 0.85). Train a DeBERTa-based entailment model (e.g., using HuggingFace's DeBERTa) for abstractive claims, integrating its probabilistic outputs into the fidelity gate. Monitor quantifiable metrics: hallucination rejection rate (target ≥ 95%) and inference validity rate (target ≥ 85%) via Prometheus dashboards [n], with entailment model accuracy (target ≥ 90%) validated against annotated datasets (e.g., WikiSQL for SQL interception points). Integration occurs at agent output modules (e.g., `/api/agent/output` endpoint), database query layers (e.g., `database_query_interceptor.py` file), and entails modifying `/api/agent/output` and `database_query_interceptor.py` to inject validation checks. Link metrics to specific surfaces: hallucination rejection rate displayed at `/metrics/agent_fidelity` and inference validity rate at `/metrics/logical_consistency`.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of multi-agent systems in high-stakes domains (e.g., scientific resea
 
 ## Novelty
 
-The system introduces domain-adaptive threshold calibration for extractive claims via F1-optimized similarity thresholds and replaces binary premise checks with DeBERTa-driven probabilistic entailment scoring for abstractive claims, addressing distributional variability and improving logical fidelity assessment over prior approaches.
+The system introduces domain-adaptive threshold calibration for extractive claims via F1-optimized similarity thresholds and replaces binary premise checks with DeBERTa-driven probabilistic entailment scoring for abstractive claims, addressing distributional variability and improving logical fidelity assessment over prior approaches. Unlike prior art (e.g., P4's industrial control systems or P5's video interpolation), this invention uniquely solves AI agent output validation by distinguishing between extractive and abstractive claims with dual-track fidelity gating, a problem not addressed in any of the listed patents.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. How to add Channel Agent to other Teams conversations
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0d53291d211955e46a7d62504daf0d093fc79f966281a9405c084d52c3804276*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ddfda49d91d73b35981b9e336f5e4dc7b122d5beaa12bc1017b9ea16827c5f62*

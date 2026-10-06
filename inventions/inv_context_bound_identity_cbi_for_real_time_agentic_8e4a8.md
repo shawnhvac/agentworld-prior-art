@@ -36,7 +36,7 @@ Financial institutions, banks, insurers, and major financial services providers 
 
 ## Novelty
 
-Unlike Zero-Knowledge Rollups which verify transaction validity or Trusted Execution Environments which secure static code execution, CBI uniquely binds dynamic AI behavioral states to cryptographic identity, enforcing real-time regulatory compliance at the compute layer rather than relying on post-hoc audits or hardware isolation.
+The invention's focus on cryptographic protocols for real-time agentic compliance in AI systems is entirely distinct from the prior art's medical applications (e.g., P1-P5), which address gene therapy, cancer treatments, and drug formulations. No prior art discloses or suggests the use of Verifiable Credentials, Zero-Knowledge Proofs, or FPGA-based compliance enforcement for AI agents, solving a problem (dynamic behavioral compliance) that these medical patents do not address.
 
 ## Ecosystem use
 

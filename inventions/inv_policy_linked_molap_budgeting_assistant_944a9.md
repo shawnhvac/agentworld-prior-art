@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) in sectors with high government intera
 
 ## Novelty
 
-The invention uniquely combines MOLAP-based financial modeling with real-time policy impact analysis via NLP and dynamic convex optimization (as in the Temporal Alignment module), which is not addressed in any of the prior art. Unlike P3's static priority lists, the system's convex optimization algorithm resolves overlapping policy adjustments through a weighted aggregation rule that dynamically prioritizes legislative hierarchy, specificity, and temporal precedence, ensuring resilience during abrupt regulatory shifts. This approach directly solves the problem of non-linear policy-business interactions unaddressed by P3's static methods.
+The invention's core novelty lies in its integration of real-time policy impact analysis via NLP and dynamic convex optimization (as in the Temporal Alignment module), which directly contrasts with P3's static tabular database structuring [P3]. While P3 focuses on adding structure to tabular databases for analytical reports, this invention uniquely applies convex optimization to resolve overlapping policy adjustments in MOLAP cubes, dynamically prioritizing legislative hierarchy, specificity, and temporal precedence—capabilities absent in P3's static methods. This addresses non-linear policy-business interactions unattainable through P3's fixed analytical frameworks.
 
 ## Diagram
 

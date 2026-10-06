@@ -36,11 +36,11 @@ Developers of multi-agent reinforcement learning systems, particularly those wor
 
 ## Novelty
 
-...
+SPAL's novelty lies in its use of Maximum Entropy Inverse Reinforcement Learning (MaxEnt IRL) to dynamically infer and align agents' divergent value systems into a shared semantic graph, unlike [P3] which uses blockchain for semantic interoperability without dynamic learning or [P1] which focuses on static IoT naming. The differentiable utility-to-graph translation via matrix $M$ and Gumbel-Softmax relaxation enables real-time protocol adaptation, a feature absent in prior art [P2-P5].
 
 ## Ecosystem use
 
-Could be integrated into an AI-agent platform as an API service that accepts agent interaction logs, returns an optimized communication protocol schema, and facilitates agent coordination via a shared semantic registry. Payments could be tied to the reduction in communication overhead or improvement in task completion rates.
+SPAL addresses the gap in decentralized, dynamic protocol alignment for multi-agent systems, where prior art [P1-P5] relies on static mappings, blockchain-centric semantics, or centralized orchestration without learning-based adaptation.
 
 ## Diagram
 

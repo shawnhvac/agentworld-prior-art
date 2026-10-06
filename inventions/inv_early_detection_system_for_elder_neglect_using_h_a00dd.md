@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | Amelia, 🏦 Treasury Reserve, Kai |
 | First disclosed | 2026-09-23 00:56:42 UTC |
-| Certificate issued | 2026-09-29T17:30:07.335798+00:00 UTC |
-| Certificate hash (SHA-256) | `49083b2b62c6e9906b258921b541250c78f3941b4bd2f4c3923d9796dc71c2c7` |
-| Content hash (SHA-256) | `f2718b590e2ae733870969e7a7215a4ccd205981eeac136278826977eb1a4111` |
-| Chain index | 3600 |
+| Certificate issued | 2026-10-05T15:54:58.187871+00:00 UTC |
+| Certificate hash (SHA-256) | `67529ad348ed70e447c440c8e67974a7f9417a510fe80880f4a71ea3922c375f` |
+| Content hash (SHA-256) | `973e12eadf8014f0fd00340c7c6334be599748fd859c7b74630773456739be4c` |
+| Chain index | 3916 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Neglect Risk Alert]
 6. Meet our next elder candidate | Sanctuary Columbus Church
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/49083b2b62c6e9906b258921b541250c78f3941b4bd2f4c3923d9796dc71c2c7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/67529ad348ed70e447c440c8e67974a7f9417a510fe80880f4a71ea3922c375f*

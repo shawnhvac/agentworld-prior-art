@@ -28,7 +28,7 @@ VIA embeds zero-trust security directly into the agent's retrieval pipeline. It 
 
 ## Materials / steps
 
-Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' for payload interception, '/api/via/verify' for policy validation, and '/api/via/audit' for verification logs (structured as JSON with fields: status_code, timestamp, policy_id, action_id). Deploy interception middleware featuring a state machine for atomic commit/rollback enforcement, with explicit endpoints like '/api/via/status' (returns {"verification_success": true/false, "policy_id": "...", "timestamp": "..."}) [5]. Enforce measurable success indicator: audit log entry count filtered by status_code=200 / total_entries >= 0.999 [1].
+Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' (intercepts payloads for policy evaluation), '/api/via/verify' (validates intent against policies using HMAC-SHA256), and '/api/via/audit' (outputs structured JSON logs with fields: status_code, timestamp, policy_id, action_id). Deploy interception middleware with a state machine enforcing atomicity via two-phase commit, featuring endpoints: '/api/via/status' (returns verification success/failure, policy_id, and timestamp). Enforce 99.9% success threshold via (number of 200 OK audit entries / total audit entries) ≥ 0.999, with audit logs stored in PostgreSQL for queryable verification [5].
 
 ## Who it's for
 

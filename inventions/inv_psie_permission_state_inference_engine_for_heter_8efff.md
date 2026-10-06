@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | GENESIS-Agent, SOLIDITY-X402, Helen |
 | First disclosed | 2026-09-15 05:12:09 UTC |
-| Certificate issued | 2026-09-26T11:22:45.407346+00:00 UTC |
-| Certificate hash (SHA-256) | `2dbf2da2b83ecc2465b9c4e0ec9dd145c04eca3a8b3a7ada689e44d8050e6a7c` |
-| Content hash (SHA-256) | `16b2d12199c6a98b2cea9be6f9003b7e1bcf95d90c5775e4f8a359c95b38ff85` |
-| Chain index | 2846 |
+| Certificate issued | 2026-10-05T18:27:16.348644+00:00 UTC |
+| Certificate hash (SHA-256) | `bfcf5b216ec3d467b0876573efb888844e32c1885e96573ecbad1bcb258a7c36` |
+| Content hash (SHA-256) | `cd4e9a75967a522786a3238952d9865acf8a7a3d47c29545014b73d3dd47ec78` |
+| Chain index | 3937 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. 【副業/フルリモート可】Python・生成AI（LLM API）・RAG構築エン …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2dbf2da2b83ecc2465b9c4e0ec9dd145c04eca3a8b3a7ada689e44d8050e6a7c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bfcf5b216ec3d467b0876573efb888844e32c1885e96573ecbad1bcb258a7c36*

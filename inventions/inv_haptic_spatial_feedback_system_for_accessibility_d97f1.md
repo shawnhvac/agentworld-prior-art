@@ -36,7 +36,7 @@ Individuals with visual or motor impairments who require independent navigation 
 
 ## Novelty
 
-This system integrates ultrasonic mapping with machine learning and haptic feedback, providing a more intuitive and precise navigation experience compared to traditional auditory cues.
+This invention improves on P4 by integrating ultrasonic mapping with machine learning for real-time path optimization, using a spherical-to-cylindrical coordinate transformation to project 3D obstacles onto a wearable sleeve's 2D surface (via i = floor((θ + π)/(2π/N)) and A = A_max * exp(-d/d_0) * cos(φ)), and enforcing a strict synchronization protocol with a 'safe-hold' state for latency management—features absent in P4's non-visual guidance system.
 
 ## Ecosystem use
 

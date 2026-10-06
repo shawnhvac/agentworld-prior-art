@@ -36,7 +36,7 @@ Developers of autonomous AI agents, decentralized application (dApp) creators, a
 
 ## Novelty
 
-VAIN distinguishes itself from prior art [P1-P5] by introducing a dynamic, transaction-level anchoring mechanism that couples DID/VC-based agent identities with ephemeral session fingerprinting. Unlike [P1] and [P2], which focus on static IoT device access control or general network security without dynamic agent-to-agent cryptographic session anchoring, and [P4]/[P5], which rely on centralized reputation engines, VAIN ensures immutable, cryptographically verifiable audit trails for autonomous agent interactions. This innovation is realized through Merkle-tree-batched interaction hashes committed to-chain, providing end-to-end verifiability for dynamic transactions rather than just static credential issuance. The system is further distinguished by its rigorous validation against realistic economic and latency constraints (<2s finality, <100k gas/batch) and formal integrity proofs, addressing the specific need for trustless, autonomous agent interoperability absent in [P1].
+VAIN introduces dynamic, transaction-level anchoring via Merkle-tree-batched interaction hashes and ephemeral session fingerprinting, unlike [P1] and [P2] which focus on static IoT access control or general network security without dynamic agent-to-agent cryptographic session anchoring. It also provides formal integrity proofs and economic constraints (<$50 forgery cost) absent in [P4]/[P5], ensuring trustless, autonomous agent interoperability.
 
 ## Ecosystem use
 

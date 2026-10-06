@@ -20,20 +20,15 @@ Agents using disparate communication protocols cannot autonomously verify semant
 
 ## Concept
 
-...
+ZK-Semantic Handshake for Agent Protocol Alignment (surface: /agent-protocol/alignment, /zkcircuits/semantic_invariants.v1, /v1/handshake/verify, /v1/handshake/*)
 
 ## How it works
 
-The ZK-Semantic Handshake proceeds as follows: (1) Agents exchange a commitment to their local state schema via the `/v1/handshake/init` endpoint; (2) Each agent generates a zero‑knowledge proof that the proposed state transition preserves a set of pre‑agreed semantic invariants (e.g., conservation of resource counts, monotonicity of timestamps) using circuit definitions located at `/zkcircuits/semantic_invariants.v1`; (3) The verifier checks the proof using a succinct zk‑SNARK verifier at `/v1/handshake/verify`; (4) Upon successful verification, both agents update their state and emit an acknowledgment signed with a short‑lived session key.
+The ZK-Semantic Handshake proceeds as follows: (1) Agents exchange a commitment to their local state schema via the `/agent-protocol/alignment` endpoint [n]; (2) Each agent generates a zero-knowledge proof that the proposed state transition preserves pre-agreed semantic invariants (e.g., conservation of resource counts, monotonicity of timestamps) using circuits at `/zkcircuits/semantic_invariants.v1` [n]; (3) The verifier checks the proof using a succinct zk-SNARK verifier at `/v1/handshake/verify` [n], with success logged at `/v1/handshake/verify` (measured via logs with timestamp filtering); (4) Upon verification, agents update state and emit session-key-signed acknowledgments, with handshake completion tracked via packet capture at `/v1/handshake/*` endpoints [n].
 
 ## Materials / steps
 
-We evaluate the handshake against baseline ZKP authentication schemes (ZK‑LDAP, ZK‑Auth) on a testbed of 100 heterogeneous agents performing typical IoT workloads (sensor telemetry, actuator commands). Metrics collected:
-- Authentication success rate: proportion of valid transitions accepted (target ≥99.5%).
-- False acceptance rate (FAR): proportion of invalid transitions incorrectly accepted (target ≤0.5%).
-- Average ZK‑SNARK proof generation time ≤ 50 ms per agent.
-- Proof verification time ≤ 10 ms per agent.
-- Communication overhead per handshake ≤ 2 KB (measured via packet capture at the `/v1/handshake/*` endpoints).
+Metrics collected: - Authentication success rate: proportion of valid transitions accepted (target ≥99.5%), measured via logs at `/v1/handshake/verify` with timestamp filtering [n]; - False acceptance rate (FAR): proportion of invalid transitions incorrectly accepted (target ≤0.5%), measured via packet capture at `/v1/handshake/verify` with protocol-specific filters [n]; - Average ZK-SNARK proof generation time ≤ 50 ms per agent, measured via timing logs at `/zkcircuits/semantic_invariants.v1` with circuit-specific timestamps [n]; - Proof verification time ≤ 10 ms per agent, measured via timing logs at `/v1/handshake/verify` with verification-stage timestamps [n]; - Communication overhead per handshake ≤ 2 KB, measured via packet capture at `/agent-protocol/alignment` and `/v1/handshake/*` endpoints with payload-size filtering [n].
 
 ## Who it's for
 
@@ -41,7 +36,7 @@ AI agent developers, financial operation systems requiring escalation-aware hand
 
 ## Novelty
 
-Rewrote the 'Novelty' section to explicitly contrast the invention with existing ZKP-based authentication (e.g., ZK-LDAP, ZK-Auth) by emphasizing that this is the first to use structural semantic invariants as the basis for cryptographic authorization of state changes, rather than just identity or static credentials. Added citations to specific ZKP authentication prior art to demonstrate a thorough understanding of the landscape and clearly delineate the gap this invention fills.
+This invention introduces the first application of ZK-SNARKs to enforce semantic invariants during agent protocol alignment, distinct from P2’s encrypted verification (which focuses on operative boundaries, not semantic invariants) and P5’s knowledge registry (which lacks ZK-SNARKs for invariant enforcement). Unlike P4’s resource allocation models, this invention ensures protocol compliance through cryptographic guarantees, not static scoring. Specifically, it combines ZK-SNARKs with semantic invariants in a handshake protocol, a non-obvious integration absent in prior art [P2, P4, P5].
 
 ## Ecosystem use
 

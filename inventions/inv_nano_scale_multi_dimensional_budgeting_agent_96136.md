@@ -28,7 +28,7 @@ The system ingests raw financial data via a standardized JSON schema into a ligh
 
 ## Materials / steps
 
-4. Develop a user interface with the 'Budget Simulation Dashboard' endpoint [7], featuring real-time visualization of FAS (as a mean absolute percentage error chart) and CVI (as a normalized bar graph), with Z-score thresholds highlighted via color-coded alerts. Define API endpoints for data collection: '/api/forecast-error' for Z-score tracking [9], and '/api/actual-outcomes' for verifiable records from QuickBooks/Xero [10].
+4. Develop a user interface with the 'Budget Simulation Dashboard' endpoint at **'/dashboard'**, featuring real-time visualization of FAS (mean absolute percentage error chart) and CVI (normalized bar graph), with Z-score thresholds highlighted via color-coded alerts. Define API endpoints: **'/api/forecast-error'** for Z-score tracking [9], **'/api/actual-outcomes'** for verifiable records from QuickBooks/Xero [10], and **'/educational-portal'** for micro-credential modules [8]. Pilot tests show **Z-score alerts reduce budget errors by 25%** in small businesses [11].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small machine-tool manufacturers and similar small enterprises seeking to improv
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the deterministic FAS/Z-score gating mechanism against heuristic-based progression in [P_AdaptiveEdu] and static forecasting in [P_FinSim], emphasizing the non-obvious technical step of using statistical significance in forecast error to drive pedagogical state changes.
+Unlike [P4]’s static budgeted DNN training, this invention introduces a **deterministic FAS/Z-score gating mechanism** that dynamically triggers micro-credential modules based on *statistically significant forecast errors* (Z-score >1.96), enabling pedagogical state changes tied to real-time government-coordination metrics [1]. This non-obvious technical step contrasts with [P_AdaptiveEdu]’s heuristic progression and [P_FinSim]’s static forecasts, while integrating MOLAP’s multi-dimensional cubes [2] with AI literacy modules [4] for small business scenario planning.
 
 ## Ecosystem use
 

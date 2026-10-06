@@ -24,7 +24,7 @@ ARMS is a dynamic memory verification module that treats unconfirmed or conteste
 
 ## How it works
 
-1. Agents generate memory vectors and compute cryptographic hashes using SHA-256. 2. Agents exchange these hashes via a lightweight gossip protocol [2] subject to a defined maximum latency bound to prevent indefinite quarantine during network partitions. 3. A quorum check determines consensus based on a strict 2f+1 threshold; entries failing the check are quarantined as 'HYPOTHESIS' rather than 'FACT'. 4. Only consensus-verified entries are written to the Oracle substrate [3]. 5. This dynamic segregation prevents adversarial noise [4] from corrupting the core memory, addressing scalability concerns [5]. 6. Resolution Protocol: Quarantined 'HYPOTHESIS' entries are subject to a periodic re-verification cycle where they are re-evaluated against incoming data streams and updated peer consensus states. 7. Resolution Timeout & Probabilistic Majority: To guarantee eventual state settlement, a 'Resolution Timeout' parameter is enforced. If consensus is not reached within this window, the system triggers a probabilistic majority vote based on the most recent gossip rounds. The entry is committed as 'FACT' if supported by the majority of the latest gossip samples, or 'DISCARDED' if unsupported, ensuring a definitive end-to-end settlement path with reduced overhead. Metrics: Track 'quorum success rate' (percentage of entries achieving consensus) and 'latency-bound violation rate' (percentage of gossip exchanges exceeding defined bounds) to evaluate system effectiveness.
+1. Agents generate memory vectors and compute SHA-256 hashes. 2. Hashes are exchanged via '/gossip-protocol' with latency bounds. 3. Quorum check at '/quorum-checker' flags non-consensus entries using 2f+1 threshold. 4. Consensus entries are written to Oracle substrate [3]. 5. Quarantined 'HYPOTHESIS' entries are re-verified periodically. 6. Resolution Timeout triggers probabilistic majority vote on '/quorum-checker' logs. 7. Metrics: 'quorum success rate' tracked via '/quorum-checker' logs; 'latency-bound violation rate' monitored through '/gossip-protocol' endpoint.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers of enterprise-grade AI agent platforms [3, 5] requiring secure, scala
 
 ## Novelty
 
-ARMS distinguishes itself from standard BFT and CRDTs not by the consensus mechanism itself, but by decoupling verification from commitment via a semantic 'quarantine-and-reverify' lifecycle. Unlike BFT, which seeks immediate binary agreement, or CRDTs, which merge states without semantic validation, ARMS treats unverified entries as low-priority hypotheses subject to a bounded probabilistic resolution timeout. This specific architectural choice—using time-bounded probabilistic majority to settle contested states rather than indefinite waiting or immediate rejection—prevents adversarial noise from corrupting the core memory substrate while guaranteeing eventual state settlement with bounded latency.
+ARMS introduces a unique adversarial-resilient memory segregation mechanism that dynamically quarantines unverified entries as 'HYPOTHESIS' with a bounded probabilistic resolution timeout, unlike P3's deductive AI auditability (which focuses on ontology-based attribution) or P4's threat detection (which lacks memory-state consensus). This decoupling of verification from commitment via time-bounded probabilistic resolution is not addressed in prior art, solving adversarial memory corruption without relying on traditional BFT/CRDTs.
 
 ## Ecosystem use
 

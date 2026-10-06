@@ -36,7 +36,7 @@ Researchers and developers working on multi-agent systems, especially in open an
 
 ## Novelty
 
-CAV-MCL introduces a decentralized, self-calibrating mechanism for dynamic value modulation using real-time contextual embeddings, which has not been empirically validated in existing literature [3]. This represents a hypothesis that could enable more adaptive and fluid coordination in multi-agent systems. The invention is distinct from prior art [P1-P5], which pertains to biological targeting peptides, pharmaceutical polymorphs, cell culture methods, chemical derivatives, and gene regulation, respectively. CAV-MCL solves a computational coordination problem in multi-agent systems, a domain entirely unrelated to the biomedical and chemical focuses of the cited patents.
+CAV-MCL introduces a computational coordination framework for multi-agent systems using real-time contextual embeddings and Lyapunov-based stability verification, which addresses a problem entirely unrelated to the biomedical/pharmaceutical domains of [P1-P5]. Unlike prior art focused on biological targeting [P1], chemical polymorphs [P2], 3D cell culture [P3], chemical derivatives [P4], or gene regulation [P5], CAV-MCL solves a novel computational problem in decentralized multi-agent coordination through a non-obvious combination of transformer-like attention mechanisms for value modulation and mathematical guarantees of convergence via Lyapunov functions. This represents a distinct technical domain with no overlap in objectives or methodologies.
 
 ## Ecosystem use
 
