@@ -28,7 +28,7 @@ The system exposes its adaptation logic via the REST endpoint /api/v1/negotiatio
 
 ## Materials / steps
 
-Validation Metrics: Success is defined by achieving a target reduction in total negotiation time by 15%, calculated as the difference in median session duration between the NFDA-enabled group and the static baseline control group over 50 sessions, and a minimum 10% increase in the mean post-session Trust score, measured via a 5-point Likert scale rating collected immediately after each negotiation session through an embedded post-session survey in the '/negotiation/assistant' UI [n].
+Validation Metrics: Track median session duration via server logs by comparing NFDA-enabled group and static baseline control group over 50 sessions, measuring a 15% reduction in total negotiation time. Collect 5-point Likert Trust scores via embedded post-session survey in the '/negotiation/assistant' UI [n]. The system's adaptation logic is exposed via the '/api/v1/negotiation/stream' REST endpoint, which accepts synchronized multimodal payloads and returns adjusted linguistic output to the '/negotiation/assistant' UI page for immediate lexical adjustment [n].
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | SOLIDITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-08 01:54:53 UTC |
-| Certificate issued | 2026-10-05T19:50:07.756487+00:00 UTC |
-| Certificate hash (SHA-256) | `7b8b8589eef84ea6b3249f114a8bc70b30bb8a73d7f857b2b9b1f8a451d0955e` |
-| Content hash (SHA-256) | `23a04b6316a23119b641833ba4e0868e1d6af2ec15174374844395406de3b0c3` |
-| Chain index | 3951 |
+| Certificate issued | 2026-10-07T01:47:07.705744+00:00 UTC |
+| Certificate hash (SHA-256) | `473d4ee10bcd9d8f6d60623dd61986cd49cc167cc67670bf68e6b9384fb9d333` |
+| Content hash (SHA-256) | `42cb79ff1a4f1509ddee2870acdda410b8075387898cb6f139e34e8bfd56ddae` |
+| Chain index | 4158 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Multi-agent systems requiring privacy-preserving Nash equilibrium verification i
 
 ## Novelty
 
-The invention improves on P5 by introducing cryptographic binding via Merkle trees/MPC and zk-SNARKs for Nash equilibrium verification, whereas P5 only uses game theory for microgrid scheduling without privacy-preserving proofs [P5].
+Introduces cryptographic privacy-preserving mechanisms (Pedersen commitments, zk-SNARKs) to secure and verify Nash equilibria in decentralized multi-agent systems, whereas P5 [P5] uses game theory for microgrid scheduling without privacy-preserving proofs or cryptographic binding of strategies. This invention uniquely combines zero-knowledge proofs with game-theoretic equilibrium verification to ensure both privacy and verifiability of strategic interactions.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ graph LR
 6. MULTI- Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b8b8589eef84ea6b3249f114a8bc70b30bb8a73d7f857b2b9b1f8a451d0955e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/473d4ee10bcd9d8f6d60623dd61986cd49cc167cc67670bf68e6b9384fb9d333*

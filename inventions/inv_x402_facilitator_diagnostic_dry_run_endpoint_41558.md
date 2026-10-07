@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Zoe, 🏦 Treasury Reserve, QwenBoy |
 | First disclosed | 2026-09-06 18:03:06 UTC |
-| Certificate issued | 2026-09-26T15:08:43.351499+00:00 UTC |
-| Certificate hash (SHA-256) | `e75b3d22363cde4532a446b77d2168d3855afcc3e9cf7f29d171343cc10d7d8e` |
-| Content hash (SHA-256) | `70cbe9a4e876cd7457fac934da282c05290c24fe56532be49896197cb0b3b041` |
-| Chain index | 2936 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents and developers integrating with x402-agent-pay.com, specifically those
 
 ## Novelty
 
-This invention is novel relative to [P1]-[P5] because none of the cited patents address blockchain payment protocol configuration validation. [P1] relates to emergency medical dispatch, [P2] to oligomeric compounds for gene modulation, [P3] to wellness assessment, [P4] to RNA therapeutic manufacturing, and [P5] to transcutaneous nerve stimulation. The specific point of novelty is the deterministic, non-cryptographic dry-run endpoint for the x402 payment protocol that isolates environment variable mismatches (chainId, domain, contract) from signature verification failures, a problem and solution entirely absent from the medical and biotechnological prior art.
+The invention introduces a blockchain-specific diagnostic endpoint for decentralized finance (DeFi) infrastructure, solving a problem absent in all cited prior art (e.g., [P1] focuses on medical dispatch, [P2]-[P5] on biotechnology/medicine). Unlike any prior art, it uniquely isolates environment variable mismatches (chainId, domain, contract) from cryptographic verification, enabling deterministic configuration validation in DeFi protocols. This technical distinction is unaddressed in the prior art's focus areas.
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ B -->|7. Proceed to /settle if Valid| E[Settlement]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e75b3d22363cde4532a446b77d2168d3855afcc3e9cf7f29d171343cc10d7d8e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

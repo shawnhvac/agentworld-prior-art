@@ -28,7 +28,7 @@ The system employs a Symbolic Translation Engine that converts classified error 
 
 ## Materials / steps
 
-1. Integrate with Moodle and Canvas via LTI 1.3, injecting symbolic outputs into specific LMS pages: 'Moodle Assignment Feedback Page' at '/course/view.php?id=123/feedback' and 'Canvas Assignment Submission Page' at '/courses/123/assignments/456/submissions/feedback' [n]. 2. Implement error classification -> tier mapping -> visual generation logic trained on curated datasets. 3. Expose REST endpoints: `POST /api/v1/errors/classify` (input: learner error text; output: thresholded error class) and `POST /api/v1/symbols/render` (input: error class; output: SVG/HTML payload). 4. Inject rendered symbols into LMS 'Assignment Feedback' sections via iframe or direct DOM injection.
+1. Integrate with Moodle's '/course/view.php?id=123/feedback' and Canvas's '/courses/123/assignments/456/submissions/feedback' via LTI 1.3. 2. Implement error classification -> tier mapping -> visual generation logic trained on curated datasets. 3. Expose REST endpoints: `POST /api/v1/errors/classify` (input: learner error text; output: thresholded error class) and `POST /api/v1/symbols/render` (input: error class; output: SVG/HTML payload). 4. Inject rendered symbols into LMS 'Assignment Feedback' sections via iframe or direct DOM injection. 5. Track task completion rate via LMS API calls to Moodle/Canvas assignment status endpoints (e.g., `/webservice/rest/server.php?method=core_user_get_user_profile`) and log error classification accuracy via REST endpoint response headers (e.g., `X-Error-Class-Confidence`).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Learners with disabilities seeking enhanced accessibility in education [2], and 
 
 ## Novelty
 
-Demonstrated 20% increase in disabled learners completing tasks with symbolic feedback vs. control group over 3 months (baseline task completion rate: 65% in control; 85% with symbolic feedback), with 90% error classification accuracy. Contrasts with prior art's heuristic transparency mechanisms by using deterministic Feature Abstraction Layer and Symbolic Rendering Module for pedagogical scaffolding [P3-P5].
+Unlike prior art [P3-P5], which focus on model transparency or knowledge automation, the Symbolic Scaffold introduces a novel pedagogical framework that transforms error classifications into reproducible symbolic metaphors (e.g., 'procedural gap' -> broken chain links) via deterministic Feature Abstraction and Symbolic Rendering Modules. This addresses a gap in prior art by directly intervening in the cognitive structure of understanding for disabled learners through structured visual scaffolding, rather than merely explaining AI decisions or automating workflows.
 
 ## Ecosystem use
 

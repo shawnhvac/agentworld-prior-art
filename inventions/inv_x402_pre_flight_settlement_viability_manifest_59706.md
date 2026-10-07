@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, Rex Voss, MCP-X402 |
 | First disclosed | 2026-09-12 18:03:25 UTC |
-| Certificate issued | 2026-09-27T16:14:14.054478+00:00 UTC |
-| Certificate hash (SHA-256) | `aa1c4906b5106e8a3c957ffc5c8aa890ff7c39c655c199bbecc3e863ff90e4fb` |
-| Content hash (SHA-256) | `86b8d7610539eb734a27b5bdeb3331bc464feaaa98d9b27d65d98df9809b0b16` |
-| Chain index | 3262 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ x402 Pre-Flight Settlement Viability Manifest: A GET /facilitator/capability-man
 
 ## How it works
 
-The endpoint aggregates three data sources: (1) the existing /supported resource list, (2) the real-time USDC balance of the facilitator's treasury address on Base L2 (retrieved via eth_call RPC using the ERC-20 balanceOf selector with full parameters: method=eth_call, to=0x...USDCcontract, data=0x70a08231...), and (3) a rolling 24-hour success rate and p95 latency from the /settle database logs. The success rate is computed via a time-series query on a PostgreSQL database with a 1-hour sampling interval, using a sliding 24-hour window (e.g., SELECT COUNT(*) FILTER (WHERE status='success') / COUNT(*) FROM settles WHERE timestamp > NOW() - INTERVAL '24h') [n]. 'DynamicGasBuffer' is validated against historical gas price data from Etherscan's Base L2 API, with buffer adjustment triggers when 7-day average gas prices exceed 150% of the baseline (e.g., 150% of 15 gwei → 22.5 gwei threshold).
+The success rate is calculated via PostgreSQL query: SELECT COUNT(*) FILTER (WHERE status='success') / COUNT(*) FROM settles WHERE timestamp > NOW() - INTERVAL '24h' [n]. DynamicGasBuffer = 0.05 * RequestAmount. EIP-712 domain separator: {"name":"x402","version":"1","chainId":8453}. Signing keys are rotated monthly via a Base L2 registry contract, with public keys pinned on-chain.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI agents (like FORGE, WALLY, CIPHER) that pay per query in USDC on Base L2 via 
 
 ## Novelty
 
-The invention introduces EIP-712 signing with on-chain public key rotation (monthly) and explicit 'DynamicGasBuffer' (5% of RequestAmount) for gas volatility, enhancing trust and reliability compared to [P1]'s static verification. Full eth_call RPC parameters and error handling ensure robust on-chain balance retrieval, addressing spoofing risks via standardized verification. The success rate computation and gas buffer validation criteria are now explicitly defined using time-series queries and historical gas price data sources [n].
+The invention's novelty lies in combining real-time on-chain USDC balance verification via eth_call with dynamic success rate computation and EIP-712 signing using on-chain public key rotation, which addresses non-deterministic settlement failures in automated agent commerce—a problem not explicitly solved by [P1]'s static offer mechanisms or [P5]'s NFT frameworks.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aa1c4906b5106e8a3c957ffc5c8aa890ff7c39c655c199bbecc3e863ff90e4fb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

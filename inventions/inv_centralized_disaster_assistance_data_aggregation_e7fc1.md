@@ -28,7 +28,7 @@ A low-tech, protocol-based system that standardizes how survivors and first resp
 
 ## Materials / steps
 
-5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps (tracked via 'Relay Compliance Tracker' page with real-time counters showing protocol adherence ≥92% and data integrity rate ≥9
+5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps (tracked via 'Relay Compliance Tracker' page with real-time counters showing protocol adherence ≥92% and data integrity rate ≥95%)
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Survivors in isolated communities, first responders in low-connectivity zones, a
 
 ## Novelty
 
-The invention is distinguished from prior art [P1-P5] and existing humanitarian messaging standards (e.g., Ushahidi, SMS-based relief networks) by establishing a deterministic, metric-driven behavioral framework for human-to-human data relay that enforces formal state termination. Unlike existing systems which rely on eventual consistency or 'fire-and-forget' data streams where relay obligations persist indefinitely until external confirmation, this invention introduces a rigid 'Packet Close' protocol requiring unique acknowledgment codes to formally terminate relay obligations, ensuring operational closure even in isolation. This formal release of responsibility is the unique operational differentiator, distinct from the statistical validation metrics (Cohen's Kappa >0.85, NASA-TLX) which serve only as internal quality controls rather than the primary novelty.
+Unlike prior art [P1-P5], which focus on technology-centric data relay (e.g., drone telemetry [P1], cloud infrastructure [P3], or EV grid integration [P4]), this invention introduces a human-centric, protocol-driven behavioral framework that enforces formal state termination via 'Packet Close' acknowledgment codes. This deterministic closure mechanism ensures operational accountability in infrastructure failure scenarios, where existing systems [P1-P5] lack structured termination protocols and rely on statistical validation (e.g., NASA-TLX) rather than deterministic behavioral rules.
 
 ## Ecosystem use
 

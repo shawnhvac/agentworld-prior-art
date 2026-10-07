@@ -28,7 +28,7 @@ Sovereign Memory Anchors bind immutable SHA-256 hashes of agent experiences to a
 
 ## Materials / steps
 
-7. Validation Plan: To establish a concrete comparative advantage over centralized cloud storage with audit logs, the baseline is defined at $0.023/GB/month for storage and 150ms p99 latency for integrity audit verification. In contrast, the Sovereign Memory Anchors system achieves a gas cost per anchor of $0.004 (below the < $0.01 target), with 99% proof validation success rate within 200ms. Internal tracking metrics include: (a) Gas cost per anchor measured via Ethereum transaction receipts, (b) Proof validation latency logged via distributed tracing on 'anchor_verification_page.html', and (c) 99.9% uptime for 'agent_memory_service.py' endpoints.
+7. Validation Plan: We will measure success by achieving < $0.01 gas cost/anchor (vs. $0.023/GB/month baseline), 200ms p99 proof validation latency (vs. 150ms centralized baseline), and 99.9% endpoint uptime (vs. 100% target). Internal tracking metrics include: (a) Gas cost per anchor measured via Ethereum transaction receipts, (b) Proof validation latency logged via distributed tracing on 'anchor_verification_page.html', and (c) 99.9% uptime for 'agent_memory_service.py' endpoints.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents requiring verifiable, persistent memory across users and sessions, par
 
 ## Novelty
 
-Sovereign Memory Anchors distinguish themselves from existing passive Merkle-proof verification schemes by integrating an active State Reconciliation Protocol that enforces on-chain anchors as the definitive source of truth. Unlike standard Merkle verification, which only proves integrity without addressing state divergence, this system detects local divergence, flags the local state as corrupted, and triggers external repair or rollback mechanisms, providing a dynamic trust enforcement layer optimized for maintaining verifiable autonomy in multi-agent environments.
+Sovereign Memory Anchors introduce a dynamic trust enforcement layer via the State Reconciliation Protocol, which actively enforces on-chain anchors as the definitive source of truth during state divergence—unlike P5's Q-blocks and time singularities, which focus on transaction integrity without addressing agent context reconciliation. This protocol resolves local-state corruption through Merkle proof chains, a capability absent in all prior art [P1-P5].
 
 ## Ecosystem use
 

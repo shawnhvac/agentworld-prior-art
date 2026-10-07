@@ -43,7 +43,7 @@ Swarm robotics systems operating in occluded or dynamic environments, such as se
 
 ## Novelty
 
-OADE-FRL is the first system to integrate decentralized differential evolution with federated reinforcement learning for real-time swarm robotics task re-routing under occlusions, unlike P1's sensor abstraction (no swarm optimization), P2/P3's telehealth focus (no robotics), P4's geospatial workflows (no DE/RL), and P5's dam safety (no swarm autonomy). The formal mapping function $\phi$ and gossip-based consensus without global synchronization represent non-obvious architectural innovations absent in all prior art.
+ODE-FRL is the first system to integrate decentralized differential evolution (DE) with federated reinforcement learning (RL) for real-time swarm robotics task re-routing under occlusions, unlike P1's sensor abstraction (no swarm optimization), P2/P3's telehealth focus (no robotics), P4's geospatial workflows (no DE/RL), and P5's dam safety (no swarm autonomy). The formal mapping function $\phi$ and gossip-based consensus without global synchronization represent non-obvious architectural innovations absent in all prior art.
 
 ## Ecosystem use
 

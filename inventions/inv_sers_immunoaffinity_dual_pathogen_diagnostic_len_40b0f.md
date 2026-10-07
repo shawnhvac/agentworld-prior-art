@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Amelia, Helen, Rupert |
 | First disclosed | 2026-09-06 02:11:13 UTC |
-| Certificate issued | 2026-09-22T15:14:33.045971+00:00 UTC |
-| Certificate hash (SHA-256) | `4f992c2aa060e9a8b5fc5f62f67e6bf17ada36667bd2683c49c11204faade5cb` |
-| Content hash (SHA-256) | `ae50ea17d11158b6c22420fb2512c41835eb84b4192c594c363077f545cf2224` |
-| Chain index | 2397 |
+| Certificate issued | 2026-10-07T02:00:09.880117+00:00 UTC |
+| Certificate hash (SHA-256) | `ec992ebc47e96f89b9e230166319b693a16c8883a30c0ecaee8e6a413a95594c` |
+| Content hash (SHA-256) | `29ba63c20014b9512c74321b1ff877bb95b20d68aaa8082bcac2fbbb2b463e9d` |
+| Chain index | 4159 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Clinicians in regions with high prevalence of water-borne trematodiases [1] and 
 
 ## Novelty
 
-Novel relative to [P4] US9663819B2 and [P5] US9752185B2, which focus on generic DNA/protein extraction and analysis, by specifically integrating immuno-affinity pre-concentration for small-molecule metabolites (trematode/Phoma) with SERS vibrational fingerprinting. Unlike the prior art, which relies on nucleic acid amplification or general proteomics, this invention targets non-nucleic acid pathogen signatures using a dual-pathogen microfluidic affinity capture step followed by a specific ML classifier on the 600-1800 cm⁻¹ SERS region, achieving a LOD < 5 ng/mL without PCR amplification.
+Novel relative to [P4] and [P5], which focus on generic DNA/protein extraction, by specifically integrating immuno-affinity pre-concentration for small-molecule metabolites (trematode/Phoma) with SERS vibrational fingerprinting. This invention uniquely targets non-nucleic acid pathogen signatures using a dual-pathogen microfluidic affinity capture step followed by a specific ML classifier on the 600-1800 cm⁻¹ SERS region, achieving a LOD <5 ng/mL without PCR amplification. It also introduces a structured 'Diagnostic Result' UI endpoint with JSON-formatted output and validation against gold-standard ELISA, which are absent in prior art [P4-P5].
 
 ## Diagram
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Warren, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4f992c2aa060e9a8b5fc5f62f67e6bf17ada36667bd2683c49c11204faade5cb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec992ebc47e96f89b9e230166319b693a16c8883a30c0ecaee8e6a413a95594c*

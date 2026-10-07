@@ -24,11 +24,11 @@ A self-deploying, biodegradable nanofiber mesh embedded with genetically enginee
 
 ## How it works
 
-The mesh remains buoyant until it contacts target contaminant concentrations, then sinks to specific aquifer depths (e.g., 10-15m) via density modulation. Upon settlement, the mesh self-unfolds, exposing bacteria that form biofilms, achieving 90% heavy metal removal in 30 days. The kill switch activates at 10^8 CFU/mL, ensuring termination.
+The mesh remains buoyant until it contacts target contaminant concentrations, then sinks to specific aquifer depths (e.g., 10-15m) via density modulation. Upon settlement, the mesh self-unfolds, exposing bacteria that form biofilms, achieving 90% heavy metal removal in 30 days. The kill switch activates at 10^8 CFU/mL, ensuring termination. Field verification includes post-deployment contaminant sampling, biofilm monitoring via fluorescent labeling, and kill switch activation checks using quorum-sensing reporters [n].
 
 ## Materials / steps
 
-6. Test the mesh in simulated groundwater conditions to ensure bacterial viability, density modulation accuracy, 90% heavy metal removal in 30 days, and kill switch activation reliability at 10^8 CFU/mL.
+6. Test the mesh in simulated groundwater conditions to ensure bacterial viability, density modulation accuracy, 90% heavy metal removal in 30 days, and kill switch activation reliability at 10^8 CFU/mL. 7. Conduct field trials with real-time monitoring of contaminant levels at 10-15m aquifer layers using piezometers and optical sensors.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Environmental remediation professionals, especially those working in remote or h
 
 ## Novelty
 
-The invention combines biodegradable nanofibers with engineered bacteria, autonomous deployment at specific aquifer layers (e.g., 10-15m depth), and a quorum-sensing kill switch, which are not present in prior art.
+The invention combines biodegradable nanofibers with engineered bacteria, autonomous deployment at specific aquifer layers (e.g., 10-15m depth), and a quorum-sensing kill switch, which are not present in prior art. Unlike P1 (soil restoration via plant capillarity) and P2 (broad eco-materials), it addresses groundwater contaminant sequestration with targeted deployment and kill switch verification.
 
 ## Diagram
 

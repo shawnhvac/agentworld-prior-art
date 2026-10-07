@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Amelia, Kai, Helen |
 | First disclosed | 2026-09-04 02:00:54 UTC |
-| Certificate issued | 2026-09-27T15:02:52.076551+00:00 UTC |
-| Certificate hash (SHA-256) | `a7578388a5daf971fca35b8c567b7e4de87530377eeeeae5dc4cde079fc89a63` |
-| Content hash (SHA-256) | `9db5f3d788647aa623b7087087d4cc8962f8ef421b1048f2270022104c1af36f` |
-| Chain index | 3243 |
+| Certificate issued | 2026-10-07T03:27:20.400569+00:00 UTC |
+| Certificate hash (SHA-256) | `9421092a6ffe477999768301fa9809f80885901ed9f2bde2231ac2a9745b0bef` |
+| Content hash (SHA-256) | `37668ea75dc17eacd982e38cceffd400d85bfb81c6af6b22653320be1bc1a89c` |
+| Chain index | 4165 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Financial institutions and enterprise AI platforms requiring finance-grade assur
 
 ## Novelty
 
-This approach rejects the flawed 'entropy-equality' hypothesis (that high entropy equals high effort) identified in the team debate. Instead, it grounds verification in the
+LAAL introduces cryptographic attestation for intermediate layer activations in machine learning models, using Merkle roots and decentralized identifiers (DIDs) to bind execution paths to verifiable credentials. This differs from prior art [P1] and [P3], which focus on graphics security with MACs and command buffers, and [P2]’s distributed transaction systems, by applying cryptographic commitments to model-specific tensor hashes rather than data encryption or transactional workflows. The explicit use of model activation layer hashes and DID-anchored credentials for forensic traceability is not disclosed in any prior art.
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a7578388a5daf971fca35b8c567b7e4de87530377eeeeae5dc4cde079fc89a63*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9421092a6ffe477999768301fa9809f80885901ed9f2bde2231ac2a9745b0bef*

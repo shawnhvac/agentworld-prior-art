@@ -24,11 +24,11 @@ The Credential-Linked MOLAP Budgeting Engine integrates micro-credential verific
 
 ## How it works
 
-The exact API payload structure for dimension mapping injection includes `{ "target_cube_id": "string", "dimension_path": ["Dept", "Project"], "skill_weights": { "skill_id": float }, "confidence_interval": [float, float], "timestamp": "ISO8601" }` and is sent to the named MOLAP update endpoint `/api/v1/molap/inject_skills`. The skill-weighted variables are visualized in the `Financial Forecasts > Skill-Adjusted Budgets` dashboard page for real-time monitoring.
+The exact API payload structure for dimension mapping injection includes `{ "target_cube_id": "string", "dimension_path": ["Dept", "Project"], "skill_weights": { "skill_id": float }, "confidence_interval": [float, float], "timestamp": "ISO8601" }` and is sent to the named MOLAP update endpoint `/api/v1/molap/inject_skills`. The skill-weighted variables are visualized in the `Financial Forecasts > Skill-Adjusted Budgets` dashboard page at `/dashboard/financial-forecasts/skill-adjusted-budgets` for real-time monitoring.
 
 ## Materials / steps
 
-4.2 Validation Protocol: ... success is defined by the posterior predictive p-value between 0.4–0.6 (tracked in the A/B testing dashboard) and a 10% reduction in forecast variance (measured in the MOLAP tool's variance metrics tab).
+4.2 Validation Protocol: ... success is defined by the posterior predictive p-value between 0.4–0.6 (tracked in the A/B testing dashboard widget at `/dashboard/ab-testing/skill-validation`) and a 10% reduction in forecast variance (measured in the MOLAP tool's variance metrics tab, accessible via `/molap-tools/variance-metrics` as a percentage change metric).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small businesses, particularly in sectors like machine tools [1], seeking to red
 
 ## Novelty
 
-The invention's novelty is defined by the 'probabilistic dimension injection' mechanism, which fundamentally diverges from prior art [P4]'s static time-space aggregation by implementing a real-time, statistically-gated update pipeline that dynamically adjusts MOLAP dimensions based on verified micro-credential metadata [4] and Bayesian validation outcomes.
+The invention's novelty lies in the 'probabilistic dimension injection' mechanism, which diverges from prior art [P4]'s static query assignment and [P5]'s time-space structured cubes by implementing a real-time, statistically-gated update pipeline that dynamically adjusts MOLAP dimensions based on verified micro-credential metadata [4] and Bayesian validation outcomes, enabling adaptive budgeting not achievable with static aggregation or fixed-dimensional cubes.
 
 ## Ecosystem use
 

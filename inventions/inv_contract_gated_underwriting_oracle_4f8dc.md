@@ -28,7 +28,7 @@ A smart contract oracle protocol that cryptographically anchors verified underwr
 
 ## Materials / steps
 
-1. Deploy a Chainlink-style oracle network to fetch and verify underwriting data from SEC filings or equivalent regulatory sources via the `GET /api/v1/underwriting/metrics/v1.0` endpoint [3]. 2. Develop a cryptographic binding mechanism using Merkle trees or ZK-SNARK circuits to link off-chain filing hashes to on-chain reputation records at `UnderwritingOracle.sol` (contract address: `0x123...abc`). 3. Implement a scoring algorithm that maps underwriting spreads [4] and abnormal returns [2] to a scalar reputation metric, validated via historical SEC data (2018–2023) in a backtesting framework. 4. Create smart contracts with explicit settlement logic that enforces execution rights based on the reputation threshold via the `UnderwritingOracle.sol:checkReputation` endpoint at `0x123...abc`, integrating with autonomous agent frameworks [3] to trigger or block transaction finality. The contract must include a built-in latency guard that reverts if block execution time exceeds 50ms or gas usage exceeds 150,000 units. 5. Establish a rigorous backtesting framework using historical SEC filing data to simulate oracle latency and scoring accuracy. Success criteria: (a) Track adverse selection via transaction logs comparing expected vs. realized returns in settlement events, (b) Measure latency uptime using block timestamp diffs and gas usage logs from `checkReputation` calls. 6. Develop a UI/UX dashboard for autonomous agents to monitor reputation scores, latency metrics, and settlement permissions in real-time.
+5. Establish a rigorous backtesting framework using historical SEC filing data (2018–2023) to simulate oracle latency and scoring accuracy. Success criteria: (a) Track adverse selection via transaction logs comparing expected vs. realized returns in settlement events, (b) Measure latency uptime using block timestamp diffs and gas usage logs from `checkReputation` calls, with thresholds: ≥95% of calls ≤50ms latency and ≥20% reduction in adverse selection.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Autonomous trading agents, decentralized capital raising platforms, and institut
 
 ## Novelty
 
-Differentiated from Oracle Corp's enterprise database patents by defining a cryptographic 'execution permit' architecture that structurally gates autonomous agent settlement based on dynamic underwriting reputation, rather than merely storing or indexing financial data.
+The invention's cryptographic 'execution permit' architecture structurally gates autonomous agent settlement based on dynamic underwriting reputation (via Merkle proofs/ZK-SNARKs binding SEC filings to on-chain scores) [3], unlike P2's generic supply chain smart contracts or P4's cross-chain authentication. It uniquely solves the trust gap in off-chain underwriting data [3] through decay-adjusted scoring algorithms [2,4] and latency-constrained execution permits (≤50ms, ≤150k gas) [1], which no prior art explicitly addresses.
 
 ## Ecosystem use
 
-This protocol can be integrated into AI-agent platforms as an API service that provides real-time reputation scores for underwriters. Agents can query this API to decide whether to engage in a transaction, with the smart contract enforcing the gate. This enables coordinated decision-making among agents based on verified reputation data, reducing systemic risk.
+Autonomous agents use `dashboard/agent-permissions.html` to monitor reputation scores and settlement permissions, while `oracle/merkle-verification.js` handles off-chain-to-on-chain data binding via the `GET /api/v1/underwriting/metrics/v1.0` endpoint [3].
 
 ## Diagram
 

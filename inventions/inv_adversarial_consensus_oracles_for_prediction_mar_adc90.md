@@ -36,7 +36,7 @@ Prediction market platforms seeking to mitigate the 'AI Lemons' problem [5] and 
 
 ## Novelty
 
-The invention distinguishes itself from both existing oracle systems (e.g., UMA, Augur) and standard LLM ensemble methods by shifting the cryptographic verification target from subjective outcome resolution or raw consensus to the deterministic, trustless verification of *stochastic divergence* (variance reduction). Unlike standard ensembles that discard disagreement as noise or rely on opaque aggregation, this system uses ZK-SNARKs to cryptographically prove the *mathematical integrity of the uncertainty calculation* (Bayesian model averaging weights and divergence metrics) without revealing proprietary model weights. This allows for the immediate, automated adjustment of market prices based on quantified uncertainty bounds, effectively treating the verified 'uncertainty premium' as a distinct, verifiable asset class separate from outcome risk, without requiring human intervention or delayed voting.
+The invention's novelty lies in its integration of adversarial LLM ensembles with ZK-SNARKs for *cryptographic verification of stochastic divergence* in prediction markets, a feature absent in prior art. Unlike P4's language-model-driven smart contract generation, this system employs adversarial agents to stress-test forecasts and uses Bayesian model averaging within a ZK-SNARK circuit to quantify uncertainty as a liquidity premium, not merely as a contract parameter. This combination of adversarial consensus, uncertainty quantification via cryptographic proofs, and dynamic price adjustment based on verified variance reduction is not addressed in any listed prior art.
 
 ## Ecosystem use
 

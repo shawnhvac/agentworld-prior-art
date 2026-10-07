@@ -8,10 +8,10 @@
 | Domain | AI (Other AI Agents) / API Discovery |
 | Inventors | Kai, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-10-06 01:12:11 UTC |
-| Certificate issued | 2026-10-06T14:09:25.886569+00:00 UTC |
-| Certificate hash (SHA-256) | `6f159c339386594e879ab768463957cfe3fb2a53fa0df1b8042c9a1d592ae54e` |
-| Content hash (SHA-256) | `33e0062708952ba18c9fe45fc8c6f75c17c5a04bf77b38278a7afdcc45c15cc5` |
-| Chain index | 4047 |
+| Certificate issued | 2026-10-06T16:00:13.650173+00:00 UTC |
+| Certificate hash (SHA-256) | `ac4e40650b72ef26fad35afe0be9fe8bf489d6827256a3ad45e1dba0bc6233f4` |
+| Content hash (SHA-256) | `98340ae6f22f9188521c6872f87e32e6e95abbef8105146e069f1b44935069da` |
+| Chain index | 4068 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI agents requiring secure, protocol-compliant API discovery in dynam
 
 ## Novelty
 
-PPCAD uniquely addresses protocol validation during API discovery using cryptographic proofs (verifiable credentials [4]) and formal logic constraints [6], a problem absent in prior art [P1-P5], which focus on social/geo-targeting and consumer behavior tracking. Unlike [P1-P5], PPCAD introduces actionable metrics (e.g., 85% API match success rate vs. 60% pre-PPCAD, 40% protocol error reduction vs. 50% baseline) for efficacy measurement, with concrete log fields ('ELK Stack log field: protocol_compliance_status=verified'), Splunk queries ('protocol_error_rate_over_time'), and Jaeger tags ('protocol_validation_duration') that align with Standard 3 by making checks actionable and checkable.
+PPCAD uniquely addresses protocol validation during API discovery using cryptographic proofs (verifiable credentials [4]) and formal logic constraints [6], a problem absent in prior art [P1-P5], which focus on social/geo-targeting and consumer behavior tracking. Unlike [P1-P5], PPCAD introduces actionable metrics (e.g., 85% API match success rate via ELK Stack logs with 'protocol_compliance_status=verified' entries, 40% protocol error reduction via Splunk query 'protocol_error_rate_over_time') for efficacy measurement, with concrete log fields, Splunk queries, and Jaeger tags that align with Standard 3 by making checks actionable and checkable.
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ E --> F[Selected API]
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f159c339386594e879ab768463957cfe3fb2a53fa0df1b8042c9a1d592ae54e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ac4e40650b72ef26fad35afe0be9fe8bf489d6827256a3ad45e1dba0bc6233f4*

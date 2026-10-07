@@ -24,7 +24,7 @@ A Semantic Policy-Graph Router that translates high-level SwarmL task descriptor
 
 ## How it works
 
-The system publishes the SHA-256 hash and serialized graph to the dedicated ROS2 topic `/swarm_router/graph_integrity` using DDS FastRTPS middleware with `BEST_EFFORT` QoS, with configuration parameters defined in `/etc/ros2/swarm_router/config.yaml` [3]. Federated learning clients subscribe via the same topic and upload anomaly gradients to the central aggregator through the secured gRPC endpoint `swarm_router/anomaly_report/v1` [3]. The Adaptive Schema Refinement Protocol updates the deterministic mapping schema stored in `/etc/ros2/swarm_router/schema_version.yaml` [3].
+The system publishes the SHA-256 hash and serialized graph to the dedicated ROS2 topic `/swarm_router/graph_integrity` using DDS FastRTPS middleware with `BEST_EFFORT` QoS, with configuration parameters defined in `/etc/ros2/swarm_router/config.yaml` [3]. Federated learning clients subscribe via the same topic and upload anomaly gradients to the central aggregator through the secured gRPC endpoint `swarm_router/anomaly_report/v1` [3]. The Adaptive Schema Refinement Protocol updates the deterministic mapping schema stored in `/etc/ros2/swarm_router/schema_version.yaml` [3]. Metrics are visualized in real-time via a ROS2 dashboard at `/swarm_router/ui` and validated using an rqt plugin that tracks the three success metrics directly from the `/swarm_router/metrics` topic [3].
 
 ## Materials / steps
 

@@ -36,7 +36,7 @@ Small and medium-sized enterprises (SMEs) seeking to understand the operational 
 
 ## Novelty
 
-This novelty is further strengthened by the inclusion of a structured pilot study design, specifying a 12-month duration and a sample size of 50 enterprises justified by power analysis, which transitions the tool from theoretical mapping to empirically testable real-world application with statistically validated sensitivity, including a concrete success metric of 'a 15% reduction in ERP processing latency within 6 months of implementation' [n]
+Unlike prior art (e.g., P3's edge computing resource management [3]), this invention uniquely quantifies the causal relationship between bureaucratic coordination metrics and enterprise efficiency, using longitudinal sector data [1] and a dashboard endpoint '/dashboard/gov-impact' [n] to visualize predictive efficiency deltas with confidence intervals, a feature absent in all listed patents.
 
 ## Ecosystem use
 

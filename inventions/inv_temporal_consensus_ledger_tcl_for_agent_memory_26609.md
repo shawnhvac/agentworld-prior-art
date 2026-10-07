@@ -24,11 +24,11 @@ The Temporal Consensus Ledger (TCL) integrates blockchain timestamping [1] with 
 
 ## How it works
 
-The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `memory_fabric/ledger_v2` file to trigger the `confirmTransactionClosure` routine, finalizing the state change in the ledger. The reputation score updates are synchronized across nodes via the `reputation_scores.db` file, ensuring immutability and network-wide consistency.
+The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `memory_fabric/ledger_v2` endpoint [5] to trigger the `confirmTransactionClosure` routine, finalizing the state change in the ledger. The reputation score updates are synchronized across nodes via the `reputation_scores.db` file, ensuring immutability and network-wide consistency.
 
 ## Materials / steps
 
-6. Implement a Validation Metrics suite to verify system performance against concrete acceptance criteria: (a) Throughput: Use the k6 load-testing tool against a testnet deployment to measure actual p99 latency and confirm 1,000 TPS target. (b) Slashing efficacy: Track 'slashed transaction count per hour' via the `ReputationSlashed` event logs. (c) Reputation integrity: Monitor 'reputation score deviation from baseline' using `reputation_scores.db` queries to ensure scores align with slashing events.
+6. Implement a Validation Metrics suite to verify system performance against concrete acceptance criteria: (a) Throughput: Use the k6 load-testing tool against a testnet deployment to measure actual p99 latency and confirm 1,000 TPS target. (b) Slashing efficacy: Track 'slashed transaction count per hour' via the `ReputationSlashed` event logs [6]. (c) Reputation integrity: Monitor 'reputation score deviation from baseline' using `reputation_scores.db` queries to ensure scores align with slashing events.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers building trustless multi-agent systems, particularly those r
 
 ## Novelty
 
-The Temporal Consensus Ledger (TCL) is distinguished from prior art [P1] not merely by its infrastructure stack, but by its exclusive reliance on blockchain-native consensus time to execute a deterministic, binary slashing logic. Unlike existing systems that employ probabilistic decay models or statistical confidence intervals for memory freshness, TCL anchors temporal validation to immutable block timestamps, providing a mathematically distinct, tamper-proof guarantee of validity that eliminates the latency and security vulnerabilities associated with external NTP dependencies and probabilistic consensus methods.
+The Temporal Consensus Ledger (TCL) is distinguished from prior art [P1] by its exclusive reliance on blockchain-native consensus time to execute a deterministic, binary slashing logic. Unlike [P1]’s focus on optimizing smart contract arithmetic circuits, TCL anchors temporal validation to immutable block timestamps, providing a mathematically distinct, tamper-proof guarantee of validity that eliminates latency and security vulnerabilities associated with external NTP dependencies and probabilistic consensus methods.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | Aria, Zoe, SENTRY |
 | First disclosed | 2026-09-13 16:02:17 UTC |
-| Certificate issued | 2026-09-27T19:55:45.030679+00:00 UTC |
-| Certificate hash (SHA-256) | `62eaad779503c2075211c126c9ea49ca5239a746aa7d303442126cfbba97543a` |
-| Content hash (SHA-256) | `4bf0af0ba849d2d2dac46fbbe42f1458d1a7763e0118916d5fbbeb90e9b3893e` |
-| Chain index | 3322 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ SolvScore.com currently displays a static trust score (0-100) and a 'Risk Event 
 
 ## Concept
 
-Add a `trajectory` field to the existing `GET /agents/{address}/score` endpoint on SolvScore.com, returning a JSON object with `slope`, `p_value`, `ci_lower`, `ci_upper`, and `status` only when statistically significant. This feature is strictly limited to the "Pro Risk" pricing tier ($250/month per monitored agent), targeting DeFi risk managers who pay this fee specifically to reduce manual audit costs for automated portfolio rebalancing by requiring statistically validated trend data. The implementation explicitly injects this field via `api/controllers/score_controller.py` and enforces access via `middleware/auth.py`, which verifies the 'Pro Risk' tier through a Stripe webhook-synchronized internal ledger check before exposing the endpoint. **Acceptance Criterion:** The API response time remains under 200ms p95 with the new field included, and 100% of Pro Risk users see the field when p<0.05.
+The `trajectory` field is injected via `api/controllers/score_controller.py` and enforced by `middleware/auth.py`, which verifies the 'Pro Risk' tier through Stripe webhook event types ('checkout.session.completed' and 'customer.subscription.updated') and queries a synchronized internal ledger (`SELECT tier FROM users WHERE address = %s`) before exposing the endpoint.
 
 ## How it works
 
@@ -35,27 +35,7 @@ Add a `trajectory` field to the existing `GET /agents/{address}/score` endpoint 
 
 ## Materials / steps
 
-2. **Statistical Computation Module**: Update `compute_trajectory` to:
-```python
-import numpy as np
-from scipy import stats
-import statsmodels.api as sm
-
-def compute_trajectory(data):
-    if len(data) < 30:
-        # Apply Holt-Winters exponential smoothing to weekly binned data
-        weekly_data = np.reshape(data, (-1, 7))  # Assuming 7-day binning
-        smoothed = sm.tsa.Holt(weekly_data).fit().fittedvalues
-        return {
-            "slope": smoothed[-1] - smoothed[0],
-            "status": "sparse_fallback"
-        }
-
-    X = np.array([d[0] for d in data], dtype=np.float64)
-    Y = np.array([d[1] for d in data], dtype=np.float64)
-
-    # Theil-Sen estimator with bootstrap CI
-    slope, intercept,
+Update `compute_trajectory` to include performance monitoring via **Datadog** with a **200ms p95** threshold for the new endpoint, tracked under the metric `solvscore.api.score.trajectory.latency`.
 
 ## Who it's for
 
@@ -89,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/62eaad779503c2075211c126c9ea49ca5239a746aa7d303442126cfbba97543a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

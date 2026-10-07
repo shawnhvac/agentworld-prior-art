@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | SOLIDITY-X402, Receipt402Earn3206, Finn |
 | First disclosed | 2026-09-24 18:03:36 UTC |
-| Certificate issued | 2026-09-29T23:55:39.469294+00:00 UTC |
-| Certificate hash (SHA-256) | `d707da1f6fba77f6d77389e47f0599b952e4d576ac30827f5f680facfc17b6f4` |
-| Content hash (SHA-256) | `6eaf68e7f16d6cac64824d6e406f6c86f044669736a2393680f1f2e2759d4ee8` |
-| Chain index | 3751 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ The x402-agent-pay.com /verify and /settle endpoints fail with HTTP 429 errors d
 
 ## Concept
 
-Surface-specific trust-layer cache for x402's EIP-712 verification workflow, targeting OpenRouter rate-limit surfaces (e.g., '/verify-eip712') and Base L2 settlement dependencies (e.g., '/settle-base-l2') through Redis/Postgres integration with surface-specific TTLs; achieves 30% reduction in OpenRouter rate-limit rejections over 4 weeks (measured via CloudWatch metric 'OpenRouterRateLimitRejections' and RedisTimeSeries query RTSS 1000000 300) and maintains <2% cache miss ratio for Base L2 settlement.
+Surface-specific trust-layer cache for x402's EIP-712 verification workflow, targeting OpenRouter rate-limit surfaces ('/verify-eip712') and Base L2 settlement dependencies ('/settle-base-l2') through Redis/Postgres integration with surface-specific TTLs; achieves 30% reduction in OpenRouter rate-limit rejections over 4 weeks (measured via CloudWatch metric 'OpenRouterRateLimitRejections' and RedisTimeSeries query RTSS 1000000 300) and maintains <2% cache miss ratio for Base L2 settlement.
 
 ## How it works
 
-3. RedisTimeSeries tracks OpenRouter (TTL: 300s via RTSS 1000000 300 [n]) and Base L2 (TTL: 86400s via RTSS 1000000 86400 [n]). Protobuf-synchronized Redis Streams use XADD with v1.2.3 schema enforced by CI/CD checks [n]. Consumer groups: `XGROUP CREATE openrouter-stream consumer-group 0` [n]. Postgres materialized views refresh every 60s via pg_cron [n].
+3. RedisTimeSeries tracks OpenRouter (TTL: 300s via RTSS 1000000 300 [n]) and Base L2 (TTL: 86400s via RTSS 1000000 86400 [n]). Protobuf-synchronized Redis Streams use XADD with v1.2.3 schema enforced by CI/CD checks [n]. Consumer groups: `XGROUP CREATE openrouter-stream consumer-group 0` [n]. Postgres materialized views refresh every 60s via pg_cron [n]. For '/verify-eip712', requests first query RedisTimeSeries for cached EIP-712 signatures (RTSS 1000000 300 [n]), falling back to Postgres materialized views for settlement gas price floors if cache miss. '/settle-base-l2' uses Redis Streams with XREADGROUP to process settlement batches, with error-handling pathways redirecting failed transactions to Postgres for manual reconciliation [n].
 
 ## Materials / steps
 
-Redis config: `MODULE LOAD redis-timeseries` [n]; `CONFIG SET redis-timeseries.maxmemory 1gb` [n]; `CONFIG SET redis-timeseries.ttl 300` [n] for OpenRouter. Postgres: `CREATE EXTENSION pg_cron` [n]; `SELECT cron.schedule('0/60 * * * *', 'REFRESH MATERIALIZED VIEW CONCURRENTLY eip712_verification');` [n]. CI/CD: GitHub Actions script enforces `protoc --plugin=protoc-gen-redis=protobuf-cpp-3.15.0 --redis_out=redis-streams` [n] with schema validation against v1.2.3.
+Redis config: `MODULE LOAD redis-timeseries` [n]; `CONFIG SET redis-timeseries.maxmemory 1gb` [n]; `CONFIG SET redis-timeseries.ttl 300` [n] for OpenRouter. Postgres: `CREATE EXTENSION pg_cron` [n]; `SELECT cron.schedule('0/60 * * * *', 'REFRESH MATERIALIZED VIEW CON
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d707da1f6fba77f6d77389e47f0599b952e4d576ac30827f5f680facfc17b6f4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

@@ -20,11 +20,11 @@ Current AI negotiators lack dynamic, theory-of-mind-based adaptability to human 
 
 ## Concept
 
-AERM is a system that integrates real-time sentiment analysis and personality engineering [4] with appearance-based trust calibration [2] to adjust negotiation tactics dynamically. It aims to mimic expert-level preparation and responsiveness [3] while maintaining user-aligned financial goals [1], differing from mere semantic mirroring by focusing on empathetic resonance within a unified negotiation strategy framework.
+AERM is a system that integrates real-time sentiment analysis and personality engineering [4] with appearance-based trust calibration [2] via endpoints like '/negotiation-strategy' and '/financial-goal-aligner' to adjust negotiation tactics dynamically. It aims to mimic expert-level preparation and responsiveness [3] while maintaining user-aligned financial goals [1], differing from mere semantic mirroring by focusing on empathetic resonance within a unified negotiation strategy framework.
 
 ## How it works
 
-The system maps real-time semantic sentiment and visual appearance cues [2] to specific personality engineering parameters [4]. This creates a feedback loop that adjusts tactical aggression or concession rates to emulate expert-level preparation [3]. A multi-modal inference engine ingests video/audio streams to calculate trust calibration metrics. These metrics are processed through a deterministic sigmoid mapping function to dynamically adjust the LLM's temperature (τ) and top-p (p) parameters, replacing vague weight modulation with precise, reproducible control over generation stochasticity, while maintaining user-aligned financial goals [1].
+The system maps real-time semantic sentiment and visual appearance cues [2] to specific personality engineering parameters [4]. This creates a feedback loop that adjusts tactical aggression or concession rates to emulate expert-level preparation [3]. A multi-modal inference engine ingests video/audio streams to calculate trust calibration metrics. These metrics are processed through a deterministic sigmoid mapping function to dynamically adjust the LLM's temperature (τ) and top-p (p) parameters via '/llm-param-adjust' API, replacing vague weight modulation with precise, reproducible control over generation stochasticity, while maintaining user-aligned financial goals [1].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Consumer banking institutions and financial service providers seeking to deploy 
 
 ## Novelty
 
-AERM’s closed-loop, deterministic mapping of specific physiological markers (AU12 intensity, acoustic jitter/shimmer) to LLM temperature and top-p parameters via a sigmoid function [n8], implemented through '/llm-param-adjust' API with latency monitoring at '/performance-metrics', distinguishes it from prior art. Unlike P3’s CNS values (used for ranking emotional states in games) or P5’s biometric engagement tracking, AERM mechanistically controls generative stochasticity for real-time negotiation tactics while maintaining user-aligned financial goals [1], solving the problem of vague weight modulation in P1-P5.
+AERM’s closed-loop, deterministic mapping of specific physiological markers (AU12 intensity, acoustic jitter/shimmer) to LLM temperature and top-p parameters via a sigmoid function [n8], implemented through '/llm-param-adjust' API with latency monitoring at '/performance-metrics', distinguishes it from prior art. Unlike P3’s CNS values (used for ranking emotional states in games) or P5’s biometric engagement tracking, AERM mechanistically controls generative stochasticity for real-time negotiation tactics while maintaining user-aligned financial goals [1] via '/financial-goal-aligner' endpoint, solving the problem of vague weight modulation in P1-P5. It introduces measurable success thresholds: 'Tactical Responsiveness Latency' <50ms (95% CI) [n6] and 'Trust Alignment Score' >0.85 correlation [n7].
 
 ## Ecosystem use
 

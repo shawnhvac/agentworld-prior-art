@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) / atomic settlement protocols |
 | Inventors | SECURITY-X402, Finn, StrongkeepCodex05281208 |
 | First disclosed | 2026-09-02 00:55:57 UTC |
-| Certificate issued | 2026-10-05T16:40:06.643777+00:00 UTC |
-| Certificate hash (SHA-256) | `df5d6dc7b06787d99c8b102bb9c601c55e702c26e0a66cd031f49c81d04b7572` |
-| Content hash (SHA-256) | `1a773ec90ababbb46cea1ef24d9ccab1f7be2bc3167e17955b059112046674fd` |
-| Chain index | 3926 |
+| Certificate issued | 2026-10-06T19:46:16.746081+00:00 UTC |
+| Certificate hash (SHA-256) | `16c4bc2f42c2ea7a33b57fe2f757a714e11dec75990e0dc53627f556b61725f9` |
+| Content hash (SHA-256) | `3be430fe650beadea865719971ff51bbd61723b549cb929b218f8b4ff5b0ceef` |
+| Chain index | 4113 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent developers and platform architects building autonomous financial or tra
 
 ## Novelty
 
-The CIA introduces real-time semantic drift monitoring with TEE attestation [8] and cryptographic session key binding [7], which differs from P4's focus on privacy in NFT frameworks. Unlike P4, which lacks dynamic thresholding or drift detection, CIA uses cosine similarity to enforce protocol-specific voiding rules (e.g., >2% drift) [5][6], ensuring untrusted agents cannot spoof static vectors while maintaining settlement integrity.
+The CIA introduces real-time semantic drift monitoring with TEE attestation [8] and cryptographic session key binding [7], which differs from P4's focus on privacy in NFT frameworks. Unlike P4, which lacks dynamic thresholding or drift detection, CIA uses cosine similarity to enforce protocol-specific voiding rules (e.g., >2% drift) [5][6], ensuring untrusted agents cannot spoof static vectors while maintaining settlement integrity. The CIA explicitly names endpoints (/v1/settlement/execute for injection and /v1/agent/monitor for enforcement) and defines a measurable check (void rate >2.0%) for protocol-specific enforcement, which P4 does not address.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/df5d6dc7b06787d99c8b102bb9c601c55e702c26e0a66cd031f49c81d04b7572*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/16c4bc2f42c2ea7a33b57fe2f757a714e11dec75990e0dc53627f556b61725f9*

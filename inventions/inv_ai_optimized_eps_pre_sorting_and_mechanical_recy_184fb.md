@@ -28,7 +28,7 @@ A hybrid system that leverages AI-driven visual sorting to identify and isolate 
 
 ## Materials / steps
 
-Materials: EPS waste, AI sorting hardware (cameras/com
+Materials: EPS waste, AI sorting hardware (cameras, YOLOv8 inference units), PID controllers, OPC UA over EtherCAT communication modules, thermal densification equipment. Steps: 1) AI-driven visual sorting via YOLOv8 to isolate pure EPS streams; 2) real-time conveyor speed adjustment via PID controllers using OPC UA over EtherCAT based on AI confidence scores; 3) mechanical compaction and thermal densification using adaptive parameters ensured by Lyapunov stability guarantees; 4) real-time monitoring via '/eps-dashboard/v1.2' to optimize reject rates.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Municipal waste management departments [5, 6], recycling facilities lacking spec
 
 ## Novelty
 
-The invention is novel relative to WO2000067977A1 by replacing its static, multi-stage thermo-mechanical sorting with a deterministic, closed-loop AI control system. Specifically, it introduces a real-time feedback mechanism where a PID controller modulates conveyor speed based on YOLOv8 inference confidence scores via OPC UA over EtherCAT, solving the latency-throughput bottleneck for low-density EPS that static prior art cannot address. Furthermore, unlike the prior art's fixed mechanical parameters, this system employs a discrete-time Lyapunov stability guarantee and adaptive PID gains to handle variable EPS densities dynamically.
+The invention's novelty lies in integrating YOLOv8 AI inference with OPC UA over EtherCAT for real-time conveyor speed modulation via adaptive PID controllers, combined with discrete-time Lyapunov stability guarantees—unlike P3's generic MRF control systems. This solves the latency-throughput bottleneck for low-density EPS, achieving a 20% reject rate reduction [3,4], and introduces a specific UI endpoint '/eps-dashboard/v1.2' for monitoring AI confidence scores and reject rates, which prior art lacks.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | AI-ENG-X402, AUDITOR-X402, Rupert |
 | First disclosed | 2026-09-03 00:08:03 UTC |
-| Certificate issued | 2026-09-03T14:07:29.227714+00:00 UTC |
-| Certificate hash (SHA-256) | `3f54af1bdd166c6c31b978170776cd259981303c0d9a32b2d82e39ebcb6c72c3` |
-| Content hash (SHA-256) | `b089cc41722b64814846d47bc5caeb66529a3caece343837a9cb666fe6a8f952` |
-| Chain index | 1910 |
+| Certificate issued | 2026-10-07T00:42:30.550193+00:00 UTC |
+| Certificate hash (SHA-256) | `8109a71918830e007d3930225d30a751eb8d80697335e778d08f63b8356161ca` |
+| Content hash (SHA-256) | `8a8142994ea045453d9c6b00ef8eb818664b302268b534f0f8b9ee394498c254` |
+| Chain index | 4153 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement server-side dynamic OG image generation for CCN articles at `GET /api/
 
 ## Materials / steps
 
-1. Install sharp (Node.js image processing library) on the CCN server. 2. Create a function to generate an SVG template with a placeholder for the SolvScore badge and article title. 3. Integrate with SolvScore.com API to fetch the trust badge for the CCN entity. 4. Implement the endpoint `GET /api/v1/articles/:id/og-image` to call the SVG generation function at render time, passing the article ID and timestamp. 5. Update the HTML head to include the dynamic og:image URL pointing to the new endpoint and inject the tx hash into og:description. 6. Deploy and monitor social CTR and AI-agent fetch frequency against the defined success metrics (5% CTR increase, 20% AI-agent verification increase).
+1. Install sharp (Node.js image processing library) on the CCN server. 2. Create a function to generate an SVG template with a placeholder for the SolvScore badge and article title in `src/api/og-image-generator.js` [n]. 3. Integrate with SolvScore.com API to fetch the trust badge for the CCN entity. 4. Implement the endpoint `GET /api/v1/articles/:id/og-image` to call the SVG generation function at render time, passing the article ID and timestamp. 5. Update the HTML head to include the dynamic og:image URL pointing to the new endpoint and inject the tx hash into og:description. 6. Deploy and monitor success via: (a) tracking 10,000+ unique social media crawls fetching the `/og-image` endpoint, and (b) logging ≥500 AI-agent verification requests/day via x402-agent-pay.com logs.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human users browsing CCN articles on social feeds (who need visual relevance and
 
 ## Novelty
 
-HYPOTHESIS: While dynamic OG images and metadata enrichment are common, the specific combination of a subtle SolvScore trust badge for humans and cryptographic tx hash injection into machine-readable metadata for AI agents is not currently implemented in most news APIs. This dual-audience approach addresses both the 'relevance vacuum' (human CTR) and 'trust vacuum' (AI signal) without penalizing either. Distinct from prior art [P1]-[P5], which focus on general metadata, security, or AI advertising, this invention uniquely integrates cryptographic payment provenance (Base L2 tx hash) with visual
+The invention's novelty lies in its dual-audience approach, combining a human-facing SolvScore trust badge (for visual credibility) with machine-readable cryptographic provenance (Base L2 tx hash) via a dynamic SVG OG image endpoint. This contrasts with [P1]’s metadata-only focus for content enhancement and [P5]’s AI-driven advertising, as it uniquely solves the 'trust vacuum' for AI agents and 'relevance vacuum' for humans via a single technical artifact. The integration of payment infrastructure provenance (x402) with social media engagement is not addressed in prior art.
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f54af1bdd166c6c31b978170776cd259981303c0d9a32b2d82e39ebcb6c72c3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8109a71918830e007d3930225d30a751eb8d80697335e778d08f63b8356161ca*

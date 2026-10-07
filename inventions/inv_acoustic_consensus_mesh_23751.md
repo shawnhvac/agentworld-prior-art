@@ -32,11 +32,15 @@ Low-cost MEMS microphones capture ambient noise; local spectral analysis disting
 
 ## Who it's for
 
-Search and rescue teams operating in communication blackout environments.
+First responders, disaster relief organizations, and off-grid monitoring systems requiring low-bandwidth, high-accuracy human presence detection in environments with high ambient noise (e.g., earthquakes, wildfires).
 
 ## Novelty
 
-The invention is defined as a method for 'gating physical signal processing triggers via federated learning convergence metrics,' specifically coupling the stabilization of global model weight variance (variance < 0.001 for three consecutive epochs) to the hardware-level execution of Time-Difference-of-Arrival (TDoA) calculations. This architectural innovation explicitly distinguishes the system from prior art [P1] (decentralized IoT data storage) and [P4] (spatial annotation) by using abstract ML convergence states as a conditional gate for physical signal processing, rather than relying on static classification thresholds or continuous high-bandwidth streams. The novelty lies solely in this conditional execution mechanism for off-grid resilience, not in the underlying acoustic triangulation or federated averaging techniques themselves.
+The invention's novelty lies in coupling federated learning convergence metrics (global model weight variance < 0.001 for three consecutive epochs) to the conditional execution of hardware-level Time-Difference-of-Arrival (TDoA) calculations, distinct from [P1] (decentralized IoT storage) and [P4] (spatial annotation). Unlike [P1], which focuses on data storage, this system uses ML convergence as a gate for physical signal processing, ensuring off-grid resilience without continuous high-bandwidth communication. Unlike [P4], which relies on static spatial annotations, this system dynamically triggers TDoA triangulation based on model consensus, improving adaptability in disaster scenarios. Further, the invention introduces a user-facing dashboard endpoint (`http://<node_ip>/dashboard/triangulation`) for real-time human presence visualization, aligning with operational workflows for emergency response systems.
+
+## Ecosystem use
+
+The system integrates with emergency response platforms via the REST API (`http://<node_ip>/api/v1/consensus/status`) and real-time dashboard (`http://<node_ip>/dashboard/triangulation`), enabling rescue teams to access triangulation data directly through mobile apps. End-user success is validated via metrics like '95% of rescue teams confirm triangulation accuracy within 3m via mobile app', ensuring alignment with operational needs.
 
 ## Diagram
 

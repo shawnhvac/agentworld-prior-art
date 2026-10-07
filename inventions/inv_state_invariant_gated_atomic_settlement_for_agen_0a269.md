@@ -8,10 +8,10 @@
 | Domain | Atomic settlement protocols |
 | Inventors | Helen, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-09-05 02:15:02 UTC |
-| Certificate issued | 2026-09-05T14:06:05.867247+00:00 UTC |
-| Certificate hash (SHA-256) | `818de84be3dd2a244f3921391e72c59fd3bd949553519ada7514174a8c8ff554` |
-| Content hash (SHA-256) | `9e3380858c5c8a858fabbc7b75424c9ff8ec86f3d8d6c1f21b0b41eae33c92fc` |
-| Chain index | 1971 |
+| Certificate issued | 2026-10-06T16:27:14.545186+00:00 UTC |
+| Certificate hash (SHA-256) | `08b722b2edee9e58339367f6974eeb43df16380d80543f726ebe2ffcf9af598e` |
+| Content hash (SHA-256) | `93dd24d97617e594f5480a34c2a486d21cf94f845ffb8106fb716bcd09f775ae` |
+| Chain index | 4073 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system defines a formal protocol state machine for the settlement workflow. 
 
 ## Materials / steps
 
-1. Define a Finite State Machine (FSM) for the specific settlement protocol, including states for 'Initiated', 'Verifying', 'Ready-to-Settle', and 'Executed'. 2. Implement an agent action mapper that translates LLM outputs into discrete state transition requests. 3. Deploy a lightweight verifier module that checks each transition against the FSM rules in real-time. 4. Integrate the verifier with the settlement layer by guarding the smart contract function `executeSettlement()` behind the API endpoint `POST /v1/settlement/verify`, which returns a boolean validity flag. 5. Log all state transitions for auditability and visualize them in the 'Settlement Audit Log' view of the frontend dashboard. 6. Validate the system using a test suite of 1,000 simulated agent drift scenarios, reporting the percentage reduction in drift-induced settlement errors compared to the previous semantic hashing baseline, alongside 100% rejection of invalid state transitions and zero false positives on valid settlements.
+1. Define FSM in `config/settlement-fsm.yaml` with states 'Initiated', 'Verifying', 'Ready-to-Settle', 'Executed'. 2. Implement agent action mapper. 3. Deploy verifier module. 4. Integrate with `POST /v1/settlement/verify` guarding `executeSettlement()`. 5. Log transitions in 'Settlement Audit Log' dashboard, displaying 'drift-induced error rate' as a post-deployment metric. 6. Validate with 1,000 drift scenarios, reporting 100% invalid transition rejections and zero false positives.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of AI agent platforms handling financial transactions, payment proces
 
 ## Novelty
 
-Unlike US12231559B2, which employs neural networks for probabilistic anomaly detection and rule-based compliance tracking on blockchain data, this invention uses a deterministic Finite State Machine (FSM) invariant check to gate atomic settlement triggers. It does not rely on statistical anomaly scores or non-deterministic semantic hashing but enforces strict structural consistency of agent actions against a pre-defined protocol state machine. This ensures that settlement occurs only when the agent's behavior is structurally consistent with the initial intent, providing a mathematically stable, verifiable guarantee that prevents drift-induced errors in a way that probabilistic classifiers cannot.
+Unlike P1's probabilistic anomaly detection using neural networks, this invention enforces strict structural consistency via a deterministic FSM invariant check. It introduces a formal protocol state machine with explicit states ('Initiated', 'Verifying', 'Ready-to-Settle', 'Executed') and integrates a verifiable audit log (`Settlement Audit Log` view) displaying metrics like 'drift-induced error rate' post-deployment, which P1 does not address. This provides mathematically stable, rule-based guarantees absent in prior art's statistical approaches.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. ATOMIC Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/818de84be3dd2a244f3921391e72c59fd3bd949553519ada7514174a8c8ff554*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08b722b2edee9e58339367f6974eeb43df16380d80543f726ebe2ffcf9af598e*

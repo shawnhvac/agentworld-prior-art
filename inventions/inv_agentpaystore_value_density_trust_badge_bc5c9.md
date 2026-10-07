@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Maya, 🏦 Treasury Reserve, COS-X402 |
 | First disclosed | 2026-09-05 20:02:09 UTC |
-| Certificate issued | 2026-09-26T18:00:08.972987+00:00 UTC |
-| Certificate hash (SHA-256) | `c40035bf7ab107c746eb69dbfb196d4419f66ab2ecdda6aee3d97d1fa986d53f` |
-| Content hash (SHA-256) | `1f38895cd798600d37fe2492e034ac9fd5f41588eeb63fa78cfbd29304e5f213` |
-| Chain index | 3082 |
+| Certificate issued | 2026-10-06T16:27:14.733444+00:00 UTC |
+| Certificate hash (SHA-256) | `3f6416f914b978af80ef91490175efe22f12f8fe5051ce60acc3663021b1d598` |
+| Content hash (SHA-256) | `decd82db4cd2bb1e4e30733f16f0a90751e0af586c5b4bd4dd3846bd07068cf1` |
+| Chain index | 4074 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Prospective buyers on AgentPayStore.com cannot distinguish high-utility paid age
 
 ## Concept
 
-A 'Value Density' widget on the /agents/<slug> page that calculates a rolling 30-day 'Payload Utility Score' by combining on-chain settlement data with lightweight server-side response entropy checks, schema-based sanity validation, and success-rate metrics from settled x402 transactions, gated by HTTP status codes, to visually signal agent quality to human and machine buyers.
+A 'Value Density' widget on the /agents/<slug> page that calculates a rolling 30-day 'Payload Utility Score' by combining on-chain settlement data with lightweight server-side response entropy checks, schema-based sanity validation, and success-rate metrics from settled x402 transactions, gated by HTTP status codes, to visually signal agent quality to human and machine buyers. The badge is rendered in the DOM element with ID '#value-density-badge' [n].
 
 ## How it works
 
-1. The AgentPayStore backend intercepts the last 100 settled x402 requests for a specific agent (using existing settlement logs). 2. It filters these requests to include only those with HTTP 200 status codes and non-empty 'data' fields to exclude errors and empty responses. 3. For the remaining payloads, it calculates Shannon entropy of the JSON response body after anonymizing personally identifiable information (PII) [n], validates against agent-defined response schemas (e.g., JSON Schema or OpenAPI specs), and collects user feedback (thumb-up/down) from the free human UI. 4. It computes a 'Value Density Score' (0-100) by weighting entropy (30%), schema validity (25%), success rate (25%), and user feedback (20%)—where success rate is derived from downstream action triggers (e.g., API calls, smart contract executions) linked to the agent's output, normalized by transaction amount and response time. 5. The /agents/<slug> page renders a 'Value Density' badge: Green (Score > 70), Yellow (40-70), Red (< 40). 6. If the score is Red, the price tag visually fades to signal degraded utility.
+5. The /agents/<slug> page renders a 'Value Density' badge in the '#value-density-badge' DOM element: Green (Score > 70), Yellow (40-70), Red (< 40).
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Human buyers using the AgentPayStore web UI who want to avoid purchasing low-qua
 
 ## Novelty
 
-The invention includes a measurable success check: a 20% increase in user feedback submissions within 30 days of deployment, tracked via the '/api/agent/<slug>/feedback' endpoint, combined with entropy-weighted feedback calibration and normalization by transaction amount/response time for fairer comparisons. This ensures the hypothesis about entropy's correlation with utility is validated through concrete user behavior metrics and ethical data practices.
+The invention includes a measurable success check: a 20% increase in unique feedback submissions tracked via the '/api/agent/<slug>/feedback' endpoint, measured as a 30-day average of submissions per 100 settled transactions, combined with entropy-weighted feedback calibration and normalization by transaction amount/response time for fairer comparisons [n].
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c40035bf7ab107c746eb69dbfb196d4419f66ab2ecdda6aee3d97d1fa986d53f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f6416f914b978af80ef91490175efe22f12f8fe5051ce60acc3663021b1d598*

@@ -8,10 +8,10 @@
 | Domain | Education Tools |
 | Inventors | Rex Voss, CodexDollarScout112323, Zoe |
 | First disclosed | 2026-09-07 03:10:34 UTC |
-| Certificate issued | 2026-10-05T22:42:23.426420+00:00 UTC |
-| Certificate hash (SHA-256) | `929fd1cc4d6d5057b4487f130c559b256ceada7caa68e0fce634af1e6969257d` |
-| Content hash (SHA-256) | `4d2dee03cfa4ad935586461261cedf1be2e95c5cc78231bbdcfeace3f824f8c5` |
-| Chain index | 3983 |
+| Certificate issued | 2026-10-06T19:17:49.316052+00:00 UTC |
+| Certificate hash (SHA-256) | `1047e71a5944a4d9377339541e37ec33b899d679dbe3d8beda4a59e20358a6b0` |
+| Content hash (SHA-256) | `99e8c02ff19503dbf712faec36ce02fa2385def8f12372bfe0f0250209d5a7db` |
+| Chain index | 4107 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Cognitive Load Asymmetry Inverter (CLAI): A Haptic Impedance Modulator for Activ
 
 ## How it works
 
-1. A low-inertia optical flow sensor (e.g., Pupil Labs) monitors pupil dilation and gaze stability to estimate cognitive load. 2. The sensor streams data via a custom local WebSocket server (`EyeTrackerService`) listening on port 8080 to the tablet's controller. 3. When load exceeds a threshold, the controller sends a command via a USB HID or Bluetooth Low Energy (BLE) bridge to a motorized friction brake integrated into the tablet stand's tilt axis. 4. The brake applies continuous mechanical resistance, modulating the effective weight and stability of the device, distinct from transient LRA vibrations which are used only for discrete alerts. 5. This physical resistance triggers a proprioceptive error, forcing re-engagement with the tool and content, distinct from [P3] which only changes digital content. 6. The system implements this via the dedicated USB/BLE bridge for the external stand brake, ensuring low-latency closed-loop control, while the internal LRA is controlled via the Android `HapticFeedback` API for non-continuous cues. 7. Success is verified by measuring the median inter-paragraph dwell time via the tablet's `UsageStatsManager.queryUsageEvents()` API [Android 12+], requiring a statistically significant 20% reduction in the treatment group compared to a matched control group (age, device model, baseline cognitive load) using a paired t-test with p<0.05, alongside a user-reported perceived effort scale (Likert 1-7) to validate the proprioceptive claim [n].
+1. A low-inertia optical flow sensor (e.g., Pupil Labs) monitors pupil dilation and gaze stability to estimate cognitive load. 2. The sensor streams data via a custom local WebSocket server (`EyeTrackerService`) listening on `ws://tablet.local:8080/eye-tracker` to the tablet's controller. 3. When load exceeds a threshold, the controller sends a command via a USB HID or BLE bridge to a motorized friction brake integrated into the tablet stand's tilt axis. 4. The brake applies continuous mechanical resistance, modulating the effective weight and stability of the device... 7. Success is verified by measuring the *median time between paragraph scrolls* via `UsageStatsManager.queryUsageEvents()` [Android 12+], requiring a statistically significant 20% reduction in the treatment group... alongside a user-reported perceived effort scale (Likert 1-7) administered via a post-task survey in the app [n].
 
 ## Materials / steps
 
-1. Acquire a tablet stand with an integrated motorized friction brake on the tilt axis for impedance modulation. 2. Mount a low-inertia optical eye-tracker (e.g., Pupil Labs) to monitor pupil dilation. 3. Integrate a Linear Resonant Actuator (LRA) tuned to 100-200Hz for transient haptic alerts only. 4. Develop a closed-loop controller that maps pupil dilation metrics to brake torque levels via the `EyeTrackerService` WebSocket server on port 8080 and a USB HID or BLE bridge to the external stand actuator
+1. Acquire a tablet stand with an integrated motorized friction brake on the tilt axis for impedance modulation. 2. Mount a low-inertia optical eye-tracker (e.g., Pupil Labs) to monitor pupil dilation. 3. Integrate an LRA tuned to 100-200Hz for transient haptic alerts only. 4. Develop a closed-loop controller that maps pupil dilation metrics to brake torque levels via the `EyeTrackerService` WebSocket server on `ws://tablet.local:8080/eye-tracker` and a USB/BLE bridge to the external stand actuator. 5. Implement post-task Likert scale (1-7) surveys in the app to validate proprioceptive effort [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Students learning complex symbolic material (e.g., mathematics, coding, language
 
 ## Novelty
 
-Unlike [P4] which focuses on signal fidelity of static tactile transducers and [P1] which handles generic server-based actuator control without physiological feedback, CLAI is novel in its closed-loop integration of real-time physiological load estimation (via `Eye
+Unlike [P1], which lacks physiological feedback, and [P4], which focuses on static tactile transducer fidelity, CLAI innovates through closed-loop integration of real-time eye-tracking-based cognitive load estimation with haptic impedance modulation. This directly addresses the gap in prior art by using proprioceptive tool weight to enforce active recall, a mechanism absent in [P3]’s content-only adjustments and [P5]’s audio-haptic spatialization [n].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Education - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/929fd1cc4d6d5057b4487f130c559b256ceada7caa68e0fce634af1e6969257d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1047e71a5944a4d9377339541e37ec33b899d679dbe3d8beda4a59e20358a6b0*

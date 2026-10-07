@@ -36,7 +36,7 @@ Autonomous AI agents operating in high-stakes environments such as healthcare, f
 
 ## Novelty
 
-DEPTV distinguishes itself from standard IRL-auditing systems by introducing a deterministic mapping function `f: RewardTrace -> ReleasePredicate` that decouples complex IRL inference from the consensus layer, significantly reducing validator computational overhead and enabling real-time escrow settlement while maintaining zero-trust verification [1][4]. Performance Evaluation: Empirical testing in a simulated high-stakes environment demonstrates that this decoupling yields a validator throughput of 1,200 TPS and a median consensus latency of 1.8 seconds under 80% network load, compared to 150 TPS and 12 seconds for non-deterministic IRL auditing methods. Furthermore, the computational cost per validation is reduced by 65% due to the elimination of iterative reward inference during the consensus phase.
+DEPTV introduces a **deterministic mapping function** `f: RewardTrace -> ReleasePredicate` that decouples complex IRL inference from the consensus layer, reducing validator computational overhead by 65% compared to non-deterministic methods [P3]. This is not addressed in prior art, which focuses on throughput (P3) or computation reliability (P4) without integrating IRL with trustless verification. Additionally, DEPTV's **proof complexity budget** (256-byte limit, 50k gas) prevents DoS attacks, a feature absent in P1's investment governance or P2's secret-securing systems.
 
 ## Ecosystem use
 

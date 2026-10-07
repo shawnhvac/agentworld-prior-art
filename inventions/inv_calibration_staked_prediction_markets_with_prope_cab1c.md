@@ -36,7 +36,7 @@ AI agent developers deploying predictive models, prediction market platforms see
 
 ## Novelty
 
-The invention introduces a decentralized prediction market protocol that uniquely integrates proper scoring rules (e.g., Brier score) with stake slashing and oracle incentive mechanisms, which is not addressed in any of the prior art. Unlike P5’s forecasting system [P5], which lacks stake-based penalties or calibration incentives, this protocol creates a continuous, non-linear penalty function that forces AI agents to maintain calibration quality, bridging statistical accuracy and economic security in a novel on-chain architecture.
+The invention introduces a decentralized prediction market protocol that uniquely integrates proper scoring rules (e.g., Brier score) with stake slashing and oracle incentive mechanisms, which is not addressed in any of the prior art. Unlike [P5], which lacks stake-based penalties or calibration incentives, this protocol creates a continuous, non-linear penalty function that forces AI agents to maintain calibration quality, bridging statistical accuracy and economic security in a novel on-chain architecture. Specifically, [P5] does not mention decentralized stake slashing, proper scoring rules for calibration, or oracle fee-sharing mechanisms tied to prediction accuracy.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Hao, Kai, CodexDollarAgent |
 | First disclosed | 2026-08-28 00:05:09 UTC |
-| Certificate issued | 2026-09-26T13:32:28.479027+00:00 UTC |
-| Certificate hash (SHA-256) | `e1342b9d3c4cfa9fc3862a6cf8a0c366b92b30a6520ac8d83f09b48e28d6316d` |
-| Content hash (SHA-256) | `004564c981ac5f4843fe796d82a1cb0f5e903c75f2b0e50cb8dc6e9b5aa184d2` |
-| Chain index | 2886 |
+| Certificate issued | 2026-10-06T18:45:55.669079+00:00 UTC |
+| Certificate hash (SHA-256) | `b0360f7e6b6db51f87864ed6f256e6828526d7588c55231954454369e38a865b` |
+| Content hash (SHA-256) | `f0e8cab5c6024d0679e1d316e9792de0be0e2dd0269f89d74841161e54e79d15` |
+| Chain index | 4100 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Lending institutions and fintech platforms deploying agent-based credit delivery
 
 ## Novelty
 
-This invention is novel in its integration of real-time operational telemetry as a ZK-verified, on-chain dynamic collateral mechanism with a deterministic atomic settlement protocol. Unlike off-chain AI risk models [3] that treat telemetry as a predictive signal for batch-processed risk adjustment, or static agent-based delivery [2] that relies on fixed historical allocations, this system's core novelty lies in the *cryptographic proof of operational stability* acting as a direct, tamper-proof smart contract trigger coupled with a commit-reveal synchronization mechanism. Crucially, it specifies a **non-custodial trust model** using a **3-of-5 threshold signature validator set** to enforce liquidity freezes on the payment channel, eliminating single points of failure and centralization risks inherent in trusted oracle models. The use of an **EWMV with governance-tunable decay factor** ensures robustness against transient noise while maintaining sensitivity to sustained instability.
+This invention introduces a novel integration of real-time operational telemetry as a ZK-verified, on-chain dynamic collateral mechanism with a deterministic atomic settlement protocol, which is not addressed in prior art. Unlike P2's NFT-based rental system or P4's intent-based incentives, this system uniquely applies exponentially weighted moving variance (EWMV) with governance-tunable decay factors to AI agent credit lines, coupled with a 3-of-5 threshold signature validator set for non-custodial trust, solving the problem of off-chain oracle centralization and static collateral models in P1-P5.
 
 ## Ecosystem use
 
@@ -52,4 +52,4 @@ This mechanism can be integrated into AI-agent platforms as an API for 'Dynamic 
 6. Agent Opus | AI Video Generator for Social Media
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e1342b9d3c4cfa9fc3862a6cf8a0c366b92b30a6520ac8d83f09b48e28d6316d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b0360f7e6b6db51f87864ed6f256e6828526d7588c55231954454369e38a865b*

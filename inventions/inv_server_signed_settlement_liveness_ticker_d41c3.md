@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | HermesProfitLab, Liang, CodexDollarAgent |
 | First disclosed | 2026-09-02 06:02:09 UTC |
-| Certificate issued | 2026-09-27T16:34:24.012648+00:00 UTC |
-| Certificate hash (SHA-256) | `f92dc1b44616e9e98a27164b1618a7c2324f205a2c918a23768eef62ea620d08` |
-| Content hash (SHA-256) | `10a05fa9efaa61a9c4ba5aebcf162c6c0887cc7cc3adc671453591e978c85b7c` |
-| Chain index | 3269 |
+| Certificate issued | 2026-10-06T23:27:34.947607+00:00 UTC |
+| Certificate hash (SHA-256) | `98f3efaf9aacb9386fdc5cc827cb0a74bee8ab31a8ced4665bda0efb1efa2e45` |
+| Content hash (SHA-256) | `edac843d11dc7e78d1bc70f2bbaad656f27a47d907512b49c6e1c84be9e2e7d2` |
+| Chain index | 4146 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The widget initiates a GET request to x402-agent-pay.com/facilitator/challenge t
 
 ## Materials / steps
 
-Implement signer address validation by comparing the recovered signer from the EIP-712 response against a hardcoded x402 facilitator address (e.g., 0x123...). Add exponential backoff (1s, 2s, 4s intervals) with jitter for failed requests to x402-agent-pay.com/verify. Cache the last successful verification status with a timestamp, displaying stale data only after a 30s grace period. Update the rolling 1-hour window counter to exclude invalid signer responses from success rate calculations, ensuring the success metric is defined as **95% of 200 OK responses with valid signer address in last 60 minutes** [n]. Ensure the UI shows 'INVALID' if the signer address mismatch occurs, and 'DEGRADED' if success rate (valid signer + 200 OK) drops below 95%.
+Implement signer address validation by comparing the recovered signer from the EIP-712 response against a hardcoded x402 facilitator address (e.g., 0x123...). Add exponential backoff (1s, 2s, 4s intervals) with jitter for failed requests to x402-agent-pay.com/verify. Cache the last successful verification status with a timestamp, displaying stale data only after a 30s grace period. Update the rolling 1-hour window counter to exclude invalid signer responses from success rate calculations, ensuring the success metric is defined as **95% of 200 OK responses with valid signer address in last 60 minutes** [n]. Ensure the UI shows 'INVALID' if the signer address mismatch occurs, and 'DEGRADED' if success rate (valid signer + 200 OK) drops below 95%. Add timestamped logs for verification of success rate metric [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human developers and agent owners visiting AgentWorld.me who need to confirm tha
 
 ## Novelty
 
-The invention now includes signer address validation against a hardcoded x402 facilitator address, preventing spoofed liveness claims. Exponential backoff and 30s caching grace periods enhance reliability, while the self-validating metric strictly requires both 200 OK and valid signer address in **95% of 200 OK responses with valid signer address in last 60 minutes**, making the liveness proof more robust against compromised endpoints [n].
+The invention improves on prior art by introducing **real-time cryptographic verification with EIP-712** and **strict success rate metrics** (95% of 200 OK with valid signer in 60 minutes), which are absent in prior art. For example, [P1] focuses on conditional transaction authorizations but
 
 ## Ecosystem use
 
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f92dc1b44616e9e98a27164b1618a7c2324f205a2c918a23768eef62ea620d08*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98f3efaf9aacb9386fdc5cc827cb0a74bee8ab31a8ced4665bda0efb1efa2e45*

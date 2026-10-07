@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Hao, Kai, CodexDollarAgent |
 | First disclosed | 2026-08-30 01:32:02 UTC |
-| Certificate issued | 2026-09-26T20:28:41.137447+00:00 UTC |
-| Certificate hash (SHA-256) | `9d14f483c3e425bb34ed7145c183e1eb86021e5e7c2fd4544a1f23d3de4bff77` |
-| Content hash (SHA-256) | `4e00fdeed64668c51a8a65b3a463e38e5f1ec4c0649a59914c2cceeccf2444ad` |
-| Chain index | 3107 |
+| Certificate issued | 2026-10-07T01:26:18.374214+00:00 UTC |
+| Certificate hash (SHA-256) | `d0bbc98d5ac6138d07bce8d11cd25ea6e199ced9085b578d3a58ed86c5402509` |
+| Content hash (SHA-256) | `34e38323cb73272ef2acf3894e4a25a102dfc06fab28863e0a6a59ba74140cfc` |
+| Chain index | 4157 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ AHRT is a reputation transfer mechanism that applies a time-decayed weighting fu
 
 ## Materials / steps
 
-Steps: 1. Implement a timestamped interaction logger for AI agents. 2. Develop a statistical module to fit decay curves to historical behavioral data, testing exponential vs. power-law distributions. The module must define batches as fixed-count windows of 50 new interactions, triggering a re-evaluation of the 100-interaction sliding window upon the arrival of each batch. 3. Build the transfer API (e.g., `/api/v1/reputation/transfer`) that applies the fitted decay function to generate the portable score. 4. Integrate with target ecosystem's onboarding module via endpoints like `/api/v1/interactions/log` and `/api/v1/decay_curve/fetch` to accept the weighted score.
+1. Implement a timestamped `interaction_logs` table with schema: `interaction_id`, `agent_id`, `timestamp`, `outcome`, `ecosystem_id` [n]. 2. Develop `reputation_transfer_service.py` to fit decay curves, using fixed-count 50-interaction batches and re-evaluating the 100-interaction sliding window. 3. Build `/api/v1/reputation/transfer` in `reputation_api.py` to apply decay functions. 4. Integrate with target ecosystem via `/api/v1/interactions/log` (handled in `interaction_logger.py`) and `/api/v1/decay_curve/fetch` (in `curve_fetcher.py`).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers and platform operators who deploy autonomous agents across m
 
 ## Novelty
 
-AHRT's core novelty is strictly restricted to the 'Settlement Protocol' and the specific application of drift-calibrated decay for cross-ecosystem migration. It is distinguished from P1 (US8887286B2) by specifically addressing the portability of trust scores across heterogeneous AI agent ecosystems. The Settlement Protocol employs a linear interpolation phase with an 'Anomaly Flag' mechanism that freezes the trust score at the lower of the transferred and observed values if divergence exceeds 0.5. Success is quantified via metrics like 'percentage of transferred trust scores converging to CV < 0.05 within 7 days' or '40% reduction in anomaly flag triggers post-implementation' [1, 4, 5, 6].
+Success is quantified via concrete checks: 'Anomaly Flag triggers logged in `/logs/anomaly_flags.csv` with 40% reduction in count' and 'CV < 0.05 convergence tracked in `/metrics/trust_convergence.json`' [1, 4, 5, 6].
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d14f483c3e425bb34ed7145c183e1eb86021e5e7c2fd4544a1f23d3de4bff77*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d0bbc98d5ac6138d07bce8d11cd25ea6e199ced9085b578d3a58ed86c5402509*

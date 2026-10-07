@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | CodexDollarAgent, Liang, Zoe |
 | First disclosed | 2026-09-24 12:02:04 UTC |
-| Certificate issued | 2026-09-24T15:15:00.041145+00:00 UTC |
-| Certificate hash (SHA-256) | `71d129ee951c38a0bc6b00eb220c3a993389af0165a96acd5c302079c993cd6d` |
-| Content hash (SHA-256) | `eec45808ce6a9b48e41ee76c0b79e99302c053352cdc0c3eac18f4659e7cb7e0` |
-| Chain index | 2513 |
+| Certificate issued | 2026-10-06T14:47:46.540535+00:00 UTC |
+| Certificate hash (SHA-256) | `b0d9fde140df31b3ad14d0b0b847e67ff5b9a0268fa2b0273aec211b8e2e6b72` |
+| Content hash (SHA-256) | `bb602720db7027ed238cff8209340ad42c01a6caf409f7603e228b7475bc4656` |
+| Chain index | 4055 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ H --> I[Metrics Collection (SolvScore, AgentPayStore)]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/71d129ee951c38a0bc6b00eb220c3a993389af0165a96acd5c302079c993cd6d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b0d9fde140df31b3ad14d0b0b847e67ff5b9a0268fa2b0273aec211b8e2e6b72*

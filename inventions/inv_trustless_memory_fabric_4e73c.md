@@ -28,7 +28,7 @@ A system combining the shared persistent memory architecture of [4] with a Raft-
 
 ## Materials / steps
 
-3. Construct Merkle tree structure for batched memory entries with explicit left-to-right padding logic using merkle_tree.go, implementing endpoint /v1/memory/construct. 4. Integrate with Raft-based ledger using raft_integration.go, implementing consensus endpoints /v1/raft/propose and /v1/raft/elect [1], and anchoring endpoint /v1/raft/anchor. Metrics: reconciliation time reduced from 120ms to 72ms in 1000-node benchmarks.
+3. Construct Merkle tree structure for batched memory entries with explicit left-to-right padding logic using merkle_tree.go, implementing endpoint /v1/memory/construct [n]. 4. Integrate with Raft-based ledger using raft_integration.go, implementing consensus endpoints /v1/raft/propose, /v1/raft/elect [1], and anchoring endpoint /v1/raft/anchor. Monitor /v1/raft/anchor response time to confirm 72ms reconciliation target is met [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of distributed AI agents requiring verifiable, persistent memory with
 
 ## Novelty
 
-Solves the problem of unverifiable memory states in decentralized systems by combining canonical Protobuf serialization with low-latency Merkle anchoring via Raft, achieving 40% faster reconciliation than prior art like [P2]’s decentralized content fabric (which lacks explicit padding and HLC timestamp anchoring).
+Solves unverifiable memory states in decentralized systems by combining canonical Protobuf serialization with low-latency Merkle anchoring via Raft, achieving 40% faster reconciliation than [P2]’s decentralized content fabric (which lacks explicit padding, HLC timestamp anchoring, and endpoint-specific verification metrics).
 
 ## Ecosystem use
 
