@@ -28,7 +28,7 @@ A mechanism where AI agents append state hashes to a permissionless ledger [1] t
 
 ## Materials / steps
 
-4. Conduct multi-agent simulations [...] latency breakdown showing <50ms for computation and <150ms for network propagation. Include a baseline comparison against binary serialization [...] JSON-LD must increase proof size by <15% vs binary formats while maintaining 95% semantic interoperability. 5. Perform [...] justify the choice of JSON-LD [...] 95% semantic interoperability.
+4. Conduct multi-agent simulations with measurable success criteria: latency <50ms for computation and <150ms for network propagation across 1000+ concurrent queries; JSON-LD proof size increase <15% vs binary formats with 95% semantic interoperability verified via automated schema tests. 5. Justify JSON-LD choice via comparison to prior art's lack of semantic context preservation [P1-P5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring verifiable, trustless memory sharing
 
 ## Novelty
 
-The novelty lies not in the underlying cryptographic primitives (Merkle trees, L2 anchoring) which are standard, but in the specific application-layer protocol that couples deterministic JSON-LD semantic serialization with a formal state transition function ($S_{t} = Hash(S_{t-1} || M_{t})$) and a deterministic dispute resolution mechanism for agent memory lineage. Unlike generic ZK-Merkle proofs which verify data inclusion without semantic context, or optimistic rollups which focus on transaction execution, this system ensures that the *meaning* of the memory state is preserved via JSON-LD interoperability while cryptographically binding the temporal lineage of that state through the dispute protocol. The specific contribution is the 'Semantic Memory Lineage Protocol': a standardized method for agents to prove not just that a data block exists on-chain, but that it represents a valid, untampered, and semantically consistent evolution of their internal state from a known prior anchor, enabling trustless multi-agent collaboration without relying on centralized memory providers.
+The invention improves upon prior art by introducing a 'Semantic Memory Lineage Protocol' that explicitly couples deterministic JSON-LD serialization with a formal dispute resolution mechanism for agent memory lineage, ensuring both semantic interoperability and temporal tamper-proofing. Unlike P1's general data validation or P2's ZK-Merkle authentication, this system uniquely binds memory state evolution to semantically consistent JSON-LD schemas, enabling trustless multi-agent collaboration without centralized memory providers [P1-P5].
 
 ## Ecosystem use
 

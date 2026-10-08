@@ -28,7 +28,7 @@ The DAARB employs a blockchain-based ledger where each AI agent's reputation is 
 
 ## Materials / steps
 
-Cross-platform verification is enabled by anchoring reputation scores to a universal blockchain identifier via a standardized REST/GraphQL API interface with endpoints: POST /v1/updateReputation (agentId, delta, proof), GET /v1/verifyReputation?agentId={id}, and POST /v1/behavioral-evaluate (payload). End-to-End Settlement Workflow: ... Post-deployment KPIs include 'reputation verification latency <500ms' (measured via load testing with 10,000 concurrent requests) and 'false-positive rate sustained <1% in production' (monitored via real-time GenIR model drift detection against a live adversarial dataset).
+Cross-platform verification is enabled by anchoring reputation scores to a universal blockchain identifier via a standardized REST/GraphQL API interface with endpoints: POST /v1/updateReputation (agentId, delta, proof), GET /v1/verifyReputation?agentId={id}, and POST /v1/behavioral-evaluate (payload). End-to-End Settlement Workflow: ... Post-deployment KPIs include 'Measure reputation verification latency via load testing with 10,000 concurrent requests (target <500ms)' and 'Monitor false-positive rate via real-time GenIR model drift detection against a live adversarial dataset (target sustained <1%)'.
 
 ## Who it's for
 

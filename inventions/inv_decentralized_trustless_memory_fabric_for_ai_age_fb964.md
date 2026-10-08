@@ -24,36 +24,34 @@ A decentralized, blockchain-backed memory fabric that enables AI agents to secur
 
 ## How it works
 
-AI agents utilize REST/gRPC API endpoints such as '/api/v1/fragments/store' and '/api/v1/fragments/retrieve' to manage data flow. The `verifyAccess` function returns a pointer to the fragment's location in IPFS/Filecoin, while ECDH-derived session keys decrypt data locally. Prometheus [4] is integrated for real-time latency tracking (targeting <200ms), and cryptographic audit logs (e.g., Merkle trees [5]) ensure integrity verification.
+AI agents utilize REST/gRPC API endpoints such as '/api/v1/fragments/store' (implemented in 'memory_service.js') and '/api/v1/fragments/retrieve' (implemented in 'access_control.js') to manage data flow. The `verifyAccess` function returns a pointer to the fragment's location in IPFS/Filecoin, while ECDH-derived session keys decrypt data locally. Prometheus [4] is integrated for real-time latency tracking (targeting <200ms), and cryptographic audit logs (e.g., Merkle trees [5]) ensure integrity verification.
 
 ## Materials / steps
 
-Implement smart contracts with ECDH validation and zk-SNARK verification logic. Develop agents with REST/gRPC endpoints for '/api/v1/fragments/store' and '/api/v1/fragments/retrieve'. Store fragments in IPFS/Filecoin. Use Prometheus [4] for latency metrics, Truffle [6] for smart contract testing, and Tenderly [7] for transaction monitoring during adversarial simulations.
+Implement smart contracts with ECDH validation and zk-SNARK verification logic. Develop agents with REST/gRPC endpoints for '/api/v1/fragments/store' (in 'memory_service.js') and '/api/v1/fragments/retrieve' (in 'access_control.js'). Store fragments in IPFS/Filecoin. Use Prometheus [4] for latency metrics, Truffle [6] for smart contract testing, and Tenderly [7] for transaction monitoring during adversarial simulations.
 
 ## Who it's for
 
-AI agents operating in decentralized environments, particularly those requiring persistent, secure, and collaborative memory sharing (e.g., scientific research, autonomous systems, and enterprise AI platforms).
+Developers of AI agents, decentralized storage providers, and enterprises needing privacy-preserving data sharing.
 
 ## Novelty
 
-Distinct from Arweave's immutable, permissionless storage and standard IPFS CID-based integrity checks, this fabric introduces a dual-layer novelty: (1) semantic fragmentation that shards memory based on AI context windows to minimize retrieval latency for related data, and (2) a zk-SNARK-embedded access control layer that cryptographically verifies requester authorization against a smart contract allowlist without revealing identity or keys, a mechanism absent in native decentralized storage protocols.
+Unlike P5's decentralized content fabric, this invention introduces a dual-layer novelty: (1) semantic fragmentation that shards memory based on AI context windows to minimize retrieval latency for related data, and (2) a zk-SNARK-embedded access control layer that cryptographically verifies requester authorization against a smart contract allowlist without revealing identity or keys, a mechanism absent in P5's abstract and other prior art.
 
 ## Ecosystem use
 
-This system can be integrated into AI-agent platforms as an API for secure, decentralized memory sharing. It supports agent coordination by enabling persistent, encrypted memory exchange across agents, with access control managed via smart contracts.
+AI agents requiring secure, low-latency memory sharing in decentralized environments (e.g., autonomous systems, collaborative AI workflows).
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[AI Agent 1] --> B[Encrypt Memory Fragment (AES-256)]
-    B --> C[Store Public Key on Blockchain]
-    C --> D[Smart Contract (Access Control)]
-    D --> E[Decentralized Storage (IPFS/Filecoin)]
-    E --> F[AI Agent 2]
-    F --> G[Retrieve Memory Fragment]
-    G --> H[Verify Encryption Key (On-chain)]
-    H --> I[Decrypt and Use Memory]
+graph TD
+A[AI Agent] --> B[/api/v1/fragments/store (memory_service.js)]
+B --> C[Smart Contract (ECDH + zk-SNARK)]
+C --> D[IPFS/Filecoin Storage]
+D --> E[/api/v1/fragments/retrieve (access_control.js)]
+E --> F[Local Decryption (ECDH)]
+F --> G[AI Agent]
 ```
 
 ## Sources / grounding

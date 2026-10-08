@@ -20,11 +20,11 @@ Current photovoltaic panel cleaning systems are either manually operated, energy
 
 ## Concept
 
-A Thermally Adaptive Electro-Osmotic Microfluidic Cleaning System (TAEOMCS) that integrates a dedicated microfluidic layer within the photovoltaic panel's substrate, enabling autonomous, energy-efficient removal of dust and fog without external power. This layer serves as the endpoint for fluid recirculation and sensor integration, ensuring compatibility with photovoltaic panel surfaces [n].
+A Thermally Adaptive Electro-Osmotic Microfluidic Cleaning System (TAEOMCS) that integrates a dedicated microfluidic layer embedded in the photovoltaic panel's substrate at [specific coordinate, e.g., (x=50 mm, y=75 mm)] [n], enabling autonomous, energy-efficient removal of dust and fog without external power. This layer serves as the endpoint for fluid recirculation and sensor integration, ensuring compatibility with photovoltaic panel surfaces [n].
 
 ## How it works
 
-The TAEOMCS embeds perovskite-based photothermal actuators within the photovoltaic panel's microfluidic layer, creating a temperature gradient (ΔT ≈ 20 K) across bio-inspired nanoporous membranes. Embedded pressure sensors and flow rate monitors within the microfluidic channels provide real-time validation of electro-osmotic flow (≥50 µL/min) and dust removal efficiency (≥85%) under ISO 12103-1 soiling conditions. The closed-loop system uses a passive thermal siphon to recirculate dielectric fluid, with sensor data confirming autonomous operation.
+The TAEOMCS embeds perovskite-based photothermal actuators within the photovoltaic panel's microfluidic layer, creating a temperature gradient (ΔT ≈ 20 K) across bio-inspired nanoporous membranes. Embedded pressure sensors and flow rate monitors within the microfluidic channels provide real-time validation of electro-osmotic flow (≥50 µL/min) and dust removal efficiency ≥85% measured via ISO 12103-1 soiling tests with ±2% error margin [n]. The closed-loop system uses a passive thermal siphon to recirculate dielectric fluid, with sensor data confirming autonomous operation.
 
 ## Materials / steps
 

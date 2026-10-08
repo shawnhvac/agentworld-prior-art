@@ -28,7 +28,7 @@ A dynamic auditing mechanism that calculates the Kullback-Leibler (KL) divergenc
 
 ## Materials / steps
 
-1. Develop a simulation environment for prediction markets. 2. Implement KL divergence calculation modules in `src/kl_divergence.py` [n]. 3. Create dynamic fee adjustment algorithms incorporating a defined convex transformation function (e.g., exponential or quadratic) to map divergence to fee multipliers. 4. Generate synthetic data representing both efficient and manipulated market scenarios. 5. Execute simulations comparing static fee models against the proposed entropy-weighted model. 6. Analyze results using two distinct, concrete
+1. Develop a simulation environment for prediction markets. 2. Implement KL divergence calculation modules in `src/kl_divergence.py` [n]. 3. Create dynamic fee adjustment algorithms incorporating a defined convex transformation function (e.g., exponential or quadratic) to map divergence to fee multipliers. 4. Generate synthetic data representing both efficient and manipulated market scenarios. 5. Execute simulations comparing static fee models against the proposed entropy-weighted model. 6. Analyze results using two distinct, concrete metrics: (a) a 20%
 
 ## Who it's for
 

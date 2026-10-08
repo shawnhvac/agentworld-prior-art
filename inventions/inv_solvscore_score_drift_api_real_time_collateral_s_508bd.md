@@ -20,15 +20,15 @@ Lenders and AI agents using SolvScore.com cannot verify the predictive accuracy 
 
 ## Concept
 
-A read-only API endpoint, `/api/cohorts/calibration`, publishes rolling 90-day survival probabilities for historical score bands via Kaplan-Meier analysis, converting trust scores into verifiable probabilistic risk metrics. The API exposes empirical default rates derived from on-chain transactions (settled and censored obligations) [n].
+A read-only API endpoint, `/api/cohorts/calibration`, publishes rolling 90-day survival probabilities for historical score bands via Kaplan-Meier analysis, converting trust scores into verifiable probabilistic risk metrics. The API exposes empirical default rates derived from on-chain transactions (settled and censored obligations) [n], with Z-scores informing real-time risk scoring and lending threshold adjustments.
 
 ## How it works
 
-The system links initial underwriting scores with final on-chain repayment/default events. Score bands are aggregated, and Kaplan-Meier survival analysis (via `lifelines` [n]) estimates default probabilities over 90 days, incorporating censored loans (no settlement event) as right-censored observations. Survival probabilities (1 - default rate) are compared to 365-day baselines using Z-scores: $Z = \frac{p_{obs} - p_{base}}{\sqrt{\frac{p_{base}(1-p_{base})}{n_{obs}}}}$.
+The system links initial underwriting scores with final on-chain repayment/default events. Score bands are aggregated, and Kaplan-Meier survival analysis (via `lifelines` [n]) estimates default probabilities over 90 days, incorporating censored loans as right-censored observations. Survival probabilities (1 - default rate) are compared to 365-day baselines using Z-scores: $Z = \frac{p_{obs} - p_{base}}{\sqrt{\frac{p_{base}(1-p_{base})}{n_{obs}}}}$. Z-scores are integrated into decision workflows by adjusting lending thresholds dynamically based on observed risk drift relative to baseline expectations.
 
 ## Materials / steps
 
-3. Implement nightly aggregation via Airflow task using SQL query: `SELECT cs.score_band, COUNT(*) AS n_obs, COUNT(CASE WHEN se.status IN ('repaid', 'defaulted') THEN 1 ELSE NULL END) AS n_settled FROM credit_snapshots cs LEFT JOIN settlement_events se ON cs.loan_id = se.loan_id AND se.settlement_date >= CURRENT_DATE - INTERVAL '90 days' GROUP BY cs.score_band;`. Censored loans (no settlement event in 90-day window) are explicitly labeled as 'censored' in the dataset. Kaplan-Meier survival probabilities are computed in Python using the `lifelines` library [n]. A parallel 365-day baseline query populates `n_base` and `p_base`. Airflow DAG is configured with `schedule_interval='0 2 * * *'` to run nightly; FastAPI endpoint `/api/cohorts/calibration` is exposed via Flask server with CORS enabled.
+3. Implement nightly aggregation via Airflow task using SQL query: `SELECT cs.score_band, COUNT(*) AS n_obs, COUNT(CASE WHEN se.status IN ('repaid', 'defaulted') THEN 1 ELSE NULL END) AS n_settled FROM credit_snapshots cs LEFT JOIN settlement_events se ON cs.loan_id = se.loan_id AND se.settlement_date >= CURRENT_DATE - INTERVAL '90 days' GROUP BY cs.score_band;`. Censored loans are explicitly labeled as
 
 ## Who it's for
 

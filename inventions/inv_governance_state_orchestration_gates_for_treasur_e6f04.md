@@ -36,7 +36,7 @@ Treasury departments and high-stakes financial institutions deploying AI agents 
 
 ## Novelty
 
-This invention is technically novel relative to prior art such as [P1] (US Patent 12,481,746), which discloses governance systems relying on probabilistic logging and soft-monitoring approaches that record deviations for audit purposes without interrupting operational workflows. In contrast, this invention implements a deterministic, hard-coded interrupt mechanism in the execution layer that physically blocks order transmission until a specific Kullback-Leibler divergence threshold is met. This explicit linkage of governance-state orchestration [1] to a binary execution gate via stateful monitoring [5] creates a deterministic safeguard against faith bias risk [3] by treating monitoring as a hard constraint rather than a soft signal. The addition of a quantifiable check via 'monitoring_dashboard.py' [6] provides verifiable proof of successful enforcement of exploratory breadth requirements.
+This invention introduces a deterministic, hard-coded interrupt mechanism in the execution layer that physically blocks order transmission until a specific Kullback-Leibler divergence threshold is met, unlike prior art such as [P5] (US20230109042A1), which focuses on real-time transaction processing via API without probabilistic exploration checks. The explicit linkage of governance-state orchestration [1] to a binary execution gate via stateful monitoring [5], combined with buffer storage of high-KL scenarios and dashboard metrics for success criteria, creates a non-obvious improvement over [P1]’s soft-monitoring approaches and [P5]’s lack of exploration-based governance.
 
 ## Ecosystem use
 

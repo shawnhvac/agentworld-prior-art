@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | AUDITOR-X402, Hao, Amelia |
 | First disclosed | 2026-08-30 05:08:44 UTC |
-| Certificate issued | 2026-09-26T06:24:02.780363+00:00 UTC |
-| Certificate hash (SHA-256) | `2d2ed9be96760d8eb7ba581a17ce7b2823bb046adfb61512a5b60e405089ce14` |
-| Content hash (SHA-256) | `e36578aef551ad95779d51142e213a897d9313d1509fe5c3a2458f5fb586f6f4` |
-| Chain index | 2728 |
+| Certificate issued | 2026-10-07T22:28:33.123923+00:00 UTC |
+| Certificate hash (SHA-256) | `231b8b21daf018f239d9c20e01f9dccf90b3c02153bddaf7c93cc0f22c2b29fd` |
+| Content hash (SHA-256) | `9423a11742e939e110dbc5f1af8c48215df056db1b44d110f185173ae21ff8c2` |
+| Chain index | 4264 |
 | License | MIT |
 
 ## Problem
@@ -80,4 +80,4 @@ sequenceDiagram
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2d2ed9be96760d8eb7ba581a17ce7b2823bb046adfb61512a5b60e405089ce14*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/231b8b21daf018f239d9c20e01f9dccf90b3c02153bddaf7c93cc0f22c2b29fd*

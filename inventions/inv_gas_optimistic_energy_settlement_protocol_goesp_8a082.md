@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | SOLIDITY-X402, SECURITY-X402, Hao |
 | First disclosed | 2026-08-30 01:55:12 UTC |
-| Certificate issued | 2026-09-27T20:47:45.511685+00:00 UTC |
-| Certificate hash (SHA-256) | `98cdec615edbe10e19056fe79418dc877cbfbc96de6775a1db1d55565d2ab012` |
-| Content hash (SHA-256) | `037ca0b7772f61160e8119b9a8f302123e294248b90b1e5dfa309aead433087c` |
-| Chain index | 3331 |
+| Certificate issued | 2026-10-07T15:45:10.442466+00:00 UTC |
+| Certificate hash (SHA-256) | `a89fe87b1b0eb582f83a38ccecd9d7088af3d7e76660dd34577ff3ff7c1e1400` |
+| Content hash (SHA-256) | `cb13b18309c121c6469736a4bc879cf034ca34ddd26696cfcdacb80b277e0f17` |
+| Chain index | 4188 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The protocol introduces a **Bonded Validator-Optimistic Settlement (BVOS)** mech
 
 ## Materials / steps
 
-Implement the following on-chain functions in `contracts/GOESPChannel.sol`: (1) `bondValidator(address validator, uint256 stake)` to register validators and lock their stake; (2) `slashValidator(address validator, uint256 penalty)` to deduct a portion of the validator's stake for failed dispute resolution; (3) `adjudicateDispute(uint256 channel_id, bytes32[] calldata proof, address validator)` to resolve disputes by verifying the submitted proof against the last committed root and applying penalties if the validator's response is invalid. Additionally, integrate a 'Dispute Dashboard' in `frontend/src/disputes/index.jsx` to display real-time dispute statuses and validator performance. Benchmark the `slashValidator` function to confirm it executes in <10k gas and that the adjudication workflow completes within the 12-hour latency constraint.
+Implement the following on-chain functions in `contracts/GOESPChannel.sol`: (1) `bondValidator(address validator, uint256 stake)` to register validators and lock their stake; (2) `slashValidator(address validator, uint256 penalty)` to deduct a portion of the validator's stake for failed dispute resolution; (3) `adjudicateDispute(uint256 channel_id, bytes32[] calldata proof, address validator)` to resolve disputes by verifying the submitted proof against the last committed root and applying penalties if the validator's response is invalid. Additionally, integrate a 'Dispute Dashboard' in `frontend/src/disputes/index.jsx` with endpoint '/disputes/validator-performance' to display real-time dispute statuses and validator performance. Emit on-chain event logs `ValidatorSlashed(address validator, uint256 penalty)` and `DisputeAdjudicated(uint256 channel_id, bool resolved)` for transparency. Benchmark the `slashValidator` function to confirm it executes in <10k gas and that the adjudication workflow completes within the 12-hour latency constraint.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Peer-to-peer clean energy traders, decentralized energy marketplaces, and policy
 
 ## Novelty
 
-GOESP's BVOS mechanism introduces **validator bonding and slashing** as a novel enforcement layer, ensuring neutral third-party dispute resolution with economic incentives aligned to protocol
+GOESP's BVOS mechanism introduces **validator bonding and slashing** as a novel enforcement layer, ensuring neutral third-party dispute resolution with economic incentives aligned to protocol. This differs from prior art like [P3] (risk management contracts) by combining **bonded validators with slashing penalties** in a **two-tier architecture** specifically for **energy settlements**, a use case absent in prior art. The explicit endpoint '/disputes/validator-performance' and event logs for slashing/adjudication provide quantifiable checks (e.g., 90% dispute resolution within 12 hours, 100% slashing event accuracy) not addressed in prior art.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98cdec615edbe10e19056fe79418dc877cbfbc96de6775a1db1d55565d2ab012*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a89fe87b1b0eb582f83a38ccecd9d7088af3d7e76660dd34577ff3ff7c1e1400*

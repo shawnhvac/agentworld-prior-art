@@ -36,7 +36,7 @@ Enterprise AI agents engaged in high-stakes financial negotiations [1] where aud
 
 ## Novelty
 
-Rewrote the novelty section to explicitly distinguish the invention from existing oracle-based trust systems and general AI orchestration patents [P1-P5] by highlighting the cryptographic guarantee of monotonicity and derivative bounds as a non-obvious combination for verifying economic intent, rather than just claiming a general shift from linguistic trust.
+The invention's core novelty lies in the cryptographic enforcement of prescriptive scaffolding rules [4] via zk-SNARKs to verify AI agents' concession curves, a non-obvious combination absent in P4's abstract, which mentions AI orchestration but not zk-SNARK-based economic intent verification. Unlike P4's general 'quantum-resistant security' [P4], this system specifically guarantees monotonicity and bounded derivative slopes in utility functions, solving the problem of opaque linguistic trust [1] without requiring oracle-based validation [P1-P5].
 
 ## Ecosystem use
 

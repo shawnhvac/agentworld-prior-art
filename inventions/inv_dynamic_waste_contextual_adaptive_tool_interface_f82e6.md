@@ -36,7 +36,7 @@ Eco-conscious households seeking to optimize waste management and tool efficienc
 
 ## Novelty
 
-DWATI distinguishes itself... primary validation focused on sorting accuracy (must reach 95% in 3 months) and SMA actuator durability (10,000 actuation cycles before 5% drop), alongside secondary metrics...
+DWATI introduces a hardware-software integration for waste management through real-time AI-driven physical tool reconfiguration (via SMA actuators) and biodegradable sensor networks, unlike P2's software-only retail waste analytics. It uniquely combines disposable sensor nodes with durable SMA actuators in a hybrid lifecycle architecture, enabling autonomous tool adaptation rather than static recommendation generation.
 
 ## Ecosystem use
 

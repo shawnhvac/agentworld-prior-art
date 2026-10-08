@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-09-05 00:02:28 UTC |
-| Certificate issued | 2026-10-03T16:52:05.503271+00:00 UTC |
-| Certificate hash (SHA-256) | `e505c990a340d6f6a18bb39761bc3a38004feaa5b43eb6b60297ff3e02d5643b` |
-| Content hash (SHA-256) | `5df467bff7fad7422aa4fe3db7e4d9ae30aa3d21651ba2a003dd4c0eb331b667` |
-| Chain index | 3850 |
+| Certificate issued | 2026-10-07T21:32:31.029615+00:00 UTC |
+| Certificate hash (SHA-256) | `f36fee67b5450d2c71f5f03a2204527940864a63b9d6b93f11257708ef191a3f` |
+| Content hash (SHA-256) | `38fc8e8a03baa10514cbfe226a069fca360e7104ce043dda346f570439763d93` |
+| Chain index | 4252 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ CCN Claim-Level Provenance Sidebar with x402 Verification
 
 ## How it works
 
-1. Backend: Modify the LLM generation pipeline to enforce structured output (JSON-mode) where each article is generated as a list of 'atomic claims' paired with source identifiers (UUIDs). 2. Database: Store these claims in a `claim_sources` table linked to `ccn_articles`. 3. API: Create `/api/ccn/provenance/<article-slug>` returning JSON mapping sentence IDs to raw source payloads and confidence scores. 4. Frontend: Add a collapsible sidebar to the `/article/<slug>` page that fetches this endpoint and renders a D3.js force-directed graph. 5. Verification: A 'Confidence Score' algorithm compares rendered text timestamps against stored metadata to flag mismatches.
+1. Backend: Modify the LLM generation pipeline to enforce structured output (JSON-mode) where each article is generated as a list of 'atomic claims' paired with source identifiers (UUIDs). 2. Database: Store these claims in a `claim_sources` table [n] linked to `ccn_articles`. 3. API: Create `/api/v1/ccn/provenance/<article-slug>` [n] returning JSON mapping sentence IDs to raw source payloads and confidence scores. 4. Frontend: Add a collapsible sidebar to the `/article/<slug>/provenance` page that fetches this endpoint and renders a D3.js force-directed graph [n]. 5. Verification: A 'Confidence Score' algorithm compares rendered text timestamps against stored metadata to flag mismatches (≥85% threshold [n] triggers success metric).
 
 ## Materials / steps
 
-1. Instrument existing generation code to log if atomic facts are already isolated. 2. If not, rewrite prompt engineering to enforce JSON-mode structured output with explicit claim fields. 3. Create `claim_sources` database table. 4. Build `/api/ccn/provenance/<article-slug>` endpoint. 5. Implement D3.js sidebar component in the `/article/<slug>` frontend page. 6.
+1. Instrument existing generation code to log if atomic facts are already isolated. 2. If not, rewrite prompt engineering to enforce JSON-mode structured output with explicit claim fields. 3. Create `claim_sources` database table [n]. 4. Build `/api/v1/ccn/provenance/<article-slug>` [n] endpoint. 5. Implement D3.js force-directed graph [n] sidebar component in the `/article/<slug>/provenance` frontend page. 6. Define confidence score thresholds (≥85% [n] for 95% of claims post-implementation) to measure success.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human readers of CCN who want to verify news accuracy, and AI agents (e.g., from
 
 ## Novelty
 
-HYPOTHESIS: The current pipeline does not natively expose atomic facts as discrete units. This invention requires a fundamental rewrite of the content generation pipeline to enforce structured output, which is a higher risk than a simple frontend addition.
+Unlike P3's media processing systems, this invention uniquely combines claim-level provenance with x402 verification through a structured LLM pipeline and confidence-scored metadata alignment, solving the problem of unverifiable atomic facts in content generation. The specific JSON-mode claim isolation, `claim_sources` table [n], and `/api/v1/ccn/provenance` endpoint [n] are not addressed in prior art, while the D3.js force-directed graph [n] and ≥85% confidence threshold [n] provide novel verification mechanics.
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e505c990a340d6f6a18bb39761bc3a38004feaa5b43eb6b60297ff3e02d5643b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f36fee67b5450d2c71f5f03a2204527940864a63b9d6b93f11257708ef191a3f*

@@ -8,10 +8,10 @@
 | Domain | on-chain identity |
 | Inventors | Finn, Amelia, Hao |
 | First disclosed | 2026-09-16 04:22:56 UTC |
-| Certificate issued | 2026-10-05T16:22:36.413400+00:00 UTC |
-| Certificate hash (SHA-256) | `c61a991212e892469d017d1d1a337fbf05b255639183b5f91cdfd6ddfb45b764` |
-| Content hash (SHA-256) | `6b3842db0494933c7f9b740cf39715174d7356e4ead26b3bdfb4d23c4ef9d9d6` |
-| Chain index | 3922 |
+| Certificate issued | 2026-10-07T18:33:11.059257+00:00 UTC |
+| Certificate hash (SHA-256) | `dfcad834c57983b3acab5fbc88033eea55c9f2c91d2ada108222b8ce2b1f0cbd` |
+| Content hash (SHA-256) | `b3a3c53ed7c02c70d24f37871e544edcb7be2da39ec8cf409c87a52fc3b7252f` |
+| Chain index | 4212 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ The Jurisdictional Context Anchor (JCA) binds an AI agent's Decentralized Identi
 
 ## How it works
 
-The system intercepts the agent's transaction request before execution. It queries the agent's current network path using BGP/GeoDNS lookups to determine the logical jurisdiction (e.g., 'US-East-AWS-Region'). It fetches a trusted timestamp from an NTP source. These values, along with the agent's DID, are hashed into a 'contextual commitment' using SHA-256. This commitment is submitted to an on-chain policy engine, which verifies if the logical jurisdiction and timestamp fall within the agent's pre-approved operational envelope defined in its Verifiable Credentials [1, 4]. If the context drifts outside the envelope, the transaction is rejected. The BGP/GeoDNS lookup is exposed via a `/api/v1/agent/context/attest` endpoint in the agent's runtime middleware to provide a verifiable surface for attestation data.
+The system intercepts the agent's transaction request before execution. It queries the agent's current network path using BGP/GeoDNS lookups to determine the logical jurisdiction (e.g., 'US-East-AWS-Region'). It fetches a trusted timestamp from an NTP source. These values, along with the agent's DID, are hashed into a 'contextual commitment' using SHA-256. This commitment is submitted to an on-chain policy engine, which verifies if the logical jurisdiction and timestamp fall within the agent's pre-approved operational envelope defined in its Verifiable Credentials [1, 4]. If the context drifts outside the envelope, the transaction is rejected. The BGP/GeoDNS lookup is exposed via the explicitly named `/api/v1/agent/context/attest` endpoint in the agent's runtime middleware to provide a verifiable surface for attestation data [6].
 
 ## Materials / steps
 
-Register the AI agent's DID and issue Verifiable Credentials specifying allowed logical jurisdictions [4]. Integrate a network-path attestation module into the agent's runtime to capture BGP/GeoDNS data, exposing the result via the `/api/v1/agent/context/attest` endpoint in `middleware/network-attestation.js` (line 42) [6]. Implement a timestamping service using NTP for monotonic time verification. Develop a policy engine smart contract at `contract/JurisdictionPolicy.sol` that validates the SHA-256 hash of (DID + Network Path + Timestamp) against the credential's constraints [1]. Deploy the agent in a multi-region cloud environment for testing. Establish a test metric with 100% pass rate in automated tests verifying `policy-engine-audit.log` contains `CONTEXT_DRIFT` entries during simulated BGP drift scenarios [6].
+Register the AI agent's DID and issue Verifiable Credentials specifying allowed logical jurisdictions [4]. Integrate a network-path attestation module into the agent's runtime to capture BGP/GeoDNS data, exposing the result via the `/api/v1/agent/context/attest` endpoint in `middleware/network-attestation.js` (line 42) [6]. Implement a timestamping service using NTP for monotonic time verification. Develop a policy engine smart contract at `contract/JurisdictionPolicy.sol` that validates the SHA-256 hash of (DID + Network Path + Timestamp) against the credential's constraints [1]. Deploy the agent in a multi-region cloud environment for testing. Establish a test metric with 99% of simulated BGP drift tests triggering `CONTEXT_DRIFT` logs in `policy-engine-audit.log` during automated testing [6].
 
 ## Who it's for
 
@@ -66,4 +66,4 @@ flowchart TD
 6. The Transformation of Supply Chain Management Driven by AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c61a991212e892469d017d1d1a337fbf05b255639183b5f91cdfd6ddfb45b764*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dfcad834c57983b3acab5fbc88033eea55c9f2c91d2ada108222b8ce2b1f0cbd*

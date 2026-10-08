@@ -24,11 +24,11 @@ A hybrid system that embeds smart contract triggers directly into the SwarmL [5]
 
 ## How it works
 
-1. The system parses SwarmL [5] task definitions using `POST /api/v1/task-parser` to generate Ethereum smart contracts. 2. LiDAR data [1] is ingested via `POST /api/v1/lidar/stream` by the oracle. 3. Merkle proofs are generated with leaf nodes as SHA-256 hashes of (agent_id, timestamp_10ms, deviation_vector), and the root hash is committed on-chain. 4. Proofs are submitted via `POST /api/v1/proofs/submit` and verified by `verifyPenaltyProof` in Solidity. 5. Disputes are resolved via `POST /api/v1/disputes/counter` with a 24-hour challenge period. Success metrics: reduce penalty incident rate by 40% within 3 months and lower dispute
+1. The system parses SwarmL [5] task definitions using `POST /api/v1/task-parser` to generate Ethereum smart contracts. 2. LiDAR data [1] is ingested via `POST /api/v1/lidar/stream` by the oracle. 3. Merkle proofs are generated with leaf nodes as SHA-256 hashes of (agent_id, timestamp_10ms, deviation_vector), and the root hash is committed on-chain. 4. Proofs are submitted via `POST /api/v1/proofs/submit` and verified by `verifyPenaltyProof` in Solidity. 5. Disputes are resolved via `POST /api/v1/disputes/counter` with a 24-hour challenge period. 6. Success metrics are tracked via `GET /api/v1/metrics/penalties` (incident rate) and `GET /api/v1/disputes/resolved` (resolution counts).
 
 ## Materials / steps
 
-Implement a parser for Swarm
+Implement a parser for SwarmL [5] task definitions, integrate `GET /api/v1/metrics/penalties` for real-time penalty incident rate tracking, and `GET /api/v1/disputes/resolved` for dispute resolution counts to measure 40% reduction target.
 
 ## Who it's for
 

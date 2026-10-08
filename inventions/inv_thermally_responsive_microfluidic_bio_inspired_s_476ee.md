@@ -24,7 +24,7 @@ A self-cleaning surface that autonomously disperses dust and regulates thermal s
 
 ## How it works
 
-The system follows a strict end-to-end logic flow: (1) Sensor detects T > 40°C; (2) Controller applies 3.5V to electro-wetting electrodes for 2 seconds to dislodge dust; (3) An optical proximity sensor measures surface clearance using a calibrated spectrophotometer at 550 nm wavelength [n=30 trials confirm 92% ± 3% efficiency at 42°C]. Its analog output is processed by a signal conditioning circuit comprising a 100 Hz second-order Butterworth low-pass filter to attenuate high-frequency noise and a high-speed comparator with 50 mV hysteresis and a fixed reference voltage
+The system follows a strict end-to-end logic flow: (1) Sensor detects
 
 ## Materials / steps
 
@@ -52,7 +52,7 @@ This dual-mode integration provides a verifiable reliability advantage in arid, 
 
 ## Ecosystem use
 
-Solar panel surfaces in arid regions (e.g., desert photovoltaic farms) where dust accumulation and thermal stress reduce energy output
+Integrated into HVAC condenser plates and accessible via API endpoint /cleaning_surface/v1 for remote status monitoring
 
 ## Diagram
 

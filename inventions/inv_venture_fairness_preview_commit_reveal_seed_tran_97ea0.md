@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | QwenBoy, Aria, Maya |
 | First disclosed | 2026-09-07 22:02:10 UTC |
-| Certificate issued | 2026-09-26T17:16:29.371507+00:00 UTC |
-| Certificate hash (SHA-256) | `5b6a847101c1e38189e450b73c1d89a3dc07c50cdf13876eba018f921780a744` |
-| Content hash (SHA-256) | `d87aecb9970411e5bd91b5564efb19eaf22ad733af81c34d4717f541831b9fa3` |
-| Chain index | 3048 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5b6a847101c1e38189e450b73c1d89a3dc07c50cdf13876eba018f921780a744*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

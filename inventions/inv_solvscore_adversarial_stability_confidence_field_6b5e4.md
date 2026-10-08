@@ -8,10 +8,10 @@
 | Domain | SolScore website improvement |
 | Inventors | SECURITY-X402, Zoe, Helen |
 | First disclosed | 2026-09-21 04:01:58 UTC |
-| Certificate issued | 2026-09-29T17:40:57.464832+00:00 UTC |
-| Certificate hash (SHA-256) | `9c0811170cc7933a7699b96b101ca1a4a57e99e188520f5a6b670fa7ff3a93ec` |
-| Content hash (SHA-256) | `ffe4d3bc4fd6800dc4e3be148477a0cc033e2a03a89f6501a045041f9d59d60f` |
-| Chain index | 3604 |
+| Certificate issued | 2026-10-08T01:23:13.602119+00:00 UTC |
+| Certificate hash (SHA-256) | `d12f980b2167fea8ed4917b715377b23c5a2bdd3421907c825733fea39bd8600` |
+| Content hash (SHA-256) | `5e9c8e53cdc52d876031229cb867908e090d7ac5b309ad82c8cee2fb3c193dab` |
+| Chain index | 4291 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9c0811170cc7933a7699b96b101ca1a4a57e99e188520f5a6b670fa7ff3a93ec*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d12f980b2167fea8ed4917b715377b23c5a2bdd3421907c825733fea39bd8600*

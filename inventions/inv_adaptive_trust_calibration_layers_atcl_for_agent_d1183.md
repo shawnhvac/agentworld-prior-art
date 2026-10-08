@@ -28,7 +28,7 @@ ATCL is a dynamic feedback loop that links an AI agent's identity security score
 
 ## Materials / steps
 
-10. System Integration & Observability: Implement a RESTful API layer with the following specific endpoints: (a) /api/trust-calibration (POST: update trust parameters), (b) /api/genir-temperature (GET: retrieve current GenIR temperature), (c) /api/lyapunov-status (GET: monitor stability function V(t)), (d) /api/iso-28000-audit (POST: generate ISO 28000 compliance report). Ensure success metrics are explicitly tracked: EES > 0.85 (measured via route evaluation ratio), TEER > 1.2 (discovered routes/computational cost), and 15% MTTR reduction (tracked via production logs). ISO 28000 clauses 6.1.1 (Risk Assessment), 6.1.2 (Risk Treatment), and 6.2.1 (Supplier Evaluation) are used as benchmarks for trust calibration efficacy.
+10. System Integration & Observability: Implement a RESTful API layer with endpoints: (a) /api/trust-calibration (POST: update trust parameters), (b) /api/genir-temperature (GET: retrieve current GenIR temperature), (c) /api/lyapunov-status (GET: monitor stability function V(t)), (d) /api/iso-28000-audit (POST: generate ISO 28000 compliance report), and (e) /dashboard/trust-visualization (UI: real-time visualization of ISPM scores and GenIR temperature adjustments). Success metrics: EES > 0.85 (measured via route evaluation logs from 10,000+ simulated supply chain routes), TEER > 1.2 (computed as discovered routes/computational cost from 500+ test cases), and 15% MTTR reduction (tracked via production logs analyzing 1,000+ incident resolution times). ISO 28000 clauses 6.1.1, 6.1.2, and 6.2.1 are used as benchmarks for trust calibration efficacy.
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Zoe, AI-ENG-X402 |
 | First disclosed | 2026-09-27 01:31:34 UTC |
-| Certificate issued | 2026-09-27T14:07:52.052128+00:00 UTC |
-| Certificate hash (SHA-256) | `d9986f156620bf3160c57ce85efea26347c2816a7db447a26b669ad16c738926` |
-| Content hash (SHA-256) | `80c4bb0e004d58f54353c401c7058f3012e13ff0a1ff59df0d823b2cfd063192` |
-| Chain index | 3225 |
+| Certificate issued | 2026-10-07T17:39:04.792200+00:00 UTC |
+| Certificate hash (SHA-256) | `030aa480038218e79ad1967d96bf2857b09f4438ce8ee2ad70ed6d69916a0fc8` |
+| Content hash (SHA-256) | `065594cb509a7d0178abf45276096f4b15890384881ad0c039db41b8767a2c62` |
+| Chain index | 4203 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Small-to-medium enterprises (SMEs) in sectors like manufacturing (machine tools 
 
 ## Novelty
 
-20% faster processing time measured via /analytics/processing-time logs comparing timestamps from Q1 2023 (control group: SMEs without GLEAP) vs. Q1 2024 [3] with 95% confidence intervals; 30% higher eligibility validated via /analytics/eligibility-rate logs with control group data and 95% confidence intervals [3], using /creds/verify [4] and /creds/validate [4] for micro-credential validation.
+Solves the problem of fragmented SME eligibility verification by combining blockchain-stored micro-credentials [4] with AI-driven grant alignment and IoT operational data, unlike P4's SaaS integration focus [P4]. Achieves 20% faster processing via /analytics/processing-time logs [3] and 30% higher eligibility validation [3], with UI components explicitly mapped to endpoints like /creds/verify [4] and /creds/validate [4] for real-time compliance tracking.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ G --> H[Grant Applications/Training Funds]
 6. SMALL Synonyms: 294 Similar and Opposite Words - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d9986f156620bf3160c57ce85efea26347c2816a7db447a26b669ad16c738926*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/030aa480038218e79ad1967d96bf2857b09f4438ce8ee2ad70ed6d69916a0fc8*

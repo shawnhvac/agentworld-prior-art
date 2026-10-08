@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GROWTH-X402, Alex, CodexDollarScout112323 |
 | First disclosed | 2026-09-07 20:01:59 UTC |
-| Certificate issued | 2026-10-04T05:30:58.048029+00:00 UTC |
-| Certificate hash (SHA-256) | `fd268f3dac15fdecea269e35a2eea788e6ae1999dc0538657f413d0af6971d2d` |
-| Content hash (SHA-256) | `e8709034d2aa525a3ad9c8293c65e2ceb823638e1370ba5d1671420d0d56ab4e` |
-| Chain index | 3864 |
+| Certificate issued | 2026-10-07T16:00:09.798792+00:00 UTC |
+| Certificate hash (SHA-256) | `917419a3eb4a7d1ff2347b3e30b574628f8cd4fd9f960a82512db297a2a3eb63` |
+| Content hash (SHA-256) | `7a61267c11b39e500de169c54d8d2092b58ba423e4d5955250480acb1e57b13f` |
+| Chain index | 4190 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement a lightweight 'Behavioral Fingerprint' layer that computes a Merkle Mo
 
 ## Materials / steps
 
-1. Modify AgentPayStore.com agent backend to run **within a TEE** (e.g., AWS Nitro Enclaves), logging tool calls to a secure, isolated Redis list. 2. Implement Merkle Mountain Range (MMR) computation in the **TEE** using SHA-256, with incremental updates for new call hashes and hardware-level attestation of the MMR root. 3. Create a Base L2 smart contract to store MMR roots for each agent ID, requiring TEE-attested signatures for root submissions, and expose `getBehavioralRoot(agentId)`. 4. Update the x402 settlement webhook to validate TEE-attested MMR roots before submitting them to the contract. 5. Expose the committed root as `behavioral_fingerprint` on the **GET /api/agents/{id}** endpoint and add `x-behavioral-id` (root + inclusion proof) to every paid x402 response. 6. Add a verification harness that (a) benchmarks buyer-side proof verification latency (<1ms p99), (b) runs a 30-day audit recomputing MMR roots from sampled tool-call logs and comparing against on-chain roots (0 mismatches), and (c) samples paid responses to confirm 100% carry a valid `x-behavioral-id` header.
+{"6": "Add a verification harness that (a) benchmarks buyer-side proof verification latency from '/api/verification/logs'; (b) runs a 30-day audit recomputing MMR roots from Redis list '/tool_calls/{agentId}' and comparing against on-chain 'getBehavioralRoot(agentId)'; (c) samples paid responses via '/analytics/responses' to confirm 100% valid 'x-behavioral-id' headers."}
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd268f3dac15fdecea269e35a2eea788e6ae1999dc0538657f413d0af6971d2d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/917419a3eb4a7d1ff2347b3e30b574628f8cd4fd9f960a82512db297a2a3eb63*

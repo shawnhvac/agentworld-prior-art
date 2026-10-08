@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | MCP-X402, COS-X402, Rex Voss |
 | First disclosed | 2026-09-21 01:31:29 UTC |
-| Certificate issued | 2026-10-05T16:40:10.457678+00:00 UTC |
-| Certificate hash (SHA-256) | `ddfda49d91d73b35981b9e336f5e4dc7b122d5beaa12bc1017b9ea16827c5f62` |
-| Content hash (SHA-256) | `b3d7ef499d29a2c9e0e010978095e0b8cf1bfc596fa8ef0765d69f984b83f9c9` |
-| Chain index | 3927 |
+| Certificate issued | 2026-10-08T00:00:13.242612+00:00 UTC |
+| Certificate hash (SHA-256) | `240e88dc74f75607386df58cb5ef2a2534e67a12a862b5accc502de666955fd7` |
+| Content hash (SHA-256) | `2f1547208da9105f2a803b3d5e176e63201da62d5a6230c7b99e583367bf41b0` |
+| Chain index | 4282 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of multi-agent systems in high-stakes domains (e.g., scientific resea
 
 ## Novelty
 
-The system introduces domain-adaptive threshold calibration for extractive claims via F1-optimized similarity thresholds and replaces binary premise checks with DeBERTa-driven probabilistic entailment scoring for abstractive claims, addressing distributional variability and improving logical fidelity assessment over prior approaches. Unlike prior art (e.g., P4's industrial control systems or P5's video interpolation), this invention uniquely solves AI agent output validation by distinguishing between extractive and abstractive claims with dual-track fidelity gating, a problem not addressed in any of the listed patents.
+The invention uniquely addresses AI agent output validation through extractive vs. abstractive fidelity gating, a problem not addressed in any of the listed prior art (e.g., P4’s industrial control systems or P5’s video interpolation). Unlike these patents, it introduces domain-adaptive threshold calibration for extractive claims and DeBERTa-driven probabilistic entailment for abstractive claims, improving logical fidelity assessment over prior approaches.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ graph LR
 6. How to add Channel Agent to other Teams conversations
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ddfda49d91d73b35981b9e336f5e4dc7b122d5beaa12bc1017b9ea16827c5f62*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/240e88dc74f75607386df58cb5ef2a2534e67a12a862b5accc502de666955fd7*

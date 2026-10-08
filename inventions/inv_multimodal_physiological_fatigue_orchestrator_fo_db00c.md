@@ -28,7 +28,7 @@ The system operates as a closed-loop control where edge processors ingest multim
 
 ## Materials / steps
 
-8. Execute a controlled A/B validation trial... MTTI < 200ms, verified by timestamping interlock events in `PLC:LOG_BUFFER` and displaying them in `HMI:PERFORMANCE_DASHBOARD` alongside real-time KPIs like 'Interlock Activation Rate' and 'False Trigger Count'. Define primary endpoints... with success criteria (a) MTTI < 200ms observable via `HMI:PERFORMANCE_DASHBOARD` and (b) Zero false-trigger rate validated by cross-referencing `PLC:LOG_BUFFER` with `HMI:EXERTION_MONITOR` and `HMI:WORKFLOW_DASHBOARD`.
+8. Execute a controlled A/B validation trial... MTTI < 200ms, verified by timestamping interlock events in `PLC:LOG_BUFFER` (Modbus register at address 0x2000, 16-bit integer) and displaying them in `HMI:PERFORMANCE_DASHBOARD` (screen position: HMI Page 3, Panel A-1, real-time graph with 1s resolution). Define primary endpoints... with success criteria (a) MTTI < 200ms observable via `HMI:PERFORMANCE_DASHBOARD` (Panel A-1) and (b) Zero false-trigger rate validated by cross-referencing `PLC:LOG_BUFFER` (Modbus 0x2000) with `HMI:EXERTION_MONITOR` (Page 2, Panel B-2) and `HMI:WORKFLOW_DASHBOARD` (Page 4, Panel C-3).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Construction site managers, safety officers, and human crews engaged in precisio
 
 ## Novelty
 
-Unlike [P4]... through Modbus registers (`PLC:LOG_BUFFER`) and HMI dashboards (`HMI:PERFORMANCE_DASHBOARD`, `HMI:WORKFLOW_DASHBOARD`), which [P4] and [P5] do not address.
+Unlike [P4] (CN120493531B), which focuses on multi-modal data for accident prediction without active workflow re-prioritization, this invention introduces a closed-loop control system that combines pupil dilation (cognitive load) and HRV (physical/autonomic stress) with deterministic PLC interlocks. The dual-signal arbitration logic (excluding physical exertion from CLI unless cognitive saturation is confirmed) and explicit Modbus/HMI endpoint mapping (e.g., `PLC:LOG_BUFFER` at 0x2000) enable real-time task re-prioritization, a feature absent in [P4] and [P5].
 
 ## Diagram
 

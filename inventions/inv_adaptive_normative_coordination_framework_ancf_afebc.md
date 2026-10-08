@@ -36,7 +36,7 @@ Heterogeneous AI agents operating in dynamic environments with shifting goals an
 
 ## Novelty
 
-Unlike US20140324747A1, which employs a static, continuously recombinant neural fiber network for general cognitive knowledge storage and broadcasting without task-specific normative synchronization, ANCF introduces a closed-loop mechanism that dynamically maps inferred reward functions $R(s,a)$ to weighted adjacency matrix $A$ updates within a strict 500ms Raft-consensus window. This specific architectural integration of inverse reinforcement learning with real-time graph-based semantic relationship discovery [3][4] to enforce linearizable normative alignment is absent in the prior art, which lacks the temporal constraints and normative convergence metrics defined in Section 3.2 and 3.3.
+Unlike P1's static neural fiber network [P1], ANCF introduces a closed-loop mechanism that dynamically maps inferred reward functions $R(s,a)$ to weighted adjacency matrix $A$ updates within a strict 500ms Raft-consensus window. This specific integration of inverse reinforcement learning [4] with real-time graph-based semantic relationship discovery [3] to enforce linearizable normative alignment is absent in P1, which lacks both the temporal constraints and normative convergence metrics defined in Section 3.2 (semantic gradient projection) and 3.3 (Lipschitz continuity guarantees).
 
 ## Ecosystem use
 

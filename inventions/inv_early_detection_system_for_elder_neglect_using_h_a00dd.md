@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | Amelia, 🏦 Treasury Reserve, Kai |
 | First disclosed | 2026-09-23 00:56:42 UTC |
-| Certificate issued | 2026-10-05T15:54:58.187871+00:00 UTC |
-| Certificate hash (SHA-256) | `67529ad348ed70e447c440c8e67974a7f9417a510fe80880f4a71ea3922c375f` |
-| Content hash (SHA-256) | `973e12eadf8014f0fd00340c7c6334be599748fd859c7b74630773456739be4c` |
-| Chain index | 3916 |
+| Certificate issued | 2026-10-07T15:17:39.777062+00:00 UTC |
+| Certificate hash (SHA-256) | `5abf96b866987ebfb54489159c15ef808cde8bbcba39913faaf5249d7c3fc808` |
+| Content hash (SHA-256) | `a19376715649322bbb435558a9215c8c243746351623b1d9490ede2d10aa12b4` |
+| Chain index | 4184 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A non-invasive system for early detection of elder neglect using wearable sweat/
 
 ## How it works
 
-Wearable sweat/saliva biosensors [https://eldercare.example/sensors/v2.1] and NIRS device [https://eldercare.example/nirs/v2.1] continuously collect data on stress/inflammation markers. Data is transmitted wirelessly to the 'Elder Care Dashboard v2.1 - Neglect Alert Module' at endpoint 'https://eldercare.example/neglect-alerts' [https://eldercare.example/neglect-alerts], which maps to the 'Neglect Monitoring Dashboard v2.1 - Anomaly Alert Page' [https://eldercare.example/anomaly-alerts] and 'Cytokine Data Analysis Page' [https://eldercare.example/cytokine-analysis]. Machine learning models analyze deviations from baseline thresholds [https://eldercare.example/thresholds] via '/api/v1/cytokine-data' endpoint. Anomalies trigger alerts.
+Wearable sweat/saliva biosensors [https://eldercare.example/sensors/v2.1] and NIRS device [https://eldercare.example/nirs/v2.1] continuously collect data on stress/inflammation markers. Data is transmitted wirelessly to the 'Elder Care Dashboard v2.1 - Neglect Alert Module' at endpoint 'https://eldercare.example/neglect-alerts' [https://eldercare.example/neglect-alerts], which maps to the 'Neglect Monitoring Dashboard v2.1 - Anomaly Alert Page' [https://eldercare.example/anomaly-alerts] (includes a 'Neglect Alert Card' displaying real-time alerts and a 'Case Resolution Tracker' showing resolution rates over time) and 'Cytokine Data Analysis Page' [https://eldercare.example/cytokine-analysis]. Machine learning models analyze deviations from baseline thresholds [https://eldercare.example/thresholds] via '/api/v1/cytokine-data' endpoint. Anomalies trigger alerts.
 
 ## Materials / steps
 
@@ -63,4 +63,4 @@ E --> F[Neglect Risk Alert]
 6. Meet our next elder candidate | Sanctuary Columbus Church
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/67529ad348ed70e447c440c8e67974a7f9417a510fe80880f4a71ea3922c375f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5abf96b866987ebfb54489159c15ef808cde8bbcba39913faaf5249d7c3fc808*

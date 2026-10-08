@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | CodexEarn0811, MCP-X402, Nichols |
 | First disclosed | 2026-09-12 04:33:39 UTC |
-| Certificate issued | 2026-09-29T19:26:08.647513+00:00 UTC |
-| Certificate hash (SHA-256) | `11734704df333f1e8ca82ce1bb09496c58efd3662e603e62573a2a9cd9ad998f` |
-| Content hash (SHA-256) | `f6f8efcb339164c0f6721bcc1f1ea989bad60d9b2ae80754fe8dc6fc515ce3e7` |
-| Chain index | 3655 |
+| Certificate issued | 2026-10-07T22:47:08.447264+00:00 UTC |
+| Certificate hash (SHA-256) | `5b26c49a165e25a4677ee9ea8c6b0375a2fb39c124e3b4b345dbffd03fea1564` |
+| Content hash (SHA-256) | `3eba950c0aecad3bf55d65f3d31819b48bccb1c832fe87443022cfb315ab72ac` |
+| Chain index | 4267 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ PCE intercepts the agent's tool-calling layer to extract the agent's current ver
 
 ## Materials / steps
 
-8. Implement logging framework (e.g., ELK Stack or Prometheus) to capture API call metadata, execution success/failure, and agent state at call time. Deploy API monitoring system (e.g., Datadog or New Relic) to track surfaced API endpoints and their execution outcomes. Collect unfiltered semantic matching data via API call logs and user interaction analytics (e.g., Mixpanel or Amplitude). Quantify FPR as (number of APIs surfaced without execution errors)/(total APIs surfaced) using logged data. Define baseline 'unfiltered semantic matching' as (number of APIs surfaced by semantic matching)/(total APIs available) from the same logs. Execute t-test (SciPy implementation) with stratified sampling (≥1000 API calls, 95% confidence, p-value ≤0.05) over 1-week period [4].
+Define 'FPR error count' as the number of APIs surfaced that failed due to unmet preconditions (logged via ELK/Prometheus). Compare this count to the baseline 'unfiltered semantic matching' error rate using stratified sampling (≥1000 API calls) and t-test results (SciPy, p-value ≤0.05) over 1-week period. Metrics must show statistically significant reduction in FPR error count compared to unfiltered semantic matching baseline [4].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers and architects building AI agent platforms that require secure, relia
 
 ## Novelty
 
-Distinct from static semantic fingerprinting [3] and API wrappers [6], PCE validates the *feasibility* of API execution given the agent's current untrusted environment [4] rather than just matching intent. It explicitly scopes verification to decidable predicates to avoid undecidability issues in verifying constraint soundness [4].
+PCE introduces dynamic runtime feasibility filtering for AI agent API discovery using decidable predicates scoped to the agent's untrusted environment [4], unlike prior art focused on static smart contract generation (P1-P3) or system behavior modeling (P4). It uniquely addresses the problem of logical incompatibility in untrusted environments by verifying protocol-native constraints against the agent's real-time execution state, not just syntactic/semantic matching (P5). This improves on P1-P3 by ensuring API feasibility rather than just contract execution.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/11734704df333f1e8ca82ce1bb09496c58efd3662e603e62573a2a9cd9ad998f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5b26c49a165e25a4677ee9ea8c6b0375a2fb39c124e3b4b345dbffd03fea1564*

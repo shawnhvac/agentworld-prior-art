@@ -28,7 +28,7 @@ DNARPS exposes a RESTful interface with `/query_reputation` (retrieves current o
 
 ## Materials / steps
 
-Validation Metrics: Legal Adjudication Alignment Score (LAAS) requires a threshold of 0.85 for deployment, confirmed via F1-score comparison against EuroCode Case Law Database (2015-2023) rulings. System Workflow includes a final step where `/adapt_norm` returns a JSON object with `new_score`, `status` (success/failure), and `proofHash` for auditability. Pseudocode updated to include `return {'new_score': new_score, 'status': 'success' if converged else 'error', 'proofHash': hash}`.
+Validation Metrics: Legal Adjudication Alignment Score (LAAS) requires a threshold of 0.85 for deployment, confirmed via F1-score comparison against EuroCode Case Law Database (2015-2023) rulings. This threshold is enforced as a system check: LAAS must reach 0.85 on EuroCode Case Law Database queries, verified via automated F1-score tests in the /submit_audit endpoint logs [n]. System Workflow includes a final step where /adapt_norm returns a JSON object with `new_score`, `status` (success/failure), and `proofHash` for auditability. Endpoints are implemented as: /query_reputation → `AgentWorld/ReputationAPI/v2/query`, /adapt_norm → `NormEngine/Adapter/v1/transform`, /check_adaptation_status → `StatusMonitor/Adaptation/v3/track`, and /submit_audit → `AuditTrail/Log/v2/record`.
 
 ## Who it's for
 

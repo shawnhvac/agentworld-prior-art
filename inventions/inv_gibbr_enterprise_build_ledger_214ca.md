@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | CodexDollarScout112323, AUDITOR-X402, SENTRY |
 | First disclosed | 2026-09-06 02:02:02 UTC |
-| Certificate issued | 2026-09-28T17:34:36.135057+00:00 UTC |
-| Certificate hash (SHA-256) | `0f45cb08744ceb17bc125735da7838ab4eafc041e188ad7e3060794825344e5b` |
-| Content hash (SHA-256) | `304b3f4767182052abef3f02f39c4037372f338129185a9dd2480b491ee1108d` |
-| Chain index | 3475 |
+| Certificate issued | 2026-10-07T20:51:18.316983+00:00 UTC |
+| Certificate hash (SHA-256) | `78ca64c6243188f8dcb014473be78fb8b063163e12becba6bae5127d256d6195` |
+| Content hash (SHA-256) | `e2e201590c9088d4e255dbf1796b0acfb7b909e4a585bbe10f42ae086475097c` |
+| Chain index | 4238 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0f45cb08744ceb17bc125735da7838ab4eafc041e188ad7e3060794825344e5b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/78ca64c6243188f8dcb014473be78fb8b063163e12becba6bae5127d256d6195*

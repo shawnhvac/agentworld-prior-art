@@ -20,11 +20,11 @@ Current human-machine supply chain interfaces [1, 2] and digital workplace tools
 
 ## Concept
 
-A dynamic oversight system that treats the driver's cognitive bandwidth as a scarce, depletable resource. It uses non-invasive telematics and cabin camera data to infer real-time cognitive load and dynamically gates the volume of autonomous exception alerts pushed to the driver, preventing overload while maintaining safety.
+Cognitive Load-Gated Autonomy Protocol for Truck Drivers
 
 ## How it works
 
-The system continuously maps non-invasive proxies—steering entropy, brake jerk, and gaze fixation duration from cabin cameras—onto a continuous cognitive load index (CLI) derived from digital workplace workload dimensions [4]. This CLI serves as the error signal for a proportional-integral (PI) controller that calculates a dynamic alert threshold. The gating logic modulates the volume and complexity of alerts such that the actual alert rate converges to a target rate inversely proportional to the CLI. When the inferred load is high, the PI controller increases the threshold, suppressing non-critical alerts and delaying context-switching demands to preserve attention for critical safety tasks [1, 2]. The control output is executed via the 'Safety Alert Manager' microservice endpoint `/api/v1/alerts/gate`, which processes the quantized suppression signal $N_{suppressed}$ and updates the `DriverHUD.AlertQueue` component to reflect the dynamically gated alert list in real-time.
+The system continuously maps non-invasive proxies—steering entropy, brake jerk, and gaze fixation duration from cabin cameras—onto a continuous cognitive load index (CLI) derived from digital workplace workload dimensions [4]. This CLI serves as the error signal for a proportional-integral (PI) controller that calculates a dynamic alert threshold. The gating logic modulates the volume and complexity of alerts such that the actual alert rate converges to a target rate inversely proportional to the CLI. When the inferred load is high, the PI controller increases the threshold, suppressing non-critical alerts and delaying context-switching demands to preserve attention for critical safety tasks [1, 2]. The control output is executed via the 'Safety Alert Manager' microservice endpoint `/api/v1/alerts/gate`, which processes the quantized suppression signal $N_{suppressed}$ and updates the `DriverHUD.AlertQueue` component in real-time. The validation step explicitly references `/api/v1/alerts/gate` and requires a Pearson r > 0.8 between Alert Suppression Ratio and CLI Index over a 1-hour rolling window to confirm system functionality.
 
 ## Materials / steps
 
@@ -32,7 +32,7 @@ Install cabin cameras and standard telematics sensors (steering, brake) in a fle
 
 ## Who it's for
 
-Professional truck drivers and logistics fleet managers seeking to reduce driver fatigue and error rates in autonomous-assisted driving environments [4].
+Truck drivers operating in commercial fleets requiring cognitive load management to prevent alert overload and maintain safety during autonomous-assisted driving operations.
 
 ## Novelty
 
@@ -40,21 +40,21 @@ The invention distinguishes itself from prior art [P3] and [P5], which are limit
 
 ## Ecosystem use
 
-The cognitive load index and gating decisions can be exposed via API to AI-agent platforms, allowing logistics agents to coordinate exception handling timing. Agents can query the driver's current cognitive load state before dispatching non-critical tasks or notifications, ensuring human-agent coordination respects the operator's bandwidth.
+The system integrates with existing telematics infrastructure and cabin camera deployments, enhancing current telematics stacks with closed-loop cognitive load management. It is designed for integration into fleet management platforms that support microservices architectures, specifically through the `/api/v1/alerts/gate` endpoint.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Telematics & Cabin Camera Data] --> B[Steering Entropy / Brake Jerk / Gaze Fixation]
-    B --> C[Cognitive Load Index Calculation]
-    C --> D{Is Load High?}
-    D -->|Yes| E[Suppress Non-Critical Alerts]
-    D -->|No| F[Push Standard Alerts]
-    E --> G[Driver Interface]
-    F --> G
-    G --> H[Driver Action]
-    H --> A
+graph LR
+    A[Steering Entropy] --> C[CLI Calculation]
+    B[Brake Jerk] --> C
+    D[Gaze Fixation Duration] --> C
+    C --> E[PI Controller]
+    E --> F[/api/v1/alerts/gate]
+    F --> G[DriverHUD.AlertQueue]
+    G --> H[Alerts Gated by Suppression Ratio]
+    I[CLI Index] --> J[Alert Suppression Ratio]
+    J -.->|Pearson r > 0.8| K[Validation Dashboard]
 ```
 
 ## Sources / grounding

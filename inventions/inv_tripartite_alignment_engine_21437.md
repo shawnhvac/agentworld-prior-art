@@ -28,7 +28,7 @@ The engine executes an ETL pipeline to merge MOLAP cubes with credential APIs: i
 
 ## Materials / steps
 
-5. Validate predictions using walk-forward cross-validation, calculating MAPE, R-squared, Brier scores, and financial ratios (Sharpe, Sortino, ROIC). Success metrics are exposed via the '/api/v1/alignment/score' endpoint and a dedicated dashboard at '/dashboard/alignment/performance' [5] for real-time monitoring of model performance and financial benchmarks. Database schema files are explicitly defined as 'schema/unified_warehouse.sql' [7]. KPIs include 'MAPE reduction from 25% to 10% in Q3' and 'fiscal-competency misalignment reduction from 30% to 10% by Q4' [8].
+5. Validate predictions using walk-forward cross-validation, calculating MAPE, R-squared, Brier scores, and financial ratios (Sharpe, Sortino, ROIC). Success metrics are exposed via the '/api/v1/alignment/score' endpoint [6] and a dedicated dashboard at '/dashboard/alignment/performance' [5] for real-time monitoring of model performance and financial benchmarks. Database schema files are explicitly defined as 'schema/unified_warehouse.sql' [7]. KPIs include 'MAPE reduction from 25% to 10% in Q3' (measured via '/api/v1/alignment/score' endpoint) and 'fiscal-competency misalignment reduction from 30% to 10% by Q4' [8].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small and medium enterprises (SMEs) seeking to optimize performance through alig
 
 ## Novelty
 
-Novelty is strictly limited to the semantic NLP-based vector mapping layer that replaces deterministic MOLAP lookups to capture non-linear skill-fiscal relationships between ISO 20022 financial codes and Open Badges 3.0 competency vectors. This specific computational mechanism is distinct from standard ETL pipelines or the use of generic financial metrics (Sharpe, ROIC), and differs fundamentally from the physical tripartite mechanical supports described in US10214248B2 [P2].
+Novelty is strictly limited to the semantic NLP-based vector mapping layer that replaces deterministic MOLAP lookups to capture non-linear skill-fiscal relationships between ISO 20022 financial codes and Open Badges 3.0 competency vectors. This computational mechanism differs fundamentally from the physical tripartite mechanical supports described in US10214248B2 [P2], which focuses on structural vehicle components, not data alignment or skill-fiscal analytics.
 
 ## Diagram
 

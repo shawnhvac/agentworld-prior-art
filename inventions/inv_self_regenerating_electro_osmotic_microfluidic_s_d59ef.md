@@ -36,7 +36,7 @@ Photovoltaic panel operators, renewable energy farms, and remote solar installat
 
 ## Novelty
 
-The novelty of SEREMS lies not merely in autonomous cleaning, but in the synergistic coupling of voltage-gated electro-osmotic actuation with a zwitterionic self-repairing nanocoating. Unlike existing static hydrophobic coatings that degrade over time or mechanical wipers that incur high energy and wear costs, SEREMS utilizes precise electrokinetic control to drive fluid through bio-inspired microchannels, ensuring active particle removal while the self-replenishing coating maintains superhydrophilicity. This dual-mechanism approach uniquely addresses the limitations of passive coatings (fouling saturation) and active mechanical systems (optical obstruction and energy inefficiency), offering a regenerative surface that preserves >95% optical transmission with <0.5% energy penalty.
+SEREMS uniquely integrates a self-replenishing zwitterionic nanocoating with electro-osmotic microchannels specifically for PV panel cleaning, unlike P1's desalting device (which lacks both the self-repairing coating and closed-loop particle removal system). This combination ensures >95% optical transmission with <0.5% energy penalty, solving fouling saturation and re-deposition issues unaddressed by prior art.
 
 ## Diagram
 

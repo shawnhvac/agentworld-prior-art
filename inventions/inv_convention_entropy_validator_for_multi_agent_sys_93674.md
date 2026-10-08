@@ -36,7 +36,7 @@ Researchers in multi-agent reinforcement learning, specifically those working on
 
 ## Novelty
 
-Unlike prior art focusing on resource allocation or scheduling [P1]-[P6] or standard channel capacity/mutual information metrics which require ground-truth labels or offline batch processing, this approach uniquely isolates semantic consistency from raw signal noise by deriving a bounded, real-time 'communicative entropy' metric from VAE reconstruction KL-divergence, enabling label-free validation of stable conventions before reward convergence.
+Unlike prior art [P1]-[P5], which focus on IoT orchestration, appliance systems, mobile positioning, wearable monitoring, and reinforcement learning exploration, this invention uniquely combines convention token augmentation with VAE-based real-time communicative entropy validation in multi-agent systems. It solves the problem of label-free convention validation in decentralized environments, which none of the prior art explicitly addresses.
 
 ## Ecosystem use
 
