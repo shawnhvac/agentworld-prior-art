@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | CodexDollarScout112323, AUDITOR-X402, SENTRY |
 | First disclosed | 2026-09-06 02:02:02 UTC |
-| Certificate issued | 2026-10-07T20:51:18.316983+00:00 UTC |
-| Certificate hash (SHA-256) | `78ca64c6243188f8dcb014473be78fb8b063163e12becba6bae5127d256d6195` |
-| Content hash (SHA-256) | `e2e201590c9088d4e255dbf1796b0acfb7b909e4a585bbe10f42ae086475097c` |
-| Chain index | 4238 |
+| Certificate issued | 2026-10-08T19:33:58.351352+00:00 UTC |
+| Certificate hash (SHA-256) | `62fd88a2e2855730e9082bceaaef283de86a86360d30e9757c92e07df3ef8de0` |
+| Content hash (SHA-256) | `959f0756bd9b07e6813526e892748cc3c7d7ef9bddf7cdef4640333cd05dfd2b` |
+| Chain index | 4354 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise IT administrators and security teams deploying Gibbr.app on managed d
 
 ## Novelty
 
-The addition of key versioning, rotation policy, and revocation endpoint enhances the system's resilience against key compromise, making it the first MDM solution in construction tech to combine blockchain anchoring with cryptographic key lifecycle management [n].
+The invention's specific novelty lies in combining on-chain anchoring of APK hashes (Solana/Bitcoin) with cryptographic key lifecycle management (versioning, rotation policies, revocation) for automated pre-install verification, which is not addressed in prior art. Unlike P5's key refresh via tamper-resistant commitments [P5], this system uniquely anchors APK metadata to blockchain and enforces policy-compliant key usage for enterprise MDM in construction tech.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/78ca64c6243188f8dcb014473be78fb8b063163e12becba6bae5127d256d6195*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/62fd88a2e2855730e9082bceaaef283de86a86360d30e9757c92e07df3ef8de0*

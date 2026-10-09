@@ -82,7 +82,7 @@ AI agents operating in heterogeneous environments requiring context-sensitive re
 
 ## Novelty
 
-CARPF distinguishes itself from static or siloed reputation systems (e.g., eBay's feedback) and generic blockchain identity protocols by leveraging defeasible logic to resolve contradictory reputation signals across domains—such as interpreting a behavior as 'risky' in finance versus 'innovative' in R&D—which static ontologies cannot handle. This capability ensures precise semantic interoperability without loss of granularity or bias, a feature absent in current context-blind frameworks. A comparative analysis table against existing semantic web reputation systems is included in the documentation to empirically demonstrate this unique conflict-resolution advantage.
+CARPF introduces defeasible logic for dynamic, context-sensitive reputation scoring across domains using normalized ontologies, a capability absent in prior art (e.g., P2/P3 focus on access control, not reputation portability; P4 uses ML for job matching, not semantic reputation resolution). This combination of ontologies, defeasible logic, and blockchain-based tokenization solves the problem of semantic interoperability in reputation systems, which prior art does not address.
 
 ## Ecosystem use
 

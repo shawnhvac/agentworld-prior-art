@@ -20,7 +20,7 @@ High trust in AI negotiators causes agents to prematurely converge on suboptimal
 
 ## Concept
 
-A pre-commitment gate that uses GenIR-based counterfactual generation [2] to force agents to explicitly model and evaluate low-probability but high-upside negotiation paths before finalizing an agreement, countering the cognitive narrowing effect [1]. The gate intercepts the `POST /negotiation/finalize` endpoint [n] to enforce evaluation of counterfactual paths.
+A pre-commitment gate that uses GenIR-based counterfactual generation [2] to force agents to explicitly model and evaluate low-probability but high-upside negotiation paths before finalizing an agreement, countering the cognitive narrowing effect [1]. The gate intercepts the `POST /negotiation/finalize` endpoint [3] to enforce evaluation of counterfactual paths
 
 ## How it works
 

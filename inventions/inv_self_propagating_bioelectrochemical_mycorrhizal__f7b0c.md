@@ -20,7 +20,7 @@ Current bioremediation systems struggle with efficiently targeting and neutraliz
 
 ## Concept
 
-A Self-Propagating Bioelectrochemical Mycorrhizal Nanofiber Network (SB-MNN) embedded with bioelectrochemical sensors and nutrient-releasing microcapsules, designed to autonomously detect and degrade POPs in deep aquifers by stimulating local microbial and fungal activity through nutrient flux and electrochemical signaling.
+A Self-Propagating Bioelectrochemical Mycorrhizal Nanofiber Network (SB-MNN) embedded with bioelectrochemical sensors and nutrient-releasing microcapsules, designed to autonomously detect and degrade POPs in deep aquifers by stimulating local microbial and fungal activity through nutrient flux and electrochemical signaling at Contaminated Site X [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ The SB-MNN operates by deploying a mesh of conductive nanofibers embedded with b
 
 ## Materials / steps
 
-Conductive nanofibers (e.g., carbon nanotubes or graphene oxide); Bioelectrochemical sensors (e.g., enzyme-based or microbial fuel cell electrodes); Nutrient-releasing microcapsules (e.g., polymeric shells containing nitrogen and phosphorus); Mycorrhizal fungal spores (e.g., Glomus species); Bioelectroactive bacteria (e.g., Shewanella or Geobacter species); Assemble nanofibers into a mesh and functionalize with sensors, microcapsules, and microbial agents; Deploy the SB-MNN in a contaminated deep groundwater site
+Conductive nanofibers (e.g., carbon nanotubes or graphene oxide); Bioelectrochemical sensors (e.g., enzyme-based or microbial fuel cell electrodes); Nutrient-releasing microcapsules (e.g., polymeric shells containing nitrogen and phosphorus); Mycorrhizal fungal spores (e.g., Glomus species); Bioelectroactive bacteria (e.g., Shewanella or Geobacter species); Assemble nanofibers into a mesh and functionalize with sensors, microcapsules, and microbial agents; Deploy the SB-MNN in Contaminated Site X with a target of Achieve 90% POPs reduction within 6 months via quarterly groundwater sampling [n]
 
 ## Who it's for
 

@@ -28,7 +28,7 @@ The system ingests SME performance data [1] and micro-credential definitions [4]
 
 ## Materials / steps
 
-8. Reproducibility Protocol: ... Retrieve final CER via GET /api/v1/pcfl/cer and visualize it on the user-facing dashboard at /dashboard/pcfl, where CER > 0.15 confirms model efficacy. 9. Pilot Trial Phase: ... Users can view CER > 0.15 on /dashboard/pcfl to confirm model efficacy and access actionable insights (e.g., budget allocation recommendations) derived from the MOLAP cube's predictive outputs.
+8. Reproducibility Protocol: Retrieve final CER via GET /api/v1/pcfl/cer [endpoint: returns CER value as JSON; function: validates model efficacy]. Visualize CER on /dashboard/pcfl [endpoint: interactive dashboard; function: displays CER > 0.15 threshold (visualized via red/green color-coding) and budget allocation insights]. 9. Pilot Trial Phase: Compare predicted vs. actual budget outcomes using % variance metric: |(Predicted - Actual)/Actual| * 100 [data sources: SME financial reports, MOLAP cube outputs]. Maintain % variance < 10% during pilot trials. Gradient updates to MOLAP cube are implemented via automated API calls triggered by new SME data ingestion or user-initiated recalibration through /api/v1/pcfl/retrain [endpoint: initiates model retraining; function: updates credential-budget mappings using stochastic gradient descent on budget efficiency measures].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small and Medium Enterprises (SMEs), government policy makers, and business inte
 
 ## Novelty
 
-Unlike P1's static legal research interfaces, PCFL introduces a MOLAP-driven iterative feedback loop for SME budget optimization, dynamically refining credential-budget mappings via gradient updates to achieve causal inference and measurable performance gains (CER > 0.15). P1 lacks both
+Unlike P1's static interfaces for legal research, PCFL introduces a MOLAP-driven feedback loop with CER = (Budget Efficiency Gain / Baseline Budget) * 100 [formula: derived from SME performance data [1] and micro-credential definitions [4]], dynamically refining mappings via automated gradient updates on /api/v1/pcfl/retrain. P1 lacks both causal inference mechanisms (e.g., % variance < 10% accuracy check) and measurable efficacy thresholds (e.g., CER > 0.15 visual alerts).
 
 ## Diagram
 

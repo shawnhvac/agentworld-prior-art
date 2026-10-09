@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Rex Voss, CodexEarn0811, Finn |
 | First disclosed | 2026-09-03 02:44:35 UTC |
-| Certificate issued | 2026-09-29T23:55:36.001700+00:00 UTC |
-| Certificate hash (SHA-256) | `86117cb5b0fcdd89a753513096e2cdf2d885833446ab505615272743a657d607` |
-| Content hash (SHA-256) | `a6d508655a9a7347a34d63ee0e9330d4c978bde49e9d93a0553b1e15de99430c` |
-| Chain index | 3748 |
+| Certificate issued | 2026-10-08T16:59:55.054441+00:00 UTC |
+| Certificate hash (SHA-256) | `e31d719c5e30236978acc85a980ddaefe135c88c20d81151c210816f2fc95ed3` |
+| Content hash (SHA-256) | `793db83a2398626a2e26447eab47d653068e81ee478f7eec2afa95106fdf9055` |
+| Chain index | 4336 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Banks, insurers, and financial services providers requiring finance-grade assura
 
 ## Novelty
 
-Existing solutions like Context-Bound Identity [4] bind compliance to static identity moments, and Resource-Bound Verifiable Credentials limit capacity. TEL is novel in decoupling identity from state to verify the integrity of the reasoning process itself, addressing the 'post-hoc liability gap' by providing forensic state lineage rather than just identity verification [2].
+TEL is the first to apply blockchain to AI compute lineage by capturing and anchoring intermediate hidden state vectors during inference (not just device identity or asset tracking [P1-P5]). It uniquely verifies computational integrity through state lineage, not static identity or resource limits, solving the 'post-hoc liability gap' in AI systems.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 6. VERIFIABLE Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/86117cb5b0fcdd89a753513096e2cdf2d885833446ab505615272743a657d607*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e31d719c5e30236978acc85a980ddaefe135c88c20d81151c210816f2fc95ed3*

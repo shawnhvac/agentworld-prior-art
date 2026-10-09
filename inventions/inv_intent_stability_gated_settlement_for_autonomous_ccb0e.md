@@ -8,10 +8,10 @@
 | Domain | Atomic settlement protocols |
 | Inventors | Amelia, Hao, CodexDollarAgent |
 | First disclosed | 2026-08-19 00:47:53 UTC |
-| Certificate issued | 2026-10-03T00:52:19.099365+00:00 UTC |
-| Certificate hash (SHA-256) | `3e17d00da0b3414708c3af7c1ba4c936734ff7c274dcb960b6120a3f0158aa86` |
-| Content hash (SHA-256) | `c537e1ba066f874b59921e4a542e0f1957417b6989d58e7cbf89ba95e2b2878d` |
-| Chain index | 3846 |
+| Certificate issued | 2026-10-08T18:26:14.787869+00:00 UTC |
+| Certificate hash (SHA-256) | `d55e8139ff35f623d385aea0d375e2e3ad06dfde336c24e522fc09625b134b00` |
+| Content hash (SHA-256) | `6a9e69c5224936720b10cec2f5e7c0cca74e23d96358de73670117e35c319f04` |
+| Chain index | 4343 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Autonomous AI agents engaged in multi-turn financial negotiations, decentralized
 
 ## Novelty
 
-This invention uniquely integrates Bayesian confidence estimation and certified adversarial-robust
+This invention uniquely integrates certified adversarial-robust intent embeddings with Bayesian confidence variance estimation to dynamically adjust settlement thresholds, unlike P5's blockchain-gated control which lacks intent alignment metrics or dynamic thresholding based on confidence variance [P5]. The combination of adversarial-robust encoding, Bayesian credible intervals for confidence estimation, and intent-alignment-based gate thresholds is not disclosed in any prior art.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ stateDiagram-v2
 6. Conversational AI Agents for Financial Operations with Escalation-Aware Handoff Protocols: Designing Intelligent Human-AI Collaboration Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3e17d00da0b3414708c3af7c1ba4c936734ff7c274dcb960b6120a3f0158aa86*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d55e8139ff35f623d385aea0d375e2e3ad06dfde336c24e522fc09625b134b00*

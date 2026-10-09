@@ -25,15 +25,15 @@ Concept: Add a `trajectory_vector` object to the existing `/api/scores/{address}
 
 ## How it works
 
-3. If the threshold is met, it calculates the linear regression slope (beta_1) using `scipy.stats.HuberRegressor` with epsilon=1.35 (default) for robustness to outliers. The 95% CI is computed as `slope ± 1.96 * regressor.standard_error`, where `standard_error` is derived from the model's internal covariance matrix. Dates are mapped to integer day offsets (0-29) via `pd.to_datetime(snapshot_date).dayofyear - reference_date.dayofyear`, and scores are normalized to [0,1] before regression. If <2 valid points, slope, CI, and R-squared default to 0.0 with a 0.001 precision threshold for numerical stability.
+3. If the threshold is met, it calculates the linear regression slope (beta_1) using `scipy.stats.HuberRegressor` with epsilon=1.35 (default) for robustness to outliers. The 95% CI is computed as `slope ± 1.96 * regressor.standard_error`, where `standard_error` is derived from the model's internal covariance matrix. Dates are mapped to integer day offsets (0-29) via `pd.to_datetime(snapshot_date).dayofyear - reference_date.dayofyear`, and scores are normalized to [0,1] before regression. If <2 valid points, slope, CI, and R-squared default to 0.0 with a 0.001 precision threshold for numerical stability. The `/api/scores/{address}` endpoint is augmented with a `trajectory_vector` object containing slope, CI, and bond CV, accessible only via Enterprise-tier API keys validated against Stripe webhook events. The $1.50 per-loan savings hypothesis is validated by measuring pre- and post-API implementation metrics: (a) average manual review latency (in hours) for high-volume lenders using the API vs. a control group, (b) total labor hours spent on reviews per 1,000 loans, and (c) loan approval throughput (loans/hour) before/after API integration.
 
 ## Materials / steps
 
-2. Implement a Python function `calculate_trajectory_vector(...)` that filters snapshots to non-null values using `df.dropna(subset=['trust_score', 'bond_slashing_events'])`. If non-null snapshots <10, return `{'trajectory_vector': {'reason': 'insufficient_data'}}`. For regression, use `HuberRegressor(epsilon=1.35).fit(day_offsets.reshape(-1,1), scores)`; extract `slope = regressor.coef_[0]`, `std_err = np.sqrt(regressor.score_)`, and compute CI. For bond CV, calculate `mean_slashed = np.mean(amount_slashed)`, `std_slashed = np.std(amount_slashed)`, then `bond_cv = std_slashed / mean_slashed if mean_slashed > 0 and len(amount_slashed) >= 2 else 0.0`.
+2. Implement a Python function `calculate_trajectory_vector(...)` that filters snapshots to non-null values using `df.dropna(subset=['trust_score', 'bond_slashing_events'])`. If non-null snapshots <10, return `{'trajectory_vector': {'reason': 'insufficient_data'}}`. For regression, use `HuberRegressor(epsilon=1.35).fit(day_offsets.reshape(-1,1), scores)`; extract `slope = regressor.coef_[0]`, `std_err = np.sqrt(regressor.score_)`, and compute CI. For bond CV, calculate `mean_slashed = np.mean(amount_slashed)`, `std_slashed = np.std(amount_slashed)`, then `bond_cv = std_slashed / mean_slashed if mean_slashed > 0 and len(amount_slashed) >= 2 else 0.0`. Integrate Stripe webhook handlers for `invoice.payment_failed` and `invoice.payment_succeeded` to enforce $250/1k API rate limits on the `inv` object by tracking API call counts via a Redis counter per `inv` ID, updating invoice metadata with remaining quota, and rejecting requests exceeding the threshold with 429 errors.
 
 ## Who it's for
 
-AI agents and humans using SolvScore.com for credit underwriting, specifically those integrating with the x402 payment facilitator or AgentPayStore.com who need programmatic, real-time risk assessment beyond a static number.
+High-volume lenders (>=10k monthly loan applications) with existing SolvScore Enterprise accounts, prioritizing institutions with documented manual review bottlenecks and API integration capabilities.
 
 ## Novelty
 
@@ -41,7 +41,7 @@ Unlike [P1], this invention uses HuberRegressor with epsilon=1.35 for outlier re
 
 ## Ecosystem use
 
-AgentPayStore.com agents can query the SolvScore API before executing a transaction. If the `trajectory_vector` slope is below a threshold (e.g., -0.2), the agent can automatically decline the payment request or require a higher reputation bond, integrating SolvScore's directional data into the x402 payment facilitator's risk checks.
+Measurable KPIs for ROI validation include time-stamped manual review logs (e.g., `review_start`, `review_end` timestamps in lender systems) and A/B test metrics tracking 15% reduction in average review latency, 20% decrease in manual intervention requests, and $1.50/loan labor cost savings validated via SQL queries on lender cost databases.
 
 ## Diagram
 

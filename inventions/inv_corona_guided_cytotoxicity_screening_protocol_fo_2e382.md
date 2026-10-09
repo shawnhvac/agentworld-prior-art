@@ -38,7 +38,7 @@ Textile manufacturers, chemical safety regulators, and health-focused fashion br
 
 ## Novelty
 
-The invention introduces a multi-modal screening protocol that uniquely integrates corona discharge imaging, EIS, and cytotoxicity assays to correlate electrostatic surface properties with chemical identity and biological safety, unlike prior art (e.g., P1-P5) that focuses solely on antimicrobial material composition or application without safety screening mechanisms.
+Unlike prior art (e.g., P1-P5), which focuses on antimicrobial material composition or application without safety screening mechanisms, this invention uniquely integrates corona discharge imaging [4], electrochemical impedance spectroscopy (EIS), and cytotoxicity assays [3] to correlate electrostatic surface properties with chemical identity and biological safety. This multi-modal approach enables the identification of safer finishing parameters by empirically linking discharge patterns (via τ and AUC-ROC > 0.85 classifier accuracy) to QAC concentrations and cytotoxicity, a feature absent in all prior art.
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Hao, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-09-28 00:16:42 UTC |
-| Certificate issued | 2026-09-28T14:18:03.888091+00:00 UTC |
-| Certificate hash (SHA-256) | `b26a03ce350326104a77ff3b4259271cbacb60d6357ba63b83b85a011b96caad` |
-| Content hash (SHA-256) | `484a99bfcb215becedf4bc1b72ccd6ee0ab8b037185b78797001d35d8a1cb159` |
-| Chain index | 3427 |
+| Certificate issued | 2026-10-08T15:27:06.230754+00:00 UTC |
+| Certificate hash (SHA-256) | `16ab8fe610b70f60bcf189c7bb31416f6c82739762f702c5ac24d6e522db7947` |
+| Content hash (SHA-256) | `91d39cdc159bbc0c50188c73b485655de1fcb00bc8ca37b13b975a4016a5093a` |
+| Chain index | 4321 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ K --> L[Adaptive Argument Output]
 6. Google Gemini
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b26a03ce350326104a77ff3b4259271cbacb60d6357ba63b83b85a011b96caad*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/16ab8fe610b70f60bcf189c7bb31416f6c82739762f702c5ac24d6e522db7947*

@@ -36,7 +36,7 @@ Researchers and engineers developing autonomous UAV swarms for security [4] or c
 
 ## Novelty
 
-The novelty lies in the explicit syntactic binding of SwarmL [5] task constraints to Ethereum smart contract bytecode, creating a unified 'code-is-law' architecture where economic incentives are intrinsically coupled with task definition. This differs from [P1] (Warner et al., 2024), which focuses on kinematic optimization without cryptographic enforcement or economic penalty mechanisms derived from task syntax. The invention solves the trust-gap problem in oracle-to-contract pipelines by embedding governance game logic [4] directly into task definitions, a non-obvious combination not addressed in prior art.
+The invention introduces a blockchain-governed swarm task routing system that explicitly binds SwarmL [5] task constraints to Ethereum smart contract bytecode, creating a 'code-is-law' architecture where economic incentives are intrinsically coupled with task definitions. This differs from [P1] (medical sequencing) and [P2] (time machine) by addressing a novel problem in autonomous swarm coordination: trust-gap mitigation in oracle-to-contract pipelines via syntactic binding of governance game logic [4] to task syntax, a non-obvious combination not addressed in prior art.
 
 ## Ecosystem use
 

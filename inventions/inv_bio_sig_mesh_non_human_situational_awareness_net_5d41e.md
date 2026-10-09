@@ -24,11 +24,11 @@ The 'Bio-Sig Alert Feed' widget is located at the exact endpoint '/EOC/NonHumanA
 
 ## How it works
 
-Livestock loss metrics are collected via integration with livestock tracking databases (e.g., FAO's Global Livestock Database) and post-disaster audit logs from pilot zones. UI latency is validated using synthetic load testing tools (e.g., JMeter) simulating 100+ concurrent alerts, with real-time dashboard performance monitors (e.g., Grafana) tracking alert rendering time from node detection to widget appearance.
+Livestock loss metrics are collected via integration with livestock tracking databases (e.g., FAO's Global Livestock Database) and post-disaster audit logs from pilot zones. UI latency is validated using synthetic load testing tools (e.g., JMeter) simulating 100+ concurrent alerts, with real-time dashboard performance monitors (e.g., Grafana) tracking alert rendering time from node detection to widget appearance. Latency metrics are explicitly visualized on the 'Grafana dashboard at /EOC/Monitoring/NetworkPerformance' [n].
 
 ## Materials / steps
 
-Materials: Solar panels, microcontrollers (e.g., ESP32), directional microphones with >-40 dBFS sensitivity, IEEE 802.15.4e TSCH-compatible radio modules (e.g., Sub-1 GHz or 2.4 GHz Zigbee/Thread variants) configured for RPL routing, GPS-disciplined oscillators (GPSDO) for precise time synchronization. Steps: 1. Assemble sensor nodes with solar charging and GPSDO integration. 2. Execute Validation Phase to collect and verify distress call datasets with rigorous peer-reviewed validation for specific species, ensuring >90% precision/recall metrics, a maximum false positive rate of <0.1 per hour per node, and a mean time-to-detection of <2 seconds. Validation must specifically target Cattle, Sheep, Pigs, Large Mammals, and Birds, applying dynamic SNR thresholds (10dB, 15dB, 20dB) based on environmental noise levels to
+Materials: Solar panels, microcontrollers (e.g., ESP32), directional microphones with >-40 dBFS sensitivity, IEEE 802.15.4e TSCH-compatible radio modules (e.g., Sub-1 GHz or 2.4 GHz Zigbee/Thread variants) configured for RPL routing, GPS-disciplined oscillators (GPSDO) for precise time synchronization. Steps: 1. Assemble sensor nodes with solar charging and GPSDO integration. 2. Execute Validation Phase to collect and verify distress call datasets with rigorous peer-reviewed validation for specific species, ensuring >90% precision/recall metrics, a maximum false positive rate of <0.1 per hour per node, and a mean time-to-detection of <2 seconds. 3. Deploy Grafana dashboard at '/EOC/Monitoring/NetworkPerformance' to track synthetic alert rendering latency, requiring 90% of alerts to render within 2 seconds on the EOC_NonHumanAssets_AlertFeed_Widget [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Disaster response agencies in the Global South, rural communities dependent on l
 
 ## Novelty
 
-Unlike prior art [P1] which provides generic geo-temporal situational awareness for industry clients, or [P2] which focuses on human biofeedback and non-bio-signal aggregation, Bio-Sig Mesh is novel in its specific application of GPSDO-synchronized acoustic triangulation for *non-human* distress signals in disaster contexts. It solves the problem of 'invisible' livestock/wildlife casualties in crises by integrating a validated, low-latency (<500ms) mesh protocol with species-specific acoustic models, a combination not disclosed in [P1] or [P2] which lack the specialized bioacoustic validation pipeline and emergency-response priority queuing for non-human subjects. Crucially, this iteration utilizes IEEE 802.15.4e TSCH-compatible radios to empirically substantiate the claimed <500ms latency and <0.1 false positive rate under dynamic environmental noise, addressing the specific robustness concerns identified in peer review and replacing non-deterministic LoRa modules.
+The invention's novelty lies in its integration of GPSDO-synchronized acoustic triangulation with species-specific distress signal models (Cattle, Sheep, Pigs, Large Mammals, Birds) and IEEE 802.15.4e TSCH radios for <500ms latency, a combination absent in [P3]-[P5], which focus on poly-radio tracking without acoustic bio-signal validation or disaster-specific prioritization. Unlike [P2], it introduces emergency-response queuing for non-human assets, not human health/environmental data [n].
 
 ## Ecosystem use
 

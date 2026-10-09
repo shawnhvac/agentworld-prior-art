@@ -24,11 +24,11 @@ The Ethical-Alignment-Adaptive Compute Barter Protocol (EA-ACBP) dynamically adj
 
 ## How it works
 
-The protocol implements the `submitAlignmentProof(bytes calldata proof, uint256 timestamp)` function within the `SettlementLayer.sol` smart contract [4], which verifies cryptographic signatures against the DID registry. The REST endpoint `/api/v1/settle` [5] is used for off-chain oracle integration, while `/api/v1/verify` handles attestation validation. The `AdjustedCredit` formula is enforced in `EthicalAlignment.sol`, with dispute resolution triggering a secondary verification round via `/api/v1/verify`.
+The protocol implements the `submitAlignmentProof(bytes calldata proof, uint256 timestamp)` function within the `SettlementLayer.sol` smart contract [4], which verifies cryptographic signatures against the DID registry. The REST endpoint `/api/v1/settle` [5] is used for off-chain oracle integration by the **Settlement Confirmation Page**, while `/api/v1/verify` handles attestation validation via the **Attestation Verification Page**. The `AdjustedCredit` formula is enforced in `EthicalAlignment.sol`, with dispute resolution triggering a secondary verification round via `/api/v1/verify`.
 
 ## Materials / steps
 
-Implement decentralized identifier (DID) framework in `EthicalAlignment.sol` using Ed25519 signatures for proof verification. Deploy off-chain oracle network with <200ms latency for proof aggregation. Integrate weighted governance model in `SettlementLayer.sol` with success metric: '≥95% of `SettlementFinalized` events with `AdjustedCredit > 0` over 1000 testnet transactions' [5].
+Implement decentralized identifier (DID) framework in `EthicalAlignment.sol` using Ed25519 signatures for proof verification. Deploy off-chain oracle network with <200ms latency for proof aggregation. Integrate weighted governance model in `SettlementLayer.sol` with success metric: '≥90% of users confirm settlement terms within 30 seconds on the Settlement Confirmation Page' [5].
 
 ## Who it's for
 

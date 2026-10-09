@@ -36,7 +36,7 @@ AI agents operating in decentralized data marketplaces, specifically those requi
 
 ## Novelty
 
-Rewrote the Novelty section to explicitly contrast the proposed active state-gating handshake with passive oracle-based verification and post-hoc auditing, emphasizing the deterministic halting of agent execution upon lineage failure as the key differentiator. Specifically distinguished from prior art [P1] and [P3] by implementing an on-chain cryptographic Merkle proof verification coupled with an atomic, receipt-based settlement oracle that guarantees end-to-end transaction finality, whereas [P1] relies on general electronic rights protection and [P3] on server-based secure exchange without immutable cryptographic lineage enforcement in the settlement layer.
+The invention introduces an on-chain cryptographic Merkle proof verification mechanism integrated with an atomic, receipt-based settlement oracle that guarantees end-to-end transaction finality [P1], whereas prior art [P1] relies on general electronic rights protection without cryptographic lineage enforcement in the settlement layer. The system implements a deterministic halting of agent execution upon lineage verification failure via the `verifyLineage(proof, rootHash, dataHash)` function [X], which is explicitly auditable through on-chain event logs (e.g., `VerificationOutcome(loggedEvent)`), API endpoints for querying rejection rates/gas costs (e.g., `/api/v1/metrics/rejection-rate`), and formal verification of Merkle proof logic (100% branch coverage) [P3]. This contrasts with [P3]'s server-based secure exchange lacking immutable cryptographic lineage enforcement in the settlement layer.
 
 ## Ecosystem use
 

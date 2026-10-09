@@ -36,7 +36,7 @@ Enterprise AI agents requiring safe, untrusted interaction with internal APIs; A
 
 ## Novelty
 
-Refined novelty to explicitly contrast with PCC and TLA+ by highlighting the unique 'semantic-to-runtime' bridge: unlike static verification which stops at proof generation, this invention's novelty lies in the Contract-to-Policy Compiler that automatically translates verified LTL constraints into executable eBPF programs for real-time, kernel-level enforcement.
+The invention's novelty lies in the automatic translation of formal verification proofs into executable runtime policies via eBPF, a feature absent in prior art. Unlike P2's verifiable computation for cross-domain data sharing [P2], which lacks runtime enforcement mechanisms, this invention uniquely bridges formal verification (LTL) with kernel-level policy execution through the Contract-to-Policy Compiler, enabling real-time API behavior enforcement.
 
 ## Ecosystem use
 

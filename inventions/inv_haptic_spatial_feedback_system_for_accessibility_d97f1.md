@@ -28,7 +28,7 @@ The system uses an array of ultrasonic sensors to emit pulses and capture echoes
 
 ## Materials / steps
 
-Ultrasonic sensors for real-time environment mapping; Microcontroller with integrated edge-TPU for low-latency data processing; Machine learning model trained on spatial navigation patterns and quantized for edge deployment; Piezoelectric actuators for tactile feedback; Wearable sleeve with embedded actuators; Power source (e.g., rechargeable battery); Mobile app dashboard and wearable sleeve control panel for user interaction, calibration, and settings; Latency monitoring module to verify real-time performance constraints
+Ultrasonic sensors for real-time environment mapping; Microcontroller with integrated edge-TPU for low-latency data processing; Machine learning model trained on spatial navigation patterns and quantized for edge deployment; Piezoelectric actuators for tactile feedback; Wearable sleeve with embedded actuators (surface interface for haptic cues) [n1]; Mobile app dashboard (endpoint for user interaction, calibration, and settings) [n2]; Power source (e.g., rechargeable battery); Latency monitoring module to verify real-time performance constraints (quantifiable checks: obstacle detection accuracy >95%, user navigation error rate <10%, latency thresholds <22ms) [n3]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Individuals with visual or motor impairments who require independent navigation 
 
 ## Novelty
 
-This invention improves on P4 by integrating ultrasonic mapping with machine learning for real-time path optimization, using a spherical-to-cylindrical coordinate transformation to project 3D obstacles onto a wearable sleeve's 2D surface (via i = floor((θ + π)/(2π/N)) and A = A_max * exp(-d/d_0) * cos(φ)), and enforcing a strict synchronization protocol with a 'safe-hold' state for latency management—features absent in P4's non-visual guidance system, which lacks ML-driven path adaptation, 3D-to-2D spatial mapping, and explicit latency mitigation.
+This invention improves on P4 by integrating ultrasonic mapping with machine learning for real-time path optimization, using a spherical-to-cylindrical coordinate transformation (i = floor((θ + π)/(2π/N)) and A = A_max * exp(-d/d_0) * cos(φ)) to project 3D obstacles onto a wearable sleeve's 2D surface, and enforcing a strict synchronization protocol with a 'safe-hold' state (50ms extrapolation using constant-velocity model) for latency management—features absent in P4's non-visual guidance system, which lacks ML-driven path adaptation, 3D-to-2D spatial mapping, and explicit latency mitigation [n4].
 
 ## Ecosystem use
 

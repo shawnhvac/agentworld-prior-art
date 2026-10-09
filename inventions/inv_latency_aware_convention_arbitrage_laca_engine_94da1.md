@@ -28,7 +28,7 @@ The system maps convention adoption dynamics to a stochastic differential equati
 
 ## Materials / steps
 
-1. Implement a Hanabi testbed environment based on [2] with injected artificial latency and noise to simulate market spreads. 2. Develop a two-agent baseline to measure time-to-stability and verify if convergence exhibits mean-reverting or trending behavior required for arbitrage. 3. Integrate multi-level validation metrics from [4] to compute real-time adoption rates and switching friction, specifically implementing the SDE parameters $\mu_i$ and $\sigma_i$ using the defined recursive Bayesian updates. 4. Train LACA agents to optimize for cumulative reward during the transition phase, specifically targeting the first 50 steps of a new protocol, enforcing the switching rule $\hat{T}_{stable}(C_i) > C_{switch} + \hat{T}_{stable}(C_j)$. The switching logic is explicitly injected into the `agent/decision.py` module within the Hanabi testbed, replacing the default static convention selection function. 5. Define and compute the Convention Arbitrage Efficiency (CAE) metric, calculated as the ratio of cumulative reward gained during the transition phase relative to the baseline: $CAE = \frac{\sum_{t=1}^{T_{trans}} R_t^{LACA} - \sum_{t=1}^{T_{trans}} R_t^{Baseline}}{\sum_{t=1}^{T_{trans}} R_t^{Baseline}}$. Validate the SDE-based switching rule by conducting a paired t-test on the CAE values across 100 independent simulation runs; the system is considered successful only if the 95% confidence interval for the mean CAE exceeds the 10% threshold, confirming statistical significance over static baselines.
+3. Integrate multi-level validation metrics from [4] to compute real-time adoption rates and switching friction, specifically implementing the SDE parameters $\mu_i$ and $\sigma_i$ using the defined recursive Bayesian updates within the Hanabi testbed's `/api/convention_switch` endpoint. 4. Train LACA agents to optimize for cumulative reward during the transition phase, enforcing the switching rule $\hat{T}_{stable}(C_i) > C_{switch} + \hat{T}_{stable}(C_j)$ via the `agent/decision.py` module's `switch_convention()` function, which is exposed as a UI surface in the Hanabi dashboard's 'Convention Monitor' tab.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Researchers and engineers developing multi-agent reinforcement learning systems,
 
 ## Novelty
 
-LACA distinguishes itself from [P1] (which optimizes physical packet routing latency) and [P2] (which optimizes financial order execution speed based on network latency) by treating the *stochastic adoption dynamics* of communication protocols as the tradable asset. Specifically, LACA is the first to apply SDE-based 'arbitrage' logic—shorting unstable conventions and longing stable ones via a time-to-stability metric—to multi-agent coordination, rather than maximizing immediate utility or optimizing physical transmission speeds. Unlike prior art focused on minimizing transmission delay, LACA optimizes for *coordination stability* through the Convention Arbitrage Efficiency (CAE) metric, validating that dynamic switching reduces transition-phase coordination failure costs by >10% relative to static baselines.
+LACA's operationalization of CAE and the t-test in real-world deployment involves telemetry data from network APIs like `/api/network_stats` and `/api/protocol_adoption`, with CAE calculated using Prometheus metrics and the t-test implemented via a statistical backend API `/api/statistical_analysis`. This ensures measurable impact through tools like Grafana for CAE visualization and ELK Stack for logging t-test results.
 
 ## Ecosystem use
 
-In an AI-agent platform, LACA can be used as an API for dynamic protocol selection. Agents can query the LACA engine to determine the optimal communication convention to adopt at any given time, allowing for coordinated switching across a fleet of agents. The engine can also provide real-time metrics on convention stability, enabling agent coordination modules to hedge against communication failures during protocol transitions.
+The system's success is validated via a real-time API `/api/cae_report` that exposes CAE metrics to external monitoring systems, with the t-test results stored in a PostgreSQL database for audit and compliance. This allows stakeholders to track coordination stability gains against baseline protocols using Grafana dashboards and automated alerting.
 
 ## Diagram
 

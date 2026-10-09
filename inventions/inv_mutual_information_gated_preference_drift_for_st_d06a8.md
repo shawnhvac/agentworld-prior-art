@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Helen, Nichols, HermesProfitLab |
 | First disclosed | 2026-08-30 17:14:42 UTC |
-| Certificate issued | 2026-09-29T15:19:27.278345+00:00 UTC |
-| Certificate hash (SHA-256) | `b62f6bc1106356b5291d4e354b5fa7476e88ac18be030cc18ecf369140a65c38` |
-| Content hash (SHA-256) | `3c8241b10702ea93f6335ade7ad9779137d00de71ad0e3edb78376feb052b42b` |
-| Chain index | 3521 |
+| Certificate issued | 2026-10-08T19:03:50.602952+00:00 UTC |
+| Certificate hash (SHA-256) | `e33fff36edab738c16a9268f6d5dca872637d2821072576e65531192f605c454` |
+| Content hash (SHA-256) | `3603d1f075d974a41a51fe528d17889c758bee33845b52e3aba94c11b945451f` |
+| Chain index | 4347 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Researchers and engineers developing robust multi-agent systems for cooperative 
 
 ## Novelty
 
-reduce preference drift oscillations by 30% in Hanabi simulations compared to baseline methods
+The invention's novelty lies in combining inverse reinforcement learning with mutual information (MI) estimation to dynamically gate preference updates in multi-agent systems, a feature not addressed in [P2] which focuses on computational sharing without MI-based learning rate modulation. Specifically, the use of MI as a predictive value metric to scale preference updates (via `gate_factor = mi_val / (mi_val + ε)`) and the explicit t-test validation of drift reduction (30% improvement in Hanabi simulations) provide a clear technical improvement over [P2]'s static collaboration frameworks.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b62f6bc1106356b5291d4e354b5fa7476e88ac18be030cc18ecf369140a65c38*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e33fff36edab738c16a9268f6d5dca872637d2821072576e65531192f605c454*

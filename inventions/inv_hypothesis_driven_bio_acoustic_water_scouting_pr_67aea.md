@@ -32,23 +32,24 @@ Steps: ... 6.3. System-Level Checks: The 'Hydrogeological Scouting Dashboard' UI
 
 ## Who it's for
 
-Remote communities, humanitarian aid organizations, and hydrogeologists seeking low-cost preliminary indicators for water scarcity zones [1].
+Hydrogeologists, environmental consultants, and drilling operators seeking cost-effective water resource identification.
 
 ## Novelty
 
-The novelty is distinguished from general ecological monitoring and existing studies using bats as moisture indicators by the specific integration of a Scouting Efficiency Index (SEI) and a deconfounded GLMM pipeline designed to optimize hydrogeological drilling costs. While prior ecological research identifies bat-water correlations, it typically lacks the rigorous statistical deconfounding of insect density and vegetation via GLMMs and the operational SEI metric for drilling cost-benefit analysis. This invention transforms a speculative ecological hypothesis into a quantifiable, cost-optimized pre-screening protocol that explicitly accounts for and removes non-hydrological variables (e.g., insect density, vegetation) before triggering high-cost drilling, thereby providing a actionable decision-support tool absent in previous observational studies.
+The invention is novel relative to prior art (e.g., [P1]-[P5]) because it introduces a hypothesis-driven, bio-acoustic protocol using bats as ecological indicators for subterranean water, combined with a deconfounded GLMM pipeline and SEI metric for hydrogeological cost optimization—a unique integration absent in medical, dermatological, or imaging patents. No prior art addresses ecological-hydrogeological correlation via acoustic bat data or operational cost-benefit frameworks for drilling.
+
+## Ecosystem use
+
+Hydrogeological surveying, environmental monitoring, and pre-drilling site prioritization.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Bat Echolocation Data] --> B[Audio Sensors/GPS]
-    B --> C[Correlation Analysis]
-    C --> D{Hypothesis Valid?}
-    D -- Yes --> E[Preliminary Water Scout Indicator]
-    D -- No --> F[Discard Hypothesis]
-    E --> G[Professional Hydrogeological Survey]
-    G --> H[Drill Well]
+graph TD
+A[Acoustic Bat Data Collection] --> B[SEI Calculation via GLMM]
+B --> C[Hydrogeological Scouting Dashboard]
+C --> D[Drilling Prioritization]
+D --> E[Validation Log with PPV/Sensitivity Metrics]
 ```
 
 ## Sources / grounding

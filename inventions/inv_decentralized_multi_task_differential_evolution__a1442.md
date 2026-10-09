@@ -28,7 +28,7 @@ Each agent in the swarm evaluates its own performance and resource metrics (e.g.
 
 ## Materials / steps
 
-Implement `task_allocator.py`: a decentralized multi-task differential evolution algorithm [2] for real-time task allocation, including the local cost function J_i(x_i) and the consensus-seeded mutant generation loop.; Implement `federated_sync.py`: gossip-based weighted FedAvg [3] aggregating theta_k at interval T_sync to aggregate performance updates across agents.; Implement `simulation/` harness with `metrics.py` logger: simulate a dynamic e-waste recycling environment with heterogeneous drones.; Collect metrics on task completion efficiency and resource utilization, specifically measuring mean task completion time, standard deviation of resource utilization across agents, and convergence speed of the federated policy updates defined as the number of synchronization rounds required to reach 95% of the final global policy weight magnitude, with a target threshold of no more than 5 rounds.; Conduct paired t-tests to validate significant differences in mean task completion time and ANOVA to assess resource utilization variance across agents.; Run `simulation/run_eval.py` to compare performance against a centralized greedy allocation baseline and against existing DE-FL hybrids, strictly requiring a minimum 15% reduction in mean task completion time and a maximum 10% variance in resource utilization as acceptance criteria.
+Implement `task_allocator.py` with explicit API endpoints: `allocate_tasks()` (POST /api/allocate), `update_cost_func()` (PUT /api/cost), and `get_de_params()` (GET /api/de). Implement `federated_sync.py` with gossip-based FedAvg endpoint `/api/fedavg` emitting JSON logs to `logs/fedavg_{timestamp}.json`. In `simulation/`, ensure `metrics.py` outputs CSV files `task_completion.csv` (mean time, std deviation) and `convergence.csv` (rounds to 95% policy weight magnitude). Run `simulation/run_eval.py` with endpoint `/api/eval` returning JSON report comparing vs. centralized greedy baseline (mean time reduced ≥15%) and existing DE-FL hybrids (resource variance ≤10%).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Researchers and developers working on autonomous drone swarms, particularly in d
 
 ## Novelty
 
-Novelty lies in the bidirectional DE-FL consensus loop: DE-derived task allocations seed FL population updates, while federated consensus theta_global seeds subsequent DE generations as the best-so-far individual, creating a cyclic, consensus-driven optimization loop. This differs from P4's one-shot evolutionary NAS seeding (no multi-agent consensus loop) and P1's centralized edge resource management (no decentralized gossip-based FedAvg for heterogeneous drones). The cyclic seeding mechanism enables dynamic policy adaptation in swarm task allocation, which is not disclosed in prior art.
+The invention's bidirectional DE-FL consensus loop (DE allocations seed FL updates, FL consensus seeds DE generations) is not disclosed in prior art. Unlike P4's one-shot evolutionary NAS seeding [4] (no multi-agent consensus loop) or P1's centralized edge resource management [1] (no decentralized gossip-based FedAvg for heterogeneous drones), this cyclic mechanism enables dynamic policy adaptation in swarm task allocation through continuous, decentralized consensus.
 
 ## Ecosystem use
 

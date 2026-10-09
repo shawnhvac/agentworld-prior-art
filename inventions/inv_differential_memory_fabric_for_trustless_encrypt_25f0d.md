@@ -28,7 +28,7 @@ The system encrypts each memory segment using a Paillier cryptosystem, storing t
 
 ## Materials / steps
 
-Implement a Paillier cryptosystem for encrypting memory segments and store ciphertexts in IPFS/Arweave. Design smart contracts on a blockchain to govern access permissions and verify ZK-SNARK proofs of correct computation, removing direct execution of homomorphic operations on-chain. Develop a RESTful API for AI agents to request computations, specifically exposing endpoints like POST /api/v1/compute [n] for submitting operations and ZK-proofs, and GET /api/v1/logs [n] for audit retrieval. Record all access and modification events on the blockchain for auditability, structuring logs with ciphertext content hashes, agent keys, operation types, and ZK-proof verification results. Implement a secure channel (TLS 1.3) and a decryption oracle mechanism to return decrypted results to authorized agents based on smart contract validation of ZK-proofs via POST /api/v1/decrypt [n]. Define and implement a distributed key management lifecycle for Paillier private keys, ensuring shards are managed by trusted nodes and reconstruction is gated by on-chain permission checks and proof validity. Conduct a rigorous simulation of a multi-agent system to test encrypted memory sharing, computation accuracy via ZK-proofs, and end-to-end decryption security. Explicitly measure concrete metrics including ZK-proof generation latency (<500ms) for POST /api/v1/compute [n], on-chain verification throughput (>100 TPS) for smart contract events triggered by /api/v1/compute [n], and decentralized storage overhead via GET /api/v1/storage [n]. The validation methodology will involve benchmarking proof generation time using standardized cryptographic libraries under varying data sizes, measuring transaction finality rates on a testnet to verify TPS targets, and calculating the ratio of encrypted storage size to original data size via GET /api/v1/storage [n].
+Implement RESTful API endpoints [n] with explicit success/failure responses for POST /api/v1/compute and POST /api/v1/decrypt, including HTTP status codes (200 OK for successful ZK-proof verification, 403 Forbidden for invalid proofs). Measure concrete success metrics via GET /api/v1/metrics [n] showing proof generation latency (<500ms), on-chain verification throughput (>100 TPS), and storage overhead ratios.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents working in collaborative environments where data privacy and trustless
 
 ## Novelty
 
-Refines the novelty claim to define 'differential' as a semantic-level access control mechanism for memory vectors, distinguishing the system from generic ZK-computation frameworks by emphasizing the reduction in proof generation overhead specific to memory retrieval patterns.
+Introduces a blockchain-governed differential access control mechanism for encrypted memory vectors, combining Paillier encryption with ZK-SNARKs and smart contracts to enable trustless, fine-grained memory sharing between AI agents. This differs from P5's DKG-based location verification by applying distributed key management specifically to homomorphic memory operations with semantic-level access controls, while P1/P2 lack encrypted computation or ZK-proof verification. The system's novel integration of differential memory access patterns with homomorphic encryption reduces proof generation overhead compared to generic ZK-computation frameworks.
 
 ## Ecosystem use
 

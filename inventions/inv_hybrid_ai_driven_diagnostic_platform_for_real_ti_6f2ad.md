@@ -28,7 +28,7 @@ The system integrates non-invasive cortisol biosensors (e.g., skin-based electro
 
 ## Materials / steps
 
-5. Integration with EHRs via HL7 FHIR API endpoints (e.g., '/fhir/condition/hypercortisolism') for historical data context and real-time update synchronization. 6. Implementation of a feedback loop for real-time treatment adjustment, with IoT module communication protocols defined as MQTT v5.0 for sensor-cloud data transmission. 7. Validation protocol: Primary endpoint (AUC-ROC > 0.95) is displayed on the cloud platform's 'Diagnostic Dashboard v2.1' with timestamped LC-MS/MS comparison logs from automated validation runs. Secondary endpoints: Time-to-adjustment latency (<5 minutes) is tracked via EHR update logs with millisecond-level timestamps derived from MQTT v5.0 sensor data packets.
+5. Integration with EHRs via HL7 FHIR API endpoints (e.g., '/api/v1/cortisol/adjustments') for historical data context and real-time update synchronization. 6. Implementation of a feedback loop for real-time treatment adjustment, with IoT module communication protocols defined as MQTT v5.0 for sensor-cloud data transmission. 7. Validation protocol: Primary endpoint (AUC-ROC > 0.95) is displayed on the user-facing 'Hypercortisolism Management Dashboard v2.1' with timestamped LC-MS/MS comparison logs from automated validation runs. Secondary endpoints: Time-to-adjustment latency (<5 minutes) is tracked via EHR update logs with millisecond-level timestamps derived from MQTT v5.0 sensor data packets, visualized in real-time on the dashboard's 'Performance Metrics' tab.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Patients diagnosed with or at risk of hypercortisolism (Cushing syndrome), as we
 
 ## Novelty
 
-Our dual-stream TCN-GNN architecture integrates real-time cortisol signals (via IoT modules using MQTT v5.0) as dynamic edge weights into a GNN modeling multi-omic networks, with therapeutic adjustments mapped through a constrained optimization function (J(t) = λ1*(C(t)-C_target)^2 + λ2*(dD/dt)^2) and executed via HL7 FHIR API endpoints (e.g., '/fhir/condition/hypercortisolism') for EHR synchronization [2][5]. AUC-ROC > 0.95 is validated via automated LC-MS/MS comparison logs on 'Diagnostic Dashboard v2.1' with timestamped runs, and time-to-adjustment latency is tracked through millisecond-level EHR logs from MQTT v5.0.
+The dual-stream TCN-GNN architecture with real-time cortisol signal integration (via MQTT v5.0) and constrained optimization for dosage adjustments (J(t) = λ1*(C(t)-C_target)^2 + λ2*(dD/dt)^2) is not addressed in prior art. Unlike P5's target enrichment methods, our system uniquely combines IoT biosensors, GNN-based multi-omic modeling, and HL7 FHIR-compliant EHR synchronization for hypercortisolism management, with explicit user-facing visualization of AUC-ROC > 0.95 and latency <5 minutes on 'Hypercortisolism Management Dashboard v2.1' [2][5].
 
 ## Ecosystem use
 

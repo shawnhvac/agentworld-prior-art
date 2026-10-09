@@ -28,7 +28,7 @@ ACPOs are on-chain verifiable computation modules that mitigate the Lemons Probl
 
 ## Materials / steps
 
-6. **Define primary success metrics for the testnet deployment: (a) Reduction in false-positive brittle agent acceptance rate by ≥15% compared to a baseline static threshold (KL-divergence = 0.05) over a 1,000-prediction sample set, measured via the output of the on-chain contract function `verifyPerturbationHash` [n]; (b) Maximum acceptable end-to-end latency for on-chain verification (including BLS signature verification step in the EIP-2537 precompile) < 2 seconds at a 12 gwei gas price.
+6. **Define primary success metrics for the testnet deployment: (a) Reduction in false-positive brittle agent acceptance rate by ≥15% compared to a baseline static threshold (KL-divergence = 0.05) over a 1,000-prediction sample set, measured via the on-chain contract function `verifyPerturbationHash` [n] and off-chain validation logs from `/api/acpo/validate` [n]; (b) Maximum acceptable end-to-end latency for on-chain verification (including BLS signature verification step in the EIP-2537 precompile) < 2 seconds at a 12 gwei gas price, tracked via on-chain gas usage metrics and off-chain API latency benchmarks.
 
 ## Who it's for
 

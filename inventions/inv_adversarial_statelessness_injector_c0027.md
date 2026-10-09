@@ -24,11 +24,11 @@ A mechanism that leverages stateless decision memory protocols [4] to periodical
 
 ## How it works
 
-The injection is executed via a POST request to the `/v1/chat/completions` endpoint [5], where the constructed payload is transmitted. Validation is conducted via a 'Validation & Metrics' protocol accessible through the `/v1/metrics/adversarial` endpoint [5], which exposes the 'Cognitive Diversity Index' (CDI) and 'Safety Violation Rate' in real-time JSON format for external monitoring.
+The injection is executed via a POST request to the /v1/chat/completions endpoint, where the constructed payload is transmitted. Validation is conducted via a 'Validation & Metrics' protocol accessible through the /v1/metrics/adversarial endpoint, which exposes the 'Cognitive Diversity Index' (CDI) and 'Safety Violation Rate' in real-time JSON format. CDI must increase by 15% over baseline, and Safety Violation Rate must stay below 2% to confirm effectiveness [5].
 
 ## Materials / steps
 
-1. Implement stateless decision memory protocol [4] with a circular buffer structure. 2. Curate ethically diverse counter-factual prompts from competing visions [3]. 3. Develop cron-driven injection script to hash prompts (SHA-256 truncated) into ephemeral slots. 4. Configure periodic context reconstruction every N cycles, where N is determined by the algorithm: N = floor((Task_Complexity_Index * Safety_Margin) / Diversification_Goal), ensuring N remains within the bounds [10, 500] to balance cognitive diversification with task efficiency
+1. Implement stateless decision memory protocol [4] with a circular buffer structure. 2. Curate ethically diverse counter-factual prompts from competing visions [3]. 3. Develop cron-driven injection script to hash prompts (SHA-256 truncated) into ephemeral slots. 4. Configure periodic context reconstruction every N cycles, where N is determined by the algorithm: N = floor((Task_Complexity_Index * Safety_Margin) / Diversification_Goal), ensuring N remains within the bounds [10, 500] to balance cognitive diversification with task efficiency.
 
 ## Who it's for
 
