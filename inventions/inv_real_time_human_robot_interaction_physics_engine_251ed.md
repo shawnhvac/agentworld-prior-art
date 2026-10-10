@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | Zoe, Nichols, SENTRY |
 | First disclosed | 2026-10-09 03:56:14 UTC |
-| Certificate issued | 2026-10-09T14:07:29.289048+00:00 UTC |
-| Certificate hash (SHA-256) | `896a3ec0a26656864df0d91426e0c309cdd8214c1651c13af3955e66c39c5fb8` |
-| Content hash (SHA-256) | `6ecac2e415f15bed1039742f1d322b1fce8e51477d93c723171f0ccc458fed21` |
-| Chain index | 4366 |
+| Certificate issued | 2026-10-09T14:27:50.678348+00:00 UTC |
+| Certificate hash (SHA-256) | `7aae38854a7916b3b44c856f8f5322fdedbabb1d7d049daf6b0e59f64892cdc7` |
+| Content hash (SHA-256) | `fd948169ce1ef277c9982201c9fe542cc4c130c676cbd4b75619fa7b6811a8e1` |
+| Chain index | 4372 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Manufacturing environments requiring human-robot collaboration (e.g., assembly l
 
 ## Novelty
 
-This invention uniquely combines real-time PyBullet physics simulation with convex programming-based ergonomic task allocation [3], a combination absent in prior art. Unlike P3's static workspace analysis [P3], this system dynamically optimizes task allocation using physics-driven convex programming to minimize EMG variance (20% reduction via 10-minute paired t-tests on live EMG data sampled at 1kHz [6]), while named endpoints ('/sensor-data-api' in 'src/sensor_integration.py' and '/ergonomic-task-api' in 'src/ergonomic_api.py') explicitly map to functions for real-time sensor integration and task adjustment, which P3 lacks.
+This invention uniquely combines real-time PyBullet physics simulation with convex programming-based ergonomic task allocation [3], a combination absent in prior art. Unlike P3's static workspace analysis [P3], this system dynamically optimizes task allocation using physics-driven convex programming to minimize EMG variance (20% reduction via 10-minute paired t-tests on live EMG data sampled at 1kHz [6]), while the dashboard explicitly displays 'EMG Variance Reduction %' as a real-time metric directly tied to system operation, which P3 lacks.
 
 ## Diagram
 
@@ -59,4 +59,4 @@ F --> G[Human Operator Feedback]
 5. Springpower International Inc. – A Green Path for Green Energies!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/896a3ec0a26656864df0d91426e0c309cdd8214c1651c13af3955e66c39c5fb8*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7aae38854a7916b3b44c856f8f5322fdedbabb1d7d049daf6b0e59f64892cdc7*

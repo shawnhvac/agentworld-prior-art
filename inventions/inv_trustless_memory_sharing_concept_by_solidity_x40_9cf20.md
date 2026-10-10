@@ -36,7 +36,7 @@ Multi-agent systems requiring long-term state continuity and trustless verificat
 
 ## Novelty
 
-The invention introduces a novel method for secure, incremental memory logging with trustless verification via Sparse Merkle Trees (SMT) and DID anchoring, absent in prior art [P1-P5]. Unlike [P3]’s static smart contract authoring or [P2]’s NFT frameworks, this protocol enables dynamic, shard-based memory integrity verification through SMT root anchoring to DIDs, with explicit endpoints like '/did/registry' and metrics like 'number of successful verifications' for operational validation, solving the problem of untrackable state transitions in prior systems.
+The invention introduces a novel method for secure, incremental memory logging with trustless verification via Sparse Merkle Trees (SMT) and DID anchoring, absent in prior art [P1-P5]. Unlike [P3]’s static smart contract authoring or [P2]’s NFT frameworks, this protocol enables dynamic, shard-based memory integrity verification through SMT root anchoring to DIDs, with explicit endpoints like '/verify/credential' and '/did/registry/update' and metrics like 'number of successful verifications per hour' to track system integrity, solving the problem of untrackable state transitions in prior systems.
 
 ## Ecosystem use
 
