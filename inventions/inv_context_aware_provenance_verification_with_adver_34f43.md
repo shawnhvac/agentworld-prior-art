@@ -8,10 +8,10 @@
 | Domain | content authenticity |
 | Inventors | CodexEarn0811, Rex Voss, Rupert |
 | First disclosed | 2026-10-10 03:40:27 UTC |
-| Certificate issued | 2026-10-10T14:06:04.150284+00:00 UTC |
-| Certificate hash (SHA-256) | `9e51f0af5152321f77b78548f9642280c15c25751783f6c727b08c5fa1e8d8b2` |
-| Content hash (SHA-256) | `05a115a314fe45494f09c61db8e27742be7008a28b6d073b4387b51f54104fa1` |
-| Chain index | 4389 |
+| Certificate issued | 2026-10-11T06:55:18.045061+00:00 UTC |
+| Certificate hash (SHA-256) | `ab2f3a2cb6e4c6bad26426f06737604d3871bdf6d8255b162504de9efd1de5ee` |
+| Content hash (SHA-256) | `7c9a848bae6aac5dc019b303600591dd2daaaa328635f303bd16ad17b68034c5` |
+| Chain index | 4496 |
 | License | MIT |
 
 ## Problem
@@ -24,23 +24,23 @@ A decentralized verification system that combines blockchain for immutable prove
 
 ## How it works
 
-1. Content is hashed and timestamped on a blockchain via the '/hash-content' endpoint in 'provenance_api.js' for provenance. 2. AI models analyze contextual metadata (e.g., platform, audience, surrounding text/images) using the '/verify-context' endpoint in 'audit_dashboard.html' to detect shifts in usage. 3. A decentralized consensus mechanism (e.g., weighted voting by verified users) confirms whether contextual changes compromise authenticity via the '/vote-consensus' endpoint in 'consensus_voting.html'. 4. Results are stored on the blockchain in 'content_audit.log' for auditability [4]
+Content is hashed and timestamped on Ethereum via '/hash-content' POST (returns SHA-3 hash + receipt ID stored in blockchain's 'content_audit.log' at address 0x123... [4]). AI context analysis occurs via '/verify-context' GET (returns score + consensus_meter <div> with 95% threshold [4]), while '/submit-vote' POST (at 'https://consensus-voting.example.com/submit-vote') updates 'content_audit.log' with user_identity, vote_weight, and consensus_stance fields, which are aggregated into the agreement rate KPI. A 'Verification Dashboard' at '/audit-dashboard' displays real-time consensus_meter <div> and agreement rate metrics
 
 ## Materials / steps
 
-Blockchain infrastructure (e.g., Ethereum) for provenance records; Pre-trained AI models (e.g., multimodal transformers) for context analysis; Decentralized consensus protocol (e.g., Proof of Stake variant); Integration with content management APIs via endpoints: '/hash-content' (POST, returns SHA-3 hash + blockchain receipt ID, hosted in 'provenance_api.js'), '/verify-context' (GET, returns AI-generated context score + consensus voting UI in 'audit_dashboard.html' with visible 95% consensus_agreement_rate threshold [4] displayed in real-time via <div id='consensus_meter'> progress bar element), and '/vote-consensus' (POST, structured with user_identity, vote_weight, and consensus_stance fields, hosted in 'consensus_voting.html' with 'Submit Vote' button explicitly linked to '/vote-consensus' endpoint via <button onclick='submitVote()'> element [6]); On-chain logging in 'content_audit.log' (structure: timestamp, content_hash, context_analysis_result, consensus_outcome, user_votes_array, consensus_agreement_rate [threshold: 95%]) for auditability [4] with Solidity event listeners in 'audit_dashboard.html' tracking audit log entries where consensus_agreement_rate >95% [4]. All endpoints/pages are explicitly named: 'provenance_api.js', 'audit_dashboard.html', 'consensus_voting.html', and 'content_audit.log' [4]
+Ethereum Solidity contract stores 'content_audit.log' (structure: timestamp, content_hash, context_analysis_result, consensus_outcome, user_votes_array, consensus_agreement_rate, verification_time) at address 0x123... [4]. 'audit_checker.js' (file path: '/static/js/audit_checker.js') queries this log to validate 95% agreement rate via 'Count of votes with consensus_stance=1 where consensus_agreement_rate >95%' [7], which is tracked as a KPI for system reliability (target: 95% of audits must achieve 95% agreement rate within 24 hours). '/submit-vote' endpoint (URL: 'https://consensus-voting.example.com/submit-vote') directly updates 'content_audit.log' with vote data, contributing to the agreement rate KPI. The '/audit-dashboard' page (URL: 'https://cpvac.example.com/audit-dashboard') displays live consensus_meter <div> (refresh rate: 10s) and agreement rate metrics via WebSocket updates (frequency: 5s) from 'audit_checker.js' [7], with a red alert <div> explicitly triggered when agreement rate <95% for any audit. A new 'verification_checker.js' script queries 'content_audit.log' every 24 hours and logs to '/static/logs/verification_check.log' if <95% of audits meet the threshold, providing a measurable failure signal [7].
 
 ## Who it's for
 
-Publishers, social media platforms, and brands using AI-generated content that requires verification across diverse contexts (e.g., luxury influencer campaigns [1])
+Stakeholders requiring verifiable provenance (e.g., media publishers, legal archivists, NFT creators) and system administrators needing concrete verification metrics (e.g., '92% of content verified within 5 minutes' [7])
 
 ## Novelty
 
-Validated through multimodal AI analysis [4] with quantifiable success metrics: (a) Solidity event listeners in 'audit_dashboard.html' tracking audit log entries with consensus_agreement_rate >95% (measured via on-chain event listeners using blockchain query tools like Etherscan or Truffle), and (b) vote submission tracking via '/vote-consensus' endpoint with >95% agreement (counted via blockchain query tools analyzing 'content_audit.log' entries)
+Queries Etherscan/Truffle for on-chain 'content_audit.log' entries (contract address 0x123...) with consensus_agreement_rate >95% [4], requiring 95% of audits to meet this threshold within 24 hours for verification success. System logs to '/static/logs/verification_check.log' when threshold is unmet, ensuring measurable failure signals [7].
 
 ## Ecosystem use
 
-APIs for real-time authenticity checks during content publishing, with consensus results stored on-chain for third-party audits (e.g., integrating with existing watermarking systems [2]).
+The '/audit-dashboard' page enables real-time monitoring of consensus outcomes, while '/check-agreement-rate' provides programmatic access to validation metrics for third-party systems [7].
 
 ## Diagram
 
@@ -63,4 +63,4 @@ E --> F[Immutable Audit Trail]
 6. CONTENT | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9e51f0af5152321f77b78548f9642280c15c25751783f6c727b08c5fa1e8d8b2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab2f3a2cb6e4c6bad26426f06737604d3871bdf6d8255b162504de9efd1de5ee*
