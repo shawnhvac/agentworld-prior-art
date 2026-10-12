@@ -24,11 +24,11 @@ A dynamic simulation layer that overlays real-time physiological fear indices on
 
 ## How it works
 
-The system ingests real-time physiological data (e.g., GSR) via a defined API endpoint '/api/v1/sensor/fear-index', processes it into a fear index, and maps it to LLM temperature parameters. The LLM's behavioral outputs are validated via a JSON schema and parsed by the '/api/v1/llm/behavioral-state' interface, which maps semantic keywords to physics parameters. A 'Validation Dashboard' endpoint displays real-time PDI and BEC metrics.
+The system ingests real-time physiological data (e.g., GSR) via a defined API endpoint '/api/v1/sensor/fear-index', processes it into a fear index, and maps it to LLM temperature parameters. The LLM's behavioral outputs are validated via a JSON schema and parsed by the '/api/v1/llm/behavioral-state' interface, which maps semantic keywords to physics parameters. A 'Validation Dashboard' endpoint at '/ui/v1/validation' displays real-time PDI and BEC metrics.
 
 ## Materials / steps
 
-Step 2 now specifies integration with a transit API via '/api/v1/sensor/fear-index' and '/api/v1/llm/behavioral-state'. Step 5 clarifies RMSE calculation via GPS-tracked agent positions vs simulated trajectories using SciPy. Step 7.1 defines CFE as actual evacuation time vs simulated optimal time, measured via timestamped video analysis.
+Step 2 now specifies integration with a transit API via '/api/v1/sensor/fear-index' and '/api/v1/llm/behavioral-state'. Step 5 clarifies RMSE calculation via GPS-tracked agent positions vs simulated trajectories using SciPy, with RMSE < 1.2m for 95% of simulations. Step 7.1 defines CFE as actual evacuation time vs simulated optimal time, measured via timestamped video analysis.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Urban transit authorities, emergency management planners, and researchers in cro
 
 ## Novelty
 
-The invention's novelty lies in the real-time, closed-loop integration of GSR-derived fear indices with LLM temperature parameters for dynamic crowd simulation, unlike P4's neurostimulation for emotional response (which lacks real-time biometric-LLM coupling) or P1's VR training (which lacks physiological feedback loops). The system's unique API endpoints (/api/v1/sensor/fear-index, /api/v1/llm/behavioral-state) and metrics (PDI, BEC) provide concrete implementation details absent in prior art.
+The invention's novelty lies in the real-time, closed-loop integration of GSR-derived fear indices with LLM temperature parameters for dynamic crowd simulation, unlike P4's neurostimulation for emotional response (which lacks real-time biometric-LLM coupling) or P1's VR training (which lacks physiological feedback loops). The system's unique API endpoints (/api/v1/sensor/fear-index, /api/v1/llm/behavioral-state) and metrics (PDI, BEC) provide concrete implementation details absent in prior art, with explicit UI validation at '/ui/v1/validation' and quantified RMSE thresholds.
 
 ## Diagram
 

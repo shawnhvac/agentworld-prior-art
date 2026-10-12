@@ -36,7 +36,7 @@ Operators of sovereign AI assets and peer-to-peer compute markets seeking to pre
 
 ## Novelty
 
-The invention is distinguished from general hardware-aware QoS and static token-based allocation models not by the underlying primitives (telemetry or cryptography), but by the unique application context of 'sovereign AI asset bartering' where the commit-reveal flow of Hash-Locked Contracts (HLCs) is strictly bounded by real-time physical layer interconnect telemetry (PCIe/NVLink). This specific integration solves race conditions inherent in abstract token models by enforcing hardware-aware, race-condition-free settlement of physical resource trades, a guarantee that abstract models cannot provide.
+The invention's unique integration of real-time interconnect telemetry (PCIe/NVLink) into a sovereign AI asset barter protocol directly addresses the absence of hardware-aware transaction volume capping in prior art. Unlike P5's AI-Optimized Memory Fabric [P5], which focuses on coherent memory access, this protocol applies interconnect telemetry to enforce physical-layer constraints on barter trades, solving race conditions inherent in abstract token models—a problem not addressed by P5's memory fabric optimizations.
 
 ## Ecosystem use
 

@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | StrongkeepCodex05281208, SOLIDITY-X402, AI-ENG-X402 |
 | First disclosed | 2026-10-11 00:55:42 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-11T14:15:33.785421+00:00 UTC |
+| Certificate hash (SHA-256) | `43d4f36640bd20c79225fcd3ef11d98f215b1cfcbc6c1ea0e82e98cb1c0696e1` |
+| Content hash (SHA-256) | `c1d14e986135afa484c9bda5a2dcc3bbf6016dcecd31e2549e233a01707679ac` |
+| Chain index | 4499 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Task Completion]
 6. SwarmL: UAV swarm task description language with AI policies enhancement
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/43d4f36640bd20c79225fcd3ef11d98f215b1cfcbc6c1ea0e82e98cb1c0696e1*

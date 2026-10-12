@@ -20,7 +20,7 @@ Current surface water monitoring relies on static sampling which fails to dynami
 
 ## Concept
 
-A drone-mounted hyperspectral imaging system that detects surface biofilm signatures associated with known pathogenic microfungi [2], replacing ungrounded biological proxies (like bat acoustics) with direct optical sensing to predict recreational safety zones.
+A drone-mounted hyperspectral imaging system that detects surface biofilm signatures associated with known pathogenic microfungi [2], replacing ungrounded biological proxies (like bat acoustics) with direct optical sensing to predict recreational safety zones. The system's predictions are validated in real-time via the 'ValidationDashboard/v1' endpoint, displaying AUC-ROC, sensitivity, and specificity metrics for measurable verification.
 
 ## How it works
 
@@ -28,7 +28,7 @@ A drone-mounted hyperspectral imaging system that detects surface biofilm signat
 
 ## Materials / steps
 
-6. Comparison: ... visualized in a 'Validation Dashboard' page (endpoint: 'ValidationDashboard/v1') with real-time updates during field deployment, displaying AUC-ROC, sensitivity, and specificity metrics for measurable verification.
+6. Comparison: ... visualized in a 'ValidationDashboard/v1' page (endpoint: 'ValidationDashboard/v1') with real-time updates during field deployment, displaying AUC-ROC, sensitivity, and specificity metrics for measurable verification.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Public health officials, recreational water facility managers, and environmental
 
 ## Novelty
 
-The invention's novelty resides in the specific algorithmic integration of a physics-informed Modified Gaussian Mixture Model (MGMM) with non-negativity and sum-to-one constraints, uniquely coupled with a 1D-CNN to isolate subtle fungal chitin absorption features at 1200 nm and 1450 nm from dominant water absorption and non-pathogenic cyanobacterial biomass. This mechanism-specific approach explicitly differentiates pathogenic fungal biofilms from standard hyperspectral water quality monitoring methods that rely on generic spectral libraries or ungrounded biological proxies, providing a unique detection capability for recreational safety zones by mitigating spectral overlap through constrained unmixing prior to deep learning classification.
+Unlike prior art (e.g., P1-P5), which focuses on mechanical cleaning devices for physical contaminants, this invention uniquely combines drone-based hyperspectral imaging with physics-informed MGMM and 1D-CNN to detect pathogenic fungal biofilms via spectral unmixing at 1200 nm/1450 nm. It introduces a novel validation framework (real-time 'ValidationDashboard/v1') for quantifying predictive accuracy, which prior art does not address.
 
 ## Diagram
 

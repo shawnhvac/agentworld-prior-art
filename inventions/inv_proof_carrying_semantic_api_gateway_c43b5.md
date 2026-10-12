@@ -28,7 +28,7 @@ The gateway intercepts API discovery requests and utilizes an integrated SMT sol
 
 ## Materials / steps
 
-5. Execute comprehensive benchmarking using a prototype implementation on an AWS c6i.2xlarge instance (8 vCPUs, 16GB RAM, Ubuntu 22.04). The test suite comprises 500 OpenAPI 3.0 specifications with LTL contracts... Metrics are instrumented via OpenTelemetry spans (e.g., 'contract_verification_latency' and 'misuse_incident_rate') and eBPF counters (e.g., 'contract_mismatch_events' and 'request_throttled_by_policy'). Baseline comparisons against standard OpenAPI discovery include enterprise security monitoring system logs (e.g., SIEM alerts for contract-violating requests) to quantify the 30% reduction claim.
+5. Execute comprehensive benchmarking using a prototype implementation on an AWS c6i.2xlarge instance (8 vCPUs, 16GB RAM, Ubuntu 22.04). The test suite comprises 500 OpenAPI 3.0 specifications with LTL contracts... Metrics include real-time validation of policy enforcement success rates via eBPF counters (e.g., 'policy_enforcement_success_rate') and OpenTelemetry spans (e.g., 'contract_mismatch_resolution_time'). Baseline comparisons against standard OpenAPI discovery include enterprise security monitoring system logs (e.g., SIEM alerts for contract-violating requests) to quantify the 30% reduction claim.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Enterprise AI agents requiring safe, untrusted interaction with internal APIs; A
 
 ## Novelty
 
-The invention's novelty lies in the automatic translation of formal verification proofs into executable runtime policies via eBPF, a feature absent in prior art. Unlike P2's verifiable computation for cross-domain data sharing [P2], which lacks runtime enforcement mechanisms, this invention uniquely bridges formal verification (LTL) with kernel-level policy execution through the Contract-to-Policy Compiler, enabling real-time API behavior enforcement.
+The invention's novelty is further strengthened by introducing a real-time validation mechanism that measures the success rate of policy enforcement via eBPF counters and OpenTelemetry spans, which is absent in prior art like P2. While P2 focuses on cryptographic proofs without runtime enforcement, this invention uniquely combines formal verification (LTL) with kernel-level policy execution and quantifies effectiveness through metrics such as 'policy_enforcement_success_rate' and 'contract_mismatch_resolution_time', directly correlating with the 30% reduction in API misuse incidents [n].
 
 ## Ecosystem use
 

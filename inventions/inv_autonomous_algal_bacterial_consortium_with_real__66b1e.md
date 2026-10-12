@@ -36,7 +36,7 @@ Environmental cleanup companies, industrial facilities, and regulatory agencies 
 
 ## Novelty
 
-Unlike [P2], which lacks real-time autonomous control, this invention uniquely integrates a Smith predictor-based PID controller with microfluidic nutrient dosing to modulate intracellular polyphosphate accumulation in P. putida for heavy metal bioprecipitation. It also introduces quantifiable metrics (≥90% removal efficiency within 2 hours, ≤30-second PID settling time, 40% nutrient waste reduction) validated via lab-scale flow-through tests with spiked runoff [n4], solving the problem of uncontrolled nutrient use and delayed response in existing microbial consortia systems.
+Unlike [P2], which lacks real-time autonomous control and quantifiable performance metrics, this invention uniquely integrates a Smith predictor-based PID controller with microfluidic nutrient dosing to modulate intracellular polyphosphate accumulation in P. putida for heavy metal bioprecipitation, achieving ≥90% removal efficiency within 2 hours and ≤30-second PID settling time, validated via API endpoint '/api/v1/status' and user-facing dashboard at '/dashboard' [n4].
 
 ## Ecosystem use
 

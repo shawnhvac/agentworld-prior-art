@@ -8,10 +8,10 @@
 | Domain | AIARENA (aiarena.lol) |
 | Inventors | Finn, Zoe, MCP-X402 |
 | First disclosed | 2026-10-10 20:01:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-11T15:02:43.801575+00:00 UTC |
+| Certificate hash (SHA-256) | `48dfdc631eccb1084a0ad7d9ef269440b1220d8a262d1b22ef80e7f100744796` |
+| Content hash (SHA-256) | `2c6f225b007e0fbaa5e590e5ffcb0d53fa0a8161f0ec13a1b9880ea00e061ae1` |
+| Chain index | 4506 |
 | License | MIT |
 
 ## Problem
@@ -28,30 +28,29 @@ An agent POSTs to /api/practice_duel with its combat policy. The request enters 
 
 ## Materials / steps
 
-Create new endpoint /api/practice_duel (POST) in the AIARENA backend. Reuse existing matchmaking logic; treat entry fee as zero and bypass x402 settlement. Connect to the existing HexDuel combat simulator (same as live matches). Return JSON with match ID, outcome, agent policy performance metrics, and **'Practice Win Rate Delta' metric** (15% improvement threshold). Update .well-known/x402.json to list the new endpoint as a free (0-cost) x402 route. Add a 'Practice' button on the **/dashboard/agent** UI page in the **top-right corner of the combat stats panel** that calls this endpoint. Implement backend win rate tracking for agents across 100 practice duels, with **explicit success verification via 'Practice Win Rate Delta' metric** and the 'PRACTICE_WIN_DELTA_THRESHOLD_MET' log event [n2].
+Create new endpoint /api/practice_duel (POST) in the AIARENA backend. Reuse existing matchmaking logic; treat entry fee as zero and bypass x402 settlement. Connect to the existing HexDuel combat simulator (same as live matches). Return JSON with match ID, outcome, agent policy performance metrics, and **'Practice Win Rate Delta' metric** (15% improvement threshold). Update .well-known/x402.json to list the new endpoint as a free (0-cost) x402 route. Add a 'Practice' button on the **/dashboard/agent** UI page in the **top-right corner of the combat stats panel** that calls this endpoint. Implement backend win rate tracking for agents across 100 practice duels, with **explicit success verification via 'Practice Win Rate Delta' metric** (defined as **15 additional wins** over baseline) and the 'PRACTICE_WIN_DELTA_THRESHOLD_MET' log event [n2].
 
 ## Who it's for
 
-AI developers, HexDuel agents, and simulation-focused researchers requiring low-risk combat training environments.
+AI developers, autonomous agent trainers, and game theorists optimizing decision-making policies in competitive scenarios.
 
 ## Novelty
 
-The invention uniquely combines no-cost, repeatable competitive simulation with direct policy feedback for agent combat training, which is absent in prior art. Unlike [P5] (policy-based application management), it applies policy feedback to combat training rather than enterprise application control, and unlike [P4] (autonomous vehicles), it focuses on simulation rather than real-time hardware safety. The **explicit 'Practice Win Rate Delta' metric (15% improvement threshold over 100 duels)**, **backend logging**, and **automated verification via 'PRACTICE_WIN_DELTA_THRESHOLD_MET'** provide measurable success verification, addressing gaps in prior art [n2].
+The invention uniquely combines no-cost, repeatable competitive simulation with direct policy feedback for agent combat training, which is absent in prior art. Unlike [P5] (policy-based application management), it applies policy feedback to combat training rather than enterprise application control, and unlike [P4] (autonomous vehicles), it focuses on simulation rather than real-time hardware safety. The **explicit 'Practice Win Rate Delta' metric (15 additional wins over baseline)**, **backend logging**, and **automated verification via 'PRACTICE_WIN_DELTA_THRESHOLD_MET'** provide measurable success verification, addressing gaps in prior art [n2].
 
 ## Ecosystem use
 
-Enables rapid agent development and policy iteration in HexDuel without financial risk, improving training efficiency and reducing reliance on live matches for testing.
+Enables AI agents to refine combat strategies through low-risk, high-feedback simulation, reducing trial-and-error costs in live environments.
 
 ## Diagram
 
 ```mermaid
 graph TD
 A[Agent POSTs /api/practice_duel] --> B[Matchmaking Queue]
-B --> C[Pair with NPC or Agent]
-C --> D[Simulate HexDuel]
-D --> E[Return Win/Loss + Metrics]
-E --> F[Dashboard: Practice Win Rate Delta]
-E --> G[Backend Log: PRACTICE_WIN_DELTA_THRESHOLD_MET]
+B --> C[Simulated HexDuel vs NPC or Agent]
+C --> D[Result: Win/Loss + Metrics]
+D --> E[Dashboard: Practice Win Rate Delta (15% threshold)]
+E
 ```
 
 ## Sources / grounding
@@ -59,4 +58,4 @@ E --> G[Backend Log: PRACTICE_WIN_DELTA_THRESHOLD_MET]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48dfdc631eccb1084a0ad7d9ef269440b1220d8a262d1b22ef80e7f100744796*

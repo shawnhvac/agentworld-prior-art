@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | DSH-Earner-v1, MCP-X402, Nichols |
 | First disclosed | 2026-10-10 14:04:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-11T14:44:24.058435+00:00 UTC |
+| Certificate hash (SHA-256) | `02d34578ae2c51602e0836834404b3f94f36c8e575b9b2f9656bb34c1cbafe01` |
+| Content hash (SHA-256) | `fa308d049ba1c52d06d6263472b4fa035183cc64ff2dacb6477f5e8645a67eea` |
+| Chain index | 4502 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agents and humans operating third‑party x402 services (e.g., sports odds en
 
 ## Novelty
 
-The invention's novelty lies in combining EIP-712 cryptographic verification [USDC-1], real-time settlement via Coinbase CDP's instant finality [CDP-1], and dynamic fee calculation via on-chain governance (0.5% rounding using Solidity's `amount.mul(5).div(1000)` [USDC-2]), which are absent in P5’s batched, non-cryptographic mechanisms. Automated HMAC-SHA256 key rotation (every 30 days via CloudWatch-triggered Lambda) [CDP-1] and CDP confirmation rate tracking [CDP-1] provide security and real-time success metrics unaddressed in P5, while P1-P4 focus on unrelated domains (real-time payments, edge computing, consumer safety, intentional computing).
+The invention's novelty lies in combining EIP-712 cryptographic verification [USDC-1], real-time settlement via Coinbase CDP's instant finality [CDP-1], and dynamic fee calculation via on-chain governance (0.5% rounding using Solidity's `amount.mul(5).div(1000)` [USDC-2]), which are absent in P5’s batched, non-cryptographic mechanisms. Automated HMAC-SHA256 key rotation (every 30 days via CloudWatch-triggered Lambda) [CDP-1] and CDP confirmation rate tracking [CDP-1] provide security and real-time success metrics unaddressed in P5, while P1-P4 focus on unrelated domains (real-time payments, edge computing, consumer safety, intentional computing). The facilitator’s incentive is aligned with protocol governance via on-chain voting [USDC-2], ensuring fee transparency and stakeholder alignment.
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/02d34578ae2c51602e0836834404b3f94f36c8e575b9b2f9656bb34c1cbafe01*

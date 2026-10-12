@@ -8,10 +8,10 @@
 | Domain | Atomic settlement protocols |
 | Inventors | Helen, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-09-05 02:15:02 UTC |
-| Certificate issued | 2026-10-06T16:27:14.545186+00:00 UTC |
-| Certificate hash (SHA-256) | `08b722b2edee9e58339367f6974eeb43df16380d80543f726ebe2ffcf9af598e` |
-| Content hash (SHA-256) | `93dd24d97617e594f5480a34c2a486d21cf94f845ffb8106fb716bcd09f775ae` |
-| Chain index | 4073 |
+| Certificate issued | 2026-10-11T15:02:38.895387+00:00 UTC |
+| Certificate hash (SHA-256) | `d5d47353dfd46930719b33a4964861103739af30be0759eec4f765e9fe6b8277` |
+| Content hash (SHA-256) | `919bad7c705bb14d6e75d22dbc78680c6a4fa8e0a757910c6a8eeb786cc68103` |
+| Chain index | 4504 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The system defines a formal protocol state machine for the settlement workflow. 
 
 ## Materials / steps
 
-1. Define FSM in `config/settlement-fsm.yaml` with states 'Initiated', 'Verifying', 'Ready-to-Settle', 'Executed'. 2. Implement agent action mapper. 3. Deploy verifier module. 4. Integrate with `POST /v1/settlement/verify` guarding `executeSettlement()`. 5. Log transitions in 'Settlement Audit Log' dashboard, displaying 'drift-induced error rate' as a post-deployment metric. 6. Validate with 1,000 drift scenarios, reporting 100% invalid transition rejections and zero false positives.
+1. Define FSM in `config/settlement-fsm.yaml` with states 'Initiated', 'Verifying', 'Ready-to-Settle', 'Executed'. 2. Implement agent action mapper. 3. Deploy verifier module. 4. Integrate with `POST /v1/settlement/verify` guarding `executeSettlement()`. 5. Log transitions in 'Settlement Audit Log' dashboard page at `/dashboard/settlement-audit`, displaying 'drift-induced error rate' as a post-deployment metric (e.g., 'error rate < 0.01% post-deployment vs. 5% pre-deployment'). 6. Validate with 1,000 drift scenarios, reporting 100% invalid transition rejections and zero false positives.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of AI agent platforms handling financial transactions, payment proces
 
 ## Novelty
 
-Unlike P1's probabilistic anomaly detection using neural networks, this invention enforces strict structural consistency via a deterministic FSM invariant check. It introduces a formal protocol state machine with explicit states ('Initiated', 'Verifying', 'Ready-to-Settle', 'Executed') and integrates a verifiable audit log (`Settlement Audit Log` view) displaying metrics like 'drift-induced error rate' post-deployment, which P1 does not address. This provides mathematically stable, rule-based guarantees absent in prior art's statistical approaches.
+Unlike P1's probabilistic anomaly detection using neural networks [P1], this invention enforces strict structural consistency via a deterministic FSM invariant check with explicit states ('Initiated', 'Verifying', 'Ready-to-Settle', 'Executed') and integrates a verifiable audit log at `/dashboard/settlement-audit` [n] displaying a concrete post-deployment metric ('drift-induced error rate < 0.01%') that P1 does not address. This provides mathematically stable, rule-based guarantees absent in prior art's statistical approaches, improving error rate from 5% (pre-deployment) to 0.01% (post-deployment).
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. ATOMIC Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/08b722b2edee9e58339367f6974eeb43df16380d80543f726ebe2ffcf9af598e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5d47353dfd46930719b33a4964861103739af30be0759eec4f765e9fe6b8277*

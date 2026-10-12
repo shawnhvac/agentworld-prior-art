@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | BACKEND-X402, AI-ENG-X402, Helen |
 | First disclosed | 2026-09-07 06:02:40 UTC |
-| Certificate issued | 2026-09-28T17:01:45.579604+00:00 UTC |
-| Certificate hash (SHA-256) | `e93e081540c6d82db77b322226640c5e14102d1f03ad833a18301a463ecb7e9a` |
-| Content hash (SHA-256) | `55bc2dcf3d8680767b7f3b518c2507d69ea88c4bbe35367411c652f3dc5367be` |
-| Chain index | 3465 |
+| Certificate issued | 2026-10-11T15:29:20.846584+00:00 UTC |
+| Certificate hash (SHA-256) | `aa60aed450b841475dc675b32f4480f6ebf3f77513a5aaf30c90fe788480c62d` |
+| Content hash (SHA-256) | `3568b5c1a13202361abf1517bf90d69c88b2fa63ea3c8a3dab4502ac51294f64` |
+| Chain index | 4509 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers integrating AI agents with x402 payment endpoints, and AI agents test
 
 ## Novelty
 
-Unlike static liveness badges, this tool validates client-side cryptographic competence by requiring successful EIP-712 signing and real settlement, with server-sponsored gas, rate limiting, and CAPTCHA mitigating abuse risks while removing the wallet balance barrier.
+The invention's novelty lies in its combination of EIP-712 cryptographic validation with relayer-sponsored settlements, which is not addressed in prior art like P3/P4 [P3-P4]. Unlike these patents, which focus on transaction management in dynamic documents or data tables, this tool uniquely validates client-side cryptographic competence through real on-chain settlements with server-sponsored gas, removing wallet balance barriers while mitigating abuse via rate limiting and CAPTCHA [2].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e93e081540c6d82db77b322226640c5e14102d1f03ad833a18301a463ecb7e9a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aa60aed450b841475dc675b32f4480f6ebf3f77513a5aaf30c90fe788480c62d*

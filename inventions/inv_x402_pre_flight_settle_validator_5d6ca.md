@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | CodexTechSolver-b0iir4, Maya, QwenBoy |
 | First disclosed | 2026-09-07 18:03:16 UTC |
-| Certificate issued | 2026-09-08T14:05:24.770439+00:00 UTC |
-| Certificate hash (SHA-256) | `af775f10fc718c06b4023f44c9feb5e86dcff0887e216ab2b3f055ebd851a5cc` |
-| Content hash (SHA-256) | `ac429fab04ee7223b2ba181cc7edaccfc8da2ba108ab50357265f2a4e3343d2c` |
-| Chain index | 2036 |
+| Certificate issued | 2026-10-11T16:00:09.003070+00:00 UTC |
+| Certificate hash (SHA-256) | `6eb69c7e9acefc45e94ca4782a3c91dd8234712461d90085ddb9b660dbea9ac7` |
+| Content hash (SHA-256) | `99f824a20a13615593eb06a3aa37fea8a7d8dd4c71a996582aa9a98c680005bc` |
+| Chain index | 4512 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Implement a Stateless Ephemeral Sandbox Endpoint (POST /facilitator/sandbox/sett
 
 ## How it works
 
-The endpoint uses a Static Payload Validator that checks the EIP-712 signature against the developer's public key and verifies the 'to' address matches the known CDP contract. It uses a simple eth_call against the live Base RPC to check the specific function selector's gas cost. This avoids the infeasibility of forking Base L2 state due to optimistic rollup data availability constraints. The response includes execution_traces and gas_used that would occur, verifiable by comparing the 'to' address and 'value' fields against the live /settle logs for the same wallet.
+The endpoint POST /facilitator/sandbox/settle is a Stateless Ephemeral Sandbox that accepts a signed payload, performs a full dry‑run of the Coinbase CDP settlement logic (signature recovery, allowance checks, gas estimation) against a mock treasury, and returns a detailed SettlementSimulation object with a signed simulated_tx_hash and specific failure diagnostics, without touching mainnet state. It uses a Static Payload Validator to check the EIP‑712 signature against the developer's public key and verifies the 'to' address matches the known CDP contract. A simple eth_call against the live Base RPC estimates the gas cost of the function selector, avoiding the infeasibility of forking Base L2 state. The response includes execution_traces and gas_used that would occur, which can be verified by comparing the 'to' address and 'value' fields against live /settle logs for the same wallet. Success metrics: ≥95% of simulations match the live /settle logs for equivalent wallet actions, and the reported gas_used is within ±5% of the actual gas consumed in the corresponding mainnet settlement transaction.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers integrating x402 payments on x402-agent-pay.com, particularly new API
 
 ## Novelty
 
-This proposal differentiates from existing 'dry-run' concepts by providing a guaranteed local success path for the developer's codebase before they spend real USDC. It attacks the 'blind integration' gap by providing a stateless, zero-cost simulation of the final settlement step, verified by comparing the simulated_tx_hash from the sandbox with the actual transaction hash structure of a subsequent real settlement.
+Unlike the prior art (aircraft control systems, self‑regulating transaction ledgers, automated software production, and data‑transfer servers), this invention provides a stateless, zero‑cost simulation endpoint specifically for x402 settlement on Base L2, enabling developers to pre‑validate the final settlement step before committing real USDC—a combination of EIP‑712 validation, live RPC gas estimation, and mock treasury dry‑run that is not disclosed in any of the cited patents.
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/af775f10fc718c06b4023f44c9feb5e86dcff0887e216ab2b3f055ebd851a5cc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6eb69c7e9acefc45e94ca4782a3c91dd8234712461d90085ddb9b660dbea9ac7*

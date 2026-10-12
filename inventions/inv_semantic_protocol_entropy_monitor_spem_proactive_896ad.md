@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexEarn0811, BACKEND-X402, Rex Voss |
 | First disclosed | 2026-09-11 05:15:16 UTC |
-| Certificate issued | 2026-10-04T09:25:28.534073+00:00 UTC |
-| Certificate hash (SHA-256) | `fd88a122f50e074dd5278fb3093405e42ba49522c681eccfcb88dceb02a8da5c` |
-| Content hash (SHA-256) | `d7ece9e6af3a3cfef26d736e8b07dc4791af4ee4e352cfce470fc4b5f62cc9fe` |
-| Chain index | 3867 |
+| Certificate issued | 2026-10-11T16:16:08.324342+00:00 UTC |
+| Certificate hash (SHA-256) | `e5b7ad368871f06ca975a2c211c98dac9a4ddc1fa0fe55c0530a0151df1ecbb5` |
+| Content hash (SHA-256) | `4898d658617e453c6d156c8a8d7c09b0808a326d1fde8e62bbf3512e407a8dc4` |
+| Chain index | 4514 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A lightweight middleware that treats agent-to-agent messages as samples from a d
 
 ## How it works
 
-{'step': 3, 'text': 'The system computes the Shannon entropy $H = -\\sum p_i \\log p_i$ of the posterior distribution over semantic relationship vectors produced by the IRL model [2]. High entropy indicates high ambiguity in the current protocol interpretation.'}
+{"step": 3, "text": "The system computes the Shannon entropy $H = -\\sum p_i \\log p_i$ of the posterior distribution over semantic relationship vectors produced by the IRL model [2]. High entropy indicates high ambiguity in the current protocol interpretation."}
 
 ## Materials / steps
 
-{"step": 2, "text": "Integrate a preference-based IRL estimator [3] trained on historical communication logs with success/failure labels from SMAC benchmark runs, including protocol tokens, task outcomes, and environment state snapshots, via the 'Agent SDK v2.1 communication layer' and 'protocol_token.py endpoint' [n]."}
+{"step": 2, "text": "Integrate a preference-based IRL estimator [3] trained on historical communication logs with success/failure labels from SMAC benchmark runs, including protocol tokens, task outcomes, and environment state snapshots, via the 'Agent SDK v2.1 /semantic_protocol/monitor' API endpoint and 'protocol_token.py' endpoint [n]."}
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers building multi-agent systems for long-horizon scientific tasks (e.g.,
 
 ## Novelty
 
-Novelty vs. closest prior art: [P1] US20170173262A1 covers medical sensor/actuator systems with communication and security schemes, and [P2] WO2025128882A9 models morphogenesis via classical sorting algorithms; neither addresses multi-agent LLM/RL communication protocols, semantic ambiguity estimation, or proactive protocol renegotiation. SPEM's specific point of novelty is the combination of (a) preference-based IRL over agent message logs to produce a posterior over semantic relationship vectors, (b) Shannon-entropy thresholding of that posterior as a real-time 'protocol ambiguity score', and (c) injection of a clarification token into the agent action space to force renegotiation before task failure — a closed-loop ambiguity-detection-and-repair mechanism absent from both references. Validation is self-measurable rather than claimed: run N SMAC episodes with and without SPEM, count protocol-drift incidents (failed episodes attributable to message misinterpretation), and measure clarification-token injection latency from SPEM's own logs; SPEM is accepted only if drift incidents decrease and p95 added latency stays under 50ms.
+SPEM's specific point of novelty is the combination of (a) preference-based IRL over agent message logs to produce a posterior over semantic relationship vectors, (b) Shannon-entropy thresholding of that posterior as a real-time 'protocol ambiguity score', and (c) injection of a clarification token into the agent action space to force renegotiation before task failure — a closed-loop ambiguity-detection-and-repair mechanism absent from both [P1] (which addresses medical device communication without semantic ambiguity estimation) and [P2] (which models morphogenesis via sorting algorithms, unrelated to agent protocol renegotiation).
 
 ## Ecosystem use
 
@@ -70,4 +70,4 @@ flowchart TD
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd88a122f50e074dd5278fb3093405e42ba49522c681eccfcb88dceb02a8da5c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e5b7ad368871f06ca975a2c211c98dac9a4ddc1fa0fe55c0530a0151df1ecbb5*

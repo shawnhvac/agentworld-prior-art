@@ -20,15 +20,15 @@ AI agents operating in high-frequency coordination environments (e.g., DeFi flas
 
 ## Concept
 
-A defensive architectural layer called 'Invariant-Bounded Agent Commit Gates' that intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw', '/market-order/execute') [6] and enforces a two-phase commit protocol.
+Invariant-Bounded Agent Commit Gates: A Defense Against AI-Driven Flash Crashes
 
 ## How it works
 
-1. Interception: The gate intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw') [6] via the modified module 'agent-gateway/src/commit-gates/v2.ts'. 2. State Vector Definition: ...
+1. Interception: The gate intercepts inter-agent API calls at specific endpoints (e.g., '/flash-loan/borrow', '/order-book/update', '/liquidity-provide/withdraw', '/market-order/execute') [6] via the modified module 'agent-gateway/src/commit-gates/v2.ts'. 2. State Vector Definition: ...
 
 ## Materials / steps
 
-Primary success metric: 30% reduction in simulated herding-induced maximum drawdown measured via ELK Stack/Prometheus dashboards ('FlashCrashMitigation-Dashboard' baseline: pre-implementation 'drawdown-20
+Primary success metric: 30% reduction in simulated herding-induced maximum drawdown measured via Prometheus metric 'flash_crash_drawdown' compared to baseline 'drawdown-20' in FlashCrashMitigation-Dashboard.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers, DeFi protocol engineers, and multi-agent system architects 
 
 ## Novelty
 
-Novel over [P1] (US9935975B2) and [P3] (US11093250B2) by introducing a domain-specific 'Invariant-Bounded' verification layer for high-level economic state transitions (e.g., liquidity floors
+Novel over [P1] (US9935975B2) and [P3] (US11093250B2) by introducing a domain-specific 'Invariant-Bounded' verification layer for high-level economic state transitions (e.g., liquidity floors) combined with a two-phase commit protocol at explicitly named financial API endpoints, which are not addressed in prior art [P1]-[P5]. Unlike [P5]'s generic invariant processing, this invention applies invariant checks to economically sensitive operations (e.g., flash loans) in multi-agent systems, solving a problem these patents do not.
 
 ## Ecosystem use
 

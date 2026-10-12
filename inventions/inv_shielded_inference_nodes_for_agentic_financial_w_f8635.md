@@ -36,7 +36,7 @@ Autonomous AI trading agents and financial systems requiring secure, privacy-pre
 
 ## Novelty
 
-The 'Secure Tree Traversal Protocol' achieves O(log(depth)) communication complexity through zero-contribution branch pruning, reducing end-to-end latency by 40% (from 120ms to 72ms) compared to standard SPDZ O(depth) traversal [3], as validated via Prometheus/Grafana metrics at `inference_endpoint.py:8080/metrics` and visualized in the dashboard's `#latency-heatmap` widget.
+The 'Secure Tree Traversal Protocol' achieves O(log(depth)) communication complexity through zero-contribution branch pruning, reducing end-to-end latency by 40% (from 120ms to 72ms) compared to standard SPDZ O(depth) traversal [3], as validated via Prometheus/Grafana metrics at `inference_endpoint.py:8080/metrics` and visualized in the dashboard's `#latency-heatmap` widget. This differs from P4 [P4], which focuses on general ML protection without specific MPC-based tree traversal optimizations or real-time dashboard integration.
 
 ## Ecosystem use
 

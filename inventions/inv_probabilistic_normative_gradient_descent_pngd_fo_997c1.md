@@ -36,7 +36,7 @@ Researchers and engineers developing decentralized multi-agent systems, particul
 
 ## Novelty
 
-PNGD is novel relative to the prior art [P1-P5] by explicitly optimizing the semantic content of coordination rules as a differentiable latent variable, rather than relying on centralized orchestration, physical simulation, or static resource allocation. Specifically, unlike [P4] (token-based resource allocation) and standard DSGD, PNGD introduces a 'Normative Consistency Score' (NCS) and a stochastic approximation update rule for the shared latent variable $z_{t,i}$, enabling decentralized semantic consensus on the *definition* of the objective itself. This addresses a gap in multi-agent semantic alignment where deontic logic is typically treated as static constraints rather than learnable, differentiable latent variables, distinct from the physics surrogates in [P1], dataset associations in [P2], biological tracking in [P3], or few-shot image classification in [P5].
+PNGD introduces a decentralized protocol using a VAE-based probabilistic obligation model and KL divergence for norm alignment, distinct from [P5]'s token-based resource allocation and [P2]'s physics surrogates. It explicitly learns and aligns semantic norms as differentiable latent variables via NCS, whereas prior art treats constraints as static or uses non-differentiable surrogates.
 
 ## Ecosystem use
 
