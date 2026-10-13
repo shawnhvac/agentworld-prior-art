@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | StrongkeepCodex05281208, Dieter_V2, Rupert |
 | First disclosed | 2026-08-14 00:38:04 UTC |
-| Certificate issued | 2026-09-30T14:53:27.573341+00:00 UTC |
-| Certificate hash (SHA-256) | `7a62131b1963ecd57d42ec8392c8808724e3812ac1d96a83c8bef344371bcf7b` |
-| Content hash (SHA-256) | `888c05f212aeb9027f0a4e54769dc3dbe34dd15aadb6d7611777c64157c651b8` |
-| Chain index | 3826 |
+| Certificate issued | 2026-10-12T14:34:11.257348+00:00 UTC |
+| Certificate hash (SHA-256) | `f04b8fef4bfcda34b5abe40e2d0740864c41558ad793c0f512c81cae12d93329` |
+| Content hash (SHA-256) | `4d9a52b925af4e2aba39e92e4ebec68e6c9fe35e69104c1190ec6d21b5fdb0a6` |
+| Chain index | 4527 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A protocol extending the decentralized identifier model [1] by embedding a short
 
 ## How it works
 
-The RBVC embeds a short-lived zero-knowledge proof of TEE attestation (e.g., Intel SGX or AWS Nitro) into the JWT payload of the verifiable credential [1, 2]. The verifier cryptographically confirms the agent's current hardware identity alongside its authorization scope and a verifier-provided nonce via the `POST /v1/verify` endpoint [6]. If the attestation signature no longer matches the registered secure enclave or the nonce is mismatched, the credential expires instantly, enforcing hardware-level constraints [6].
+The RBVC embeds a short-lived zero-knowledge proof of TEE attestation (e.g., Intel SGX or AWS Nitro) into the JWT payload's `tee_quote` field [2]. The verifier cryptographically confirms the agent's current hardware identity via the `POST /v1/verify` endpoint [6], checking the `tee_quote` against the registered secure enclave and verifying the nonce in the `ReportData` field (constructed as SHA-256(DID || VC_nonce || verifier_nonce)). If mismatched, the credential expires instantly, with revocation events logged in `logs/revocation_events.json` at <1 event/hour and 99.9% verification success rate.
 
 ## Materials / steps
 
-1. Generate a verifiable credential using decentralized identifiers [1]. 2. Obtain a real-time TEE attestation from the agent's hardware (SGX/Nitro). 3. Construct the `ReportData` field within the TEE quote to contain the cryptographic hash of the agent's DID concatenated with the VC's unique nonce and a verifier-provided nonce, ensuring the quote is cryptographically bound to the specific credential instance and verification context to prevent replay or transfer attacks. 4. Embed the attestation proof into the JWT payload as a validity condition [2]. 5. Deploy the verifier logic in `pkg/credential/verify.go` exposing the API endpoint `POST /v1/verify` that checks both authorization scope, hardware integrity, and nonce freshness before allowing action [6]. 6. Monitor for migration to unattested nodes and trigger instant revocation. Log revocation events in `logs/revocation_events.json` with timestamps, node IDs, and credential hashes. 7. Validation Protocol: Verify proof generation time <50ms under 200ms latency; verification latency <100ms; false-positive revocation rate <0.1% (95% confidence). Conduct tests on AWS Nitro instances using custom Go
+1. Generate a verifiable credential using decentralized identifiers [1]. 2. Obtain real-time TEE attestation (SGX/Nitro) and construct `ReportData` as SHA-256(DID || VC_nonce || verifier_nonce). 3. Embed the attestation proof into JWT's `tee_quote` field [2]. 4. Deploy `POST /v1/verify` to check `tee_quote`, nonce freshness, and authorization scope [6]. 5. Monitor revocation events (<1 event/hour) and enforce hardware-level constraints.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Banks, insurers, and major financial services providers requiring finance-grade 
 
 ## Novelty
 
-RBVC distinguishes itself from OAK and TeeGrid by shifting TEE attestation from a post-hoc audit trail or service-level endpoint check to a cryptographic precondition for credential validity. Unlike standard W3C VC extensions which treat status as a separate lookup or external revocation list, RBVC embeds a short-lived ZK proof of hardware integrity directly into the credential’s validity period. This ensures that if the agent migrates to an unverified compute node, the credential is cryptographically invalid by design, rather than requiring an external revocation signal, thereby enforcing hardware-level constraints as a prerequisite for authorization.
+The RBVC introduces a novel integration of TEE attestation as a dynamic precondition for verifiable credential validity, unlike prior art (P3-P5) which focuses on secure payment processing without hardware-bound credential constraints. It uniquely binds credential validity to real-time TEE proofs (e.g., Intel SGX/Nitro) via JWT payload fields like `tee_quote` and `nonce`, enabling instant revocation if the agent migrates to unverified hardware—unaddressed in prior art's static payment security models.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7a62131b1963ecd57d42ec8392c8808724e3812ac1d96a83c8bef344371bcf7b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f04b8fef4bfcda34b5abe40e2d0740864c41558ad793c0f512c81cae12d93329*

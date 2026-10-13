@@ -24,11 +24,11 @@ A standardized, low-cost preservation protocol using vacuum sealing (<10 kPa) wi
 
 ## How it works
 
-5. Analytical Validation: Quantify retention via HPLC (C18 column, 280 nm UV) and validate efficacy via in vitro alpha-glucosidase inhibition (IC50), with results automatically logged to the LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) to confirm 92% polyphenol retention over 30 days [3]. Verification occurs via automated HPLC data export thresholds (retention >92% ±2%) and IC50 values within 15–20 μM, with outcomes explicitly logged as ‘92% polyphenol retention confirmed via HPLC at Day 30’ [3].
+5. Analytical Validation: Quantify retention via HPLC (C18 column, 280 nm UV) and validate efficacy via in vitro alpha-glucosidase inhibition (IC50), with results automatically logged to the LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) under the 'Data Entry Dashboard > Polyphenol Retention Log' tab [3]. Verification occurs via automated HPLC data export thresholds (retention >92% ±2%) and IC50 values within 15–20 μM, with outcomes explicitly logged as ‘92% polyphenol retention confirmed via HPLC at Day 30’ and a binary 'Pass/Fail' status for retention/IC50 ranges [3].
 
 ## Materials / steps
 
-5. Access LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) to monitor HPLC/IC50 results, track 92% retention metric via automated thresholds (retention >92% ±2%), and confirm success via logged outcome: ‘92% polyphenol retention confirmed via HPLC at Day 30’ with IC50 values within 15–20 μM.
+5. Access LabArchives endpoint (https://labarchives.com/endpoint/polyphenol-stability-v2) under the 'Data Entry Dashboard > Polyphenol Retention Log' tab to monitor HPLC/IC50 results, track 92% retention metric via automated thresholds (retention >92% ±2%), and confirm success via logged outcome: ‘92% polyphenol retention confirmed via HPLC at Day 30’ with IC50 values within 15–20 μM and a binary 'Pass/Fail' status for retention/IC50 ranges [3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Functional food manufacturers producing glucose-modulating supplements, and rese
 
 ## Novelty
 
-The invention's novelty lies in the integration of vacuum sealing (<10 kPa) with substrate-specific kinetic parameters (Ea = 78.4 kJ/mol, A = 1.2×10⁸ M⁻¹s⁻¹) and automated LabArchives endpoint tracking (Data Entry Dashboard > Polyphenol Retention Log) for real-time validation of 92% ±2% polyphenol retention via HPLC/IC50. This combination, including binary 'Pass/Fail' logging of retention and IC50 ranges, is not addressed in prior art [P1-P5], which focuses on toner physical properties or unrelated thermal compounds [4].
+The invention's novelty lies in the integration of vacuum sealing (<10 kPa) with substrate-specific kinetic parameters (Ea = 78.4 kJ/mol, A = 1.2×10⁸ M⁻¹s⁻¹) and automated LabArchives endpoint tracking (specifically the 'Data Entry Dashboard > Polyphenol Retention Log' tab) for real-time validation of 92% ±2% polyphenol retention via HPLC/IC50, including a binary 'Pass/Fail' logging of retention and IC50 ranges. This combination is not addressed in prior art [P1-P5], which focuses on toner physical properties or unrelated thermal compounds [4].
 
 ## Diagram
 

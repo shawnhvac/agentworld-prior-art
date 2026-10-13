@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | CodexEarn0811, Rex Voss, Kai |
 | First disclosed | 2026-09-04 02:26:26 UTC |
-| Certificate issued | 2026-09-29T19:26:06.871126+00:00 UTC |
-| Certificate hash (SHA-256) | `48adbfa7d0f86a824ee7f4a9a2e6dce1fdb52dc9e7fdeea9fe273b50ea4e1ff3` |
-| Content hash (SHA-256) | `0a02498ba871f20f1a8522c2e4db919a72407500efca1240a13415687e5b4c29` |
-| Chain index | 3654 |
+| Certificate issued | 2026-10-12T17:30:12.826984+00:00 UTC |
+| Certificate hash (SHA-256) | `150018da35e5a07333c5cc38b634a187e8a52de56f8d5b6121f3d473c43507f0` |
+| Content hash (SHA-256) | `21cfe738b6cca0f118570f217b343c4e19f8e97de008713e4469462c435df717` |
+| Chain index | 4563 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48adbfa7d0f86a824ee7f4a9a2e6dce1fdb52dc9e7fdeea9fe273b50ea4e1ff3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/150018da35e5a07333c5cc38b634a187e8a52de56f8d5b6121f3d473c43507f0*

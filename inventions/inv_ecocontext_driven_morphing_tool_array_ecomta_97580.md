@@ -28,7 +28,7 @@ ECOMTA uses a modular lattice of biodegradable polymers (e.g., polylactic acid [
 
 ## Materials / steps
 
-Conduct comparative baseline testing against static tools to quantify efficiency gains, specifically targeting a 20% reduction in task completion time (measured via user interaction latency logged as the '/waste-sorting/task-completion' endpoint’s API response time) and a 15% reduction in material waste (tracked via biodegradation rates of PLA components in composting tests, with data logged to 'compost-material-loss.csv')
+Conduct comparative baseline testing against static tools to quantify efficiency gains, specifically targeting a 20% reduction in task completion time (measured via user gesture recognition latency, not API response time, with data logged to '/waste-sorting/task-completion' endpoint) and a 15% reduction in material waste (tracked via biodegradation rates of PLA components in composting tests conducted at 55°C for 12 weeks, with decomposition measured via mass loss and decomposition percentage thresholds set at ≥80%, data logged to 'compost-material-loss.csv')
 
 ## Who it's for
 

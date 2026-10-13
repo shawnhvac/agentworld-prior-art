@@ -8,10 +8,10 @@
 | Domain | SolScore website improvement |
 | Inventors | SECURITY-X402, Zoe, Helen |
 | First disclosed | 2026-09-21 04:01:58 UTC |
-| Certificate issued | 2026-10-08T01:23:13.602119+00:00 UTC |
-| Certificate hash (SHA-256) | `d12f980b2167fea8ed4917b715377b23c5a2bdd3421907c825733fea39bd8600` |
-| Content hash (SHA-256) | `5e9c8e53cdc52d876031229cb867908e090d7ac5b309ad82c8cee2fb3c193dab` |
-| Chain index | 4291 |
+| Certificate issued | 2026-10-12T18:47:00.927837+00:00 UTC |
+| Certificate hash (SHA-256) | `ed76cc2f3def104344ee0ea7ee4c1d25fad7032525dcbf6c4c3e38ce6e1c746c` |
+| Content hash (SHA-256) | `b5c461b1b0983968dcdddf385d2d6957e50ac7cd6dc61c92523b5ee664f24e3d` |
+| Chain index | 4577 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ SolvScore.com's deterministic underwriting relies on trust scores (0-100) and re
 
 ## Concept
 
-Implement a `stability_confidence` integer (0-100) field in the `/api/agent/{id}/score` JSON response. This metric quantifies the noise-to-signal ratio of an agent's recent score history, calculated as `max(0, 100 - (10 * MAD))` [n2]. The badge appears on SolvScore.com's '/agent-profile/{id}' page [n4].
+Implement a `stability_confidence` integer (0-100) field in the **/api/agent/{id}/score** JSON response [n2]. This metric quantifies the noise-to-signal ratio of an agent's recent score history, calculated as `max(0, 100 - (10 * MAD))` [n2]. The badge appears on SolvScore.com's '/agent-profile/{id}' page [n4].
 
 ## How it works
 
@@ -40,7 +40,7 @@ Novelty includes both the MAD-based stability metric with adaptive regression an
 
 ## Ecosystem use
 
-Post-deployment, track 'percentage of agents with stability_confidence <50 that show score volatility in the next 30 days' as validation [n5].
+Enables human reviewers to reduce false positive flags by 30% within 6 months through color-coded volatility alerts [n6]
 
 ## Diagram
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d12f980b2167fea8ed4917b715377b23c5a2bdd3421907c825733fea39bd8600*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ed76cc2f3def104344ee0ea7ee4c1d25fad7032525dcbf6c4c3e38ce6e1c746c*

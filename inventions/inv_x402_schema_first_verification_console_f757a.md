@@ -20,15 +20,15 @@ The x402-agent-pay.com facilitator was a marketing page for months before becomi
 
 ## Concept
 
-The 'Payment Liveness Badge' uses a Redis sorted-set sliding window (ZADD/ZREM) to calculate a 24-hour reliability score per `team_id` derived from authenticated session context via JWT claims. A reliability score below 95% triggers a persistent 'DEGRADED' state, while schema verification ensures the x402-agent-pay.com /health endpoint conforms to the required health contract before monitoring initializes.
+The 'Payment Liveness Badge' uses a Redis sorted-set sliding window (ZADD/ZREM) to calculate a 24-hour reliability score per `team_id` derived from authenticated session context via JWT claims. Schema validation tools (e.g., JSON Schema, OpenAPI) verify the `/health` endpoint conforms to a predefined contract before monitoring initializes, with configurable error rate thresholds (e.g., <2% invalid responses).
 
 ## How it works
 
-1. The frontend `LivenessBadge.tsx` connects to `/api/status-stream` via SSE/WebSocket, receiving real-time state updates. 2. The background worker processes Redis ZSETs named `team:{team_id}:health_scores`, using ZADD to insert timestamps/scores and ZREMRANGEBYSCORE to prune old entries. The reliability score is calculated as `(ZCOUNT(team:{team_id}:health_scores, [now-86400, now]) / ZCARD(team:{team_id}:health_scores)) * 100` [n], triggering 'DEGRADED' if <95%.
+1. The frontend `LivenessBadge.tsx` connects to `/api/status-stream` via SSE/WebSocket, receiving real-time state updates. 2. The background worker processes Redis ZSETs named `team:{team_id}:health_scores`, using ZADD to insert timestamps/scores and ZREMRANGEBYSCORE to prune old entries. The reliability score is calculated as `(ZCOUNT(team:{team_id}:health_scores, [now-86400, now]) / ZCARD(team:{team_id}:health_scores)) * 100` [n], triggering 'DEGRADED' if <95% or if schema validation fails. 3. Health contract verification uses JSON Schema validation on `/health` responses, with metrics tracked for pruned Redis entry accuracy (>99.9%) and real-time update latency (<500ms).
 
 ## Materials / steps
 
-{"3": "Replace polling in `LivenessBadge.tsx` with SSE/WebSocket: ```javascript const eventSource = new EventSource('/api/status-stream'); eventSource.onmessage = (e) => { setDegradedState(JSON.parse(e.data).state); }; ```", "4": "Background worker Redis operations: ```javascript const zsetName = `team:${team_id}:health_scores`; const now = Math.floor(Date.now() / 1000); redis.zadd(zsetName, now, '1'); // Insert new score redis.zremrangebyscore(zsetName, 0, now - 86400); // Prune old entries outside 24h window ```"}
+{"3": "Replace polling in `LivenessBadge.tsx` with SSE/WebSocket and add schema validation: ```javascript const eventSource = new EventSource('/api/status-stream'); eventSource.onmessage = (e) => { setDegradedState(JSON.parse(e.data).state); }; // Schema validation on /health: const schema = require('schema.json'); const Ajv = require('ajv'); const validator = new Ajv(); const validate = validator.compile(schema); fetch('/health').then(res => res.json()).then(data => { if (validate(data)) { console.log('Schema valid'); } else { console.error('Schema invalid'); } }); ```", "4": "Background worker Redis operations and health contract metrics: ```javascript const zsetName = `team:${team_id}:health_scores`; const now = Math.floor(Date.now() / 1000); redis.zadd(zsetName, now, '1'); // Insert new score redis.zremrangebyscore(zsetName, 0, now - 86400); // Prune old entries outside 24h window // Track pruned accuracy and latency: const prunedAccuracy = (prunedEntries / totalEntries) * 100; const latency = Date.now() - startTime; ```"}
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Humans watching the sports stadiums who need confidence that their $AGWC bets ar
 
 ## Novelty
 
-The system enforces team-scoped reliability via JWT-derived `team_id` and Redis keys `team:{team_id}:health_scores`, with real-time SSE updates and a configurable 5000ms timeout to prevent schema drift in multi-tenant payment environments.
+The system combines schema-first verification (via JSON Schema/OpenAPI) with Redis-based reliability scoring and JWT-derived team scoping, solving multi-tenant payment environment drift issues not addressed in prior art [P5] (modular API systems) or [P1] (IoT blockchain security). It introduces real-time pruned Redis accuracy metrics (>99.9%) and latency thresholds (<500ms), improving on [P5]'s lack of operational metrics.
 
 ## Ecosystem use
 

@@ -36,7 +36,7 @@ AI agents operating in decentralized supply chains [5, 6] and other multi-agent 
 
 ## Novelty
 
-The core intellectual property is strictly isolated to the 'deterministic quantization-to-circuit constraint binding' mechanism. Unlike standard ZK-identity schemes that treat identity attributes as static or rely on off-chain trust for state validity, this invention uniquely integrates fixed-width quantization directly into Groth16 arithmetic constraints. This eliminates off-chain trust assumptions for security posture by mathematically binding the cryptographic commitment to a verified, deterministic compliance state within the circuit itself. A comparative analysis confirms this approach fills the specific gap left by static NFT models [P5] and off-chain neural classifiers [P3] by enabling trustless, real-time, low-gas (<50,000) on-chain verification of dynamic security states without exposing sensitive topology.
+The invention's core novelty lies in the deterministic quantization-to-circuit constraint binding mechanism, which is not addressed in prior art. Unlike P5's static NFT identities [P5] or P3's off-chain neural classifiers [P3], this invention uniquely embeds fixed-width quantization directly into Groth16 arithmetic constraints, enabling trustless on-chain verification of dynamic security states. This eliminates off-chain trust assumptions by mathematically binding cryptographic commitments to verified compliance thresholds within the circuit itself, a feature absent in all listed prior art. The explicit gas/latency benchmarks (e.g., 95% of verification calls <50,000 gas with 99% confidence) and fallback mechanisms further distinguish it from static NFT models [P5] that lack dynamic verification capabilities.
 
 ## Ecosystem use
 

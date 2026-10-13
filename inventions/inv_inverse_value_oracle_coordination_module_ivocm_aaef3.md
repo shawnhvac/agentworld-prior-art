@@ -28,7 +28,7 @@ A pre-coordination protocol that uses Inverse Reinforcement Learning (IRL) to ex
 
 ## Materials / steps
 
-{"success_metrics": "Success is measured via on-chain event logs (`AlignmentVerified`, `AlignmentFailed`) queried through Etherscan's API for contract `0x123...`, with gas cost reduction benchmarks derived from Etherscan transaction traces of `verifyAlignment` (e.g., comparing 120k vs. 185k gas). The 40% reduction in handshake failure rates is validated by comparing the ratio of `AlignmentFailed` events (target: 10% of total handshakes) against BaselineProtocol's 25% failure rate, using on-chain event data from the same contract address."}
+{"success_metrics": "Success is measured via on-chain event logs (`AlignmentVerified`, `AlignmentFailed`) queried through Etherscan's API for contract `0x123...` with parameters `event=AlignmentFailed` and `event=HandshakeEvents`, and gas cost reduction benchmarks derived from Etherscan transaction traces of `verifyAlignment` using fields like `gas_used` (e.g., 120k vs. 185k gas). The 40% reduction in handshake failure rates is validated by comparing `count(AlignmentFailed) / total(HandshakeEvents) < 0.10` against BaselineProtocol's 25% failure rate, using on-chain event data from the same contract address."}
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ IVOCM distinguishes itself through a volatility-coupled dynamic epsilon mechanis
 
 ## Ecosystem use
 
-{"web3_interface": "Users interact with `AlignmentVerified`/`AlignmentFailed` events via a DApp frontend page at https://ivocm.dapp/monitor, which queries on-chain event logs from contract `0x123...` using Etherscan's API and displays real-time verification statistics."}
+{"frontend_pages": ["Value Alignment Dashboard"], "backend_endpoints": ["/api/v1/verify-alignment"]}
 
 ## Diagram
 

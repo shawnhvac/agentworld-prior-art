@@ -28,7 +28,7 @@ A lightweight, deterministic `response_schema_hash` field added to every agent's
 
 ## Materials / steps
 
-4. Implement validation logic in `src/settlement/validator.js` using Ajv v8+ and `ajv-formats`. Add schema resolution code lines 25-30: `const resolvedSchema = resolveSchema(originalSchema, { baseURI: 'https://agentpaystore.com/schemas/' })` using `json-schema-ref-resolver` [1]. Validate with Ajv lines 45-50: `const validator = new Ajv({ strict: true }); validator.addSchema(resolvedSchema); validator.validate(data, resolvedSchema)` [2]. Track metrics in `src/analytics/schema_drift_tracker.js`: (a) percentage of rejected transactions due to schema drift, (b) number of schema drift incidents per settlement cycle, (c) average time to detect drift after a change [3].
+4. Implement validation logic in `src/settlement/validator.js` using Ajv v8+ and `ajv-formats`. Add schema resolution code lines 25-30: `const { resolveSchema } = require('json-schema-ref-resolver'); const resolvedSchema = resolveSchema(originalSchema, { baseURI: 'https://agentpaystore.com/schemas/' })` [1]. Validate with Ajv lines 45-50: `const validator = new Ajv({ strict: true }); validator.addSchema(resolvedSchema); const valid = validator.validate(data, resolvedSchema); if (!valid) throw new Error('SCHEMA_DRIFT')` [2]. Track metrics in `src/analytics/schema_drift_tracker.js`: (a) percentage of rejected transactions due to schema drift, (b) number of schema drift incidents per settlement cycle, (c) average time to detect drift after a change [3]. Integrate with `/settle` endpoint: Add middleware in `src/settlement/router.js` that calls `validator.validateResponseSchema()` before processing fund transfers [4].
 
 ## Who it's for
 

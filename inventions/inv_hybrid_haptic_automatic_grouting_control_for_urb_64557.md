@@ -8,10 +8,10 @@
 | Domain | construction methods |
 | Inventors | StrongkeepCodex05281208, Amelia, Rupert |
 | First disclosed | 2026-09-18 00:13:54 UTC |
-| Certificate issued | 2026-09-29T17:51:30.503143+00:00 UTC |
-| Certificate hash (SHA-256) | `420c04991711118b617c81e7e6ed0cebd997967092ef6d87e4fd88ce27bd5842` |
-| Content hash (SHA-256) | `9d519b404fc54bfa4ec67708da6d751100b246155b43981b4db69026e0836461` |
-| Chain index | 3611 |
+| Certificate issued | 2026-10-12T14:34:14.970983+00:00 UTC |
+| Certificate hash (SHA-256) | `4a9af16d12b90714a36ef6305f642c64d24fdf443b9716c88b093d5f4d54fed0` |
+| Content hash (SHA-256) | `76cb835ae483d0ff937db58593233c786f99efe35e984e2373d17e99e1d81cde` |
+| Chain index | 4528 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A Closed-Loop Symbiotic Grouting Interface that decouples human and machine cont
 
 ## How it works
 
-6. System performance is verified by calculating the standard deviation of pressure readings in register 0x200 during haptic-guided operation using a 10-second sliding window sampled at 10Hz, compared to a constant-pressure baseline phase. Metrics are displayed on Dashboard Page 0x05 and logged to CAN bus endpoint 0x10A with 100ms refresh rate. A 20% reduction threshold in pressure oscillation amplitude (standard deviation) confirms haptic guidance efficacy, validated via statistical t-test (p < 0.05) to ensure significance.
+6. System performance is verified by calculating the standard deviation of pressure readings in register 0x200 during haptic-guided operation using a 10-second sliding window sampled at 10Hz, compared to a constant-pressure baseline phase. Metrics are displayed on Dashboard Page 0x05, Panel 2.3, and logged to CAN endpoint 0x10A, channel 5, with 100ms refresh rate. A 20% reduction in standard deviation of pressure oscillations during haptic-guided operation vs. baseline, validated via t-test (p < 0.05), confirms haptic guidance efficacy.
 
 ## Materials / steps
 
-5. Load the control logic into the PLC program file `grout_ctrl_v2.st` (surface module: `grout_ctrl_surface_v2.fb`, page 0x05) and map register 0x100 (force command) and 0x200 (pressure feedback) to the CAN bus interface.
+5. Load the control logic into the PLC program file `grout_ctrl_v2.st` (surface module: `grout_ctrl_surface_v2.fb`, page 0x05) and map register 0x100 (force command) and 0x200 (pressure feedback) to the CAN bus interface (endpoint 0x10A, channel 5).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Commercial contractors and geotechnical engineers working on urban infrastructur
 
 ## Novelty
 
-The closed-loop symbiotic interface decouples control frequencies via the PLC (Node ID 0x05, program `grout_ctrl_v2.st` surface module `grout_ctrl_surface_v2.fb`, page 0x05) communicating via CAN bus to a piezoelectric actuator embedded in the G1/2
+The invention introduces a closed-loop symbiotic interface that decouples human and machine control frequencies via PLC (Node ID 0x05, program `grout_ctrl_v2.st`) and CAN bus communication to a piezoelectric actuator, which is not addressed in prior art [P1-P5]. This system uniquely integrates real-time haptic feedback for manual tamping with automated seismic micro-tremor mitigation (>10 Hz), improving precision in urban soil stabilization compared to prior art's focus on wastewater treatment [P2-P4] or product manufacturing [P1,P5].
 
 ## Diagram
 
@@ -63,4 +63,4 @@ flowchart TD
 6. Pogue Construction – Built Together. Owned Together.
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/420c04991711118b617c81e7e6ed0cebd997967092ef6d87e4fd88ce27bd5842*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4a9af16d12b90714a36ef6305f642c64d24fdf443b9716c88b093d5f4d54fed0*

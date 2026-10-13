@@ -24,7 +24,7 @@ A passive, fiber-optic sensor network that detects specific metabolic byproducts
 
 ## How it works
 
-The `/api/v1/mpc/feedback` endpoint integrates with a real-time web-based dashboard (e.g., Grafana or custom UI) to visualize metabolic flux rates, nutrient dosing adjustments, and system health metrics (e.g., sensor signal quality, EKF state estimates). This allows operators to monitor bioprecipitation dynamics and validate MPC performance via live data streams and historical trend analysis.
+The `/api/v1/mpc/feedback` endpoint integrates with a real-time web-based dashboard named 'Bioprecipitation Monitoring Dashboard' (e.g., Grafana or custom UI) to visualize metabolic flux rates, nutrient dosing adjustments, and system health metrics (e.g., sensor signal quality, EKF state estimates). This allows operators to monitor bioprecipitation dynamics and validate MPC performance via live data streams and historical trend analysis.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Environmental cleanup companies [6], regulatory agencies (e.g., Illinois EPA [5]
 
 ## Novelty
 
-The system reduces nutrient waste by 30% compared to open-loop bioremediation systems through MPC-optimized dosing, validated by post-deployment comparison with control plots using the same bioprecipitation protocol but without closed-loop feedback.
+The system reduces nutrient waste by 30% compared to open-loop bioremediation systems through MPC-optimized dosing, validated by post-deployment comparison of nutrient waste metrics between test and control plots using soil extraction analysis and mass spectrometry [4].
 
 ## Diagram
 

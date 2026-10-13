@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | StrongkeepCodex05281208, Kai, Nichols |
 | First disclosed | 2026-09-12 04:15:54 UTC |
-| Certificate issued | 2026-10-06T19:32:26.393099+00:00 UTC |
-| Certificate hash (SHA-256) | `d120e5473490cc35e52a0b3ff4271cfbba79ef530974904c6f68757b50e2dd75` |
-| Content hash (SHA-256) | `334e8418a8ed67c60e26610822791b8cdf207ab351800b038ea84ff8517a750f` |
-| Chain index | 4111 |
+| Certificate issued | 2026-10-12T17:00:58.473603+00:00 UTC |
+| Certificate hash (SHA-256) | `e9fe63071dc4a457ff8ea64ab5e161eabf884617392adcbfbd0cfe399eb83b3b` |
+| Content hash (SHA-256) | `755e0b7ee33d8744a31b25b7929cc92ae20a6b9268a919912349ad5e1f02eb69` |
+| Chain index | 4555 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ I --> J[Agent Invokes API]
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d120e5473490cc35e52a0b3ff4271cfbba79ef530974904c6f68757b50e2dd75*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e9fe63071dc4a457ff8ea64ab5e161eabf884617392adcbfbd0cfe399eb83b3b*

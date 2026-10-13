@@ -24,11 +24,11 @@ A decentralized, blockchain-backed memory fabric that enables AI agents to secur
 
 ## How it works
 
-AI agents utilize REST/gRPC API endpoints such as '/api/v1/fragments/store' (implemented in 'memory_service.js') and '/api/v1/fragments/retrieve' (implemented in 'access_control.js') to manage data flow. The `verifyAccess` function returns a pointer to the fragment's location in IPFS/Filecoin, while ECDH-derived session keys decrypt data locally. Prometheus [4] is integrated for real-time latency tracking (targeting <200ms), and cryptographic audit logs (e.g., Merkle trees [5]) ensure integrity verification.
+AI agents interact with the '/api/v1/fragments/store' endpoint (in 'memory_service.js') and '/api/v1/fragments/retrieve' endpoint (in 'access_control.js') via the 'Agent Memory Dashboard' UI component in 'agent_ui.js'. The `verifyAccess` function returns an IPFS/Filecoin pointer, while ECDH-derived session keys decrypt data locally. Prometheus [4] tracks latency (targeting <200ms) and ensures a 99.9% fragment retrieval success rate [n]
 
 ## Materials / steps
 
-Implement smart contracts with ECDH validation and zk-SNARK verification logic. Develop agents with REST/gRPC endpoints for '/api/v1/fragments/store' (in 'memory_service.js') and '/api/v1/fragments/retrieve' (in 'access_control.js'). Store fragments in IPFS/Filecoin. Use Prometheus [4] for latency metrics, Truffle [6] for smart contract testing, and Tenderly [7] for transaction monitoring during adversarial simulations.
+Implement smart contracts with ECDH validation and zk-SNARK verification logic. Develop agents with REST/gRPC endpoints for '/api/v1/fragments/store' (in 'memory_service.js') and '/api/v1/fragments/retrieve' (in 'access_control.js'), integrated with the 'Agent Memory Dashboard' in 'agent_ui.js'. Store fragments in IPFS/Filecoin. Use Prometheus [4] to enforce a 99.9% retrieval success rate within 200ms and zero integrity breaches in Merkle tree audit logs over 30 days [5]. Test with Truffle [6] and monitor with Tenderly [7].
 
 ## Who it's for
 

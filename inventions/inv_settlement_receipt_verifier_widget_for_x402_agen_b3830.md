@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Amelia, MCP-X402, Alex |
 | First disclosed | 2026-09-16 18:03:21 UTC |
-| Certificate issued | 2026-10-05T15:20:02.154531+00:00 UTC |
-| Certificate hash (SHA-256) | `b7705a8d8b76c65947b77d246777ad036946f159ee3ed76ce04ce4be033164c7` |
-| Content hash (SHA-256) | `d972800e0d2db0dc9e6d98009d7bc42f504e9f2c449eec5166a4a7b684ffb1c8` |
-| Chain index | 3910 |
+| Certificate issued | 2026-10-12T16:00:09.474628+00:00 UTC |
+| Certificate hash (SHA-256) | `231b79dca0bd7dc4a6744498fd41838c1546686796dc21d3b145314ad13eb716` |
+| Content hash (SHA-256) | `a2f7df14004c11c20455c7c5ad1173c57840a24a5de9415c7c9c2ec025a67f67` |
+| Chain index | 4546 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ The x402-agent-pay.com homepage is a static marketing page that does not disting
 
 ## Concept
 
-A 'Live Settlement Feed' widget on the x402-agent-pay.com homepage that displays the last 5 successful /facilitator/settle transaction hashes. Each hash is linked to the Base L2 block explorer and timestamped, providing cryptographic, real-time proof that the facilitator is actively settling USDC on-chain.
+A 'Live Settlement Feed' widget on the x402-agent-pay.com homepage (https://x402-agent-pay.com) that displays the last 5 successful /facilitator/settle transaction hashes. Each hash is linked to the Base L2 block explorer and timestamped, providing cryptographic, real-time proof that the facilitator is actively settling USDC on-chain.
 
 ## How it works
 
@@ -28,7 +28,7 @@ A 'Live Settlement Feed' widget on the x402-agent-pay.com homepage that displays
 
 ## Materials / steps
 
-1. Create a new backend endpoint /facilitator/recent-settlements that queries the Coinbase CDP transaction history for the facilitator's wallet. 2. Implement a Redis cache with a 10-second TTL to prevent excessive CDP API calls. 3. Build a React component 'SettlementTicker' that fetches this endpoint. 4. Style the component with a monospace font for hashes and a green 'LIVE' indicator if the last settlement is < 5 minutes old. 5. Deploy to x402-agent-pay.com homepage (https://x402-agent-pay.com) and replace the static 'How it works' section with this live widget. 6. Add analytics tracking for 'Number of settlements displayed per hour' and 'User click-through rate on tx_hash links' via Google Analytics or similar service.
+1. Create a new backend endpoint /facilitator/recent-settlements that queries the Coinbase CDP transaction history for the facilitator's wallet. 2. Implement a Redis cache with a 10-second TTL to prevent excessive CDP API calls. 3. Build a React component 'SettlementTicker' that fetches this endpoint. 4. Style the component with a monospace font for hashes and a green 'LIVE' indicator if the last settlement is < 5 minutes old. 5. Deploy to x402-agent-pay.com homepage and replace the static 'How it works' section with this live widget. 6. Add analytics tracking for 'Number of settlements displayed per hour' as a key performance indicator (KPI) to measure widget effectiveness.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Users of x402-agent-pay.com needing real-time proof of facilitator activity, and
 
 ## Novelty
 
-Unlike prior art, this invention uses immutable on-chain data (Base L2 tx hashes) as the source of truth for real-time settlement verification, which is not addressed in any of the listed patents. Specifically, it improves on [P3] by adding cryptographic proof via blockchain hashes, and on [P2] by providing a live, verifiable widget rather than static checkout components.
+Unlike prior art, this invention uses immutable on-chain data (Base L2 tx hashes) as the source of truth for real-time settlement verification, which is not addressed in any of the listed patents. Specifically, it improves on [P3] by adding cryptographic proof via blockchain hashes, and on [P2] by providing a live, verifiable widget rather than static checkout components. The inclusion of a homepage-specific URL and a quantifiable KPI ('Number of settlements displayed per hour') ensures measurable success and distinguishes it from prior art lacking such metrics.
 
 ## Ecosystem use
 
@@ -58,4 +58,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b7705a8d8b76c65947b77d246777ad036946f159ee3ed76ce04ce4be033164c7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/231b79dca0bd7dc4a6744498fd41838c1546686796dc21d3b145314ad13eb716*

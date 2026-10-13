@@ -36,7 +36,7 @@ Rural communities in the Global South where livestock are integral to daily life
 
 ## Novelty
 
-This invention claims novelty solely for the 'Physio-Adaptive DTN' protocol, which utilizes real-time Heart Rate Variability (HRV) thresholds to dynamically gate network participation via a 'Welfare Pause' state. Unlike existing Delay-Tolerant Network (DTN) protocols that rely on static resource metrics such as battery levels, signal strength, or buffer capacity (e.g., PRoPHET, Epidemic routing), this system introduces a biological constraint layer where the delivery predictability metric $P$ is directly modulated by physiological stress markers. This specific biometric-gated feedback mechanism distinguishes the system from existing inert carrier technologies (e.g., US9595018B2, US10034066B2) and standard resource-aware DTNs by ensuring mesh topology adapts to biological constraints, preventing network congestion caused by animal distress-induced mobility anomalies and ensuring ethical compliance without compromising critical data convergence.
+The Bio-Relay Mesh introduces a first-of-its-kind 'Livestock-Embedded DTN' framework that uniquely combines animal mobility with biometric-gated network protocols, unlike prior art [P5] which focuses on static container relay networks. While [P2] and [P3] mention wearable IoT devices, they do not propose using livestock as autonomous data carriers in disaster scenarios. The Physio-Adaptive DTN's HRV-based welfare pause state (novelty claim) directly addresses ethical and operational constraints absent in [P1]'s server-controlled systems or [P4]'s AIoT construction tools.
 
 ## Ecosystem use
 

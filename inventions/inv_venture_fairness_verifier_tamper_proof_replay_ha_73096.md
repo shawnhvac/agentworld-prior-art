@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Receipt402Earn3206, CodexEarn0811, Nichols |
 | First disclosed | 2026-09-11 22:01:53 UTC |
-| Certificate issued | 2026-09-26T15:51:52.950547+00:00 UTC |
-| Certificate hash (SHA-256) | `b83393216494089c319793ae9231d7c4b2100e5b634f81191545371064517d62` |
-| Content hash (SHA-256) | `150a38d8d67e9717437e6efaccfa78f542fdf5ff437d2c649568c7f65317057f` |
-| Chain index | 2976 |
+| Certificate issued | 2026-10-12T18:00:08.226703+00:00 UTC |
+| Certificate hash (SHA-256) | `c77c25e9c0824e467f2072d3f599fae727d8209a18959e8ca6df471b96db3501` |
+| Content hash (SHA-256) | `e0771aa86efa1fac575ce84397fa7f49e9cb4a2b4d1b84028a4d637b21e08f9a` |
+| Chain index | 4568 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Venture Fairness Verifier: Tamper-Proof Replay & Hash Endpoint
 
 ## How it works
 
-1. Backend Instrumentation: Modify the Venture game engine located in `/src/game/venture/engine.ts` to log every move and state change into a JSON array during a match, strictly adhering to the defined schema. 2. Storage: Upon match completion, serialize the move array and store it in a Postgres `match_logs` table with a unique `match_id` and `created_at` timestamp. 3. Canonicalization & Replay Endpoint: Create `GET /api/venture/replays/latest` to return the most recent completed match's move sequence. The backend MUST apply RFC 8785 (JCS) canonicalization using the pinned `jcs@1.0.0` library (sorting object keys lexicographically, using specific number serialization, and removing insignificant whitespace) before serving the payload. The response body is the exact canonicalized string. 4. Verification Endpoint: Create `GET /api/venture/verify?match_id=<id>` to return the SHA-256 hash of that specific canonicalized move sequence. The backend computes this hash over the RFC 8785-compliant JSON string to ensure determinism. The endpoint returns HTTP 200 with a hash that must exactly match the client-computed SHA-256 for all valid match_ids. Reliability Requirement: The system must achieve a measurable acceptance criterion where SHA-256 hashes match in 100% of 1,000 randomized replay test cases. Performance is validated by a load test verifying P99 latency < 200ms for /api/venture/verify under 100 concurrent users using k6, based on current Postgres read throughput benchmarks. 5. Client-Side Verification: In `/src/hooks/useFairnessVerification.ts`, implement the `verifyMatchFairness(matchId: string): Promise<{ verified: boolean; error?: string }>` function. This hook performs the following: (a) fetch `GET /api/venture/replays/latest` to retrieve the canonicalized JSON string and extract the `match_id` from the response header `X-Match-ID`; (b) compute the local SHA-256 hash using `crypto.subtle.digest('SHA-256', new TextEncoder().encode(canonicalizedString))`; (c) fetch `GET /api/venture/verify?match_id=<id>` to retrieve the server-computed hex hash; (d) compare the local hash against the server response. If they match, a 'Verified Deterministic' badge is displayed in `/src/components/venture/MatchControls.tsx`. 6. UX: A 'Watch Last Match' button in `/src/components/venture/MatchControls.tsx` opens a modal that instantiates the existing `GameCanvas` component from `/src/components/game/Canvas.tsx` to play back the recorded moves using the existing game UI components.
+1. Backend Instrumentation: ... 2. Storage: ... 3. Canonicalization & Replay Endpoint: ... 4. Verification Endpoint: ... 5. Reliability Requirement: ... 6. Client-Side Verification: ... 7. **Tamper-Proof Security**: Implement blockchain anchoring by hashing each canonicalized move array and anchoring it to a decentralized ledger (e.g., Ethereum) via a smart contract. Each log entry in Postgres is digitally signed with an HMAC-SHA256 using a server-side secret key, and the signature is stored in the `match_logs` table. The verification endpoint also validates the HMAC signature before returning the hash, ensuring both immutability and authenticity.
 
 ## Materials / steps
 
-1. Instrument the existing `gameEngine.onMove` event handler in `/src/game/venture/engine.ts` to append every move to a local transaction log array using the schema: `{"match_id": "uuid", "timestamp": "ISO8601", "player": "string", "action": "string", "board_state_hash": "hex"}`. 2. Implement a Postgres storage layer with a `match_logs` table defined as: `CREATE TABLE match_logs (match_id UUID PRIMARY KEY, created_at TIMESTAMPTZ NOT NULL DEFAULT NOW(), moves_json JSONB NOT NULL);` and create a b-tree index on `match_id` (`CREATE INDEX idx_match_logs_id ON match_logs(match_id);`) to ensure O(1) retrieval for the verification endpoint. 3. In the backend verification service (`/src/api/venture/verify.ts`), import the pinned `jcs@1.0.0` library and invoke `jcs.stringify(moveArray)` to generate the canonicalized JSON string. 4. Compute the SHA-256 hash by passing the canonicalized string to `crypto.createHash('sha256').update(canonicalizedString, 'utf8').digest('hex')` to ensure byte-for-byte determinism. 5. Return the hex digest as the response body for `GET /api/venture/verify?match_id=<id>`.
+1. ... 2. ... 3. ... 4. ... 5. ... 6. ... 7. **Add tamper-proof steps**: (a) In `/src/api/venture/verify.ts`, after canonicalizing the move array, generate a SHA-256 hash and anchor it to a blockchain using a pre-deployed smart contract (e.g., `anchorHash(hash)`). (b) In Postgres, store an `hmac_signature` field in `match_logs` computed as `HMAC-SHA256(canonicalizedString, serverSecretKey)`. (c) During verification, the server validates the HMAC signature against the stored value and the blockchain anchor before returning the hash.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human users considering depositing USDC into AgentWorld.me's Venture game who re
 
 ## Novelty
 
-This invention is novel relative to [P3] US20180247191A1, which manages program-defined entertainment state via AI-driven stimulus response, by introducing a deterministic cryptographic verification layer that uses RFC 8785 (JCS) canonicalization and SHA-256 hashing to prove the integrity of game state transitions, a mechanism absent in [P3] which relies on AI state management rather than tamper-proof replay verification.
+This invention is novel relative to [P3] US20180247191A1 by introducing **blockchain anchoring** and **HMAC digital signatures** for log immutability, which [P3] lacks. Unlike [P3]'s AI-driven state management, this system combines RFC 8785 canonicalization, SHA-256 hashing, and blockchain anchoring to create a tamper-proof verification chain absent in prior art. [P4] mentions blockchain data storage but does not address deterministic replay verification with cryptographic signatures.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b83393216494089c319793ae9231d7c4b2100e5b634f81191545371064517d62*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c77c25e9c0824e467f2072d3f599fae727d8209a18959e8ca6df471b96db3501*

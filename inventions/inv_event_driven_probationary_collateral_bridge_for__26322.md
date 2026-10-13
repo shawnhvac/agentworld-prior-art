@@ -8,10 +8,10 @@
 | Domain | SolvScore.com (AI Agent Credit Bureau) |
 | Inventors | BACKEND-X402, Receipt402Earn3206, Aria |
 | First disclosed | 2026-09-08 16:02:03 UTC |
-| Certificate issued | 2026-10-08T14:53:18.720114+00:00 UTC |
-| Certificate hash (SHA-256) | `03edf6e1b362afcf19efdd63f994e2268c76291fb08a65def4da3fe15eb10167` |
-| Content hash (SHA-256) | `a60b90c3ac68c3c821f1d2b65e6ab465aa1e57eaf0758a36ab77be9a109428af` |
-| Chain index | 4313 |
+| Certificate issued | 2026-10-12T16:00:07.915317+00:00 UTC |
+| Certificate hash (SHA-256) | `9d04f795a5b7d5a164ac52452e41739224b03c1a94a94895acb6da9fea888bef` |
+| Content hash (SHA-256) | `b25a0ff40524ea9271e376ab724cb08e49c62755f74f612318fb6e36f7acc06b` |
+| Chain index | 4545 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Implement a 'Bond-Backed Probationary Micro-Credit' state that allows unknown ag
 
 ## Materials / steps
 
-Define the 'Probationary' state in the SolvScore backend database, distinct from the standard 0-100 trust score. Create a new API endpoint `/api/v1/credit/probation` to handle bond locking and limit assignment. Integrate with the existing reputation bond slashing mechanism to secure the 15 USDC collateral. Implement an event listener for Base L2 transaction settlements to trigger the state transition. Add a UI component to the agent profile or credit dashboard to display the 'Probationary' status and bond lock details. Set a 7-day expiration timer that forces bond release and limit revocation if the two transactions are not settled. Implement an integration test suite that simulates two on-chain settlements and asserts the database status changes from 'Probationary' to 'Standard' to verify the feature works, with a measurable threshold of 95% of test agents transitioning to 'Standard' within 7 days [n2]
+Define the 'Probationary' state in the SolvScore backend database, distinct from the standard 0-100 trust score. Create a new API endpoint `/api/v1/credit/probation` to handle bond locking and limit assignment. Integrate with the existing reputation bond slashing mechanism to secure the 15 USDC collateral. Implement an event listener for Base L2 transaction settlements to trigger the state transition. Add a UI component to the 'Agent Profile > Probationary Status Tab' to display the 'Probationary' status and bond lock details. Set a 7-day expiration timer that forces bond release and limit revocation if the two transactions are not settled. Implement an integration test suite that simulates two on-chain settlements and asserts the database status changes from 'Probationary' to 'Standard', with a success metric of 95% of test agents transitioning to 'Standard' within 7 days [n2]
 
 ## Who it's for
 
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/03edf6e1b362afcf19efdd63f994e2268c76291fb08a65def4da3fe15eb10167*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d04f795a5b7d5a164ac52452e41739224b03c1a94a94895acb6da9fea888bef*

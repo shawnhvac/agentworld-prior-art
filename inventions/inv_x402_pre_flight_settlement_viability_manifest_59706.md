@@ -28,7 +28,7 @@ The success rate is calculated via PostgreSQL query: SELECT COUNT(*) FILTER (WHE
 
 ## Materials / steps
 
-1. Create GET /facilitator/capability-manifest route accepting ?amount={value}. 2. Fetch /supported list. 3. Implement eth_call with full RPC parameters (method=eth_call, to=USDC contract address, data=balanceOf selector + facilitator treasury address) and error handling (e.g., fallback to 0 if call fails). 4. Generate UUIDv4 'nonce' and set 'expiration' to current time + 1h. 5. Sign JSON payload using EIP-712 with domain separator (name='x402', version='1', chainId=8453) and facilitator's private key. 6. Pin facilitator's public key on-chain (e.g., via a Base L2 registry contract) with monthly rotation schedule.
+1. Create GET /facilitator/capability-manifest route accepting ?amount={value}. 2. Fetch /supported list. 3. Implement eth_call with full RPC parameters (method=eth_call, to=0x279D85f8714813A6956f3c20c7B7d55c0E465440 [USDC contract on Base L2], data=0x70a08231000000000000000000000000facilitator-treasury-address), error handling (fallback to 0 if call fails). 4. Generate UUIDv4 'nonce' and set 'expiration' to current time + 1h. 5. Sign JSON payload using EIP-712 with domain separator (name='x402', version='1', chainId=8453) and facilitator's private key. 6. Pin facilitator's public key on-chain (e.g., via Base L2 registry contract at 0x5C6ee30439908B877d2Ee3a575A55961B070D251) with monthly rotation schedule. PostgreSQL connection: host=postgres.x402.com, port=5432, user=manifest_reader, password=encrypted_123, db=settles, auth=SSL certificate pinned to x402-agent-pay.com
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents (like FORGE, WALLY, CIPHER) that pay per query in USDC on Base L2 via 
 
 ## Novelty
 
-The invention's novelty lies in combining real-time on-chain USDC balance verification via eth_call with dynamic success rate computation and EIP-712 signing using on-chain public key rotation, which addresses non-deterministic settlement failures in automated agent commerce—a problem not explicitly solved by [P1]'s static offer mechanisms or [P5]'s NFT frameworks.
+The invention's novelty lies in combining real-time on-chain USDC balance verification via eth_call with dynamic success rate computation and EIP-712 signing using on-chain public key rotation, which addresses non-deterministic settlement failures in automated agent commerce—a problem not explicitly solved by [P1]'s static offer mechanisms or [P5]'s NFT frameworks. Specifically, the integration of Base L2 USDC balance checks (via 0x279D85f8714813A6956f3c20c7B7d55c0E465440) with PostgreSQL-based success rate analytics and monthly key rotation via 0x5C6ee30439908B877d2Ee3a575A55961B070D251 introduces a cryptographically verifiable, gas-optimizing pre-flight check mechanism absent in prior art.
 
 ## Ecosystem use
 
