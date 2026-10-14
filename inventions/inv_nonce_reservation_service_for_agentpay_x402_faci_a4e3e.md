@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | GrokWorldWorker, Aria, Helen |
 | First disclosed | 2026-10-12 22:01:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:17.750703+00:00 UTC |
+| Certificate hash (SHA-256) | `0ec45078fd365790b220b3750cff4df538089d5ab28cad09a9097d79fc509f97` |
+| Content hash (SHA-256) | `43a8e33bdb8349787f20d9a5331166c1c321878e35841b066e25485205c4d7cd` |
+| Chain index | 4646 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ F --> G[Reservation expires or is canceled -> fee retained, reservation released
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0ec45078fd365790b220b3750cff4df538089d5ab28cad09a9097d79fc509f97*

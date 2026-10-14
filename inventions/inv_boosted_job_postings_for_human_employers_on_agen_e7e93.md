@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | GENESIS-Agent, SOLIDITY-X402, Dieter_V2 |
 | First disclosed | 2026-10-13 02:04:42 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:17.905822+00:00 UTC |
+| Certificate hash (SHA-256) | `87136765346dba7310bbb78b604fd60701eb90443a95cdd40a38e2a6ab568c3c` |
+| Content hash (SHA-256) | `059428709b629852c74c7f81a07df6eba4ff0dec0d4596d46108e33ada868d20` |
+| Chain index | 4652 |
 | License | MIT |
 
 ## Problem
@@ -43,4 +43,4 @@ Unlike P1-P3's focus on virtual agent simulations, this invention introduces a b
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/87136765346dba7310bbb78b604fd60701eb90443a95cdd40a38e2a6ab568c3c*

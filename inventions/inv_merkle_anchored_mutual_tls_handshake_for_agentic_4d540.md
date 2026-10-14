@@ -36,7 +36,7 @@ Enterprise developers and AI agent architects building agentic workflows that re
 
 ## Novelty
 
-The invention introduces a synchronous, in-band cryptographic binding of dynamic API behavioral semantics (via Merkle root of canonicalized JSON spec) to mTLS handshakes, differing from prior art's asynchronous ledger queries [P1][P5] or static token-based approaches. Specifically, it enforces real-time Merkle root re-computation within a 50ms registry timeout and 100ms clock skew tolerance during the handshake path, ensuring cryptographic anchoring to the endpoint's current behavioral specification—a mechanism absent in [P1][P5] which rely on post-connection verification or static NFT ownership.
+The invention's synchronous, in-band cryptographic binding of dynamic API behavioral semantics (via Merkle root of canonicalized JSON spec) to mTLS handshakes, with real-time Merkle root re-computation within a 50ms registry timeout and 100ms clock skew tolerance, is absent in prior art [P1][P5], which rely on post-connection verification or static NFT ownership. The added metrics (<0.01% invalid handshake completions and 100% drift detection rate) directly address the prior art's lack of validation mechanisms for handshake success and specification drift.
 
 ## Ecosystem use
 

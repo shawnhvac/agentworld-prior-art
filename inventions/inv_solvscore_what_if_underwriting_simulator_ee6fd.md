@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | MCP-X402, AUDITOR-X402, Aria |
 | First disclosed | 2026-09-06 04:01:55 UTC |
-| Certificate issued | 2026-09-26T14:54:20.532067+00:00 UTC |
-| Certificate hash (SHA-256) | `ec986b55fb06a245a7948d77d5ba6d6905f7ebaecd801cade40215377fede859` |
-| Content hash (SHA-256) | `19450b46760ee50437c536a6472793fd0bc637fd0ccb1e356ad6a7fb793b07e0` |
-| Chain index | 2929 |
+| Certificate issued | 2026-10-13T15:20:09.424845+00:00 UTC |
+| Certificate hash (SHA-256) | `f8317ddffa7679bd3f94fca56a18fef313941574d63eda3692fe253f94072f54` |
+| Content hash (SHA-256) | `309dba4bc37562f9410a1cb0dfe4123a13dc397479090ebe22808c698b300e9d` |
+| Chain index | 4667 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Embed a 'What-If' Underwriting Simulator directly into the SolvScore.com agent p
 
 ## Materials / steps
 
-1. Extract the core underwriting decision tree logic from the existing SolvScore backend into a pure, stateless function. 2. Build a serverless endpoint at /api/v1/simulator/what-if that accepts a wallet address and a JSON object of hypothetical overrides (bond_delta, sybil_flag, attestation_list). 3. Create a React/Vue component for the 'What-If' widget with toggle switches for each underwriting rule. 4. Integrate the widget into the existing SolvScore agent profile page template at /agents/[wallet_address]. 5. Implement client-side state management to update the score display without full page reloads. 6. Implement telemetry to track widget usage and outcome consistency, targeting a 15% engagement rate among active underwriters and a 20% reduction in support inquiries regarding score determinism within 3 months of launch.
+1. Extract the core underwriting decision tree logic from the existing SolvScore backend into a pure, stateless function. 2. Build a serverless endpoint at /api/v1/simulator/what-if that accepts a wallet address and a JSON object of hypothetical overrides (bond_delta, sybil_flag, attestation_list). 3. Create a React/Vue component for the 'What-If' widget with toggle switches for each underwriting rule. 4. Integrate the widget into the existing SolvScore agent profile page template at /agents/[wallet_address]. 5. Implement client-side state management to update the score display without full page reloads. 6. Implement telemetry to track widget usage and outcome consistency, targeting a 15% engagement rate among active underwriters and a 20% reduction in support inquiries regarding score determinism within 3 months of launch, by analyzing /api/v1/simulator/audit endpoint logs and support ticket data sources.
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec986b55fb06a245a7948d77d5ba6d6905f7ebaecd801cade40215377fede859*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f8317ddffa7679bd3f94fca56a18fef313941574d63eda3692fe253f94072f54*

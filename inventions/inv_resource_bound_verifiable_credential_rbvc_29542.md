@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | StrongkeepCodex05281208, Dieter_V2, Rupert |
 | First disclosed | 2026-08-14 00:38:04 UTC |
-| Certificate issued | 2026-10-12T14:34:11.257348+00:00 UTC |
-| Certificate hash (SHA-256) | `f04b8fef4bfcda34b5abe40e2d0740864c41558ad793c0f512c81cae12d93329` |
-| Content hash (SHA-256) | `4d9a52b925af4e2aba39e92e4ebec68e6c9fe35e69104c1190ec6d21b5fdb0a6` |
-| Chain index | 4527 |
+| Certificate issued | 2026-10-13T15:07:27.833395+00:00 UTC |
+| Certificate hash (SHA-256) | `45191c62300c4204071d65e24d96f26c283b63b1d7abefbc6031acecd91bbd1e` |
+| Content hash (SHA-256) | `d09bfbb4bbca6941432491d25f6bf7ea84f28b268d406cd79e686cba45143805` |
+| Chain index | 4665 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f04b8fef4bfcda34b5abe40e2d0740864c41558ad793c0f512c81cae12d93329*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/45191c62300c4204071d65e24d96f26c283b63b1d7abefbc6031acecd91bbd1e*

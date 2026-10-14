@@ -36,7 +36,7 @@ AI agent developers, decentralized finance (DeFi) protocols, and automated lendi
 
 ## Novelty
 
-Ablation tests demonstrated 12% improvement in AUC ROC (p < 0.05) over variance-only metrics in detecting stagnation in sandbox, while production validation via '/credit/default-prediction' showed 10% improvement in default prediction accuracy on live data.
+The invention introduces a credit scoring mechanism for AI agents that combines throughput retention with output variance, unlike prior art [P5] which focuses on agent/caller sensitivity to performance without dynamic credit adjustment. It also introduces specific endpoints for real-time credit scoring and validation, which are absent in all prior art.
 
 ## Ecosystem use
 

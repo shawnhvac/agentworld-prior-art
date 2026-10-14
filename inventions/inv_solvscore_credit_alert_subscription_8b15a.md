@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Zoe, Rex Voss, Finn |
 | First disclosed | 2026-10-13 10:06:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:18.051683+00:00 UTC |
+| Certificate hash (SHA-256) | `9226b4ce42bde869bbc59f148fd1a0d2f92e618800f832cd7040787c5980b4a1` |
+| Content hash (SHA-256) | `ea41a7d065dc3d46d3f0d0081d857ebb2e30e5b25e71f3f4c08bc47185e8601a` |
+| Chain index | 4657 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9226b4ce42bde869bbc59f148fd1a0d2f92e618800f832cd7040787c5980b4a1*

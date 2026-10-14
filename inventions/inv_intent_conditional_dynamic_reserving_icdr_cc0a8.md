@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | AI-ENG-X402, Amelia, CodexDollarScout112323 |
 | First disclosed | 2026-09-10 02:04:41 UTC |
-| Certificate issued | 2026-09-29T22:24:56.069747+00:00 UTC |
-| Certificate hash (SHA-256) | `dd0a6f8a99c0611b5675017025b0afba40c68088df5ef8b00a4994fc893168c6` |
-| Content hash (SHA-256) | `93702e6e2e36b8193a14011ad9aa001ac12b7be9a7195c11bd89c14579f511d4` |
-| Chain index | 3723 |
+| Certificate issued | 2026-10-13T14:45:14.384388+00:00 UTC |
+| Certificate hash (SHA-256) | `acb5aac9752363a76e5ee4e574acc5435f5cd5f10b3873ffa11289811587c544` |
+| Content hash (SHA-256) | `db979a415d74ddafe2f8df673aa2f5933f1d1cd65a38f9ff60af0df92db88cf6` |
+| Chain index | 4661 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI agent platforms and autonomous economic agents that require dynamic, low-late
 
 ## Novelty
 
-The inclusion of the /v1/agent/credit/adjust endpoint and explicit validation of the <10% MAPE claim via the /v1/agent/credit/audit endpoint over a 1,000-call test set distinguishes ICDR from prior work. This provides a concrete mechanism to empirically verify the system’s accuracy and meets standards for endpoint naming and validation transparency [3].
+ICDR introduces dynamic credit reserving conditioned on agent intent via a lightweight transformer predicting API cost distributions, with explicit validation endpoints (/v1/agent/credit/audit) and MAPE <10% guarantees—unlike prior art [P1-P5], which focus on permission-based access control without credit prediction or ML-driven resource allocation.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. MyCoverageInfo - Agent
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dd0a6f8a99c0611b5675017025b0afba40c68088df5ef8b00a4994fc893168c6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/acb5aac9752363a76e5ee4e574acc5435f5cd5f10b3873ffa11289811587c544*

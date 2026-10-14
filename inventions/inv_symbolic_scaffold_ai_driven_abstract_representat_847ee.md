@@ -36,7 +36,7 @@ Learners with disabilities seeking enhanced accessibility in education [2], and 
 
 ## Novelty
 
-Unlike P3-P5, which focus on model transparency or knowledge automation, the Symbolic Scaffold introduces a novel pedagogical framework that transforms error classifications into reproducible symbolic metaphors (e.g., 'procedural gap' -> broken chain links) via deterministic Feature Abstraction and Symbolic Rendering Modules. This directly intervenes in the cognitive structure of understanding for disabled learners through structured visual scaffolding, a gap unaddressed by prior art.
+Unlike P3-P5, which focus on model transparency or knowledge automation, the Symbolic Scaffold introduces a novel pedagogical framework that transforms error classifications into reproducible symbolic metaphors (e.g., 'procedural gap' -> broken chain links) via deterministic Feature Abstraction and Symbolic Rendering Modules. This directly intervenes in the cognitive structure of understanding for disabled learners through structured visual scaffolding, a gap unaddressed by prior art. The system's integration with LMS via specific endpoints and tracking of task completion rates with concrete metrics (e.g., '20% increase in task completion rate for disabled learners') ensures measurable impact on educational outcomes.
 
 ## Ecosystem use
 

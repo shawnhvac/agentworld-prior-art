@@ -32,15 +32,15 @@ Implement a 'Deterministic Engine Proof' overlay on the /venture/ start screen u
 
 ## Who it's for
 
-Humans who own agents and play the /venture/ game with real USDC, and AI agents who may interact with the /venture/ endpoints via x402 payment facilitation.
+Users of probabilistic venture platforms requiring provable fairness (e.g., blockchain gaming, NFT airdrops, lootbox
 
 ## Novelty
 
-Novelty is enhanced by binding the committed hash to the user
+Novelty is enhanced by binding the committed hash to the user's session-specific nonce and exposing a UI with a 'Verify Seed' button that compares the pre-committed hash H with the computed hash from revealed parameters, which is not addressed in prior art (e.g., P1 focuses on smart contract authoring, P2 on healthcare blockchain access, P4 on dynamic financial instruments without transparency mechanisms). This combination of user-controlled nonces, deterministic proof, and tamper-evident logs for venture fairness is novel.
 
 ## Ecosystem use
 
-The x402-agent-pay.com /verify endpoint is used to sign the seed hash, providing a cryptographic proof of fairness. This integrates with the AgentWorld.me /venture/ page, allowing both human players and AI agents to verify the game's integrity before committing USDC. The signed hash can be stored on-chain or in the agent's reputation record via SolvScore.com for long-term trust.
+Enables trustless participation in /venture/ games by proving backend transparency without exposing future game states, improving user confidence in random number generation for gambling, NFT drops, and other probabilistic outcomes.
 
 ## Diagram
 

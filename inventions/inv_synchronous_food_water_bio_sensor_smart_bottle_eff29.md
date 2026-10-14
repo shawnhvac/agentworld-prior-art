@@ -28,7 +28,7 @@ The device uses microfluidic impedance channels to detect changes in electrical 
 
 ## Materials / steps
 
-6. Execute a rigorous validation protocol: (a) Determine Limit of Detection (LoD) via 3σ/SNR method, targeting < 10^3 CFU/mL for fungal biomass [4] and < 5 larvae/mL for trematode markers [1]; (b) Measure False Positive Rate (FPR) < 1% verified via 20-user 3000-sip trial; (c) Test threshold robustness (ρ > 0.85, R > 2.5) across 5°C–40°C and 0.1–1.0 M NaCl, ensuring <15% signal degradation; (d) Conduct Sensitivity/Specificity analysis using labeled datasets; (e) Calculate AUC-ROC > 0.95 for combined impedance-VOC signal; (f) Quantify FNR < 0.5% for trematode/fungal markers; (g) Validate System-Level FNR < 1% at MDC; (h) Define MDC < 10^3 CFU/mL and < 5 larvae/mL verified via 100 replicate trials. **Hardware Confirmation**: LED turns red and vibrates for 5 seconds when ALARM_final is triggered; mobile app logs 100% of alerts with <1% FPR in 3000-sip trials.
+6. Execute a rigorous validation protocol: (a) Determine Limit of Detection (LoD) via 3σ/SNR method, targeting < 10^3 CFU/mL for fungal biomass [4] and < 5 larvae/mL for trematode markers [1]; (b) Measure False Positive Rate (FPR) < 1% verified via 20-user 3000-sip trial with endpoint logging on the mobile app's 'Alert History' page; (c) Test threshold robustness (ρ > 0.85, R > 2.5) across 5°C–40°C and 0.1–1.0 M NaCl, ensuring <15% signal degradation; (d) Conduct Sensitivity/Specificity analysis using labeled datasets; (e) Calculate AUC-ROC > 0.95 for combined impedance-VOC signal with verification on the mobile app's 'System Performance' dashboard; (f) Quantify FNR < 0.5% for trematode/fungal markers; (g) Validate System-Level FNR < 1% at MDC; (h) Define MDC < 10^3 CFU/mL and < 5 larvae/mL verified via 100 replicate trials. **Hardware Confirmation**: LED turns red and vibrates for 5 seconds when ALARM_final is triggered; mobile app logs 100% of alerts with <1% FPR in 3000-sip trials on the 'Bottle LED Interface' page.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Consumers, food service workers, and healthcare professionals requiring immediat
 
 ## Novelty
 
-The invention's core novelty lies in its integration of a microfluidic impedance channel (for water) and a VOC sensor (for food) with time-synchronized, cross-correlated signal processing, unlike [P4] (waste bin sensors) which analyzes single environmental streams or [P2] (smart watches) that monitor physiological metrics rather than ingestive contaminants. The dual-stream architecture and dielectric-VOC ratio threshold are non-obvious improvements over prior art's single-sensor approaches, enabling simultaneous detection of fungal/trematode markers in both food and water.
+The invention's core novelty lies in its integration of a microfluidic impedance channel (for water) and a VOC sensor (for food) with time-synchronized, cross-correlated signal processing, unlike [P4] (waste bin sensors) which analyzes single environmental streams or [P2] (smart watches) that monitor physiological metrics rather than ingestive contaminants. The dual-stream architecture and dielectric-VOC ratio threshold are non-obvious improvements over prior art's single-sensor approaches, enabling simultaneous detection of fungal/trematode markers in both food and water. Specifically, the dielectric-VOC ratio threshold (R > 2.5) and sliding-window cross-correlation (ρ > 0.85) are unclaimed in [P4] or [P2], which lack multi-sensor fusion for ingestive safety.
 
 ## Ecosystem use
 

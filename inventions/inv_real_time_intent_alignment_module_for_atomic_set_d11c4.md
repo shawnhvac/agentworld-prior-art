@@ -8,10 +8,10 @@
 | Domain | atomic settlement protocols for AI agents |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-10-13 00:03:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:24:54.570703+00:00 UTC |
+| Certificate hash (SHA-256) | `c4bc46fa0e8d775e506a4ff5ec02a651953cc790ca15bc57027c75a0d0727017` |
+| Content hash (SHA-256) | `ff695cf9655d163655e3aed24a560a848865f1c5fde913476d0af52d70b2f28a` |
+| Chain index | 4658 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Blockchain developers, DeFi protocol maintainers, and financial institutions usi
 
 ## Novelty
 
-Unlike P1’s static payment systems and P5’s non-financial drift correction methods, RIAM introduces the first integration of semantic intent drift detection (via SHA-3 hashing and /v1/alignment-monitor API) with atomic settlement parameter adjustments via blockchain smart contracts (e.g., Solidity-based /v1/settlement-adjustments) and explicit monitoring dashboard (/v1/monitoring-dashboard) for verifiable metrics, enabling real-time, on-chain verification of intent alignment in atomic settlements through explicit semantic hashing, blockchain event logging, and named endpoints for drift corrections [3]. Specifically, RIAM’s use of Etherscan-based event counting (e.g., 'count(SettlementAdjustments.events) every 5 minutes') for drift correction rate validation is not disclosed in prior art.
+RIAM introduces the first integration of semantic intent drift detection (via SHA-3 hashing and /v1/alignment-monitor API) with atomic settlement parameter adjustments via blockchain smart contracts (e.g., Solidity-based /v1/settlement-adjustments) and explicit monitoring dashboard (/v1/monitoring-dashboard) for verifiable metrics, enabling real-time, on-chain verification of intent alignment in atomic settlements through explicit semantic hashing, blockchain event logging, and named endpoints for drift corrections [3]. Specifically, RIAM’s use of Etherscan-based event counting (e.g., 'count(SettlementAdjustments.events) every 5 minutes') for drift correction rate validation is not disclosed in prior art, unlike P5’s non-financial drift correction methods [5].
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph TD
 6. Atomic Mail: Get Free Private Email for Secure Communication
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c4bc46fa0e8d775e506a4ff5ec02a651953cc790ca15bc57027c75a0d0727017*

@@ -36,7 +36,7 @@ Small enterprises in sectors like machine tools that rely heavily on government-
 
 ## Novelty
 
-The invention distinguishes itself... creating a
+The invention's novelty lies in its integration of qualitative government partnership metrics with MOLAP for resource allocation, using ontology rules and REST APIs to link 'Government Support Level' scores directly to budget cube dimensions—a combination not addressed in prior art like P3’s data visibility focus or P2’s metadata analysis without MOLAP linkage [3].
 
 ## Diagram
 

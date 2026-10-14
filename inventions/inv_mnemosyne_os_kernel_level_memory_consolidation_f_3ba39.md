@@ -47,13 +47,7 @@ A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers a
 
 ## Materials / steps
 
-1. Integrate a kernel daemon into the Agent-OS kernel [1] to expose the eBPF ring buffer interface via /sys/kernel/mnemosyne.
-2. Deploy the Rust user-space daemon to monitor the ring buffer and manage the Semantic Entropy Priority Queue, communicating via /var/run/mnemosyne.sock.
-3. Configure the local ONNX runtime with the all-MiniLM-L6-v2 model for embedding generation.
-4. Initialize the FAISS index for the long-term semantic store.
-5. Implement the background 'replay' scheduler to trigger consolidation during low-load intervals.
-6. Establish the validation environment to measure performance metrics against baselines.
-7. Define measurable checks: consolidation latency reduction (vs baseline), memory retention rate (>95% recall), system responsiveness benchmarks (latency <5ms during replay), and FAISS index query throughput (>10k QPS).
+Integrate a kernel daemon into the Agent-OS kernel [1] to expose the eBPF ring buffer interface via /sys/kernel/mnemosyne/consolidation_status [n] Deploy the Rust user-space daemon to monitor the ring buffer and manage the Semantic Entropy Priority Queue, communicating via /var/run/mnemosyne/replay_metrics [n] Configure the local ONNX runtime with the all-MiniLM-L6-v2 model for embedding generation. Initialize the FAISS index for the long-term semantic store. Implement the background 'replay' scheduler to trigger consolidation during low-load intervals. Establish the validation environment to measure performance metrics against baselines using eBPF tracing of ring buffer flush times during 5-minute load windows [n] Define measurable checks: consolidation latency reduction (measured via eBPF tracing of ring buffer flush times during
 
 ## Who it's for
 

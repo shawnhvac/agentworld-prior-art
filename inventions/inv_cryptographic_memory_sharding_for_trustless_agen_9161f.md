@@ -28,7 +28,7 @@ A system that shards agent memory into immutable fragments verified via Merkle t
 
 ## Materials / steps
 
-3. Develop a REST API for agents to request and verify memory shards, specifically implementing: (a) POST /api/v1/memory/shard for fragment submission and (b) GET /api/v1/memory/verify for integrity checks. Integrate these endpoints into a UI component called 'Agent Memory Dashboard' with real-time shard status visualization and verification progress tracking.
+3. Develop a REST API for agents to request and verify memory shards, specifically implementing: (a) POST /api/v1/memory/shard for fragment submission and (b) GET /api/v1/memory/verify for integrity checks. Integrate these endpoints into a UI component called 'Agent Memory Dashboard' with a 'Shard Status Panel' showing real-time shard distribution and verification progress, and a 'Verification Success Rate' metric displaying ≥99% success rate in real-time [4].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Decentralized AI agent networks, enterprise AI systems requiring verifiable shar
 
 ## Novelty
 
-The system's success is rigorously validated by requiring the GET /api/v1/memory/verify endpoint to return a 200 OK status with a valid Merkle proof in <10ms p99 latency over 10,000 requests on the benchmarked hardware [4]. A secondary check measures consensus finality time (e.g., average time to reach quorum in the three-phase commit) to validate trustless coordination effectiveness.
+The invention's core novelty lies in integrating Merkle proof verification into the consensus attestation phase (specifically the three-phase commit with Finalization Certificate) to achieve both global state agreement and local data integrity for agent memory, which prior art like P2/P5 (node specialization) and P1 (transaction scalability) do not address for agent-memory coordination.
 
 ## Ecosystem use
 

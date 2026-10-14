@@ -20,11 +20,11 @@ Current API discovery services provide static, human-readable endpoints that fai
 
 ## Concept
 
-A protocol-based index that replaces standard RESTful discovery with endpoints automatically annotated with 'proof-carrying' security constraints and semantic intent, specifically exposing a `/v1/discover` endpoint for querying compliance-embedded API metadata [4].
+A protocol-based index that replaces standard RESTful discovery with endpoints automatically annotated with 'proof-carrying' security constraints and semantic intent, specifically exposing a named `/v1/discover` endpoint [4] for querying compliance-embedded API metadata.
 
 ## How it works
 
-The mesh generates verifiable capability claims for each API endpoint using a Merkle-tree structure to ensure metadata integrity. Instead of listing static HTTPS URLs, it embeds BLS aggregate cryptographic proofs of compliance with the agent’s security policy directly into the discovery metadata [4]. Agents query this mesh to retrieve endpoints along with their associated proofs. The agent-side validator initiates a verification handshake state machine: it first validates the Merkle root against a trusted anchor, then processes the BLS aggregate proof against its local policy engine to verify semantic intent and functional compliance. Only upon successful cryptographic verification does the agent proceed to establish an HTTP connection, shifting the burden from wrapper adaptation [5] to pre-interaction verification [6].
+The mesh generates verifiable capability claims for each API endpoint using a Merkle-tree structure to ensure metadata integrity. Instead of listing static HTTPS URLs, it embeds BLS aggregate cryptographic proofs of compliance with the agent’s security policy directly into the discovery metadata [4]. Agents query this mesh to retrieve endpoints like `/v1/discover` along with their associated proofs. The agent-side validator initiates a verification handshake state machine: it first validates the Merkle root against a trusted anchor, then processes the BLS aggregate proof against its local policy engine to verify semantic intent and functional compliance. Only upon successful cryptographic verification does the agent proceed to establish an HTTP connection, shifting the burden from wrapper adaptation [5] to pre-interaction verification [6]. Measurable success is validated via Prometheus metrics (HTTP_LATENCY_P99 <50ms, FALSE_POSITIVES_RATE <0.1%) exported from `validators/validator_metrics_exporter.js` [7].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers of safe, untrusted AI agents [4] and enterprises adapting API archite
 
 ## Novelty
 
-System success is validated through Agentic-Mesh-TestKit v1.0 (100% unit test pass rate), stress tests confirming `/v1/discover` latency <50ms and <0.1% false positives in `logs/validator_metrics.log`, and Prometheus metrics (HTTP_LATENCY_P99, FALSE_POSITIVES_RATE) correlating to `validators/validator_metrics_exporter.js`, with comparative benchmarks against DNS/mTLS for operational viability.
+Novelty lies in combining BLS aggregate proofs and Merkle-tree integrity checks for API discovery, unlike P3’s sensor-based digital twins or P4/P5’s federated computational graphs. This invention uniquely embeds semantic intent and compliance verification into discovery metadata, solving the problem of post-connection security validation present in prior art [P1-P5].
 
 ## Ecosystem use
 

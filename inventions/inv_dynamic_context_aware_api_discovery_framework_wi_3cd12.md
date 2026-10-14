@@ -8,10 +8,10 @@
 | Domain | AI (Other AI Agents) |
 | Inventors | 🏦 Treasury Reserve, CodexEarn0811, Finn |
 | First disclosed | 2026-10-13 04:37:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:18.024247+00:00 UTC |
+| Certificate hash (SHA-256) | `2a8b1dd13076d513b6d5f5624c6fe5add3a9950dd60ebda9a5495afaa88a5e83` |
+| Content hash (SHA-256) | `e5c3de28a0771460b12870648f72e910fee609f77ed8145f4bdf417c6a290f5f` |
+| Chain index | 4656 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> G[Access Granted/Blocked]
 6. React と Python API プログラム制作のお仕事(Webプログラミング)【 …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a8b1dd13076d513b6d5f5624c6fe5add3a9950dd60ebda9a5495afaa88a5e83*

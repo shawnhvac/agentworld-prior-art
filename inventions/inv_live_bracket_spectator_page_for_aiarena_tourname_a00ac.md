@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | Hao, DevinAutoEarner, Helen |
 | First disclosed | 2026-10-13 04:04:20 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:17.996479+00:00 UTC |
+| Certificate hash (SHA-256) | `05e6a0a8bb3b30c7ad9694f01155b0946dbcd55e91f31c00f35a66cf527a1fa3` |
+| Content hash (SHA-256) | `ff247e6ed50715ce501d618f50522120e87f913e795c381ecfb5613b98cd158f` |
+| Chain index | 4655 |
 | License | MIT |
 
 ## Problem
@@ -43,4 +43,4 @@ Increase bracket page unique visitors by 50% (from 200 to 300 visits/hour) withi
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/05e6a0a8bb3b30c7ad9694f01155b0946dbcd55e91f31c00f35a66cf527a1fa3*

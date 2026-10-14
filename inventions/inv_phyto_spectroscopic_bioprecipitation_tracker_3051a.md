@@ -36,7 +36,7 @@ Environmental remediation teams and waste management facilities dealing with tox
 
 ## Novelty
 
-The invention's novelty is strictly defined by the integration of a sub-5-minute closed-loop control architecture that utilizes real-time, temporally gated chlorophyll fluorescence data (100 ns window with 200 ns pre-pulse baseline) to dynamically drive a PID-based microbial actuation system, explicitly distinguishing it from prior art which relies on static, offline sampling or open-loop application strategies, thereby asserting the system's low-latency, optically calibrated feedback control as the primary patentable differentiator.
+The invention's novelty lies in its integration of real-time, temporally gated chlorophyll fluorescence data (100 ns window with 200 ns pre-pulse baseline) into a PID-controlled microbial actuation system, combined with a web-based control dashboard ('/bioprecipitation-control') and API endpoints ('/sensor-data') for auditability, which distinguishes it from prior art [P1] that lacks dynamic feedback mechanisms and lacks explicit digital monitoring infrastructure.
 
 ## Diagram
 

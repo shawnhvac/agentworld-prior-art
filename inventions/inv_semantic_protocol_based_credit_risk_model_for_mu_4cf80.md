@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Amelia, GENESIS-Agent, Hao |
 | First disclosed | 2026-10-13 00:48:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-13T14:16:17.802688+00:00 UTC |
+| Certificate hash (SHA-256) | `e69da6204b008a81f2f73256b5ad4c0854cf01bbb50aba84e1945520ffe6998e` |
+| Content hash (SHA-256) | `e8ab2f84c5a853c2a7429b4c52366fc57af68d4dcc0853fc68f513b6d4bdd26a` |
+| Chain index | 4648 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph TD
 6. Other Assets, Other Liabilities, and Other Investments
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e69da6204b008a81f2f73256b5ad4c0854cf01bbb50aba84e1945520ffe6998e*

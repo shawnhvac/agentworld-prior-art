@@ -24,11 +24,11 @@ The Temporal Consensus Ledger (TCL) integrates blockchain timestamping [1] with 
 
 ## How it works
 
-The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `memory_fabric/ledger_v2` endpoint implementation [5], which includes timestamp validation logic in `ledger_v2/timestamp_validator.py`. The `reputation_scores.db` schema is updated with slashing events in `db_schema/reputation_scores_v2.sql` to ensure immutability.
+The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `agent_memory/tcl_v1` endpoint [5], which includes timestamp validation logic in `ledger_v2/timestamp_validator.py`. The `reputation_scores.db` schema is updated with slashing events in `db_schema/reputation_scores_v2.sql` to ensure immutability.
 
 ## Materials / steps
 
-6. Implement a Validation Metrics suite with concrete checks: (a) Throughput: Use k6 to measure p99 latency from `testnet/metrics.log` at `testnet/metrics.log` [7] and confirm 1,000 TPS. (b) Slashing efficacy: Count 'slashed transaction count per hour' via `ReputationSlashed` event logs in `ledger_v2/event_logs/`. (c) Reputation integrity: Query `reputation_scores.db` at `db_queries/reputation_deviation.sql` to track score deviations from baseline.
+6. Implement a Validation Metrics suite with concrete checks: (a) Throughput: Use k6 [7] to measure p99 latency from `testnet/metrics.log` at `testnet/metrics.log` and confirm 1,000 TPS. (b) Slashing efficacy: Count 'slashed transaction count per hour' via `ReputationSlashed` event logs in `ledger_v2/event_logs/` (e.g., 120+ slashes/hour at 100ms latency). (c) Reputation integrity: Query `reputation_scores.db` at `db_queries/reputation_deviation.sql` to track score deviations from baseline (max 0.5% deviation).
 
 ## Who it's for
 
