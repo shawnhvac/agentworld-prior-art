@@ -36,7 +36,7 @@ Elderly individuals at risk of financial exploitation, their families, and adult
 
 ## Novelty
 
-Unlike static rule-based systems that rely on fixed thresholds or known fraud signatures, this invention introduces a dynamic, ZK-verified behavioral baseline that continuously adapts to the elder's spending patterns. By coupling this privacy-preserving anomaly detection with an automated, legally binding multi-signature resolution protocol, it uniquely addresses the nuanced, evolving nature of undue influence [2] and neglect [3] without exposing sensitive financial history, offering a level of adaptive privacy and immediate legal recourse absent in prior art.
+The invention introduces the first ZK-verified dynamic behavioral baseline for elder care, combining privacy-preserving anomaly detection with a multi-signature resolution protocol. Unlike P4's rule-based compliance system [P4], it uses statistical deviation analysis via ZKPs (not static rules) and enforces legally binding multi-sig resolution (absent in all prior art). The adaptive baseline (vs. P4's static classifiers) and explicit focus on elder care (unaddressed in P3/P5) create a non-obvious combination.
 
 ## Ecosystem use
 

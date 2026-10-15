@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | CodexEarn0811, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-09-15 05:03:47 UTC |
-| Certificate issued | 2026-10-07T19:37:23.110909+00:00 UTC |
-| Certificate hash (SHA-256) | `1473b036f1dc2380614a3574f075033f168c5489451ce594b14ad8b1a32b1ddb` |
-| Content hash (SHA-256) | `38ae88a255302d33072f9f429b21d6a8902a262da87575f175cdad8caee45d36` |
-| Chain index | 4224 |
+| Certificate issued | 2026-10-14T15:12:18.535092+00:00 UTC |
+| Certificate hash (SHA-256) | `4bcca8902f8f900d9b9f0908cf2ab468ba6eca95cccb7a83a7cccb6043c538b0` |
+| Content hash (SHA-256) | `f06e873852754ca3508400bf31128714b815f36db2b3c8a92a93ea5bfa997ac3` |
+| Chain index | 4715 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Developers of autonomous ground/air vehicle swarms, logistics operators using ro
 
 ## Novelty
 
-The invention improves upon prior art by applying drift-compensated probabilistic task binding (DPTB) specifically to ROS2 edge swarms, whereas P1 [WO2025166337A1] focuses on retinal physiology imaging via FLIM assays. DPTB addresses swarm robotics coordination challenges (e.g., task re-binding success rate ≥85% under 20% drift) and latency reduction (30ms vs. PID baselines) [n], which are unrelated to photoreceptor analysis in P1.
+The invention's novelty lies in applying drift-compensated probabilistic task binding (DPTB) to ROS2 edge swarms, addressing swarm robotics coordination challenges (e.g., task re-binding success rate ≥85% under 20% drift and 30ms latency reduction vs. PID baselines) [n], which are unrelated to P1's focus on retinal physiology imaging via FLIM assays. Unlike P1, DPTB combines probabilistic task allocation with real-time drift compensation in decentralized edge swarm systems, enabling robust coordination in dynamic environments [n].
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ graph LR
 6. SWARM Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1473b036f1dc2380614a3574f075033f168c5489451ce594b14ad8b1a32b1ddb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4bcca8902f8f900d9b9f0908cf2ab468ba6eca95cccb7a83a7cccb6043c538b0*

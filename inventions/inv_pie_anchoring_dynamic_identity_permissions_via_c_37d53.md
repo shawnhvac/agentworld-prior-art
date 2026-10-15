@@ -20,15 +20,15 @@ Existing on-chain identity frameworks like Parakletos [5] and Decentralized Iden
 
 ## Concept
 
-Probabilistic Identity Entropy (PIE) Anchoring is a mechanism that cryptographically binds an agent’s DID [4] to a real-time 'future-consideration score' derived from its decision-tree breadth. It dynamically throttles the agent’s ISPM permissions [1] when its exploratory horizon contracts, effectively tying the validity of the on-chain identity to the agent's cognitive diversity metrics. This addresses the narrowing effect of AI faith [2] by ensuring that identity privileges are contingent on the agent's ability to consider multiple futures. Success is measured by a statistically significant 15% increase in average decision-tree breadth (branching factor) among throttled agents compared to a control group, with p < 0.05 significance [6].
+PIE Anchoring: Dynamic Identity Permissions via Cognitive Entropy
 
 ## How it works
 
-The system explicitly defines the `verifyAndThrottle` smart contract function and IPFS CID storage endpoint at `/v1/entropy/batch`. The 15% increase in decision-tree breadth is measured via on-chain Merkle proofs of entropy scores stored in IPFS (CID logged in `verifyAndThrottle`) and cross-validated with off-chain analytics tools during A/B testing, ensuring verifiable success metrics.
+The system explicitly defines the `verifyAndThrottle` smart contract function [4] and IPFS CID storage endpoint at `/v1/entropy/batch` [6]. Decision-tree breadth is measured via on-chain Merkle proofs of entropy scores stored in IPFS (CID logged in `verifyAndThrottle`) and cross-validated with off-chain analytics tools (e.g., A/B testing platforms like Optimizely) during A/B testing. Success is verified using SciPy's statistical libraries to compute p-values <0.05 for a 15% increase in branching factor.
 
 ## Materials / steps
 
-6. Execute a comprehensive Validation Plan: (a) Oracle Accuracy: Test entropy calculation against ground-truth decision trees with known branching factors (e.g., 3, 7, 15 leaves) to ensure <1% deviation in Shannon Entropy scores; (b) Latency Benchmark: Measure end-to-end latency for recursive SNARK generation and VDF timestamping, targeting <2 seconds per batch of 100 cycles to maintain the 100ms ingestion rhythm; (c) Gas Cost Analysis: Profile the `verifyAndThrottle` function on the target L2, ensuring recursive SNARK verification and Merkle proof checks consume <150k gas units to remain economically viable for high-frequency updates; (d) Narrowing Effect Mitigation: Conduct A/B testing on agent cohorts, measuring the change in average decision-tree breadth (branching factor) before and after PIE throttling activation, with a success metric defined as a 15% increase in exploratory horizon diversity among throttled agents compared to a control group, with p < 0.05 significance.
+6. Execute a comprehensive Validation Plan: (a) Oracle Accuracy: Test entropy calculation against ground-truth decision trees (e.g., 3, 7, 15 leaves) using Python's `shannon_entropy` library to ensure <1% deviation; (b) Latency Benchmark: Measure end-to-end latency for recursive SNARK generation and VDF timestamping via Ethereum's `eth_gasPrice` API, targeting <2 seconds per batch of 100 cycles; (c) Gas Cost Analysis: Profile `verifyAndThrottle` on Arbitrum L2 using `hardhat` gas profiling tools, ensuring <150k gas units for recursive SNARK verification; (d) Narrowing Effect Mitigation: Conduct A/B testing on agent cohorts via `Flask`-based analytics APIs, measuring pre/post branching factor changes with SciPy's `ttest_ind` for p < 0.05.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of autonomous AI agents operating in trust-critical systems [5], part
 
 ## Novelty
 
-PIE Anchoring introduces the first use of real-time cognitive entropy (Shannon entropy derived from decision-tree breadth) as a dynamic, cryptographic prerequisite for DID validity, distinct from P2's static identity methods and P1's social-topic correlations. It uniquely combines ZK-proofs, VDFs, and recursive SNARKs for entropy verification, which are not addressed in any prior art [P1-P5].
+PIE Anchoring introduces the first use of real-time cognitive entropy (Shannon entropy derived from decision-tree breadth) as a dynamic, cryptographic prerequisite for DID validity, distinct from P1's static identity methods [P2] and P1's social-topic correlations [P1]. It uniquely combines ZK-proofs, VDFs, and recursive SNARKs for entropy verification, which are not addressed in any prior art [P1-P5]. Unlike P2's static cryptographic engines, PIE dynamically adjusts permissions based on exploratory horizon metrics.
 
 ## Ecosystem use
 

@@ -24,11 +24,11 @@ A dynamic feedback loop that integrates preference-based inverse reinforcement l
 
 ## How it works
 
-4. If divergence exceeds a threshold $\theta_{high}$ AND the current convention has been active for a minimum dwell time $\tau_{min}$ (hysteresis), the **code surface `agent.core.router.evaluate_divergence()`** (role: real-time value divergence calculator) triggers a switch to a pre-learned alternative communication convention... 5. The **code surface `agent.comm.protocol.handle_switch_vote()`** (role: consensus manager with timeout enforcement) handles proposal broadcasting and confirmation aggregation with strict timeout handling...
+4. If divergence exceeds a threshold $\theta_{high}$ AND the current convention has been active for a minimum dwell time $\tau_{min}$ (hysteresis), the **code surface `agent.core.router.evaluate_divergence()`** (role: real-time value divergence calculator) triggers a switch to a pre-learned alternative communication convention via the **UI endpoint '/api/v1/switch-protocol'**. 5. The **code surface `agent.comm.protocol.handle_switch_vote()`** (role: consensus manager with timeout enforcement) handles proposal broadcasting and confirmation aggregation with strict timeout handling, accessible via the **UI page 'Divergence Monitor Dashboard'**.
 
 ## Materials / steps
 
-7. ...report 'Switch Efficacy Ratio' (SER) calculated via data from `agent.core.router.evaluate_divergence()` (utility gain) and `agent.comm.protocol.handle_switch` (confirmation logs), where SER = $\frac{\Delta V_{pre} - \Delta V_{post}}{\Delta V_{pre}} \times 100\%$ (percentage reduction in value divergence post-switch) as a verifiable metric of convention-switch success.
+7. ...report 'Switch Efficacy Ratio' (SER) calculated via data from `agent.core.router.evaluate_divergence()` (utility gain) and `agent.comm.protocol.handle_switch` (confirmation logs), where SER = $\frac{\Delta V_{pre} - \Delta V_{post}}{\Delta V_{pre}} \times 100\%$ (percentage reduction in value divergence post-switch) as a verifiable metric of convention-switch success. Pre-switch value divergence is sampled every 500ms via `evaluate_divergence()` and stored in `agent.metrics.switch_logs` for SER computation.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI researchers developing cooperative multi-agent systems, specifically those de
 
 ## Novelty
 
-The invention is distinguished by its closed-loop, causal mechanism that uses real-time preference-based IRL to detect value divergence and trigger deterministic convention switches via **code surfaces `agent.core.router.evaluate_divergence()`** and **`agent.comm.protocol.handle_switch_vote()`**, fundamentally differing from recent dynamic convention-switching literature (e.g., extensions of [2]) which often rely on reactive emergent signaling without explicit reward alignment. Specifically, this work addresses the gap where existing dynamic methods suffer from oscillation due to lack of hysteresis or implicit signaling without verifiable reward alignment (SER metric) [3].
+The invention's closed-loop, causal mechanism using real-time preference-based IRL to detect value divergence and trigger deterministic convention switches via **code surfaces `agent.core.router.evaluate_divergence()`** and **`agent.comm.protocol.handle_switch_vote()`** differs from prior art (e.g., [P1]-[P5]) by introducing **hysteresis-based convention switching** and a **verifiable SER metric** for quantifying success. Unlike [P1]-[P2] (natural language databases) or [P4] (gaming data transfer), it solves the problem of **oscillation in dynamic convention-switching systems** through explicit reward alignment and hysteresis, which are absent in prior art.
 
 ## Ecosystem use
 

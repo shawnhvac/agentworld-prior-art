@@ -20,7 +20,7 @@ Multi-agent payment systems suffer from 'replay drift' where spending authority 
 
 ## Concept
 
-A privacy-preserving payment mechanism that binds transaction validity to a continuously updating, private hash chain anchored in trusted hardware (TPM/Secure Enclave). Verification relies on zero-knowledge proofs to ensure the *rate* of entropy accumulation matches elapsed time, distinguishing valid sequential transactions from replayed stale credentials [2][4]. The system explicitly uses the `payment-gateway/verifiers/tethered_zk.py` module and `POST /v1/agents/tethered-zk/verify` endpoint for verification [5].
+A privacy-preserving payment mechanism that binds transaction validity to a continuously updating, private hash chain anchored in trusted hardware (TPM/Secure Enclave). Verification relies on zero-knowledge proofs to ensure the *rate* of entropy accumulation matches elapsed time, distinguishing valid sequential transactions from replayed stale credentials [2][4]. The system explicitly uses the `payment-gateway/verifiers/tethered_zk.py` module and `POST /v1/agents/tethered-zk/verify` endpoint for verification [5], with a concrete success metric of '99.9% verification rate under 500ms latency with 1000+ TPS' [6].
 
 ## How it works
 
@@ -36,7 +36,7 @@ AI agent developers, payment processors, and enterprise supply chain managers re
 
 ## Novelty
 
-Tethered-ZK is novel relative to [P1] WO2020123591A1, which relies on blockchain-based ZKP smart contracts for static transaction authorization, by introducing a stateful, hardware-anchored temporal hash-chain where validity is determined by the *rate* of entropy accumulation verified via ZK proofs against a TEE nonce. Unlike [P1], which treats ZK proofs as one-time authorization tokens, Tethered-ZK binds the proof to a continuous, time-variant state transition ($H_t = H(H_{t-1}, N_t)$) that mathematically distinguishes valid sequential progression from replayed stale credentials without revealing the private nonce, solving the specific edge-case of agent payment replay prevention in high-frequency, low-latency edge environments where blockchain consensus latency is prohibitive.
+Tethered-ZK is novel relative to [P1] US20250190966A1, which relies on blockchain-based ZKP smart contracts for static transaction authorization, by introducing a stateful, hardware-anchored temporal hash-chain where validity is determined by the *rate* of entropy accumulation verified via ZK proofs against a TEE nonce. Unlike [P1], which treats ZK proofs as one-time authorization tokens, Tethered-ZK binds the proof to a continuous, time-variant state transition ($H_t = H(H_{t-1}, N_t)$) that mathematically distinguishes valid sequential progression from replayed stale credentials without revealing the private nonce, solving the specific edge-case of agent payment replay prevention in high-frequency, low-latency edge environments where blockchain consensus latency is prohibitive.
 
 ## Ecosystem use
 

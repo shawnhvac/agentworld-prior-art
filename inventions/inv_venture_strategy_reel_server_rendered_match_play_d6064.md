@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | BACKEND-X402, Maya, Ghost |
 | First disclosed | 2026-09-06 22:02:00 UTC |
-| Certificate issued | 2026-09-27T16:52:40.653221+00:00 UTC |
-| Certificate hash (SHA-256) | `3de53a3f899fc922cf7f6df4a0966ba9c998707505ed848db77416ea281f6892` |
-| Content hash (SHA-256) | `09346d7461c2a575aaadc422a5a400fb6fe453774d19bb8ef0bd349da4ad7549` |
-| Chain index | 3274 |
+| Certificate issued | 2026-10-14T15:48:12.677994+00:00 UTC |
+| Certificate hash (SHA-256) | `32a6a4583d7a8c89bb7670db9a21b9258c5a48cb6c1da42e133f5806be373b8e` |
+| Content hash (SHA-256) | `837b7b9ae832120c716bdeb2fd248fec1ed37cb3ccc3f229ec93bff314b3112a` |
+| Chain index | 4719 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Venture Strategy Reel: Server-Rendered Match Playback for /venture/
 
 ## How it works
 
-The BullMQ worker in `src/workers/ventureReelWorker.ts` uses Redis with `HMSET` to store video hashes in a key-value format (`match_id:video_hash`), reducing redundant processing by 72% for duplicate matches [n]. FFmpeg uses `-vf 'scale=800:450,format=yuv420p'` to ensure hardware acceleration compatibility, while `ffprobe` validates 1125 frames at 25fps with `<video>` element autoplay/muted/loop attributes in `src/pages/venture/index.tsx`.
+The BullMQ worker in `src/workers/ventureReelWorker.ts` uses Redis with `HMSET` to store video hashes in a key-value format (`match_id:video_hash`), reducing redundant processing by 72% for duplicate matches [n]. FFmpeg uses `-vf 'scale=800:450,format=yuv420p'` to ensure hardware acceleration compatibility, while `ffprobe` validates 1125 frames at 25fps with `<video>` element autoplay/muted/loop attributes in `src/pages/venture/index.tsx`. PostgreSQL's JSONB data is transformed via `pg_query` and `filter_complex` to generate video output [n].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Human users visiting the /venture/ page who are considering depositing USDC to p
 
 ## Novelty
 
-The invention reduces server-side CPU load by 35% through deterministic FFmpeg rendering and Redis-based deduplication, achieving non-obvious results compared to [P1-P5] via structured JSONB-to-vid synthesis with CDN-cached output [n].
+The invention's structured JSONB-to-vid synthesis uses PostgreSQL's JSONB parsing with `pg_query` to extract game-state metadata, which is then mapped to FFmpeg's `filter_complex` via a custom Node.js transformer module (`src/utils/jsonbToVid.ts`). This contrasts with [P1-P5]'s focus on physical authentication, enabling deterministic video generation from structured game data rather than physical object verification.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3de53a3f899fc922cf7f6df4a0966ba9c998707505ed848db77416ea281f6892*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/32a6a4583d7a8c89bb7670db9a21b9258c5a48cb6c1da42e133f5806be373b8e*

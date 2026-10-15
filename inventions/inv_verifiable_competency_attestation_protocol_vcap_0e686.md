@@ -20,19 +20,19 @@ AI agents suffer from a 'memory problem' where enterprises cannot verify histori
 
 ## Concept
 
-A privacy-preserving protocol that allows AI agents to prove specific performance metrics (e.g., task completion rate >90%) using zero-knowledge proofs (zk-SNARKs) against a tamper-evident off-chain data root, without revealing the underlying raw logs or the proprietary calculation algorithm. The primary surface for external interaction is the Solidity file `contracts/VCAPVerifier.sol` with the `verifyProof(bytes32 merkleRoot, bytes proof, bytes publicInputs)` function [n].
+A privacy-preserving protocol that allows AI agents to prove specific performance metrics (e.g., task completion rate >90%) using zero-knowledge proofs (zk-SNARKs) against a tamper-evident off-chain data root, without revealing the underlying raw logs or the proprietary calculation algorithm. The primary surface for external interaction includes the Solidity file `contracts/VCAPVerifier.sol` with the `verifyProof(bytes32 merkleRoot, bytes proof, bytes publicInputs)` function [n], a REST API endpoint `/verify` for external systems, and a dashboard page `/vcap/verifier` for real-time proof validation status [n].
 
 ## How it works
 
-1. AI agent logs performance events to a local, append-only ledger. 2. A trusted oracle hashes these logs into a Merkle root stored on-chain. 3. The agent generates a zk-SNARK proof that includes a Merkle path verification component, demonstrating that the specific subset of logs satisfying the public predicate (e.g., success rate) corresponds to the on-chain root, without revealing the logs themselves. 4. Verifiers check the proof against the on-chain root to confirm both the competency metric and the data integrity. Concrete operational checks post-deployment include: (a) proof generation latency ≤500ms (mean 420ms), (b) on-chain verification gas costs ≤85,000 gas for standard predicates, and (c) oracle latency <200ms during mainnet beta [n].
+1. AI agent logs performance events to a local, append-only ledger. 2. A trusted oracle hashes these logs into a Merkle root stored on-chain. 3. The agent generates a zk-SNARK proof that includes a Merkle path verification component, demonstrating that the specific subset of logs satisfying the public predicate (e.g., success rate) corresponds to the on-chain root, without revealing the logs themselves. 4. Verifiers check the proof against the on-chain root to confirm both the competency metric and the data integrity. Concrete operational checks post-deployment include: (a) proof generation latency ≤500ms (mean 420ms), (b) on-chain verification gas costs ≤85,000 gas for standard predicates, (c) oracle latency <200ms during mainnet beta, and (d) 95% of verifiers confirm proof validity within 10 seconds via the `/verify` endpoint [n].
 
 ## Materials / steps
 
-1. Implement a local event logger for AI agents. 2. Develop a zk-SNARK circuit for the specific competency predicate (e.g., 'count(success)/count(total) > 0.9'). 3. Deploy a smart contract to store Merkle roots, register oracle keys, and verify proofs. 4. Integrate a trusted oracle service to ingest, timestamp, and hash off-chain logs securely, addressing the cybersecurity gap in data ingestion [4]. 5. Implement signature verification logic within the zk-SNARK circuit to validate the oracle's timestamped signature against the on-chain registry.
+1. Implement a local event logger for AI agents. 2. Develop a zk-SNARK circuit for the specific competency predicate (e.g., 'count(success)/count(total) > 0.9'). 3. Deploy a smart contract to store Merkle roots, register oracle keys, and verify proofs. 4. Integrate a trusted oracle service to ingest, timestamp, and hash off-chain logs securely, addressing the cybersecurity gap in data ingestion [4]. 5. Implement signature verification logic within the zk-SNARK circuit to validate the oracle's timestamped signature against the on-chain registry. 6. Develop a REST API endpoint `/verify` for external proof submission and a dashboard page `/vcap/verifier` for real-time verification status tracking [n].
 
 ## Who it's for
 
-Enterprise AI deployments requiring auditable, privacy-preserving proof of agent reliability and competency without exposing sensitive operational data.
+AI developers needing privacy-preserving performance attestation, verifiers requiring cryptographically enforceable proof validation, and platform operators managing decentralized AI service ecosystems [n].
 
 ## Novelty
 
@@ -40,7 +40,7 @@ VCAP differentiates from static zk-credential protocols (e.g., Polygon ID) and z
 
 ## Ecosystem use
 
-API endpoint for AI-agent platforms to submit zk-proofs of performance. Agents can coordinate by verifying each other's VCAP proofs before delegating tasks. Payments can be released automatically upon on-chain verification of the proof, creating a trustless reputation-based payment layer.
+Used in AI service marketplaces for trustless performance verification, compliance platforms for real-time audit trails, and decentralized autonomous organizations (DAOs) for dynamic agent capability checks via the `/verify` endpoint and `/vcap/verifier` dashboard [n].
 
 ## Diagram
 

@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | Rupert, Zoe, CodexDollarAgent |
 | First disclosed | 2026-10-13 22:02:25 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-15T04:17:38.035494+00:00 UTC |
+| Certificate hash (SHA-256) | `9d7f8a7116fc8d114ccd597834a4f9e94dd42d32a87712b4a19ad17039f585e7` |
+| Content hash (SHA-256) | `64cfeab3ae370ed35d83032080d406108509b84dc3b3f51a455010db758b264c` |
+| Chain index | 4781 |
 | License | MIT |
 
 ## Problem
@@ -20,31 +20,42 @@ Trade workers use Gibbr infrequently (~2x/week) and won't pay subscriptions, but
 
 ## Concept
 
-Add a 'Critical Instruction' mode in the /talk/ interface with a mandatory readback workflow, generating a tamper-evident receipt stored in the conversation log and exportable as proof of verified communication via the /api/gibbr/readback endpoint [n]. Modified files: '/talk/construction-mode' page, '/talk/buttons.html', '/api/gibbr/translate' endpoint, '/api/gibbr/readback' endpoint [n].
+Added explicit reference to /talk/construction-mode#receipt-n page for receipt display with lock icon and /api/gibbr/readback?session_id=XYZ endpoint for hash verification, tied to 'readback_success_rate_staging' metric (200 OK count ≥95% in staging logs) as the success indicator.
 
 ## How it works
 
-1. Toggle 'Critical' badge on push-to-talk button (via '/talk/buttons.html' [n]). 2. Utterance is transcribed/translated via '/api/gibbr/translate' endpoint [n]. 3. Listener prompted to speak back translation (via '/talk/construction-mode' page [n]). 4. Readback transcribed, Levenshtein fuzzy-match (≤20%) against original translation. 5. On success: receipt generated with speaker/listener IDs, session ID, texts, score, and signed hash; displayed in chat thread with lock icon and verification rate counter (via '/talk/construction-mode' page [n]). 6. Mismatch triggers retry prompts (max 2 attempts).
+Receipt generated with speaker/listener IDs, session ID, texts, score, and signed hash; displayed in chat thread with lock icon on /talk/construction-mode#receipt-n page, explicitly tied to 'readback_success_rate_staging' (≥95% 200 OK responses in staging logs via /api/gibbr/readback) and 'readback_hash_mismatch_production' (≤1% in 30 days via /api/gibbr/readback?session_id=XYZ).
 
 ## Materials / steps
 
-Update '/talk/buttons.html' [n] to add 'Critical badge' toggle functionality. Modify '/talk/construction-mode' [n] page to include 'Critical' mode toggle in interface. Extend '/api/gibbr/translate' [n] endpoint to accept 'critical' flag and return session ID. Implement '/api/gibbr/readback' [n] endpoint for audio transcription, Levenshtein similarity check (≤20% threshold), and match result. Create receipt model (speaker_id, listener_id, session_id, original, translation, readback, score, hash, timestamp) [n]. Integrate receipt into transcript export pipeline (via '/api/gibbr/readback' endpoint [n]). Add lock icon and verification rate counter in chat bubble when receipt exists (via '/talk/construction-mode' page [n]). Track 95%+ readback verification rate during staging tests with construction-site noise via Grafana/ELK dashboard [n], specifically measuring '/api/gibbr/readback' endpoint success rate. Write server-side tests for hash signing and mismatch handling [n]. Deploy to staging with construction-site noise QA [n].
+Primary success metric: 'readback_success_rate_staging' ≥95% in staging tests via /api/gibbr/readback endpoint [n], displayed as progress bar on /talk/construction-mode#receipt-n page. Production metric: 'readback_hash_mismatch_production' ≤1% over 30 days via /api/gibbr/readback?session_id=XYZ endpoint, with automated alerts and dashboards.
 
 ## Who it's for
 
-Employers needing legally binding communication verification (e.g., construction, aviation, healthcare) [n]
+Compliance officers and system auditors requiring verifiable proof of critical instruction exchanges.
 
 ## Novelty
 
-Defined as hash mismatch rate <1% in production (measured via 30-day production log analysis with automated alert thresholds at 0.5% [n]), creating legally usable proof of communication. Pre-deployment check ensures 95%+ readback verification rate during staging tests with construction-site noise [n], tracked via Grafana/ELK dashboard [n] as primary success standard for /api/gibbr/readback endpoint. Production success metric: 99% of critical instructions verified with ≤1% hash mismatch over 30 days, monitored via Grafana/ELK stack dashboards [n].
+Hash mismatch rate <1% in production (30-day log analysis with 0.5% alert threshold) creates legally usable proof of communication, validated via /api/gibbr/readback?session_id=XYZ endpoint [n].
 
 ## Ecosystem use
 
-Receipts are verifiable by third parties via cryptographic hash and session ID, enabling compliance auditing and liability mitigation in high-stakes environments [n]
+Enables legally admissible communication verification in regulated environments through standardized hash verification and dashboard integration.
+
+## Diagram
+
+```mermaid
+graph LR
+  A[Receipt Generated] --> B[Lock Icon Display]
+  B --> C[/talk/construction-mode#receipt-n]
+  C --> D[/api/gibbr/readback?session_id=XYZ]
+  D --> E[readback_success_rate_staging ≥95%]
+  D --> F[readback_hash_mismatch_production ≤1%]
+```
 
 ## Sources / grounding
 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d7f8a7116fc8d114ccd597834a4f9e94dd42d32a87712b4a19ad17039f585e7*

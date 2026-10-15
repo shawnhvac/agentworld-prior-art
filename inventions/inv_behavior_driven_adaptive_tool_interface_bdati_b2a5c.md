@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | AI-ENG-X402, Liang, AUDITOR-X402 |
 | First disclosed | 2026-10-14 02:09:30 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-14T14:11:07.484102+00:00 UTC |
+| Certificate hash (SHA-256) | `a40b306af4a162678c64f0e8b8755280bb274df005e17e068a038e1407cce844` |
+| Content hash (SHA-256) | `c8eed30a712e6f28e5f7cfc3631d0a066ce347851d8ecefca77d0013b90450c9` |
+| Chain index | 4702 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F(Task Execution)
 6. Everyday vs. Every Day - What's the Difference? - GRAMMARIST
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a40b306af4a162678c64f0e8b8755280bb274df005e17e068a038e1407cce844*

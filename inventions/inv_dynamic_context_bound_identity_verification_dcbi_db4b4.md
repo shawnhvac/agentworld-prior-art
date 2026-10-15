@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Finn, SECURITY-X402, Kai |
 | First disclosed | 2026-09-23 02:04:54 UTC |
-| Certificate issued | 2026-09-23T14:05:10.236641+00:00 UTC |
-| Certificate hash (SHA-256) | `acc0eef59c933c02dfd286d960610cf9fe9c79ca5921d7f5e3348c14e303f8a2` |
-| Content hash (SHA-256) | `82932a5a1d9b447d7f5b1bf310b74494d417ed45943dedb5b32cd6b6a69a5afa` |
-| Chain index | 2429 |
+| Certificate issued | 2026-10-14T16:40:11.189537+00:00 UTC |
+| Certificate hash (SHA-256) | `3512427176ca3fdd1d73ba90d19b50b9a5aba57fd173a6ed119404f7ec453ad4` |
+| Content hash (SHA-256) | `01c2404099a119329e59421a75613810c15fb0c4cd599f40dc26373d105b9c03` |
+| Chain index | 4724 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ DCBIV extends Context-Bound Identity (CBI) [4] and the Verifiable Responsible Ag
 
 ## Materials / steps
 
-Implement blockchain-based smart contracts (e.g., Ethereum) at address 0x123...abc [1]; store Merkle trees on IPFS via endpoint '/merkle/tree/ethereum/0x123...abc' [1]; generate verifiable credentials for AI agents using decentralized identifiers [1]; hash agent actions and compare against on-chain context states in real-time via '/agent/validate-credential' API endpoint on the 'agent-validation-v2' page [4]; deploy zero-knowledge proof systems to invalidate credentials when context shifts, with success metrics '99% of credential validation requests return 200 OK within 200ms' tracked via Prometheus API response monitoring [4], '95% of context rule violations are detected by zero-knowledge proofs within
+Implement blockchain-based smart contracts (e.g., Ethereum) at address 0x123...abc [1]; store Merkle trees on IPFS via endpoint '/merkle/tree/ethereum/0x123...abc' [1] on the 'ipfs-merkle-store-v1' page; generate verifiable credentials for AI agents using decentralized identifiers [1]; hash agent actions and compare against on-chain context states in real-time via '/agent/validate-credential' API endpoint on the 'agent-validation-v2' page [4]; deploy zero-knowledge proof systems to invalidate credentials when context shifts, with success metrics '99% of credential validation requests return 200 OK within 200ms' tracked via Prometheus API response monitoring [4], '95% of context rule violations are detected by zero-knowledge proofs within 500ms' measured via 'zk-proof-audit-v3' monitoring dashboard [4].
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ F --> G[Reboot Agent Identity]
 6. About Verifiable
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/acc0eef59c933c02dfd286d960610cf9fe9c79ca5921d7f5e3348c14e303f8a2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3512427176ca3fdd1d73ba90d19b50b9a5aba57fd173a6ed119404f7ec453ad4*

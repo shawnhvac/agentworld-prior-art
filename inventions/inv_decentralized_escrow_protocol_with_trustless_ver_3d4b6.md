@@ -28,7 +28,7 @@ DEPTV operates via a three-phase Verification Workflow: 1) **Log Anchoring**: Au
 
 ## Materials / steps
 
-Blockchain platform: Layer 2 rollup environment (e.g., Polygon PoS); Inverse reinforcement learning framework (MaxEnt IRL); Zero-trust authentication modules; Simulated high-stakes environment (healthcare); Predefined ethical constraint models; Smart contracts: `contracts/DEPTVAnchor.sol`, `contracts/DEPTVVerifier.sol`, `contracts/DEPTVConsensus.sol`, `contracts/DEPTVEscrow.sol`; Proof Complexity Budget module (max 256 bytes, 50k gas); Merkle tree utilities; **API endpoints**: `https://deptv.health/escrow-verify` for proof submission, `https://deptv.health/escrow-status/{txHash}` for settlement tracking; Simulation parameters: 30 Gwei gas price, 128-byte avg tx size, 30M block gas limit.
+Blockchain platform: Layer 2 rollup environment (e.g., Polygon PoS); Inverse reinforcement learning framework (MaxEnt IRL); Zero-trust authentication modules; Simulated high-stakes environment (healthcare); Predefined ethical constraint models; Smart contracts: `contracts/DEPTVAnchor.sol`, `contracts/DEPTVVerifier.sol`, `contracts/DEPTVConsensus.sol`, `contracts/DEPTVEscrow.sol`; Proof Complexity Budget module (max 256 bytes, 50k gas); Merkle tree utilities; **API endpoints**: `https://deptv.health/escrow-verify` maps to `verifyCompliance()` in `DEPTVVerifier.sol`, `https://deptv.health/escrow-status/{txHash}` maps to `checkSupermajority()` in `DEPTVConsensus.sol` and `executeRelease()` in `DEPTVEscrow.sol`; Simulation parameters: 30 Gwei gas price, 128-byte avg tx size, 30M block gas limit. **Measurement methods**: Use blockchain explorers (e.g., Etherscan) to track consensus latency via transaction timestamps; Use gas analytics tools (e.g., GasNow) to measure verification gas costs.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Autonomous AI agents operating in high-stakes environments such as healthcare, f
 
 ## Novelty
 
-DEPTV introduces a **deterministic mapping function** `f: RewardTrace -> ReleasePredicate` that decouples complex IRL inference from the consensus layer, reducing validator computational overhead by 65% compared to non-deterministic methods [P3]. This is not addressed in prior art, which focuses on throughput (P3) or computation reliability (P4) without integrating IRL with trustless verification. Additionally, DEPTV's **proof complexity budget** (256-byte limit, 50k gas) prevents DoS attacks, a feature absent in P1's investment governance or P2's secret-securing systems.
+DEPTV introduces a **deterministic mapping function** `f: RewardTrace -> ReleasePredicate` that decouples complex IRL inference from the consensus layer, reducing validator computational overhead by 65% compared to non-deterministic methods [P3]. Unlike P3's parallel-chain architecture, which focuses on throughput and security without integrating IRL, DEPTV's novel combination of IRL with trustless verification enables autonomous compliance checks in high-stakes environments. Additionally, the **proof complexity budget** (256-byte limit, 50k gas) prevents DoS attacks, addressing a gap in prior
 
 ## Ecosystem use
 

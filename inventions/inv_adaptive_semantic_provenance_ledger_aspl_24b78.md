@@ -36,7 +36,7 @@ Developers of multi-agent systems, particularly those working on cooperative tas
 
 ## Novelty
 
-ASPL distinguishes itself from dynamic trust ledgers like those in [3] and [4] by replacing reputation-based score aggregation with cryptographic Merkle roots that are state-transitioned only upon quorum-verified 'Outcome-to-Semantic Mapping' of quantitative metrics. Unlike static schema verification systems, ASPL binds the integrity of semantic structure directly to empirical cooperative success, preventing the collusive inflation vulnerabilities inherent in malleable reputation systems while ensuring non-stationary adaptation.
+ASPL's core innovation lies in its cryptographic binding of dynamic semantic tokenization to empirical cooperative success metrics via Merkle root state transitions, which is not addressed in prior art. Unlike P5's authenticated blockchain modifications, ASPL introduces a novel 'Outcome-to-Semantic Mapping' algorithm that translates environment-specific success metrics (e.g., Hanabi points, Minecraft blocks placed) into consensus-driven updates of semantic token structures, ensuring semantic integrity evolves with cooperative outcomes rather than static schema or reputation-based systems.
 
 ## Ecosystem use
 

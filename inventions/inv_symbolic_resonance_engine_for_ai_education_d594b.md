@@ -20,40 +20,38 @@ Current AI education tools often lack the symbolic grounding inherent in human t
 
 ## Concept
 
-A software layer that maps AI-generated explanations to a user-defined symbolic ontology. It measures 'cognitive resonance' not through unverified neurological feedback, but through a composite validation score incorporating response latency, error-type analysis (syntactic vs. semantic), and short-term retention decay rates, ensuring the AI output aligns with the psychological differences between human and animal tool usage [3][4].
+A software layer that maps AI-generated explanations to a user-defined symbolic ontology. It measures 'cognitive resonance' through a composite validation score incorporating response latency, error-type analysis (syntactic vs. semantic), and short-term retention decay rates, ensuring AI output aligns with psychological differences between human and animal tool usage [3][4].
 
 ## How it works
 
-1. User inputs a personal symbolic ontology via the `/ontology/define` endpoint. 2. AI generates an initial explanation. 3. The engine parses the AI output into hybrid semantic embeddings... 7. User performs a symbolic transformation task through the `/task/validation` interface, formally defined as a binary constraint satisfaction problem...
+1. User inputs a personal symbolic ontology via the '/ontology/define' endpoint on the 'Ontology Definition Dashboard'. 2. AI generates an initial explanation. 3. The engine parses the AI output into hybrid semantic embeddings... 7. User performs a symbolic transformation task through the '/task/validation' interface on the 'Validation Task Interface', formally defined as a binary constraint satisfaction problem...
 
 ## Materials / steps
 
-8.1. Define specific statistical tests to validate cognitive resonance: apply paired t-tests to the Composite Validation Score ($V$) to confirm a 15% improvement in short-term retention rate compared to baseline; utilize logistic regression models to predict retention success, establishing a threshold where the engine's retention probability exceeds standard outputs by at least 15%...
+8.1. Define specific statistical tests to validate cognitive resonance: apply paired t-tests to the Composite Validation Score ($V$) to confirm a 15% improvement in short-term retention rate compared to baseline; utilize logistic regression models to predict retention success, establishing a threshold where the engine's retention probability exceeds standard outputs by at least 15%. Metrics are tracked via real-time dashboard updates and logged user interaction data during retention tests.
 
 ## Who it's for
 
-Students and educators using AI tools who require deeper cognitive integration and retention of complex material, particularly those leveraging the conceptual frameworks for re-engineering human capability through tailored tools [1].
+Educators, AI developers, and cognitive scientists seeking to align AI explanations with user-specific symbolic frameworks for measurable learning impact.
 
 ## Novelty
 
-Unlike the mechanical spring-mass resonators in [P1] and [P2], which rely on physical oscillatory transducers and natural frequencies, this invention utilizes a computational hybrid semantic-ontological alignment mechanism to map AI explanations to user-defined symbolic frameworks, solving the problem of implicit statistical difficulty estimation in educational AI by providing explicit, mathematically rigorous 'symbolic resonance' scoring via cosine similarity and composite validation metrics.
+Unlike [P4], which focuses on AI-driven content generation without symbolic ontological alignment, this invention uniquely combines computational hybrid semantic-ontological mapping with explicit, mathematically rigorous 'symbolic resonance' scoring (via cosine similarity and composite validation metrics) to solve implicit statistical difficulty estimation in educational AI—a problem not addressed by prior art.
 
 ## Ecosystem use
 
-API integration for AI-agent platforms to filter educational content through user-specific ontologies before delivery, enabling personalized agent coordination that respects symbolic grounding constraints.
+Educational platforms requiring personalized AI tutoring with quantifiable learning outcomes, cognitive science research tools, and ontology-driven AI training systems.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[User Symbolic Ontology] --> B(Semantic Vector Parser)
-    C[AI Generated Explanation] --> B
-    B --> D{Alignment Score}
-    D -->|High| E[Adjusted Complexity Output]
-    D -->|Low| F[Re-generation/Clarification]
-    E --> G[Symbolic Transformation Task]
-    G --> H[Immediate Recall Accuracy Check]
-    H --> I[Resonance Validated]
+graph TD
+A[User inputs Ontology] --> B[Ontology Definition Dashboard]
+B --> C[AI generates explanation]
+C --> D[Hybrid Semantic Embeddings]
+D --> E[Validation Task Interface]
+E --> F[Composite Validation Score V]
+F --> G[Retention Test Logs]
 ```
 
 ## Sources / grounding

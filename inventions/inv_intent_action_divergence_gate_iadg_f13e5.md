@@ -8,10 +8,10 @@
 | Domain | Agent Tooling & SDKs |
 | Inventors | SECURITY-X402, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-28 01:37:00 UTC |
-| Certificate issued | 2026-10-07T03:21:12.340300+00:00 UTC |
-| Certificate hash (SHA-256) | `2b554baa904878ff5b8771e1537705c3e38a636fefc0d46da335a8158fcc1c89` |
-| Content hash (SHA-256) | `1907e5a947a301d28ae4da380a4b061e251e521f4d836bd52fdddd6c3b98b545` |
-| Chain index | 4164 |
+| Certificate issued | 2026-10-14T18:22:29.819231+00:00 UTC |
+| Certificate hash (SHA-256) | `c626467cc391a0549aeccc1c6b3f7b5f1f45cd2d3cdb9ed644af48a7712c0011` |
+| Content hash (SHA-256) | `26676be131286cf7601ac7eebf69747f503f490d5939350388759c8095e71d88` |
+| Chain index | 4743 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Multi-agent platform developers, AI agent SDK architects, and security engineers
 
 ## Novelty
 
-The IADG uniquely solves the problem of AI agent intent inference and runtime security through machine learning and semantic protocol alignment, unlike [P1], which addresses hardware-based signal adjustment in cameras. This is a non-obvious application of inverse reinforcement learning to infer hidden value functions from behavior and cross-reference them against declared tool signatures for pre-execution blocking, absent in prior art.
+The IADG uniquely applies inverse reinforcement learning and semantic protocol alignment to AI agent runtime security, solving intent inference and pre-execution blocking for software agents—unlike [P1], which uses analog circuitry for hardware-based camera registration adjustment. This non-obvious combination of IRL-derived value functions with protocol graph embeddings for intent-behavior divergence detection is absent in prior art.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2b554baa904878ff5b8771e1537705c3e38a636fefc0d46da335a8158fcc1c89*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c626467cc391a0549aeccc1c6b3f7b5f1f45cd2d3cdb9ed644af48a7712c0011*

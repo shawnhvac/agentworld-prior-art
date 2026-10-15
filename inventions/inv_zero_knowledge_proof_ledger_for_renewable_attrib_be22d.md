@@ -28,7 +28,7 @@ Grid operators commit hashed sensor data to a lightweight blockchain. A prover g
 
 ## Materials / steps
 
-1. Implement Halo2 ZK-SNARK circuit for energy attribute verification, including hash-to-field mapping logic and a state transition module that incorporates the previous block's sensor data hash as a public input. 2. Define specific Halo2 constraints for energy origin verification to ensure end-to-end traceability via the cryptographic chain. 3. Integrate with lightweight blockchain for immutable record-keeping. 4. Create verifier module to check proofs against policy standards [4]. 5. Develop REST API for grid operators to submit hashed telemetry via endpoint `POST /v1/proofs/submit` (accepting JSON payload with `sensor_hash`, `policy_id`, and `zk_proof`), and define blockchain smart contract function `settleAttribute(uint256 tokenId, bytes32 proofHash)` for atomic state transitions. 6. Execute Pilot Trial Protocol: Deploy on 50 specific grid nodes equipped with high-frequency smart meters (sensor type: Type-4G LTE enabled) running on standardized hardware (Intel Xeon E-2236, 32GB RAM, NVIDIA A100 GPUs) for a 14-day duration to empirically verify performance; the pilot is considered successful only if the 95th percentile proof generation latency remains below 120ms with a 99% confidence interval and the system sustains 100-500 TPS for the full 14-day duration without data loss. 7. Failure Analysis: Define acceptable error rates where proof generation failures must remain below 0.01% and verification timeouts must not exceed 500ms per transaction. 8. Pre-Pilot Benchmarking: Conduct a controlled simulation using a standard Ethereum Layer 2 (L2) centralized database baseline on identical hardware (Intel Xeon E-2236, 32GB RAM, NVIDIA A100 GPUs) to establish comparative metrics. The baseline data must be generated and documented prior to the pilot start to provide concrete validation metrics for the pilot success criteria, targeting a 73% reduction in latency (target <120ms) and optimized throughput within the 100-500 TPS range relative to the measured baseline.
+6. Execute Pilot Trial Protocol: ... success criteria explicitly tied to cryptographic state machine's atomic transitions (e.g., '95th percentile proof generation latency <120ms while maintaining <0.01% proof generation failure rate during atomic state transitions'). 7. Failure Analysis: ... error rates linked to cryptographic invalidation logic (e.g., 'verification timeouts must not exceed 500ms per atomic state transition').
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Grid operators, renewable energy producers, and policy regulators seeking to red
 
 ## Novelty
 
-The invention distinguishes itself from existing Renewable Identification Number (RIN) and Green Certificate (GC) ledger implementations by enforcing atomic 'spent' status at the cryptographic layer via ZK-circuit constraints, rather than relying on administrative or off-chain database checks, thereby solving the double-counting vulnerability inherent in current privacy-preserving proposals while maintaining sub-120ms latency and 100-500 TPS throughput.
+The invention improves on P2's tokenization with DLT by introducing atomic 'spent' status enforcement via ZK-SNARK circuit constraints (not achievable with P2's encryption-only approach), and on P5's commodity asset tokenization by adding cryptographic chain integrity through hash-to-field mapping and state transition mechanisms that prevent double-counting of renewable attributes, which are absent in all prior art.
 
 ## Diagram
 

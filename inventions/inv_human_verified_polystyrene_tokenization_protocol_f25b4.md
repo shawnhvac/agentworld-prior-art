@@ -36,7 +36,7 @@ Recycling facilities, municipalities, and corporations seeking verified plastic 
 
 ## Novelty
 
-Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with specific Operator App screen IDs ('screen.operator.verification.confirmation') and enforceable success metrics audited via monthly third-party verification of false positive/negative rates (target: 95% monthly accuracy in verification payloads [3]), using system-generated audit logs from 'screen.operator.audit.log' for validation.
+Unlike [P5], this protocol introduces 'Human-Verified Idempotent Minting' with mandatory blockchain tokenization (ERC-20) of verified EPS recycling volumes, enforced via specific Operator App screens ('screen.operator.verification.confirmation') and auditable success metrics (95%+ monthly accuracy via third-party analysis of 10,000+ payloads [3]). [P5] focuses on authentication via physical dispersion patterns, not tokenization or hybrid IoT-human verification systems.
 
 ## Ecosystem use
 

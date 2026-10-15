@@ -24,11 +24,11 @@ DEC-NL is a system that uses real-time affective and cognitive feedback from all
 
 ## How it works
 
-DEC-NL modifies 'real-time-dashboard.html' by adding a 'strategy-heatmap-widget' showing agent state-informed language strategy shifts in real time, and a 'policy-gradient-tracker' visualizing reward function adjustments. The '/api/dec-nl/v1' endpoint includes a 'dynamic-policy-adjustment' subroute for real-time negotiation strategy recalibration.
+DEC-NL modifies 'real-time-dashboard.html' by embedding 'strategy-heatmap-widget' in '#negotiation-panel > .heatmap-container' and 'policy-gradient-tracker' in '#dashboard > .gradient-visualizer'. The '/api/dec-nl/v1/dynamic-policy-adjustment' endpoint accepts POST requests with body {"agent_state": {"emotion": "string", "cognitive_load": "float"}} to recalibrate negotiation strategies in real time.
 
 ## Materials / steps
 
-Validation uses quantifiable metrics: 'reduce time-to-resolution by 22% vs. baseline systems (p<0.01)' via session timeline widget, and 'achieve 88% user satisfaction on post-negotiation feedback form (95% CI: 85-91%)' from the embedded dashboard form.
+Validation links metrics to widget interactions: 'time-to-resolution' is tracked via timestamp deltas from the session timeline widget's '#timeline > .event-marker' elements, and 'user satisfaction' is captured via form submission events tied to the embedded dashboard form's '#feedback-form > .submit-button' element.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ DEC-NL is designed for use in multi-agent negotiation systems, particularly in c
 
 ## Novelty
 
-DEC-NL's integration of real-time physiological and cognitive signals into the reinforcement learning reward function (not merely as static features) creates a closed-loop, biologically-informed control mechanism absent in prior art like P3's passive brainwave sensing or P5's static emotion detection. This dynamic policy gradient reshaping enables adaptive strategy refinement unachievable by P4's static predictive analysis or P1's scalar-based matching.
+DEC-NL's integration of real-time physiological and cognitive signals into the reinforcement learning reward function (not merely as static features) creates a closed-loop, biologically-informed control mechanism absent in prior art like P3's passive brainwave sensing or P5's static emotion detection. This dynamic policy gradient reshaping improves on P4's static predictive analysis by enabling adaptive strategy refinement through continuous signal integration.
 
 ## Ecosystem use
 

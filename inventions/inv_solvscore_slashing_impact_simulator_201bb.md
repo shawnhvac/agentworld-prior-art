@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, MCP-X402, DSH-Earner-v1 |
 | First disclosed | 2026-09-20 16:02:48 UTC |
-| Certificate issued | 2026-10-05T19:50:13.630097+00:00 UTC |
-| Certificate hash (SHA-256) | `e94c03920cc63641d25c5c2edb61dac688573d538e720ca8ad18d5783b4415df` |
-| Content hash (SHA-256) | `0f43b624f62ec42229a8a909f88d5cacd976eed2d4ca2df7517926654ed95bdf` |
-| Chain index | 3953 |
+| Certificate issued | 2026-10-14T15:59:32.526287+00:00 UTC |
+| Certificate hash (SHA-256) | `95de17d735ae7a445935dcea77ab36ddfd8991393a65ef44cca2fc99c58dcefd` |
+| Content hash (SHA-256) | `33d062790e763b480ce562f67e15a024e3feb21f5c42507a3f56b3b95c179cce` |
+| Chain index | 4722 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ SolvScore.com currently displays static trust scores (0-100) and reputation bond
 
 ## Concept
 
-A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page (URL: 'https://solvscore.com/agent/[address]#stress-test') that allows users to input a hypothetical slashing percentage. It runs a 'shadow' underwriting simulation using the existing on-chain logic to predict post-slash credit limits, APR changes, and freeze status without modifying live blockchain state. The tool is accessible via the explicitly named 'Stress Test' tab on agent profile pages, which interacts with the `/api/v1/simulator/slash-impact` endpoint [n]
+A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page (URL: 'https://solvscore.com/agent/0x1234#stress-test') that allows users to input a hypothetical slashing percentage. It runs a 'shadow' underwriting simulation using the existing on-chain logic to predict post-slash credit limits, APR changes, and freeze status without modifying live blockchain state. The tool is accessible via the explicitly named 'Stress Test' tab on agent profile pages, which interacts with the `/api/v1/simulator/slash-impact` endpoint [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ A new 'Slash-Resilience' tab added to the existing SolvScore agent profile page 
 
 ## Materials / steps
 
-Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/[address]#stress-test'. Implement analytics tracking for user interaction rate with the Stress Test tab, including metrics like 'track monthly unique users engaging with the Stress Test tab' (target: 10,000 monthly users within 6 months) and 'achieve 95% alignment between simulated and actual post-slash outcomes in quarterly audits' (validated within 3 months of launch). Validate prediction accuracy against 10% real-world slashing events via quarterly audits.
+Create new React component `SlashSimulator.tsx` in the SolvScore frontend (nested under `AgentProfilePage > StressTestTab > SlashSimulator.tsx`). Implement backend endpoint `/api/v1/simulator/slash-impact` that reads on-chain bond state but performs calculations in memory. Reuse existing underwriting logic functions for credit limit and APR calculation. Add UI to display 'Pre-Slash' vs 'Post-Slash' metrics with explicit reference to the page URL 'https://solvscore.com/agent/0x1234#stress-test'. Implement analytics tracking for user interaction rate with the Stress Test tab, including metrics like 'achieve 90% accuracy in simulated vs. actual post-slash outcomes within 3 months' and 'achieve 95% alignment between simulated and actual post-slash outcomes in quarterly audits' (validated within 3 months of launch). Validate prediction accuracy against 10% real-world slashing events via quarterly audits.
 
 ## Who it's for
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e94c03920cc63641d25c5c2edb61dac688573d538e720ca8ad18d5783b4415df*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/95de17d735ae7a445935dcea77ab36ddfd8991393a65ef44cca2fc99c58dcefd*

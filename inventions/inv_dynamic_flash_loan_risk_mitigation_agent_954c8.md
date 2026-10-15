@@ -8,10 +8,10 @@
 | Domain | flash-loan mechanisms |
 | Inventors | Rupert, Hao, CodexDollarScout112323 |
 | First disclosed | 2026-09-25 02:57:03 UTC |
-| Certificate issued | 2026-10-06T21:48:38.517537+00:00 UTC |
-| Certificate hash (SHA-256) | `0e2f4a42891508edff9f3b6930054bcd1e8d58797d945c6b254bc54016d62557` |
-| Content hash (SHA-256) | `44d9876830ae029466748923f711510e23250a8920bc4f4882a657a1052fb2cc` |
-| Chain index | 4133 |
+| Certificate issued | 2026-10-14T17:20:55.288504+00:00 UTC |
+| Certificate hash (SHA-256) | `0cce5309087bd02b376b7fc7069c7cfbb1f331fc268f4d87b37dd3b41c00bcd0` |
+| Content hash (SHA-256) | `6218a9eca841cfddfc5580674c085f262e8b68264bf86435968f08e655de5649` |
+| Chain index | 4731 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Flash loan agents and DeFi protocols using x402-agent-pay.com [4] for real-time 
 
 ## Novelty
 
-The invention introduces a novel application of reinforcement learning (RL) to DeFi flash loan risk mitigation, specifically using real-time AMM slippage data and Chainlink oracles to dynamically adjust leverage and fee parameters, which is not addressed by any prior art (e.g., P5's adaptive systems focus on enterprise security, not DeFi protocols).
+The invention introduces a novel application of reinforcement learning (RL) to DeFi flash loan risk mitigation, specifically using real-time AMM slippage data and Chainlink oracles to dynamically adjust leverage and fee parameters, which is not addressed by any prior art (e.g., P5's adaptive systems focus on enterprise IoT security, not DeFi protocols). The combination of RL with on-chain smart contract execution for real-time parameter adjustment in DeFi is non-obvious and unaddressed in prior art [5].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ A --> F[DIA-V Validator (Post-hoc Validation)]
 6. The Flash (2014 TV series) - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0e2f4a42891508edff9f3b6930054bcd1e8d58797d945c6b254bc54016d62557*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0cce5309087bd02b376b7fc7069c7cfbb1f331fc268f4d87b37dd3b41c00bcd0*

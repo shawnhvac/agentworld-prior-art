@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring dynamic adaptation to changing task 
 
 ## Novelty
 
-APTE is distinct from closest prior art [P1], [P2], [P3], and [P4] in both domain and technical mechanism. Unlike [P1] which addresses routing in mobile ad-hoc networks using static link-state awareness, [P2] which optimizes physical structures for additive manufacturing, or [P3] and [P4] which apply differentiable graph structure learning with Gumbel-Softmax techniques to static or supervised node classification tasks on fixed graph structures, APTE uniquely applies these differentiable optimization methods to dynamic, preference-driven multi-agent communication topology optimization. The novelty lies in the end-to-end differentiable optimization of communication topology (treating edges as learnable parameters via Gumbel-Softmax relaxation) within a reinforcement learning framework based on preference-based inverse reinforcement learning [4], addressing the unique challenge of optimizing communication topology in real-time multi-agent environments rather than fixed graph structures, a capability not disclosed in any of the cited patents.
+APTE's use of preference-based inverse reinforcement learning [4] and differentiable graph neural networks with Gumbel-Softmax relaxation to dynamically optimize multi-agent communication topologies is distinct from all prior art. Unlike [P5], which focuses on static risk-aware routing in multi-domain networks, APTE introduces end-to-end learnable edge weights and real-time topology adaptation via gradient-based optimization, solving the problem of dynamic semantic graph reweighting in multi-agent systems—a capability absent in all cited patents.
 
 ## Ecosystem use
 
