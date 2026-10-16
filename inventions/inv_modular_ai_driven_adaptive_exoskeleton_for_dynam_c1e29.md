@@ -24,11 +24,11 @@ A modular, AI-driven assistive exoskeleton that uses biofeedback and machine lea
 
 ## How it works
 
-The exoskeleton uses EMG sensors to detect muscle activity and tactile sensors to assess user effort. This data is fed into a microcontroller running an LSTM-based machine learning model trained on user-specific movement patterns. The model adjusts actuator force output in real-time using lightweight brushless DC motors and carbon fiber composites for structural integrity [4]. Sensor data is accessed via hardware/software endpoints, including '/sensors/emg' for muscle activity, '/actuators/force' for dynamic stiffness modulation, and '/dashboard/force_calibration' for user-adjustable impedance parameters.
+The exoskeleton uses EMG sensors to detect muscle activity and tactile sensors to assess user effort. This data is fed into a microcontroller running an LSTM-based machine learning model trained on user-specific movement patterns. The model adjusts actuator force output in real-time using lightweight brushless DC motors and carbon fiber composites for structural integrity [4]. Sensor data is accessed via hardware/software endpoints, including '/sensors/emg' for muscle activity, '/actuators/force' for dynamic stiffness modulation, and '/dashboard/force_calibration' (a configurable UI with sliders/visualizations) for user-adjustable impedance parameters.
 
 ## Materials / steps
 
-EMG sensors for detecting muscle activity; Tactile sensors for assessing user effort; Brushless DC motors for actuation; Carbon fiber composites for structural support; Microcontroller with machine learning model; User-specific training data collection and model calibration
+EMG sensors for detecting muscle activity; Tactile sensors for assessing user effort; Brushless DC motors for actuation; Carbon fiber composites for structural support; Microcontroller with machine learning model; User-specific training data collection and model calibration; '/dashboard/force_calibration' UI with sliders/visualizations for user-adjustable parameters.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Individuals with fluctuating physical capabilities, such as those undergoing phy
 
 ## Novelty
 
-The invention introduces a modular AI-driven exoskeleton with an LSTM-based adaptive impedance calibration loop that integrates real-time sensor data from EMG and tactile endpoints (e.g., '/sensors/emg', '/actuators/force') to dynamically adjust support levels, achieving F1-score > 0.95 and RMSE < 5% on 1000 test samples—unlike P4's general real-time feedback system, which lacks specific machine learning metrics and modular calibration endpoints.
+Introduces a modular AI-driven exoskeleton with LSTM-based adaptive impedance calibration loop, integrating real-time sensor data from EMG and tactile endpoints (e.g., '/dashboard/force_calibration' with sliders/visualizations) to achieve F1-score > 0.95 and RMSE < 5%, unlike P4's general CNN-based system [P4] and P5's lack of specific ML metrics [P5].
 
 ## Ecosystem use
 

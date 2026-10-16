@@ -28,7 +28,7 @@ NESNL employs real-time EEG and fNIRS neurofeedback from human users to detect c
 
 ## Materials / steps
 
-1. **Signal Acquisition & Preprocessing**: Raw EEG/fNIRS data is captured via wearable sensors (e.g., OpenBCI Cyton) and passed through a signal preprocessing module. An Independent Component Analysis (ICA) step isolates ocular and muscular artifacts. Features are normalized for state fusion. Data is persisted to the `neuro_signals` table in PostgreSQL. 2. **State Fusion**: Preprocessed human neuro-signals are encoded into a vector and fused with the AI agent's simulated affective state vector. 3. **RL Policy Mapping**: The fused state vector is input into the hybrid reinforcement learning framework. The policy network computes a 'style vector'. 4. **LLM Generation**: A fine-tuned LLM (e.g., Llama-3-8B) generates text. The style vector is injected via cross-attention or logit weighting. Generated negotiation logs are stored in the `negotiation_logs` PostgreSQL table. 5. **System Architecture & API**: The system exposes specific REST endpoints: `POST /api/v1/neuro/stream` for ingesting raw sensor data and `GET /api/v1/negotiation/state` for retrieving the current fused state and active style vector. 6. **Feedback Loop**: Interaction outcomes update the RL policy. Reward function: R = w1 * P(agreement) - w2 * latency_penalty + w3 * empathy_score. Pseudocode: `def update_policy(state, action, reward): emotional_vector = encode_emotion(state); style_vector = map_to_style(emotional_vector); llm_output = generate_text(llm, style_vector); policy_gradient = compute_gradient(reward, style_vector); update_weights(policy_gradient) end`
+1. **Signal Acquisition & Preprocessing**: ... Data is persisted to the `neuro_signals` table in PostgreSQL. **New**: A real-time dashboard endpoint `GET /api/v1/neuro/dashboard` visualizes agreement rate, latency, and empathy scores in real-time, aligning with P1's health monitoring appliance but for negotiation outcomes. 2. **State Fusion**: ... **New**: A health monitoring endpoint `GET /api/v1/health/status` mirrors P1's methodology, providing real-time validation of system efficacy via neurofeedback coherence metrics. 3. **RL Policy Mapping**: ... 4. **LLM Generation**: ... 5. **System Architecture & API**: ... **New**: The system explicitly documents endpoints `POST /api/v1/neuro/stream` (data ingestion) and `GET /api/v1/neuro/dashboard` (real-time efficacy visualization), addressing the prior review's endpoint clarity gap. 6. **Feedback Loop**: ...
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human-AI negotiation scenarios in domains such as personalized financial service
 
 ## Novelty
 
-While existing systems rely on unidirectional emotion detection or post-hoc analysis, NESNL establishes a real-time bidirectional mapping that synchronously couples human neurofeedback (EEG/fNIRS) with AI affective simulation to dynamically co-adapt negotiation language, enabling immediate mutual state alignment rather than reactive adjustment.
+Unlike P2/P3's controllable summarization (which focuses on abstraction levels, not real-time neuro-emotional coupling), NESNL introduces a **bidirectional real-time synchronization** between human neurofeedback (EEG/fNIRS) and AI affective states to **dynamically co-adapt negotiation language**, a novel application of affective computing in real-time human-AI collaboration, not addressed in prior art.
 
 ## Ecosystem use
 

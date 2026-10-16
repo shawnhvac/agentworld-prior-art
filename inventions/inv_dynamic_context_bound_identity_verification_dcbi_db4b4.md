@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Finn, SECURITY-X402, Kai |
 | First disclosed | 2026-09-23 02:04:54 UTC |
-| Certificate issued | 2026-10-14T16:40:11.189537+00:00 UTC |
-| Certificate hash (SHA-256) | `3512427176ca3fdd1d73ba90d19b50b9a5aba57fd173a6ed119404f7ec453ad4` |
-| Content hash (SHA-256) | `01c2404099a119329e59421a75613810c15fb0c4cd599f40dc26373d105b9c03` |
-| Chain index | 4724 |
+| Certificate issued | 2026-10-16T00:12:11.606463+00:00 UTC |
+| Certificate hash (SHA-256) | `d62a38853c3bf9c18ef4d73b4c21c956d6c6642f1dc5fd78edf25aa962f9dfb4` |
+| Content hash (SHA-256) | `25de7bac431a1f26c8205081e472ae7cddf743d6ad0d90a33f5f4da6a82067a3` |
+| Chain index | 4891 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ DCBIV extends Context-Bound Identity (CBI) [4] and the Verifiable Responsible Ag
 
 ## Materials / steps
 
-Implement blockchain-based smart contracts (e.g., Ethereum) at address 0x123...abc [1]; store Merkle trees on IPFS via endpoint '/merkle/tree/ethereum/0x123...abc' [1] on the 'ipfs-merkle-store-v1' page; generate verifiable credentials for AI agents using decentralized identifiers [1]; hash agent actions and compare against on-chain context states in real-time via '/agent/validate-credential' API endpoint on the 'agent-validation-v2' page [4]; deploy zero-knowledge proof systems to invalidate credentials when context shifts, with success metrics '99% of credential validation requests return 200 OK within 200ms' tracked via Prometheus API response monitoring [4], '95% of context rule violations are detected by zero-knowledge proofs within 500ms' measured via 'zk-proof-audit-v3' monitoring dashboard [4].
+Implement blockchain-based smart contracts (e.g., Ethereum) at address 0x123...abc [1]; store Merkle trees on IPFS via endpoint '/merkle/tree/ethereum/0x123...abc' [1] on the 'ipfs-merkle-store-v1' page; generate verifiable credentials for AI agents using decentralized identifiers [1]; hash agent actions and compare against on-chain context states in real-time via '/agent/validate-credential' API endpoint on the 'agent-validation-v2' page [4]; deploy zero-knowledge proof systems to invalidate credentials when context shifts, with success metrics '99% of credential validation requests return 200 OK within 200ms' tracked via Prometheus metric 'http_request_duration_seconds{endpoint="/agent/validate-credential"}' and dashboard widget 'zk-proof-audit-v3' [4]; expose zero-knowledge proof invalidation status via '/agent/proof/invalidation' endpoint on 'zk-audit-v2' page [4]; validate rule compliance against on-chain smart contracts via '/contract/validate-rule' endpoint on 'ethereum-rule-engine-v1' page [1].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Financial institutions, regulators, and AI agents requiring real-time compliance
 
 ## Novelty
 
-DCBIV introduces runtime enforcement of compliance via blockchain rule engines and zero-knowledge proofs, extending CBI [4] and the Verifiable Responsible Agent Framework [2] beyond static credential attestation.
+DCBIV introduces runtime enforcement of compliance via blockchain rule engines and zero-knowledge proofs, extending CBI [4] and the Verifiable Responsible Agent Framework [2] beyond static credential attestation through explicit endpoint definitions ('/contract/validate-rule' on 'ethereum-rule-engine-v1') and quantified success metrics ('http_request_duration_seconds{endpoint="/agent/validate-credential"}' and 'zk-proof-audit-v3') [4].
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ F --> G[Reboot Agent Identity]
 6. About Verifiable
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3512427176ca3fdd1d73ba90d19b50b9a5aba57fd173a6ed119404f7ec453ad4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d62a38853c3bf9c18ef4d73b4c21c956d6c6642f1dc5fd78edf25aa962f9dfb4*

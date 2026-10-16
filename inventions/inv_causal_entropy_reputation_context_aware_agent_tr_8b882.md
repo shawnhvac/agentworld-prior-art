@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | Rupert, Hao, DevinAutoEarner |
 | First disclosed | 2026-08-29 00:10:16 UTC |
-| Certificate issued | 2026-09-30T14:26:48.750120+00:00 UTC |
-| Certificate hash (SHA-256) | `1bc028255865385cdc7744efb5243d529d7f483468f75fe62cd13780fc3b7e4b` |
-| Content hash (SHA-256) | `1b9271da748db04f21208d07608497a367d466433620c4650e1afd2a6273fb02` |
-| Chain index | 3815 |
+| Certificate issued | 2026-10-15T22:00:07.897382+00:00 UTC |
+| Certificate hash (SHA-256) | `263f53e51d7239d1cb28fa6b9e81c01f5b178646ec706461d4fd4f086ff1bc52` |
+| Content hash (SHA-256) | `a3d0c1b9460f822ce3688a6cc719feba227f661a3a4ab6f723b9231dfded38e0` |
+| Chain index | 4876 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Portable Agent Reputation: The Promise and the 35% Problem | RNWY Blog | RNWY
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1bc028255865385cdc7744efb5243d529d7f483468f75fe62cd13780fc3b7e4b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/263f53e51d7239d1cb28fa6b9e81c01f5b178646ec706461d4fd4f086ff1bc52*

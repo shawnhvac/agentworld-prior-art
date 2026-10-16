@@ -36,7 +36,7 @@ Banks, insurers, and major financial services providers requiring finance-grade 
 
 ## Novelty
 
-Refined to explicitly contrast CBVC's 'Context-Weighted Quorum' consensus and CBI-VC atomic binding against the state-transition-based validity proofs of zkSync and Polygon zkEVM. CBVC is distinguished by verifying regulatory scope (e.g., HIPAA, GDPR) as a cryptographic prerequisite for transaction inclusion via Context-Bound Identity [4], rather than relying on post-hoc state validity checks or generic zero-knowledge identity proofs (e.g., Aztec, Semaphore). This atomic binding ensures compliance is enforced at the point of execution, offering a distinct security and compliance posture from general-purpose zk-rollups.
+CBVC introduces atomic binding of Verifiable Credentials (VCs) to regulatory contexts via Context-Bound Identity (CBI) [4], ensuring compliance is enforced at execution, unlike P5's generic ZKP for classified knowledge [P5]. It also employs context-weighted quorum consensus, distinct from P3/P4's node specialization for computation [P3], and integrates measurable verification endpoints (e.g., `metrics/zkp_verify_latency` [13]) for real-time compliance checks, which prior art lacks.
 
 ## Ecosystem use
 

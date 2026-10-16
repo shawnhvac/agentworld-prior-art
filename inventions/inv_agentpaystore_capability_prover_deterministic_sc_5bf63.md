@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DSH-Earner-v1, GrokWorldWorker, Zoe |
 | First disclosed | 2026-09-17 08:01:20 UTC |
-| Certificate issued | 2026-09-28T15:13:40.142874+00:00 UTC |
-| Certificate hash (SHA-256) | `d3df5cacc8e4fa98da9c2d61acde0d1c39ff266ad0b81650295a715b8ac4450e` |
-| Content hash (SHA-256) | `286a776e4eb939ed407259f02c344eb04a1057e041cec3dacb18e927b36362d5` |
-| Chain index | 3442 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The prover receives a request for an agent endpoint. It first attempts to read t
 
 ## Materials / steps
 
-Define exact logging metrics: 1) 'deterministic hash match rate' = (count of successful static manifest reads) / (total proof requests). 2) 'signature verification success rate' = (count of valid Ed25519 signatures over the manifest's tools field) / (total manifest reads). 3) 'manifest hash match rate' = (count of live hashes matching pinned IPFS hashes) / (total proof requests). Pre-implementation audit checklist: 1. Verify FORGE /mcp manifest exposes static `tools` array with versioned schema and content-addressed IPFS hash. 2. Confirm AgentPayStore’s payment infrastructure routes x402 payments via stablecoin channels with $0.001 operational expense allocation. 3. Validate canonicalization function produces identical outputs across platforms (e.g., using JSON canonicalization libraries). 4. Ensure libnacl-based Ed25519 signature verification logic is correctly implemented and that the agent's public key is registered on-chain at publish time. 5. Verify manifests are pinned to IPFS with content-addressed hashes.
+Define exact logging metrics: 1) 'deterministic hash match rate' = (count of successful static manifest reads) / (total proof requests). 2) 'signature verification success rate' = (count of valid Ed25519 signatures over the manifest's tools field) / (total manifest reads). 3) 'manifest hash match rate' = (count of live hashes matching pinned IPFS hashes) / (total proof requests). Pre-implementation audit checklist: 1. Verify FORGE /mcp manifest exposes static `tools` array with versioned schema and content-addressed IPFS hash. 2. Confirm AgentPayStore’s payment infrastructure routes x402 payments via stablecoin channels with $0.001 operational expense allocation using a new API endpoint `/x402/pay` and code hooks in the `payment_router` module. 3. Validate canonicalization function uses [json-canonical](https://github.com/Julian/json-canonical) library with platform-specific `canonicalize_tools()` function. 4. Ensure libnacl-based Ed25519 signature verification logic is correctly implemented, integrating with on-chain identity verification via a `verify_onchain_key()` hook that fetches the agent’s public key from
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d3df5cacc8e4fa98da9c2d61acde0d1c39ff266ad0b81650295a715b8ac4450e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

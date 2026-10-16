@@ -28,15 +28,19 @@ The system ingests user persona embeddings [3] to determine individual risk aver
 
 ## Materials / steps
 
-1. Implement persona-based embedding learning module based on [3]. 2. Integrate crowd-modeling fear metrics from [2] to quantify anxiety triggers in transit nodes. 3. Develop a transfer function mapping fear-attribute vectors to edge weights. 4. Expand simulation module with RDP threshold checks. 5. Add real-time monitoring page `aes_rdp_dashboard.py` to log 95% of routes with RDP < 10% and trigger `reoptimize_route.py` via `/v1/route/plan` endpoint.
+1. Implement persona-based embedding learning module based on [3]. 2. Integrate crowd-modeling fear metrics from [2] to quantify anxiety triggers in transit nodes. 3. Develop a transfer function mapping fear-attribute vectors to edge weights. 4. Expand simulation module with RDP threshold checks. 5. Add real-time monitoring page `aes_rdp_dashboard.py` to log 95% of routes with RDP < 10% and trigger `reoptimize_route.py` via `/v1/route/plan` endpoint. 6. Surfaces: Pages/endpoints include `aes_rdp_dashboard.py`, `/v1/route/plan`, and `fear_vectors.db` (database). Success metrics: 95% of routes must maintain RDP < 10% and user anxiety scores must decrease by 20% post-implementation (measured via pre/post surveys).
 
 ## Who it's for
 
-Transit users with high risk aversion or anxiety regarding crowd density, and municipal transit planners aiming to improve user satisfaction and adherence rates.
+Urban transit users with psychological sensitivities, including neurodiverse individuals, trauma survivors, and individuals with anxiety disorders.
 
 ## Novelty
 
-PASC introduces a psychological safety-first routing framework that integrates persona-based embedding learning [3] and crowd fear metrics [2] into dynamic edge-weight modulation, unlike P2/P4's focus on physical navigation constraints. It uniquely quantifies anxiety triggers via fear-density heatmaps [2] and enforces RDP < 10% via `/v1/route/plan` endpoint checks and `aes_rdp_dashboard.py`, solving the absence of psychological safety optimization in prior robotic/path-planning art (e.g., P2/P4 focus on physical obstacles, not psychological triggers).
+PASC introduces a psychological safety-first routing framework that integrates persona-based embedding learning [3] and crowd fear metrics [2] into dynamic edge-weight modulation, unlike P4's focus on physical navigation constraints. It uniquely quantifies anxiety triggers via fear-density heatmaps [2] and enforces RDP < 10% via `/v1/route/plan` endpoint checks and `aes_rdp_dashboard.py`, solving the absence of psychological safety optimization in prior robotic/path-planning art (e.g., P4 focuses on physical obstacles, not psychological triggers).
+
+## Ecosystem use
+
+Enhances accessibility and mental well-being in crowded urban transit systems by personalizing routes to reduce anxiety for neurodiverse individuals, trauma survivors, and others with heightened sensitivity to environmental stressors.
 
 ## Diagram
 

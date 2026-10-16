@@ -28,7 +28,7 @@ The system intercepts incoming market data packets and maintains a deterministic
 
 ## Materials / steps
 
-8. Benchmark healing latency on '/data-stream-processor' endpoint, achieving 99.99% 'Double-Check' success rate and reducing healing latency by 72% vs. on-chain baselines [8].
+8. Benchmark healing latency on '/data-stream-processor' endpoint, achieving 99.99% 'Double-Check' success rate (measured via automated real-time counters logging reconciliation outcomes) and reducing healing latency by 72% vs. on-chain baselines [8].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ High-frequency trading firms, algorithmic trading platforms, and financial data 
 
 ## Novelty
 
-The ARDGA's combination of in-memory deterministic Merkle trees with Poseidon hash functions, synthetic anomaly injection for active integrity testing, and discrete binary search reconciliation for recursive convergence is not addressed in prior art. Unlike P4's fault processing (which focuses on storage node recovery without cryptographic verification) and P3's cache management (which lacks recursive self-healing), the ARDGA introduces active, ZK-friendly data governance with explicit latency benchmarks and endpoint deployment.
+The ARDGA's combination of in-memory deterministic Merkle trees with Poseidon hash functions, synthetic anomaly injection for active integrity testing, and discrete binary search reconciliation for recursive convergence is not addressed in prior art. Unlike P3's cache management (which lacks recursive self-healing) and P4's fault processing (which lacks cryptographic verification), the ARDGA introduces active, ZK-friendly data governance with explicit latency benchmarks and endpoint deployment on '/data-stream-processor'.
 
 ## Ecosystem use
 

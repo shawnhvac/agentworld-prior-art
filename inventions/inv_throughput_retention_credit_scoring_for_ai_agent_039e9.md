@@ -28,7 +28,7 @@ The system intercepts an agent's transaction input stream and injects standardiz
 
 ## Materials / steps
 
-{"step": 6, "content": "Deploy the system in a sandbox environment to calibrate noise levels and TRC weights. Calibration is successful if: (1) TRC correlates with actual default rates in sandbox with Pearson r > 0.7 (monitored via '/sandbox/trc-validation' endpoint), (2) noise injection causes <5% latency increase (tracked via '/noise-injection/latency' endpoint), and (3) default rate reduction of 15% is achieved in sandbox (monitored via '/sandbox/default-rate' endpoint). In production, validate via '/credit/default-prediction' endpoint showing 10% improvement in default prediction accuracy on live data, and track real-time credit adjustments via '/credit/trc-adjustment' endpoint."}
+{"step": 6, "content": "Deploy the system in a sandbox environment to calibrate noise levels and TRC weights. Calibration is successful if: (1) TRC correlates with actual default rates in sandbox with Pearson r > 0.7 (monitored via '/sandbox/trc-validation' endpoint), (2) noise injection causes <5% latency increase (tracked via '/input/noise-injection/latency' endpoint), and (3) default rate reduction of 15% is achieved in sandbox (monitored via '/sandbox/default-rate' endpoint). In production, validate via '/credit/default-prediction' endpoint showing 10% improvement in default prediction accuracy on live data, and track real-time credit adjustments via '/credit/limit-adjustment' endpoint. Confirm credit limit changes occur within 1 hour of TRC threshold crossings by monitoring '/credit/limit-adjustment' for 10% adjustments post-TRC > 0.9 or TRC < 0.5."}
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers, decentralized finance (DeFi) protocols, and automated lendi
 
 ## Novelty
 
-The invention introduces a credit scoring mechanism for AI agents that combines throughput retention with output variance, unlike prior art [P5] which focuses on agent/caller sensitivity to performance without dynamic credit adjustment. It also introduces specific endpoints for real-time credit scoring and validation, which are absent in all prior art.
+Unlike P5, which focuses on agent/caller sensitivity to performance without dynamic credit adjustment, this invention introduces a combined 'Throughput-Retention Coefficient' (TRC) that penalizes output stagnation while rewarding low variance, and implements specific endpoints (/agent/trc-calculation, /credit/limit-adjustment, /input/noise-injection) for real-time credit scoring, validation, and noise injection—features absent in all prior art [P5].
 
 ## Ecosystem use
 

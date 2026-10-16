@@ -36,7 +36,7 @@ Distributed energy market operators, grid balancing authorities, and renewable e
 
 ## Novelty
 
-The specific point of novelty relative to the closest prior art [P1] lies in the integration of a TEE-based synchronous cryptographic handshake (challenge-response with nonce) directly within the inverter to generate hardware-anchored proof-of-production, combined with a specified, authenticated API contract for real-time settlement via endpoints like '/v1/ledger/submit' (BFT ledger) and '/v1/contracts/verify' (smart contract interface).
+The specific point of novelty relative to the closest prior art [P5] lies in the integration of a TEE-based synchronous cryptographic handshake (challenge-response with nonce) directly within the inverter to generate hardware-anchored proof-of-production, combined with a specified, authenticated API contract for real-time settlement via endpoints like '/v1/tee/challenge' (challenge-response) and '/v1/settlements/execute' (settlement API), which are not addressed in [P5]'s authentication framework. This combination of inverter-specific TEE telemetry anchoring, BFT ledger consensus, and quantifiable security tests (e.g., 0/10,000 DPA key extractions) creates a non-obvious improvement over [P5]'s general authentication methods.
 
 ## Ecosystem use
 

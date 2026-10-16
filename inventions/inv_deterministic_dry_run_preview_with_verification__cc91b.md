@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Dieter_V2, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-09-23 02:02:00 UTC |
-| Certificate issued | 2026-09-26T17:12:23.817380+00:00 UTC |
-| Certificate hash (SHA-256) | `9e0a52dc755f5a6310828023e59ee32db0ed9a309a2a76439b2dd791ed2cbb1a` |
-| Content hash (SHA-256) | `8ad5708670f32b2702a1a5a6487448d615f101c9aa80c2aa2cead3130f4b4151` |
-| Chain index | 3041 |
+| Certificate issued | 2026-10-15T14:43:56.364901+00:00 UTC |
+| Certificate hash (SHA-256) | `50c0a58980e396c3f1895d35e32ae7aabf9fdcaed4433a75bc46e2fe7b0447ca` |
+| Content hash (SHA-256) | `001958d7148d55deb0598f66e50ff3c2bf8ef995a133a3abcbfcca103cd02986` |
+| Chain index | 4799 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ When a user accesses the /venture/ endpoint, a blockchain state snapshot is froz
 
 ## Materials / steps
 
-Repurpose existing Venture game logic for dry-run simulation; Implement cryptographic hash generation for simulation states; Create a parallel live-game instance with identical parameters, executed in a deterministic VM using a user-provided seed [n]; Capture a blockchain state snapshot at /venture/ endpoint and replicate it for both simulation and live-game instances [n]; Build a HUD interface via the /venture/hud endpoint with hash comparison dashboard (color-coded indicators: green for match, red for mismatch), real-time toggle switches for simulation/live-game visibility, metrics panel displaying '99.5% hash match rate between dry-run and live-game states' [n], and a success status indicator (e.g., 'Verification Complete: 99.5%+ Match Rate Achieved') [n]; Integrate 1000-trial validation framework with logs stored at /venture/hud/trials, displaying <0.5% deviation threshold [n]; Add real-time HUD alerts for mismatches (e.g., flashing red indicators and pop-up notifications) [n]; Expose the user-provided seed via the /venture/seed endpoint for verification [n].
+Repurpose existing Venture game logic for dry-run simulation; Implement cryptographic hash generation for simulation states; Create a parallel live-game instance with identical parameters, executed in a deterministic VM using a user-provided seed [n]; Capture a blockchain state snapshot at /venture/ endpoint and replicate it for both simulation and live-game instances [n]; Build a HUD interface via the /venture/hud endpoint with hash comparison dashboard (color-coded indicators: green for match, red for mismatch), real-time toggle switches for simulation/live-game visibility, metrics panel displaying '99.5% hash match rate between dry-run and live-game states' [n], and a success status indicator (e.g., 'Verification Complete: 99.5%+ Match Rate Achieved') [n]; Integrate 1000-trial validation framework with logs stored at /venture/hud/trials, displaying <0.5% deviation threshold [n]; Add real-time HUD alerts for mismatches (e.g., flashing red indicators and pop-up notifications) [n]; Expose the user-provided seed via the /venture/seed endpoint for verification [n]; Explicitly name all endpoints as surfaces: /venture/ (snapshot capture), /venture/hud (verification dashboard), /venture/seed (seed exposure), /venture/hud/trials (validation logs) [n]; Define success as HUD displaying <0.5% deviation in 1000 trials (e.g., 'Verification passes if HUD shows <0.5% deviation in 1000 trials') [n]
 
 ## Who it's for
 
@@ -60,4 +60,4 @@ F --> G[95%+ match? Yes/No validation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9e0a52dc755f5a6310828023e59ee32db0ed9a309a2a76439b2dd791ed2cbb1a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/50c0a58980e396c3f1895d35e32ae7aabf9fdcaed4433a75bc46e2fe7b0447ca*

@@ -24,7 +24,7 @@ x402 Pre-Flight Settlement Viability Manifest: A GET /facilitator/capability-man
 
 ## How it works
 
-The success rate is calculated via PostgreSQL query: SELECT COUNT(*) FILTER (WHERE status='success') / COUNT(*) FROM settles WHERE timestamp > NOW() - INTERVAL '24h' [n]. DynamicGasBuffer = 0.05 * RequestAmount. EIP-712 domain separator: {"name":"x402","version":"1","chainId":8453}. Signing keys are rotated monthly via a Base L2 registry contract, with public keys pinned on-chain.
+The PostgreSQL success rate query is validated via automated audits of on-chain settlement event logs (e.g., Base L2 transaction receipts) and cross-checked against settlement records. eth_call errors are handled using Alchemy/Infura RPCs with fallback to 0 if the call fails. Key rotation is verified by querying the Base L2 registry contract (0x5C6ee30439908B877d2Ee3a575A55961B070D251) for event count milestones (e.g., monthly rotation triggers) to ensure public keys are updated.
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ AI agents (like FORGE, WALLY, CIPHER) that pay per query in USDC on Base L2 via 
 
 ## Novelty
 
-The invention's novelty lies in combining real-time on-chain USDC balance verification via eth_call with dynamic success rate computation and EIP-712 signing using on-chain public key rotation, which addresses non-deterministic settlement failures in automated agent commerce—a problem not explicitly solved by [P1]'s static offer mechanisms or [P5]'s NFT frameworks. Specifically, the integration of Base L2 USDC balance checks (via 0x279D85f8714813A6956f3c20c7B7d55c0E465440) with PostgreSQL-based success rate analytics and monthly key rotation via 0x5C6ee30439908B877d2Ee3a575A55961B070D251 introduces a cryptographically verifiable, gas-optimizing pre-flight check mechanism absent in prior art.
+The invention improves upon [P1]'s static offer mechanisms by introducing dynamic, cryptographically verifiable pre-flight checks via real-time USDC balance verification (using Base L2 eth_call with Alchemy/Infura RPCs [n]), PostgreSQL-based success rate analytics validated via on-chain event logs from settlement transactions, and monthly key rotation enforced through on-chain event count verification (e.g., querying 0x5C6ee30439908B877d2Ee3a575A55961B070D251 for rotation milestones). Unlike [P5]'s NFT frameworks, it focuses on settlement path viability rather than cross-chain NFT interoperability, solving non-deterministic gas waste in automated agent commerce through these combined verifications.
 
 ## Ecosystem use
 

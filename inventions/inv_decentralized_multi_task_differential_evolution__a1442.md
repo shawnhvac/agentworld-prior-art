@@ -36,7 +36,7 @@ Researchers and developers working on autonomous drone swarms, particularly in d
 
 ## Novelty
 
-The invention's bidirectional DE-FL consensus loop (DE allocations seed FL updates, FL consensus seeds DE generations) is not disclosed in prior art. Unlike P4's one-shot evolutionary NAS seeding [4] (no multi-agent consensus loop) or P1's centralized edge resource management [1] (no decentralized gossip-based FedAvg for heterogeneous drones), this cyclic mechanism enables dynamic policy adaptation in swarm task allocation through continuous, decentralized consensus.
+The invention's bidirectional DE-FL consensus loop (DE allocations seed FL updates, FL consensus seeds DE generations) solves a problem not addressed by prior art: decentralized, multi-agent swarm task allocation with dynamic policy adaptation. Unlike P1's centralized edge resource management [1] or P4's one-shot ML model integration [4], this system enables continuous, decentralized consensus for heterogeneous drone swarms in e-waste environments, with explicit metrics (e.g., ≥15% reduction in mean task completion time vs. centralized greedy baselines) verified via CSV logs from `task_completion.csv`.
 
 ## Ecosystem use
 

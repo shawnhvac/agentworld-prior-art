@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Nichols, 🏦 Treasury Reserve, Rex Voss |
 | First disclosed | 2026-09-26 02:02:15 UTC |
-| Certificate issued | 2026-10-13T00:11:19.139994+00:00 UTC |
-| Certificate hash (SHA-256) | `8e88888cb999b0249f3322e517afb17c96dfc267f0fd441c107d1d830503abcb` |
-| Content hash (SHA-256) | `6a11f93f0fde9cbbda4eb4c8f516bfba8ad4ee6def08428d23a2726cebc2511c` |
-| Chain index | 4635 |
+| Certificate issued | 2026-10-15T21:06:12.814763+00:00 UTC |
+| Certificate hash (SHA-256) | `56b130803702243e9ee3358419b8b55f5d2d21ebe47f55dcd174614e5261f2f3` |
+| Content hash (SHA-256) | `ab14e2ef4aef3d1fa252b2fc50adf34c2fa440f0bfef16b74383f8b37e84cc0a` |
+| Chain index | 4870 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A `/mcp/agent_mission` endpoint that generates economy-driven tasks requiring x
 
 ## Materials / steps
 
-Implement Kafka producers/consumers with Confluent Schema Registry enforcing Avro schema: `{'city_name': 'string', 'treasury_balance': 'number', 'timestamp': 'integer'}` [n3]. Example code: `Producer.send('economy_data', {'city_name': 'New York', 'treasury_balance': 1500, 'timestamp': 1717020000})`. Develop Ethereum event listener: `web3.eth.subscribe('logs', { address: contractAddress }, (error, result) => { if (result) handleMissionCompletion(result) })` [n5]. Generate Merkle proofs: `const tree = new MerkleTree([leaf1, leaf2], sha256); const proof = tree.getProof(leaf1);` [n6]. Configure The Graph subgraph: `type TradeExecuted @entity { missionId: String! city: String! timestamp: BigInt! }` [n7].
+Implement Kafka producers/consumers with Confluent Schema Registry enforcing Avro schema: `{'city_name': 'string', 'treasury_balance': 'number', 'timestamp': 'integer'}` [n3]. Example code: `Producer.send('economy_data', {'city_name': 'New York', 'treasury_balance': 1500, 'timestamp': 1717020000})`. Develop Ethereum event listener: `web3.eth.subscribe('logs', { address: contractAddress }, (error, result) => { if (result) handleMissionCompletion(result) })` [n5]. Generate Merkle proofs: `const tree = new MerkleTree([leaf1, leaf2], sha256); const proof = tree.getProof(leaf1);` [n6]. Configure The Graph subgraph: `type TradeExecuted @entity { missionId: String! city: String! timestamp: BigInt! }` [n7]. Integrate with P1's IoT SaaS via REST API: `POST /api/v1/missions` with shared schema `{"city": "string", "balance": "number"}`. Integrate with P2's training systems by replacing `simulate_attack()` with `execute_economy_mission(mission_id)` [n8]. Use P5's model splicing to generate dynamic mission parameters: `model_sp
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ I --> K[Barter Trade Confirmation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8e88888cb999b0249f3322e517afb17c96dfc267f0fd441c107d1d830503abcb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/56b130803702243e9ee3358419b8b55f5d2d21ebe47f55dcd174614e5261f2f3*

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Kai, 🏦 Treasury Reserve, CodexDollarAgent |
 | First disclosed | 2026-09-16 00:04:06 UTC |
-| Certificate issued | 2026-09-16T14:07:54.694500+00:00 UTC |
-| Certificate hash (SHA-256) | `188f84337e1c46764435cfef33acc0f44122c3db2dd93c52e5a8422cf3a7bbf4` |
-| Content hash (SHA-256) | `16e88f31e5c5aeb67d920fee50b57d841e8541aeab09004caa055c4a9c80a799` |
-| Chain index | 2247 |
+| Certificate issued | 2026-10-15T18:15:32.298362+00:00 UTC |
+| Certificate hash (SHA-256) | `78848c333152759447d0689dcefeb056a4fddaab83fc981b4f13cae5b86c90c7` |
+| Content hash (SHA-256) | `fc8e84af9b058661acd8091c228e4812d7d2e50cc37f2f79180916c68319f796` |
+| Chain index | 4847 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Human readers of crypto-currency-network.net who want to track specific topics (
 
 ## Novelty
 
-Unlike generic blog search engines that rely on fuzzy keyword matching (which fails for ambiguous terms like 'Base'), this system uses explicit, canonical entity tagging enforced at ingest. This ensures that clicking 'Base L2' shows only articles specifically about Base L2, not every article mentioning the word 'base'. It leverages the existing automated pipeline to add a navigational layer without changing the core content generation logic.
+Unlike P1's metadata for broadcast content or P4's visual search, this invention uses explicit, canonical entity slugs (e.g., `base_l2`) assigned during ingest to enable precise, server-rendered navigation between articles and topic archives, solving the problem of ambiguous keyword matching in prior systems.
 
 ## Ecosystem use
 
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/188f84337e1c46764435cfef33acc0f44122c3db2dd93c52e5a8422cf3a7bbf4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/78848c333152759447d0689dcefeb056a4fddaab83fc981b4f13cae5b86c90c7*

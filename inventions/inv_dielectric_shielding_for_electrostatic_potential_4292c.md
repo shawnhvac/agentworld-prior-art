@@ -36,7 +36,7 @@ Users experiencing discomfort from textile-related chemical leachates or static 
 
 ## Novelty
 
-The novelty lies in the co-located dual-signal architecture combined with a proprietary dynamic baseline subtraction algorithm that enables real-time, in-wear differentiation between chemical toxicity and static charge via a smartphone app's dashboard interface, solving the ambiguity of user discomfort.
+The invention's novelty lies in the co-located dual-signal architecture (chemical + electrostatic sensors) combined with a dynamic baseline subtraction algorithm for real-time differentiation, which is not addressed in prior art. Unlike P3's conductive fibers for dust reduction or P5's MXene-coated textiles, this system uniquely integrates a PEG hydrogel with pH-sensitive dyes and a conductive thread network, providing distinct data streams for app-based source identification [n].
 
 ## Ecosystem use
 

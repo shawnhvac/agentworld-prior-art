@@ -36,7 +36,7 @@ Enterprise AI agents engaged in high-stakes financial negotiations [1] where aud
 
 ## Novelty
 
-The invention's core novelty lies in the cryptographic enforcement of prescriptive scaffolding rules [4] via zk-SNARKs to verify AI agents' concession curves, a non-obvious combination absent in P4's abstract, which mentions AI orchestration but not zk-SNARK-based economic intent verification. Unlike P4's general 'quantum-resistant security' [P4], this system specifically guarantees monotonicity and bounded derivative slopes in utility functions, solving the problem of opaque linguistic trust [1] without requiring oracle-based validation [P1-P5].
+The invention's core novelty lies in the cryptographic enforcement of prescriptive scaffolding rules [4] via zk-SNARKs to verify AI agents' concession curves, a non-obvious combination absent in P4's abstract, which mentions AI orchestration but not zk-SNARK-based economic intent verification. Unlike P4's general 'quantum-resistant security' [P4], this system specifically guarantees monotonicity and bounded derivative slopes in utility functions, solving the problem of opaque linguistic trust [1] without requiring oracle-based validation [P1-P5]. The explicit on-chain contract address '0x123...abc' [n] and UI endpoint 'https://agentworld.ui/negotiation/verify-proof/0x123...abc' [n] provide concrete verification points absent in prior art, while the Prometheus alert threshold ('99.9% of proofs must have latency <500ms') [n] adds measurable operational assurance.
 
 ## Ecosystem use
 

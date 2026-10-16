@@ -28,7 +28,7 @@ The CCE protocol uses a blockchain-based ledger to track compute contributions a
 
 ## Materials / steps
 
-A decentralized ledger system; Compute performance sensors; A consensus algorithm; Smart Contract Settlement Engine; Pilot Implementation Plan: 1) Deploy a private testnet with 10 internal AI agents; 2) Inject synthetic compute workloads with known ground truths; 3) Monitor protocol stability and credit adjustment latency for 72 hours, specifically tracking the 'p99 credit adjustment latency' metric via the Settlement Layer's logging API endpoint `/settlement/latency-logs` (JSON format: {"timestamp": "ISO8601", "latency_ms": "number"}) to verify it remains < 50ms; 4) Iterate on smart contract gas optimization based on observed bottlenecks; Section 4: Validation: Define Compute Utilization Efficiency Ratio (CUER) as the primary metric, measured by comparing CCE's transaction finality time and overhead against baseline direct bartering in a simulated network of 100 agents. Baseline metrics constituting 'solid grounding' include: 1) Direct Bartering CUER baseline of 0.65 ± 0.05; 2) Network latency jitter threshold of >200ms; 3) Proof-of-work verification overhead < 50ms per transaction; 4) zk-SNARK generation time < 2s for standard compute units. Simulation parameters include a scale-free network topology with average degree k=4 and a workload distribution following a Pareto distribution (alpha=1.5) to model bursty compute demands. A stress-test analysis of the 5% penalty mechanism is conducted under high-latency conditions (network jitter >200ms) to empirically verify protocol robustness and prevent cascading reputation
+Add API endpoints: `/metrics/cuer` for CUER data, `/verification/zk-snark-logs` for zk-SNARK verification latency (JSON: {"timestamp": "ISO8601", "verification_time_ms": "number"}), and `/stress-test/results` for stress-test outcomes. Dashboard locations: CUER visualization at `/dashboard/cuer`, zk-SNARK logs at `/dashboard/verification`, and stress-test analytics at `/dashboard/stress-test`.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents participating in peer-to-peer compute networks, particularly those req
 
 ## Novelty
 
-The CCE protocol’s novelty is defined by its atomic, trustless settlement mechanism triggered directly by zk-SNARK verification within a BFT framework. Unlike prior works [1] and [3] that rely on asynchronous reputation updates and static pricing models suffering from temporal lag, CCE explicitly acknowledges consensus latency while eliminating the delay in economic incentives, ensuring that credit valuations are immediate functions of proven reliability rather than delayed historical scores.
+The CCE protocol introduces a blockchain-based, dynamic compute credit system with zk-SNARK-enabled trustless settlement, which is not addressed in prior art. Unlike P1-P5, which focus on secure communication, sensor networks, troubleshooting, or AI policy enhancements, CCE uniquely combines decentralized compute resource bartering with real-time performance-driven credit adjustments and atomic settlement via BFT+zksnarks, solving the problem of delayed economic incentives in existing systems.
 
 ## Ecosystem use
 

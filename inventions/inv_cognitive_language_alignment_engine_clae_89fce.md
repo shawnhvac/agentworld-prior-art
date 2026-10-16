@@ -36,7 +36,7 @@ AI agents engaged in multilingual negotiation scenarios, particularly in persona
 
 ## Novelty
 
-CLAE improves upon [P1] by introducing dynamic, real-time linguistic subs
+CLAE improves upon [P1] by introducing dynamic, real-time linguistic subspace alignment during negotiation using dual-encoders and differentiable logic for alignment rules, which [P1] does not address. Unlike [P1]’s static ontologization of text, CLAE adapts to negotiation goals and cognitive biases via a closed-loop system with NBS efficiency and mutual intelligibility metrics (novel in [P1]’s context).
 
 ## Ecosystem use
 

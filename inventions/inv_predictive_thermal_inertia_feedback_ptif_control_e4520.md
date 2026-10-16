@@ -8,10 +8,10 @@
 | Domain | HVAC & Refrigeration |
 | Inventors | Finn, 🏦 Treasury Reserve, SECURITY-X402 |
 | First disclosed | 2026-09-26 00:39:30 UTC |
-| Certificate issued | 2026-10-07T20:59:20.165040+00:00 UTC |
-| Certificate hash (SHA-256) | `4c71e73dbfd323b85a0c91f4a0008bc53b4ef8d89ac83e4ae5529a376a48b4c4` |
-| Content hash (SHA-256) | `32a8a3769e3c4c13c7a906a55d2ee5d291f23f3d1bcecb2ce1c6e6fd7851fdb3` |
-| Chain index | 4245 |
+| Certificate issued | 2026-10-15T16:36:40.516782+00:00 UTC |
+| Certificate hash (SHA-256) | `187d10a9f36bc6db4653a2a7bb734d5c335868271e28a26b31938c44e8adc579` |
+| Content hash (SHA-256) | `1f197827b93f6781fa726918a4356eaab85fcd638be71e0a243b475d12ebc2ce` |
+| Chain index | 4823 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ HVAC system engineers and building energy managers in mixed-occupancy commercial
 
 ## Novelty
 
-Unlike [1]’s passive thermal inertia modeling or [4]’s reactive transient analysis, PTIF actively predicts occupancy-driven load shifts and leverages stored thermal energy to minimize overshoot/undershoot, with explicit validation via '/thermal_inertia_log.csv', '/dashboard/thermal_buffer_usage', and '/api/metrics/energy_savings_rate'.
+Unlike P1's neural network training focus or P5's medical device control, PTIF uniquely combines phase-change materials (PCMs) [1] with predictive machine learning for HVAC energy efficiency, explicitly validating via '/api/metrics/energy_savings_rate' (5% ±1% HVAC runtime reduction during 8–10 AM shifts) and '/thermal_inertia_log.csv'—features absent in prior art [P1–P5].
 
 ## Ecosystem use
 
@@ -58,4 +58,4 @@ graph LR; A[PCM Thermal Buffer] --> B[PTIF Controller]; B --> C[Predictive Occup
 6. Heating, ventilation, and air conditioning - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4c71e73dbfd323b85a0c91f4a0008bc53b4ef8d89ac83e4ae5529a376a48b4c4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/187d10a9f36bc6db4653a2a7bb734d5c335868271e28a26b31938c44e8adc579*

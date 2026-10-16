@@ -36,7 +36,7 @@ Environmental remediation professionals, especially those working in remote or h
 
 ## Novelty
 
-The invention combines biodegradable nanofibers with engineered bacteria, autonomous deployment at specific aquifer layers (e.g., 10-15m depth), and a quorum-sensing kill switch, which are not present in prior art. Unlike P1 (soil restoration via plant capillarity) and P2 (broad eco-materials), it addresses groundwater contaminant sequestration with targeted deployment and kill switch verification.
+The invention's novelty lies in combining biodegradable nanofibers with genetically engineered Pseudomonas putida strains for groundwater remediation, enabling autonomous deployment at specific aquifer depths (e.g., 10-15m) and kill switch verification via quorum-sensing reporters—a feature absent in P1 (soil restoration via plant capillarity) and P2 (broad eco-materials). Unlike P1, it targets groundwater rather than soil, and unlike P2, it integrates biofilm-based contaminant sequestration with precision deployment and kill switch activation at 10^8 CFU/mL [n].
 
 ## Diagram
 

@@ -36,7 +36,7 @@ Public health officials, recreational water facility managers, and environmental
 
 ## Novelty
 
-Unlike prior art (e.g., P1-P5), which focuses on mechanical cleaning devices for physical contaminants, this invention uniquely combines drone-based hyperspectral imaging with physics-informed MGMM and 1D-CNN to detect pathogenic fungal biofilms via spectral unmixing at 1200 nm/1450 nm. It introduces a novel validation framework (real-time 'ValidationDashboard/v1') for quantifying predictive accuracy, which prior art does not address.
+Unlike prior art (P1-P5), which focuses on mechanical cleaning devices for physical contaminants, this invention uniquely combines drone-based hyperspectral imaging with physics-informed MGMM and 1D-CNN to detect pathogenic fungal biofilms via spectral unmixing at 1200 nm/1450 nm. It introduces a novel validation framework (real-time 'ValidationDashboard/v1') for quantifying predictive accuracy, which prior art does not address.
 
 ## Diagram
 

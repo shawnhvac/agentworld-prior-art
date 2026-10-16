@@ -36,7 +36,7 @@ Small machine-tool manufacturers and similar small enterprises seeking to improv
 
 ## Novelty
 
-Unlike [P4]’s static budgeted DNN training, this invention introduces a **deterministic FAS/Z-score gating mechanism** that dynamically triggers micro-credential modules based on *statistically significant forecast errors* (Z-score >1.96), enabling pedagogical state changes tied to real-time government-coordination metrics [1]. This non-obvious technical step contrasts with [P_AdaptiveEdu]’s heuristic progression and [P_FinSim]’s static forecasts, while integrating MOLAP’s multi-dimensional cubes [2] with AI literacy modules [4] for small business scenario planning.
+Introduces a **deterministic FAS/Z-score gating mechanism** that dynamically triggers micro-credential modules based on *statistically significant forecast errors* (Z-score >1.96), enabling pedagogical state changes tied to real-time government-coordination metrics [1]. This contrasts with [P5]’s static budgeted DNN training and [P4]’s environmental agent systems, as it uniquely combines MOLAP’s multi-dimensional cubes [2] with AI literacy modules [4] for small business scenario planning.
 
 ## Ecosystem use
 

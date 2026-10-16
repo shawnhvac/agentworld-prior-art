@@ -36,7 +36,7 @@ Operators of autonomous UAV swarms [1] and edge-device networks requiring secure
 
 ## Novelty
 
-validated by a 20% reduction in adversarial noise impact, measured as F1-score degradation from baseline during simulated attacks via `/api/v1/metrics` endpoint [3].
+The invention's novelty lies in integrating differential evolution's fitness scores as dynamic trust weights in federated learning for swarm task routing, a combination absent in prior art. Unlike [P3]’s hierarchical neural networks or [P5]’s structural monitoring, this approach uniquely addresses adversarial noise resilience in swarm systems via fitness-driven trust allocation and explicit adversarial visualization via `/dashboard/telemetry` (real-time noise heatmap) and `/api/v1/metrics` (quantified trust weight adjustments). This achieves a 20% reduction in adversarial noise impact on task completion rates compared to baseline systems [3].
 
 ## Ecosystem use
 

@@ -39,7 +39,7 @@ Multi-agent systems requiring real-time adaptation to changing value systems and
 
 ## Novelty
 
-VASCP uniquely couples decentralized inverse reinforcement learning for real-time value inference with a bandwidth-constrained sparse binary masking mechanism for semantic token exchange. Unlike prior decentralized protocols that rely on static conventions or global state aggregation, VASCP specifically addresses the joint challenge of dynamic value adaptation and strict communication overhead limits ($B_{max}$), a combination not present in existing literature [2, 4].
+VASCP uniquely combines decentralized inverse reinforcement learning with a sparse binary masking mechanism under strict bandwidth constraints ($B_{max}$), a combination not addressed in prior art. Unlike P4's structured queries on knowledge bases or P5's biological activity prediction, VASCP solves the joint challenge of dynamic value adaptation in multi-agent systems while enforcing communication overhead limits, a problem not tackled by any listed prior art [P1-P5].
 
 ## Ecosystem use
 

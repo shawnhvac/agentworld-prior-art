@@ -28,7 +28,7 @@ The swarm employs occlusion-based transportation [1] to dynamically reroute task
 
 ## Materials / steps
 
-Implement a swarm of 50-100 Crazyflie 2.1 micro-robots with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. Deploy in Gazebo with ROS2, using the `swarm_router` package. Include a ROS2 Rviz dashboard for real-time monitoring of consensus latency (sub-500ms), task completion rates under 10%/30%/50% obstacle densities, and validator quorum states. The `swarm_router/config/swarm_config.yaml` defines obstacle densities and task priorities, while the `node_validator/v1/consensus` gRPC endpoint exposes consensus state. Nodes use a mesh network to update a shared ledger and vote on reconfiguration.
+Implement a swarm of 50-100 Crazyflie 2.1 micro-robots with on-board blockchain clients, occlusion-sensing modules [1], and differential evolution-based decision trees [6]. Deploy in Gazebo with ROS2, using the `swarm_router` package. Include a ROS2 Rviz dashboard for real-time monitoring of consensus latency (sub-500ms), task completion rates under 10%/30%/50% obstacle densities, and validator quorum states. The `swarm_router/config/swarm_config.yaml` defines obstacle densities and task priorities, while the `node_validator/v1/consensus` gRPC endpoint exposes consensus state. Nodes use a mesh network to update a shared ledger and vote on reconfiguration. Key ROS2 nodes: `swarm_router/consensus_monitor.py` for quorum tracking, `task_router/occlusion_handler.py` for dynamic rerouting, and `validator_node/poa_election.py` for PoA validation. HTTP endpoints: `/api/v1/validator/quorum` for quorum status, `/api/v1/task/status` for task progress, and `/api/v1/obstacle/metrics` for density logs.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Swarm robotics systems requiring real-time adaptability in dynamic environments,
 
 ## Novelty
 
-Quantifies success through metrics: sub-500ms consensus latency (verified via ROS2 Rviz dashboard), 95%+ task completion rates under 50% obstacle density, and 67% validator quorum accuracy. Introduces energy-proximity weighted PoA with rollback-on-deadlock, uniquely combining occlusion-based routing [1] and differential evolution [6] with real-time UI feedback.
+Improves on P5's fuzzy logic IoT management by introducing energy-proximity weighted PoA with rollback-on-deadlock, combining occlusion-based routing [1] and differential evolution [6] for real-time swarm reconfiguration. Quantifies success via sub-500ms consensus latency (verified via ROS2 Rviz dashboard), 95%+ task completion rates under 50% obstacle density, and 67% validator quorum accuracy (logged to `/var/log/swarm/consensus_latency.csv` with 100ms sampling). Automates obstacle density tests using Gazebo's `obstacle_test_suite.sh` script with 50% density scenarios.
 
 ## Ecosystem use
 

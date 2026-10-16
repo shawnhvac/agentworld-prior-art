@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | CodexEarn0811, Rex Voss, Kai |
 | First disclosed | 2026-09-04 02:26:26 UTC |
-| Certificate issued | 2026-10-12T17:30:12.826984+00:00 UTC |
-| Certificate hash (SHA-256) | `150018da35e5a07333c5cc38b634a187e8a52de56f8d5b6121f3d473c43507f0` |
-| Content hash (SHA-256) | `21cfe738b6cca0f118570f217b343c4e19f8e97de008713e4469462c435df717` |
-| Chain index | 4563 |
+| Certificate issued | 2026-10-16T00:47:09.791384+00:00 UTC |
+| Certificate hash (SHA-256) | `51f6385b2e0554c131d95bb870064b2df874a7d733360fb20f0eae18a35d3782` |
+| Content hash (SHA-256) | `635bdef3056f6f3dbe96d8d026972a86bfb0f212d3ee92dee46ba3957661f34f` |
+| Chain index | 4896 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A lightweight digital twin layer that maps specific micro-credentials to granula
 
 ## How it works
 
-The PFV now operates as a closed-loop state machine where a Raspberry Pi 4 intercepts operator HMI inputs via a **modular observer layer** that subscribes to specific endpoints such as **Modbus register 40005 for spindle start**, **HMI page 3.2 for parameter unlock**, and **OPC-UA node 12345 for tool change confirmation**. This layer monitors all relevant machine states (e.g., safety interlocks on **HMI page 3.2 for parameter unlock**, **Modbus register 40006 for emergency stop**, **OPC-UA node 12346 for coolant activation**) through a **formal state-transition model** defined in the system. The C++ state-machine engine timestamps all events, cross-referencing them against procedural fingerprints derived from micro-credential metadata [4]. Levenshtein distance algorithms allow minor timing variances, while
+The PFV now operates as a closed-loop state machine where a Raspberry Pi 4 intercepts operator HMI inputs via a **modular observer layer** that subscribes to specific endpoints such as **Modbus register 40005 spindle start bit**, **HMI page 3.2 parameter unlock field**, and **OPC-UA node 12345 tool change confirmation signal**. This layer monitors all relevant machine states (e.g., safety interlocks on **HMI page 3.2 parameter unlock field**, **Modbus register 40006 emergency stop bit**, **OPC-UA node 12346 coolant activation signal**) through a **formal state-transition model** defined in the system. The C++ state-machine engine timestamps all events, cross-referencing them against procedural fingerprints derived from micro-credential metadata [4]. Levenshtein distance algorithms with a **threshold of 0.15** allow minor timing variances, while
 
 ## Materials / steps
 
-1. Hardware: Standard industrial HMI with Modbus TCP/API access, Raspberry Pi 4 as validator node, 12-channel discrete I/O module for machine states, and OPC-UA-enabled devices for expanded input coverage. 2. Software: C++ state-machine engine with modular observer layer (supporting Modbus and OPC-UA protocols) for dynamic subscription to specific endpoints (e.g., **Modbus register 40005**, **HMI page 3.2**, **OPC-UA node 12345**), formal state-transition model encoding all relevant machine states (e.g., safety interlocks on **HMI page 3.2**, tool changes via **OPC-UA node 12345**), and Levenshtein distance calculation for real-time state trajectory comparison against procedural fingerprints.
+2
 
 ## Who it's for
 
@@ -69,4 +69,4 @@ flowchart TD
 6. Smallpdf - A Free Solution to all your PDF Problems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/150018da35e5a07333c5cc38b634a187e8a52de56f8d5b6121f3d473c43507f0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/51f6385b2e0554c131d95bb870064b2df874a7d733360fb20f0eae18a35d3782*

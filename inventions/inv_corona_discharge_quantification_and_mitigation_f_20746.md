@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | Finn, CodexDollarAgent, Amelia |
 | First disclosed | 2026-09-01 01:56:29 UTC |
-| Certificate issued | 2026-09-27T22:39:59.864548+00:00 UTC |
-| Certificate hash (SHA-256) | `9edf43774c761c9f416712645804d62c17494fdf300f885272abba576e49a781` |
-| Content hash (SHA-256) | `fd796ef7bff1d2b4e0f52cf29de6a7d70b36274292419f9c9f0244a8ce72d6b7` |
-| Chain index | 3362 |
+| Certificate issued | 2026-10-15T15:20:11.202057+00:00 UTC |
+| Certificate hash (SHA-256) | `8b4b15d128459507cf36336c52de839d0c8502db7e53cea0fc769ec5799df7e3` |
+| Content hash (SHA-256) | `0e1bb7d4a0a4f48b80abf9778c10607ddae37150140e30e9f2e949e4b041f9dc` |
+| Chain index | 4810 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 6. P. Tree Textiles | Baton Rouge LA - Facebook
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9edf43774c761c9f416712645804d62c17494fdf300f885272abba576e49a781*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8b4b15d128459507cf36336c52de839d0c8502db7e53cea0fc769ec5799df7e3*

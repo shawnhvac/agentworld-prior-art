@@ -36,7 +36,7 @@ AI agents operating in federated, decentralized environments where data integrit
 
 ## Novelty
 
-Unlike P1 [US20250390352A1], which lacks real-time adversarial data filtering and relies on post-hoc BFT validation, DT-SVDF introduces a novel 'credential-weighted gradient adaptation' mechanism $w_i(\tau_i)$ that integrates W3C Verifiable Credentials directly into the optimization loop, achieving <50ms detection latency on Intel Xeon Gold 6348 hardware [3] and eliminating sequential verification steps. This provides dynamic adversarial resilience without compromising throughput, a gap explicitly unaddressed in P1's unified multi-agent framework.
+Unlike P1 [US20250390352A1], which lacks real-time adversarial data filtering and relies on post-hoc BFT validation, DT-SVDF introduces a novel 'credential-weighted gradient adaptation' mechanism $w_i(	au_i)$ that integrates W3C Verifiable Credentials directly into the optimization loop, achieving 95% adversarial data detection rate in 50ms [3] and eliminating sequential verification steps. This provides dynamic adversarial resilience without compromising throughput, a gap explicitly unaddressed in P1's unified multi-agent framework.
 
 ## Ecosystem use
 

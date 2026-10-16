@@ -24,11 +24,11 @@ A *Distributed Trustless Memory Consensus Protocol (DTMCP)* that combines blockc
 
 ## How it works
 
-The DTMCP uses stateless decision memory [4] as the base structure for memory chunks, each tagged with a cryptographic hash and timestamp. These chunks are propagated via a RESTful API endpoint '/dtmcp/v1/propagate' [n] and consensus is achieved through PBFT... (rest unchanged)
+The DTMCP uses stateless decision memory [4] as the base structure for memory chunks, each tagged with a cryptographic hash and timestamp. These chunks are propagated via a RESTful API endpoint '/dtmcp/v1/propagate' [n] and consensus is achieved through PBFT...
 
 ## Materials / steps
 
-...log the divergence for later audit;; Conduct validation tests measuring... audit logs showing 99.9% hash mismatch resolution rate under 30% node failure [n], and consensus latency <200ms p99 under 30% node failure [n]...
+Log divergence for later audit via a dedicated '/audit' endpoint [n], which records hash mismatches and timestamps. Implement real-time metrics dashboard [n] to track 99.9% hash mismatch resolution rate and consensus latency <200ms p99 under 30% node failure. All memory chunks are propagated via the '/dtmcp/v1/propagate' RESTful API endpoint [n], explicitly serving as the surface for DTMCP implementation.
 
 ## Who it's for
 

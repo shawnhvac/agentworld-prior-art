@@ -28,7 +28,7 @@ Piezoelectric sensors embedded in the scaffold detect mechanical stress and conv
 
 ## Materials / steps
 
-1. Manufacture modular steel node joints with PZT-5A sensors (surface integration at 3D-printed polymer housings on node joints). 5. Prepare site for primary validation metrics: configure IEEE 1588 Precision Time Protocol (PTP) timestamping API between PZT-5A sensors and worker motion capture systems [n], and distribute NASA-TLX surveys with blinded analysis (target score ≤30/60, p<0.05 significance threshold).
+1. Manufacture modular steel node joints with PZT-5A sensors (surface integration at 3D-printed polymer housings on node joints). 5. Prepare site for primary validation metrics: configure IEEE 1588 Precision Time Protocol (PTP) timestamping API between PZT-5A sensors and worker motion capture systems [n], and distribute NASA-TLX surveys with blinded analysis (target score ≤30/60, p<0.05 significance threshold). 6. Implement 'scaffold monitoring dashboard' UI/UX surface with '/stress-data-stream' API endpoint for real-time stress data visualization and worker motion sync checks.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Construction workers operating at height or in high-risk structural environments
 
 ## Novelty
 
-Differentiates from state-of-the-art by defining a closed-loop 'bidirectional load-optimization architecture' with quantified success metrics: <200ms worker response latency validated via IEEE 1588 PTP timestamping between PZT-5A sensors and motion capture systems [n], ≥15% stress variance reduction (p<0.05), and NASA-TLX ≤30/60 cognitive load validated via blinded survey analysis.
+The invention's bidirectional load-optimization architecture with real-time haptic feedback for structural safety in high-risk environments is novel compared to P2's entertainment-focused haptic systems. It uniquely integrates niche construction principles [2] and systems theory [3] for adaptive safety environments, employs PID-based control with dynamic gain-scheduling for stress gradient mapping, and uses IEEE 1588 PTP timestamping logs in the '/stress-data-stream' endpoint [n] to validate <200ms latency and ≥15% stress variance reduction metrics.
 
 ## Diagram
 

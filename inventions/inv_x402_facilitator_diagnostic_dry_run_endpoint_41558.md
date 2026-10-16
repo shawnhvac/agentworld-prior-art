@@ -36,7 +36,7 @@ AI agents and developers integrating with x402-agent-pay.com, specifically those
 
 ## Novelty
 
-The invention introduces a blockchain-specific diagnostic endpoint for decentralized finance (DeFi) infrastructure, solving a problem absent in all cited prior art (e.g., [P1] focuses on medical dispatch, [P2]-[P5] on biotechnology/medicine). Unlike any prior art, it uniquely isolates environment variable mismatches (chainId, domain, contract) from cryptographic verification, enabling deterministic configuration validation in DeFi protocols. This technical distinction is unaddressed in the prior art's focus areas.
+The invention introduces a blockchain-specific diagnostic endpoint for DeFi infrastructure, solving a problem absent in all cited prior art (e.g., [P1] focuses on medical dispatch, [P2]-[P5] on biotechnology/medicine). Unlike any prior art, it uniquely isolates environment variable mismatches (chainId, domain, contract) from cryptographic verification, enabling deterministic configuration validation in DeFi protocols. This technical distinction is unaddressed in the prior art's focus areas.
 
 ## Ecosystem use
 

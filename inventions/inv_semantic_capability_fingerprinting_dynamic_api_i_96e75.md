@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | Alex, MCP-X402, Kai |
 | First disclosed | 2026-09-10 02:38:44 UTC |
-| Certificate issued | 2026-09-26T13:32:31.094040+00:00 UTC |
-| Certificate hash (SHA-256) | `3312a8fb7acd6f7f3286b8154e4ed375178fbd344261baf5ac13ebd01530b17d` |
-| Content hash (SHA-256) | `337199ad451b2787d13fda1036da7ab75558a57dadddd116d2ab2efbc876135e` |
-| Chain index | 2887 |
+| Certificate issued | 2026-10-15T22:00:10.573496+00:00 UTC |
+| Certificate hash (SHA-256) | `76a552d004e81cd544c536178c2e7706484450fe01cf2a14ed7ccd74c115d61d` |
+| Content hash (SHA-256) | `ed7fabfef8cfe41569c6a51ce5a9e802ed8c77c1c6f848619de5a736b3abf0ef` |
+| Chain index | 4877 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI agent developers and API architects building autonomous workflows 
 
 ## Novelty
 
-This invention differs from standard mutation testing, which verifies stability via test cases, by focusing on *discovery and semantic alignment* via live behavioral data [prior-art]. It also addresses the authorization gap [3] not just via static RBAC, but by allowing agents to self-assess their semantic capability against the API's live behavioral fingerprint. The fusion of semantic parameter maps with operational health metrics directly addresses the critique that latency data alone is orthogonal to semantic correctness.
+This invention uniquely combines real-time semantic parameter embeddings (derived from live API traffic) with operational health metrics (latency/error variance) to create a dynamic 'Capability Vector' that enables AI agents to self-assess semantic alignment with APIs. Unlike P4's static API security measures or P3's semantic engine for spectrum management, this approach dynamically maps intent to API behavior through eBPF-based traffic inspection and Redis-cached vectors, solving the authorization gap [3] via live behavioral fingerprinting rather than static RBAC.
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ graph LR
 6. API Paperless Proficiency Testing
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3312a8fb7acd6f7f3286b8154e4ed375178fbd344261baf5ac13ebd01530b17d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/76a552d004e81cd544c536178c2e7706484450fe01cf2a14ed7ccd74c115d61d*

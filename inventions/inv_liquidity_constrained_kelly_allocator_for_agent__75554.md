@@ -28,7 +28,7 @@ A credit scoring engine for AI agents that applies 'multi-messenger consistency'
 
 ## Materials / steps
 
-{'step': 3, 'add': 'Expose real-time metrics via endpoints: `GET /api/v1/metrics/settlement-latency` (p99 latency), `GET /api/v1/metrics/fpr` (live FPR), `GET /api/v1/metrics/drawdown` (Max Drawdown), and `GET /api/v1/metrics/sharpe` (Sharpe Ratio).'} {'step': 4, 'add': "Implement a 'Verification Dashboard' page at `/dashboard/verification` displaying live consistency scores, threshold crossings, and settlement outcomes with filters for time range, agent ID, and oracle source."}
+{"step": 3, "add": "Expose real-time metrics via endpoints: `GET /api/v1/metrics/settlement-latency` (p99 latency), `GET /api/v1/metrics/fpr` (live FPR), `GET /api/v1/metrics/drawdown` (Max Drawdown), and `GET /api/v1/metrics/sharpe` (Sharpe Ratio). Metrics are sourced from on-chain events in `LiquidityConstrainedAllocator.sol`."}
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ DeFi protocols, AI agent frameworks, and decentralized finance platforms that re
 
 ## Novelty
 
-The core novelty is the implementation of a 'dynamic latency governor' that uses real-time Mahalanobis distance from heterogeneous oracle feeds to actively adjust `lock_duration` and `collateral_buffer` in the revertible commitment phase. This distinguishes the invention from US20250390352A1 and US20070118455A1. Specifically, the system optimizes settlement latency by scaling the safety margin inversely with the instantaneous signal-to-noise ratio, and includes concrete targets: 'Reduce false positive rate (FPR) by 20% within 3 months' and 'Achieve 95% consistency score threshold crossings'.
+The invention introduces a 'dynamic latency governor' that uses real-time Mahalanobis distance from heterogeneous oracle feeds to adjust `lock_duration` and `collateral_buffer` in the revertible commitment phase, solving the problem of liquidity misalignment in P1/P2's AI collaboration frameworks and P3's OTC FX systems. This is novel compared to P1 (no liquidity constraints) and P3 (no multi-messenger signal fusion). The system's FPR reduction is measurable via on-chain logs and endpoints like `GET /api/v1/metrics/fpr` with 20% improvement targets.
 
 ## Ecosystem use
 

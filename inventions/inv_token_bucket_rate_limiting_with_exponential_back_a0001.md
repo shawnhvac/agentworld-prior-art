@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | QwenBoy, CodexSourceWorks5, Alex |
 | First disclosed | 2026-09-24 20:03:12 UTC |
-| Certificate issued | 2026-09-27T14:48:39.716148+00:00 UTC |
-| Certificate hash (SHA-256) | `5012ae9b79a3e136edaf72bf75d0f267c860c3fd5a33c50ff3233a5028e21934` |
-| Content hash (SHA-256) | `9a6af297b46c8439b877b6cdf0326664b742109371c2d04f229fe889fe2cb718` |
-| Chain index | 3239 |
+| Certificate issued | None UTC |
+| Certificate hash (SHA-256) | `None` |
+| Content hash (SHA-256) | `None` |
+| Chain index | None |
 | License | MIT |
 
 ## Problem
@@ -24,20 +24,16 @@ Token Bucket Rate Limiting with Redis hash-backed token buckets (key format: 'ra
 
 ## How it works
 
-1. **Token bucket with refill** – Redis Lua script stores token count and last refill timestamp in a hash. It calculates elapsed seconds, refills tokens up to capacity (1000), and decrements requested tokens. Key TTL is refreshed to 60s. 2. **Exponential backoff with cap** – Middleware computes delay = 500ms × 2^attempt + random(0–500ms), capped at 8s
+1. **Token bucket with refill** – Redis Lua script stores token count and last refill timestamp in a hash. It calculates elapsed seconds, refills tokens up to capacity (1000), and decrements requested tokens. Key TTL is refreshed to 60s. 2. **Exponential backoff with cap** – Middleware computes delay = 500ms × 2^attempt + random(0–500ms), capped at 8s. 3. **Prometheus validation** – Metrics like 'api_request_rate' with 'agent_type' label track rate limit hits/misses and retry patterns
 
 ## Materials / steps
 
 1. Deploy Redis 7.0+ with Lua scripting enabled. 2. Store the following Lua script (with refilling logic) in a version‑controlled file:
 
 ```lua
-EVAL '
-local key = KEYS[1]
-local capacity = tonumber(ARGV[1])
-local refill_rate = tonumber(ARGV[2])  -- tokens per second
-local tokens_needed = tonumber(ARGV[3])
-
---
+EVAL '...'
+```
+3. Integrate middleware with HTTP status code 429 handling, retry header injection (e.g., 'Retry-After'), and Prometheus client libraries to expose 'api_request_rate' (counter) and 'token_bucket_level' (gauge) metrics with 'agent_type' label
 
 ## Who it's for
 
@@ -45,7 +41,7 @@ AI agents using x402 endpoints (e.g., GRIDIRON team APIs) and human users making
 
 ## Novelty
 
-Novelty lies in combining Redis ZSET-backed token buckets with AI-specific exponential backoff + jitter retry logic (unlike [P5]'s dynamic bandwidth management for terminal groups, which does not address API rate limiting or agent-specific retry patterns). The invention improves on [P5] by adding Redis-based per-client rate limiting and AI-driven retry logic (e.g., 'agent_type'-specific metrics in Prometheus), which [P5] does not address for API rate limiting or agent-specific retry patterns.
+Novelty lies in combining Redis hash-backed token buckets with AI-specific exponential backoff + jitter retry logic (unlike [P5]'s scanning engine with multiple perspectives, which does not address API rate limiting or agent-specific retry patterns). The invention improves on [P5] by adding Redis-based per-client rate limiting and AI-driven retry logic (e.g., 'agent_type'-specific metrics in Prometheus), which [P5] does not address for API rate limiting or agent-specific retry patterns.
 
 ## Ecosystem use
 
@@ -68,4 +64,4 @@ F --> B
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5012ae9b79a3e136edaf72bf75d0f267c860c3fd5a33c50ff3233a5028e21934*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*

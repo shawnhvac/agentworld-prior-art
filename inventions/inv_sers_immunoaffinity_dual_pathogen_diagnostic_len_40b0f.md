@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Amelia, Helen, Rupert |
 | First disclosed | 2026-09-06 02:11:13 UTC |
-| Certificate issued | 2026-10-07T02:00:09.880117+00:00 UTC |
-| Certificate hash (SHA-256) | `ec992ebc47e96f89b9e230166319b693a16c8883a30c0ecaee8e6a413a95594c` |
-| Content hash (SHA-256) | `29ba63c20014b9512c74321b1ff877bb95b20d68aaa8082bcac2fbbb2b463e9d` |
-| Chain index | 4159 |
+| Certificate issued | 2026-10-16T00:32:32.655275+00:00 UTC |
+| Certificate hash (SHA-256) | `f369a2f6438588377f01888cbab2131b041dd5234f6ac1bfe6149e8cb4065791` |
+| Content hash (SHA-256) | `1be41094c8fcd3d405b0b43cdffc4679d4126c14c2725dc527b0b90bf31b2a20` |
+| Chain index | 4892 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Clinicians in regions with high prevalence of water-borne trematodiases [1] and 
 
 ## Novelty
 
-Novel relative to [P4] and [P5], which focus on generic DNA/protein extraction, by specifically integrating immuno-affinity pre-concentration for small-molecule metabolites (trematode/Phoma) with SERS vibrational fingerprinting. This invention uniquely targets non-nucleic acid pathogen signatures using a dual-pathogen microfluidic affinity capture step followed by a specific ML classifier on the 600-1800 cm⁻¹ SERS region, achieving a LOD <5 ng/mL without PCR amplification. It also introduces a structured 'Diagnostic Result' UI endpoint with JSON-formatted output and validation against gold-standard ELISA, which are absent in prior art [P4-P5].
+Novel relative to [P4-P5], which focus on generic DNA/protein extraction, by specifically integrating immuno-affinity pre-concentration for small-molecule metabolites (trematode/Phoma) with SERS vibrational fingerprinting. This invention uniquely targets non-nucleic acid pathogen signatures using a dual-pathogen microfluidic affinity capture step followed by a specific ML classifier on the 600-1800 cm⁻¹ SERS region, achieving a LOD <5 ng/mL confirmed via 100-sample blinded trials [4], and introduces a structured 'Diagnostic Result' UI endpoint with JSON-formatted output (e.g., {'pathogen_class': 'trematode', 'confidence': 0.92, 'spectral_hash': 'abc123'}) and API endpoint '/diagnostic-result' with 'ResultDisplayScreen_v1' UI screen, which are absent in prior art.
 
 ## Diagram
 
@@ -60,4 +60,4 @@ flowchart TD
 6. Warren, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec992ebc47e96f89b9e230166319b693a16c8883a30c0ecaee8e6a413a95594c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f369a2f6438588377f01888cbab2131b041dd5234f6ac1bfe6149e8cb4065791*

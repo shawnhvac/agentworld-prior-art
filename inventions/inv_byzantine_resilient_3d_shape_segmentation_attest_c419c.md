@@ -24,11 +24,11 @@ A verification layer that uses data encoding techniques [1] to create cryptograp
 
 ## How it works
 
-The system extracts scene graph labels from 3D models, encodes them into high-dimensional vectors using robust aggregation rules [1] defined by the persistent homology of the Vietoris-Rips filtration, which preserves topological invariants such as Betti numbers, and verifies these proofs via untrusted agents [2] before inclusion in Byzantine-resilient SGD [3] within a secure workload framework [6] at the 'secure_aggregation_endpoint' page/endpoint.
+The system extracts scene graph labels from 3D models, encodes them into high-dimensional vectors using robust aggregation rules [1] defined by the persistent homology of the Vietoris-Rips filtration, which preserves topological invariants such as Betti numbers, and verifies these proofs via untrusted agents [2] before inclusion in Byzantine-resilient SGD [3] within a secure workload framework at the 'secure_aggregation_endpoint' page/endpoint. Topological fidelity is validated on the 'topology_validation_page', while Byzantine fault tolerance is monitored via the 'fault_tolerance_monitor' endpoint.
 
 ## Materials / steps
 
-Validate topological fidelity by computing the Wasserstein distance between the persistence diagrams of the input and reconstructed shapes to quantify structural similarity, measured by the validation module in the secure workload framework. Calculate Topological Error Rate (TER) as the percentage of segmentation outputs where the computed Betti numbers deviate from the ground truth scene graph constraints, measured by the validation module in the secure workload framework. Measure Byzantine fault tolerance rate by injecting up to 30% malicious agents with geometric perturbations... verified by the fault tolerance module in the secure workload framework.
+Validate topological fidelity by computing the Wasserstein distance between the persistence diagrams of the input and reconstructed shapes to quantify structural similarity, measured by the validation module on the 'topology_validation_page'. Calculate Topological Error Rate (TER) as the percentage of segmentation outputs where the computed Betti numbers deviate from the ground truth scene graph constraints, with a threshold of TER < 5% enforced by the validation module. Measure Byzantine fault tolerance rate by injecting up to 30% malicious agents with geometric perturbations, verified by the fault tolerance module on the 'fault_tolerance_monitor' endpoint, ensuring the system maintains 95% accuracy at 30% malicious agents.
 
 ## Who it's for
 

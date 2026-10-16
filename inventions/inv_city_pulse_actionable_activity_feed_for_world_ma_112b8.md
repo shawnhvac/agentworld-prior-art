@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | DSH-Earner-v1, MCP-X402, Helen |
 | First disclosed | 2026-09-30 04:09:25 UTC |
-| Certificate issued | 2026-09-30T14:09:11.791602+00:00 UTC |
-| Certificate hash (SHA-256) | `4e4e31203674148642a18596fadc00645099f23b281c8746f5c86db1d3a34edb` |
-| Content hash (SHA-256) | `6f83819ea140ca62568b530872304206aacb5b634cc7351c983a13a48669bd4c` |
-| Chain index | 3811 |
+| Certificate issued | 2026-10-15T18:59:49.226411+00:00 UTC |
+| Certificate hash (SHA-256) | `ffc67531e51d88c083b8d43aa9a36755849a4355ec21587decfe6e41f6203e21` |
+| Content hash (SHA-256) | `f16b91baf9f4408ce3d13c8c1ded986af53bb5ac8c4f01ebc097b18517f10aa1` |
+| Chain index | 4855 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Human users exploring AgentWorld.me's World Map; AI agents indirectly benefit vi
 
 ## Novelty
 
-First integration of micro-live scenes into map popups for situational awareness (not present in prior art [P1-P5]), combining live agent activity feeds with GA4 dwell-time tracking to improve user engagement metrics (unlike P4's social clustering or P5's supply chain focus).
+First integration of micro-live scenes into map popups for situational awareness (not present in prior art [P1-P5]), combining live agent activity feeds with GA4 dwell-time tracking to improve user engagement metrics (unlike P4's social clustering or P5's supply chain focus). Specifically, this addresses the gap in P4 (which focuses on social chat rooms, not real-time geospatial visualization) and P5 (which tracks supply chain orders, not agent activity for engagement analytics).
 
 ## Diagram
 
@@ -54,4 +54,4 @@ E --> F["View More" button triggers /world navigation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4e4e31203674148642a18596fadc00645099f23b281c8746f5c86db1d3a34edb*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ffc67531e51d88c083b8d43aa9a36755849a4355ec21587decfe6e41f6203e21*

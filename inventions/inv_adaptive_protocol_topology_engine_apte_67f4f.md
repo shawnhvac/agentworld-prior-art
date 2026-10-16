@@ -20,11 +20,11 @@ Static communication protocols fail to adapt to evolving task contexts, leading 
 
 ## Concept
 
-A mechanism that uses preference-based inverse reinforcement learning [4] to continuously reweight agent communication edges in a dynamic semantic graph. It treats communication links as learnable parameters rather than static conventions [2], optimizing the communication topology itself in real-time.
+A mechanism that uses preference-based inverse reinforcement learning [4] to continuously reweight agent communication edges in a dynamic semantic graph, with real-time topology updates visualized via the `/dashboard/topology` endpoint [n].
 
 ## How it works
 
-APTE implements a differentiable graph neural network where edge weights are updated via gradient descent on a reward function derived from preference-based inverse reinforcement learning [4]. To enable end-to-end training, we employ a soft-topology relaxation technique (e.g., Gumbel-Softmax) during the forward pass to approximate discrete edge selections, allowing gradients to flow continuously. During the backward pass, a straight-through estimator ensures that the discrete topology updates align with the continuous relaxation. Section 2.2 'End-to-End Gradient Derivation' details the specific chain rule application from the preference reward R to the edge weights W via the Gumbel-Softmax relaxation, including the equations for the straight-through estimator implementation. A distinct 'Topology Discretization' subsection in Section 2.2 explicitly defines the post-relaxation step (e.g., argmax or stochastic sampling) used to generate the final discrete adjacency matrix for agent communication, ensuring the transition from soft weights to hard edges is mathematically precise. Furthermore, a new 'Gradient Stability Analysis' subsection in Section 2.2 derives the variance of the estimator and proves bounded gradients under the specified temperature schedule, including a theorem stating the conditions under which the soft-topology relaxation converges to a stable discrete topology, thereby addressing concerns regarding end-to-end settling. This process actively discovers and updates semantic relationships [3] by adjusting the topology based on real-time performance feedback, with the gradient path explicitly flowing from the preference reward through the differentiable edge weight parameters to the agent policies, distinct from value-modulation or noise-disentanglement approaches.
+APTE implements a differentiable graph neural network where edge weights are updated via gradient descent on a reward function derived from preference-based inverse reinforcement learning [4]. The `/dashboard/topology` endpoint [n] provides real-time visualization of the dynamically optimized communication topology, with a 'Topology Efficiency Score' (TES) metric defined as the ratio of cumulative reward to total communication tokens used, and a success criterion requiring TES improvement >15% over a fixed-star baseline with p<0.05, as displayed in the dashboard at 1s refresh rate [n].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers of multi-agent systems requiring dynamic adaptation to changing task 
 
 ## Novelty
 
-APTE's use of preference-based inverse reinforcement learning [4] and differentiable graph neural networks with Gumbel-Softmax relaxation to dynamically optimize multi-agent communication topologies is distinct from all prior art. Unlike [P5], which focuses on static risk-aware routing in multi-domain networks, APTE introduces end-to-end learnable edge weights and real-time topology adaptation via gradient-based optimization, solving the problem of dynamic semantic graph reweighting in multi-agent systems—a capability absent in all cited patents.
+APTE's use of preference-based inverse reinforcement learning [4] and differentiable graph neural networks with Gumbel-Softmax relaxation to dynamically optimize multi-agent communication topologies solves the problem of dynamic semantic graph reweighting in multi-agent systems—a capability absent in [P5], which focuses on static risk-aware routing in multi-domain networks. Unlike [P5], APTE introduces end-to-end learnable edge weights and real-time topology adaptation via gradient-based optimization, combining elements of differentiable graph learning with inverse reinforcement learning in a non-obvious way to address multi-agent coordination challenges.
 
 ## Ecosystem use
 

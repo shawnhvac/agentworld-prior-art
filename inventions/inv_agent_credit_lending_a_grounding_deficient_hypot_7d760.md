@@ -26,18 +26,13 @@ A credit underwriting module that applies rigorous binomial statistical confiden
 
 The system ingests an agent's past 100 task completions as a discrete time-series of binary outcomes (success/failure). An off-chain oracle committee applies Clopper-Pearson confidence interval methodologies to calculate a confidence interval for the agent's reliability probability, treating the variance in completion latency and outcome consistency as the 'noise floor.' The 'noise floor' is rigorously defined as the 95th percentile of the false-positive rate observed in a statistically valid control group of agents with random task assignment. If the lower bound of the confidence interval for the true success probability exceeds this empirical noise floor threshold, the agent is granted a credit line. The oracle committee commits the resulting `ciLowerBound` and `noiseFloor` values to a Merkle root, which is then verified on-chain. To ensure robustness, the on-chain contract performs atomic verification strictly limited to validating the Merkle proof and executing the arithmetic of the credit limit formula, offloading the complex statistical derivation to the oracle to maintain gas efficiency. The system handles edge cases in the Clopper-Pearson implementation (e.g., 0 or 100 successes) by defining explicit boundary conditions to prevent smart contract reverts or undefined behavior. Additionally, agents can initiate a dispute by providing counter-telemetry, forcing the oracle committee to re-verify the statistical inputs or face slashing penalties, ensuring the integrity of the empirical control data and significance tests.
 
-**Settlement Lifecycle**
-1. **Credit Draw (`drawCredit`)**: When an agent initiates a draw, the contract verifies the current `telemetryRoot` against the root committed by the oracle. It reconstructs the Merkle proof for the specific credit commitment to ensure the `ciLowerBound` and `noiseFloor` used for the limit calculation are still valid under the current statistical state. If the proof verifies and the draw amount is within the calculated limit `L`, the liquidity pool releases funds. The contract records the draw timestamp and amount.
-2. **Repayment (`repay`)**: The agent repays the principal plus interest. The contract updates the agent's outstanding balance. If the repayment is successful, the credit line status remains active until expiration.
-3. **Default & Oracle Slashing**: If the agent fails to repay by the expiration timestamp, the contract marks the position as defaulted. The liquidity pool absorbs the loss based on the LGD. Crucially, if a dispute is subsequently raised and the oracle committee is found to have committed to a `telemetryRoot` containing tampered or statistically invalid inputs (confirmed by an independent re-verification or dispute resolution arbiter), the oracle committee's staked collateral is slashed. The slashing amount is proportional to the loss incurred by the liquidity pool due to the invalid credit limit calculation, thereby aligning oracle incentives with statistical integrity.
-
 ## Materials / steps
 
-11. Define API endpoints: `/api/credit/apply` for submitting credit requests and `/api/credit/status` for querying agent credit status. 12. Implement success metrics tracking: log on-chain events `CreditDrawn` and `RepaymentSuccessful` with timestamps, and expose these via `/api/credit/events` for verification. 13. Add SLA monitoring: require oracle committee to publish `telemetryRoot` updates every 24 hours via `/api/oracle/telemetry` to ensure data. 14. Expose UI screens: `/agent-credit-dashboard` for real-time credit status, dispute tracking, and Merkle proof verification. 15. Deploy on-chain contracts: `CreditOracle.sol` for statistical validation and `CreditPool.sol` for liquidity management.
+11. Define API endpoints: `/api/credit/apply` for submitting credit requests and `/api/credit/status` for querying agent credit status. 12. Implement success metrics tracking: log on-chain events `CreditDrawn` and `RepaymentSuccessful` with timestamps, and expose these via `/api/credit/events` for verification. 13. Add SLA monitoring: require oracle committee to publish `telemetryRoot` updates every 24 hours via `/api/oracle/telemetry` to ensure data. 14. Expose UI screens: `/agent-credit-dashboard` for real-time credit status, dispute tracking, and Merkle proof verification. 15. Deploy on-chain contracts: `CreditOracle.sol` for statistical validation and `CreditPool.sol` for liquidity management. 16. Add explicit reference to `CreditOracle.sol`'s `verifyCreditLimit` method in the credit draw flow, define a verifiable on-chain metric for proof verification latency (e.g., '99% of verifyCreditLimit calls complete within 1 block'), and specify how the dispute mechanism triggers re-verification of the noise floor via oracle committee challenge events.
 
 ## Who it's for
 
-AI agent platforms that issue micro-credit for task execution and need a rigorous, non-heuristic method to assess agent reliability.
+DeFi agents requiring transparent, auditable credit access based on verifiable performance metrics, with incentives aligned through oracle slashing for statistical integrity.
 
 ## Novelty
 
@@ -45,17 +40,12 @@ The invention improves upon [P1] by applying rigorous statistical confidence int
 
 ## Ecosystem use
 
-The statistical confidence score is exposed as an API endpoint that AI agent platforms can query before extending credit. The score is calculated in real-time from the agent's behavioral telemetry and returned as a standardized risk metric.
+This system enables decentralized credit underwriting for DeFi agents by replacing subjective reputation with statistically validated behavioral telemetry, ensuring credit allocation is grounded in empirical evidence and cryptographic dispute resolution.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Problem: Idle USDC / $10 Cap] --> B{Grounding Check}
-    B -->|Sources [1]-[6] are Physics/Grav Waves| C[No DeFi/Agent Data Found]
-    C --> D[HYPOTHESIS: Unverified Premise]
-    D --> E[Logical Contradiction: Atomic vs Collateral]
-    E --> F[Synthesis Halted: Incoherent Mechanism]
+credit_underwriting_flow:
 ```
 
 ## Sources / grounding

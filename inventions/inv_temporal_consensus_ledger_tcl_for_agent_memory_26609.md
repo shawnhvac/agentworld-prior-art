@@ -24,11 +24,11 @@ The Temporal Consensus Ledger (TCL) integrates blockchain timestamping [1] with 
 
 ## How it works
 
-The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `agent_memory/tcl_v1` endpoint [5], which includes timestamp validation logic in `ledger_v2/timestamp_validator.py`. The `reputation_scores.db` schema is updated with slashing events in `db_schema/reputation_scores_v2.sql` to ensure immutability.
+The memory fabric listener subscribes to the `ReputationSlashed` event and interacts with the `agent_memory/tcl_v1` endpoint [5], which is implemented as a REST API surface in `agent_memory/tcl_v1/api.py` with UI integration in `agent_dashboard/tcl_monitoring.vue`. The `ledger_v2/timestamp_validator.py` includes timestamp validation logic, and `db_schema/reputation_scores_v2.sql` updates `reputation_scores.db` with slashing events to ensure immutability.
 
 ## Materials / steps
 
-6. Implement a Validation Metrics suite with concrete checks: (a) Throughput: Use k6 [7] to measure p99 latency from `testnet/metrics.log` at `testnet/metrics.log` and confirm 1,000 TPS. (b) Slashing efficacy: Count 'slashed transaction count per hour' via `ReputationSlashed` event logs in `ledger_v2/event_logs/` (e.g., 120+ slashes/hour at 100ms latency). (c) Reputation integrity: Query `reputation_scores.db` at `db_queries/reputation_deviation.sql` to track score deviations from baseline (max 0.5% deviation).
+6. Implement a Validation Metrics suite with concrete checks: (a) Throughput: Use k6 [7] to measure p99 latency from `testnet/metrics.log` at `testnet/metrics.log` and confirm 1,000 TPS (user-facing SLA: 1,000 TPS with 99.9% availability). (b) Slashing efficacy: Count 'slashed transaction count per hour' via `ReputationSlashed` event logs in `ledger_v2/event_logs/` (e.g., 120+ slashes/hour at 100ms latency, guaranteed by service-level agreement). (c) Reputation integrity: Query `reputation_scores.db` at `db_queries/reputation_deviation.sql` to track score deviations from baseline (max 0.5% deviation, enforced by consensus rules).
 
 ## Who it's for
 

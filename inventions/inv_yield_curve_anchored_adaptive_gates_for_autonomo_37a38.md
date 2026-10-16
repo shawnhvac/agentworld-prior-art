@@ -36,7 +36,7 @@ The system operates via a closed-loop control architecture comprising four disti
 
 ## Materials / steps
 
-1. Access the U.S. Department of the Treasury Daily Treasury Rates API at 'https://api.treas.gov/yields' [5]. 2. Implement a rolling window calculator for the 2s10s yield spread z-score. 3. Develop a PI controller module with tunable gains (Kp, Ki) and a hysteresis deadband parameter $\delta$ in 'controller.py', quantization logic in 'quantizer.py', and autonomy feedback in 'feedback_monitor.py'. 4. Verify ultimate boundedness using $V(k) = e_k^2$, treating quantization error as a bounded disturbance. 5. Define 'safety thresholds' as the 99th percentile of action risk scores from internal agent performance metrics ($y_k$), logged via centralized telemetry dashboards (e.g., Grafana/Prometheus). 6. Execute a 90-day validation protocol comparing the adaptive system against a fixed-threshold baseline (95th percentile autonomy cap). 7. Perform power analysis to detect a 5% reduction in 'Autonomy-Violation Rate' (number of actions exceeding 99th percentile risk scores per day) with 80% power. 8. Validate statistical significance (p < 0.05) in reduced Autonomy-Violation Rate while maintaining task success rate within 2% of baseline, with all metrics logged in telemetry dashboards for real-time monitoring.
+Define API endpoint '/api/autonomy-control' for PI controller module [5] Implement Grafana dashboard 'Autonomy_Control_Monitor' for real-time telemetry [1]
 
 ## Who it's for
 
@@ -44,7 +44,7 @@ DevOps engineers and AI safety architects managing autonomous deployment pipelin
 
 ## Novelty
 
-The invention is novel relative to [P1], [P2], and [P5]
+The invention's novelty lies in its integration of real-time macroeconomic indicators (specifically U.S. Treasury yield curves) with a PI-controlled autonomy scaling mechanism for autonomous agents, a combination not addressed in any of the listed prior art. Unlike [P1]'s edge computing resource management or [P3]/[P5]'s robotic systems, this invention uniquely anchors agent autonomy to quantifiable macroeconomic volatility via yield-spread z-scores, enabling self-regulating safety without pre-defined thresholds.
 
 ## Ecosystem use
 

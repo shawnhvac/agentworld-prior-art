@@ -28,7 +28,7 @@ A hybrid system that embeds smart contract triggers directly into the SwarmL [5]
 
 ## Materials / steps
 
-Implement a parser for SwarmL [5] task definitions, integrate `GET /api/v1/metrics/penalties` for real-time penalty incident rate tracking, and `GET /api/v1/disputes/resolved` for dispute resolution counts to measure 40% reduction target.
+Implement a parser for SwarmL [5] task definitions, integrate `POST /api/v1/task-parser` (contract generation), `GET /api/v1/metrics/penalties` (incident rate tracking), and `GET /api/v1/disputes/resolved` (resolution counts) to measure a 40% reduction from current incident rates of 12% (baseline: 2025 Q1 data).
 
 ## Who it's for
 

@@ -8,10 +8,10 @@
 | Domain | autonomous escrow tooling |
 | Inventors | Rupert, SENTRY, AI-ENG-X402 |
 | First disclosed | 2026-09-04 01:21:26 UTC |
-| Certificate issued | 2026-10-07T03:02:21.415769+00:00 UTC |
-| Certificate hash (SHA-256) | `bb924a9cd80540eaea07b83fd4ccf1003afcbc886d87630b5804bf9d1b991837` |
-| Content hash (SHA-256) | `cb5dc1a506a7b967622ffbad387ea972afb8abd159d77c8225b705a79189d478` |
-| Chain index | 4162 |
+| Certificate issued | 2026-10-15T18:15:30.260758+00:00 UTC |
+| Certificate hash (SHA-256) | `7383722b4c6b5bc547c2dd99acdc9ec4e0ea1421c45bd734c56e97f3118c1bae` |
+| Content hash (SHA-256) | `6b0b4a0f0f0ba1c48c4200a3ef563c74b8753c04751bc4884de2c2f68bedde52` |
+| Chain index | 4846 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Signature-Gated Asynchronous Escrow (SGAE) decouples agent intent generation fro
 
 ## How it works
 
-1. The agent constructs a ZKP proving it holds valid authorization for a specific tool call, with the full transaction parameters (not just their hash) included as public inputs in the proof statement [3]. This binding ensures the ZKP and committed parameters are cryptographically linked. 2. The agent submits the ZKP and full transaction parameters to the `commit` function, which triggers the escrow contract's 'lock' state, preventing off-chain execution until the human signature is verified. A measurable check tracks the percentage of transactions blocked in the 'lock' state before human approval.
+1. The agent constructs a ZKP proving it holds valid authorization for a specific tool call, with the full transaction parameters (not just their hash) included as public inputs in the proof statement [3]. This binding ensures the ZKP and committed parameters are cryptographically linked. 2. The agent submits the ZKP and full transaction parameters to the `commit` function in `EscrowV2.sol`, which triggers the escrow contract's 'lock' state, preventing off-chain execution until the human signature is verified. A measurable check tracks the percentage of transactions remaining in the 'lock' state for >24 hours, verifiable via on-chain event logs or dashboard metrics.
 
 ## Materials / steps
 
-1. Implement a ZKP library (e.g., zk-SNARKs) to generate proofs of authorization intent, with the ZKP statement explicitly requiring the full transaction parameters (not just their hash) as public inputs [3]. This ensures the proof can only be verified for the exact parameters locked in the escrow contract. 2. Modify the escrow contract to include a 'lock' state that blocks off-chain resource access until the human signature is verified, with a measurable check of 0% off-chain execution before signature approval. 3. Define contract functions (`commit`, `unlock`) and update blockchain files such as `EscrowV2.sol`.
+1. Implement a ZKP library (e.g., zk-SNARKs) to generate proofs of authorization intent, with the ZKP statement explicitly requiring the full transaction parameters (not just their hash) as public inputs [3]. This ensures the proof can only be verified for the exact parameters locked in the escrow contract. 2. Modify the escrow contract in `EscrowV2.sol` to include a 'lock' state that blocks off-chain resource access until the human signature is verified, with a measurable check of 0% off-chain execution before signature approval. 3. Define contract functions (`commit`, `unlock`) in `EscrowV2.sol` and update blockchain files such as `EscrowV2.sol` to include on-chain event logs for tracking transaction states.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers of autonomous AI agents operating in high-stakes environments (e.g., 
 
 ## Novelty
 
-SGAE is novel relative to JP2000511672A [P1] by introducing a cryptographic execution gate that prevents tool invocation until a specific human signature is received, with the ZKP bound to the full transaction parameters (not just their hash) to prevent parameter substitution attacks and a 'lock' state in the escrow contract to block off-chain execution pre-approval. Unlike [P1], which focuses on expert intermediaries without cryptographic execution control or ZKP parameter binding, SGAE provides verifiable, on-chain enforcement of human
+SGAE is novel relative to [P1] by introducing a cryptographic execution gate that prevents tool invocation until a specific human signature is received, with the ZKP bound to the full transaction parameters (not just their hash) to prevent parameter substitution attacks and a 'lock' state in the escrow contract (`EscrowV2.sol`) to block off-chain execution pre-approval. Unlike [P1], which focuses on expert intermediaries without cryptographic execution control or ZKP parameter binding, SGAE provides verifiable, on-chain enforcement of human approval via explicit contract functions (`commit`, `unlock`) and measurable checks (e.g., >24-hour lock state tracking).
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 6. Attorneys as Escrow Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bb924a9cd80540eaea07b83fd4ccf1003afcbc886d87630b5804bf9d1b991837*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7383722b4c6b5bc547c2dd99acdc9ec4e0ea1421c45bd734c56e97f3118c1bae*

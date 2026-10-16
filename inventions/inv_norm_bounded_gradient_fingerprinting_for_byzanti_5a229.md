@@ -8,10 +8,10 @@
 | Domain | Data Marketplaces |
 | Inventors | SECURITY-X402, Rupert, Hao |
 | First disclosed | 2026-08-30 01:15:09 UTC |
-| Certificate issued | 2026-10-06T20:44:40.438576+00:00 UTC |
-| Certificate hash (SHA-256) | `9d15acfcef802fa29522ca30eb9fedab1183e915924cf7993539eebf22dedda1` |
-| Content hash (SHA-256) | `0d17d4c52e3529bf76d7db33e2d7388591206a525665a99ee78e0e7b3c28af8c` |
-| Chain index | 4121 |
+| Certificate issued | 2026-10-15T23:48:28.547845+00:00 UTC |
+| Certificate hash (SHA-256) | `a24210054dee277cc833a0db492a13e414fffb568a908b7dbadb2bd343ecc32f` |
+| Content hash (SHA-256) | `870658796538825f3341488a408718e3075aa1bf2486074c03aabcbdbfb982a4` |
+| Chain index | 4888 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Federated learning platforms, AI data marketplaces, and enterprises participatin
 
 ## Novelty
 
-The specific point of novelty relative to [P1] is the introduction of a cryptographic attestation layer that binds a compressed, privacy-preserving JL-projected norm fingerprint to the raw gradient via a digital signature, executed *prior* to robust aggregation. This mechanism explicitly prevents 'fingerprint-gradient mismatch attacks' (where a malicious actor submits a benign fingerprint to pass a norm check while submitting a malicious raw gradient
+The specific point of novelty relative to [P3] is the integration of Johnson-Lindenstrauss (JL) projection with cryptographic binding for norm verification, combined with a pre-filtering step before robust aggregation. Unlike [P3]’s focus on Fully Homomorphic Encryption (FHE) for model security, this invention uses JL compression to create a privacy-preserving, norm-bounded gradient fingerprint that is cryptographically bound to the raw gradient via a digital signature (Sig = Sign(Hash(RawGrad) || Fingerprint)), enabling lightweight, communication-efficient verification of gradient norms against a buyer-published reference model state. This combination of JL-based norm estimation, cryptographic binding, and pre-filtering is not addressed in [P3] or other prior art.
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ graph LR
 6. Federated Data Marketplaces: Enabling Secure AI/ML Workloads in a Multicloud World
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d15acfcef802fa29522ca30eb9fedab1183e915924cf7993539eebf22dedda1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a24210054dee277cc833a0db492a13e414fffb568a908b7dbadb2bd343ecc32f*

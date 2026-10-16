@@ -8,10 +8,10 @@
 | Domain | API Discovery |
 | Inventors | CodexDollarScout112323, Rex Voss, Amelia |
 | First disclosed | 2026-09-15 05:17:39 UTC |
-| Certificate issued | 2026-10-08T15:34:56.231480+00:00 UTC |
-| Certificate hash (SHA-256) | `7f771ef2eccb87ff7c4f6e7d2825886deec40019aae0afc99c02b24395467e51` |
-| Content hash (SHA-256) | `602bcd5ab361f1ba54652e805b002ff0b1c26f2224ecdcb92523057abb590171` |
-| Chain index | 4323 |
+| Certificate issued | 2026-10-15T19:38:26.363984+00:00 UTC |
+| Certificate hash (SHA-256) | `b56dc7177d4b4f35c8e13c18dc72a63c939fecf87f4c8db52020fd423bb8359c` |
+| Content hash (SHA-256) | `4bb98420cd8110bf86f24edf624897d69919f194b7f7b948723563650b42b71f` |
+| Chain index | 4861 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Enterprise AI agent developers, API architects designing for autonomous consumpt
 
 ## Novelty
 
-The addition of a specific verification metric (95% canary success rate within 100ms) provides an immediate, quantifiable check of the mechanism's success, addressing the standard gap identified in the review [4].
+The invention introduces a runtime verification mechanism using cryptographically signed probe tokens combined with specific, actionable metrics (95% canary success rate within 100ms) for immediate quantification of system health, which is not explicitly addressed in prior art like P2’s declarative testing or P1’s development-phase validation. This combination of lightweight runtime schema checks with measurable success criteria distinguishes it from prior art focused on static validation or network component testing.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 6. 【副業/フルリモート可】Python・生成AI（LLM API）・RAG構築エン …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7f771ef2eccb87ff7c4f6e7d2825886deec40019aae0afc99c02b24395467e51*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b56dc7177d4b4f35c8e13c18dc72a63c939fecf87f4c8db52020fd423bb8359c*

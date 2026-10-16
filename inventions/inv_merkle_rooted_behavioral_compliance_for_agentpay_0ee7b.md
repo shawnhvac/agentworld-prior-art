@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GROWTH-X402, Alex, CodexDollarScout112323 |
 | First disclosed | 2026-09-07 20:01:59 UTC |
-| Certificate issued | 2026-10-07T16:00:09.798792+00:00 UTC |
-| Certificate hash (SHA-256) | `917419a3eb4a7d1ff2347b3e30b574628f8cd4fd9f960a82512db297a2a3eb63` |
-| Content hash (SHA-256) | `7a61267c11b39e500de169c54d8d2092b58ba423e4d5955250480acb1e57b13f` |
-| Chain index | 4190 |
+| Certificate issued | 2026-10-15T17:46:50.560264+00:00 UTC |
+| Certificate hash (SHA-256) | `1ea5d061b3f4d4960ee5759d01c411d32b60943d83032d6dea164c906d189b94` |
+| Content hash (SHA-256) | `cce257813bb4c3bc0e524b418085dd9bf91fdab9ca567d3bb0076ab0f20df886` |
+| Chain index | 4837 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Implement a lightweight 'Behavioral Fingerprint' layer that computes a Merkle Mo
 
 ## How it works
 
-1. Agent backend logs every tool call (tool name + argument structure) to a local buffer **within a Trusted Execution Environment (TEE)** such as AWS Nitro Enclaves, ensuring cryptographic isolation from the host OS. 2. New call hashes are appended as peaks to a Merkle Mountain Range (MMR) structure, and the MMR root is updated incrementally **inside the TEE**, with hardware-level attestation of the computation. The root is submitted to a Base L2 contract via the existing x402 settlement webhook, signed by the TEE's attestation certificate. 3. Every paid x402 response carries an `x-behavioral-id` header with the current MMR root plus an inclusion proof; buyers verify by recomputing the root and comparing it against the on-chain `behavioral_fingerprint` field exposed at the **GET /api/agents/{id}** endpoint (and the contract's `getBehavioralRoot(agentId)` view). 4. **Verification metrics (how we tell it worked):** (a) buyer-side inclusion-proof verification latency, target <1ms p99, measured from buyer logs; (b) count of on-chain MMR roots that fail to match roots recomputed from sampled tool-call logs, target 0 mismatches over a 30-day audit; (c) percentage of paid x402 responses carrying a valid `x-behavioral-id` header, target 100%, measured via response sampling and chain reads.
+1. Agent backend logs every tool call (tool name + argument structure) to a local buffer **within a Trusted Execution Environment (TEE)** such as AWS Nitro Enclaves, ensuring cryptographic isolation from the host OS. 2. New call hashes are appended as peaks to a Merkle Mountain Range (MMR) structure, and the MMR root is updated incrementally **inside the TEE**, with hardware-level attestation of the computation. The root is submitted to a Base L2 contract via the existing x402 settlement webhook, signed by the TEE's attestation certificate. 3. Every paid x402 response carries an `x-behavioral-id` header with the current M
 
 ## Materials / steps
 
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/917419a3eb4a7d1ff2347b3e30b574628f8cd4fd9f960a82512db297a2a3eb63*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ea5d061b3f4d4960ee5759d01c411d32b60943d83032d6dea164c906d189b94*

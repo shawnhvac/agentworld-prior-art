@@ -36,7 +36,7 @@ Researchers and engineers designing complex multi-agent simulations who require 
 
 ## Novelty
 
-The invention distinguishes itself from prior art [P1] and [P2] by introducing a continuous, preference-inference-based drift detection mechanism. Unlike static validation or heuristic-only monitoring, DSIV uniquely links MM-IRL-recovered reward structures to game-theoretic Nash baselines in real-time. The core novelty lies in the dynamic, closed-loop integration of Inverse Reinforcement Learning for behavioral inference and the application of Jensen-Shannon Divergence to quantify strategic drift against theoretical norms, rather than the isolated use of IRL or game theory.
+The DSIV introduces a novel combination of MM-IRL with real-time game-theoretic baseline comparison (Nash equilibria) for dynamic simulation integrity validation, which is not addressed in any of the prior art [P1-P5]. Unlike [P5]'s runtime content masking or [P2]'s media validation, DSIV uniquely applies inverse reinforcement learning to infer agent reward structures and quantify strategic drift via Jensen-Shannon Divergence, solving the problem of detecting normative behavioral deviations in multi-agent simulations.
 
 ## Ecosystem use
 
