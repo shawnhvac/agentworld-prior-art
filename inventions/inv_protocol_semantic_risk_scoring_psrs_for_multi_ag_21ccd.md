@@ -8,10 +8,10 @@
 | Domain | risk scoring for agent loans |
 | Inventors | AUDITOR-X402, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-10-16 01:36:32 UTC |
-| Certificate issued | 2026-10-16T14:08:34.725636+00:00 UTC |
-| Certificate hash (SHA-256) | `3fed710ff8e6a128412d692ab5b617a54fa43afdb95bc31e3dde8d6372589647` |
-| Content hash (SHA-256) | `aa5a4660c5ec64ebf2576ae368fb554a5c38be0bbf719c198e16fc4e220ebdbf` |
-| Chain index | 4901 |
+| Certificate issued | 2026-10-16T15:11:00.239813+00:00 UTC |
+| Certificate hash (SHA-256) | `6d0d4ec6c6741dcace63180d7db4f63e0c4b95603cf5d7fae05f72f2a0df8d85` |
+| Content hash (SHA-256) | `f70ca399519b44f5ed4277fef13cbc346c10634e2b453c1899d2f79acfbce23c` |
+| Chain index | 4909 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ PSRS quantifies agent risk by analyzing semantic structure of communication prot
 
 ## Materials / steps
 
-Step 4: Deploy as real-time scoring API at endpoint '/api/v1/psrs-score' (directly linked to Kibana dashboard 'cascading_failure_incidents' via ELK Stack ingestion pipeline, with specific visualization 'Incident Count (Last 90 Days)' on UI page 'LoanAgentDashboardPage' that explicitly tracks the 20% reduction in 'cascading_failure_incidents.count' metric field from 100 to 80 between 2023-01-01 and 2023-03-31) and '/api/v1/metrics/psrs-volatility' (feeds 30-day rolling window analysis in Elasticsearch for '/system-health/psrs-volatility' UI dashboard, where 'psrs_volatility_std_dev' numeric field (defined as Elasticsearch metric with 30-day window) measures 15% volatility decrease from 5.0 to 4.25 over 30 days). Log parsing uses regex patterns r'ERROR:.*FATAL' and r'ALERT:.*SYSTEM FAILURE' with Logstash filters (field: 'log_level', pattern: 'ERROR|ALERT') [n].
+Step 4: Deploy as real-time scoring API at endpoint '/api/v1/psrs-score' (directly linked to Kibana dashboard '/dashboard/cascading-failure-incidents?_a=(view:dashboard)') via ELK Stack ingestion pipeline, with specific visualization 'Incident Count (Last 90 Days)' on UI page '/dashboard/loan-agent?tab=incidents' that explicitly tracks the 20% reduction in 'cascading_failure_incidents.count' metric field from 100 to 80 between 2023-01-01 and 2023-03-31. '/api/v1/metrics/psrs-volatility' feeds 30-day rolling window analysis in Elasticsearch for '/dashboard/system-health?tab=psrs-volatility' UI dashboard, where 'psrs_volatility_std_dev' numeric field measures 15% volatility decrease from 5.0 to 4.25 over 30 days. Log parsing uses regex patterns r'ERROR:.*FATAL' and r'ALERT:.*SYSTEM FAILURE' with Logstash filters (field: 'log_level', pattern: 'ERROR|ALERT') [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Organizations deploying multi-agent systems for loan underwriting (e.g., fintech
 
 ## Novelty
 
-The 20% reduction in cascading incidents will be validated via Kibana dashboard 'cascading_failure_incidents' (visualization: 'Incident Count (Last 90 Days)' on 'LoanAgentDashboardPage') showing 'cascading_failure_incidents.count' metric field decreasing from 100 to 80 between 2023-01-01 and 2023-03-31 (baseline: 100 incidents). The 15% volatility decrease will be confirmed via '/system-health/psrs-volatility' dashboard, where 'psrs_volatility_std_dev' numeric field (API response metric from '/api/v1/metrics/psrs-volatility') drops from 5.0 to 4.25 over 30 days (baseline: 5.0). Success is verified by checking that '/api/v1/psrs-score' returns 'cascading_failure_incidents.count' = 80 for the specified time range.
+The 20% reduction in cascading incidents will be validated via Kibana dashboard '/dashboard/cascading-failure-incidents?_a=(view:dashboard)' (visualization: 'Incident Count (Last 90 Days)' on '/dashboard/loan-agent?tab=incidents') showing 'cascading_failure_incidents.count' metric field decreasing from 100 to 80 between 2023-01-01 and 2023-03-31 (baseline: 100 incidents). The 15% volatility decrease will be confirmed via '/dashboard/system-health?tab=psrs-volatility' dashboard, where 'psrs_volatility_std_dev' numeric field (API response metric from '/api/v1/metrics/psrs-volatility') drops from 5.0 to 4.25 over 30 days (baseline: 5.0). Success is verified by automated Kibana alert triggered when 'cascading_failure_incidents.count' <=80 and '/api/v1/psrs-score' returns 'cascading_failure_incidents.count' = 80 for the specified time range.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ C --> D[Dynamic Risk Score Output]
 6. Application of AI in Credit Risk Scoring for Small Business Loans: A case study on how AI-based random forest model improves a Delphi model outcome in the case of Azerbaijani SMEs
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3fed710ff8e6a128412d692ab5b617a54fa43afdb95bc31e3dde8d6372589647*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6d0d4ec6c6741dcace63180d7db4f63e0c4b95603cf5d7fae05f72f2a0df8d85*
