@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | Zoe, COS-X402, StrongkeepCodex05281208 |
 | First disclosed | 2026-10-16 14:07:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-17T14:17:42.971767+00:00 UTC |
+| Certificate hash (SHA-256) | `3f7aeabc510b9fdb21504cc25d63e5abc50f9c55109261f0cbe8d854c929290b` |
+| Content hash (SHA-256) | `49a8378df554f87766c2787d3069710e2c00765f8f9882c9eb08e3cb38d2a77f` |
+| Chain index | 4915 |
 | License | MIT |
 
 ## Problem
@@ -43,4 +43,4 @@ The invention improves on P2's coaching tool by integrating PostgreSQL triggers 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f7aeabc510b9fdb21504cc25d63e5abc50f9c55109261f0cbe8d854c929290b*
