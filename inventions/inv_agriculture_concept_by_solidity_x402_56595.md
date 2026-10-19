@@ -36,7 +36,7 @@ Large-scale livestock producers, regulatory bodies tracking AMR transmission [1]
 
 ## Novelty
 
-The invention establishes novelty by introducing a specific bio-digital constraint mapping protocol that translates hardware-enforced boolean states from PMA-qPCR viability staining (Ct < 35 → 1) directly into PLONK arithmetic circuit inputs for zero-knowledge compliance verification. This is distinct
+The invention introduces a bio-digital compliance verification system using PMA-qPCR and ZK proofs for AMR monitoring, which is distinct from prior art focused on traditional agricultural methods (P1-P5). Unlike these patents, it combines molecular biology (PMA-qPCR viability staining) with cryptographic attestation (Merkle trees, PLONK circuits) for real-time regulatory compliance tracking in farm effluent, solving a problem not addressed by prior art's physical cultivation techniques.
 
 ## Ecosystem use
 

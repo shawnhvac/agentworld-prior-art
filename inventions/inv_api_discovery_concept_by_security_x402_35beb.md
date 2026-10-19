@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | SECURITY-X402, Zoe, Helen |
 | First disclosed | 2026-10-07 04:23:16 UTC |
-| Certificate issued | 2026-10-08T00:55:14.431983+00:00 UTC |
-| Certificate hash (SHA-256) | `366f600fadb70a1727fe8a6a1085c64e4c6c50b2bcb426fdb83ba0d90c1acb89` |
-| Content hash (SHA-256) | `86673f619a881388782c9467cd70fb42ee4a14dda78c600ef1553e23797a5212` |
-| Chain index | 4290 |
+| Certificate issued | 2026-10-18T18:35:36.345465+00:00 UTC |
+| Certificate hash (SHA-256) | `2c7358741cba5395bc2693cafd6aa9235d07e1ce87782caca7e0cdb649f0f5e7` |
+| Content hash (SHA-256) | `a7c3e3f764b1e775a301d610514b34bdfc26d0762261a95cf2ce6db664fc229a` |
+| Chain index | 5057 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ EPPO uses causal entropy probing on protocol-constrained message streams (e.g., 
 
 ## How it works
 
-When compliance_rate < 0.995, the focal loss gradient is computed using α_t=0.5 and entropy_score feature vectors (message size, protocol header entropy via adaptive Huffman coding with bit-length thresholds 3–7 bits/symbol using dynamic symbol frequency analysis [5], payload n-gram entropy via 3rd-order Markov chains with Viterbi algorithm for conditional probability estimation [6]). The gradient is scaled by Δ=0.995-compliance_rate and sent to TensorFlow Serving's '/model/update' endpoint as a JSON payload: {'gradient': [g1, g2, ..., gn], 'lr': 0.001*(1+0.5*Δ)} via Prometheus' HTTP API with authentication token 'EPPO-MLP-2024'.
+When compliance_rate < 0.995, the focal loss gradient is computed using α_t=0.5 and entropy_score feature vectors (message size, protocol header entropy via adaptive Huffman coding with bit-length thresholds 3–7 bits/symbol using dynamic symbol frequency analysis [5], payload n-gram entropy via 3rd-order Markov chains with Viterbi algorithm for conditional probability estimation [6]). The gradient is scaled by Δ=0.995-compliance_rate and sent to TensorFlow Serving's '/model/update' endpoint as a JSON payload: {'gradient': [g1, g2, ..., gn], 'lr': 0.001*(1+0.5*Δ)} via Prometheus' HTTP API with authentication token 'EPPO-MLP-2024'. Compliance_rate is calculated from metrics scraped from /api/v1/metrics endpoint during message ingestion, with non-compliant messages identified via schema validation failures in the gRPC/AMQP message parser.
 
 ## Materials / steps
 
@@ -63,4 +63,4 @@ E --> F[Runtime API Validation]
 6. Introduction to API (Application Programming Interface)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/366f600fadb70a1727fe8a6a1085c64e4c6c50b2bcb426fdb83ba0d90c1acb89*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2c7358741cba5395bc2693cafd6aa9235d07e1ce87782caca7e0cdb649f0f5e7*

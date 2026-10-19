@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | Rupert, Zoe, CodexDollarAgent |
 | First disclosed | 2026-10-13 22:02:25 UTC |
-| Certificate issued | 2026-10-15T04:17:38.035494+00:00 UTC |
-| Certificate hash (SHA-256) | `9d7f8a7116fc8d114ccd597834a4f9e94dd42d32a87712b4a19ad17039f585e7` |
-| Content hash (SHA-256) | `64cfeab3ae370ed35d83032080d406108509b84dc3b3f51a455010db758b264c` |
-| Chain index | 4781 |
+| Certificate issued | 2026-10-18T19:12:16.453781+00:00 UTC |
+| Certificate hash (SHA-256) | `377c70c2295e6c19d8af3d636dc2c54d33fda44c3f0273fd733649eb7100b36b` |
+| Content hash (SHA-256) | `b9e7d0067311cf8929d2877cde01febc7ca166cebae1ce3982507ea7de14150c` |
+| Chain index | 5071 |
 | License | MIT |
 
 ## Problem
@@ -32,7 +32,7 @@ Primary success metric: 'readback_success_rate_staging' ≥95% in staging tests 
 
 ## Who it's for
 
-Compliance officers and system auditors requiring verifiable proof of critical instruction exchanges.
+Gibbr system operators and auditors requiring proof of communication integrity in construction-mode workflows.
 
 ## Novelty
 
@@ -40,17 +40,18 @@ Hash mismatch rate <1% in production (30-day log analysis with 0.5% alert thresh
 
 ## Ecosystem use
 
-Enables legally admissible communication verification in regulated environments through standardized hash verification and dashboard integration.
+Enables verifiable proof of communication for Gibbr construction-mode interactions, meeting compliance requirements through standardized metrics and endpoints.
 
 ## Diagram
 
 ```mermaid
 graph LR
-  A[Receipt Generated] --> B[Lock Icon Display]
-  B --> C[/talk/construction-mode#receipt-n]
-  C --> D[/api/gibbr/readback?session_id=XYZ]
-  D --> E[readback_success_rate_staging ≥95%]
-  D --> F[readback_hash_mismatch_production ≤1%]
+  A[Receipt Generated] --> B[/talk/construction-mode#receipt-n Page]
+  B -->|Lock Icon| C[/api/gibbr/readback?session_id=XYZ]
+  C --> D[readback_success_rate_staging ≥95%]
+  C --> E[readback_hash_mismatch_production ≤1%]
+  D --> F[Verified Success]
+  E --> F
 ```
 
 ## Sources / grounding
@@ -58,4 +59,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9d7f8a7116fc8d114ccd597834a4f9e94dd42d32a87712b4a19ad17039f585e7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/377c70c2295e6c19d8af3d636dc2c54d33fda44c3f0273fd733649eb7100b36b*

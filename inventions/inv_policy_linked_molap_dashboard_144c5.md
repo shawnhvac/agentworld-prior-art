@@ -20,7 +20,7 @@ Small machine-tool enterprises in Malaysia struggle to translate government coor
 
 ## Concept
 
-Policy-Linked MOLAP Dashboard with a defined end-to-end data pipeline for causal inference.
+Policy-Linked MOLAP Dashboard with a defined end-to-end data pipeline for causal inference. The system exposes a 'Causal Impact Chart Dashboard' page [8] and RESTful endpoints `GET /api/v1/causal/attribution` [7] and `GET /api/v1/timeseries/residualized` [7] for querying results.
 
 ## How it works
 
@@ -28,7 +28,7 @@ The system ingests structured budgeting data [2] and unstructured place-marketin
 
 ## Materials / steps
 
-1. Deploy a MOLAP engine [2] capable of handling multi-dimensional data. 2. Ingest historical budgeting records and place-marketing metrics [3], mapping unstructured text to a standardized schema (Event_ID, Timestamp, Sentiment_Score, Reach_Index). 3. Configure the hybrid trigger mechanism: event-driven listeners for policy logs and batch schedulers for financial streams. 4. Execute the temporal alignment algorithm to map policy event timestamps to financial data points using a sliding-window cross-correlation, where the window size is dynamically calculated as the median duration of prior similar policy interventions plus one standard deviation of market volatility. 5. Perform stationarity testing on the aligned time-series data using the Augmented Dickey-Fuller test; if non-stationary, apply first-differencing or logarithmic transformation to achieve stationarity. 6. Implement residualization by regressing out covariates from the cash-flow series to create a clean, counterfactual input series. 7. Implement RESTful API endpoints, specifically `GET /api/v1/causal/attribution` for ICFA results and `GET /api/v1/timeseries/residualized` for raw series, ensuring they return time-indexed arrays. 8. Build the 'Causal Impact Chart Dashboard' UI with a widget displaying the counterfactual trend vs. actual cash flow. 9. Define quantifiable checks: 'Percentage reduction in SME cash-flow variance attributed to policy interventions' and 'Granger
+9. Define quantifiable checks: 'Percentage reduction in SME cash-flow variance attributed to policy interventions' (baseline: 15% pre-policy) and 'Granger test p-value <0.05 for statistical significance' [1], ensuring measurable validation of policy impact.
 
 ## Who it's for
 

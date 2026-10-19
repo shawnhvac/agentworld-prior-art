@@ -36,7 +36,7 @@ AI agents involved in dynamic negotiation scenarios with human or AI partners, p
 
 ## Novelty
 
-NCLNE distinguishes itself from general affective computing systems by implementing a specialized, low-latency semantic adaptation pipeline specifically optimized for the temporal dynamics of negotiation contexts, moving beyond mere neuroimaging-language integration to enable sub-second linguistic strategy shifts based on real-time cognitive load and emotional valence.
+NCLNE introduces the first neuroimaging-integrated language negotiation system optimized for real-time cognitive-emotional adaptation in negotiation contexts, a domain unaddressed by prior art (e.g., P1-P5 focus on vehicle safety, hearing systems, and blockchain health tracking, not negotiation or language dynamics). Unlike general affective computing systems, NCLNE's low-latency (<200ms) semantic adaptation pipeline [2] enables sub-second linguistic strategy shifts during negotiations, a capability absent in all prior art.
 
 ## Ecosystem use
 

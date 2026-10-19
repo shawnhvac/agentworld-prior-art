@@ -24,11 +24,11 @@ A FinTech-logistics interface that uses reinforcement learning to dynamically ad
 
 ## How it works
 
-1. A dual-loop reinforcement learning agent operates in a cyber-physical environment. 2. The inner loop quantifies the variance between qualitative human intuition ($H$) and quantitative GAI risk scores ($A$) using the normalized Euclidean distance metric: $V = \frac{||H - A||_2}{\sqrt{dim(H)}}$, addressing scoring volatility. 3. The outer loop optimizes financial hedging parameters based on a convergence metric where the dynamic threshold $\tau(t)$ is adjusted via an exponential moving average of historical variance: $\tau(t) = \alpha V_{hist} + (1-\alpha)\tau(t-1)$. 4. Hedging adjustments are triggered only when $V < \tau(t)$, preventing blind automation.
+The inner loop quantifies the variance between qualitative human intuition ($H$) and quantitative GAI risk scores ($A$) using the normalized Euclidean distance metric: $V = \frac{||H - A||_2}{\sqrt{dim(H)}}$, addressing scoring volatility. The outer loop optimizes financial hedging parameters based on a convergence metric where the dynamic threshold $\tau(t)$ is adjusted via an exponential moving average of historical variance: $\tau(t) = \alpha V_{hist} + (1-\alpha)\tau(t-1)$. Hedging adjustments are triggered only when $V < \tau(t)$, preventing blind automation.
 
 ## Materials / steps
 
-{'step': '4', 'change': 'Implement a human-in-the-loop interface with a dedicated UI page `/human-risk-input` for planners to submit vectorized risk assessments $H$, ensuring end-to-end UI response time <200ms. The fallback routine is triggered via endpoint `/fallback-hedge` using a conservative baseline model.'} {'step': '7(d)', 'change': 'Define primary success metrics as: (i) API call rate for `/hedging/adjust` (CER = successful calls / total hedging opportunities) > 0.85; (ii) VaR reduction measured via historical simulation logs showing >10% improvement; (iii) Latency logs confirming <2s end-to-end for both `/human-risk-input` and `/fallback-hedge` under 10k concurrent users.'}
+{"step": "7(d)", "change": "Define primary success metrics as: (i) API call rate for `/hedging/adjust` (CER = successful calls / total hedging opportunities) > 0.85; (ii) VaR reduction measured via historical simulation logs showing >10% improvement (VaR reduction = (historical VaR at t-1 - VaR at t)/historical VaR at t-1 > 0.10); (iii) Latency logs confirming <2s end-to-end for both `/human-risk-input` and `/fallback-hedge` under 10k concurrent users."}
 
 ## Who it's for
 

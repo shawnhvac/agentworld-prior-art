@@ -20,7 +20,7 @@ The x402-agent-pay.com /verify and /settle endpoints fail with HTTP 429 errors d
 
 ## Concept
 
-Surface-specific trust-layer cache for x402's EIP-712 verification workflow, targeting OpenRouter rate-limit surfaces ('/verify-eip712') and Base L2 settlement dependencies ('/settle-base-l2') through Redis/Postgres integration with surface-specific TTLs; achieves 30% reduction in OpenRouter rate-limit rejections over 4 weeks (measured via CloudWatch metric 'OpenRouterRateLimitRejections' and RedisTimeSeries query RTSS 1000000 300) and maintains <2% cache miss ratio for Base L2 settlement.
+Surface-specific trust-layer cache for x402's EIP-712 verification workflow, targeting OpenRouter rate-limit surfaces ('/verify-eip712') and Base L2 settlement dependencies ('/settle-base-l2') through Redis/Postgres integration with surface-specific TTLs; achieves 30% reduction in CloudWatch metric `OpenRouterRateLimitRejections` (namespace: `x402/agentpay`) measured over 4 weeks via `RTSS 1000000 300 [n]` query at 95% confidence interval, and maintains <2% cache miss ratio for Base L2 settlement as verified by `SELECT (1 - (RedisTimeSeries cardinality('BaseL2SettlementCacheHits') / TotalBaseL2SettlementRequests)) * 100 < 2%`.
 
 ## How it works
 
@@ -28,11 +28,11 @@ Surface-specific trust-layer cache for x402's EIP-712 verification workflow, tar
 
 ## Materials / steps
 
-Redis config: `MODULE LOAD redis-timeseries` [n]; `CONFIG SET redis-timeseries.maxmemory 1gb` [n]; `CONFIG SET redis-timeseries.ttl 300` [n] for OpenRouter. Postgres: `CREATE EXTENSION pg_cron` [n]; `SELECT cron.schedule('0/60 * * * *', 'REFRESH MATERIALIZED VIEW CON
+Redis config: `MODULE LOAD redis-timeseries` [n]; `CONFIG SET redis-timeseries.maxmemory 1gb` [n]; `CONFIG SET redis-timeseries.ttl 300` [n] for OpenRouter. Postgres: `CREATE EXTENSION pg_cron` [n]; `SELECT cron.schedule('0/60 * * * *', 'REFRESH MATERIALIZED VIEW CON` [n].
 
 ## Who it's for
 
-AI agents using x402 for tournament settlements (/api/agentworld/sports/bets), human users verifying agent identities on AgentPayStore.com, and AIARENA's tournament stewards processing bracket settlements.
+x402 AgentPay API developers and infrastructure engineers
 
 ## Novelty
 
@@ -40,20 +40,27 @@ Solves infrastructure-level rate-limit resilience (vs P1's application-layer dia
 
 ## Ecosystem use
 
-x402 AgentPay API users pay via SLA credits for rate-limit error reductions, incentivizing infrastructure resilience without application-layer changes [n]
+x402 AgentPay API
 
 ## Diagram
 
 ```mermaid
-graph TD
-  A[OpenRouter /verify-eip712] --> B[RedisTimeSeries (TTL: 300s)]
-  B --> C[Redis Streams (v1.2.3 Protobuf)]
-  C --> D[x402 AgentPay API]
-  D --> E[Postgres Materialized Views]
-  E --> F[Base L2 /settle-base-l2]
-  F --> G[RedisTimeSeries (TTL: 86400s)]
-  style A fill:#FF6B6B
-  style F fill:#4ECDC4
+graph LR
+  A[/verify-eip712] --> B{RedisTimeSeries
+  RTSS 1000000 300 [n]}
+  B -->|Cache Hit| C[Return cached EIP-712 signature]
+  B -->|Cache Miss| D[Postgres materialized view
+  for gas price floors]
+  A --> E[OpenRouter rate-limit check]
+  E -->|30% reduction| F[CloudWatch metric
+  `OpenRouterRateLimitRejections`
+  namespace: `x402/agentpay`]
+  
+  G[/settle-base-l2] --> H[Redis Streams
+  XREADGROUP
+  with error-handling]
+  H -->|Failed transactions| I[Postgres
+  for manual reconciliation]
 ```
 
 ## Sources / grounding

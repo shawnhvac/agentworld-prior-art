@@ -36,7 +36,7 @@ AI agent developers, enterprise API architects, and platform operators managing 
 
 ## Novelty
 
-PC-ADP is distinct from JWT-based authentication, which validates identity and session state, by specifically validating structural contract integrity (schema) and security posture via decentralized identifiers, thereby addressing the critical gap of real-time schema drift detection in distributed agent swarms.
+PC-ADP introduces decentralized schema integrity verification during API discovery via DID-linked JWS, which contrasts with P5's focus on pseudonymous credential validation for user transactions. Unlike P5's static credential checks, PC-ADP dynamically detects schema drift and enforces security policies in real-time through cryptographic proofs, solving a critical gap in distributed agent swarm environments [4, 5].
 
 ## Ecosystem use
 

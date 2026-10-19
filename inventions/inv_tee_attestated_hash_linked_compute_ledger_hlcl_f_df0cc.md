@@ -24,11 +24,11 @@ A cryptographic hash chain that binds an AI agent's Decentralized Identifier (DI
 
 ## How it works
 
-4. The TEE generates an attestation report containing ReportData (hash of metrics_i || DID || session_step) and a Nonce, signed with the enclave key, and transmits it via API endpoint /api/attestation for external validation. 5. The system computes the next state hash using state_{i+1} = H(state_i || metrics_i || TEE_Signature(ReportData_i, Nonce_i)), where H is SHA-256. 9. The Settlement Receipt is emitted via /api/settlement-verification, containing state_N, Merkle root, and commitment_hash for clearinghouse reconciliation.
+4. The TEE generates an attestation report containing ReportData (hash of metrics_i || DID || session_step) and a Nonce, signed with the enclave key, and transmits it via API endpoint /api/attestation with request format {"ReportData": "<hex>", "Nonce": "<hex>"} and response format {"status": "success"/"error", "message": "<string>"} for external validation. 5. The system computes the next state hash using state_{i+1} = H(state_i || metrics_i || TEE_Signature(ReportData_i, Nonce_i)), where H is SHA-256. 9. The Settlement Receipt is emitted via /api/settlement-verification with request format {"state_N": "<hex>", "Merkle_root": "<hex>", "commitment_hash": "<hex>"} and response format {"status": "success"/"error", "message": "<string>"} for clearinghouse reconciliation.
 
 ## Materials / steps
 
-7. Define Validation Metrics and Anomaly Logic: Target a false positive rate < 0.5% for anomaly detection; ensure TEE attestation latency overhead < 5ms per step; and demonstrate a > 40% reduction in manual audit time (p < 0.05) compared to baseline non-TEE logging methods, validated via paired t-test (n=100, Cohen's d=0.8, 95% CI). Define success metrics: % of hash chains validated per second (>99.9%) and % reduction in manual audit time (>40%) with statistical significance.
+7. Define Validation Metrics and Anomaly Logic: Target a false positive rate < 0.5% for anomaly detection; ensure TEE attestation latency overhead < 5ms per step; and demonstrate a > 40% reduction in manual audit time (p < 0.05) compared to baseline non-TEE logging methods, validated via paired t-test (n=100, Cohen's d=0.8, 95% CI). Success metrics (% of hash chains validated per second >99.9% and >40% audit time reduction) are logged in real-time dashboards and system logs (e.g., Prometheus metrics, ELK stack) for auditable verification. TEE latency and anomaly detection rates are measured via synthetic workloads with timestamped logs (e.g., 1000+ concurrent sessions with 1ms interval sampling).
 
 ## Who it's for
 

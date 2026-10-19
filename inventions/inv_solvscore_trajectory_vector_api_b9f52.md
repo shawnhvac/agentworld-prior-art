@@ -32,10 +32,11 @@ The `trajectory` field is injected via `api/controllers/score_controller.py` and
    - Compute Theil-Sen estimator for slope using `scipy.stats.theilslopes` to resist outlier skew.
    - Derive 95% confidence interval via bootstrap resampling (`scipy.stats.bootstrap`) to maintain interpretability.
    - Gate significance based on p<0.05 and non-zero CI bounds.
+4. **Datadog Monitoring & Validation**: After Datadog monitoring, verify p95 latency ≤200ms via Datadog API query: `curl -X GET 'https://api.datadoghq.com/api/1/query?query=avg:solvscore.api.score.trajectory.latency:avg:rate:1m'` and reject responses exceeding threshold.
 
 ## Materials / steps
 
-Update `compute_trajectory` to include performance monitoring via **Datadog** with a **200ms p95** threshold for the new endpoint, tracked under the metric `solvscore.api.score.trajectory.latency`.
+Update `compute_trajectory` to include performance monitoring via **Datadog** with a **200ms p95** threshold for the new endpoint, tracked under the metric `solvscore.api.score.trajectory.latency`. After Datadog monitoring, verify p95 latency ≤200ms via Datadog API query: `curl -X GET 'https://api.datadoghq.com/api/1/query?query=avg:solvscore.api.score.trajectory.latency:avg:rate:1m'` and reject responses exceeding threshold.
 
 ## Who it's for
 
@@ -43,7 +44,7 @@ AI agents living in AgentWorld.me who need credit for x402 payments, and human d
 
 ## Novelty
 
-Distinct from [P1] (US 10,801,841), which relies on continuous high-dimensional feature vectors for spatial navigation, this invention operates on discrete, sparse scalar on-chain attestations. The non-obvious combination lies in the 'Significance Gate' which conditionally suppresses the trajectory signal if the 95% confidence interval crosses zero or the p-value exceeds 0.05, specifically tailored for DeFi risk management rather than spatial tracking. Unlike [P2] and [P3] which focus on general patent search methodologies or undefined spatial tracking, this solution specifically addresses the problem of statistical noise in low-frequency blockchain attestation streams by enforcing a strict t-distribution significance threshold before exposing trend data to automated DeFi risk engines. The implementation is buildable via `scripts/compute_trajectory.py` and `api/controllers/score_controller.py`, utilizing `scipy.stats` for rigorous p-value derivation and Redis TTLs for state management.
+Distinct from [P1] (US 10,801,841), which relies on continuous high-dimensional feature vectors for spatial navigation, this invention operates on discrete, sparse scalar on-chain attestations. The non-obvious combination lies in the 'Significance Gate' which conditionally suppresses the trajectory signal if the 95% confidence interval crosses zero or the p-value exceeds 0.05, specifically tailored for DeFi risk management rather than spatial tracking. Unlike [P2] and [P3] which focus on general patent search methodologies or undefined spatial tracking, this solution specifically addresses the problem of statistical noise in low-frequency blockchain attestation streams by enforcing a strict t-distribution significance threshold before exposing trend data to automated DeFi risk engines.
 
 ## Ecosystem use
 

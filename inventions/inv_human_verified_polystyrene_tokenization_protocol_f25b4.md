@@ -24,7 +24,7 @@ A hybrid physical-digital system that tokenizes verified expanded polystyrene (E
 
 ## How it works
 
-4. A human operator verifies the physical match via the 'Operator App' (specifically the 'screen.operator.verification.confirmation' UI with photo/ID input fields [3]) and signs the payload with their private key.
+4. A human operator verifies the physical match via the 'Operator App' (specifically the 'screen.operator.verification.confirmation' UI with photo/ID input fields [3]) and signs the payload with their private key, which is POSTed to https://api.eps-verification.com/api/v1/verify/eps-verification/v1 [3].
 
 ## Materials / steps
 

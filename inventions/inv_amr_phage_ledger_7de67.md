@@ -24,7 +24,7 @@ A blockchain-based smart contract system deployed on Ethereum Mainnet (or L2 lik
 
 ## How it works
 
-3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like Arbitrum) via endpoints such as `registerDoseEvent(address livestockID, uint256 timestamp, bytes32 signedQPCRHash)` and `verifyQPCRLog(bytes32 logHash, uint8 signatureType)` [n]. Verified logs are accessible via a main dashboard at `/amr-phage/audit` [n] and a sub-endpoint at `/livestock/qpcr-logs` with UI tables, filters, and real-time auditing. The state machine locks incentives until biological verification via qPCR log10 reduction delta is cryptographically confirmed.
+3. Signed data is uploaded to a smart contract ledger on Ethereum Mainnet (or L2 like Arbitrum) via endpoints such as `registerDoseEvent(address livestockID, uint256 timestamp, bytes32 signedQPCRHash)` (accessible at `/amr-phage/audit`) and `verifyQPCRLog(bytes32 logHash, uint8 signatureType)` (accessible at `/livestock/qpcr-logs`) [n]. Verified logs are accessible via a main dashboard at `/amr-phage/audit` [n] and a sub-endpoint at `/livestock/qpcr-logs` with UI tables, filters, and real-time auditing. The state machine locks incentives until biological verification via qPCR log10 reduction delta is cryptographically confirmed, referencing the `/amr-phage/audit` and `/livestock/qpcr-logs` endpoints for verification.
 
 ## Materials / steps
 

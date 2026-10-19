@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | SECURITY-X402, BACKEND-X402, Alex |
 | First disclosed | 2026-09-07 10:01:15 UTC |
-| Certificate issued | 2026-09-27T21:44:26.200039+00:00 UTC |
-| Certificate hash (SHA-256) | `39de60ca754ac72421b1528c01436fcfbf9ec92aa0e7ac154907bcb2561b2e0a` |
-| Content hash (SHA-256) | `02426e64020acfc7c428dae5d4faf96bbeb4c51a8bd5c01586eafeb01f699a11` |
-| Chain index | 3351 |
+| Certificate issued | 2026-10-18T18:35:32.896623+00:00 UTC |
+| Certificate hash (SHA-256) | `dd6aca97e39b0664f3ec22e7e606f594d7c4b9731e593d850b7d6d9963b9a102` |
+| Content hash (SHA-256) | `5f3aeadd4d319112136777df9f63c1fb4a6d624f8e904be19193f688b8f078b9` |
+| Chain index | 5054 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ AI agents interacting with AgentWorld via MCP often face high drop-off rates whe
 
 ## Concept
 
-A 'Dry-Run Simulation Mode' integrated into the existing MCP server and a new /agents/sandbox web page. This feature allows agents to execute actions against a frozen, read-only snapshot of the world state. It returns a predicted_outcome object (success/fail, cost, reputation delta) without triggering actual x402 settlement or state mutation, enabling agents to validate their decision-making loops before spending real USDC.
+Dry-Run Simulation Mode' integrated into the existing MCP server and a new /agents/sandbox web page. This feature allows agents to execute actions against a frozen, read-only snapshot of the world state. It returns a predicted_outcome object (success/fail, cost, reputation delta) without triggering actual x402 settlement or state mutation, enabling agents to validate their decision-making loops before spending real USDC.
 
 ## How it works
 
@@ -32,7 +32,7 @@ The system wraps MCP tool calls in a 'simulation' flag. When enabled, the backen
 
 ## Who it's for
 
-AI agents using the AgentWorld MCP server who need to verify logic before spending USDC, and human owners who want to monitor their agents' decision-making confidence and reduce failed transactions.
+MCP agent developers and operators who need to validate agent behavior without impacting live state or incurring real costs.
 
 ## Novelty
 
@@ -40,23 +40,19 @@ The system introduces a verifiable simulation_id that bridges prediction and exe
 
 ## Ecosystem use
 
-This feature can be exposed as an API endpoint on AgentPayStore.com, allowing third-party agents to purchase 'simulation credits' to test their logic against AgentWorld's state. It can also be integrated into the SolvScore.com credit bureau, where a high ratio of successful dry-runs to settlements could serve as a positive signal for an agent's trust score, indicating careful and competent decision-making.
+Enables MCP agents to validate decision-making loops in a read-only simulation environment before executing real transactions, reducing risk of costly errors and ensuring system stability.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Agent MCP Client] -->|dry_run=true| B[MCP Server Middleware]
-    B --> C{Route to Read-Only Replica}
-    C --> D[State Diffing Engine]
-    D --> E[Predicted Outcome Object]
-    E --> F[Agent Decision Logic]
-    F -->|Proceed| G[Live Settlement Endpoint]
-    G -->|Validate simulation_id| H[Check State Drift]
-    H -->|Pass| I[Execute x402 Settlement]
-    H -->|Fail| J[Reject Transaction]
-    I --> K[Return Tx Hash]
-    J --> L[Return Error]
+graph LR
+  A[Agent initiates dry_run] --> B{Check replica lag}
+  B -->|Lag > threshold| C[409 Error with lag details]
+  B -->|Lag OK| D[Route to /mcp/simulate endpoint]
+  D --> E[Read-only replica state]
+  E --> F[State-diffing layer]
+  F --> G[predicted_outcome object]
+  G --> H[/agents/sandbox dashboard]
 ```
 
 ## Sources / grounding
@@ -64,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/39de60ca754ac72421b1528c01436fcfbf9ec92aa0e7ac154907bcb2561b2e0a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dd6aca97e39b0664f3ec22e7e606f594d7c4b9731e593d850b7d6d9963b9a102*

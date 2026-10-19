@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | Amelia, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-09-08 00:24:23 UTC |
-| Certificate issued | 2026-09-29T14:50:47.470966+00:00 UTC |
-| Certificate hash (SHA-256) | `8f3e5b7de746ca4566a79d6f4c0a9a060ede034ee50e57f2af01087c7913a668` |
-| Content hash (SHA-256) | `7c53a4ecc3f2c22612cda7afeacd9c19f0fa61448d5448328cba98ddbb3e66e1` |
-| Chain index | 3510 |
+| Certificate issued | 2026-10-18T18:25:24.115783+00:00 UTC |
+| Certificate hash (SHA-256) | `b801471ba8c30e0f899bfa9ecfd0b1057262874785b8a80f64523a9668fec82f` |
+| Content hash (SHA-256) | `7804b3f101502a023eeb4d0dda55b53129854b20e4462dd852c2d9a721bcb094` |
+| Chain index | 5050 |
 | License | MIT |
 
 ## Problem
@@ -32,7 +32,7 @@ Define a Verifiable Credential (VC) schema for 'Efficiency Profile' containing b
 
 ## Who it's for
 
-Financial institutions, insurers, and banks deploying agentic AI for high-stakes transactions who require verifiable governance and compute accounting to mitigate systemic risk and ensure cost-efficiency [6].
+AI financial agents requiring probabilistic attestation of compute cost efficiency for automated payment settlement.
 
 ## Novelty
 
@@ -40,19 +40,12 @@ Unlike US20250254026A1 which traces exact input/output elements for deterministi
 
 ## Ecosystem use
 
-API endpoint for AI-agent platforms that returns a signed 'Efficiency Attestation' token. This token can be consumed by payment modules to conditionally release funds only if the agent's compute cost matches the declared efficiency profile, enabling automated, verifiable agent-to-agent financial settlements.
+Enables verifiable economic efficiency claims in AI agent finance transactions by ensuring resource consumption aligns with declared efficiency profiles, reducing false positives in payment processing.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[AI Agent Task] --> B[TEE Execution]
-    B --> C[Resource Monitor: CPU/Memory]
-    C --> D[Statistical Aggregation]
-    D --> E{Within VC Confidence Interval?}
-    E -->|Yes| F[Issue Attestation]
-    E -->|No| G[Reject Payment]
-    F --> H[Financial Settlement]
+flowchart TD; A[TEE Resource Monitor] -->|Captures metrics| B[Statistical Distribution (mean/variance)]; B --> C{Compare against VC's confidence interval}; C -->|Within interval| D[Attestation Success]; C -->|Outside interval| E[Attestation Failure]; D --> F[Release Payment]; E --> G[Reject Transaction]; F --> H[Smart Contract: contracts/Attestation.sol]; G --> H
 ```
 
 ## Sources / grounding
@@ -65,4 +58,4 @@ graph LR
 6. Finance-Grade Assurance for Agentic AI: Verifiable Governance, Systemic Risk Mitigation, and Sustainability/Compute Accounting Architecture for Banks, Insurers, and Major Financial Services Providers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8f3e5b7de746ca4566a79d6f4c0a9a060ede034ee50e57f2af01087c7913a668*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b801471ba8c30e0f899bfa9ecfd0b1057262874785b8a80f64523a9668fec82f*

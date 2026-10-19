@@ -32,7 +32,7 @@ The framework operates in a closed-loop cycle: (1) Agents broadcast capabilities
 
 ## Who it's for
 
-Researchers and developers working on swarm robotics and AI-driven task routing systems, especially those requiring real-time adaptability and secure coordination in dynamic environments.
+Developers and researchers building decentralized swarm systems requiring scalable, verifiable task allocation with minimal communication overhead.
 
 ## Novelty
 
@@ -40,26 +40,12 @@ Formal asymptotic complexity analysis proves Merkle-root validation reduces comm
 
 ## Ecosystem use
 
-This framework could be integrated into AI-agent platforms via APIs that expose task routing and blockchain coordination functions. It could support agent coordination, dynamic resource allocation, and secure data exchange within a distributed swarm environment.
+Enables secure, transparent, and low-latency task routing in heterogeneous swarm environments for distributed computing, IoT, and edge AI applications.
 
 ## Diagram
 
 ```mermaid
-graph TD
-    A[Heterogeneous Agents] -->|1. Sensor Data & Capabilities| B(Local DE Optimizer)
-    B -->|2. Task Assignment + Hash| C{Blockchain Smart Contract}
-    C -->|3. Validate & Consensus| D[Blockchain State]
-    D -->|4. Emit Allocation Event| E[Agent Subscriber Service]
-    E -->|5. Verified Task Commands| A
-    subgraph Consensus Layer
-    C
-    D
-    end
-    subgraph Execution Layer
-    A
-    B
-    E
-    end
+graph LR; A[Agent] -->|POST /api/v1/swarm/capabilities| B(DE Optimizer); B -->|Compute assignment, generate SHA-256| C[Hash]; C -->|submitAssignment| D[Blockchain Governance]; D -->|AllocationConfirmed event| A; A -->|wss://swarm-node.local/api/v1/events/allocations| E[Agent Subscriber]; E -->|Verify vector_hash| A
 ```
 
 ## Sources / grounding

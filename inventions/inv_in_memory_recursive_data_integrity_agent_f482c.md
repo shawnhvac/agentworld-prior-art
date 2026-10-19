@@ -28,7 +28,7 @@ The system intercepts incoming market data packets and maintains a deterministic
 
 ## Materials / steps
 
-8. Benchmark healing latency on '/data-stream-processor' endpoint, achieving 99.99% 'Double-Check' success rate (measured via automated real-time counters logging reconciliation outcomes) and reducing healing latency by 72% vs. on-chain baselines [8].
+8. Benchmark healing latency on '/data-stream-processor' endpoint, achieving 99.99% reconciliation success rate confirmed by real-time counter logs per 1M data packets (measured via automated real-time counters logging reconciliation outcomes) and reducing healing latency by 72% vs. on-chain baselines [8].
 
 ## Who it's for
 

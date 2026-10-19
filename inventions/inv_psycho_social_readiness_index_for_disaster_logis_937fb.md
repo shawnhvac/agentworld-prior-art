@@ -24,15 +24,15 @@ A dynamic 'Psycho-Social Readiness Index' that overlays real-time sentiment anal
 
 ## How it works
 
-**Feature Extraction & Mapping:** ... The system exposes a specific REST endpoint, `POST /api/v1/logistics/optimize`, which accepts the current logistics graph and the computed friction coefficients, returning the optimized route plan with the modified costs. This endpoint serves as the single point of integration where the psycho-social constraints are injected into the existing solver infrastructure. A companion `GET /dashboard/psycho-social-index` endpoint provides real-time visualization of the Psycho-Social Readiness Index, displaying friction coefficients, aid acceptance rates, and route optimization status. Real-time checks include automatic route recalculations when friction coefficients exceed predefined thresholds (e.g., >0.75) and a 15% increase in aid acceptance rate in pilot regions as a success metric.
+Feature Extraction & Mapping: The system extracts friction coefficients from real-time sentiment analysis of local communication channels and maps them to the logistics graph. The `POST /api/v1/logistics/optimize` endpoint serves as the single integration point where these friction coefficients are injected into the existing route optimization solver, directly modifying delivery routes to prioritize social receptivity. A companion `GET /dashboard/psycho-social-index` endpoint provides real-time visualization of the Psycho-Social Readiness Index, displaying friction coefficients, aid acceptance rates, and route optimization status. Real-time checks include automatic route recalculations when friction coefficients exceed predefined thresholds (e.g., >0.75) and a 15% increase in aid acceptance rate in pilot regions as a success metric.
 
 ## Materials / steps
 
-1. ... 5. Integrate the resulting 'Psycho-Social Readiness Index' ... 6. Deploy a real-time monitoring dashboard (`GET /dashboard/psycho-social-index`) to track key metrics such as aid acceptance rate, friction coefficient thresholds, and route recalculations. Validate success via pilot trials requiring a 15% increase in aid acceptance rate and automatic route recalculations when friction coefficients exceed 0.75.
+1. Collect real-time communication data from local channels while preserving privacy via hash-mapping mechanism ($M(h)$). 2. Extract trauma indicators [2] and compute friction coefficients from sentiment analysis. 3. Inject friction coefficients into the logistics graph at the `POST /api/v1/logistics/optimize` endpoint to modify delivery routes. 4. Return optimized route plan with modified costs. 5. Integrate the resulting 'Psycho-Social Readiness Index' into logistics planning workflows. 6. Deploy a real-time monitoring dashboard (`GET /dashboard/psycho-social-index`) to track key metrics such as aid acceptance rate, friction coefficient thresholds, and route recalculations. Validate success via pilot trials requiring a 15% increase in aid acceptance rate and automatic route recalculations when friction coefficients exceed 0.75.
 
 ## Who it's for
 
-Disaster response coordinators, logistics managers, and humanitarian aid organizations seeking to improve the efficacy of aid distribution by aligning it with community psychological states.
+Logistics planners and humanitarian aid organizations operating in disaster-affected regions with vulnerable populations.
 
 ## Novelty
 
@@ -40,17 +40,17 @@ Refined to explicitly contrast the real-time, privacy-preserving hash-mapping me
 
 ## Ecosystem use
 
-The `GET /dashboard/psycho-social-index` endpoint enables real-time monitoring and stakeholder reporting, while the `POST /api/v1/logistics/optimize` endpoint ensures integration with existing logistics systems. Success is quantified via 15% higher aid acceptance rates in pilot regions and automatic route recalculations during high-friction events.
+Integrates with existing logistics solver infrastructure via the `POST /api/v1/logistics/optimize` endpoint to inject psycho-social constraints directly into route optimization.
 
 ## Diagram
 
 ```mermaid
 graph LR
-    A[Local Mesh Networks] -->|Anonymized Metadata| B(NLP Model)
-    B -->|Stress Markers| C[Psycho-Social Readiness Index]
-    C -->|Weighting Factor| D[Logistics Solver]
-    D -->|Adjusted Routes| E[Aid Distribution]
-    E -->|Feedback| C
+    A[Real-time Sentiment Analysis] -->|Extracts Friction Coefficients| B[Logistics Graph]
+    B -->|Injects into| C[POST /api/v1/logistics/optimize]
+    C --> D[Optimized Route Plan]
+    E[Psycho-Social Readiness Index] -->|Visualizes| F[GET /dashboard/psycho-social-index]
+    D -->|Reports Status| F
 ```
 
 ## Sources / grounding

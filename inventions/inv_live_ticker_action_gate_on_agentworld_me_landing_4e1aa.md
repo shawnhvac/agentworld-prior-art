@@ -20,43 +20,39 @@ First-time human visitors cannot distinguish between watching a simulation and p
 
 ## Concept
 
-Implement a 'Live Ticker & Action Gate' on the landing page (/) that overlays a real-time, scrolling feed of the last three economic events (e.g., 'Agent X bought a hat for 0.05 USDC') directly atop the static World Map. This is paired with a single prominent '
+Implement a 'Live Ticker & Action Gate' on the landing page (/) that overlays a real-time, scrolling feed of the last three economic events (e.g., 'Agent X bought a hat for 0.05 USDC') directly atop the static World Map. This is paired with a single prominent 'Enter World' button.
 
 ## How it works
 
-The A/B assignment is determined by a cookie named `agentworld_ab_variant` set to 'A' or 'B' via `document.cookie` in `src/core/services/ab-test.service.ts`, which is read during the initial route resolution. The 'Ticker' variant (Group B) renders the `agent-ticker-overlay` component conditionally based on this cookie value in `src/app/landing/landing.component.html`, with the goal of achieving a **15% relative increase in 'Enter World' button clicks**
+The A/B assignment is determined by a cookie named `agentworld_ab_variant` set to 'A' or 'B' via `document.cookie` in `src/core/services/ab-test.service.ts`, which is read during the initial route resolution. The 'Ticker' variant (Group B) renders the `agent-ticker-overlay` component conditionally based on this cookie value in `src/app/landing/landing.component.html`, with the goal of achieving a 15% relative increase in 'Enter World' button clicks. The route guard using Angular's `CanActivate` interface with a `BehaviorSubject<boolean>` blocks navigation until `value === true`, subscribing to `mapEventStatus` stream updated via a `Subject` triggered by the map's 'event complete' signal.
 
 ## Materials / steps
 
-10. Calculate sample size per group using the formula: $n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot 2p(1-p)}{(p_2 - p_1)^2}$, where $p_1 = 8.2%$ (baseline CTR from 7-day pre-test data), $p_2 = 9.02%$ (10% relative lift over $p_1$), $Z_{\alpha/2} = 1.96$ (95% confidence), and $Z_{\beta} = 0.84$ (80% power). 11. Deploy and monitor the `enter_world_click` events in the analytics dashboard to verify a **15% relative increase** in 'Enter World' button clicks for Group B vs Group A. 12. Implement the route guard using Angular's `CanActivate` interface with a `BehaviorSubject<boolean>` that tracks map event status. The guard subscribes to the `mapEventStatus` stream, blocking navigation until `value === true` (e.g., `if (!this.mapEventStatus.value) { return false; }`). The status is updated via a `Subject` triggered by the map's 'event complete' signal. 13. Integrate real-time economic event data via WebSocket from `/api/economic-events`: a. Establish WebSocket connection in `src/core/services/economic-event.service.ts` using `new WebSocket('wss://...')`. b. Parse incoming JSON messages (e.g., `{type: 'transaction', data: {agent: 'X', action: 'bought a hat', amount: '0.05 USDC'}}`). c. Use RxJS `fromEvent(webSocket, 'message')` to create an observable stream, applying `debounceTime(33ms)` to throttle to ~30fps. 14. Render the ticker on a `<canvas>` element: a. Use `requestAnimationFrame` for animation loop. b. Clear canvas with `ctx.clearRect(0, 0, canvas.width, canvas.height)`. c. Render dynamic text with `ctx.fillText()` using parsed event data, positioning text vertically via `textBaseline='top'` and updating `y` coordinate per frame. d. Synchronize rendering with route guard's `mapEventStatus` via conditional `if (mapEventStatus.value) { renderTicker(); }`.
+10. Calculate sample size per group using the formula: $n = \frac{(Z_{\alpha/2} + Z_{\beta})^2 \cdot 2p(1-p)}{(p_2 - p_1)^2}$, where $p_1 = 8.2%$ (baseline CTR from 7-day pre-test data at /analytics/enter_world_click), $p_2 = 9.02%$ (10% relative lift over $p_1$), $Z_{\alpha/2} = 1.96$ (95% confidence), and $Z_{\beta} = 0.84$ (80% power). 11. Deploy and monitor `enter_world_click` events in the analytics dashboard for 7-day period to verify a 15% relative increase in Group B vs Group A. 12. Implement route guard with `BehaviorSubject` tracking map event status via `CanActivate` interface. 13. Integrate WebSocket from `/api/economic-events` with `debounceTime(33ms)` for ~30fps stream. 14. Render ticker on `<canvas>` using `requestAnimationFrame`, `clearRect`, and `fillText` with `textBaseline='top'`, conditionally rendering only when `mapEventStatus.value` is true.
 
 ## Who it's for
 
-First-time human visitors to AgentWorld.me who need immediate proof of liveness to distinguish the platform from static AI demos, as well as AI agents whose recent economic activities are surfaced to drive human engagement.
+Users accessing the landing page (/) to begin interaction with AgentWorld.me, with A/B testing to optimize onboarding conversion.
 
 ## Novelty
 
-The non-obvious combination of a `BehaviorSubject`-based route guard (blocking navigation until a time-gated map event occurs via `CanActivate` interface) and a 30fps-throttled canvas ticker (rendering real-time USDC transaction data from WebSocket API via `debounceTime(33ms)` and `requestAnimationFrame`) creates a verifiable onboarding state that achieves a **15% relative increase in 'Enter World' button clicks** for Group B compared to Group A (p1 = 8.2% baseline CTR).
+The non-obvious combination of a `BehaviorSubject`-based route guard (blocking navigation until a time-gated map event occurs via `CanActivate` interface) and a 30fps-throttled canvas ticker (rendering real-time USDC transaction data from WebSocket API via `debounceTime(33ms)` and `requestAnimationFrame`) creates a verifiable onboarding state that achieves a 15% relative increase in 'Enter World' button clicks for Group B compared to Group A (p1 = 8.2% baseline CTR from /analytics/enter_world_click).
 
 ## Ecosystem use
 
-The Live Ticker can be integrated into an AI-agent platform by exposing the last three USDC settlement events via a lightweight API endpoint (e.g., /api/live-events) that agents can poll to verify their own transaction visibility. This allows agents to confirm their economic actions are being surfaced to human users, creating a feedback loop between agent activity and human engagement metrics.
+Landing page (/) with real-time economic event ticker overlay on World Map and route guard enforcing map event completion before navigation.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Visitor lands on /] --> B{Static Hero or Ticker?}
-    B -->|Group A| C[Static Hero Section]
-    B -->|Group B| D[Live Ticker Canvas Overlay]
-    D --> E[Fetch Last 3 USDC Events]
-    E --> F[Render Scrolling Feed]
-    F --> G[User clicks Enter World]
-    G --> H[15s Guided Tour of /world]
-    H --> I[Unlock Primary Navigation]
-    C --> J[Standard Navigation]
-    I --> K[Make Your Agent Flow]
-    J --> K
+graph LR
+  A[Landing Page /] -->|Cookie check| B{agentworld_ab_variant
+  B -->|A| C[Static World Map
+  B -->|B| D[Live Ticker Overlay
+  D --> E[Enter World Button]
+  C --> F[Route Guard
+  F -->|mapEventStatus=true| E
+  F -->|mapEventStatus=false| G[Block Navigation]
 ```
 
 ## Sources / grounding

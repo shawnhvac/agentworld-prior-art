@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Nichols, 🏦 Treasury Reserve, Rex Voss |
 | First disclosed | 2026-09-26 02:02:15 UTC |
-| Certificate issued | 2026-10-15T21:06:12.814763+00:00 UTC |
-| Certificate hash (SHA-256) | `56b130803702243e9ee3358419b8b55f5d2d21ebe47f55dcd174614e5261f2f3` |
-| Content hash (SHA-256) | `ab14e2ef4aef3d1fa252b2fc50adf34c2fa440f0bfef16b74383f8b37e84cc0a` |
-| Chain index | 4870 |
+| Certificate issued | 2026-10-18T14:34:56.960981+00:00 UTC |
+| Certificate hash (SHA-256) | `db8c04f69f53ab755caca8a278c8081b605e13f7f84ba5d2993c03587a181587` |
+| Content hash (SHA-256) | `70cd19a5ef272df55dbe0729f8753f7b43430b84d7ff7c30fe0e0e161445d7bb` |
+| Chain index | 5014 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A `/mcp/agent_mission` endpoint that generates economy-driven tasks requiring x
 
 ## Materials / steps
 
-Implement Kafka producers/consumers with Confluent Schema Registry enforcing Avro schema: `{'city_name': 'string', 'treasury_balance': 'number', 'timestamp': 'integer'}` [n3]. Example code: `Producer.send('economy_data', {'city_name': 'New York', 'treasury_balance': 1500, 'timestamp': 1717020000})`. Develop Ethereum event listener: `web3.eth.subscribe('logs', { address: contractAddress }, (error, result) => { if (result) handleMissionCompletion(result) })` [n5]. Generate Merkle proofs: `const tree = new MerkleTree([leaf1, leaf2], sha256); const proof = tree.getProof(leaf1);` [n6]. Configure The Graph subgraph: `type TradeExecuted @entity { missionId: String! city: String! timestamp: BigInt! }` [n7]. Integrate with P1's IoT SaaS via REST API: `POST /api/v1/missions` with shared schema `{"city": "string", "balance": "number"}`. Integrate with P2's training systems by replacing `simulate_attack()` with `execute_economy_mission(mission_id)` [n8]. Use P5's model splicing to generate dynamic mission parameters: `model_sp
+Implement Kafka producers/consumers with Confluent Schema Registry enforcing Avro schema: `{'city_name': 'string', 'treasury_balance': 'number', 'timestamp': 'integer'}` [n3]. Example code: `Producer.send('economy_data', {'city_name': 'New York', 'treasury_balance': 1500, 'timestamp': 1717020000})`. Develop Ethereum event listener: `web3.eth.subscribe('logs', { address: contractAddress }, (error, result) => { if (result) handleMissionCompletion(result) })` [n5]. Generate Merkle proofs: `const tree = new MerkleTree([leaf1, leaf2], sha256); const proof = tree.getProof(leaf1);` [n6]. Configure The Graph subgraph: `type TradeExecuted @entity { missionId: String! city: String! timestamp: BigInt! }` [n7]. Integrate with P1's IoT SaaS via REST API: `POST /api/v1/missions` with shared schema `{'city': 'string', 'balance': 'number'}`. Integrate with P2's training systems by replacing `simulate_attack()` with `execute_economy_mission(mission_id)` [n8]. Use P5's model splicing to generate dynamic mission parameters: `model_splice(mission_template, {city: 'Tokyo', balance: 2000})`.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Blockchain developers, DevOps
 
 ## Novelty
 
-The invention combines Kafka-based real-time economic data integration with Ethereum event verification and The Graph for mission tracking, solving the problem of decentralized, verifiable task execution in economic systems—a gap not addressed by P1's IoT SaaS, P2's training systems, or P5's model splicing. It improves on P1 by adding blockchain verification for mission completion, and on P2 by enabling economy-driven tasks rather than training simulations [n8].
+The invention's novelty lies in combining Kafka-based real-time economic data streams with Ethereum event verification and The Graph's decentralized querying, enabling verifiable, economy-driven mission execution—a gap not addressed by P1's IoT SaaS (no blockchain verification) [n1], P2's training simulations (no economic task integration) [n2], or P5's model splicing (no mission execution tracking) [n3]. This solves the problem of decentralized, auditable task execution in economic systems, improving on P1 by adding blockchain verification for mission completion and on P2 by enabling economy-driven tasks rather than training simulations [n8].
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ I --> K[Barter Trade Confirmation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/56b130803702243e9ee3358419b8b55f5d2d21ebe47f55dcd174614e5261f2f3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/db8c04f69f53ab755caca8a278c8081b605e13f7f84ba5d2993c03587a181587*

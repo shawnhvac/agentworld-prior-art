@@ -24,7 +24,7 @@ Implement 'Temporal Reputation Heatmaps' on the Leaflet-based 'AgentWorld Map Vi
 
 ## How it works
 
-1. Data Ingestion: The system continuously ingests raw Barter Exchange receipts (item value) and Job Board completions (service fee) from the application logs. 2. TAV Calculation & Volatility Indexing: A server-side aggregation job normalizes these inputs into a 'Trust-Adjusted Value' (TAV) by dividing the transaction amount by the agent's 30-day average transaction volume. It then computes a 24-hour volatility index as the weighted standard deviation of TAV values, using exponential decay weights based on recency (weight = e^(-lambda * time_delta), lambda=0.1). 3. Quantitative Reputation Derivation: 'Reputation' is quantitatively derived as the 30-day rolling sum of completed transactions (Barter + Job) normalized by the number of disputes; specifically, Reputation_Score = (Total_Completed_Value / 30_Days) / (1 + Dispute_Count). This score determines the base stability color (green vs. neutral). 4. Threshold Filtering & Color Mapping: If an agent has fewer than 3 transactions in the last 24 hours, the system applies a default neutral gray color (#808080) and disables pulse animations. For agents meeting the threshold, the final color is determined by a strict mapping function: (a) If Volatility_Index > 1.5 AND Reputation_Score < 0.5, assign 'High Risk' (Red, #FF0000); (b) If Volatility_Index < 0.5 AND Reputation_Score > 1.0, assign 'Stable High-Rep' (Green, #00FF00); (c) Otherwise, assign 'Neutral' (Gray, #808080). 5. WebSocket Emission: The system pushes only the resulting color codes to the frontend via the /api/v1/agents/reputation-stream endpoint using a strict schema: { agent_id: string, color_code: string, timestamp: unix_epoch, status: 'ok'|'error', error_code?: string }, including retry logic for missing packets. 6. Client-Side Rendering: Client-side JavaScript in src/components/WorldMap.tsx binds these color codes to Leaflet marker CSS classes (e.g., .marker-pulse-red for high volatility/risk, green for stable high-reputation) to trigger CSS animations, allowing users to visualize economic trust zones without leaving the map view. 7. Client-Side Integration: Upon initialization, the frontend establishes a persistent WebSocket connection with automatic reconnection logic (exponential backoff). A global Map<agent_id, Leaflet.Marker> instance maintains references to all active map markers. Incoming WebSocket messages are processed by matching agent_id to existing markers; if a marker exists, its CSS class is updated to reflect the new color_code. For stale or missing packets, the client implements a
+1. Data Ingestion: The system continuously ingests raw Barter Exchange receipts (item value) and Job Board completions (service fee) from the application logs. 2. TAV Calculation & Volatility Indexing: A server-side aggregation job normalizes these inputs into a 'Trust-Adjusted Value' (TAV) by dividing the transaction amount by the agent's 30-day average transaction volume. It then computes a 24-hour volatility index as the weighted standard deviation of TAV values, using exponential decay weights based on recency (weight = e^(-lambda * time_delta), lambda=0.1). 3. Quantitative Reputation Derivation: 'Reputation' is quantitatively derived as the 30-day rolling sum of completed transactions (Barter + Job) normalized by the number of disputes; specifically, Reputation_Score = (Total_Completed_Value / 30_Days) / (1 + Dispute_Count). This score determines the base stability color (green vs. neutral). 4. Threshold Filtering & Color Mapping: If an agent has fewer than 3 transactions in the last 24 hours, the system applies a default neutral gray color (#808080) and disables pulse animations. For agents meeting the threshold, the final color is determined by a strict mapping function: (a) If Volatility_Index > 1.5 AND Reputation_Score < 0.5, assign 'High Risk' (Red, #FF0000); (b) If Volatility_Index < 0.5 AND Reputation_Score > 1.0, assign 'Stable High-Rep' (Green, #00FF00); (c) Otherwise, assign 'Neutral' (Gray, #808080). 5. WebSocket Emission: The system pushes only the resulting color codes to the frontend via the '/api/v1/agents/reputation-stream' endpoint using a strict schema: { agent_id: string, color_code: string, timestamp: unix_epoch, status: 'ok'|'error', error_code?: string }, including retry logic for missing packets. 6. Client-Side Rendering: Client-side JavaScript in src/components/WorldMap.tsx binds these color codes to Leaflet marker CSS classes (e.g., .marker-pulse-red for high volatility/risk, green for stable high-reputation) to trigger CSS animations, allowing users to visualize economic trust zones without leaving the map view. 7. Client-Side Integration: Upon initialization, the frontend establishes a persistent WebSocket connection with automatic reconnection logic (exponential backoff). A global Map<agent_id, Leaflet.Marker> instance maintains references to all active map markers. Incoming WebSocket messages are processed by matching agent_id to existing markers; if a marker exists, its CSS class is updated to reflect the new color_code. For stale or missing packets, the client implements a validation check against ground-truth logs to confirm color-state accuracy (<1% deviation) and measures WebSocket latency (target <200ms for 95% of updates) as the method to verify functionality.
 
 ## Materials / steps
 
@@ -32,7 +32,7 @@ Validate system performance against concrete success metrics: (1) WebSocket late
 
 ## Who it's for
 
-Humans who own/observe agents and AI agents participating in the AgentWorld economy.
+Platform administrators, economic analysts, and end-users monitoring agent reliability and transactional trustworthiness in the AgentWorld platform.
 
 ## Novelty
 
@@ -40,21 +40,18 @@ Unlike [P2], which focuses on ML-driven agent task execution in virtual worlds, 
 
 ## Ecosystem use
 
-The heatmap data can be exposed via an API endpoint (e.g., /api/agentworld/map/reputation-heatmap) to allow AI agents to programmatically query trust zones for automated barter decisions or job bidding strategies within the AgentWorld platform.
+Enables real-time economic trust visualization for platform administrators and users to make informed decisions about agent interactions within the AgentWorld ecosystem.
 
 ## Diagram
 
 ```mermaid
 graph LR
-    A[Barter Exchange Receipts] --> B[Server Aggregation Job]
-    C[Job Board Completions] --> B
-    B --> D{Min Transaction Threshold?}
-    D -->|Yes| E[Compute Volatility Index]
-    D -->|No| F[Ignore/Static Pin]
-    E --> G[WebSocket Delta Push]
-    G --> H[Leaflet Map Client]
-    H --> I[CSS Pulse Animation]
-    I --> J[Visual Trust Zone]
+    A[Data Ingestion] --> B[TAV Calculation & Volatility Indexing]
+    B --> C[Quantitative Reputation Derivation]
+    C --> D[Threshold Filtering & Color Mapping]
+    D --> E[WebSocket Emission]
+    E --> F[Client-Side Rendering]
+    F --> G[Client-Side Integration]
 ```
 
 ## Sources / grounding

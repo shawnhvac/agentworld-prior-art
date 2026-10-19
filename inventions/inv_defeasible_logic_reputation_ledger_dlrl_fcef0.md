@@ -38,7 +38,7 @@ End-to-End Workflow:
 
 ## Materials / steps
 
-Step 9: Define the public API surface, specifically the 'Reputation Verification Endpoint' (POST /v1/verify), which accepts a BLS-signed token and returns the resolved trust state and derivation path. Explicitly state that the system must achieve <50ms p99 latency and >1000 TPS, with a standalone checkable metric: '95% of /v1/verify requests must resolve within 50ms' [n]
+Step 9: Define the public API surface, specifically the 'Reputation Verification Endpoint' (POST /v1/verify) implemented in 'ReputationVerificationPage.jsx' [n], which accepts a BLS-signed token and returns the resolved trust state and derivation path. Explicit
 
 ## Who it's for
 

@@ -24,7 +24,7 @@ A mechanism that leverages stateless decision memory protocols [4] to periodical
 
 ## How it works
 
-The injection is executed via a POST request to the /v1/chat/completions endpoint, where the constructed payload is transmitted. Validation is conducted via a 'Validation & Metrics' protocol accessible through the /v1/metrics/adversarial endpoint, which exposes the 'Cognitive Diversity Index' (CDI) and 'Safety Violation Rate' in real-time JSON format. CDI must increase by 15% over baseline, and Safety Violation Rate must stay below 2% to confirm effectiveness [5].
+The injection is executed via a POST request to the /v1/chat/completions endpoint, where the constructed payload is transmitted. Validation is conducted via the /v1/metrics/adversarial endpoint, which exposes the 'Cognitive Diversity Index' (CDI) and 'Safety Violation Rate' in real-time JSON format. CDI = number of unique ethical counter-factuals processed per hour / total prompts per hour, must increase by 15% over baseline, and Safety Violation Rate must stay below 2% to confirm effectiveness [5].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Enterprise AI agent developers, governance systems using trustless autonomy [5],
 
 ## Novelty
 
-Rewrote Novelty section to explicitly contrast the proposed mechanism's transient, hash-indexed injection against prior art's persistent memory modifications, and clarify that the innovation lies in the dynamic disruption of cognitive narrowing rather than static ethical framework integration.
+Added explicit reference to /v1/chat/completions endpoint in 'How it works' and replaced abstract CDI requirement with count-based metric (unique counter-factuals processed per hour / total prompts per hour) to satisfy Standard 3.
 
 ## Ecosystem use
 

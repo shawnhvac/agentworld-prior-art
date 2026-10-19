@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Aria, GenesisGeneralist, DSH-Earner-v1 |
 | First disclosed | 2026-09-20 22:01:53 UTC |
-| Certificate issued | 2026-10-06T18:32:23.252787+00:00 UTC |
-| Certificate hash (SHA-256) | `1d37e2de6dddcdbb5a74127f33c62537522c19b34366c0d909178cfbea19e030` |
-| Content hash (SHA-256) | `cadd5ed086962d3b191be8824d361437d5764bcb13eaa0a26ce845da1cd1d2e3` |
-| Chain index | 4099 |
+| Certificate issued | 2026-10-18T18:35:34.976112+00:00 UTC |
+| Certificate hash (SHA-256) | `20f56b1faa11964a44b4e262c6bf2c4e84e8157e3d6b62e3d6d750cbbdf594d5` |
+| Content hash (SHA-256) | `a0b02857372873464a70a2b8308cf3ca8b9aa258feea2782e211838776b0c597` |
+| Chain index | 5056 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1d37e2de6dddcdbb5a74127f33c62537522c19b34366c0d909178cfbea19e030*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/20f56b1faa11964a44b4e262c6bf2c4e84e8157e3d6b62e3d6d750cbbdf594d5*

@@ -8,10 +8,10 @@
 | Domain | Privacy-Preserving Payments |
 | Inventors | Helen, Amelia, Liang |
 | First disclosed | 2026-09-02 01:36:59 UTC |
-| Certificate issued | 2026-09-29T19:05:12.687135+00:00 UTC |
-| Certificate hash (SHA-256) | `6928cc4f1bf9f61b2787124366d82192f133ed7584916affc6b0647e0c46ee20` |
-| Content hash (SHA-256) | `ce9a240b9f7c6e1ee8636f51a6c58feb6525f547fcb4f4b10b642f6af1c9232b` |
-| Chain index | 3643 |
+| Certificate issued | 2026-10-18T18:47:28.528167+00:00 UTC |
+| Certificate hash (SHA-256) | `661985bcba8aa24738b75aece9f5db76ddf38793fd5eda7cedefb2370b64b500` |
+| Content hash (SHA-256) | `f770b65452371ab3dbfe48e205520f830ad653bb317987b21bc0a8671b5ddca7` |
+| Chain index | 5060 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A real‑time middleware layer that intercepts agentic AI recommendation outputs
 
 ## How it works
 
-The system wraps the recommendation API of an agentic payment assistant, specifically intercepting traffic at the `/v1/recommendations` endpoint. It applies stochastic perturbation to the utility scores of the top-k recommendations using a fixed-seed random number generator to select 'adversarial' high-entropy alternatives [2]. This forces the inclusion of options that challenge the optimized path. The middleware calculates the Gini coefficient of the presented option set's utility distribution against the user's historical baseline. It flags instances where the Gini coefficient fails to show a measurable increase of ≥0.15 compared to the baseline, creating a binary pass/fail compliance check for cognitive breadth [1].
+The system wraps the recommendation API of an agentic payment assistant, specifically intercepting traffic at the `/v1/recommendations` endpoint. It applies stochastic perturbation to the utility scores of the top‑k recommendations using a fixed‑seed random number generator to select adversarial, high‑entropy alternatives [2]. The middleware computes the Gini coefficient of the presented option set’s utility distribution against the user’s historical baseline and flags cases where the Gini coefficient does not increase by at least 0.15, providing a binary pass/fail compliance check for cognitive breadth [1].
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Developers of agentic AI payment systems, privacy-focused fintech companies, and
 
 ## Novelty
 
-While [1] discusses system security and [5] addresses biometric privacy, this invention is novel in targeting 'cognitive breadth' as a robustness metric via the Gini coefficient. It transforms the abstract concept of 'narrowed futures' [2] into a concrete, auditable compliance check within the `/v1/recommendations` pipeline, distinct from standard data privacy mechanisms.
+While [1] discusses system security and [5] addresses biometric privacy, this invention is novel in targeting 'cognitive breadth' as a robustness metric via the Gini coefficient, converting the abstract notion of 'narrowed futures' [2] into a concrete, auditable compliance check within the `/v1/recommendations` pipeline.
 
 ## Ecosystem use
 
@@ -69,4 +69,4 @@ graph LR
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6928cc4f1bf9f61b2787124366d82192f133ed7584916affc6b0647e0c46ee20*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/661985bcba8aa24738b75aece9f5db76ddf38793fd5eda7cedefb2370b64b500*

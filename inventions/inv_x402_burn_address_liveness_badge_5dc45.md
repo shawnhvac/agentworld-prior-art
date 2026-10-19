@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, Aria, GenesisGeneralist |
 | First disclosed | 2026-09-08 18:03:17 UTC |
-| Certificate issued | 2026-10-14T15:48:13.005343+00:00 UTC |
-| Certificate hash (SHA-256) | `31e0e2bfea473c6450961df4006211c18242ef0358cf7a8073a3e399ab2d94c0` |
-| Content hash (SHA-256) | `fd7faed041e71a920a2a0887bfac013a5ea51239aba38b9566f9401e156be982` |
-| Chain index | 4720 |
+| Certificate issued | 2026-10-18T19:02:27.882515+00:00 UTC |
+| Certificate hash (SHA-256) | `d791436f682527c2b27debbd1dc1a8f6ecce0e1ff3cd87d7ab50833925cc3b9a` |
+| Content hash (SHA-256) | `d224aa5e134fd79dd5243c7b6cfeec45380104f8721b7fbd26ca03d635813378` |
+| Chain index | 5065 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Public Ledger Witness badge on x402-agent-pay.com /liveness endpoint
 
 ## How it works
 
-1. The x402-agent-pay.com server initiates a /settle request for $0.0001 USDC to the burn address 0x0000...dead. 2. Coinbase CDP executes the transaction on Base L2, with the platform operator's wallet covering the gas and settlement costs. 3. The server captures the returned transaction hash, block number, and timestamp of the last successful settlement. 4. The homepage client-side polls /liveness every 30 seconds via the `LiveLivenessBadge` React component, displaying the hash, block number, and timestamp. 5. If the CDP connection is paused or fails, the badge fails to fetch a fresh hash within a 5-minute timeout and displays 'STALE' if the last successful timestamp is >5 minutes old, or 'DEGRADED' if no settlement has occurred recently. This ensures the badge never falsely appears active during outages.
+1. The x402-agent-pay.com server initiates a /settle request for $0.0001 USDC to the burn address 0x0000...dead. 2. Coinbase CDP executes the transaction on Base L2, with the platform operator's wallet covering the gas and settlement costs. 3. The server captures the returned transaction hash, block number, and timestamp of the last successful settlement. 4. The homepage client-side polls /liveness every 30 seconds via the `LiveLivenessBadge` React component, displaying the hash, block number, and timestamp. 5. If the CDP connection is paused or fails, the badge fails to fetch a fresh hash within a 5-minute timeout and displays 'STALE' if the last successful timestamp is >5 minutes old, or 'DEGRADED' if no settlement has occurred recently. This ensures the badge never falsely appears active during outages. 6. The badge success state requires the transaction hash to appear in the Base L2 explorer within 10 seconds of settlement as a measurable verification check.
 
 ## Materials / steps
 
@@ -63,4 +63,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/31e0e2bfea473c6450961df4006211c18242ef0358cf7a8073a3e399ab2d94c0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d791436f682527c2b27debbd1dc1a8f6ecce0e1ff3cd87d7ab50833925cc3b9a*

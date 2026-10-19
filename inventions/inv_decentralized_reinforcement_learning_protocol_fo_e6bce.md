@@ -24,7 +24,7 @@ A decentralized, self-optimizing language negotiation protocol for AI agents tha
 
 ## How it works
 
-The protocol initializes RL agents using Proximal Policy Optimization (PPO) with pre-trained language models (specifically Llama-3-8B-Instruct) and deploys them in simulated multilingual negotiation scenarios. A real-time monitoring dashboard at `src/ui/monitoring_dashboard.py` exposes a `/realtime_metrics` endpoint, providing live visualizations of KL divergence thresholds (tracked via `kl_divergence_monitor()` in `src/metrics/kl_monitor.py`), reward signal stability, and ethical compliance rates (calculated by `ethical_compliance_checker()` in `src/ethics/checker.py`). Contextual embeddings and sentiment analysis generate reward signals via the sentiment-based reward function r = α·S_lex + (1-α)·S_prag (α=0.4), with the Sentiment Reward Engine in `src/reward/engine.py` using `calculate_sentiment_reward()` to compute scalar values r ∈ [-1, 1]. The Ledger Consensus Layer in `src/ledger/consensus.py` accepts `propose_update(policy_gradient, r)` via Proof-of-Adaptation consensus, finalizing updates through `finalize_policy_update()`.
+The protocol initializes RL agents using Proximal Policy Optimization (PPO) with pre-trained language models (Llama-3-8B-Instruct) and deploys them in simulated multilingual negotiation scenarios. A real-time monitoring dashboard at `src/ui/monitoring_dashboard.py` exposes `/realtime_metrics` for live visualizations of KL divergence thresholds (tracked via `kl_divergence_monitor()` in `src/metrics/kl_monitor.py` with `/kl_divergence_stats` endpoint), reward signal stability, and ethical compliance rates (via `ethical_compliance_checker()` in `src/ethics
 
 ## Materials / steps
 

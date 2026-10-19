@@ -20,35 +20,40 @@ AI agents in decentralized ecosystems struggle to verify the integrity of their 
 
 ## Concept
 
-CMAF embeds Decentralized Identifiers (DIDs) [1] directly into the memory write-path to issue verifiable credentials for each state transition. This creates a 'proof-carrying' memory log [3] that uses Byzantine-resilient encoding [2] (specifically robust sparse recovery variants) to mathematically detect tampering during aggregation, shifting verification from statistical probability to cryptographic certainty.
+CMAF embeds Decentralized Identifiers (DIDs) [1] directly into the memory write-path to issue verifiable credentials for each state transition, creating a 'proof-carrying' memory log [3] using Byzantine-resilient sparse recovery encoding [2] to mathematically detect tampering with cryptographic certainty.
 
 ## How it works
 
-1. Agent initiates a memory write/state transition. 2. Agent requests a nonce from the DID Controller; the Controller issues a DID-based Verifiable Credential [1] containing the agent's DID, a hash of the pre-encoding state, a timestamp, and the nonce, signed by the agent's private key. 3. The raw memory block is encoded using a Byzantine-resilient sparse recovery algorithm [2] (e.g., robust PCA with sparse recovery), producing a compressed representation and a residual error vector. 4. The agent computes a Merkle root over the encoded data and the residual vector, then signs this root to create a cryptographic receipt [3] that cryptographically binds the VC to the specific encoded state. 5. The agent transmits the VC, encoded data, residual vector, and signed receipt to the Aggregation Layer. 6. During read/aggregation, the Aggregation Layer verifies the receipt signature against the agent's DID public key, decodes the state, recalculates the residual vector, and compares it against a strict threshold (SFS > 0.98); any deviation triggers a fault detection alert, addressing the difficulty of verifying agents with memory [6].
+1. Agent initiates memory write/state transition. 2. Agent requests nonce via '/did-vc-request' endpoint; DID Controller issues DID-based Verifiable Credential [1] containing agent DID, hash of pre-encoding state, timestamp, and nonce, signed by agent's private key. 3. Raw memory block is encoded via Byzantine-resilient sparse recovery algorithm [2] (e.g., robust PCA), producing compressed representation and residual error vector. 4. Agent computes Merkle root over encoded data and residual vector, signs it to create cryptographic receipt [3] binding VC to encoded state. 5. Agent transmits VC, encoded data, residual vector, and signed receipt to Aggregation Layer via '/aggregate' endpoint. 6. Aggregation Layer verifies receipt signature against agent's DID public key, decodes state, recalculates residual vector, and compares SFS against strict threshold (>0.98); deviation triggers fault detection alert [6].
 
 ## Materials / steps
 
-Add concrete API endpoints: '/did-vc-request' for nonce/VC issuance, '/aggregate' for encoded data submission, and '/verify' for receipt validation. Implement real-time SFS monitoring dashboard with >0.98 threshold enforcement and fault detection alert rate tracking (<1% per hour).
+Add concrete API endpoints: '/did-vc-request' for nonce/VC issuance, '/aggregate' for encoded data submission, and '/verify' for receipt validation; implement real-time SFS monitoring dashboard with >0.98 threshold enforcement and fault detection alert rate tracking (<1% per hour).
 
 ## Who it's for
 
-Developers of decentralized AI agent ecosystems, autonomous data governance platforms [5], and enterprise systems requiring high-integrity, self-healing data trails.
+Developers integrating cryptographic memory attestation into DID-based identity systems, system architects designing Byzantine-resilient state management, and security engineers implementing tamper-evident logging.
 
 ## Novelty
 
-CMAF uniquely binds *semantic state integrity* (via residual error vectors from robust sparse recovery) to *agent identity* (via DID/VC), ensuring strict semantic fidelity (>0.98 SFS) during memory state transitions—a capability absent in [P3]’s 3D asset control (which lacks semantic fidelity metrics) and [P1]/[P2]’s unrelated biometric/login/blockchain methods. This combination of cryptographic memory attestation, DID binding, and SFS-based semantic validation is novel in the prior art.
+CMAF uniquely binds *semantic state integrity* (via residual error vectors from robust sparse recovery) to *agent identity* (via DID/VC), ensuring strict semantic fidelity (>0.98 SFS) during memory state transitions—a capability absent in [P3]’s 3D asset control (which lacks semantic fidelity metrics) and [P1]/[P2]’s unrelated biometric/login/blockchain methods.
 
 ## Ecosystem use
 
-API endpoints for issuing and verifying memory-state credentials; agent coordination protocols that require proof of state integrity before data exchange; payment systems that release funds only upon successful cryptographic verification of memory logs.
+Enables verifiable memory state transitions in decentralized systems requiring cryptographic assurance of data integrity and agent accountability, particularly in high-stakes environments like autonomous systems or distributed ledger consensus.
 
 ## Diagram
 
 ```mermaid
-sequenceDiagram
-    participant A as Agent
-    participant D as DID Controller
-    participant Agg as
+graph LR
+  A[Agent initiates write] --> B[Request nonce via /did-vc-request]
+  B --> C[DID Controller issues VC with DID, hash, timestamp, nonce]
+  C --> D[Encode memory block with sparse recovery]
+  D --> E[Compute Merkle root + sign receipt]
+  E --> F[Transmit VC, data, residual vector, receipt via /aggregate]
+  F --> G[Aggregation Layer verifies receipt]
+  G --> H[Decode state, recalc residual, check SFS > 0.98]
+  H --> I[Fault alert if SFS <= 0.98]
 ```
 
 ## Sources / grounding

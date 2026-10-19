@@ -24,15 +24,15 @@ VIA embeds zero-trust security directly into the agent's retrieval pipeline. It 
 
 ## How it works
 
-5. Verify: The middleware state machine executes a Verification Protocol using constant-time HMAC-SHA256 comparison, returning HTTP 200 OK for policy-compliant intents and HTTP 403 Forbidden for non-compliant intents [1]. 6. Commit/Rollback: The state machine enforces atomicity via a two-phase commit protocol, logging all verification outcomes to an audit trail [5].
+5. Verify: The middleware state machine executes a Verification Protocol using constant-time HMAC-SHA256 comparison of the intent hash against the policy digest within 10ms, returning HTTP 200 OK for policy-compliant intents and HTTP 403 Forbidden for non-compliant intents [1]. 6. Commit/Rollback: The state machine enforces atomicity via a two-phase commit protocol, logging all verification outcomes to an audit trail [5].
 
 ## Materials / steps
 
-Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' (intercepts payloads for policy evaluation), '/api/via/verify' (validates intent against policies using HMAC-SHA256), and '/api/via/audit' (outputs structured JSON logs with fields: status_code, timestamp, policy_id, action_id). Deploy interception middleware with a state machine enforcing atomicity via two-phase commit, featuring endpoints: '/api/via/status' (returns verification success/failure, policy_id, and timestamp). Enforce 99.9% success threshold via (number of 200 OK audit entries / total audit entries) ≥ 0.999, with audit logs stored in PostgreSQL for queryable verification [5].
+Implement GenIR retrieval module [4] with explicit endpoints: '/api/via/intercept' (intercepts payloads for policy evaluation on the agent's retrieval service), '/api/via/verify' (validates intent against policies using HMAC-SHA256 comparison within 10ms), and '/api/via/audit' (outputs structured JSON logs with fields: status_code, timestamp, policy_id, action_id). Deploy interception middleware with a state machine enforcing atomicity via two-phase commit, featuring endpoint '/api/via/status' (returns verification success/failure, policy_id, and timestamp within 10ms). Enforce 99.9% success threshold via (number of 200 OK audit entries / total audit entries) ≥ 0.999, with audit logs stored in PostgreSQL for queryable verification [5].
 
 ## Who it's for
 
-Healthcare AI systems and other high-stakes autonomous agent deployments requiring strict zero-trust security architectures [1, 6].
+System architects implementing secure agent retrieval pipelines
 
 ## Novelty
 
@@ -40,30 +40,23 @@ VIA introduces explicit policy-compliance HTTP status codes (200/403) and audit-
 
 ## Ecosystem use
 
-API Gateway Middleware: VIA acts as a pre-execution gatekeeper in AI-agent platforms, intercepting tool-use intents via API hooks to verify against zero-trust policies before allowing external API calls or data access, ensuring agent coordination adheres to strict security protocols [1, 6].
+Agents requiring zero-trust policy enforcement in retrieval pipelines, such as autonomous systems with regulated tool access.
 
 ## Diagram
 
 ```mermaid
-sequenceDiagram
-    participant Agent
-    participant Interceptor
-    participant LSH_Mapper
-    participant VectorStore
-    participant StateMachine
-
-    Agent->>Interceptor: Tool-Call Payload (JSON)
-    Interceptor->>Interceptor: Derive Intent Hash (HKDF-SHA256)
-    Interceptor->>LSH_Mapper: Map Hash to Sparse Vector (4096-dim, 64-bands)
-    LSH_Mapper-->>Interceptor: Deterministic LSH Vector
-    Interceptor->>VectorStore: Query with LSH Pre-filter
-    VectorStore-->>Interceptor: Top-k Candidates (Exact Match Bands)
-    Interceptor->>StateMachine: VerifyAndCommit(Candidates, Payload)
-    alt Verification Success
-        StateMachine->>StateMachine: Atomic Commit
-        StateMachine-->>Agent: Execute Tool
-    else Verification Failure
-        StateMachine->>StateMachine: Rollback to
+stateDiagram-v2
+    [*] --> Verification_Protocol
+    Verification_Protocol --> HMAC_Comparison
+    HMAC_Comparison --> Policy_Digest_Comparison
+    Policy_Digest_Comparison --> 200_OK
+    Policy_Digest_Comparison --> 403_Forbidden
+    200_OK --> Commit
+    403_Forbidden --> Rollback
+    Commit --> Audit_Log
+    Rollback --> Audit_Log
+    Audit_Log --> [*]
+    Verification_Protocol --> Audit_Log
 ```
 
 ## Sources / grounding

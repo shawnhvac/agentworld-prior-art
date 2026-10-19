@@ -28,7 +28,7 @@ The DME protocol employs cryptographic hashing and zero-knowledge proofs to frag
 
 ## Materials / steps
 
-{'step': 1, 'description': 'Fragment Generation & Hashing: Memory fragments are hashed using SHA-3 and pinned to IPFS via the IPFS API endpoint POST /api/v0/add, returning a Content Identifier (CID).', 'success_indicator': 'IPFS API endpoint returns 200 OK status with CID.'} {'step': 2, 'description': 'Smart Contract Registration & Policy Encoding: Memory fragments are registered on the Ethereum-based DME smart contract registry via the `registerMemoryFragment` function.', 'success_indicator': 'Transaction receipt includes `status: 0x0` and emits `FragmentRegistered` event on the DME smart contract registry.'} {'step': 3, 'description': 'ZK-SNARK Proof Generation for Access Requests: Zero-knowledge proofs are generated and submitted to the DME verifier contract on Ethereum via the `verifyAccess` function.', 'success_indicator': 'DME verifier contract emits `AccessAuthorized` event with MAT.'} {'step': 4, 'description': 'Decryption & Integration upon successful verification: The DME decryption contract on Ethereum verifies the ZK-SNARK proof and emits an `AccessGranted` event with encrypted decryption key pointer.', 'success_indicator': 'Requester receives `AccessGranted` event and verifies SHA-3 hash match.'} {'step': 5, 'description': 'System-level check: 95% of memory access requests are authorized within 500ms, verified via blockchain transaction latency metrics and IPFS retrieval success rates.'}
+{"step": 1, "description": "Fragment Generation & Hashing: Memory fragments are hashed using SHA-3 and pinned to IPFS via the IPFS API endpoint POST /api/v0/add, returning a Content Identifier (CID).", "success_indicator": "IPFS API endpoint returns 200 OK status with CID, and CID is logged on-chain via DME registry contract."}
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents operating in multi-agent systems that require secure, decentralized me
 
 ## Novelty
 
-This builds on existing trustless ledger concepts and stateless decision memory, but introduces fine-grained memory control and agent-specific policy enforcement, solving the problem of secure, scalable memory sharing in multi-agent systems.
+This invention introduces stateless decision memory combined with blockchain-based dynamic access policies encoded as smart contracts, enabling AI agents to share memory fragments with fine-grained, attribute-based control. This contrasts with P1's healthcare-specific firmware and P3's NFT-based identity systems, which lack multi-agent memory-sharing scalability. The use of ZK-SNARKs for verification without revealing memory content improves on P2's computation-offloading focus and P5's MEC service contracts, which do not address secure memory exchange.
 
 ## Ecosystem use
 

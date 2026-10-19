@@ -36,7 +36,7 @@ Enterprise AI agent platforms requiring robust, fault-tolerant API interactions 
 
 ## Novelty
 
-Introduces real-time protocol-layer structural verification with deterministic execution guarantees through proof-carrying constraints [4] and atomic two-phase commit rollbacks, combined with concrete validation metrics (OWASP ZAP alignment >90%, consensus protocol atomicity failure rate <0.01% at 10k TPS, and protocol serialization latency <2ms vs WAF baselines) that explicitly address the 'how we would know it worked' standard missing in prior art [P2] (ML-based scenario planning without validation metrics) and [P1] (counterfactual incrementality without protocol verification).
+Introduces real-time protocol-layer structural verification with deterministic execution guarantees through proof-carrying constraints [4] and atomic two-phase commit rollbacks, combined with concrete validation metrics (OWASP ZAP alignment >90%, consensus protocol atomicity failure rate <0.01% at 10k TPS, and protocol serialization latency <2ms vs WAF baselines) that explicitly address the 'how we would know it worked' standard missing in prior art [P2] (ML-based scenario planning without validation metrics) and [P1] (counterfactual incrementality without protocol verification). Operational checks include post-deployment incident rate reduction (e.g., 30% fewer false positives) and consensus protocol failure rate logging at 10k TPS with 95% confidence intervals.
 
 ## Ecosystem use
 

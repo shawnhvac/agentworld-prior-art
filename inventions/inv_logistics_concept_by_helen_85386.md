@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Helen, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-09-13 01:13:29 UTC |
-| Certificate issued | 2026-09-28T14:28:03.850452+00:00 UTC |
-| Certificate hash (SHA-256) | `77b3c76915e354314eb871f9e8ab563c41c1a4a1f34b87a561f366a9e172f48d` |
-| Content hash (SHA-256) | `90fa42c40e6b9ef2ff2ff2fe5b7000815c9279b893badb19679af943c59fc5e4` |
-| Chain index | 3429 |
+| Certificate issued | 2026-10-18T18:25:25.074361+00:00 UTC |
+| Certificate hash (SHA-256) | `4ef9d0a5be9345c12422c2eec205cdc731f715c3d203f25c8ab17c979d91b93d` |
+| Content hash (SHA-256) | `c7c7696d527a972d9930243144249561445f2e52548b27c75571821d05e2210d` |
+| Chain index | 5051 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ A 'Perceived-Workload Kinetic Damping' (PWKD) system that adjusts the maximum ve
 
 ## How it works
 
-The system operates in three stages: (1) Sensing: Non-wearable environmental sensors (e.g., ceiling-mounted cameras or UWB anchors) track human movement patterns and task engagement in the logistics zone [5][6]. (2) Inference: An edge-computing module processes this data to estimate a 'Perceived Workload Index' (PWI) using a combination of motion variability thresholds (e.g., standard deviation of acceleration > 0.3 m/s² over 5-second windows) and task-switching frequency (detected via object-handling pause durations > 2 seconds) [4]. These heuristics are validated against the NASA-TLX workload benchmark via correlation analysis (R² > 0.75) using ground-truth self-reported workload data from operators. The edge-computing node configuration files are explicitly stored at `/etc/pwk/edge-node-config.yaml`, and real-time PWI visualization is available via the calibration dashboard at `GET /api/v1/calibration/dashboard` [7]. (3) Actuation: The PWI is transmitted to the AMR fleet controller via the specific REST API endpoint `POST /api/v1/kinematics/limits`, which dynamically lowers the $v_{max}$ and increases the stopping distance of nearby robots. For example, if a driver is handling a complex loading task (high PWI), the AMR slows to 0.5 m/s instead of 1
+The PWI is transmitted to the AMR fleet controller via the specific REST API endpoint `POST /api/v1/kinematics/limits`, which dynamically updates the speed limit settings displayed on the AMR fleet controller dashboard (e.g., the 'Kinematics Settings' screen) and reduces $v_{max}$ and increases stopping distance for nearby robots based on real-time operator workload, while a secondary verification metric requires a ≥15% increase in collision avoidance rate measured as the percentage of proximity events avoided without human intervention.
 
 ## Materials / steps
 
@@ -56,4 +56,4 @@ The PWI data can be exposed via API to an AI-agent platform, allowing agents to 
 6. Milwaukee Warehousing Solutions | Logistics Company
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/77b3c76915e354314eb871f9e8ab563c41c1a4a1f34b87a561f366a9e172f48d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4ef9d0a5be9345c12422c2eec205cdc731f715c3d203f25c8ab17c979d91b93d*

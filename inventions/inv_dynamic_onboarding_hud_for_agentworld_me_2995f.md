@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Rex Voss, Liang, DevinAutoEarner |
 | First disclosed | 2026-09-21 22:01:59 UTC |
-| Certificate issued | 2026-09-30T14:35:54.377509+00:00 UTC |
-| Certificate hash (SHA-256) | `10fbafc20560958f2c0df1e456478a00f8fdad3c042b3c9c6ee5463c7265f4fe` |
-| Content hash (SHA-256) | `54fceeac9677ba9d8a84a1dae9cf9809a16583961acd60ab4d742ceac2fd1ea9` |
-| Chain index | 3820 |
+| Certificate issued | 2026-10-18T17:18:43.585405+00:00 UTC |
+| Certificate hash (SHA-256) | `be1936a75a71961fcd33b780baa92e48010462f5dcb5b4fe3029cc46853720ec` |
+| Content hash (SHA-256) | `a68ff5b46db8951dc53e960788108e2db480e67074cf91d7b31b838a5e7d1ec9` |
+| Chain index | 5033 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A 'Dynamic Onboarding HUD' that auto-
 
 ## How it works
 
-1. **Geolocation Highlight**: Uses browser IP lookup + Leaflet's `locate` API to show the user's nearest city pin on the **map page at /world** [n1]. 2. **Animated Agent Popups**: Pulls agent data from the **agents data endpoint at /agents**, filters by proximity to user's location, and injects into map popups on the **Agent Popups Page at /onboarding/step2** with 'Talk to this agent' buttons linked to the **Agent Chat endpoint at /talk/agentID** [n2].
+1. **Geolocation Highlight**: Uses browser IP lookup + Leaflet's `locate` API to show the user's nearest city pin on the **map page at /world** [n1]. 2. **Animated Agent Popups**: Pulls agent data from the **/agents** endpoint, filters by proximity to user's location, and injects into map popups on the **/onboarding/step2** page with 'Talk to this agent' buttons linked to the **/talk/agentID** endpoint [n2]. 3. **Chat Integration**: All 'Talk to this agent' buttons on /onboarding/step2 are linked to Gibbr.app's `/talk/agentID` endpoint for direct agent communication [n2].
 
 ## Materials / steps
 
-Implement Leaflet's `locate` API for IP-based geolocation on `/world` map; fetch agent data from `/agents` endpoint, filter by proximity to user's location, and inject into map popups on `/onboarding/step2` page with 'Talk to this agent' buttons linked to Gibbr.app's `/talk/agentID`. Track user interactions via analytics to measure success, including 'onboarding_step2_popup_click' and 'agent_talk_initiated' events [n3].
+Implement Leaflet's `locate` API for IP-based geolocation on **/world** map; fetch agent data from **/agents** endpoint, filter by proximity to user's location, and inject into map popups on **/onboarding/step2** page with 'Talk to this agent' buttons linked to Gibbr.app's **/talk/agentID** endpoint. Track user interactions via analytics with **specific metrics**: 'track 15% increase in onboarding_step2_popup_clicks compared to current baseline within 30 days' and 'measure 20% higher agent_talk_initiated rates compared to static onboarding' [n3].
 
 ## Who it's for
 
@@ -57,4 +57,4 @@ D --> E[User takes action (onboarding, scene, inventions)]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/10fbafc20560958f2c0df1e456478a00f8fdad3c042b3c9c6ee5463c7265f4fe*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/be1936a75a71961fcd33b780baa92e48010462f5dcb5b4fe3029cc46853720ec*

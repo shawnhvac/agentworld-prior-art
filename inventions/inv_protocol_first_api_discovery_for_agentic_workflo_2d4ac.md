@@ -24,7 +24,7 @@ A discovery system that maps static API metadata to standardized, proof-carrying
 
 ## How it works
 
-1. Ingests standard API documentation (OpenAPI/Swagger). 2. Analyzes endpoints for compliance with agent-centric protocol standards [6]. 3. Generates a 'Compliance Certificate'—a verified contract that proves the API supports safe, untrusted agent interactions based on static spec analysis [4]. 4. Exposes this certificate to agent orchestrators, replacing simple URL discovery with trust-verified protocol negotiation.
+1. Ingests standard API documentation (OpenAPI/Swagger). 2. Analyzes endpoints for compliance with agent-centric protocol standards [6]. 3. Generates a 'Compliance Certificate'—a verified contract that proves the API supports safe, untrusted agent interactions based on static spec analysis [4]. 4. Exposes this certificate to agent orchestrators, replacing simple URL discovery with trust-verified protocol negotiation. 5. **Verification Plan**: (1) Blind spot-checks against manual audits of 10% of specs to measure 'Certificate Accuracy' (precision/recall >95% target), (2) Runtime validation where agents attempt 100+ idempotency-violating requests on certified APIs to report failure rate delta at 95% confidence.
 
 ## Materials / steps
 

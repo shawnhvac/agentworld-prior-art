@@ -20,7 +20,7 @@ Current agent credit delivery models [1] rely on static historical data and trad
 
 ## Concept
 
-A credit scoring mechanism that quantifies an agent's decision-making stability by analyzing the variance (Shannon entropy) in its transactional logic across diverse, simulated economic shocks, rather than relying solely on past repayment history. The system specifically addresses the lack of causal robustness metrics in prior art by distinguishing between static state-transition probabilities and dynamic behavioral entropy under randomized control trials.
+Behavioral Entropy Credit Scoring for AI Agents: A credit scoring mechanism that quantifies an agent's decision-making stability by analyzing the variance (Shannon entropy) in its transactional logic across diverse, simulated economic shocks, rather than relying solely on past repayment history. The system specifically addresses the lack of causal robustness metrics in prior art by distinguishing between static state-transition probabilities and dynamic behavioral entropy under randomized control trials.
 
 ## How it works
 
@@ -28,31 +28,32 @@ The system treats each agent action as a symbol in an information stream [3]. It
 
 ## Materials / steps
 
-1. ... 6. Expose the scoring engine via the REST API endpoint `/api/v1/credit/entropy-score`. 7. ... 8. ... 9. ... 10. ... 11. ... 12. ... 13. ... Add a specific UI page (`/dashboard/agent-credit-profile`) for visualizing entropy scores and integrating into decision workflows. Define success as a user-facing KPI: '15% reduction in default rates within 6 months' or '20% increase in loan approval accuracy' compared to FICO baselines, validated via paired t-tests on SALR metrics.
+1. ... 6. Expose the scoring engine via the REST API endpoint `/api/v1/credit/entropy-score`. 7. ... 8. ... 9. ... 10. ... 11. ... 12. ... 13. ... Add a specific UI page (`/dashboard/agent-credit-profile`) for visualizing entropy scores and integrating into decision workflows. Define success as a user-facing KPI: '15% reduction in default rates within 6 months' or '20% increase in loan approval accuracy' compared to FICO baselines, validated via paired t-tests on SALR metrics from production loan portfolios.
 
 ## Who it's for
 
-Lending institutions and platforms facilitating autonomous financial interactions between AI agents [3].
+Financial institutions, AI lending platforms, and risk management teams seeking to move beyond static credit scoring models toward dynamic, behaviorally-informed risk assessment for AI agents.
 
 ## Novelty
 
-Refined novelty claim to explicitly contrast Shannon entropy under RCT with Markov chain transition stability, detailing why causal robustness measurement is a superior proxy for default risk compared to state-transition probabilities used in prior art. Adds user-facing KPIs ('15% default rate reduction within 6 months') as concrete validation of financial impact.
+This invention is novel relative to prior art [P4] by applying Shannon entropy under randomized control trials (RCT) as a risk proxy for financial default, whereas [P4] uses maximum entropy for game theory strategy optimization—demonstrating a non-obvious shift from static state-transition stability to dynamic behavioral entropy under controlled economic shocks to predict default risk, with validation via paired t-tests on production SALR metrics.
 
 ## Ecosystem use
 
-API integration for AI-agent platforms to provide real-time trust metrics for agent-to-agent lending, allowing platforms to adjust credit limits based on live behavioral entropy scores rather than static profiles.
+Enables financial institutions to integrate entropy-based risk assessment into AI-driven lending platforms, improving default prediction accuracy and loan approval workflows through dynamic cognitive consistency metrics.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[AI Agent] --> B[Perceives Economic Shock]
-    B --> C[Generates Transactional Action]
-    C --> D[Symbolize Action as Data Stream]
-    D --> E[Calculate Shannon Entropy]
-    E --> F[Compare Against Baseline]
-    F --> G[Update Credit Score]
-    G --> H[Lending Decision]
+graph LR
+    A[Simulated Market Shocks] --> B[Agent Decision Paths]
+    B --> C[Transaction Symbol Stream]
+    C --> D[Shannon Entropy Calculation]
+    D --> E[Entropy Score]
+    E --> F[REST API `/api/v1/credit/entropy-score`]
+    E --> G[UI Dashboard `/dashboard/agent-credit-profile`]
+    F --> H[Decision Workflow Integration]
+    G --> H
 ```
 
 ## Sources / grounding

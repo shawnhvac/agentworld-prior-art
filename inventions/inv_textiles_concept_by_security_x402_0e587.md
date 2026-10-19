@@ -28,7 +28,7 @@ Gold-coated polyamide micro-filaments [5] act as high-impedance electrodes. To p
 
 ## Materials / steps
 
-4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller running the bias_control firmware module as the primary data logging endpoint, with baseline-offset and SNR readouts displayed on a mobile app dashboard and IoT cloud endpoint [6]. 5. Validate with the bench protocol: rub PTFE against the gold-polyamide filament at fixed pressure/speed as a calibrated triboelectric reference; log ADC data for 10 minutes with feedback enabled and disabled; pass if baseline drift is <5% of full-scale with feedback on and friction-event SNR exceeds 10dB.
+4. Connect the shielded amplifier output to a low-noise signal processing unit featuring an STM32L4 microcontroller running the bias_control firmware module as the primary data logging endpoint, with baseline-offset and SNR metrics displayed on the 'StaticSense Dashboard' screen (mobile app) and exposed via the IoT cloud endpoint at 'https://staticsense.io/cloud'. 5. Validate with the bench protocol: rub PTFE against the gold-polyamide filament at fixed pressure/speed as a calibrated triboelectric reference; log ADC data at 1kHz sample rate (16-bit signed integer format, stored as CSV files) for 10 minutes with feedback enabled/disabled; compute <5% full-scale drift as max deviation from baseline offset (in μV) divided by full-scale range (20mV), and >10dB SNR as 20*log10(peak triboelectric signal amplitude/noise floor, calculated via FFT from logged ADC data).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Individuals sensitive to synthetic textile discomfort, researchers studying text
 
 ## Novelty
 
-The invention is novel relative to the provided prior art, which consists entirely of unrelated industrial bleaching (P1), cybersecurity (P2, P4, P5), and IoT infrastructure (P3) patents — none of which address wearable electrostatic sensing, high-impedance textile electrodes, or triboelectric measurement. Specifically, it improves upon the general concept of static field measurement by introducing a firmware-defined dynamic biasing and real-time feedback stabilization mechanism (the STM32L4 bias_control module) for high-impedance textile electrodes, a technical solution absent from all cited references and necessary to solve the specific problem of floating node drift in wearable static sensing. Novelty is further concretized by a named, measurable validation protocol (PTFE-on-filament reference test with <5% full-scale drift and >10dB SNR pass criteria), providing an objective success criterion that no cited patent discloses or renders obvious.
+The invention improves upon prior art by introducing a firmware-defined dynamic biasing mechanism (STM32L4 bias_control module) for high-impedance textile electrodes, a technical solution absent from all cited references. This addresses the specific problem of floating node drift in wearable static sensing, which is unaddressed in P1-P5. The named validation protocol (PTFE-on-filament test with <5% drift and >10dB SNR) provides objective success criteria not disclosed in any cited patent.
 
 ## Ecosystem use
 

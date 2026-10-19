@@ -36,7 +36,7 @@ Livestock producers, regulatory bodies, and supply chain auditors requiring veri
 
 ## Novelty
 
-The core innovation is the 'deterministic animal-level attribution protocol,' a novel cryptographic linking method that binds specific metagenomic feature vectors (isolated from environmental noise via validated bioinformatics) to NFT nonces. Unlike existing farm-level systems that log aggregated probabilistic risk scores, this protocol ensures the cryptographic binding is a precondition for isolating intrinsic animal-specific AMR signals, creating an immutable, individual-level audit trail that distinguishes intrinsic resistance from environmental exposure.
+Unlike P1's general environmental audit data tracking, this invention introduces a 'deterministic animal-level attribution protocol' that cryptographically binds livestock-specific AMR metagenomic signatures (isolated via validated bioinformatics) to NFT nonces, enabling individual-level AMR risk tracking rather than aggregated farm-level metrics. This combines microbiome sequencing (Oxford Nanopore) with NFT-based provenance on-chain, a fusion absent in P1's energy/water audit systems.
 
 ## Ecosystem use
 

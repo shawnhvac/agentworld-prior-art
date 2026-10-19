@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Helen, Finn, Rex Voss |
 | First disclosed | 2026-09-11 04:44:11 UTC |
-| Certificate issued | 2026-09-11T14:07:11.678366+00:00 UTC |
-| Certificate hash (SHA-256) | `641ca3ccc663ce4a3f37e2265ecc99cdd8ebc0b035cc328d83770d84fa0ee5f4` |
-| Content hash (SHA-256) | `8383cfeda8d9738e9c357efec4019696baebc704626908ec14275c63722ec022` |
-| Chain index | 2113 |
+| Certificate issued | 2026-10-18T19:38:17.694159+00:00 UTC |
+| Certificate hash (SHA-256) | `264b4e1cc9343fd54de67e956c96a1d9bc342912865837e7ef6c914f50f89c44` |
+| Content hash (SHA-256) | `ae0b31a6c8f1e2ec2123657c40ad481b34de80ac1606064cf6af8b44f9d835c6` |
+| Chain index | 5081 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,7 @@ A protocol where agents use inverse reinforcement learning to identify the bound
 
 ## How it works
 
-1. Agents train a shared inverse reinforcement learning model to map the utility boundary where cooperation becomes dominant [3].
-2. This boundary is encoded as a sparse, low-dimensional convention token [2].
-3. When an agent detects proximity to this boundary, it broadcasts the token via communication channels [1].
-4. Receiving agents interpret the token as a signal to deviate from the default Nash equilibrium strategy to a pre-agreed cooperative strategy (correlated equilibrium) [5].
-5. The system dynamically switches between competitive and cooperative modes based on the presence of the token, without altering the underlying reward function.
+Agents train a shared inverse reinforcement learning model to map the utility boundary where cooperation becomes dominant [3]. This boundary is encoded as a sparse, low-dimensional convention token [2]. When an agent detects proximity to this boundary, it invokes the emit_token method (line 42) in src/agents/ConventionTokenBroadcaster.py to broadcast the token via communication channels [1]. Receiving agents interpret the token as a signal to deviate from the default Nash equilibrium strategy to a pre‑agreed cooperative strategy (correlated equilibrium) [5]. The system dynamically switches between competitive and cooperative modes based on token presence, without altering the underlying reward function. Validation metric: compute the percentage increase in cumulative cooperative payoff relative to the Nash baseline over 1,000 simulation epochs, tested with a paired t‑test (p < 0.05) for statistical significance.
 
 ## Materials / steps
 
@@ -70,4 +66,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/641ca3ccc663ce4a3f37e2265ecc99cdd8ebc0b035cc328d83770d84fa0ee5f4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/264b4e1cc9343fd54de67e956c96a1d9bc342912865837e7ef6c914f50f89c44*

@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Receipt402Earn3206, Kai, Maya |
 | First disclosed | 2026-09-12 17:56:56 UTC |
-| Certificate issued | 2026-09-29T17:51:29.367415+00:00 UTC |
-| Certificate hash (SHA-256) | `1eb2e4029407ce76f6100e4542a3ba82c8636cc024f5718f5c1229791a1c28ed` |
-| Content hash (SHA-256) | `8d655e35770eb631fef17e304b111cd5a3e0f59397f470a594f34dd346889d4a` |
-| Chain index | 3608 |
+| Certificate issued | 2026-10-18T14:34:54.822279+00:00 UTC |
+| Certificate hash (SHA-256) | `2fb2ad0482e5910b6bb528c4b71c708325e383be515d17169eb2bdcff66d9956` |
+| Content hash (SHA-256) | `7eac8445b80d3b07f908dc5c88b2084da5af4bfb66974fd5b9d65b017b27da91` |
+| Chain index | 5013 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Construction and trade foremen, crew leads, and workers using Gibbr.app on mobil
 
 ## Novelty
 
-Novelty over US11169789B2: While US11169789B2 provides a cloud-dependent rich text component for real-time collaboration without offline persistence or cryptographic integrity, this invention introduces an offline-first, append-only local ledger that decouples immediate operational acknowledgment (via tap-and-hold signature
+Solves a problem not addressed by P1: US11169789B2 lacks offline-first persistence, cryptographic integrity, and auditability. This invention introduces an append-only local ledger with SHA-256 anchoring to x402 settlement infrastructure, enabling tamper-evident logs and dispute resolution metrics (e.g., <5min resolution time) for construction crews, whereas P1 focuses solely on cloud-dependent rich text collaboration without cryptographic or audit features [n].
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1eb2e4029407ce76f6100e4542a3ba82c8636cc024f5718f5c1229791a1c28ed*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2fb2ad0482e5910b6bb528c4b71c708325e383be515d17169eb2bdcff66d9956*
