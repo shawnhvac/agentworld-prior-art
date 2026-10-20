@@ -20,11 +20,11 @@ Small businesses lack a standardized mechanism to link government-business coord
 
 ## Concept
 
-A budgeting tool that integrates MOLAP capabilities [2] to allocate resources based on the acquisition of strategic micro-credentials [3], creating a data-driven link between skill verification and business performance metrics [1].
+A budgeting tool that integrates MOLAP capabilities [2] to allocate resources based on the acquisition of strategic micro-credentials [3], creating a data-driven link between skill verification and business performance metrics [1]. The novelty lies in the 'analytical-transactional bridge' that simultaneously validates micro-credential acquisition and executes dynamic budget reallocation using immutable, cryptographically signed settlement records, enabling real-time alignment of skill development with financial performance—a capability absent in prior art which focuses on data visibility (P2), AI collaboration (P1, P3), or stream processing recovery (P4) without linking credential verification to budgetary actions.
 
 ## How it works
 
-The tool uses MOLAP engines to analyze multi-dimensional budget data [2] with optimized compression and indexing to ensure real-time ingestion latency remains under 200ms. It ingests micro-credential data via a standardized RESTful endpoint at `POST /api/v1/credentials/ingest` that accepts JSON payloads containing credential ID, competency vector, and verification timestamp [3]. Upon successful ingestion, the endpoint returns a `201 Created` HTTP status code with a JSON response including the ingested credential ID, timestamp, and SHA-256 hash of the stored record for auditability. The system maps these inputs to a MOLAP cube schema defined in `budget_cube.sql` where dimensions include 'Skill Category', 'Employee ID', and 'Time Period', while measures include 'Budget Allocation' and 'Performance Score'. Users can access a 'Budget Dashboard' at `/dashboard/budget` and 'Credential Analytics' at `/analytics/credentials' for real-time monitoring.
+The tool uses MOLAP engines to analyze multi-dimensional budget data [2] with optimized compression and indexing to ensure real-time ingestion latency remains under 200ms. It ingests micro-credential data via a standardized RESTful endpoint at `POST /api/v1/credentials/ingest` that accepts JSON payloads containing credential ID, competency vector, and verification timestamp [3], returning a `201 Created` status with the credential ID, timestamp, and SHA-256 hash. Users access the 'Budget Dashboard' at `/dashboard/budget` and 'Credential Analytics' at `/analytics/credentials` for real-time monitoring. Validation requires measuring real-time processing latency (p99 < 200ms via Prometheus), settlement success rate (<0.1% failures via PostgreSQL logs), and KPIs including Budget Utilization Efficiency (>90%) and Credential-to-ROI Correlation Strength (Pearson r > 0.7).
 
 ## Materials / steps
 
@@ -36,7 +36,7 @@ Small enterprises seeking to align skill development with budget planning, and g
 
 ## Novelty
 
-The invention introduces a unique 'analytical-transactional bridge'
+The invention introduces a unique 'analytical-transactional bridge' that simultaneously validates micro-credential acquisition and executes dynamic budget reallocation using immutable, cryptographically signed settlement records, enabling real-time alignment of skill development with financial performance—a capability absent in prior art which focuses on data visibility (P2), AI collaboration (P1, P3), or stream processing recovery (P4) without linking credential verification to budgetary actions.
 
 ## Diagram
 

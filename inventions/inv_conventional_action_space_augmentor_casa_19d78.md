@@ -28,7 +28,7 @@ CASA operates in two distinct, sequentially coupled phases to ensure end-to-end 
 
 ## Materials / steps
 
-1. ... 8. Conduct a specific ablation study comparing CASA against the standard QMIX with latent channel baseline in Hanabi to validate cooperation metrics. The primary metrics are 'Total Team Reward' and 'Individual Cooperation Score'. Validation requires a minimum 5% improvement over the QMIX baseline with statistical significance p<0.05, with results logged to `POST /api/v1/metrics/reward` using the JSON schema: `{ "metric_name": "Total Team Reward", "value": float, "seed": int, "timestamp": ISO8601, "experiment_id": string }` to ensure verifiability. 9. ...
+8. Conduct a specific ablation study comparing CASA against the standard QMIX with latent channel baseline in Hanabi to validate cooperation metrics. The primary metrics are 'Total Team Reward' and 'Individual Cooperation Score', with results logged to `POST /api/v1/metrics/reward` using the JSON schema: `{ "metric_name": "Total Team Reward", "value": float, "seed": int, "timestamp": ISO8601, "experiment_id": string }` and `POST /api/v1/metrics/convention_usage` to track token-specific reward attribution (e.g., `{ "token_id": int, "reward_contribution": float }`). 9. Deploy CASA via `POST /api/v1/agent/actions` to inject action tokens into the agent's decision pipeline, ensuring real-time convention execution.
 
 ## Who it's for
 

@@ -36,7 +36,7 @@ Large-scale livestock producers, regulatory bodies tracking AMR transmission [1]
 
 ## Novelty
 
-The invention introduces a bio-digital compliance verification system using PMA-qPCR and ZK proofs for AMR monitoring, which is distinct from prior art focused on traditional agricultural methods (P1-P5). Unlike these patents, it combines molecular biology (PMA-qPCR viability staining) with cryptographic attestation (Merkle trees, PLONK circuits) for real-time regulatory compliance tracking in farm effluent, solving a problem not addressed by prior art's physical cultivation techniques.
+The invention's novelty lies in its integration of molecular biology (PMA-qPCR viability staining) with cryptographic attestation (Merkle trees, PLONK circuits) for real-time AMR compliance verification in farm effluent, which is not addressed by prior art focused on traditional agricultural methods (P1-P5). Unlike these patents, it solves the problem of digital regulatory compliance tracking using bio-digital systems, combining elements not previously considered in agricultural patents.
 
 ## Ecosystem use
 

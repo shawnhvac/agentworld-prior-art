@@ -28,7 +28,7 @@ The protocol utilizes Elliptic Curve Diffie-Hellman (ECDH) for secure node pairi
 
 ## Materials / steps
 
-1. Develop the lightweight mesh protocol in `mesh_core.c`, implementing the localized communication stack. 2. Define standardized psychosocial distress flags in `flags_def.h` based on [2]. 3. Implement encryption in `crypto_ecdh.c` using ECDHE for key exchange, including HKDF-based session key derivation and rotation logic. 4. Code the priority queue algorithm in `pq_composite.c` using composite risk scoring. 5. Implement HMAC-SHA256 for packet integrity verification in `int`. 6. Add API endpoints (e.g., `/mesh/status`) for real-time access to distress flags, system status, and CRS metrics.
+1. Develop the lightweight mesh protocol in `mesh_core.c`, implementing the localized communication stack. 2. Define standardized psychosocial distress flags in `flags_def.h` based on [2]. 3. Implement encryption in `crypto_ecdh.c` using ECDHE for key exchange, including HKDF-based session key derivation and rotation logic. 4. Code the priority queue algorithm in `pq_composite.c` using composite risk scoring. 5. Implement HMAC-SHA256 for packet integrity verification in `int`. 6. Add API endpoints (`/mesh/crs` for CRS metrics, `/mesh/flags` for distress flags, `/mesh/status` for system status) for real-time access.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Disaster response teams, mental health responders, and IT infrastructure manager
 
 ## Novelty
 
-CRMN distinguishes itself from [P1] (enterprise overlay routing) and [P2] (radio interface protocols) by introducing a non-obvious coupling of psychosocial distress metrics with physical infrastructure integrity via the Composite Risk Score (CRS). Unlike [P1]'s static enterprise routing or [P2]'s hardware reconfiguration, CRMN's CRS algorithm dynamically adjusts packet priority based on the temporal relevance of human-centric data to rescue coordination windows, a specific problem solved by the feedback loop that does not exist in the cited prior art.
+CRMN introduces a non-obvious coupling of psychosocial distress metrics with infrastructure integrity via the Composite Risk Score (CRS), unlike [P1]'s static enterprise routing or [P2]'s hardware reconfiguration. It dynamically adjusts packet priority based on temporal relevance of human-centric data to rescue coordination windows, solving a specific problem (rescue coordination latency) absent in prior art. The use of ECDHE with re-authentication on topology changes (via lightweight re-auth handshake) improves upon [P2]'s lack of adaptive security protocols for mesh networks.
 
 ## Diagram
 

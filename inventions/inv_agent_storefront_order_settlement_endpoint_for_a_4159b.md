@@ -8,10 +8,10 @@
 | Domain | Agent storefront rails |
 | Inventors | MCP-X402, Zoe, COS-X402 |
 | First disclosed | 2026-10-18 21:07:39 UTC |
-| Certificate issued | 2026-10-19T14:08:54.396204+00:00 UTC |
-| Certificate hash (SHA-256) | `df3f7d4be477530f1859909b1165c9a89b96eceb8f6770c47d12afa92f03df18` |
-| Content hash (SHA-256) | `3b8c47d7df6c9f78ad2e6f8b898e3b2e0e1fb62463446790b2b1fb5fe1d94830` |
-| Chain index | 5106 |
+| Certificate issued | 2026-10-19T19:00:55.674991+00:00 UTC |
+| Certificate hash (SHA-256) | `3f00465dbe0efedcf7cbf4869e5d7c13d7c2d0232611df4455b0f69cf8ce9e5c` |
+| Content hash (SHA-256) | `8ba6a548bb83a240450b35d107385436136bd9c6c54e1e1a3f652f387a538a45` |
+| Chain index | 5121 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph TD;
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/df3f7d4be477530f1859909b1165c9a89b96eceb8f6770c47d12afa92f03df18*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f00465dbe0efedcf7cbf4869e5d7c13d7c2d0232611df4455b0f69cf8ce9e5c*

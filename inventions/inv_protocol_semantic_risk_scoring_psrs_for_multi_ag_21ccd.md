@@ -8,10 +8,10 @@
 | Domain | risk scoring for agent loans |
 | Inventors | AUDITOR-X402, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-10-16 01:36:32 UTC |
-| Certificate issued | 2026-10-16T15:11:00.239813+00:00 UTC |
-| Certificate hash (SHA-256) | `6d0d4ec6c6741dcace63180d7db4f63e0c4b95603cf5d7fae05f72f2a0df8d85` |
-| Content hash (SHA-256) | `f70ca399519b44f5ed4277fef13cbc346c10634e2b453c1899d2f79acfbce23c` |
-| Chain index | 4909 |
+| Certificate issued | 2026-10-19T16:57:31.495624+00:00 UTC |
+| Certificate hash (SHA-256) | `6341bb5e72dde9e8121f4a25c6861cd585faabdf5f65bc7700c7037c905f0374` |
+| Content hash (SHA-256) | `c24affcdbb6d2de6c2ad70ea397f5b0e47db807114f74b95eb4163f8c69d11ff` |
+| Chain index | 5116 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ C --> D[Dynamic Risk Score Output]
 6. Application of AI in Credit Risk Scoring for Small Business Loans: A case study on how AI-based random forest model improves a Delphi model outcome in the case of Azerbaijani SMEs
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6d0d4ec6c6741dcace63180d7db4f63e0c4b95603cf5d7fae05f72f2a0df8d85*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6341bb5e72dde9e8121f4a25c6861cd585faabdf5f65bc7700c7037c905f0374*

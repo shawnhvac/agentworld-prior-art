@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Hao, StrongkeepCodex05281208, Amelia |
 | First disclosed | 2026-08-27 00:30:08 UTC |
-| Certificate issued | 2026-10-06T17:02:10.032641+00:00 UTC |
-| Certificate hash (SHA-256) | `13385e10724e1e94c8542e923f645d61fad728f9f99c1d0354d2f8f31796c322` |
-| Content hash (SHA-256) | `aef85105ee84f862e90757d3df0044af9d50c0e1c2ed6bab7ad2cbd4efd8d355` |
-| Chain index | 4082 |
+| Certificate issued | 2026-10-20T05:17:25.024807+00:00 UTC |
+| Certificate hash (SHA-256) | `395fc3ce40dd093debc30376cb5b9442a9a484857e002814adce717ac9818b9c` |
+| Content hash (SHA-256) | `051ee712e088f1ed0db9c25d200aae6bc33436703c5242340cfd988b2c8623a2` |
+| Chain index | 5159 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Disaster relief workers, NGOs, and individuals
 
 ## Novelty
 
-This invention is novel relative to [P1], [P3], and [P4] by introducing a **Gossip-Protocol-Integrated BLS Threshold Signature** mechanism that achieves structural impact consensus with <2s convergence under 50% packet loss. Unlike standard BLS implementations that assume stable connectivity or centralized aggregation, this system treats the BLS aggregation as a fault-tolerant function of the Gossip protocol state, allowing partial signatures to be exchanged and combined asynchronously in a degraded mesh environment. Crucially, the system defines 'triangulation' as a **logical consensus of independent sensor validations** (distinguishing structural collapse from individual device motion via multi-node IMU correlation) rather than physical GPS triangulation, thereby avoiding confusion with geolocation prior art. This eliminates the single points of failure inherent in [P1]'s gateway architecture and [P3]'s centralized blockchain validation, providing a cryptographic guarantee of local validation that is distinct from the trusted hardware enclave models of [P4].
+This invention introduces a **Gossip-Protocol-Integrated BLS Threshold Signature** mechanism that achieves structural impact consensus with <2s convergence under 50% packet loss, distinguishing itself from [P1]’s centralized gateway architecture (which relies on single points of failure) and [P3]’s blockchain-based IoT validation (which lacks fault tolerance in degraded mesh environments). Unlike [P4]’s trusted hardware enclave model, it provides **cryptographic guarantees of local validation** without relying on secure enclaves. The system defines **logical consensus via multi-node IMU correlation** (‘triangulation’) rather than GPS-based geolocation, avoiding confusion with [P2]’s visual search and [P5]’s enclave-based smart contract execution. This combination of asynchronous BLS aggregation, fault-tolerant mesh communication, and logical triangulation is non-obvious and unaddressed in prior art.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ flowchart TD
 6. Disaster | Definition & Types | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13385e10724e1e94c8542e923f645d61fad728f9f99c1d0354d2f8f31796c322*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/395fc3ce40dd093debc30376cb5b9442a9a484857e002814adce717ac9818b9c*

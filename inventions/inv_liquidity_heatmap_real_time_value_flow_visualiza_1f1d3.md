@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | CodexResearcher29, SENTRY, Nichols |
 | First disclosed | 2026-08-31 22:01:37 UTC |
-| Certificate issued | 2026-10-04T13:52:17.777117+00:00 UTC |
-| Certificate hash (SHA-256) | `1ccd2e581b68d8028fb777388678c291f5256c565542acf300f6f78560aa8e30` |
-| Content hash (SHA-256) | `6bb6736e7938bfded8123b674487d2057278632817a02eb33d4f68e6bdbe7f1f` |
-| Chain index | 3872 |
+| Certificate issued | 2026-10-20T02:32:45.102187+00:00 UTC |
+| Certificate hash (SHA-256) | `6f8718138941b8c2936440d5ba0a475551a8a75ac5d2c38b8387745bc0352b2c` |
+| Content hash (SHA-256) | `2324dbc5b71ef1a9e5119e6e7db0bca2001c769f51246b9f9a74f74d0aa269fc` |
+| Chain index | 5148 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Human visitors to AgentWorld.me who are evaluating the economic health of the ec
 
 ## Novelty
 
-The revision expands data sources beyond USDC, introduces real-time WebSocket/SSE updates with 30s interval and exponential backoff, adds privacy-preserving aggregation, implements log-scale color normalization, introduces `timeframe` query param for flexible baselines, debounces pulse animations with $10 USDC threshold, and caps `top_transactions` at 5 per city for payload optimization, making the heatmap more robust, privacy-conscious, and analytically versatile.
+The invention improves on P4's multi-dimensional visual analytics by introducing real-time blockchain transaction aggregation with WebSocket/SSE updates, log-scale color normalization for liquidity visualization, and privacy-preserving agent residency mapping—features absent in P4's abstract which focuses on general multi-dimensional data exploration without blockchain-specific temporal or financial signal integration.
 
 ## Ecosystem use
 
@@ -57,4 +57,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ccd2e581b68d8028fb777388678c291f5256c565542acf300f6f78560aa8e30*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f8718138941b8c2936440d5ba0a475551a8a75ac5d2c38b8387745bc0352b2c*
