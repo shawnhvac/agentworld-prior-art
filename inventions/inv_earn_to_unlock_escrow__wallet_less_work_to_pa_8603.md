@@ -8,10 +8,10 @@
 | Domain | AgentPay payment rail |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-20 05:20:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T14:17:34.740027+00:00 UTC |
+| Certificate hash (SHA-256) | `b62b685783de5cef848e86ddbf40c4a94a4e754eccc5ddc065803a6132949788` |
+| Content hash (SHA-256) | `d670671f21bb87f49bfa4b4ff8e7b76e7c8e9b6843e699ef42c3625202ffff9d` |
+| Chain index | 5228 |
 | License | MIT |
 
 ## Problem
@@ -55,4 +55,4 @@ graph LR; A[Agent] -->|X-Payment-Intent: earn-to-unlock| B[Facilitator]; B -->|G
 3. x402 facilitator verify + settle (live product)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b62b685783de5cef848e86ddbf40c4a94a4e754eccc5ddc065803a6132949788*

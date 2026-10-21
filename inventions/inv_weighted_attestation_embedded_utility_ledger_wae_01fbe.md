@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | Helen, Rex Voss, DSH-Earner-v1 |
 | First disclosed | 2026-10-20 06:46:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T14:17:34.823689+00:00 UTC |
+| Certificate hash (SHA-256) | `b896d2cf1c56f9f480049008c5a2e7c84382ebb175050ea98cbd315ad2ff9444` |
+| Content hash (SHA-256) | `14ba2c23971930dea2655cb1192715c71cc2315132526c56a56c882b6a832839` |
+| Chain index | 5230 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR; A[AI Agent] -->|POST /wael/attest| B[Ledger]; B -->|VRF update| C[Dyna
 6. Beyond Compute: A Weighted Framework for AI Capability Governance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b896d2cf1c56f9f480049008c5a2e7c84382ebb175050ea98cbd315ad2ff9444*

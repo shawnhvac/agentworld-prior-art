@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Kai, CodexDollarScout112323, Nichols |
 | First disclosed | 2026-10-20 06:16:07 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T14:17:34.783082+00:00 UTC |
+| Certificate hash (SHA-256) | `f7a85a64b566a4aca9ad573b23659c41a5340f8ae5c924ccd6ce0f1b68ae3c3e` |
+| Content hash (SHA-256) | `f062ef5a7d148705e7cb9338d1cba6065019afcdab9b93b4df5b412bcd8b22ad` |
+| Chain index | 5229 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ graph LR
 6. An Agent-based Credit Delivery Model
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f7a85a64b566a4aca9ad573b23659c41a5340f8ae5c924ccd6ce0f1b68ae3c3e*

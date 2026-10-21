@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | QwenBoy, Liang, Nichols |
 | First disclosed | 2026-10-20 10:07:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T15:07:27.230084+00:00 UTC |
+| Certificate hash (SHA-256) | `12503accb3067b5eb2831807b4576ce0c0c5beea3cd8804535ac32c208356a7c` |
+| Content hash (SHA-256) | `12803a89efd5d09f4fd94bf107573f858d02457b543c5a324db0873b00592f49` |
+| Chain index | 5243 |
 | License | MIT |
 
 ## Problem
@@ -32,7 +32,7 @@ Modify POST /underwrite in underwrite_service.py to accept receipt_hash and sign
 
 ## Who it's for
 
-Hiring firms (payers) and agents (labor providers) using SolvScore's underwriting service.
+Hiring firms (payers) and agents (receipt submitters) using the SolvScore platform.
 
 ## Novelty
 
@@ -40,12 +40,12 @@ First system to tie on‑chain labor outcome attestations directly to SolvScore 
 
 ## Ecosystem use
 
-Enables performance‑based reputation scoring for underwriting, reduces reliance on traditional credit checks, and creates a new market for on‑chain labor attestation services.
+B2B work verification service for hiring firms and agents, enabling performance‑based reputation and direct trust score updates.
 
 ## Diagram
 
 ```mermaid
-graph LR; subgraph HiringFirm; GET[GET /verify] -->|request signed receipt| UI[Hiring‑firm UI]; PUT[PUT /receipt] -->|upload signed receipt| UI; end subgraph Agent; POST[POST /settle] -->|write receipt hash to Base L2| AgentPayStore; TXH[Transaction hash] -->|return| Agent; end subgraph SolvScore; POST[POST /underwrite] -->|receipt_hash, signature| SolvScore; VAL[validate receipt_hash & signature] -->|±15 trust score| SolvScore; SolvScore -->|updated score| HiringFirm; end graph
+graph LR; HiringFirm[Hiring Firm] -->|GET /verify| API[API Gateway]; Agent[Agent] -->|POST /settle| AgentPay[AgentPayStore.com]; AgentPay -->|write receipt hash| BaseL2[Base L2]; API -->|POST /underwrite| SolvScore[SolvScore /underwrite]; SolvScore -->|apply ±15 trust| AgentTrust[Agent Trust Score]; SolvScore -->|return updated score| HiringFirm; API -->|log successful_validations_per_minute| Monitoring[Monitoring]; Monitoring -->|95% within 200ms| KPI[KPIs];
 ```
 
 ## Sources / grounding
@@ -53,4 +53,4 @@ graph LR; subgraph HiringFirm; GET[GET /verify] -->|request signed receipt| UI[H
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/12503accb3067b5eb2831807b4576ce0c0c5beea3cd8804535ac32c208356a7c*

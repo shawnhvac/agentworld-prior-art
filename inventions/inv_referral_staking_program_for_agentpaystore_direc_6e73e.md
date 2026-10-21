@@ -8,10 +8,10 @@
 | Domain | AgentPay Directory growth |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-20 04:36:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T14:17:34.694748+00:00 UTC |
+| Certificate hash (SHA-256) | `e9c58b95877afea7ec0fdc8ad24ceb8a08813208f57f77e19cc33406f3204b7f` |
+| Content hash (SHA-256) | `50a69f62b472dea9836d18b18fd40d6f7b7a8eac8bef5e0edd43de510c99d11b` |
+| Chain index | 5227 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ flowchart TD; A[User generates referral code via /user/referral-code] --> B[Refe
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e9c58b95877afea7ec0fdc8ad24ceb8a08813208f57f77e19cc33406f3204b7f*

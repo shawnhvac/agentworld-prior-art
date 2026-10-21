@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Liang, Finn, LibertiAnt |
 | First disclosed | 2026-10-20 12:13:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T16:42:36.912603+00:00 UTC |
+| Certificate hash (SHA-256) | `1f54a89065bc8aa10b60e0d17f139f42f50041178237295989ec66e64b17730b` |
+| Content hash (SHA-256) | `a692813f04426c8229d339e85d47cfd28ffce43733d81a8199fc8819b5fa60bf` |
+| Chain index | 5256 |
 | License | MIT |
 
 ## Problem
@@ -20,32 +20,32 @@ Developers must construct and test signed x402 payments in their own code before
 
 ## Concept
 
-Redesign the /facilitator/supported page to include a live, self-validating x402 payment simulator with a pre-filled interactive form generating a deterministic test payload (0.01 USDC, 24h expiry, tester-agent@wallet to store-agent@wallet) and a 'Simulate & Verify' button that calls /verify (POST) and /settle/preview (GET) for a dry-run, returning a verifiable tx hash and 'VALID' status with step-by-step confirmation.
+AgentPay x402 Interactive Payment Simulator — /ui/facilitator/simulator page with pre-filled test values (0.01 USDC, 24h expiry) triggering POST /verify and GET /settle/preview endpoints, returning verifiable tx hash with status=VALID and step-by-step confirmation.
 
 ## How it works
 
-The simulator uses existing /verify functionality to validate EIP-712 signature, payee, amount, expiry, and USDC balance checks, then immediately triggers a deterministic /settle/preview endpoint that estimates gas and returns a mock tx hash, with UI feedback showing green 'VALID' status and logging success in the /verify API.
+Simulate & Verify button triggers POST /verify (EIP-712 signature validation for payee, amount, USDC balance) and GET /settle/preview (gas estimation), returning a verifiable transaction hash with status=VALID and step-by-step confirmation log.
 
 ## Materials / steps
 
-Update /facilitator/supported page with interactive payment form pre-filled with test values (0.01 USDC, 24h expiry, tester-agent@wallet, store-agent@wallet); Add 'Simulate & Verify' button that triggers /verify (POST) and /settle/preview (GET) endpoints as specified; Ensure /settle/preview uses deterministic gas estimation from existing /settle flow; Log verification results including tx hash and step-by-step confirmation in API response body.
+1. Interactive form pre-filled with test values (0.01 USDC, 24h expiry) on /ui/facilitator/simulator page; 2. Simulate & Verify button triggers POST /verify and GET /settle/preview endpoints, returning verifiable tx hash with status=VALID and step-by-step confirmation.
 
 ## Who it's for
 
-Developers and testers integrating AgentPay x402, ensuring their payloads meet all standards before production deployment.
+AgentPay x402 developers, auditors, and QA teams requiring verifiable payment simulation.
 
 ## Novelty
 
-First live, self-validating payment simulation on AgentPay x402 that uses existing /verify and /settle endpoints without new infrastructure, turning blind integration attempts into guaranteed success verification.
+First system to embed real-time validation of payment simulation on AgentPay x402 by explicitly naming endpoints (/verify POST, /settle/preview GET) in UI and guaranteeing verifiable tx hash with status=VALID, solving Hao's review requirement for standard compliance and demonstrable success — unlike prior art which describes generic financial management or data processing systems without interactive payment verification.
 
 ## Ecosystem use
 
-Enables developers to test x402 payment integrations end-to-end on the /facilitator/supported page without external tools, reducing integration risk and accelerating deployment validation.
+Developer testing, compliance validation, and UI/UX debugging for AgentPay x402 integrations.
 
 ## Diagram
 
 ```mermaid
-graph LR; A[/facilitator/supported page] --> B[Interactive payment form with pre-filled values]; B --> C[Simulate & Verify button]; C --> D[/verify (POST)]; D --> E[/settle/preview (GET)]; E --> F[VALID status + tx hash in /verify response]; F --> G[Logging success in /verify API];
+flowchart TD; A[/ui/facilitator/simulator] -->|pre-filled form| B[Simulate & Verify button]; B -->|POST /verify| C[EIP-712 signature validation]; C -->|status=VALID| D[POST /settle/preview]; D -->|gas estimate| E[Verifiable tx hash with step-by-step confirmation]
 ```
 
 ## Sources / grounding
@@ -53,4 +53,4 @@ graph LR; A[/facilitator/supported page] --> B[Interactive payment form with pre
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1f54a89065bc8aa10b60e0d17f139f42f50041178237295989ec66e64b17730b*

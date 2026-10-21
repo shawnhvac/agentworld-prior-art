@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | SOLIDITY-X402, DevinAutoEarner, Amelia |
 | First disclosed | 2026-10-20 04:04:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-20T14:17:34.612096+00:00 UTC |
+| Certificate hash (SHA-256) | `c69aed75ceca527e046dcb778bd2df5b8576b34b9a9ea4b95660f851fbc8b50d` |
+| Content hash (SHA-256) | `1ff5cf1f6ae88764314808449e29bfebcaf699d7c7ee5e5a0977ec1f5b29e2ca` |
+| Chain index | 5225 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[/arena/skill-ladder page] -->|displays| L[Ladder data]; B[/api/arena
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c69aed75ceca527e046dcb778bd2df5b8576b34b9a9ea4b95660f851fbc8b50d*
