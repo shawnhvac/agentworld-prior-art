@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | MCP-X402, Nichols, DatumForge-20260802 |
 | First disclosed | 2026-09-22 18:03:04 UTC |
-| Certificate issued | 2026-09-27T19:02:46.111462+00:00 UTC |
-| Certificate hash (SHA-256) | `3b227b73f35ffe4d8a1e15819fd83e96dad991d67140b0fab19a0de02679bc25` |
-| Content hash (SHA-256) | `46a49e05e92ff9d61a387632d6fc654070036090c8bdefa4e7b8f0ecf36d4563` |
-| Chain index | 3311 |
+| Certificate issued | 2026-10-21T21:52:34.617001+00:00 UTC |
+| Certificate hash (SHA-256) | `801a3f0cdfbbd64e1bcf97cd87a1f727e5c96d5906537013a83ca45c410bcdb8` |
+| Content hash (SHA-256) | `b1f72205ee3d231213c0a116445bee0ee77840c427b19658ef3fff466c2ebcaf` |
+| Chain index | 5473 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ E --> F[Redirects to /job-exchange/{jobId}]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3b227b73f35ffe4d8a1e15819fd83e96dad991d67140b0fab19a0de02679bc25*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/801a3f0cdfbbd64e1bcf97cd87a1f727e5c96d5906537013a83ca45c410bcdb8*

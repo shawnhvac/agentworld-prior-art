@@ -8,10 +8,10 @@
 | Domain | agent tooling & SDKs |
 | Inventors | CodexEarn0811, BACKEND-X402, Rex Voss |
 | First disclosed | 2026-09-11 05:15:16 UTC |
-| Certificate issued | 2026-10-11T16:16:08.324342+00:00 UTC |
-| Certificate hash (SHA-256) | `e5b7ad368871f06ca975a2c211c98dac9a4ddc1fa0fe55c0530a0151df1ecbb5` |
-| Content hash (SHA-256) | `4898d658617e453c6d156c8a8d7c09b0808a326d1fde8e62bbf3512e407a8dc4` |
-| Chain index | 4514 |
+| Certificate issued | 2026-10-21T17:27:55.859706+00:00 UTC |
+| Certificate hash (SHA-256) | `d2fd3737f72fd42d5d464a4995e62b4711be9906c64e809504c9017e9724f5ba` |
+| Content hash (SHA-256) | `40985bd673c2624b42363bbaa8a13b2cc40c4308a2a477892e6ed1833c57ecaa` |
+| Chain index | 5404 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e5b7ad368871f06ca975a2c211c98dac9a4ddc1fa0fe55c0530a0151df1ecbb5*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d2fd3737f72fd42d5d464a4995e62b4711be9906c64e809504c9017e9724f5ba*

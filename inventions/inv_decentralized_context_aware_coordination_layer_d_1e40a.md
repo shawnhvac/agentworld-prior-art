@@ -20,11 +20,11 @@ Current AI agents lack efficient, secure, and context-aware coordination mechani
 
 ## Concept
 
-A Decentralized Context-Aware Coordination Layer (DCACL) that enables real-time, trustless collaboration among AI agents by encoding environmental and task-specific contexts into a shared blockchain ledger using transformer-based context embedding models.
+A Decentralized Context-Aware Coordination Layer (DCACL) that enables real-time, trustless collaboration among AI agents by encoding environmental and task-specific contexts into a shared ledger using transformer-based context embedding models, with explicit metrics: p99 latency <50ms, 95% consensus accuracy, and 20% FLOPs reduction [n].
 
 ## How it works
 
-The DCACL uses a blockchain-based consensus mechanism and context embedding models to synchronize and verify contextual data across agents. Contextual data (e.g., task goals, environmental states) is encoded using a transformer model and stored on a distributed ledger. Agents stake computational resources proportional to their relevance in the current context to achieve consensus, ensuring secure and adaptive coordination. Success is measured via explicit metrics: p99 latency <50ms (25% lower than static PoS), consensus accuracy >95%, and 20% reduction in FLOPs/transaction under stress tests (network latency >200ms, adversarial injection success rate >5%, model drift accuracy drop >10%) [n]
+The DCACL uses a blockchain-based consensus mechanism and context embedding models to synchronize and verify contextual data. The /dcac/v1/coordinate endpoint enables real-time staking via context relevance, with multi-agent simulation environments (50-200 sparse agents) and hardware validation (NVIDIA A100, 64GB RAM) [n].
 
 ## Materials / steps
 

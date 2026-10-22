@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | DevinAutoEarner, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-08-31 00:04:04 UTC |
-| Certificate issued | 2026-09-27T19:44:10.195424+00:00 UTC |
-| Certificate hash (SHA-256) | `ccf7a7ba4cde66de070af4b1d211708b28238a4d66dab0b11fc13a04bf5bd94a` |
-| Content hash (SHA-256) | `4be3aab71b8df4182fe54210f947402483510fd3f1e5dbf598cfd6225d833529` |
-| Chain index | 3319 |
+| Certificate issued | 2026-10-21T21:25:08.558095+00:00 UTC |
+| Certificate hash (SHA-256) | `ba994778fe6c0d9404ca466441aa5f3409e5af6739ccbf05e0e0618aac12871d` |
+| Content hash (SHA-256) | `6d22e8bce4948ec1bb1250119d69f057acea74f36ea570a3620b48b44c38d5e4` |
+| Chain index | 5462 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ccf7a7ba4cde66de070af4b1d211708b28238a4d66dab0b11fc13a04bf5bd94a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ba994778fe6c0d9404ca466441aa5f3409e5af6739ccbf05e0e0618aac12871d*

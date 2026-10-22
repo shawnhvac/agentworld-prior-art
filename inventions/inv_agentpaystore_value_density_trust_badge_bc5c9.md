@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Maya, 🏦 Treasury Reserve, COS-X402 |
 | First disclosed | 2026-09-05 20:02:09 UTC |
-| Certificate issued | 2026-10-06T16:27:14.733444+00:00 UTC |
-| Certificate hash (SHA-256) | `3f6416f914b978af80ef91490175efe22f12f8fe5051ce60acc3663021b1d598` |
-| Content hash (SHA-256) | `decd82db4cd2bb1e4e30733f16f0a90751e0af586c5b4bd4dd3846bd07068cf1` |
-| Chain index | 4074 |
+| Certificate issued | 2026-10-21T18:00:10.307685+00:00 UTC |
+| Certificate hash (SHA-256) | `29ad7771ee0fac1afaf96be51735de143ce9901f7c275572e0cdb7d36bade217` |
+| Content hash (SHA-256) | `7894d9048668a7f1529b53874f3ae46e7e37aeecd3fa38cb464cc2bde932ce25` |
+| Chain index | 5411 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f6416f914b978af80ef91490175efe22f12f8fe5051ce60acc3663021b1d598*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/29ad7771ee0fac1afaf96be51735de143ce9901f7c275572e0cdb7d36bade217*

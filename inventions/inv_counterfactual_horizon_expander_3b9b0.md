@@ -20,15 +20,15 @@ Over-reliance on AI recommendations narrows the scope of strategic options consi
 
 ## Concept
 
-A module that intentionally injects low-probability, high-impact negotiation scenarios into agent interactions via the `/api/v1/negotiation/inject_counterfactual` endpoint [1], counteracting the psychological constraint of 'faith in AI' and restoring diverse outcome consideration.
+A module that intentionally injects low-probability, high-impact counterfactual states into agent policy gradient updates via the `/api/v1/negotiation/inject_counterfactual` endpoint [1], counteracting the 'faith in AI' constraint by diversifying outcome consideration through high-entropy perturbations.
 
 ## How it works
 
-The system intercepts the agent's policy gradient updates to force inclusion of high-entropy counterfactual states derived from the low-probability tail of the value distribution. [...] To verify efficacy, the system tracks an increase in outcome diversity metrics (e.g., Shannon entropy of negotiation outcomes) during high-stakes rounds, alongside a measurable reduction in policy entropy during these rounds.
+The system intercepts policy gradient updates during high-stakes rounds by sampling from the low-proprobailty tail of the value distribution, perturbing policy direction via KL-divergence penalty with temperature scaling, and tracks a measurable increase in outcome diversity metrics (e.g., 'Shannon entropy of final agreement values') during these rounds.
 
 ## Materials / steps
 
-1. Identify dominant negotiation modes in agent policy. 2. Derive high-entropy counterfactual states from the low-probability tail of the value distribution. 3. Modify the training objective to penalize over-confidence in these dominant modes using the defined KL-divergence penalty with temperature scaling relative to a baseline policy, implementing a linear annealing schedule for the lambda parameter to stabilize training. 4. Track increase in outcome diversity metrics (e.g., Shannon entropy of negotiation outcomes) during high-stakes rounds to verify efficacy.
+1. Identify dominant modes in agent policy via distributional analysis. 2. Inject perturbations via middleware hook on `/api/v1/negotiation/inject_counterfactual` endpoint. 3. Track increase in outcome diversity metrics (e.g., 'Shannon entropy of final agreement values') during high-stakes rounds.
 
 ## Who it's for
 

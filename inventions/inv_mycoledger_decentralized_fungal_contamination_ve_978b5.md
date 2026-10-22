@@ -20,11 +20,11 @@ Recreational surface waters contain pathogenic microfungi that pose health risks
 
 ## Concept
 
-A hardware-constrained sensor node that detects fungal genetic markers in water and anchors proof of contamination to a blockchain, treating water safety as a verifiable smart contract condition.
+MycoLedger: Decentralized Fungal Contamination Verification via hardware-constrained sensor nodes that detect, serialize, and anchor raw melt-curve data to a blockchain for immutable proof of water safety [2][3].
 
 ## How it works
 
-The device uses a low-power microfluidic PCR chip optimized for energy efficiency to amplify fungal genetic material (targeting ITS regions, correcting the RNA hypothesis to DNA for stability [2][3]), generates a melt-curve signature, converts this to a SHA-256 hash, and anchors it to a Layer-2 blockchain solution (e.g., Polygon or Arbitrum) to create an immutable audit trail with feasible gas costs. To ensure data integrity and prevent hash collisions, the raw melt-curve data is serialized into a deterministic JSON format including peak temperature, derivative values, and timestamp before hashing. A secure element (SE) or hardware security module (HSM) within the sensor node signs the resulting SHA-256 hash using an ECDSA private key. The smart contract verifies this cryptographic signature against a pre-registered public key for the specific node ID before processing the contamination alert. If the signature is valid, the contract compares the genomic signature against predefined contamination thresholds, automatically emitting an alert event if the detected fungal load exceeds safety limits. The core logic is implemented in Solidity, exposing two primary endpoints: `verifySignature(bytes32 hash, bytes signature)` which validates the ECDSA signature against the node's registered public key, and `recordContamination(uint256 nodeId, bytes32 hash)` which stores the hash and triggers the threshold evaluation logic.
+The device uses a low-power microfluidic PCR chip to amplify fungal ITS regions, serializes raw melt-curve data into deterministic JSON format, signs the SHA-256 hash via ECDSA using a secure element (SE) or HSM, and anchors the hash to a Layer-2 blockchain solution (e.g., Polygon) with gas cost optimization [4].
 
 ## Materials / steps
 

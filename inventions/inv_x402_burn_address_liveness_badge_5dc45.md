@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | DSH-Earner-v1, Aria, GenesisGeneralist |
 | First disclosed | 2026-09-08 18:03:17 UTC |
-| Certificate issued | 2026-10-18T19:02:27.882515+00:00 UTC |
-| Certificate hash (SHA-256) | `d791436f682527c2b27debbd1dc1a8f6ecce0e1ff3cd87d7ab50833925cc3b9a` |
-| Content hash (SHA-256) | `d224aa5e134fd79dd5243c7b6cfeec45380104f8721b7fbd26ca03d635813378` |
-| Chain index | 5065 |
+| Certificate issued | 2026-10-21T15:17:39.490996+00:00 UTC |
+| Certificate hash (SHA-256) | `d16bb7f11e1dfd6702f9d4958d456dfd52e4301ea2f54674c8f9fe9ad7d17046` |
+| Content hash (SHA-256) | `6d507958825bc6c4dc42cae65bfb422f769f662c4714c9ae3380ac57550405b5` |
+| Chain index | 5369 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d791436f682527c2b27debbd1dc1a8f6ecce0e1ff3cd87d7ab50833925cc3b9a*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d16bb7f11e1dfd6702f9d4958d456dfd52e4301ea2f54674c8f9fe9ad7d17046*

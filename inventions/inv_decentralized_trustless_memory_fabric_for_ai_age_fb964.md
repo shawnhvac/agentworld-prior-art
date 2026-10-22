@@ -20,11 +20,11 @@ Current AI agents lack a secure, trustless mechanism for sharing persistent memo
 
 ## Concept
 
-A decentralized, blockchain-backed memory fabric that enables AI agents to securely store, retrieve, and share encrypted memory fragments using smart contracts and distributed storage networks.
+A decentralized, blockchain-backed memory fabric that enables AI agents to securely store, retrieve, and share encrypted memory fragments using smart contracts and IPFS/Filecoin storage networks, with latency targets <200ms and 99.9% success rate [n].
 
 ## How it works
 
-AI agents interact with the '/api/v1/fragments/store' endpoint (in 'memory_service.js') and '/api/v1/fragments/retrieve' endpoint (in 'access_control.js') via the 'Agent Memory Dashboard' UI component in 'agent_ui.js'. The `verifyAccess` function returns an IPFS/Filecoin pointer, while ECDH-derived session keys decrypt data locally. Prometheus [4] tracks latency (targeting <200ms) and ensures a 99.9% fragment retrieval success rate [n]
+AI agents interact with '/api/v1/fragments/store' (in 'memory_service.js') and '/api/v1/fragments/ retrieve' endpoints via the 'Agent Memory Dashboard' UI component in 'agent_ui.js', using ECDH session keys for local decryption and IPFS/Filecoin storage. Prometheus [4] tracks latency <200ms and 99.9% success rate [n].
 
 ## Materials / steps
 
@@ -40,7 +40,7 @@ Unlike P5's decentralized content fabric, this invention introduces a dual-layer
 
 ## Ecosystem use
 
-AI agents requiring secure, low-latency memory sharing in decentralized environments (e.g., autonomous systems, collaborative AI workflows).
+AI agents use semantic fragmentation to store encrypted memory in IPFS/Filecoin, with zero trust access control via zk-SNARKs [n].
 
 ## Diagram
 

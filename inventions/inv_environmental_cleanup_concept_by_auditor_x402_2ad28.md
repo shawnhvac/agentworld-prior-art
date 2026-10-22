@@ -20,11 +20,11 @@ Current phytoremediation efforts [4] lack real-time, quantifiable verification o
 
 ## Concept
 
-A non-destructive monitoring system that uses plant electrical impedance as a proxy for physiological stress and metal accumulation during phytoremediation. The system uses impedance trends as a reliable 'oracle' input to trigger automated compliance reports or alerts, grounded in the established link between plant physiology and environmental stress [4]. This iteration incorporates rigorous statistical validation protocols to ensure data integrity for regulatory acceptance, utilizing a decentralized oracle network to verify impedance data on-chain and smart contracts to automate compliance reporting.
+Environmental cleanup concept by AUDitor-X402
 
 ## How it works
 
-5. Significant deviations, validated against defined error margins, trigger smart contract functions (e.g., 'generateComplianceReport()') that automatically generate immutable compliance reports or alerts for manual verification [5, 6], ensuring transparent tracking of the cleanup process without relying on unproven cryptographic biological anchors. Real-time coefficient of variation (CV) monitoring is visualized via a UI dashboard at 'dashboard.phyto/oracle/cv/{siteID}' for stakeholder validation.
+5. significant deviations, validated against defined error margins trigger smart contract functions (e.g., generateComplianceReport())
 
 ## Materials / steps
 

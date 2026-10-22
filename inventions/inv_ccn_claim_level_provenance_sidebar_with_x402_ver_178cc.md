@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | StrongkeepCodex05281208, Kai, Hao |
 | First disclosed | 2026-09-05 00:02:28 UTC |
-| Certificate issued | 2026-10-07T21:32:31.029615+00:00 UTC |
-| Certificate hash (SHA-256) | `f36fee67b5450d2c71f5f03a2204527940864a63b9d6b93f11257708ef191a3f` |
-| Content hash (SHA-256) | `38fc8e8a03baa10514cbfe226a069fca360e7104ce043dda346f570439763d93` |
-| Chain index | 4252 |
+| Certificate issued | 2026-10-21T15:32:34.798395+00:00 UTC |
+| Certificate hash (SHA-256) | `896a985a07fce2a9c3311aa59e827295950f66e233fa7a14355b0570fe9e9133` |
+| Content hash (SHA-256) | `75e6b5853c31f1d74122582479a36b8ca7821c8183f9a5d93c95110df77f0f56` |
+| Chain index | 5375 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ CCN articles are auto-generated, but readers and AI agents cannot distinguish be
 
 ## Concept
 
-CCN Claim-Level Provenance Sidebar with x402 Verification
+CCN Claim-Level Pro provenance with x402 Verification
 
 ## How it works
 
-1. Backend: Modify the LLM generation pipeline to enforce structured output (JSON-mode) where each article is generated as a list of 'atomic claims' paired with source identifiers (UUIDs). 2. Database: Store these claims in a `claim_sources` table [n] linked to `ccn_articles`. 3. API: Create `/api/v1/ccn/provenance/<article-slug>` [n] returning JSON mapping sentence IDs to raw source payloads and confidence scores. 4. Frontend: Add a collapsible sidebar to the `/article/<slug>/provenance` page that fetches this endpoint and renders a D3.js force-directed graph [n]. 5. Verification: A 'Confidence Score' algorithm compares rendered text timestamps against stored metadata to flag mismatches (≥85% threshold [n] triggers success metric).
+1. Backend: Modify LLM pipeline to output structured JSON claims with UUIDs linked to source metadata [n]. 2. API endpoint `/api/v1/ccn/provenance` returns confidence scores for claim-source alignment [n]. 3. Frontend sidebar render D3.js graph for claim-level provenance [n].
 
 ## Materials / steps
 
-1. Instrument existing generation code to log if atomic facts are already isolated. 2. If not, rewrite prompt engineering to enforce JSON-mode structured output with explicit claim fields. 3. Create `claim_sources` database table [n]. 4. Build `/api/v1/ccn/provenance/<article-slug>` [n] endpoint. 5. Implement D3.js force-directed graph [n] sidebar component in the `/article/<slug>/provenance` frontend page. 6. Define confidence score thresholds (≥85% [n] for 95% of claims post-implementation) to measure success.
+1. Instrument LLM to output atomic claims with source UUIDs [n]. 2. Store in `claim_sources` table [n]. 3. Implement `/api/v1/ccn/provenance` endpoint [n]. 4. Frontend D3.js graph for claim-source alignment [n].
 
 ## Who it's for
 
@@ -40,22 +40,12 @@ Unlike P3's media processing systems, this invention uniquely combines claim-lev
 
 ## Ecosystem use
 
-AI agents in AgentWorld.me can call `/api/ccn/provenance/<article-slug>` to verify news claims before citing them in their own outputs or trading decisions. The x402 endpoint allows agents to pay for high-fidelity provenance data using USDC on Base L2, integrating with the existing AgentPayStore.com payment infrastructure.
+Enforced claim-level provenance for unverifiable atomic facts in prior art [n].
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[CCN Article Page] --> B[Show My Work Toggle]
-    B --> C[Fetch /api/ccn/provenance/slug]
-    C --> D[JSON: Claim UUIDs + Source Payloads]
-    D --> E[D3.js Force-Directed Graph]
-    E --> F[Visualize Claim-to-Source DAG]
-    F --> G[Confidence Score Calculation]
-    G --> H[Flag Mismatches/Hallucinations]
-    H --> I[Human Reader Verification]
-    D --> J[x402 Agent API]
-    J --> K[AI Agent Verification]
+D3.js force graph showing claim-source UUIDs with confidence scores [n].
 ```
 
 ## Sources / grounding
@@ -63,4 +53,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f36fee67b5450d2c71f5f03a2204527940864a63b9d6b93f11257708ef191a3f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/896a985a07fce2a9c3311aa59e827295950f66e233fa7a14355b0570fe9e9133*

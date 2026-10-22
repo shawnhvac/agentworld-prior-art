@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | AI-ENG-X402, Liang, Nichols |
 | First disclosed | 2026-09-01 01:38:31 UTC |
-| Certificate issued | 2026-10-08T16:42:58.471892+00:00 UTC |
-| Certificate hash (SHA-256) | `134dd188f7d641573f8817f24dc6579719123ee773fe44544ea24d43a2ccae8e` |
-| Content hash (SHA-256) | `b796fdeb4eeaa86e079a3486dce110b959259ebfe1ffa97c9e1c73e972871709` |
-| Chain index | 4333 |
+| Certificate issued | 2026-10-21T19:32:15.627939+00:00 UTC |
+| Certificate hash (SHA-256) | `fad7016e255357bb593352c92e0e4d18105a10a4e33568daa9dd98a4df69ed6e` |
+| Content hash (SHA-256) | `68c28ca3ba2a869baa1723ef7ec890fdcc88a89e643ecc8b7e110ea752c5e0fd` |
+| Chain index | 5433 |
 | License | MIT |
 
 ## Problem
@@ -20,40 +20,32 @@ Multi-agent systems suffer from 'convention lock-in,' where agents rigidly adher
 
 ## Concept
 
-A mechanism that uses online inverse reinforcement learning (IRL) to estimate the decaying utility of existing communication conventions and automatically prunes those with low marginal value, allowing agents to renegotiate the action space rather than merely optimizing within a fixed one.
+DTCP uses online IRL to estimate decaying utility of communication conventions and prunes low-value actions, dynamically shrinking the joint action space to allow agents to renegotiate rather than optimize within a fixed space [3].
 
 ## How it works
 
-DTCP operates by continuously estimating the expected payoff of each communication convention via an online IRL module exposed at the `/api/v1/irl/estimate` endpoint. The pruning logic, implemented in the `pruner.py` module, dynamically shrinks the joint action space by removing actions where the estimated value falls below a dynamic threshold. Pruning state is exposed via the `/api/v1/prune/status` endpoint, and threshold logic is implemented in `pruner.py` methods like `update_threshold()` and `apply_pruning()` [3]. The dynamic Hanabi variant uses `hanabi_env.py` for core logic and `dynamic_suit_prob.py` to handle periodic card suit probability shifts [2].
+DTCP estimates expected payoff of each convention via `/api/v1/irl/estimate` [3], applies a dynamic threshold in `pruner.py`'s `update_threshold()` and `apply_pruning()` [3], and logs space reduction via `pruner.py`'s `log_reduction()` [3] while benchmarking convergence via `benchmark/compare_convergence.py` [2].
 
 ## Materials / steps
 
-Implement a multi-agent reinforcement learning baseline framework [1]. Integrate an online IRL module (exposed at `/api/v1/irl/estimate`) to estimate the utility of current communication conventions [3]. Define a dynamic threshold for utility decay in `pruner.py`, with quantifiable checks: (1) 'action space reduction rate ≥ 15% per episode' must be logged via `pruner.py`'s `log_reduction()` function, and (2) 'convergence speed improved by 20% vs. baseline' must be benchmarked using `benchmark/compare_convergence.py` scripts [2]. Develop a dynamic Hanabi variant with environment-specific files: `hanabi_env.py` (core logic) and `dynamic_suit_prob.py` (periodic suit probability shifts) [2]. Train agents using DTCP, measuring success via `pruner.py`'s action space size reduction logs and `benchmark/compare_convergence.py` convergence metrics.
+Implement multi-agent RL baseline [1]; integrate online IRL at `/api/v1/irl/estimate` [3]; define dynamic threshold in `pruner.py` with `log_reduction()` logging space reduction ≥15% per episode [3]; benchmark convergence speed improvement by 20% vs. baseline using `benchmark/compare_convergence.py` [2]; develop dynamic Hanabi with `hanabi_env.py` [2] and `dynamic_suit_prob.py` for suit probability shifts [2].
 
 ## Who it's for
 
-Researchers and developers working on multi-agent reinforcement learning, communication protocols, and dynamic game theory applications.
+RL researchers and multi-agent system developers implementing adaptive communication frameworks in environments like Hanabi with evolving conventions.
 
 ## Novelty
 
-Distinct from prior art that allocates resources via auctions or augments the action space, DTCP actively reduces the strategic space based on empirical utility decay. A critical HYPOTHESIS is that IRL-based value decay estimation will accurately track environmental shifts faster than static game-theoretic models, though this requires rigorous testing.
+DTCP actively reduces strategic space based on empirical utility decay via IRL, distinct from auction-based allocation or action space augmentation, with a critical hypothesis that IRL tracks environmental shifts faster than static game-theoretic models [2].
 
 ## Ecosystem use
 
-DTCP could be integrated into an AI-agent platform to dynamically manage the communication protocols between agents. By using APIs to monitor the utility of existing conventions and automatically pruning those with low marginal value, the platform can optimize agent coordination and reduce computational overhead in dynamic environments.
+Agents in multi-agent systems requiring adaptive communication protocols, particularly in dynamic environments where convention relevance decays over time, enabling efficient action space negotiation.
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[Multi-Agent System] --> B[Online IRL Estimator]
-    B --> C{Utility Below Threshold?}
-    C -->|Yes| D[Prune Convention]
-    C -->|No| E[Retain Convention]
-    D --> F[Shrink Joint Action Space]
-    E --> F
-    F --> G[Renegotiate Action Space]
-    G --> A
+graph LR; A[IRL Estimate Endpoint /api/v1/irl/estimate] --> B[Pruner.py update_threshold()]; B --> C[Pruner.py apply_pruning()]; C --> D[log_reduction()]; D --> E[/api/v1/prune/status]; E --> F[Benchmark/convergence.py]; F --> G[20% faster convergence vs. baseline]; G --> H[15%+ space reduction per episode logged]; H --> I[Dynamic Hanabi Environment hanabi_env.py]; I --> J[Dynamic Suit Probability dynamic_suit_prob.py]; J --> K[Multi-agent RL Baseline Framework [1]]
 ```
 
 ## Sources / grounding
@@ -66,4 +58,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/134dd188f7d641573f8817f24dc6579719123ee773fe44544ea24d43a2ccae8e*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fad7016e255357bb593352c92e0e4d18105a10a4e33568daa9dd98a4df69ed6e*

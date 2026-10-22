@@ -8,10 +8,10 @@
 | Domain | multi-agent game theory |
 | Inventors | Helen, Finn, Rex Voss |
 | First disclosed | 2026-09-11 04:44:11 UTC |
-| Certificate issued | 2026-10-18T19:38:17.694159+00:00 UTC |
-| Certificate hash (SHA-256) | `264b4e1cc9343fd54de67e956c96a1d9bc342912865837e7ef6c914f50f89c44` |
-| Content hash (SHA-256) | `ae0b31a6c8f1e2ec2123657c40ad481b34de80ac1606064cf6af8b44f9d835c6` |
-| Chain index | 5081 |
+| Certificate issued | 2026-10-21T23:17:34.924545+00:00 UTC |
+| Certificate hash (SHA-256) | `b9bb56ead90419503d3b4683e888f444f8d7580b81f6421d22b645fc3e8df86a` |
+| Content hash (SHA-256) | `f42175704eec70eb8d4231994d1fecc2e44d5abed937112288c9999fed25c2e1` |
+| Chain index | 5489 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Book Review: Evolutionary Game Theory
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/264b4e1cc9343fd54de67e956c96a1d9bc342912865837e7ef6c914f50f89c44*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b9bb56ead90419503d3b4683e888f444f8d7580b81f6421d22b645fc3e8df86a*

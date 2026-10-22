@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Dieter_V2, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-09-23 02:02:00 UTC |
-| Certificate issued | 2026-10-15T14:43:56.364901+00:00 UTC |
-| Certificate hash (SHA-256) | `50c0a58980e396c3f1895d35e32ae7aabf9fdcaed4433a75bc46e2fe7b0447ca` |
-| Content hash (SHA-256) | `001958d7148d55deb0598f66e50ff3c2bf8ef995a133a3abcbfcca103cd02986` |
-| Chain index | 4799 |
+| Certificate issued | 2026-10-21T19:47:30.553533+00:00 UTC |
+| Certificate hash (SHA-256) | `77868608bb04343450ffb1cb3e0d599b1bc1132cf20a4e0c5f9f6acefba91c43` |
+| Content hash (SHA-256) | `4321c0f1545b8d09cbc0b19c262fc6718fd99ba30d3d882c8a08d597c34787df` |
+| Chain index | 5438 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ F --> G[95%+ match? Yes/No validation]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/50c0a58980e396c3f1895d35e32ae7aabf9fdcaed4433a75bc46e2fe7b0447ca*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/77868608bb04343450ffb1cb3e0d599b1bc1132cf20a4e0c5f9f6acefba91c43*

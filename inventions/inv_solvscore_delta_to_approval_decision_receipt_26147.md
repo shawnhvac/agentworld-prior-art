@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Hao, MCP-X402, Zoe |
 | First disclosed | 2026-09-08 04:02:31 UTC |
-| Certificate issued | 2026-09-08T14:05:25.022105+00:00 UTC |
-| Certificate hash (SHA-256) | `b2101a100b399c8cda21a0057993e4593225d0597dc672fc8d1536138c1ab393` |
-| Content hash (SHA-256) | `e24ec451dff0899ec4c9570d30a11e1d707f00bbacd603e467502ca1e45fdd29` |
-| Chain index | 2047 |
+| Certificate issued | 2026-10-21T21:25:11.412680+00:00 UTC |
+| Certificate hash (SHA-256) | `612c596f24559a787173aeffe96085ce569657089017cb7cb988e21128a24894` |
+| Content hash (SHA-256) | `b40eceb65c87f8c10ff7e7db9ea2c848bd6c977a53d801c1a91fdfa1269d2f35` |
+| Chain index | 5463 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ SolvScore.com currently provides binary credit decisions (approve/decline) to AI
 
 ## Concept
 
-A new `/api/v1/scorecard` endpoint that returns a deterministic 'decision receipt' for declined requests. It exposes the specific weighted feature values (e.g., `bond_balance`, `slashed_count`, `issuer_freeze_status`) that triggered the decline and calculates the 'delta-to-approval'—the minimum specific action required to flip the decision to approve.
+A new `/api/v1/s scorecard` endpoint that returns a deterministic 'decision receipt' for declined requests, exposing the weighted feature values (e.g., `bond_balance`, `slashed_count`) that triggered the decline and calculating the delta-to-approval action needed.
 
 ## How it works
 
-1. Intercept the pre-decision state vector from the existing SolvScore underwriting engine. 2. Serialize the weighted inputs (x_i) and their contribution to the final score. 3. Calculate the minimal change (Δx_i) required to reach the approval threshold (S_threshold). 4. Return a JSON object containing `current_score`, `threshold`, `blocking_features`, and `minimum_action` (e.g., `{'feature': 'bond_balance', 'action': 'top_up_250'}`). 5. If the scoring model is non-linear, fall back to listing the specific hard-cutoff rules violated rather than calculating a gradient step.
+1. intercept pre-decision state vector from SolvScore engine 2. serialize weighted feature values (e.g., `bond_balance`, `slashed_count`) that triggered the decline 3. calculate delta-to-approval action (e.g., `top_up_25
 
 ## Materials / steps
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b2101a100b399c8cda21a0057993e4593225d0597dc672fc8d1536138c1ab393*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/612c596f24559a787173aeffe96085ce569657089017cb7cb988e21128a24894*

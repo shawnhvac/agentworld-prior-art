@@ -20,11 +20,11 @@ Current reputation portability frameworks [5, 6] rely on static historical aggre
 
 ## Concept
 
-The CRE Index augments static reputation scores [4] with a real-time metric of prediction divergence. It calculates Shannon entropy over an agent’s predicted outcome distribution to penalize low-entropy (over-confident) predictions, thereby incentivizing exploratory behavior and broader future consideration as suggested by [2]. The success of this mechanism is quantitatively validated by the Entropy-Confidence Alignment Score (ECAS), which serves as the primary metric for verifying the alignment between ZK-verified entropy and actual prediction divergence.
+The CRE Index augments static reputation scores [4] with real-time metric of prediction divergence, calculating Shannon entropy over outcome distributions to penalize low-entropy (over-confident) predictions. ECAS metric defined on page 4 aligns verifiable ZK proofs with Groth16 verification circuit on page 5 for dynamic reputation validation in adversarial MANETs [6].
 
 ## How it works
 
-Agents generate outcome distributions for potential interactions. The system computes the Shannon entropy of these distributions. To verify this calculation without revealing raw prediction data, the agent constructs a Rank-1 Constraint System (R1CS) where the constraint matrix enforces the relationship $H = -\sum p_i \log_2(p_i)$ for the discrete probability vector $p$. A verification circuit is generated from this R1CS, and a Groth16-style zero-knowledge proof is generated. This proof is submitted to the semi-distributed network. Nodes verify the proof against the public verification key;
+Agents generate outcome distributions; R1CS constraint system enforces $H = -\sum p_i log_2(p_i)$ via Groth16 zero-knowledge proofs. ECAS metric verified on Groth16 circuit (page 5) to align ZK-verified entropy with actual prediction divergence [6].
 
 ## Materials / steps
 

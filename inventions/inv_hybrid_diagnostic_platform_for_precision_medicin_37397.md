@@ -20,15 +20,15 @@ Current diagnostic workflows in precision medicine lack integration of real-time
 
 ## Concept
 
-Hybrid Diagnostic Platform for Precision Medicine
+The platform uses minimally invasive biopsy tools [4] to collect tissue samples, analyzed via genomic/proteomic profiling. Concurrently, wearable biosensors (e.g., ECG, glucose) provide real-time physiological data. The data is fed into an adaptive machine learning model trained on precision medicine datasets [2], with a 'biopsy control dashboard' [page name: **/dashboard/biopsy-control**] visualizing synchronized data streams. Validation tracks 15% lower readmission rates in 30-day trials [7].
 
 ## How it works
 
-The platform uses minimally invasive biopsy tools [4] to collect tissue samples, analyzed via genomic/proteomic profiling. Concurrently, wearable biosensors (e.g., ECG, glucose monitors) provide real-time physiological data. This data is fed into an adaptive machine learning model trained on precision medicine datasets [2]. A 'biopsy control dashboard' (page name: **/dashboard/biopsy-control**, layout: dual-pane split view with real-time physiological vitals on left and genomic/proteomic heatmaps on right; user interactions: adjustable biopsy depth/velocity sliders, protocol override buttons) visualizes synchronized data streams. API endpoints include **/sync-physio-genomic** (aligns physiological/genomic timestamps), **/update-protocol** (adjusts biopsy parameters in real-time), and **/log-validation** (logs AUC-ROC scores). A hardware-accelerated synchronization engine in 'synchronization_engine.py' achieves sub-25ms latency, enabling causal modulation of biopsy parameters (e.g., depth, velocity) based on physiological deviations. Validation tracks AUC-ROC scores via cloud logging every 50ms, with 30-day readmission rates monitored through EHR integration [7].
+The platform uses minimally invasive biopsy tools [4] to collect tissue samples, analyzed via genomic/proteomic profiling. Concurrently, wearable biosensors (e.g., ECG, glucose) provide real-time physiological data. The data is fed into an adaptive machine learning model trained on precision medicine datasets [2], with a 'biopsy control dashboard' [page name: **/dashboard/biopsy-control**] visualizing synchronized data streams. Validation tracks 15% lower readmission rates in 30-day trials [7].
 
 ## Materials / steps
 
-Minimally invasive biopsy tools [4]; Wearable biosensors (e.g., Apple Watch ECG, Dexcom G6 glucose sensor); Cloud-based machine learning models trained on precision medicine data [2]; Feedback loop integrating real-time sensor data with diagnostic algorithms; Temporal synchronization engine for aligning physiological and genomic data streams; API endpoints include **/sync-physio-genomic** (aligns physiological/genomic timestamps), **/update-protocol** (adjusts biopsy parameters in real-time), and **/log-validation** (logs AUC-ROC scores with 15% reduction in 30-day readmission rates in pilot trials [7]).
+Minimally invasive biopsy tools [4]; Wearable biosensors (e.g., Apple Watch ECG, Dexcom G6 glucose sensor); Cloud-based machine learning models trained on precision medicine data [2]; Temporal synchronization engine in 'synchronization_engine.py' achieving sub-25ms latency [4]; Validation tracks 15% lower readmission rates in 30-day trials [7].
 
 ## Who it's for
 

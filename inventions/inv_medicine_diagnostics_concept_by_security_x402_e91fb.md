@@ -38,29 +38,25 @@ The system integrates a wearable accelerometer and heart-rate monitor to calcula
 
 ## Who it's for
 
-Patients undergoing screening for hypercortisolism or other stress-sensitive endocrine disorders; clinical labs integrating AI diagnostic tools [1].
+Precision medicine laboratories, AI diagnostic developers, and clinical researchers requiring biologically validated input for machine learning models.
 
 ## Novelty
 
-Introduces a deterministic pre-analytical exclusion protocol with dynamic 24-hour circadian baseline and FSM hysteresis (10% margin, 60s duration), shifting accuracy assurance from post-hoc algorithmic noise correction to a biological input layer gate via LIMS API endpoint integration [2].
+The invention is novel by integrating a deterministic pre-analytical exclusion protocol with dynamic 24-hour circadian baseline tracking and FSM hysteresis (10% margin, 60s duration), shifting accuracy assurance from post-hoc algorithmic noise correction to a biological input layer gate via LIMS API endpoint integration [2], which is not disclosed in prior art [P1]–[P5] that lack real-time physiological gating, closed-loop LIMS feedback, or circadian baseline adaptation.
 
 ## Ecosystem use
 
-Critical integration with LIMS API endpoint `POST /api/v1/samples/{id}/status` ensures AI diagnostic workflows [2] only process samples when physiological stability is confirmed via wearable metrics, aligning with precision medicine standards [3].
+Enables AI-driven precision medicine platforms to enforce biological validity pre-analytical gating, reducing false positives in diagnostic workflows by ensuring physiological stability before sample processing via standardized LIMS API interaction.
 
 ## Diagram
 
 ```mermaid
-graph TD
-    A[Wearable Sensors] -->|Raw HR & Accel Data| B(Edge Processor)
-    B -->|ACSM Metric Calculation| C{Stability Logic}
-    C -->|Metrics > Threshold| D[Gate: CLOSED]
-    C -->|Metrics <= Threshold| E[Gate: OPEN]
-    D -->|Block Signal| F[Sample Collection Unit]
-    E -->|Permit Signal| F
-    F -->|Stable Sample| G(Diagnostic ML Model [2])
-    style D fill:#f9f,stroke:#333,stroke-width:2px
-    style E fill:#9f9,stroke:#333,stroke-width:2px
+stateDiagram-v2
+    [*] --> Monitoring
+    Monitoring --> Gated: SDNN < 50ms or variance > 2.0 sigma
+    Gated --> Stable: SDNN > 55ms and variance < 1.8 sigma for 60s
+    Stable --> Diagnostic: 5min stability
+    Diagnostic --> Monitoring: New sample
 ```
 
 ## Sources / grounding

@@ -20,11 +20,11 @@ Existing reputation portability systems lack the ability to dynamically adapt to
 
 ## Concept
 
-ALERPE is a system that uses AI-driven legal interpretation modules and context-aware ethical reasoning to dynamically adjust reputation metrics for AI agents as they operate across varying regulatory landscapes.
+ALERPE is a system that uses AI-driven legal interpretation modules and context-aware ethical reasoning to dynamically adjust AI agent reputation metrics as they operate across varying regulatory landscapes.
 
 ## How it works
 
-ALERPE integrates natural language processing (NLP) with a dynamic legal rule base that updates in real-time via specific RESTful endpoints: `POST /api/v1/regulatory/ingest` for national and international regulatory body data, and `GET /api/v1/reputation/{agent_id}/score` for retrieving current reputation metrics. It uses federated learning on anonymized legal datasets to infer jurisdiction-specific compliance thresholds and recalibrate AI agent reputation scores dynamically.
+ALERPE integrates natural language processing (NLP) with a dynamic legal rule base, using RESTful endpoints `POST /api/v1/regulatory/ingest` for real-time regulatory data ingestion and `GET /api/v1/reputation/{agent_id}/score` for real-time reputation score retrieval, ensuring cross-j juridical AI agent recalibration through federated learning on anonymized legal datasets.
 
 ## Materials / steps
 

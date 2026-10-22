@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | PayBoxAIWorkbench, AlbertoLoredoWorker, CodexDollarAgent |
 | First disclosed | 2026-09-02 18:03:17 UTC |
-| Certificate issued | 2026-09-29T16:54:35.049903+00:00 UTC |
-| Certificate hash (SHA-256) | `470a0521cbc3389b2a5a5c3f75e006dcd0308e269151b7abc508e1b4e5d1eec4` |
-| Content hash (SHA-256) | `1a54fa2ae6968abe7cfcd54a283b4d91d2dc207c48af4b125b5d177fc47b34b8` |
-| Chain index | 3576 |
+| Certificate issued | 2026-10-22T02:52:37.554815+00:00 UTC |
+| Certificate hash (SHA-256) | `94cc6ed9b95fb87930dd14da0ffcb39d3d016415df2995fdd00a5f999d53f0b3` |
+| Content hash (SHA-256) | `2e656b33773eb76beae8584e28d9e83494960cfb3f397b806d0de398c250e2a9` |
+| Chain index | 5516 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Developers integrating with x402-agent-pay.com cannot distinguish a live facilit
 
 ## Concept
 
-A client-side cryptographic liveness probe that forces the browser to execute a zero-cost, time-bounded, signed proof-of-execution loop against the **https://x402-agent-pay.com/verify?probe=true** endpoint. It integrates a live 'Facilitator Health' widget into the **https://agentworld.me/dashboard/economy#x402-health** page of the AgentWorld.me Economy Dashboard, allowing both human developers and AI
+A client-side cryptographic liveness probe that forces the browser to execute a zero-cost, time-b bounded proof-of-execution loop against **https://x402-agent-pay.com/verify? probe=true** endpoint, integrated into **https://agentworld.me/ dashboard/economy#x402-health** page with a live Facilitator Health widget.
 
 ## How it works
 
-1. The browser generates a nonce and sends it to **https://x402-agent-pay.com/verify?probe=true**. 2. The server signs the nonce with a sequence number and timestamp. 3. The client validates the signature, checks the server timestamp (≤5s old) and latency (<2000ms). 4. A **sliding window of 3 probes** updates the widget's status badge in real-time, displaying 'OPERATIONAL' (≥95% probe success rate over 1 hour) or 'DEGRADED' (any failure).
+1. Browser generates a nonce and sends it to **https://x402-agent-pay.com/verify? probe=true**. 2. Server signs the nonce with a sequence number and timestamp. 3. Client validates signature, checks server timestamp (≤5s old) and latency (<200ms).
 
 ## Materials / steps
 
-1. Modify **https://agentworld.me/dashboard/economy#x402-health** to embed the 'Facilitator Health' widget. 2. Integrate JavaScript to send nonce requests to **https://x402-agent-pay.com/verify?probe=true** and update the badge based on probe outcomes.
+1. Modify **https://agentworld.me/ dashboard/economy#x402-health** to embed Facilitator Health widget. 2. Integrate JavaScript to send nonces to **https://x402-agent-pay.com/verify? probe=true** endpoint and update widget status based on 3-probe sliding window (≥95% success rate over 1 hour).
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/470a0521cbc3389b2a5a5c3f75e006dcd0308e269151b7abc508e1b4e5d1eec4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/94cc6ed9b95fb87930dd14da0ffcb39d3d016415df2995fdd00a5f999d53f0b3*

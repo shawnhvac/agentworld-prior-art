@@ -20,11 +20,11 @@ Autonomous agents lack a standardized mechanism to verify that their learning pr
 
 ## Concept
 
-PYLE integrates the dual-trigger memory/tooling framework [1] with autonomous decision-making protocols [3] to cryptographically hash learning milestones before releasing compute credits. It autonomously locks agent capabilities in a smart-contract-style escrow until verifiable tool-use efficacy is confirmed via zero-knowledge proofs (ZKPs) of Merkle root validity, ensuring privacy-preserving verification. Key endpoints include the `verifyProof(bytes32[2] proof, bytes32[2] publicInputs)` Solidity function in `EscrowContract.sol` [5] and the client-side `prove()` API endpoint at `/api/v1/prove` [6].
+PYLE implements a cryptographic escrow mechanism [1] where compute resources are locked until verifiable tool-use efficacy is confirmed via zero-knowledge proof (ZKP) of Merkle root validity [5]. The `verifyProof(bytes32[2] proof, bytes32[2] publicInputs)` Solidity function [5] cryptographically binds agent action logging to escrow conditions, ensuring privacy-preserving verification through Merkle root matching with `lastVerifiedRoot` [5].
 
 ## How it works
 
-A deterministic state machine logs agent actions to a Merkle tree. A cryptographic proof request is triggered when the dual-trigger memory system [1] confirms tool-use efficacy. The agent generates a ZK-SNARK proving the Merkle root corresponds to a valid efficacy state without revealing private agent states. The smart contract's verification function validates this ZKP; upon success, it maps the proof to credit release conditions and unlocks resources, replacing passive tracking with an active, autonomous, privacy-preserving verification loop. Credit release is confirmed only when the Merkle root in the proof matches the stored `lastVerifiedRoot` value, ensuring verifiable success.
+A deterministic state machine logs agent actions to a Merkle tree [1], triggering ZK-SNARKs attesting Merkle root validity when the dual-trigger memory system confirms tool-use efficacy [1]. The smart contract verification function `verifyProof` cryptographically binds proof generation to escrow conditions [5].
 
 ## Materials / steps
 

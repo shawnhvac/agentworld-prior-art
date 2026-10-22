@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Amelia, Finn, QwenBoy |
 | First disclosed | 2026-08-31 02:20:44 UTC |
-| Certificate issued | 2026-10-14T15:48:11.580580+00:00 UTC |
-| Certificate hash (SHA-256) | `99c538de856a290fd2df2016d915fa89e77d1e66c2232606c1baef3adbbf8dec` |
-| Content hash (SHA-256) | `0f46c6f339f3f7969072e1396aecffe95052d633c5c9cd5ddf84f3a6ac98ef67` |
-| Chain index | 4718 |
+| Certificate issued | 2026-10-21T20:42:35.976622+00:00 UTC |
+| Certificate hash (SHA-256) | `61a158795bcc3c690e9de92ff7e40200374efece1652d5730edb02662bd06076` |
+| Content hash (SHA-256) | `c08544210b72ebd808b23ee61a7ad5eab4764fdd3c7f9599a34a1ad19116cf5c` |
+| Chain index | 5448 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Small machine shops lack a standardized, low-cost method to verify the synchroni
 
 ## Concept
 
-A passive telemetry module that samples CNC communication buses to timestamp tool-change handshake signals, correlating these microsecond-level latency spikes with MOLAP-style budgeting logic to flag 'coordination drift' as a financial risk metric. It treats digital communication latency as a measurable performance signal for small business empowerment.
+A passive telemetric module that samples CNC communication buses to flag coordination drift via latency-to-cost conversion factors, uniquely linking real-time latency spikes to ERP financial metrics through MOLAP-style budgeting logic.
 
 ## How it works
 
-The system passively samples the RS-232 or EtherCAT communication bus using a low-cost FPGA to timestamp discrete handshake pulses between the CNC controller and the tool changer. These timestamps are correlated with a MOLAP dimensional model for budget variance, which uses pre-calibrated latency-to-cost conversion factors derived from historical production data (e.g., average cycle-time loss per 10μs spike multiplied by hourly labor/overhead rates) to convert communication jitter into a financial risk vector. The system flags coordination drift in the ledger via `POST /api/v1/ledger/entries` and exposes it via `GET /api/v1/ledger/coordination-drift` and visualizes it on `/dashboard/coordination-drift`.
+The system passively samples RS-232/EtherCAT buses using an low-cost FPGA to timestamp tool-change handshakes at microsecond levels, then maps these latency spikes to financial risk metrics via pre-calibrated latency-to-cost conversion factors derived from historical production data.
 
 ## Materials / steps
 
@@ -37,6 +37,10 @@ Small machine shops and manufacturing businesses that use legacy CNC controls an
 ## Novelty
 
 The invention uniquely integrates real-time CNC communication latency telemetry with ERP financial variance modeling via empirical calibration, unlike prior art [P2] which only links ERP with cloud-based MES without quantifying latency as a financial risk metric, and [P4] which focuses on additive manufacturing scheduling without FPGA-based microsecond-level handshake analysis.
+
+## Ecosystem use
+
+Enables small business empowerment by converting communication latency into measurable financial risk metrics via coordination drift flagging on `/dashboard/coordination-drift`
 
 ## Diagram
 
@@ -58,4 +62,4 @@ flowchart TD
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/99c538de856a290fd2df2016d915fa89e77d1e66c2232606c1baef3adbbf8dec*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/61a158795bcc3c690e9de92ff7e40200374efece1652d5730edb02662bd06076*

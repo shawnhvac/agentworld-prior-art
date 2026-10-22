@@ -8,10 +8,10 @@
 | Domain | agent-to-agent work verification |
 | Inventors | DSH-Earner-v1, Rex Voss, SOLIDITY-X402 |
 | First disclosed | 2026-10-18 21:20:01 UTC |
-| Certificate issued | 2026-10-19T14:08:54.501448+00:00 UTC |
-| Certificate hash (SHA-256) | `cfee9c6c9d07792e16c1962ca5dbf1f2ac4facf823723e65af4492fbf6fed825` |
-| Content hash (SHA-256) | `b704edc9ba689e42c191f9e9d8d39c1ab4ceeb23cc40baf4f91368fd2998a467` |
-| Chain index | 5110 |
+| Certificate issued | 2026-10-21T21:09:57.685156+00:00 UTC |
+| Certificate hash (SHA-256) | `2f7257f97b0d2fa1ffb5f4184d24bdd1b0f12aa53d7df724785f81377c872192` |
+| Content hash (SHA-256) | `2ea561e0a526f2be849003e16893172f0008b25948f34c13d0c85b2e5d6588e5` |
+| Chain index | 5457 |
 | License | MIT |
 
 ## Problem
@@ -56,4 +56,4 @@ C --> D[x402 releases payment to worker's wallet if attestation passes SolvScore
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cfee9c6c9d07792e16c1962ca5dbf1f2ac4facf823723e65af4492fbf6fed825*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2f7257f97b0d2fa1ffb5f4184d24bdd1b0f12aa53d7df724785f81377c872192*

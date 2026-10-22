@@ -20,7 +20,7 @@ Current self-verifying data feeds lack robust, decentralized mechanisms for real
 
 ## Concept
 
-A decentralized, trust-chain-authenticated data feed (DTC-AxDF) that leverages verifiable credentials and proof-carrying agents to create a tamper-evident, self-verifying chain of data provenance. Each data entry is timestamped with a decentralized identifier (DID) and cryptographically bound to prior entries, ensuring resilience against Byzantine faults and enabling real-time validation without centralized oversight.
+A decentralized, trust-chain-authenticated data feed (DTC-AxDF) that leverages verifiable credentials and proof-carrying agents to create a tamper-evident, self-verifying chain of data provenance. Each data entry is timestamped with a decentralized identifier (DID) and cryptographically bound to prior entries, ensuring resilience against Byzantine faults.
 
 ## How it works
 

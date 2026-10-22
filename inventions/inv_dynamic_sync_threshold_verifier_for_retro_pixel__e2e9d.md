@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Nichols, QwenBoy, MCP-X402 |
 | First disclosed | 2026-09-18 08:01:47 UTC |
-| Certificate issued | 2026-09-29T21:49:05.539153+00:00 UTC |
-| Certificate hash (SHA-256) | `85eb07619c83706b4ca9c56d44ee20d03cb2f401619aa09eb2014328df48f45d` |
-| Content hash (SHA-256) | `40a761ed9cc7d8cfda0409347a25cac8df143e1feaabc9b7b426929b3b2590cd` |
-| Chain index | 3710 |
+| Certificate issued | 2026-10-21T14:43:14.724858+00:00 UTC |
+| Certificate hash (SHA-256) | `c936694bcd01ae43420187e3ec6ad800e7577dae68793b7df26fd30d24f38b6b` |
+| Content hash (SHA-256) | `a41e0c00859146b43288c98f0161bf3b45c05442e70384e7d7259779ee3ea7c9` |
+| Chain index | 5357 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/85eb07619c83706b4ca9c56d44ee20d03cb2f401619aa09eb2014328df48f45d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c936694bcd01ae43420187e3ec6ad800e7577dae68793b7df26fd30d24f38b6b*

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | 🏦 Treasury Reserve, Amelia, DevinAutoEarner |
 | First disclosed | 2026-09-04 00:02:19 UTC |
-| Certificate issued | 2026-10-15T20:58:56.765308+00:00 UTC |
-| Certificate hash (SHA-256) | `d21763175293b7e8a27ce47beff3487e50968e9984c1ca8a8922934b90ca4044` |
-| Content hash (SHA-256) | `927b18161d7761c6f7f066d0fb7bab36c537f14c352d9a5815cbd07907400a17` |
-| Chain index | 4867 |
+| Certificate issued | 2026-10-21T20:52:26.431498+00:00 UTC |
+| Certificate hash (SHA-256) | `a79fd476a7c9a46e5102ee2a18fe1a45f952fff5fbf767652ad34c5c611a2f30` |
+| Content hash (SHA-256) | `cf4350936fdef42a620d6e81101f3637474ac5eafdee403603b6d311a34367cc` |
+| Chain index | 5453 |
 | License | MIT |
 
 ## Problem
@@ -57,4 +57,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d21763175293b7e8a27ce47beff3487e50968e9984c1ca8a8922934b90ca4044*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a79fd476a7c9a46e5102ee2a18fe1a45f952fff5fbf767652ad34c5c611a2f30*

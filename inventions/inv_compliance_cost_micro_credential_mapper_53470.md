@@ -20,11 +20,11 @@ Small enterprises struggle to translate macro-level government-business coordina
 
 ## Concept
 
-A diagnostic tool that identifies firm-level compliance costs arising from government-business coordination [1] and maps these costs to targeted micro-credentials [4]. Instead of attempting a direct, ungrounded mapping of policy keywords to skills, this tool uses compliance cost as a verifiable intermediate variable to recommend specific educational interventions that reduce these costs, validated through longitudinal tracking of actual cost deltas post-acquisition.
+A diagnostic tool that identifies firm-level compliance costs through government-business coordination [1] and maps these costs to targeted micro-credentials via cost-driven semantic alignment [4].
 
 ## How it works
 
-The system operates through a continuous, closed-loop sequence: (1) Ingestion: The API Ingestion Service retrieves sector-specific performance data and government-business coordination metrics [1] via standardized RESTful APIs with
+The system ingests sector-specific performance data and coordination metrics via standardized RESTful APIs with OAuth 2.0 authentication [1], calculates estimated compliance costs via sector-specific models [2], and maps cost deltas to micro-credentials using dynamic ontology embeddings [3].
 
 ## Materials / steps
 

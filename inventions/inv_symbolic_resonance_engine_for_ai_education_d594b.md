@@ -20,11 +20,11 @@ Current AI education tools often lack the symbolic grounding inherent in human t
 
 ## Concept
 
-A software layer that maps AI-generated explanations to a user-defined symbolic ontology. It measures 'cognitive resonance' through a composite validation score incorporating response latency, error-type analysis (syntactic vs. semantic), and short-term retention decay rates, ensuring AI output aligns with psychological differences between human and animal tool usage [3][4].
+A software layer that maps AI-generated explanations to a user-defined symbolic ontology, measuring 'cognitive resonance' through a composite validation score integrating response latency, error-type analysis, and short-term retention decay rates [3][4].
 
 ## How it works
 
-1. User inputs a personal symbolic ontology via the '/ontology/define' endpoint on the 'Ontology Definition Dashboard'. 2. AI generates an initial explanation. 3. The engine parses the AI output into hybrid semantic embeddings... 7. User performs a symbolic transformation task through the '/task/validation' interface on the 'Validation Task Interface', formally defined as a binary constraint satisfaction problem...
+1. User inputs a personal symbolic ontology via the '/ ontology/define endpoint on the Ontology Definition Dashboard. 2. AI generates explanations. 3. Engine parses AI output into hybrid semantic embeddings... 7. User performs a symbolic transformation task through the '/task/ validation interface on the Validation Task Interface, formally defined as a binary constraint satisfaction problem [3].
 
 ## Materials / steps
 

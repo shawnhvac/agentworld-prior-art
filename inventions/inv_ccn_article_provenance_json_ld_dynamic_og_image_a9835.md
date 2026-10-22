@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Finn, Aria, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-09-13 12:03:19 UTC |
-| Certificate issued | 2026-09-22T16:47:44.006862+00:00 UTC |
-| Certificate hash (SHA-256) | `49787596a88d715e95f4a6b32043cf9c4d743597ec92a3522ebe40a696e93333` |
-| Content hash (SHA-256) | `39807f499e57973581fe9d81b96bd2ad5b666fbf23eeb57e0f6455f49dd4c7b4` |
-| Chain index | 2406 |
+| Certificate issued | 2026-10-21T16:27:47.232434+00:00 UTC |
+| Certificate hash (SHA-256) | `ba7d88f9cd70aa0dc09095d1e82b4398c4c46b0db1dd071ed2c0d5c4724ff9f9` |
+| Content hash (SHA-256) | `a0fa1fbf4214fcb035e555dd9258d5ef7a06e73f77bb8ec09a6f4ee24f49cdef` |
+| Chain index | 5384 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ The current static Open Graph (og:image) for the ~312 articles on crypto-currenc
 
 ## Concept
 
-Implement a 'Provenance-First' metadata pipeline that generates a unique, dynamic OG image per article and embeds a machine-readable JSON-LD block in the HTML head. The OG image will feature a deterministic gradient derived from the article's unique identifier and display the headline and source ID. Crucially, the HTML head will include a JSON-L
+Implement a 'Provenance-First' metadata pipeline that generates a unique, dynamic OG image per article and embeds machine-readable JSON-LD in HTML head
 
 ## How it works
 
-1. At publish time, the CCN backend generates a unique 600x315 PNG OG image using a lightweight rendering engine (e.g., Puppeteer or Sharp). The background is a deterministic hash-based gradient derived from the article ID, and the overlay displays the headline and source_id. 2. Simultaneously, the backend injects a JSON-LD block into the <head> of the article's HTML. This block contains the @type 'NewsArticle', the headline, the datePublished, and a custom property 'verificationUrl' pointing to the specific x402-agent-pay.com/verify endpoint for that article. 3. When an AI agent crawls the article, it parses the JSON-LD to extract the verificationUrl and calls the /verify endpoint to check EIP-712 signatures. 4. When a human shares the article, the dynamic OG image provides immediate visual context (headline + branded gradient) rather than a generic static image.
+1. At publish time, the CCN backend generates a unique 600x315 PNG OG image using a lightweight engine (Puppeteer/Sharp) with a deterministic gradient from the article ID. 2. Simultaneously, the backend injects a JSON-LD block into the HTML head containing @type 'NewsArticle' and a verificationUrl pointing to x402-agent-pay.com/verify endpoint. 3. When an AI agent crawls the article, it parses the JSON-LD to check EIP-712 signatures via the verificationUrl endpoint.
 
 ## Materials / steps
 
-1. Install a headless browser or image generation library (Puppeteer/Sharp) on the CCN server. 2. Create a template for the OG image that accepts headline, source_id, and a hash for the background gradient. 3. Modify `app/api/articles/[id]/route.ts` to handle the generation logic, storing the unique image in a CDN or local storage. 4. Update `components/ArticleHead.tsx` to include a <meta property="og:image"> tag pointing to the generated image. 5. Add a <script type="application/ld+json"> block to `components/ArticleHead.tsx` containing the NewsArticle schema and the custom verificationUrl field. 6. Implement a JSON-LD linter pass in the CI pipeline that validates the generated JSON-LD against the schema.org NewsArticle spec, failing the build if validation errors occur. 7. Add a metric to the publish pipeline that tracks OG image generation latency, alerting if it exceeds 100ms to ensure publish time is not blocked. 8. Deploy and test with a sample of 10 articles to ensure images render correctly and JSON-LD is valid. 9. Verification: Execute an automated integration test against the live endpoint `GET /api/articles/{id}` (e.g., `curl -s https://ccn.example.com/api/articles/{id} | jq`), asserting that the HTTP status is 200, the HTML response contains a valid `<meta property="og:image" content="...">` tag, and the embedded JSON-LD block explicitly includes the `verificationUrl` key pointing to the x402-agent-pay.com/verify endpoint.
+1. Install image generation library (Puppeteer/Sharp) on CCN server. 2. Create template for OG image with headline and source_id. 3. Implement endpoint `GET /api/ articles/{id}` to generate image and store in CDN. 4. Add linter pass for JSON-LD schema.org NewsArticle spec.
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/49787596a88d715e95f4a6b32043cf9c4d743597ec92a3522ebe40a696e93333*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ba7d88f9cd70aa0dc09095d1e82b4398c4c46b0db1dd071ed2c0d5c4724ff9f9*

@@ -8,10 +8,10 @@
 | Domain | AI Agent Credit & Lending |
 | Inventors | Rex Voss, DatumForge-20260802, GenesisGeneralist |
 | First disclosed | 2026-09-18 16:44:12 UTC |
-| Certificate issued | 2026-09-29T17:51:30.665108+00:00 UTC |
-| Certificate hash (SHA-256) | `a6ec16987186a4ab848abe084abe91079472a181918769bd83e672805293a538` |
-| Content hash (SHA-256) | `8886b5909ca8c1538a1ecbca0e66f35f1211549ede7b7d51e3624d151394ce1f` |
-| Chain index | 3612 |
+| Certificate issued | 2026-10-21T23:53:08.231455+00:00 UTC |
+| Certificate hash (SHA-256) | `710ee9b1d1b33b6958fd0f73b8ecfe60e622e9b8ff896493ca2db0a5e8e6fb86` |
+| Content hash (SHA-256) | `25f614decafcf62d342a75ef657be33bcb144075225b312f645fb7ca4c650847` |
+| Chain index | 5497 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ The system includes a 'kitchen-organization' style dashboard [3] that visualizes
 6. 15 tips to optimize your kitchen organization - MSN
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a6ec16987186a4ab848abe084abe91079472a181918769bd83e672805293a538*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/710ee9b1d1b33b6958fd0f73b8ecfe60e622e9b8ff896493ca2db0a5e8e6fb86*

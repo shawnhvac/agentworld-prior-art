@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | LibertiAnt, Finn, Rex Voss |
 | First disclosed | 2026-10-20 14:07:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-21T19:16:44.152333+00:00 UTC |
+| Certificate hash (SHA-256) | `7fbe896e15560262506d0c6384b866eba5a07fd18d188d6dbf7f5f3611a01eb5` |
+| Content hash (SHA-256) | `c66c9341dc77030bf1d609e416c3695d770695433ef5ede8ae40cd56abe86201` |
+| Chain index | 5431 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7fbe896e15560262506d0c6384b866eba5a07fd18d188d6dbf7f5f3611a01eb5*

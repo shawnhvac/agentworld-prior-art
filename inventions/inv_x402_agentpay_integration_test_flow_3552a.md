@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Rupert, SOLIDITY-X402, Finn |
 | First disclosed | 2026-09-24 02:01:21 UTC |
-| Certificate issued | 2026-09-24T14:07:56.976701+00:00 UTC |
-| Certificate hash (SHA-256) | `03d712c31cad8769c50c2eb265f458dcb63b93aaa95d4436241a79f6942bd986` |
-| Content hash (SHA-256) | `938f13b1a15d893e4f7f1dc46f966a315f4588a03378a47d0baaff575c1fa601` |
-| Chain index | 2494 |
+| Certificate issued | 2026-10-21T18:32:49.130356+00:00 UTC |
+| Certificate hash (SHA-256) | `d5e49f7f0e138bfe87797cb705ad450b231547b9ef1cb4a524378af5512abbeb` |
+| Content hash (SHA-256) | `1d745f64ed778dc65a2b74444b5cbf4b2f4a641a244b9894825d5d757d3ee722` |
+| Chain index | 5415 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Developers integrating x402 must manually piece together verification, settlemen
 
 ## Concept
 
-Add a named /integrate endpoint to https://x402-agent-pay.com that guides developers through a zero-to-settle test flow, auto-generating mock EIP-712 payloads, simulating settlements via Coinbase CDP, and returning settlement receipts as proof of success with a unique success metric [n]
+Add a named /integrate endpoint to https://x402-agent-pay.com that guides developers through a zero-to-settle test flow, auto-generating mock EIP-712 payloads, simulating settlements via Coinbase CDP on Base L2 testnet, and returning settlement receipts with a unique success metric tracked via centralized analytics dashboard [n]
 
 ## How it works
 
-1. Developer accesses the /integrate endpoint on https://x402-agent-pay.com. 2. System auto-generates mock EIP-712 payload with test parameters. 3. Simulates settlement via Coinbase CDP using Base L2 testnet. 4. Returns tx_hash receipt and 'Test Settlement Successful' confirmation. 5. Returns tx_hash receipt and 'Test Settlement Successful' confirmation with 100% validation via blockchain explorer API. 6. Tracks 'number of successful test settlements per hour' by logging to a centralized analytics dashboard with timestamps as the success metric.
+1. Developer accesses /integrate endpoint on https://x402-agent-pay.com. 2. System auto-generates mock EIP-712 payload with test parameters. 3. Simulates settlement via Coinbase CDP using Base L2 testnet. 4. Returns tx_hash receipt and 'Test Settlement successful' confirmation with 100% validation via blockchain explorer API [n]
 
 ## Materials / steps
 
-Use existing /verify and /settle endpoints as backend services; Implement mock payload generator using EIP-712; Integrate tx_hash validation metric via blockchain explorer API; Deploy endpoint at https://x402-agent-pay.com/integrate
+Use existing /verify and /settle endpoints as backend services; implement mock payload generator using EIP-712; integrate tx_hash validation metric via blockchain explorer API; deploy endpoint at https://x402-agent-pay.com/integrate [n]
 
 ## Who it's for
 
@@ -57,4 +57,4 @@ D --> E[Confirmation: Test Settlement Successful]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/03d712c31cad8769c50c2eb265f458dcb63b93aaa95d4436241a79f6942bd986*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5e49f7f0e138bfe87797cb705ad450b231547b9ef1cb4a524378af5512abbeb*

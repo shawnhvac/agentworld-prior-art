@@ -32,31 +32,30 @@ Integrity-Weighted Decentralized Swarm Routing
 
 ## Who it's for
 
-Developers of autonomous UAV swarms, robotic edge networks, and distributed AI agent systems requiring high reliability in adversarial environments.
+Network operators, swarm system architects, cybersecurity engineers
 
 ## Novelty
 
-The invention introduces a novel combination of federated learning-based integrity metrics [3] integrated into a consensus-validated dynamic cost function for swarm routing, which is not present in P3's rule-based blockchain approach. Unlike P3's static rule sets, this system dynamically adjusts routing weights (w_dist, w_int) based on real-time threat severity and network congestion, while P3 lacks explicit success metrics or API-level implementation details. The integrity-weighted PBFT-lite consensus with audit-logged isolation events provides a concrete, measurable improvement over prior art's abstract security claims.
+The invention introduces a novel combination of federated learning-based integrity metrics [3] integrated into a consensus-validated dynamic cost function for swarm routing, which is not present in P3's rule-based blockchain approach. Unlike P3's static rule sets, this system dynamically adjusts routing weights (w_dist, w_int) based on real-time threat severity and network congestion, while P3 lacks explicit success metrics or API-level implementation details. The integrity-weighted PBFT-lite consensus with audit-logged isolation events provides a concrete, measurable improvement over prior art's abstract security claims. Specifically, P3 (US12067498B2) generates static swarm rules from node attributes using a blockchain but does not validate node integrity or adjust routing dynamically based on threat severity. In contrast, this invention improves upon P3 by integrating real-time integrity scoring validated through PBFT-lite consensus, enabling dynamic weight adjustment (w_dist, w_int) and measurable isolation of compromised nodes via '/api/v1/integrity_scores' and '/logs/isolation_events.json'.
 
 ## Ecosystem use
 
-This can be used as a security middleware API in AI-agent platforms, allowing agent orchestrators to query node integrity scores before assigning critical tasks, ensuring that compromised agents do not receive high-priority data or execution rights.
+Swarm robotics, IoT networks, distributed sensor arrays
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[ROS2 Edge Node] -->|Local FL Model| B(Integrity Scoring Module)
-    B -->|Integrity Score| C[Decentralized Task Allocator]
-    D[Adversarial Attack] -->|Poisoned Updates| A
-    C -->|Weighted Routing Decision| E[Task Assignment]
-    C -->|Quarantine/Low Priority| F[Compromised Node]
-    subgraph Security Layer
-    B
-    end
-    subgraph Routing Layer
-    C
-    end
+graph TD
+    A[Node computes S_integrity] --> B[/api/v1/integrity_scores]
+    B --> C[PBFT-lite Request Phase]
+    C --> D[Pre-prepare: Primary timestamps score]
+    D --> E[Prepare: Neighbors verify against thresholds]
+    E --> F[Commit: 2f+1 matching prepares finalize score]
+    F --> G[Integrity-weighted primary election]
+    G --> H[Dynamic weight update w_dist, w_int]
+    H --> I[Routing decision]
+    F --> J[/logs/isolation_events.json]
+    J --> K[Isolation rate ≥99.9% within 3 rounds]
 ```
 
 ## Sources / grounding

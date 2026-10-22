@@ -20,15 +20,15 @@ Current disaster response frameworks often rely on centralized IT infrastructure
 
 ## Concept
 
-A low-tech, protocol-based system that standardizes how survivors and first responders manually relay status information (location, injury, resource need) through human-to-human chains, ensuring data integrity and reducing redundancy during total infrastructure failure. It treats the 'human' as the node in the network, grounded in the understanding that human response behaviors are the primary vector for survival when technology fails [5].
+A low-tech, protocol-based system that standardizes how survivors and first responders relay status information through human-to-human chains, ensuring data integrity during disaster response [5].
 
 ## How it works
 
-3. Aggregation: Local community leaders transmit reports to central agencies via predefined endpoints (e.g., Central Agency Dashboard v2.1 at 'https://disasterportal.gov/aggregate', Relay Compliance Tracker at 'https://disasterportal.gov/track', and Data Integrity Dashboard at 'https://disasterportal.gov/verify')
+3. Aggregation: Local community leaders transmit reports to central agencies via predefined endpoints (e.g., Central Agency Dashboard v2.1 at 'https://disasterportal.gov/aggregate', Relay Compliance Tracker at 'https://disasterportal.gov/track', and Data Integrity Dashboard at 'https://disasterportal.gov/verify' [5].
 
 ## Materials / steps
 
-5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps (tracked via 'Relay Compliance Tracker' page at 'https://disasterportal.gov/track' with real-time counters showing protocol adherence ≥92% and data integrity rate ≥95% (measured via automated verification tools on 'Data Integrity Dashboard' at 'https://disasterportal.gov/verify'))
+5. Define Trial Success Criteria: Achieve >90% protocol adherence in relay steps ( tracked via 'Relay Compliance Tracker' at 'https://disasterportal.gov/track' and 'Data Integrity Dashboard' at 'https://disasterportal.gov/verify' [5].
 
 ## Who it's for
 

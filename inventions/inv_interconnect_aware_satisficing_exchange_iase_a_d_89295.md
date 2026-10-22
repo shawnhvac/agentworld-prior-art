@@ -20,11 +20,13 @@ Decentralized multi-agent AI systems fail to scale because agents hoard raw comp
 
 ## Concept
 
-IASE is a peer-to-peer bartering protocol where agents trade inference tasks using a dynamic 'welfare frontier' metric. It discounts offered compute capacity by a physical interconnect attenuation factor derived from real-time link constraints [2]. By combining resource-rational 'satisficing' behavior [4] with trustless peer-to-peer settlement mechanics [3], agents accept sub-optimal local solutions that maximize the minimum effective throughput across the mesh, preventing saturation of the weakest link. Settlement is executed via a decentralized atomic swap with optimistic locking, ensuring atomicity without centralized coordination.
+Interconnect-Aware Satisficing Exchange (IASE): A Decentralized Compute Barter Protocol
+
+INVENTION: IASE is a peer-to-peer barter protocol where agents trade inference tasks using a dynamic 'welfare frontier' metric [2]. By combining resource-rational 'satisficing' behavior [4] with atomic atomic swaps [3], IASE prevents saturation of the weakest link through real-time interconnect attenuation factor A [2]. The protocol uses latencies from ICMP/TCP [2] and cryptographically binds latency probes to settle offers via signed ' Offer ' messages [4].
 
 ## How it works
 
-The protocol operates on two decoupled layers with a strict message exchange sequence. First, a control layer initiates a handshake where agents exchange latency probes (ICMP/TCP) and bandwidth samples to derive the real-time interconnect attenuation factor A [2]. This A is cryptographically committed to the settlement layer via a signed 'Offer' message containing the calculated utility U = C * A [4]. Second, a trustless settlement layer uses peer-to-peer atomic swapping mechanics [3] to execute trades. The counterparty accepts the trade only if the committed U falls within their satisficing tolerance band, prioritizing the maximization of the network's minimum effective throughput over individual peak performance. Acceptance is finalized by a mutual 'Commit' signature using an optimistic locking mechanism: both parties lock resources locally and exchange commitments; if either detects a failure or timeout, they trigger a rollback, ensuring the trade is executable without centralized monitors or a central coordinator for the Prepare phase. This is distinct from weighted governance frameworks [1] which do not model physical topology-dependent acceptance criteria.
+The protocol operates on two layers: a control layer for latency probes via ICMP/TCP [2] and a settlement layer with atomic swaps [3]. Latency and bandwidth samples are exchanged via specific endpoints '/api/offer' and '/api/commit' [3] to bind A cryptographically to settlement offers [4].
 
 ## Materials / steps
 

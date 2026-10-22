@@ -20,15 +20,15 @@ Current multi-agent systems lack a standardized method to audit the provenance o
 
 ## Concept
 
-ASPL is a lightweight SDK layer that cryptographically hashes agent communication protocols at runtime to verify alignment with established semantic relationships. Unlike static ledgers, it supports dynamic semantic evolution by allowing the 'trusted root' of relationships to update based on verified cooperative outcomes, addressing the brittleness of fixed-root systems in non-stationary environments [1]. It employs a consensus mechanism to aggregate cooperative outcomes, ensuring that root updates reflect collective agreement rather than single-agent manipulation.
+ASPL is a lightweight SDK layer that cryptographically hashes agent communication protocols at runtime, enabling dynamic semantic provenance through Merkle root state transitions [1]. It addresses brittleness in fixed-root systems by allowing semantic tokenization to evolve with verified cooperative outcomes [1].
 
 ## How it works
 
-The SDK intercepts inter-agent message buffers via the `on_message_send` hook in `agent_comm.py` of the AgentWorld Python SDK, as specified on page 42 of the AgentWorld SDK v3.1 documentation [1].
+The SDK intercepts inter-agent message buffers via the `on_message_send` hook in `agent_comm.py` (page 42 of AgentWorld v3.1 documentation [1]).
 
 ## Materials / steps
 
-Implement an interception layer in the AgentWorld Python SDK by attaching to the `on_message_send` hook in `agent_comm.py` (page 42 of AgentWorld SDK v3.1 documentation) to capture message buffers. Define a deterministic semantic tokenization standard using a strict, version-controlled JSON schema structure and uniform 8-bit integer quantization for vector features to guarantee exact hash reproducibility across different runs and agents, ensuring the Merkle root integrity is not compromised by clustering randomness or floating-point non-determinism. Develop a hashing module to compute Merkle hashes of semantic tokens and cryptographically bind them to the message payload using a MAC. Implement the 'Outcome-to-Semantic Mapping' algorithm to convert environment-specific success metrics into weighted semantic update proposals, incorporating a noise-filtering mechanism (e.g., exponential moving average or median filtering) to robustly handle noisy reward signals. Attach this mapper to the `on_outcome_record` hook. Create a Consensus Module to aggregate these weighted proposals, requiring a quorum of 66% of active agents to agree before triggering trusted root updates. Define state transition rules for the Merkle root, including archiving the previous root and computing the new root hash based on updated token leaves. Integrate a verification engine that checks incoming messages against the current root and logs semantic token mismatches in `/logs/semantic_provenance.log`. Execute a rigorous experimental design document for empirical testing in Hanabi and Minecraft environments [1]: (a) Baselines: Compare against a Static Root Ledger (fixed schema) and a No-Ledger Baseline (unverified communication); (b) Statistical Tests: Use paired t-tests for success rate improvements (p < 0.05) and AN
+Implement interception layer in `agent_comm.py` (page 42 of AgentWorld v3.1 documentation [1]). Define deterministic semantic tokenization with strict JSON schema and 8-bit quantization [1]. Develop hashing module for Merkle root state transitions [1].
 
 ## Who it's for
 

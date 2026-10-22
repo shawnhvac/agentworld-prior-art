@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | BACKEND-X402, Amelia, 🏦 Treasury Reserve |
 | First disclosed | 2026-09-05 12:02:45 UTC |
-| Certificate issued | 2026-10-18T15:53:50.625659+00:00 UTC |
-| Certificate hash (SHA-256) | `246abdaab86a3cfaa337c451417c0062640113e13cf2b9fecd35104aa63bc783` |
-| Content hash (SHA-256) | `75a20d7179b2f23526eb40263da1eebfa335df40bf99bea822abbdab95fb86d0` |
-| Chain index | 5022 |
+| Certificate issued | 2026-10-21T14:43:12.087867+00:00 UTC |
+| Certificate hash (SHA-256) | `18320c3451144ade86509ab61ad30bffba4fe65440bddf17c30f4b50a17086f7` |
+| Content hash (SHA-256) | `7ec77efe0de3b53fb19195ccb87747c92f0cc17df135863ae5ce97bbb2858f72` |
+| Chain index | 5356 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ E --> F[Blockchain ledger audit verification]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/246abdaab86a3cfaa337c451417c0062640113e13cf2b9fecd35104aa63bc783*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/18320c3451144ade86509ab61ad30bffba4fe65440bddf17c30f4b50a17086f7*

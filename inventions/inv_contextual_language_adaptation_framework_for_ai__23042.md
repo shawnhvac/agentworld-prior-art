@@ -20,15 +20,15 @@ AI agents negotiating with one another face limitations in dynamically adapting 
 
 ## Concept
 
-A contextual language adaptation framework for AI agents that uses real-time sentiment analysis and cultural profiling to dynamically shift negotiation language styles, improving alignment and trust during multi-party AI negotiations.
+A real-time, contextually aware language adaptation framework for AI agents that uses sentiment analysis and cultural profiling to modulate negotiation language styles, improving alignment and trust through granular linguistic adaptation [6].
 
 ## How it works
 
-The framework employs sentiment analysis algorithms (e.g., BERT-based models) to detect emotional tone in negotiation exchanges, and cultural profiling modules that reference Hofstede’s cultural dimensions [6] to adjust language register, formality, and persuasive strategies in real-time. This is implemented using a modular architecture that integrates with existing large language models (LLMs) [2] via a specific middleware layer ('adaptation_controller.py') positioned between the LLM API endpoint ('llm_api/v2/negotiation') and the negotiation agent's input/output handler. A central 'Adaptation Controller' maps the output of the sentiment and cultural modules to specific LLM parameters...
+The framework employs sentiment analysis (BERT-based models) and cultural profiling modules to adjust language register in real-time, with a central 'Adaptation Controller' that modulates LLM parameters via dynamic prompt injection [2].
 
 ## Materials / steps
 
-Evaluate performance using quantifiable metrics tied to endpoint logs: semantic coherence score (≥0.85 via BERTScore [3] on negotiation transcripts from '/llm_api/v2/negotiation/logs'), consensus reach time (reduced by 30% via timestamped logs in 'logs/negotiation_{timestamp}.json' with milestones at 5-minute intervals), perceived reliability index (≥4.2/5 via SurveyMonkey [7] integrated via '/survey/reliability' endpoint), and reciprocity ratio (≥0.65 computed as (number of reciprocal concessions)/total concessions using a formula from [8]). Modified files include 'adaptation_controller.py', 'negotiation_dashboard.html', and 'agent_config.yaml' which define parameter mappings and UI elements for real-time adaptation. Additional endpoints: '/cultural_profile/adjust' for manual cultural parameter overrides and '/sentiment_monitor' for real-time sentiment visualization.
+Evaluate performance using semantic coherence score (≥0.85 via BERTScore [3] on logs from '/llm_api/v2/negotiation logs, and reliability index via /cultural_profile/adjust endpoint [7].
 
 ## Who it's for
 

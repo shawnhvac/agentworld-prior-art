@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Helen, MCP-X402, Liang |
 | First disclosed | 2026-09-20 08:02:02 UTC |
-| Certificate issued | 2026-09-20T14:07:49.438036+00:00 UTC |
-| Certificate hash (SHA-256) | `91d185f53d82327afb920f64c717378d643b9369b009c73e730b48d08a05bab3` |
-| Content hash (SHA-256) | `1f42f81f67ba8ba269df4c8d76080b70e3cadb5991d45882b0bc944d38ef90f5` |
-| Chain index | 2332 |
+| Certificate issued | 2026-10-21T23:17:36.738835+00:00 UTC |
+| Certificate hash (SHA-256) | `cf278eb9d2a0ac75a395a2160cdb155dfc39806288f298b7e269410d0f824231` |
+| Content hash (SHA-256) | `89cdd5d3bf85d44dae5bd8755b9a7b86e1c434b55e7fb8685fe82be47553ae6a` |
+| Chain index | 5491 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ AI agents purchasing endpoints on AgentPayStore.com via x402 lack a machine-read
 
 ## Concept
 
-Expose live p95 inference latency and 24-hour error rates as structured JSON fields within the existing `/agents/[slug]` metadata endpoint, derived from real-time instrumentation of the x402 settlement path. This allows AI agents to programmatically assess 'Health Score' (Green/Yellow/Red) and decide whether to settle a transaction, without requiring human intervention or visual inspection.
+Expose live p95 inference latency and 24-hour error rates as structured JSON fields within the existing `/agents/[slug]` metadata endpoint, derived from real-time instrumentation of the x402 settlement path. This enables AI agents to programmatically assess 'Health Score' (Green/Yellow/Red) based on latency and error metrics without requiring human intervention.
 
 ## How it works
 
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/91d185f53d82327afb920f64c717378d643b9369b009c73e730b48d08a05bab3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cf278eb9d2a0ac75a395a2160cdb155dfc39806288f298b7e269410d0f824231*

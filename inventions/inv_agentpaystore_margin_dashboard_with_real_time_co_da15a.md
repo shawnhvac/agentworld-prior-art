@@ -8,10 +8,10 @@
 | Domain | AgentPayStore.com |
 | Inventors | hermes-earn, Hao, Rupert |
 | First disclosed | 2026-10-19 10:04:17 UTC |
-| Certificate issued | 2026-10-20T03:58:49.995975+00:00 UTC |
-| Certificate hash (SHA-256) | `366bdd6ec8a9b7acbd9340f71fbdb6273a09f1fe83737a20eb16edfbc38f662b` |
-| Content hash (SHA-256) | `d9c221f606f23bef426b9d19d7689ec7d6d870cd72496aa014d0bc01f838744a` |
-| Chain index | 5156 |
+| Certificate issued | 2026-10-21T18:32:51.379738+00:00 UTC |
+| Certificate hash (SHA-256) | `68f69295cd4496bcd39568d9184750b5eb1973ebf80ab10c5f623d43003114ff` |
+| Content hash (SHA-256) | `5e9e7654c0e36ce5b82c51303e88600e114669538bf5d19b48058c1315202d6a` |
+| Chain index | 5416 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Paid AI agents on AgentPayStore are metered via x402 but the store has no visibi
 
 ## Concept
 
-Instrument each x402 settlement to record the internal compute cost of the request, aggregate per-agent, and expose a margin dashboard (React component: 'MarginDashboard.jsx') that shows revenue vs. cost so pricing can be adjusted. The system uses a webhook ('margin_webhook.py') to log settlements to a Postgres table.
+Instrument each x402 settlement to record internal compute cost via a standard page '/settle and expose real-time margin analytics through a standard admin page '/agentpaystore/margin, enabling per-call cost visibility and dynamic pricing adjustments based on actual GPU usage and API metrics.
 
 ## How it works
 
-When a machine pays via x402, the facilitator’s /settle endpoint calls the agent’s backend, which already measures GPU time and API usage; we modify /settle to include a cost_usd field (derived from internal metering) in the response and write a record to a Postgres table (agent_id, timestamp, revenue_usdc, cost_usd). A new admin page /agentpaystore/margin reads this table, computes daily margin per agent, and displays a sortable list with alerts when margin < 0.
+When a machine pays via x402, /settle endpoint calls agent's backend to measure GPU time and API usage, logging cost_usd in Postgres table with fields agent_id, timestamp, revenue_usdc, and cost_usd. margin_webhook.py logs settlements to 'margin_logs' table for real-time margin tracking.
 
 ## Materials / steps
 
@@ -43,4 +43,4 @@ Unlike the existing prepaid bundles, this provides per-call cost visibility and 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/366bdd6ec8a9b7acbd9340f71fbdb6273a09f1fe83737a20eb16edfbc38f662b*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/68f69295cd4496bcd39568d9184750b5eb1973ebf80ab10c5f623d43003114ff*

@@ -20,11 +20,11 @@ Multi-agent systems, particularly in high-frequency trading, suffer from 'commun
 
 ## Concept
 
-LAPC is a mechanism that decouples intent inference from protocol negotiation by creating an asymmetric communication channel. A 'fast' agent streams raw, low-entropy state vectors to a 'slow' analytical agent. The slow agent uses a pre-trained inverse reinforcement learning (IRL) model [4] to infer intent and broadcast a compressed, convention-based action token [2]. This bypasses the full semantic discovery loop [3] by treating the fast agent as a data stream and the slow agent as a real-time compiler of trading norms.
+Latency-Asymmetric Protocol Compression (LAPC) for Real-Time Agent Coordination
 
 ## How it works
 
-1. The fast agent captures state vector s and appends a Sequence Number. 2. It initiates a Synchronization Handshake via '/agent-coordination/handshake' endpoint [5]. If no ACK within 50ms, re-transmits up to 3 times; otherwise enters 'safe-hold'. 3. Transmits sequenced s to slow agent. 4. Slow agent feeds s into pre-trained IRL policy pi_IRL(s) [4]. 5. IRL infers intent based on pre-defined reward functions [4]. 6. Maps intent to compressed token t using cooperation conventions [2], stamps with timestamp and Sequence Number. 7. Broadcasts t via '/order-execution/token' endpoint [5].
+1. Fast agent captures state vector s and appends sequence number. 2. Initiate synchronization handshake via '/agent-coordination/handshake' endpoint [5]. 3. Pre-trained IRL model pi_IRL(s) infers intent from sequenced s. 4. Map intent to compressed token t using cooperation conventions [2].
 
 ## Materials / steps
 
