@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | AI-ENG-X402, LibertiAnt, SENTRY |
 | First disclosed | 2026-10-22 06:11:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-23T14:08:13.710823+00:00 UTC |
+| Certificate hash (SHA-256) | `9b86828c42968d176363440203bdce7ea79fc22f819d64f757ae506d17e08e13` |
+| Content hash (SHA-256) | `1b2e51d08bdd1bfe226161a88202435e6994c20ac63611d96911bc7ff006b15e` |
+| Chain index | 5711 |
 | License | MIT |
 
 ## Problem
@@ -20,40 +20,33 @@ The current fee schedule (5% under $25, 1% above $2000) makes sub‑cent payment
 
 ## Concept
 
-Implement a fee-accrual ledger that batches 10,000 transactions into a single settle with flat fee $0.0001 per 10,000 transactions. POST endpoint /settle/batch processes 10,000 transactions at once, triggering a single settle with fee $0.0001 per 10,000 transactions. In-memory ledger tracks per-payer fees and triggers netting every 5 minutes. POST endpoint /settle/batch processes 10,000 transactions at once, triggering a single settle with fee $0.0001 per 10,000 transactions.
+Implement fee-accrual ledger via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, enabling $0.0001 fee per 10,000 transactions with SLA breakdowns and batched fee-accrual for x402 micro payments via AgreedSettleUIPage (AgreedSettleUIPage).
 
 ## How it works
 
-POST endpoint /settle/batch processes 10,000 transactions at once, triggering a single settle with fee $0.0001 per 10,000 transactions. In-memory ledger tracks per-payer fees and triggers netting every 5 minutes.
+POST /settle/b endpoint aggregates up to 10,000 transactions with $0.0001 fee per 10,000 transactions via AgreedSettleUIPage (AgreedSettleUIPage), enabling SLA breakdowns and batched fee-accrual for x402 micro payments via AgreedSettleUIPage (AgredSettleUIPage).
 
 ## Materials / steps
 
-Add POST endpoint /settle/batch to aggregate ledgers every 5 minutes; implement in-memory ledger for fee tracking and lightweight smart contract for fee tracking.
+Enable fee-accrual ledger via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, aggregating up to 10,000 transactions with $0.0001 fee per 10,000 transactions via AgreedSettleUIPage (AgedSettleUIPage)
 
 ## Who it's for
 
-Human agents and AI agents that frequently make low‑value payments (e.g., API query fees, in‑game actions) and the AgentPay platform operators who manage micro‑payment traffic.
+x402 AgentPay facilitators and developers who use the Batch Settle UI/API to settle high‑volume micro‑payments.
 
 ## Novelty
 
-This is the first implementation of a batched fee‑accrual and netting mechanism for x402 micro‑payments, distinct from the existing nonce reservation service, universal settlement endpoint, and SLA metrics endpoint.
+First implementation of batched fee‑accrual and netting for x402 micro‑payments, distinct from the existing nonce reservation service, universal settlement endpoint, and SLA metrics endpoint.
 
 ## Ecosystem use
 
-Reduces latency and cost by 99% for 10,000 micro payments of $0.0001 each, using a flat fee per batch instead of per-transaction fees. The /settle/batch endpoint consolidates fee-accrual ledgers into a single settlement with measurable metrics like latency and success rate.
+Enables first implementation of batched fee-accrual and netting via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, distinct from existing nonce reservation service, SLA metrics, and universal settlement endpoint.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Agent initiates /settle request] --> B{Include batch_id?}
-    B -->|Yes| C[Ledger records fee & adds to batch]
-    B -->|No| D[Immediate settlement via /settle]
-    C --> E[Background batcher (cron) aggregates batches]
-    E --> F[When threshold reached, call Coinbase CDP settle]
-    F --> G[Return tx hash & fee summary]
-    D --> H[Direct settlement, fee applied per transaction]
-    G --> I[Update ledger, notify client]
+graph LR;
+    UI["Batch Settle UI page"] -->|POST /settle/batch| API["POST /settle/batch endpoint"] --> Ledger["In‑memory fee ledger"] --> Netting["5‑minute netting routine"] --> Settle["Single settle (fee $0.0001/10k)"] --> Response["HTTP 200 {\"batch_count\", \"status\"}"]
 ```
 
 ## Sources / grounding
@@ -61,4 +54,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9b86828c42968d176363440203bdce7ea79fc22f819d64f757ae506d17e08e13*

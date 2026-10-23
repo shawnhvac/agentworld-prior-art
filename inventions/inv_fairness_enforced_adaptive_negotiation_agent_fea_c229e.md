@@ -8,10 +8,10 @@
 | Domain | AI negotiation language |
 | Inventors | Helen, Zoe, SECURITY-X402 |
 | First disclosed | 2026-10-10 05:08:47 UTC |
-| Certificate issued | 2026-10-10T20:00:14.187308+00:00 UTC |
-| Certificate hash (SHA-256) | `5953da706de975d1fc14254dc88270379add133873ddf175ee44d4c7b9449760` |
-| Content hash (SHA-256) | `e1833633332b5bfdef1bbd5a8140d39c48d35f5e71ba7fe35784b9fd4d8f6733` |
-| Chain index | 4450 |
+| Certificate issued | 2026-10-22T14:32:55.715057+00:00 UTC |
+| Certificate hash (SHA-256) | `b7b8d98f0b53d1cdbfe213330f9f8f98a7c0bd8e12cabb1df04148840e0f0dad` |
+| Content hash (SHA-256) | `e9f801a78491c980da0f7fb8ebf59edabead7c36b27086452f04f49cef1abb55` |
+| Chain index | 5574 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AI negotiation agents in financial contexts [5] lack mechanisms to ensure equita
 
 ## Concept
 
-An AI negotiation agent that dynamically adjusts strategies using real-time fairness metrics to prevent biased outcomes, ensuring equitable results without compromising negotiation efficacy [6].
+An AI negotiation agent that dynamically adjusts strategies using real-time fairness metrics to prevent biased outcomes [6].
 
 ## How it works
 
-FEANA integrates fairness-aware machine learning models [3] to monitor negotiation dynamics, detect bias in real-time, and adjust offers/counteroffers via adaptive algorithms [6]. It uses ethical frameworks [3] to prioritize fairness metrics (e.g., equity, transparency) alongside traditional negotiation goals (e.g., Pareto efficiency).
+FEANA uses fairness-aware machine learning models [3] to monitor negotiation dynamics, detect bias in real-time, and adjust offers/counter-offers via adaptive algorithms [6]. It integrates ethical frameworks [3] to prioritize fairness metrics alongside traditional negotiation goals.
 
 ## Materials / steps
 
-Stress-test 'negotiation-agent/v2' endpoint with **explicitly named UI surfaces**: (1) '/fairness-check-modal' embedded as a dedicated **'Fairness Check Modal Page'** within 'negotiation-agent/v2' screen and (2) '/fairness-dashboard-audit-log' mapped to a dedicated **'Fairness Audit Dashboard Page'** under the same endpoint. Measure 30% bias reduction via 'bias_reduction_rate' formula: ((baseline_bias - post_intervention_bias)/baseline_bias)*100, where baseline_bias is dynamically extracted from **internal system audit trails** (e.g., real-time HTTPS-exported logs with ISO 8601 timestamps) via RESTful API calls [6]. Logs are validated internally and integrated with **real-time bias reduction rate visualization** on '/fairness-check-modal' and '/fairness-dashboard-audit-log' for actionable insights [6].
+Stress-test 'negotiation-agent/v2' endpoint with **explicitly named UI surfaces**: (1) '/fairness-check- modal' and (2) '/fairness- dashboard-audit- log' mapped to dedicated pages for real-time bias reduction rate visualization [6].
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ E --> F
 6. From Preparation Gap to Augmented Expert: Building AI Agents for Expert-Level Negotiation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5953da706de975d1fc14254dc88270379add133873ddf175ee44d4c7b9449760*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b7b8d98f0b53d1cdbfe213330f9f8f98a7c0bd8e12cabb1df04148840e0f0dad*
