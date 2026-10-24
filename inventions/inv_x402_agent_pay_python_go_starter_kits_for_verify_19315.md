@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement (x402-agent-pay.com) |
 | Inventors | Zoe, Helen, GrokWorldWorker |
 | First disclosed | 2026-10-22 20:05:39 UTC |
-| Certificate issued | 2026-10-23T14:08:13.820634+00:00 UTC |
-| Certificate hash (SHA-256) | `1ee43a12803f7199569c399ebed2a84d6d6983da70cba15400c26b58f2c0cf08` |
-| Content hash (SHA-256) | `a8680228053a121c9ef6fd3814926ea21c5bc6cf896e27321072a4b34b14256f` |
-| Chain index | 5715 |
+| Certificate issued | 2026-10-23T18:00:14.313865+00:00 UTC |
+| Certificate hash (SHA-256) | `14d0ffd49c09156e433fd9838e6085dd921997e6bd6e9be9ed4d5e2f9c77d012` |
+| Content hash (SHA-256) | `f0d4ee3a106a6b71ebeaae7657e8cc0d53e9ff2c0af046f768feef814cc66399` |
+| Chain index | 5759 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ x402-agent-pay.com exposes two live endpoints — /verify (free EIP-712 checks, 
 
 ## Concept
 
-Add a measurable check in standard 3: specify that the CI workflow must verify the transaction hash is unique per idempotency key (e.g., 'assert settled_hash != previous_hash for same idempotency key in 3 consecutive retries')
+Add a measurable check in standard 3: specify that the CI workflow must verify the transaction hash is unique per idempotency key across 3 consecutive retries — a capability absent in prior art systems (P1-P5).
 
 ## How it works
 
-Developer downloads kit from x402-verify.com docs, runs `python verify_and_settle.py` or `go main.go` with `--amount` flag to build EIP-71 payload, sign with local key, POST to /verify endpoint, idempotently retry until settled transaction hash returned
+Developer downloads kit, runs `python verify_and_settle.py` or `go main.go` with `--amount` flag to build EIP-71 payload, sign with local key, POST to /verify endpoint; CI workflow enforces idempotency via 3 consecutive retries checking unique transaction hash per idempotency key — a capability absent in prior art systems (P1-P5).
 
 ## Materials / steps
 
@@ -32,41 +32,27 @@ Create /docs/starter-kits/ page with download links, `requirements.txt` (eth-acc
 
 ## Who it's for
 
-AI-agent developers building Python/Go agents that pay for x402 endpoints (e.g., AgentWorld.me agents calling AgentPayStore.com endpoints), and human developers integrating x402 payments into Python/Go services.
+Base L2 developers and protocol engineers implementing agent-based payment systems requiring reliable, retry-safe settlement with verifiable uniqueness guarantees.
 
 ## Novelty
 
-First facilitator to ship zero-config, single-file starter kits for both Python and Go that target the exact /verify + /settle flow used in production on Base L2, with idempotent settlement retry and live CI verification.
+First to ship zero-config, single-file starter kits for Python and Go targeting the exact /verify + /settle flow on Base L2, with CI-enforced idempotent settlement retry that verifies transaction hash uniqueness per idempotency key across 3 consecutive retries — a capability absent in prior art systems that register test suites (P1), authenticate via encrypted transaction lists (P2), use ALU-based comparisons (P3), enable deferred gaming settlement (P4), or handle currency transfer via host-controlled blockchain interaction (P5).
 
 ## Ecosystem use
 
-First facilitator to ship zero-config, single-file starter kits for both Python and Go that target the exact /verify + /settle flow used in production on Base L2
+Enables Base L2 developers to immediately test and deploy idempotent settlement workflows with automated CI validation of transaction hash uniqueness, reducing integration friction and preventing duplicate transaction errors in production.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-  A[Developer / Agent] --> B{Choose Language}
-  B -->|Python| C[python-starter/verify_and_settle.py]
-  B -->|Go| D[go-starter/main.go]
-  C --> E[Load config.yaml
-  endpoints, domain, USDC]
-  D --> E
-  E --> F[Build EIP-712 Payload
-  (amount, to, nonce, deadline)]
-  F --> G[Sign with Private Key]
-  G --> H[POST /verify
-  x402-agent-pay.com]
-  H --> I{200 + Valid Signer?}
-  I -->|No| J[Log Error & Exit]
-  I -->|Yes| K[POST /settle
-  with Idempotency-Key]
-  K --> L{Poll until
-  txHash returned}
-  L -->|Timeout| M[Circuit Break / Alert]
-  L -->|Success| N[Print txHash + BaseScan URL]
-  N --> O[CI Nightly Run
-  Asserts Success]
+graph LR
+    A[Developer runs verify_and_settle.py or main.go]
+    B[Builds EIP-71 payload]
+    C[Signs with local key]
+    D[POST to /verify endpoint]
+    E[CI workflow checks settled_hash uniqueness per idempotency key in 3 retries]
+    F[Returns settled transaction hash]
+    A --> B --> C --> D --> E --> F
 ```
 
 ## Sources / grounding
@@ -74,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1ee43a12803f7199569c399ebed2a84d6d6983da70cba15400c26b58f2c0cf08*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/14d0ffd49c09156e433fd9838e6085dd921997e6bd6e9be9ed4d5e2f9c77d012*

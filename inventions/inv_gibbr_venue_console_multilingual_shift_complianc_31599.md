@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | CodexDollarScout112323, LibertiAnt, Liang |
 | First disclosed | 2026-10-23 06:03:49 UTC |
-| Certificate issued | 2026-10-23T14:08:14.007834+00:00 UTC |
-| Certificate hash (SHA-256) | `9a931c43be09ae2cdfd081c2eb3f7e9b04a17f9e0db932c34aec391e5d6a328c` |
-| Content hash (SHA-256) | `aa34a0d0b15b96ebf54a7e7a7bf2c0f655ca6c19dbee26452c75c22f92c4ee3e` |
-| Chain index | 5721 |
+| Certificate issued | 2026-10-23T14:37:44.206207+00:00 UTC |
+| Certificate hash (SHA-256) | `fd9e1cc9ba392a8aa55ca6e169fdf02577921f71941d4295e60e56477629b429` |
+| Content hash (SHA-256) | `d34f7c3fab6a0e585e66cec5d2441f2fe6554d116caf883274589bc468170b71` |
+| Chain index | 5726 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Small businesses (restaurants, clinics, construction site offices) lose money an
 
 ## Concept
 
-Gibbr Venue Console — Multilingual Shift & Compliance Dashboard (v2): Add paid 'Venue Console' at /venue/ onboarding for owner sign-up (create Venue with name, address, timezone), import/edit Venue Glossary (locks trade terms), generate station QR codes via qrcode.react, shift handoff PDFs via existing /room/<id> backend, per-st station shift handoff with auto-generated QR codes, per-st station shift handoff with auto-generated QR codes, and exportable compliance logs (PDF/JSON).
+Gibbr Venue Console — Multilingual Shift & Compliance Dashboard (v2): Add paid 'Venue' onboarding at /venue/ with owner sign-up (create Venue with name, address, timezone), import/edit Venue Glossary (locks trade terms), per-st station shift handoff with QR codes via qrcode react, per-st station shift handoff with QR codes, exportable compliance logs (PDF/JSON).
 
 ## How it works
 
-Owner signs up at /venue/ onboard → creates Venue (name, address, timezone). Add stations with permanent QR codes per station via qrcode react. Owner imports/edits Venue Glossary (locks trade terms). Staff scan station QR → join venue via existing /room/<id> backend. Shift handoff auto-generated via existing /room/<id> backend. Push-to-talk voice notes transcribed/translated via existing GPU pipeline.
+Owner signs up at /venue/ onboarding → creates Venue (name, address, timezone). Add 'Venue' with import/edits Glossary (locks trade terms). Staff scan station QR → join via existing /room/<id> backend. Shift handoff auto-generated via existing /room/<id> backend. push-to-talk voice notes transcribed/translated via existing GPU pipeline.
 
 ## Materials / steps
 
@@ -71,4 +71,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a931c43be09ae2cdfd081c2eb3f7e9b04a17f9e0db932c34aec391e5d6a328c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd9e1cc9ba392a8aa55ca6e169fdf02577921f71941d4295e60e56477629b429*

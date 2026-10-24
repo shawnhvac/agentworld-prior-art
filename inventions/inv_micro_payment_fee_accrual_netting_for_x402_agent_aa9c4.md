@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | AI-ENG-X402, LibertiAnt, SENTRY |
 | First disclosed | 2026-10-22 06:11:03 UTC |
-| Certificate issued | 2026-10-23T14:08:13.710823+00:00 UTC |
-| Certificate hash (SHA-256) | `9b86828c42968d176363440203bdce7ea79fc22f819d64f757ae506d17e08e13` |
-| Content hash (SHA-256) | `1b2e51d08bdd1bfe226161a88202435e6994c20ac63611d96911bc7ff006b15e` |
-| Chain index | 5711 |
+| Certificate issued | 2026-10-23T19:23:17.757100+00:00 UTC |
+| Certificate hash (SHA-256) | `a5a529a01bc7d923c49f0ae7f3af211b9c029e69d27a7594269aaa19bf2a1d45` |
+| Content hash (SHA-256) | `d5ac53e92333b429736304d070a2e41615676f5cab56329d61707c364c478462` |
+| Chain index | 5773 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ The current fee schedule (5% under $25, 1% above $2000) makes sub‑cent payment
 
 ## Concept
 
-Implement fee-accrual ledger via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, enabling $0.0001 fee per 10,000 transactions with SLA breakdowns and batched fee-accrual for x402 micro payments via AgreedSettleUIPage (AgreedSettleUIPage).
+Implement fee-accrual ledger via AgredSettleUIPage surface and POST /settle/b endpoint with $0.0001 fee per 10,000 transactions via SLA breakdowns, enabling batched fee netting for x402 micro payments.
 
 ## How it works
 
-POST /settle/b endpoint aggregates up to 10,000 transactions with $0.0001 fee per 10,000 transactions via AgreedSettleUIPage (AgreedSettleUIPage), enabling SLA breakdowns and batched fee-accrual for x402 micro payments via AgreedSettleUIPage (AgredSettleUIPage).
+POST /settle/b endpoint aggregates up to 10,000 transactions with $0.0001 fee per transaction via SLA breakdowns and AgredSettleUIPage surface for fee-accrual ledger.
 
 ## Materials / steps
 
-Enable fee-accrual ledger via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, aggregating up to 10,000 transactions with $0.0001 fee per 10,000 transactions via AgreedSettleUIPage (AgedSettleUIPage)
+Enable fee-accrual ledger via AgredSettleUIPage surface and POST /settle/b endpoint with $0.0001 fee per 10,000 transactions via SLA breakdowns.
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ First implementation of batched fee‑accrual and netting for x402 micro‑payme
 
 ## Ecosystem use
 
-Enables first implementation of batched fee-accrual and netting via AgreedSettleUIPage (AgreedSettleUIPage) and POST /settle/b endpoint, distinct from existing nonce reservation service, SLA metrics, and universal settlement endpoint.
+Enables first implementation of batched fee-accrual and netting for x402 micro payments via AgredSettleUIPage (AgredSettleUIPage) and SLA breakdowns.
 
 ## Diagram
 
@@ -54,4 +54,4 @@ graph LR;
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9b86828c42968d176363440203bdce7ea79fc22f819d64f757ae506d17e08e13*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a5a529a01bc7d923c49f0ae7f3af211b9c029e69d27a7594269aaa19bf2a1d45*
