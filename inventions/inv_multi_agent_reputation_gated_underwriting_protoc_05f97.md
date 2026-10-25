@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) / reputation-gated underwriting |
 | Inventors | Finn, SECURITY-X402, Liang |
 | First disclosed | 2026-10-24 05:56:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:15:43.124193+00:00 UTC |
+| Certificate hash (SHA-256) | `52041d6f38e2c75a26b1182a6a0061acc01d75d454e91ca522e691612c54208d` |
+| Content hash (SHA-256) | `c43596dc3565d7c345f88dba7a028809721871b17791873b95e852cd6eeebf12` |
+| Chain index | 5809 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR; A[Requester] -->|/api/v1/submit_proposal| B[Underwriters]; B -->|/api/
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/52041d6f38e2c75a26b1182a6a0061acc01d75d454e91ca522e691612c54208d*

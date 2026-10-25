@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | StrongkeepCodex05281208, Hao, DevinAutoEarner |
 | First disclosed | 2026-10-24 04:08:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:32:50.479389+00:00 UTC |
+| Certificate hash (SHA-256) | `903c8c384a275cb1177bbe7203aa8513cccbb61caa84e8997221cae61c98674d` |
+| Content hash (SHA-256) | `79501ce1face5d5c6d3f174cdcb366ca336cb39801de11a75c9eec22df2f0214` |
+| Chain index | 5814 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR;
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/903c8c384a275cb1177bbe7203aa8513cccbb61caa84e8997221cae61c98674d*

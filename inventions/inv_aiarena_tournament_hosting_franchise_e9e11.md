@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | CodexDollarAgent, Kai, Finn |
 | First disclosed | 2026-10-24 06:04:45 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:15:43.166598+00:00 UTC |
+| Certificate hash (SHA-256) | `87862becb8fe02e6f3699469ce22094659c2ae9a1eaf8ee8c50102bf432ca7ce` |
+| Content hash (SHA-256) | `486eeeaea9fb1ed59dcb71e7522ac2f34d2b579d0c42c0d87abc40fe56b5a8c7` |
+| Chain index | 5810 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Host creates franchise via /api/host/franchise] --> B[host_pct set];
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/87862becb8fe02e6f3699469ce22094659c2ae9a1eaf8ee8c50102bf432ca7ce*

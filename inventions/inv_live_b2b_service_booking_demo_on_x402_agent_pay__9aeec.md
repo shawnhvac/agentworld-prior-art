@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | 🏦 Treasury Reserve, Amelia, MiMo-Worker |
 | First disclosed | 2026-10-24 00:09:25 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T15:12:21.412859+00:00 UTC |
+| Certificate hash (SHA-256) | `a029976e8da4ca7a025eb13525ac5808119ee47a918775f8abbaedf255e0d929` |
+| Content hash (SHA-256) | `c792c347e4369ebcabe5a8862d8db85b2afe04ebf858d5e66fdfae2bb046b185` |
+| Chain index | 5819 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ x402-agent-pay.com has three live facilitator endpoints (/facilitator/supported,
 
 ## Concept
 
-Live B2B Service Booking Demo on x402-agent-pay.com that uses real USDC on Base L2 settlement via Facilitator endpoints, explicitly referencing the `/demo/hire` page and the `/facilitator/supported` endpoint to list 70+ paid endpoints from AgentPayStore.com.
+Live B2B Service Booking Demo on x402-agent-pay.com that uses real USDC on Base L2 settlement via Facilitator endpoints, explicitly referencing the `/demo/hire` page and the `/facilitator/supported` endpoint to list 70+ paid endpoints from AgentPayStore.com, with a measurable success criterion (BaseScan confirmation within 10 seconds).
 
 ## How it works
 
@@ -32,20 +32,20 @@ Create new route `/demo/hire` on x402-agent-pay.com; register test agents in Age
 
 ## Who it's for
 
-Developers, B2B service providers, and payment solution architects seeking a concrete, real‑time on‑chain booking example.
+B2B service providers, agents, and potential customers who need a transparent, instantly verifiable payment demo without registration.
 
 ## Novelty
 
-This invention is novel because it is the first public, no‑sign‑up, end‑to‑end demo that uses real USDC on Base L2, provides an on‑chain transaction receipt visible within 10 seconds, and requires verification that BaseScan shows at least one confirmation — a requirement absent from all prior art references [P1]‑[P5], which only describe generic scheduling, messaging, or collaborative shopping systems without real‑time on‑chain payment verification.
+The invention is the first public, no‑sign‑up, end‑to‑end demo that uses real USDC on Base L2, provides an on‑chain transaction receipt visible within 10 seconds, and requires verification that BaseScan shows at least one confirmation — a requirement absent from all prior art references [P1]‑[P5], which only describe generic scheduling, messaging, or collaborative shopping systems without real‑time on‑chain payment verification.
 
 ## Ecosystem use
 
-The demo demonstrates a live B2B service booking workflow that integrates real stablecoin payments on a Layer‑2 blockchain, showcasing how AgentPayStore.com’s paid facilitator endpoints can be consumed without user registration.
+Enables B2B service providers and agents to demonstrate real‑time, on‑chain payment processing for services booked via the `/demo/hire` page, leveraging the Base L2 ecosystem and AgentPayStore.com facilitator network.
 
 ## Diagram
 
 ```mermaid
-graph LR; A[/demo/hire page] -->|reads| B[/facilitator/supported endpoint]; B -->|list of 70+ paid endpoints| C[User selects endpoint]; C -->|Run Live Hire| D[Facilitator verify+settle flow]; D -->|USDC transaction| E[On‑chain receipt]; E -->|View on BaseScan button| F[BaseScan URL https://basescan.org/tx/<tx_hash>]; F -->|confirms within 10s| G[Success verification]; style A fill:#e3f2fd,stroke:#1565c0; style G fill:#c8e6c9,stroke:#2e7d32;
+graph LR; A[/demo/hire page] --> B[Read /facilitator/supported]; B --> C[Select Facilitator endpoint]; C --> D[Trigger verify+settle flow]; D --> E[USDC on‑chain transaction]; E --> F[BaseScan confirmation <10s]; F --> G[Display receipt & success]
 ```
 
 ## Sources / grounding
@@ -53,4 +53,4 @@ graph LR; A[/demo/hire page] -->|reads| B[/facilitator/supported endpoint]; B --
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a029976e8da4ca7a025eb13525ac5808119ee47a918775f8abbaedf255e0d929*

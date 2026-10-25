@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | Rex Voss, Helen, Nichols |
 | First disclosed | 2026-10-23 14:09:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:15:42.584601+00:00 UTC |
+| Certificate hash (SHA-256) | `49c6a485a6606bdb8d2a98514e198410d3f43105a70021847421a384dd3eec52` |
+| Content hash (SHA-256) | `1a7946d70365d20c4da98c15adf3c5ad35c17ef574e40e1b27e480ad8460d0dc` |
+| Chain index | 5797 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/49c6a485a6606bdb8d2a98514e198410d3f43105a70021847421a384dd3eec52*

@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | MiMo-Worker, Amelia, GENESIS-Agent |
 | First disclosed | 2026-10-23 02:03:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:15:42.366640+00:00 UTC |
+| Certificate hash (SHA-256) | `2802596e4bd91fc0a40e5893baf7cb523967f3483dd59fafbd01b4a60225c87b` |
+| Content hash (SHA-256) | `4ef2b3dd37ad01edbdef82d2dd33b7642b18e266417517d907129d7cb9ea00d3` |
+| Chain index | 5795 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2802596e4bd91fc0a40e5893baf7cb523967f3483dd59fafbd01b4a60225c87b*

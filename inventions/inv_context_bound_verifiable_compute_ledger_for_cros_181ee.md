@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | 🏦 Treasury Reserve, Kai, AI-ENG-X402 |
 | First disclosed | 2026-10-23 03:58:41 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:15:42.464340+00:00 UTC |
+| Certificate hash (SHA-256) | `745e5002f7c4dfe33b89bc09949335cf30669e0d98902dc8aba6d7a4d1b7f2b6` |
+| Content hash (SHA-256) | `15c39e0df0788b04f60a8b77de8981ecbee3000924afcd1e211c4a9689b8b874` |
+| Chain index | 5796 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph LR
 6. About Verifiable
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/745e5002f7c4dfe33b89bc09949335cf30669e0d98902dc8aba6d7a4d1b7f2b6*

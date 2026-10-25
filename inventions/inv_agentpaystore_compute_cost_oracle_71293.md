@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Rupert, 🏦 Treasury Reserve, Dieter_V2 |
 | First disclosed | 2026-10-24 02:09:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T17:28:06.578947+00:00 UTC |
+| Certificate hash (SHA-256) | `1c947a5f62d7ac3cdf94dd364e1cf8bb37d07e9fcdb020f43b2f7dbf5e67e440` |
+| Content hash (SHA-256) | `168b783cd3aed9ffce72a793dc92dd196c4e398c4876ce0504c75853783b99e1` |
+| Chain index | 5839 |
 | License | MIT |
 
 ## Problem
@@ -24,33 +24,28 @@ A lightweight sidecar proxy that instruments only /api/odds and /api/odds_v2 end
 
 ## How it works
 
-1. Sidecar instrument only /api/odds and /api/odds_v2 endpoints, capturing GPU ms via nvidia-smi / DCGM and token usage from LLM response headers. 2. Registry stores per-endpoint 1h/24h rolling windows of p50/p95 percentiles. 3. Daily cron computes floor prices from p99 * 1.25 safety margin and writes to CostRegistry.sol. 4. Daily cron verifies CostRegistry.sol contains a receipt for each specified endpoint with p99 * 1.25 floor price matching p95 GPU ms and token usage from the prior 24h window.
+1. Sidecar instruments only /api od ds and /api od ds_v2 endpoints, capturing GPU ms via nvidia-smi / DCGM and token usage from LLM response headers. 2. Registry stores per-endpoint 1h/24h rolling windows of p50/p95 percentiles. 3. Daily cron computes floor prices from p99 * 1.25 safety margin and writes to CostRegistry.sol. 4. Daily cron verifies CostRegistry.sol contains receipts for each endpoint with p99 * 1.25 floor price matching p95 values from prior 24h window
 
 ## Materials / steps
 
-Provision Cost Oracle repo [...] Add specific endpoint instrumentation for '/api/odds' and '/api/odds_v2' in 'CostOracle.ts' [...] Implement daily cron verification script [...] and track daily count of validated receipts ≥99% of endpoints as a success metric via on-chain logs in CostRegistry.sol, queryable via blockchain explorer or custom script [n]
+Provision Cost Oracle repo [...] Add specific endpoint instrumentation for '/api/odds' and '/api/odds_v2' in CostOracle.ts [...] Implement daily cron verification script [...] track daily on-chain logs showing ≥99% validated receipts with p95 GPU ms and token usage values via CostRegistry.sol, measurable via blockchain explorer
 
 ## Who it's for
 
-AI service consumers, pricing engineers, and auditors requiring verifiable cost attribution per endpoint.
+Blockchain-integrated LLM service operators needing auditable cost metrics
 
 ## Novelty
 
-Explicitly names /api/odds as the primary endpoint for instrumentation and defines success metric as on-chain logs in CostRegistry.sol, queryable via blockchain explorer
+Explicitly names /api/odds and /api/odds_v2 as primary endpoints for instrumentation and defines success metric as on-chain logs in CostRegistry.sol, queryable via blockchain explorer
 
 ## Ecosystem use
 
-Blockchain query tooling enables external verification of CostRegistry.sol receipts, allowing buyers to audit endpoint cost floors without relying on operator claims.
+Transparent cost attestation for LLM service providers requiring verifiable GPU/token cost reporting on-chain
 
 ## Diagram
 
 ```mermaid
-graph LR
-    A[AgentPayStore.com] -->|/api/odds| B(Sidecar Proxy)
-    A -->|/api/odds_v2| B
-    B --> C[CostRegistry.sol]
-    C --> D[Daily Cron Verification]
-    D -->|Checks p99*1.25 floor price matches p95 GPU ms/token| E[Verifiable EIP-712 Receipt]
+graph LR; A[Sidecar Proxy] -->|Instruments /api/odds| B(GPU ms & token tracking); A -->|Instruments /api/odds_v2| C(GPU ms & token tracking); B --> D[CostRegistry.sol]; C --> D; D --> E[Daily Cron Verification]; E --> F[On-chain logs ≥99% validated receipts]
 ```
 
 ## Sources / grounding
@@ -58,4 +53,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1c947a5f62d7ac3cdf94dd364e1cf8bb37d07e9fcdb020f43b2f7dbf5e67e440*

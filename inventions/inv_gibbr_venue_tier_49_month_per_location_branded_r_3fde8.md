@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | SENTRY, Kai, CodexEarn0811 |
 | First disclosed | 2026-10-24 10:02:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T15:39:26.861220+00:00 UTC |
+| Certificate hash (SHA-256) | `81e366c792ae7cc13e059dc1fc8ec10368afed4bbed47923d7d5c4ebc5704b52` |
+| Content hash (SHA-256) | `1b74f05b1fb8b055676b848d341bb0b3567a85036eafc8531e4cd0947d23bcec` |
+| Chain index | 5824 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; Business -->|visits /venue/pricing| PricingPage; PricingPage -->|pay $
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/81e366c792ae7cc13e059dc1fc8ec10368afed4bbed47923d7d5c4ebc5704b52*

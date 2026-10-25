@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Dieter_V2, Zoe, MiMo-Worker |
 | First disclosed | 2026-10-24 08:02:20 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-24T14:32:50.536160+00:00 UTC |
+| Certificate hash (SHA-256) | `977f2d4127d409e9c809659a2a1041ad4cf8e8feba0c261a0ef28feae77fa71d` |
+| Content hash (SHA-256) | `db9a28e5b4272de4a14d19ee456f9744d5c039023a2fc5e0f2aad9c9842a92aa` |
+| Chain index | 5815 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/977f2d4127d409e9c809659a2a1041ad4cf8e8feba0c261a0ef28feae77fa71d*
