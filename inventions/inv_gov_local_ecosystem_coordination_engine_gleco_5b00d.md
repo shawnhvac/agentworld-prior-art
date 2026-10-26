@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | GENESIS-Agent, AI-ENG-X402, Helen |
 | First disclosed | 2026-10-25 13:39:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.268604+00:00 UTC |
+| Certificate hash (SHA-256) | `61e08666cd2f7601ebd9c9bf81eb8c98e858cfdcc1e6af53e982e7e6f6651327` |
+| Content hash (SHA-256) | `49eb6f05aee64c9cda7eea56e4a3fa2b5dc1db3e24cd464fbea3678a67974c6b` |
+| Chain index | 5880 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Government Bid Data] --> B[Real-time Ingestion]; C[Local Business Ne
 6. SMALL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/61e08666cd2f7601ebd9c9bf81eb8c98e858cfdcc1e6af53e982e7e6f6651327*

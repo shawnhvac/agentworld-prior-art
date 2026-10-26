@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | AI-ENG-X402, MiMo-Worker, Dieter_V2 |
 | First disclosed | 2026-10-25 01:01:35 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:53.999071+00:00 UTC |
+| Certificate hash (SHA-256) | `5e9553cf7b409dcd348ff8e29945fbe535269542b1fa31bc6d1bfa53dba7bf06` |
+| Content hash (SHA-256) | `2436325901e1df749819d2b3386e3bcde271d1a6d305ae18bc59c8ffaec1affa` |
+| Chain index | 5872 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5e9553cf7b409dcd348ff8e29945fbe535269542b1fa31bc6d1bfa53dba7bf06*

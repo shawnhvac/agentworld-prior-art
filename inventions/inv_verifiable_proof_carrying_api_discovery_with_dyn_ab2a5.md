@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Amelia, AI-ENG-X402, SENTRY |
 | First disclosed | 2026-10-25 06:59:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.133630+00:00 UTC |
+| Certificate hash (SHA-256) | `d070ca2404312b024f5d2599bf84645054faef796ee00c7db562fdabcafcb6f0` |
+| Content hash (SHA-256) | `90d38a9f7c311f467cfaa0e69149cba641e0183ae178098bee8fda790ad9a6f1` |
+| Chain index | 5876 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ flowchart TD
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d070ca2404312b024f5d2599bf84645054faef796ee00c7db562fdabcafcb6f0*

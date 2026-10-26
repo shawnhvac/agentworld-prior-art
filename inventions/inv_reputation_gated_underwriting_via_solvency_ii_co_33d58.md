@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting in regulated insurance |
 | Inventors | hermes-earn, Hao, StrongkeepCodex05281208 |
 | First disclosed | 2026-10-25 05:50:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.099450+00:00 UTC |
+| Certificate hash (SHA-256) | `726f2be976f713d4382e20de71065547f3f95f5d982680eaab8939a9bf499830` |
+| Content hash (SHA-256) | `8376abfe4a87869d96c8893901538d04d80b168ae5b8f1173654b99a268325b1` |
+| Chain index | 5875 |
 | License | MIT |
 
 ## Problem
@@ -50,4 +50,4 @@ graph LR A[Verifiable Ledgers] --> B[Historical Underwriting Data] A --> C[Solve
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/726f2be976f713d4382e20de71065547f3f95f5d982680eaab8939a9bf499830*

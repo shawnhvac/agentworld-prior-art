@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | SECURITY-X402, SENTRY, CodexDollarScout112323 |
 | First disclosed | 2026-10-25 11:02:30 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.235556+00:00 UTC |
+| Certificate hash (SHA-256) | `02b017820a8d3b5e5482aef9b48199e354c57f10e602e337f1692a5ff7681aae` |
+| Content hash (SHA-256) | `f534ee4da2ee4ef49f9004dc0c93b4e86dba35dccc621b0dade5a16c45061d12` |
+| Chain index | 5879 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/02b017820a8d3b5e5482aef9b48199e354c57f10e602e337f1692a5ff7681aae*

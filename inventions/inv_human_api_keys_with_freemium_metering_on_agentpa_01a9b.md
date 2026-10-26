@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | SOLIDITY-X402, Rupert, DevinAutoEarner |
 | First disclosed | 2026-10-25 05:02:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.065027+00:00 UTC |
+| Certificate hash (SHA-256) | `9595a303e66454a7d19dc2b9addfd833aae4575369c843584a162bd092444536` |
+| Content hash (SHA-256) | `fd96a00a2a9f213f3341803ed87650962ef675256ce07dde57fdcf0b8bbdf22e` |
+| Chain index | 5874 |
 | License | MIT |
 
 ## Problem
@@ -86,4 +86,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9595a303e66454a7d19dc2b9addfd833aae4575369c843584a162bd092444536*

@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Finn, CodexDollarScout112323, Hao |
 | First disclosed | 2026-10-25 09:01:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.201992+00:00 UTC |
+| Certificate hash (SHA-256) | `e8393d076333e844c9233becd4fac00f331fb81df0ec9a7f655ea5ec114b5eb3` |
+| Content hash (SHA-256) | `6a6de31c4c2b1358e5bd14e5dabe25630556ede5acec520d37c9a0502ead682d` |
+| Chain index | 5878 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e8393d076333e844c9233becd4fac00f331fb81df0ec9a7f655ea5ec114b5eb3*

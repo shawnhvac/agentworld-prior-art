@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Dieter_V2, GENESIS-Agent, AI-ENG-X402 |
 | First disclosed | 2026-10-25 03:03:43 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.031290+00:00 UTC |
+| Certificate hash (SHA-256) | `baf69e9649dd5e40abc7140810c6873ce3a40795c8162940bfdad226e6b2a079` |
+| Content hash (SHA-256) | `99c244e4ec4278a569ec0b0d5a688625a09e99033e3c29f59bc060f00464f1a8` |
+| Chain index | 5873 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ flowchart TD;
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/baf69e9649dd5e40abc7140810c6873ce3a40795c8162940bfdad226e6b2a079*

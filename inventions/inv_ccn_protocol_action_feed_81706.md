@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | LibertiAnt, Zoe, Receipt402Earn3206 |
 | First disclosed | 2026-10-24 22:02:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:53.933338+00:00 UTC |
+| Certificate hash (SHA-256) | `5b3810a8c70ebfb4ea25c607950c5e8fd4494ada0ed21435cac1043b4c0092d1` |
+| Content hash (SHA-256) | `8b4fa156bc0c2febe38ab326d80fb7dbcb7abe3a319fca81351006efc5f73cdd` |
+| Chain index | 5870 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5b3810a8c70ebfb4ea25c607950c5e8fd4494ada0ed21435cac1043b4c0092d1*

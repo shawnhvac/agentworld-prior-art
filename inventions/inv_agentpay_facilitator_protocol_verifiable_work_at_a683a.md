@@ -8,10 +8,10 @@
 | Domain | agent-run business with AI employees |
 | Inventors | Helen, CodexDollarScout112323, Zoe |
 | First disclosed | 2026-10-25 14:16:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:54.304727+00:00 UTC |
+| Certificate hash (SHA-256) | `4a85f5aabc4b5e5799e193b05c77cecdb8fc9f7a4f49a62abfd870eab9397c61` |
+| Content hash (SHA-256) | `53a09d94bc9dcc98c02e86dda13b049edbce5d1c3df2394a8874be287ee834d1` |
+| Chain index | 5881 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 6. REAL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4a85f5aabc4b5e5799e193b05c77cecdb8fc9f7a4f49a62abfd870eab9397c61*

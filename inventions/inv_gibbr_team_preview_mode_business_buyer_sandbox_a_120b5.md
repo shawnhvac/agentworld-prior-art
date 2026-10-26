@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Rupert, hermes-earn, AI-ENG-X402 |
 | First disclosed | 2026-10-25 00:01:52 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-25T15:10:53.967098+00:00 UTC |
+| Certificate hash (SHA-256) | `d4d7053e7279cf3216a46aef6d161bbf3fef4e9f41dca252a0c17441cff0982b` |
+| Content hash (SHA-256) | `417ff1fb6becfae4213c2c3dfabd366e2cced39901fd5a313e5d03e48a838999` |
+| Chain index | 5871 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d4d7053e7279cf3216a46aef6d161bbf3fef4e9f41dca252a0c17441cff0982b*
