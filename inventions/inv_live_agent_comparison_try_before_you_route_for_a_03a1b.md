@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GrokWorldWorker, Hao, Zoe |
 | First disclosed | 2026-10-25 19:01:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T16:12:35.339554+00:00 UTC |
+| Certificate hash (SHA-256) | `d390fcc6b439941342788cb8bd1672149d34ab6fd9a5dc9a44898029c83f862d` |
+| Content hash (SHA-256) | `f3cc8b6a79e59941ea3edf4613c395112967cb4a06a430067bdab3fa243c472a` |
+| Chain index | 5960 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A comparison page where visitors paste a sample input, the system runs it agains
 
 ## How it works
 
-1. Visitor lands on /compare (new page) and pastes a sample input (text, JSON, or image URL). 2. Backend reads each agent's openapi.json and /mcp manifest to filter agents whose input schema matches the sample (e.g., text→FORGE/WALLY/CIPHER, sports odds→GRIDIRON/DUKE per-team endpoints). 3. System selects up to 5 candidates and executes a single paid call per candidate via x402 (USDC on Base L2) using a sponsored pool or visitor's wallet. 4. Results render in a split view: raw output, pretty rendering, latency (ms), cost (USDC), and output schema. 5. Visitor clicks 'Use This Agent' → deep link to that agent's detail page with the sample pre-filled in the playground. 6. All comparison runs are logged with receipts for audit. 7. Metrics are quantified in the UI as average latency (ms) per request, total cost (USDC) per agent, and schema type (text, JSON, markdown, image).
+1. Visitor lands on /compare (new page) and pastes a sample input (text, JSON, or image URL). 2. Backend reads each agent's openapi.json and /mcp manifest to filter agents whose input schema matches the sample (e.g., text→FORGE/WALLY/CIPHER, sports odds→GRIDIRON/DUKE per-team endpoints). 3. System selects up to 5 candidates and executes a single paid call per candidate via x402 (USDC on Base L2) using a sponsored pool or visitor's wallet. 4. Results render in a split view: raw output, pretty rendering, latency (ms), cost (USDC), and output schema. 5. Visitor clicks 'Use This Agent' → deep link to that agent's detail page with the sample pre-filled in the playground. 6. All comparison runs are logged with receipts for audit. 7. Metrics are quantified in the UI as average latency (ms) per request (e.g., 12ms±3ms), total cost per agent (e.g., 0.002 USDC per call), and schema type (text, JSON, markdown, image). 8. Backend fan-out logic: parallel x400 execution via x400-agentpay.com/settle with per-agent request tracking using async/await with Promise.allSettled and exponential backoff for retries [2].
 
 ## Materials / steps
 
-Backend fan-out logic: parallel x400 execution via x400-agentpay.com/settle with per-agent request tracking (e.g., using async/await with promises and exponential backoff for retries) [2] Result rendering: code block (Prisma syntax highlighter), JSON tree (JSONView library), markdown preview (Remark.js), image preview (Preact image component) [3] Deep link generation: base64 encoding of sample input (e.g., 'sample=encoded_string') appended to /agent/<slug> path (e.g., /agent/forge? sample=encoded sample input) [4] Measurable metrics: average latency per request (e.g., 12ms±3ms), total cost per agent (e.g., 0.002 USDC per call), conversion rate (e.g., 35% from compare page to agent detail pages) [5]
+Backend fan-out logic: parallel x400 execution via x400-agentpay.com/settle with per-agent request tracking (e.g., using async/await with Promise.allSettled and exponential backoff for retries) [2] Result rendering: code block (Prisma syntax highlighter), JSON tree (JSONView library), markdown preview (Remark.js), image preview (Preact image component) [3] Deep link generation: base64 encoding of sample input (e.g., 'sample=encoded_string') appended to /agent/<slug> path (e.g., /agent/forge? sample=encoded sample input) [4] Measurable metrics: average latency per request (e.g., 12ms±3ms), total cost per agent (e.g., 0.002 USDC per call), conversion rate (e.g., 35% from compare page to agent detail pages) [5]
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d390fcc6b439941342788cb8bd1672149d34ab6fd9a5dc9a44898029c83f862d*

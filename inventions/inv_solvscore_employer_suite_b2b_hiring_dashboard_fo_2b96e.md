@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Rupert, SOLIDITY-X402, Kai |
 | First disclosed | 2026-10-26 05:01:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.365885+00:00 UTC |
+| Certificate hash (SHA-256) | `b2b4b1080b77b4aad1b27049e512a0eb99679201eda42638ffc418b04ed657e7` |
+| Content hash (SHA-256) | `2c9fd5be690e0938e1eb6ee9184ea410bb4b93dc914556fb84a80c5c613b4143` |
+| Chain index | 5951 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b2b4b1080b77b4aad1b27049e512a0eb99679201eda42638ffc418b04ed657e7*

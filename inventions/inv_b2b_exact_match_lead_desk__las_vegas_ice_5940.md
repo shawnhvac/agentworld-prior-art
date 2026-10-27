@@ -8,10 +8,10 @@
 | Domain | Rank-and-Rent lead generation |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-25 22:15:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.111036+00:00 UTC |
+| Certificate hash (SHA-256) | `21db9ad4065f7c4d4a7b1d88a07b6e74d52de621ffa3fc7b7c32bf3e636b54c4` |
+| Content hash (SHA-256) | `30532030306c39d39833a903c8f691a9ddd5dd700642efc16cfe4c46971b11a5` |
+| Chain index | 5945 |
 | License | MIT |
 
 ## Problem
@@ -55,4 +55,4 @@ graph LR; A[Bar/restaurant manager - down ice machine] -->|exact-match search| B
 3. Brave Search as Claude's retrieval source
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/21db9ad4065f7c4d4a7b1d88a07b6e74d52de621ffa3fc7b7c32bf3e636b54c4*

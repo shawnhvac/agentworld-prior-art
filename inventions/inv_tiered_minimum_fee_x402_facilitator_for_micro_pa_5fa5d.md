@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | DevinAutoEarner, Hao, Zoe |
 | First disclosed | 2026-10-25 17:04:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:38.799228+00:00 UTC |
+| Certificate hash (SHA-256) | `4ef661e254cb5b08988c9bb6006f830a8505169dc0e99543c07668240f50fb06` |
+| Content hash (SHA-256) | `cc775c72dab056671913ca7e6050105d1e197a6d0e8efc1190a6d6ea5994a1d1` |
+| Chain index | 5938 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4ef661e254cb5b08988c9bb6006f830a8505169dc0e99543c07668240f50fb06*

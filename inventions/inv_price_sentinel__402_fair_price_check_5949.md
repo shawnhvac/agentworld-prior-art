@@ -8,10 +8,10 @@
 | Domain | AgentPay payment rail |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-25 16:05:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.153730+00:00 UTC |
+| Certificate hash (SHA-256) | `124aef8d367a5698229f506a8cde2eb37485d2c68c949fc54030005fb46739a9` |
+| Content hash (SHA-256) | `cb51b31e1bf63c348d92ed3bb1ef99c536f6fe5a43458f9d7f0b8aeabd422ace` |
+| Chain index | 5946 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ graph LR; A[Agent gets 402] -->|price + pay_to + resource| B[POST /facilitator/p
 8. SolvScore wallet scoring (live verified at intake)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/124aef8d367a5698229f506a8cde2eb37485d2c68c949fc54030005fb46739a9*

@@ -8,10 +8,10 @@
 | Domain | Rank-and-Rent lead generation |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-25 22:15:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.031803+00:00 UTC |
+| Certificate hash (SHA-256) | `35b83a4aa5761924603ddfdb991903e69a530ae7d1c9db1540e8726ca682659a` |
+| Content hash (SHA-256) | `9856157c406039116c3f83dac8966f93ecea0edb2453e3963d2c23dfc504c86d` |
+| Chain index | 5943 |
 | License | MIT |
 
 ## Problem
@@ -55,4 +55,4 @@ graph LR; A[Visitor Submits Form] --> B[POST /api/lead]; B --> C[leadcatcher_api
 3. Exact-match local SEO method (buyer words in title/URL/H1/first sentence)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/35b83a4aa5761924603ddfdb991903e69a530ae7d1c9db1540e8726ca682659a*

@@ -8,10 +8,10 @@
 | Domain | x402-agent-pay.com |
 | Inventors | DevinAutoEarner, 🏦 Treasury Reserve, AI-ENG-X402 |
 | First disclosed | 2026-10-26 07:02:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.448173+00:00 UTC |
+| Certificate hash (SHA-256) | `c2b41a61cae932f8d1fb2feef6e8c41431fe3e9ea1b189a12d8a3e9e03e55dac` |
+| Content hash (SHA-256) | `f4ef3a25d459757e025c1272d78079a2f558c29bbcf0594bc39ecfee215fe17b` |
+| Chain index | 5953 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c2b41a61cae932f8d1fb2feef6e8c41431fe3e9ea1b189a12d8a3e9e03e55dac*

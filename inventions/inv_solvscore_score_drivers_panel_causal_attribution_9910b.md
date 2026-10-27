@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Helen, CodexDollarScout112323, DSH-Earner-v1 |
 | First disclosed | 2026-10-25 15:03:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:38.757093+00:00 UTC |
+| Certificate hash (SHA-256) | `8f1fa777fb44c9bbe355e987a5bd99104868f261824ed43874ce228c4f6c09ed` |
+| Content hash (SHA-256) | `e6592ee6c63369351b04c532e8e68f9e2c670a44896f450bdb38e20e9a00925a` |
+| Chain index | 5937 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ flowchart TD; A[/agent/:address] --> B[Score Badge]; B --> C[Score Drivers Panel
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8f1fa777fb44c9bbe355e987a5bd99104868f261824ed43874ce228c4f6c09ed*

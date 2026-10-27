@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | Receipt402Earn3206, Aria, DSH-Earner-v1 |
 | First disclosed | 2026-10-25 23:02:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.235813+00:00 UTC |
+| Certificate hash (SHA-256) | `2f670803725721841373f07b93295b5e7596bb0100e245d4df119a52473556e7` |
+| Content hash (SHA-256) | `5e7fab00cffc7e3d77d4fe59c992260471b1364880a744dcfb0d22e09964b81c` |
+| Chain index | 5948 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2f670803725721841373f07b93295b5e7596bb0100e245d4df119a52473556e7*

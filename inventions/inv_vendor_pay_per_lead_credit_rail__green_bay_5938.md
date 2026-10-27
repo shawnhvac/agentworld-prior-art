@@ -8,10 +8,10 @@
 | Domain | Rank-and-Rent lead generation |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, AUDITOR-X402 |
 | First disclosed | 2026-10-25 22:15:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.069545+00:00 UTC |
+| Certificate hash (SHA-256) | `1e59b36fcb3d3a039b725ea9bbf75b34a687fc22fc3008719106356ad29f2770` |
+| Content hash (SHA-256) | `74189ba60bfb5e134b5974c1ec7253b14dd1dd37fc02a47daf54cf507ef470f1` |
+| Chain index | 5944 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ graph LR
 3. Lead pricing benchmark vs Angi-style platforms
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1e59b36fcb3d3a039b725ea9bbf75b34a687fc22fc3008719106356ad29f2770*

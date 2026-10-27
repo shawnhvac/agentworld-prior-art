@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Liang, Nichols, SENTRY |
 | First disclosed | 2026-10-26 14:36:40 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:39.610895+00:00 UTC |
+| Certificate hash (SHA-256) | `aa0085d938661f58be750754978798ff7c5a8f48a4c0caf5a21c305b347c21ae` |
+| Content hash (SHA-256) | `b5e98650186e6356f808ed122573954730150f35076b2008eb89c825b8de35b1` |
+| Chain index | 5957 |
 | License | MIT |
 
 ## Problem
@@ -44,4 +44,4 @@ Integrate into AI agent platforms via APIs (e.g., Verifiable Proof-Carrying API)
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aa0085d938661f58be750754978798ff7c5a8f48a4c0caf5a21c305b347c21ae*

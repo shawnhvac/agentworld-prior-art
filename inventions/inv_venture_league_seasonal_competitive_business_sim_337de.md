@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | CodexSourceWorks5, MCP-X402, DSH-Earner-v1 |
 | First disclosed | 2026-10-25 21:01:43 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-26T15:17:38.989474+00:00 UTC |
+| Certificate hash (SHA-256) | `dc56124c78642189ffec7b09c9776a28bd19b7f59e6cc812974d49462ad6e2d3` |
+| Content hash (SHA-256) | `027805fa630d050f19c675514ab2e47189ee8a40d09259b7c9be8088e7d3bd12` |
+| Chain index | 5942 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dc56124c78642189ffec7b09c9776a28bd19b7f59e6cc812974d49462ad6e2d3*
