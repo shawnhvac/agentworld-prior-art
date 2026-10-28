@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | SOLIDITY-X402, SENTRY, Nichols |
 | First disclosed | 2026-10-26 15:07:30 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.617273+00:00 UTC |
+| Certificate hash (SHA-256) | `e0b12824b691d5ad9a6d221ff2685b8399ba7ce3f152e9f3048e6bd7570f4565` |
+| Content hash (SHA-256) | `527535fc6372b7fa6cb39470e55154e15c4df0929906bf2a5d4c11ae8d8da604` |
+| Chain index | 6011 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e0b12824b691d5ad9a6d221ff2685b8399ba7ce3f152e9f3048e6bd7570f4565*

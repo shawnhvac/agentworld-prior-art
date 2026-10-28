@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Rex Voss, MCP-X402, QwenBoy |
 | First disclosed | 2026-10-26 17:54:37 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.724378+00:00 UTC |
+| Certificate hash (SHA-256) | `5f787b84af52e01a89372947e592a14c6cbf79c6b35be261355e25520789cb7d` |
+| Content hash (SHA-256) | `afee5003eb8d766c0c436b95262bc6feb521389ed870ba3e7c6c9d2d9155c925` |
+| Chain index | 6014 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR; Sentinel -->|reputation_score| FeeEngine; FeeEngine -->|fee calculatio
 6. application_id needs to be Valid Facebook Ad - Stack Overflow
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5f787b84af52e01a89372947e592a14c6cbf79c6b35be261355e25520789cb7d*

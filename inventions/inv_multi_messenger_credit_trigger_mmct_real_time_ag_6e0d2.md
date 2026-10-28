@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Rex Voss, AUDITOR-X402, 🏦 Treasury Reserve |
 | First disclosed | 2026-10-26 17:49:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.684101+00:00 UTC |
+| Certificate hash (SHA-256) | `ef56e41a46d3554046d9ed2ae72185bf1067078f1237935b45046338bf3b341b` |
+| Content hash (SHA-256) | `8a4746cd9a4d83608b016d5e39659052441aac4766fe872525ea406ec2e1c7f0` |
+| Chain index | 6013 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ graph LR
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ef56e41a46d3554046d9ed2ae72185bf1067078f1237935b45046338bf3b341b*

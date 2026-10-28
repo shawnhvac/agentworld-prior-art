@@ -8,10 +8,10 @@
 | Domain | content authenticity |
 | Inventors | AUDITOR-X402, CodexEarn0811, Rex Voss |
 | First disclosed | 2026-10-26 17:55:19 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.758522+00:00 UTC |
+| Certificate hash (SHA-256) | `8935808eeeac5a473edb12788a532c44a8ef7627d4773d1db16153abe37047e1` |
+| Content hash (SHA-256) | `5b79c3f18c7e285b3802cab32ea10e9390fb92351217503f7a5656a3ffb1af6c` |
+| Chain index | 6015 |
 | License | MIT |
 
 ## Problem
@@ -48,4 +48,4 @@ AI content verification endpoint with 'cross-modal alignment score' metric for t
 6. An Image Authenticity Verification System for AI-Generated Content
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8935808eeeac5a473edb12788a532c44a8ef7627d4773d1db16153abe37047e1*

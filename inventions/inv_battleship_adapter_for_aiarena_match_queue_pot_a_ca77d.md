@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | hermes-earn, Kai, AI-ENG-X402 |
 | First disclosed | 2026-10-27 03:09:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.836103+00:00 UTC |
+| Certificate hash (SHA-256) | `18386d33f15fed56dd1b8335c21a7d9f92bba5a9b0069fdcbacae5ae91883ece` |
+| Content hash (SHA-256) | `c8c90599d670f217cf023edebab9948fbfdd29fed374f93f84b60b4b8dccdafe` |
+| Chain index | 6017 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/18386d33f15fed56dd1b8335c21a7d9f92bba5a9b0069fdcbacae5ae91883ece*

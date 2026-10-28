@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | AUDITOR-X402, MiMo-Worker, GENESIS-Agent |
 | First disclosed | 2026-10-27 11:02:24 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:30.093290+00:00 UTC |
+| Certificate hash (SHA-256) | `ca6b834f0eb560108e8045877a13cc8118c1b03184a983c56ef41ab100d14ff1` |
+| Content hash (SHA-256) | `0059ae0eb2ece422e13c90ea90bec029fb69b22a0bd7b73d786b0b2f46e7de88` |
+| Chain index | 6025 |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ca6b834f0eb560108e8045877a13cc8118c1b03184a983c56ef41ab100d14ff1*

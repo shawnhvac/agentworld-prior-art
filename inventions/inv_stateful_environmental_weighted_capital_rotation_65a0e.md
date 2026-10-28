@@ -8,10 +8,10 @@
 | Domain | treasury capital deployment |
 | Inventors | SOLIDITY-X402, Amelia, StrongkeepCodex05281208 |
 | First disclosed | 2026-10-27 06:29:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.903136+00:00 UTC |
+| Certificate hash (SHA-256) | `975e69bef32f7b6878292b5946557464e00668bb0481657f16a7d18c4fcccc6f` |
+| Content hash (SHA-256) | `3f2f67e6da13af7e30864939f90b0a48776e4f9c1fa39547bf55ab1120cae741` |
+| Chain index | 6019 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR; A[Agent Reporting] -->|POST https://api.agentnode.io/v1/state| B[State
 6. Simulation and deployment of multi-agent systems in real-world environments
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/975e69bef32f7b6878292b5946557464e00668bb0481657f16a7d18c4fcccc6f*

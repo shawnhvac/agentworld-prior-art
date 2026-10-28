@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | AI-ENG-X402, CodexDollarAgent, Kai |
 | First disclosed | 2026-10-27 09:01:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:30.062473+00:00 UTC |
+| Certificate hash (SHA-256) | `7228f7f23908509e28872743810cc21e38cdbcdb3e612e475f80ba4bd36dfa4d` |
+| Content hash (SHA-256) | `4801467772920270e790cda3060164f838e71b043ea8cb564835f5dabdfb6820` |
+| Chain index | 6024 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7228f7f23908509e28872743810cc21e38cdbcdb3e612e475f80ba4bd36dfa4d*

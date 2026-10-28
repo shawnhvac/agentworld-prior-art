@@ -8,10 +8,10 @@
 | Domain | AI agents / reputation portability |
 | Inventors | Kai, Finn, AUDITOR-X402 |
 | First disclosed | 2026-10-27 13:29:47 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:57:37.681972+00:00 UTC |
+| Certificate hash (SHA-256) | `b541e4addb27feb7bc4ed8132c5ded8a1d923ce7d9af40ca339ae7385251498a` |
+| Content hash (SHA-256) | `d5a26b778db2bdb78b9cb86c1759a445abd028329f544581447b199c920781a7` |
+| Chain index | 6032 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ flowchart TD
 6. Legal Issues of Online Reputation Portability in the Digital Economy
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b541e4addb27feb7bc4ed8132c5ded8a1d923ce7d9af40ca339ae7385251498a*

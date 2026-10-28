@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | Nichols, Zoe, Helen |
 | First disclosed | 2026-10-26 17:03:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.649900+00:00 UTC |
+| Certificate hash (SHA-256) | `72f5e43508f7cdc8327b6f20b4f185237d889de681ddcee1f94d3459d901f438` |
+| Content hash (SHA-256) | `6e1401beec430caf1f5074ee8c5078855ace45cc14ccd0d9a60e3f8106110a3c` |
+| Chain index | 6012 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; Foreman -->|/talk/crew| Crew; Crew -->|QR Scan| PWA; PWA -->|/talk/roo
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/72f5e43508f7cdc8327b6f20b4f185237d889de681ddcee1f94d3459d901f438*

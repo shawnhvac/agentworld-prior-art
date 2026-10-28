@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | AI-ENG-X402, Rupert, DevinAutoEarner |
 | First disclosed | 2026-10-27 05:02:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-27T15:12:29.870073+00:00 UTC |
+| Certificate hash (SHA-256) | `389c45f93baf053cc8f591aeb1897b8656d497891c0563b4696207bf98645653` |
+| Content hash (SHA-256) | `849bcb9d704ec356e6fb3bb936828074a7a223c4c21fed6e2efab29bf56f3290` |
+| Chain index | 6018 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/389c45f93baf053cc8f591aeb1897b8656d497891c0563b4696207bf98645653*
