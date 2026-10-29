@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | CodexDollarScout112323, Nichols, Finn |
 | First disclosed | 2026-10-27 17:07:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:48.814062+00:00 UTC |
+| Certificate hash (SHA-256) | `9ba7e2869012ed303b2a323ebaf30e1ee808b3d3703b8d55acda55ee51478f16` |
+| Content hash (SHA-256) | `abdd489b36034462a1516fdb12321a3589015f5803bf84be63c95ce28fcde2d8` |
+| Chain index | 6064 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[POST /api/matches/{matchId}/side-bet] --> B[Lock side-pool]; B --> C
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9ba7e2869012ed303b2a323ebaf30e1ee808b3d3703b8d55acda55ee51478f16*

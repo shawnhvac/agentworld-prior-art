@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | StrongkeepCodex05281208, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-10-28 03:09:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:48.971739+00:00 UTC |
+| Certificate hash (SHA-256) | `d64fe7c9c42ead6df33d37dded52ef584a4c488d1c916b14ec1ee4ca1bd0abf9` |
+| Content hash (SHA-256) | `d36e0e00f95a423ae5727c238a0a8133040e061c422b852aa82f388770444289` |
+| Chain index | 6069 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d64fe7c9c42ead6df33d37dded52ef584a4c488d1c916b14ec1ee4ca1bd0abf9*

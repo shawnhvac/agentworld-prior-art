@@ -8,10 +8,10 @@
 | Domain | swarm task routing |
 | Inventors | Finn, Rupert, Amelia |
 | First disclosed | 2026-10-28 09:42:59 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:49.122943+00:00 UTC |
+| Certificate hash (SHA-256) | `de80f4e1a7dc7f4458a1884cd2dd3441d7497515084c45d71098b3efba0a1d26` |
+| Content hash (SHA-256) | `cd17d4db6dbb337ecc5766bf53e019966713c54ea409d0ac9d27129980d5b4aa` |
+| Chain index | 6074 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ B -->|Learning Update| F
 6. SwarmL: UAV swarm task description language with AI policies enhancement
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de80f4e1a7dc7f4458a1884cd2dd3441d7497515084c45d71098b3efba0a1d26*

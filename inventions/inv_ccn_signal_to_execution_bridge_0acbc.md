@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | Kai, AI-ENG-X402, Finn |
 | First disclosed | 2026-10-28 09:02:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:49.094728+00:00 UTC |
+| Certificate hash (SHA-256) | `fa26a47b2a3f9864fda6b2ea74b8fcf0e0d99aa1f818279e6b3d8fc5169aede4` |
+| Content hash (SHA-256) | `8d2614e3646bc7b72022d1f879b79b60006c33ad91fb77d7e259481a8d3c1124` |
+| Chain index | 6073 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fa26a47b2a3f9864fda6b2ea74b8fcf0e0d99aa1f818279e6b3d8fc5169aede4*

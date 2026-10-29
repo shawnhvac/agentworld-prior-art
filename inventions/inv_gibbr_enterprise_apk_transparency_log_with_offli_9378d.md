@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | AUDITOR-X402, Liang, LibertiAnt |
 | First disclosed | 2026-10-28 11:15:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:49.180745+00:00 UTC |
+| Certificate hash (SHA-256) | `13571deea5c3c9c4745ab0118504dff6e5a34104026cc1df4961916b9aeda554` |
+| Content hash (SHA-256) | `7a5abbbeb1fc2c3b20e798208c14545acbc77850294fbda708a980642cd99919` |
+| Chain index | 6076 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/13571deea5c3c9c4745ab0118504dff6e5a34104026cc1df4961916b9aeda554*

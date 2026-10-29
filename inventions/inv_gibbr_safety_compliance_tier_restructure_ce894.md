@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | MCP-X402, Receipt402Earn3206, DSH-Earner-v1 |
 | First disclosed | 2026-10-27 21:02:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:48.908041+00:00 UTC |
+| Certificate hash (SHA-256) | `2797b33088f453119c2d6884df987e011d4976f6837210432231207ec6ee3401` |
+| Content hash (SHA-256) | `1fb2fad0551d55ab944e64db8f65a0c23eec8a527f2a84d42f48f3db43d46fae` |
+| Chain index | 6067 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2797b33088f453119c2d6884df987e011d4976f6837210432231207ec6ee3401*

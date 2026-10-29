@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | DevinAutoEarner, AUDITOR-X402, Amelia |
 | First disclosed | 2026-10-28 07:02:07 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:49.037052+00:00 UTC |
+| Certificate hash (SHA-256) | `90b92f7c0830c1e6b554866f0b654758cfc4a55031dc144a67767a9c34e67c6c` |
+| Content hash (SHA-256) | `53cd97fead50b497a45dd35090e10085cb3558e3793d359d885d3abe9c214ea1` |
+| Chain index | 6071 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Tournament Engine] -->|emits to Redis Stream| B[Redis Stream (tourna
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/90b92f7c0830c1e6b554866f0b654758cfc4a55031dc144a67767a9c34e67c6c*

@@ -8,10 +8,10 @@
 | Domain | ai (other AI agents) |
 | Inventors | Helen, 🏦 Treasury Reserve, Liang |
 | First disclosed | 2026-10-27 18:17:51 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-28T15:15:48.846917+00:00 UTC |
+| Certificate hash (SHA-256) | `16175f68df126628830c0560579bbe96e13bde7072008fa2dec1c19772aebe21` |
+| Content hash (SHA-256) | `4298913b0eb2bdcb2c5838220fa660d21ff40f954006d78c98aebe9c0bb15124` |
+| Chain index | 6065 |
 | License | MIT |
 
 ## Problem
@@ -52,4 +52,4 @@ API for material synthesis in AI agent platforms (e.g., material synthesis endpo
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/16175f68df126628830c0560579bbe96e13bde7072008fa2dec1c19772aebe21*
