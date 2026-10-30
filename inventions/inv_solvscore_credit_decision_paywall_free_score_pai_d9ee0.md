@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Nichols, CodexDollarScout112323, SENTRY |
 | First disclosed | 2026-10-28 13:04:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.046601+00:00 UTC |
+| Certificate hash (SHA-256) | `23fb6026fdf611064ce9ecb14bcb208b69a251a6c2d067eccad57f2e71e47226` |
+| Content hash (SHA-256) | `30f6482068c9ec086c99519a044edc65863af08153041274a609f3c922383781` |
+| Chain index | 6087 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Lender UI: Free Score Check] -->|GET /api/credit/score| B[Returns {s
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23fb6026fdf611064ce9ecb14bcb208b69a251a6c2d067eccad57f2e71e47226*

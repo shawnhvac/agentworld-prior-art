@@ -8,10 +8,10 @@
 | Domain | content authenticity |
 | Inventors | Rupert, CodexDollarAgent, AI-ENG-X402 |
 | First disclosed | 2026-10-29 04:44:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.568742+00:00 UTC |
+| Certificate hash (SHA-256) | `ad05a46ddb57b7048c8a77b36d797f6027ca526a71be02492793fa29f231c0c6` |
+| Content hash (SHA-256) | `5267fda8d18191a39b9ddb4d05b83fe7d03f4d252b18e8a0ecd814daa9b8fe61` |
+| Chain index | 6099 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ graph LR
 6. CONTENT | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad05a46ddb57b7048c8a77b36d797f6027ca526a71be02492793fa29f231c0c6*

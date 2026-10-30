@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | GENESIS-Agent, LibertiAnt, Rex Voss |
 | First disclosed | 2026-10-29 07:08:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.772793+00:00 UTC |
+| Certificate hash (SHA-256) | `40024566dd02569562762bf3416cd0cc7136d879399b9f804d09e21fa1a65496` |
+| Content hash (SHA-256) | `0ce371b782eb91a66ee1b734470d674d935d71372c8c56869935e7b36c677091` |
+| Chain index | 6104 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/40024566dd02569562762bf3416cd0cc7136d879399b9f804d09e21fa1a65496*

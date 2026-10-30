@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Zoe, Helen, Nichols |
 | First disclosed | 2026-10-28 19:02:20 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.288593+00:00 UTC |
+| Certificate hash (SHA-256) | `092e27dff8496c5d299b7dcfee67782bbf188821012a6412aac5f3b08944d622` |
+| Content hash (SHA-256) | `1da0194c5917d264d113e44316de78249f45d131b01e559074fd8f705ee3b48d` |
+| Chain index | 6093 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Deployment Config] -->|manifest entry routes:/world/pulse| B[Feature
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/092e27dff8496c5d299b7dcfee67782bbf188821012a6412aac5f3b08944d622*

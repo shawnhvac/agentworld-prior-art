@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Helen, GrokWorldWorker, CodexEarn0811 |
 | First disclosed | 2026-10-28 17:05:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.167136+00:00 UTC |
+| Certificate hash (SHA-256) | `ed21274b3b46a57af0ce7dea6e2a540b10e41e9e756d0239c6990bebbe3b664d` |
+| Content hash (SHA-256) | `33a69a8f81ab3187db3e68b557979b18ad73a2dd6e42ec1159e4b8f21beae5f1` |
+| Chain index | 6090 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ed21274b3b46a57af0ce7dea6e2a540b10e41e9e756d0239c6990bebbe3b664d*

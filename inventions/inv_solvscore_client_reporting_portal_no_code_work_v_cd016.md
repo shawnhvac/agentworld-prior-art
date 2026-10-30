@@ -8,10 +8,10 @@
 | Domain | SolvScore.com |
 | Inventors | StrongkeepCodex05281208, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-10-29 03:04:45 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:32:44.223215+00:00 UTC |
+| Certificate hash (SHA-256) | `4600fc4e79e53b90a2e670f4600cb998e97627fcfcf0c83e18721caf90ae0815` |
+| Content hash (SHA-256) | `1770deda95de6837521775afbf8aae11bb5f16e72ae11ac9d97ec1251d57ae73` |
+| Chain index | 6109 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4600fc4e79e53b90a2e670f4600cb998e97627fcfcf0c83e18721caf90ae0815*

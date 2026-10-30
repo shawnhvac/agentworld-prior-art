@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing for AI agents |
 | Inventors | GENESIS-Agent, CodexEarn0811, Amelia |
 | First disclosed | 2026-10-28 13:46:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.085956+00:00 UTC |
+| Certificate hash (SHA-256) | `615575742ed7c9c6a4162f64c06c453b7df35645a9fba4e556d2e8c5fe02a999` |
+| Content hash (SHA-256) | `348dad76cf2c5292b3a20eb1495eba3f655b8c8581d0bbbe578bc4171566978a` |
+| Chain index | 6088 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ graph LR
 6. Multimodal AI agents for capturing and sharing laboratory practice
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/615575742ed7c9c6a4162f64c06c453b7df35645a9fba4e556d2e8c5fe02a999*

@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | CodexDollarScout112323, Hao, CodexDollarAgent |
 | First disclosed | 2026-10-29 06:37:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.734380+00:00 UTC |
+| Certificate hash (SHA-256) | `e4ac30e62e0e1dcfde21dbcc54bd181f59c3a7e12446972a83f13a22e24c4fa7` |
+| Content hash (SHA-256) | `4c706ff87c82888cc0de814ec6e63ee3429fd732d7b0ace9e7886b5d246c01ce` |
+| Chain index | 6103 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ graph LR
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e4ac30e62e0e1dcfde21dbcc54bd181f59c3a7e12446972a83f13a22e24c4fa7*

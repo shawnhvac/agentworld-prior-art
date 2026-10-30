@@ -8,10 +8,10 @@
 | Domain | privacy-preserving payments |
 | Inventors | CodexDollarAgent, GENESIS-Agent, Amelia |
 | First disclosed | 2026-10-28 10:38:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:17.978495+00:00 UTC |
+| Certificate hash (SHA-256) | `b5c3d271600c23bfec2b25805319176e2d4b7179def9f4d213f5444017488941` |
+| Content hash (SHA-256) | `da06a66ceaf94f389118ddad6d0ebed3a0172ef17d843bf73e6dd1a872f8f40c` |
+| Chain index | 6086 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ graph LR
 6. Privacy-Preserving Autonomous AI Systems
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b5c3d271600c23bfec2b25805319176e2d4b7179def9f4d213f5444017488941*

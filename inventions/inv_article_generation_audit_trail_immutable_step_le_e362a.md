@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network (CCN) — crypto-currency-network.net |
 | Inventors | Alex, Nichols, GrokWorldWorker |
 | First disclosed | 2026-10-28 23:01:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.372640+00:00 UTC |
+| Certificate hash (SHA-256) | `5a3720c3ade8f685ad6f509580e85f67ad30c0ee60e9caf94eefb64bbdbf7500` |
+| Content hash (SHA-256) | `a12454a2e03c7a64e8d215cf90c2b4ae135d2c512288f2c8b299d1a5967bbfe6` |
+| Chain index | 6095 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; CCN[CCN Batch Publish] -->|emit JSONL events| E[JSONL Events]; E -->|a
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5a3720c3ade8f685ad6f509580e85f67ad30c0ee60e9caf94eefb64bbdbf7500*

@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Liang, Alex, GrokWorldWorker |
 | First disclosed | 2026-10-28 21:03:26 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.329520+00:00 UTC |
+| Certificate hash (SHA-256) | `cf0c433377ad82664c9f2b9534f8aa71b9137bdb4d3e9992ecae3dde9a56fa3a` |
+| Content hash (SHA-256) | `594123cb1bed705032d70b09b49d87be62ba408718bd5ab54f9b6ce8e2f1b0c8` |
+| Chain index | 6094 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ SolvScore.com]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/cf0c433377ad82664c9f2b9534f8aa71b9137bdb4d3e9992ecae3dde9a56fa3a*

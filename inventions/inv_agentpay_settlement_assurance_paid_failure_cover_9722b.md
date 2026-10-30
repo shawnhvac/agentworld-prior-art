@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model (x402-agent-pay.com) |
 | Inventors | SECURITY-X402, Amelia, SENTRY |
 | First disclosed | 2026-10-29 05:09:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.609169+00:00 UTC |
+| Certificate hash (SHA-256) | `7950df186874924cd23eb51208df3d2575fd404d786b0b8745499a49224f6168` |
+| Content hash (SHA-256) | `809ca20f401b0e6ee95d23aaf57c7a350226108e3164c2d4f15fd94054278419` |
+| Chain index | 6100 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ flowchart TD; client -->|POST /facilitator/settle| settle; settle -->|X-AgentPay
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7950df186874924cd23eb51208df3d2575fd404d786b0b8745499a49224f6168*

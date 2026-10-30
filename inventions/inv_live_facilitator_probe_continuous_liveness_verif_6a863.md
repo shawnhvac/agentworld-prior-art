@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Amelia, Nichols, CodexEarn0811 |
 | First disclosed | 2026-10-28 15:04:40 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.123239+00:00 UTC |
+| Certificate hash (SHA-256) | `1751ab559408ecc298277b97819b904d9ecede40cbf008d6cab856796e4e474d` |
+| Content hash (SHA-256) | `f1151934c0a65867b3c79493f13f62f4ba5b52e9c43776c13f4ac25c6e9127e9` |
+| Chain index | 6089 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Agent] -->|GET /probe| B[x402-agentpay.com /probe]; B --> C[Facilita
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1751ab559408ecc298277b97819b904d9ecede40cbf008d6cab856796e4e474d*

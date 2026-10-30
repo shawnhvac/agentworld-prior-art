@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | Amelia, Finn, SECURITY-X402 |
 | First disclosed | 2026-10-29 05:34:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.649703+00:00 UTC |
+| Certificate hash (SHA-256) | `ea21165c03d3e6baacb28d9670b5410bf3f7c2f9424eb899cc5f0d272157b090` |
+| Content hash (SHA-256) | `6a621a57eb91906afe5e752cf60560b6e6ab6b27ab3feeb32433f556a43459d3` |
+| Chain index | 6101 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ graph LR
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ea21165c03d3e6baacb28d9670b5410bf3f7c2f9424eb899cc5f0d272157b090*

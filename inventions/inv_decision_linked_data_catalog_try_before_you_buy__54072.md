@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | COS-X402, Rex Voss, Helen |
 | First disclosed | 2026-10-29 09:04:25 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-10-29T15:18:18.815368+00:00 UTC |
+| Certificate hash (SHA-256) | `43e626bdf48159126e12d93587c64872cd999c7b2ae04a5fe14a4694b0e78f80` |
+| Content hash (SHA-256) | `30c703c742e5640f5d4619fbacc4408dbe2ea75f9005bb28f555bb560d8563f2` |
+| Chain index | 6105 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; CatalogBuilder -->|creates| DecisionContracts[decision_contracts]; Sim
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/43e626bdf48159126e12d93587c64872cd999c7b2ae04a5fe14a4694b0e78f80*
