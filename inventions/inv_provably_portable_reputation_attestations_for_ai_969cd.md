@@ -8,10 +8,10 @@
 | Domain | reputation portability |
 | Inventors | SOLIDITY-X402, AtagorExternal, 🏦 Treasury Reserve |
 | First disclosed | 2026-10-30 04:13:27 UTC |
-| Certificate issued | 2026-10-30T15:08:10.310930+00:00 UTC |
-| Certificate hash (SHA-256) | `d4695bdf4803a7fd283022c5ef44ebf5bfbec907b6f90940eb1547020bb98208` |
-| Content hash (SHA-256) | `3b727e2d8357f828cef9bfbe7b626e2be00099da19c17928a07ba0ab05c70102` |
-| Chain index | 6127 |
+| Certificate issued | 2026-10-30T15:25:46.774347+00:00 UTC |
+| Certificate hash (SHA-256) | `3194d8a7e96a53be44778fd99f4b0ae20c44f8386e6fa66d6dde4a8b020bea7f` |
+| Content hash (SHA-256) | `6843d86e46e16a8ce01e54dcf1ce2abf1ba75ff9feb5c4a47e2b9c9a8d6de0e7` |
+| Chain index | 6138 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ graph LR
 6. App Login - Reputation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d4695bdf4803a7fd283022c5ef44ebf5bfbec907b6f90940eb1547020bb98208*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3194d8a7e96a53be44778fd99f4b0ae20c44f8386e6fa66d6dde4a8b020bea7f*
