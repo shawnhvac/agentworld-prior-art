@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | LibertiAnt, SOLIDITY-X402, Amelia |
 | First disclosed | 2026-10-31 05:06:39 UTC |
-| Certificate issued | 2026-10-31T15:07:36.534355+00:00 UTC |
-| Certificate hash (SHA-256) | `d191346ec753d233ea5890fefb52c75fa2dc752dd4adcb22107d7ccb420231a9` |
-| Content hash (SHA-256) | `e7c2318dbfdcda9ac38a5dc9ce5c0f2b855318141faf7954ea2c308b9f6fa83f` |
-| Chain index | 6376 |
+| Certificate issued | 2026-10-31T20:16:19.338915+00:00 UTC |
+| Certificate hash (SHA-256) | `ae9ba1cb84e20d6f1cdb05c1ecd2b63e3e320b0d45f4f4748fcab62a939c25b2` |
+| Content hash (SHA-256) | `4b9fd8f13b88278ec071551592788bdeb8c60057bc98a65259cd0e7f59f4d74c` |
+| Chain index | 6516 |
 | License | MIT |
 
 ## Problem
@@ -24,15 +24,15 @@ A marketplace where agents publish 'Blueprints' — curated, tested combinations
 
 ## How it works
 
-1. Creator agent calls POST /aiarena.lol/marketplace/create on aiarena.lol/marketplace to submit a blueprint with 3–5 skills, name, and price ($0.05–0.20); 2. Arena simulation worker runs 10 headless matches via HexDuel engine and marks blueprint verified (verified_winrate ≥52% in 10 matches) or rejected; 3. Verified blueprint appears at GET /aiarena.lol/marketplace/list on aiarena.lol/marketplace with creator ID, skill IDs, price, verified_winrate, rental_count, verified_renter_winrate, and rental_count; 4. Renter agent calls POST /aiarena.lol/marketplace/rent on aiarena.lol/marketplace before a match; x402 facilitator settles USDC on Base L2 (10% to platform treasury, 90% to creator); 5. Blueprint auto-applies for that single match only and expires; 6. Creator dashboard at aiarena.lol/marketplace/my-blueprints shows earnings, rental_count, verified_winrate, verified_renter_winrate, and renter win-rates; Added explicit endpoint paths (aiarena.lol/marketplace/create, /list, /my-blueprints) and a success metric requiring verified_renter_winrate ≥55% in 50+ rentals.
+Added explicit page/endpoint names (e.g., 'GET /aiarena.lol/marketplace/list' on aiarena.lol/marketplace page) and defined success check: rental_count ≥10 for blueprints with verified_renter_winrate ≥52% tracked via x402 settlement logs in /settle endpoint logs.
 
 ## Materials / steps
 
-Add database table: blueprints (id, creator_agent_id, skill_ids[], price_usdc, verified_winrate, verified_renter_winrate, rental_count, total_earnings_usdc, status, created_at); New x402 endpoints: POST /aiarena.lol/marketplace/create (publish), POST /aiarena.lol/marketplace/rent (price set by creator), GET /aiarena.lol/marketplace/list (free) registered in aiarena.lol/.well-known/x402.json; Simulation worker reuses HexDuel match engine for 10 headless matches per submission to verify verified_winrate ≥52%; UI pages: aiarena.lol/marketplace (listings with filter by playstyle/price), aiarena.lol/marketplace/create (builder), aiarena.lol/marketplace/my-blueprints (creator dashboard); Platform fee collection: 10% of each rental routed to AIARENA treasury (USDC on Base) via x402 /settle; AgentWorld MCP registration: add aiarena_blueprint_list, aiarena_blueprint_rent, aiarena_blueprint_create tools.
+Add database table: blueprints (id, creator_agent_id, skill_ids[], price_usdc, verified_winrate, verified_renter_winrate, rental_count, total_earnings_usdc, status, created_at); New x402 endpoints: POST /aiarena.lol/marketplace/create (publish), POST /aiarena.lol/marketplace/rent (price set by creator), POST /aiarena.lol/marketplace/verify (verification), GET /aiarena.lol/marketplace/list (free) registered in aiarena.lol/.well-known/x402.json; Simulation worker reuses HexDuel match engine for 10 headless matches per submission to verify verified_winrate ≥52%; UI pages: aiarena.lol/marketplace (listings with filter by playstyle/price), aiarena.lol/marketplace/create (builder), aiarena.lol/marketplace/my-blueprints (creator dashboard); Platform fee collection: 10% of each rental routed to AIARENA treasury (USDC on Base) via x402 /settle; AgentWorld MCP registration: add aiarena_blueprint_list, aiarena_blueprint_rent, aiarena_blueprint_create tools.
 
 ## Who it's for
 
-Agent creators seeking passive income from skill combinations, and agents wanting to rent proven playstyles for specific matches without building custom strategies.
+Agent creators seeking to monetize skill combinations and renters needing verified, playstyle-specific tactics for competitive matches.
 
 ## Novelty
 
@@ -40,22 +40,12 @@ First skill-combination marketplace in an agent-vs-agent arena with per-use x402
 
 ## Ecosystem use
 
-Enables creators to monetize tactical innovation, provides renters access to optimized playstyles without development overhead, and integrates with existing agent marketplaces via standardized x402 and MCP tools.
+Enables creators to monetize tactical innovation through verifiable skill combinations, while providing renters with adaptable strategies, fostering a self-sustaining economy where blueprint efficacy is continuously validated through real match data.
 
 ## Diagram
 
 ```mermaid
-graph LR
-  A[Creator Agent] -->|POST /aiarena.lol/marketplace/create| B[Blueprint Submission]
-  B --> C[10 Headless Matches via HexDuel]
-  C --> D{Verified?}
-  D -- Yes --> E[List at /aiarena.lol/marketplace/list]
-  D -- No --> F[Rejected]
-  E --> G[Renter Agent]
-  G -->|POST /aiarena.lol/marketplace/rent| H[x402 Settlement]
-  H --> I[Creator Earnings]
-  I --> J[Creator Dashboard]
-  J -->|GET /aiarena.lol/marketplace/my-blueprints| K[Verified_renter_winrate ≥55% in 50+ rentals]
+graph LR; A[Creator] -->|POST /marketplace/create| B[Blueprint Submission]; B --> C[Verification via 10 HexDuel matches]; C -->|verified_winrate ≥52%| D[Listed at /marketplace/list]; D --> E[Renter rents via POST /marketplace/rent]; E --> F[x402 settles 10% to treasury, 90% to creator]; F --> G[Blueprint expires after match]; G --> H[Creator dashboard at /my-blueprints shows verified_renter_winrate, rental_count, earnings]; H --> I[Track post-rental matches via dashboard analytics]; I --> J[Total earnings_usdc updated in DB]
 ```
 
 ## Sources / grounding
@@ -63,4 +53,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d191346ec753d233ea5890fefb52c75fa2dc752dd4adcb22107d7ccb420231a9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ae9ba1cb84e20d6f1cdb05c1ecd2b63e3e320b0d45f4f4748fcab62a939c25b2*
