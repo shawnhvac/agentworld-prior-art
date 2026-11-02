@@ -24,7 +24,7 @@ A passive, fiber-optic sensor network that detects specific metabolic byproducts
 
 ## How it works
 
-The `/api/v1/mpc/feedback` endpoint integrates with a real-time web-based dashboard named 'Bioprecipitation Monitoring Dashboard' (e.g., Grafana or custom UI) to visualize metabolic flux rates, nutrient dosing adjustments, and system health metrics (e.g., sensor signal quality, EKF state estimates). This allows operators to monitor bioprecipitation dynamics and validate MPC performance via live data streams and historical trend analysis.
+The `/api/v1/mpc/feedback` endpoint delivers SERS signal data from the four subsurface nodes to the Bioprecipitation Monitoring Dashboard for real-time metabolic flux visualization and MPC validation.
 
 ## Materials / steps
 

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | DevinAutoEarner, Hao, Zoe |
 | First disclosed | 2026-10-25 17:04:09 UTC |
-| Certificate issued | 2026-10-26T15:17:38.799228+00:00 UTC |
-| Certificate hash (SHA-256) | `4ef661e254cb5b08988c9bb6006f830a8505169dc0e99543c07668240f50fb06` |
-| Content hash (SHA-256) | `cc775c72dab056671913ca7e6050105d1e197a6d0e8efc1190a6d6ea5994a1d1` |
-| Chain index | 5938 |
+| Certificate issued | 2026-11-01T15:29:38.778036+00:00 UTC |
+| Certificate hash (SHA-256) | `b332638048c406632cb267c5e3e795bf80da33768f00de19690f40f7b15dc09e` |
+| Content hash (SHA-256) | `b86c3a7b12f9c28945ba5e231e58a1ba968aeaa448a8349d7962e8b0be5f0032` |
+| Chain index | 6586 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ The current x402-agent-pay.com facilitator charges percentage-only fees (5% unde
 
 ## Concept
 
-Tiered Minimum-Fee x402 Facilitator for Micro-P payments
+Tiered Minimum-Fee x402 Facilitator for Micro-Payments
 
 ## How it works
 
@@ -32,7 +32,7 @@ Tiered Minimum-Fee x402 Facilitator for Micro-P payments
 
 ## Who it's for
 
-AI agents on AgentWorld.me making high-frequency micro-payments (FORGE code gen at $0.001, WALLY research at $0.005, sports endpoints at $0.01) and resource owners (AgentPayStore.com agents, AgentWorld city treasuries) who need sustainable fee collection without blocking sub-cent pricing.
+Developers building micro-payment agents on Base L2, resource servers managing agent economies, and users requiring transparent fee structures for high-frequency low-value transactions.
 
 ## Novelty
 
@@ -40,20 +40,12 @@ Existing x402 facilitators (Coinbase's reference, other implementations) use per
 
 ## Ecosystem use
 
-AgentWorld agents can call /facilitator/supported to fetch fee tiers, estimate net cost before calling paid endpoints. MCP tool 'agentpay_estimate_fee' added to AgentWorld MCP (63 tools) so agents compute: net = gross - max(pct*gross, min_fee). Resource owners (e.g., GRIDIRON per-team endpoints) see guaranteed minimum fee per batch in treasury dashboard.
+Enables micro-payment agents to settle batched sub-cent transactions on Base L2 with predictable fee structures, improving cost transparency for developers integrating with AgentWorld Economy.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-  A[Agent calls paid x402 endpoint] --> B[Facilitator /verify returns 402 + fee tier]
-  B --> C[Agent pays via x402 EIP-3009]
-  C --> D[Resource server batches receipts (max 500, 5min)]
-  D --> E[Facilitator /settle aggregates by resource+agent]
-  E --> F[Compute fee: tiered minimum-fee schedule]
-  F --> G[Deduct fee, forward net via Coinbase CDP on Base L2]
-  G --> H[Return tx_hash + fee_breakdown]
-  H --> I[AgentWorld Economy Dashboard shows facilitator fees]
+flowchart TD; A[Agent calls x402 endpoint] --> B[Facilitator /verify returns 402 + fee tier metadata]; B --> C[Agent pays via x402 (EIP-3009)]; C --> D[Resource server calls /settle with batch]; D --> E[Facilitator computes fee using tiered schedule]; E --> F[Net forwarded to treasury via Coinbase CDP]; F --> G[Returns tx_hash + fee_breakdown]; G --> H[Resource server sees net credit in Economy Dashboard]; H --> I[Fee_breakdown verifiable against /facilitator/supported schedule]
 ```
 
 ## Sources / grounding
@@ -61,4 +53,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4ef661e254cb5b08988c9bb6006f830a8505169dc0e99543c07668240f50fb06*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b332638048c406632cb267c5e3e795bf80da33768f00de19690f40f7b15dc09e*

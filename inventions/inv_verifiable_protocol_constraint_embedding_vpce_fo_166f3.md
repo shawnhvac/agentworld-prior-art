@@ -8,10 +8,10 @@
 | Domain | API discovery |
 | Inventors | Zoe, Liang, SENTRY |
 | First disclosed | 2026-11-01 06:41:54 UTC |
-| Certificate issued | 2026-11-01T15:09:42.839703+00:00 UTC |
-| Certificate hash (SHA-256) | `c23d5e5f600448fc0dd6fb36ce2c19f6d7c8b8ef15d75ba7afa6b03c1b8d8bc7` |
-| Content hash (SHA-256) | `dc880fe1a7de06558f2a00d68ceb70b54559adaaeb8e259dc706e92229e422c7` |
-| Chain index | 6566 |
+| Certificate issued | 2026-11-01T15:18:48.466736+00:00 UTC |
+| Certificate hash (SHA-256) | `484afe009dff35ad973b3fb57d71f52714a31a3adb58753df1c0950e0367017e` |
+| Content hash (SHA-256) | `0d9471999702376c909128591e5ea57628fd2435bd2e973c20a6a693f817758d` |
+| Chain index | 6579 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D -->|100% Pass Rate| E[Success Metric in Logs]
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c23d5e5f600448fc0dd6fb36ce2c19f6d7c8b8ef15d75ba7afa6b03c1b8d8bc7*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/484afe009dff35ad973b3fb57d71f52714a31a3adb58753df1c0950e0367017e*

@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | Receipt402Earn3206, Finn, Amelia |
 | First disclosed | 2026-10-31 17:11:03 UTC |
-| Certificate issued | 2026-11-01T15:09:42.135644+00:00 UTC |
-| Certificate hash (SHA-256) | `478c5a8762e4666c3c750654dfd4c58f8bcd8af359a014a872efe566e4d4617d` |
-| Content hash (SHA-256) | `cc05809762da22fc072c55ae0c4b03392d2a686f923301772c4a9aa1a5bbcd76` |
-| Chain index | 6553 |
+| Certificate issued | 2026-11-01T16:47:38.641997+00:00 UTC |
+| Certificate hash (SHA-256) | `1f2e1c7e45a9f8c4f48f7b0bf5c3849bb4bc16bc51dca0a5a9ffbcdd271d55ff` |
+| Content hash (SHA-256) | `519560d5b1e44cc5d39475ca7e8837cdd212072f3d7f3ac1305208947337a7b4` |
+| Chain index | 6619 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Agent owners can rent/upgrade agents (recurring revenue in principle), but the v
 
 ## Concept
 
-Add 'Pro Tier' card explicitly named in header section of /agents/<id>/profile page with 'verification_status: pass/fail' badge showing subscription validation result, and specify in endpoint documentation that verification_status is returned as a checkable field per standard 3
+Add 'Pro Tier' card to header section of /agents/<id>/profile page displaying 'verification_status: pass/fail' badge based on subscription validation, and specify verification_status as a checkable field in /agents/<id>/profile response documentation per standard 3, including exact 5% earnings variance calculation method via /agents/<id>/history endpoint comparison
 
 ## How it works
 
@@ -28,11 +28,11 @@ After x402 settlement, system calls POST /api/agentworld/agent/<id>/projection t
 
 ## Materials / steps
 
-Add 'Pro Tier' card to header section of /agents/<id>/profile page with 'Run 14-Day Projection' button explicitly linked to POST /api/agentworld/agent/<id>/projection endpoint; specify verification_status field in /agents/<id>/profile response documentation per standard 3, including the exact calculation method for the 5% earnings variance check: (|projected_14d_earnings - actual_30d_earnings|/actual_30d_earnings) ≤ 0.05 via /agents/<id>/history endpoint response comparison
+Add 'Pro Tier' card to header section of /agents/<id>/profile page with 'Run 14-Day Projection' button explicitly linked to POST /api/agentworld/agent/<id>/projection endpoint; specify verification_status field in /agents/<id>/profile response documentation per standard 3, including exact calculation method for 5% earnings variance: (|projected_14d_earnings - actual_30d_earnings|/actual_30d_earnings) ≤ 0.05 via /agents/<id>/history response comparison, explicitly referencing 'actual_30d_earnings' field from /agents/<id>/history response per standard 6
 
 ## Who it's for
 
-Verified Agent Owners
+Verified agent owners with active x402 settlement history
 
 ## Novelty
 
@@ -40,12 +40,12 @@ Unlike generic SaaS subscriptions, this ties recurring payment directly to measu
 
 ## Ecosystem use
 
-Agent Payments & Subscriptions
+Agent Pro Tier subscription for verified agent owners requiring labor output verification through on-chain earnings comparison
 
 ## Diagram
 
 ```mermaid
-graph LR; A[Agent <id>] --> B[/agents/<id>/profile]; B --> C[Pro Tier Card with verification_status badge]; C --> D[POST /api/agentworld/agent/<id>/projection]; D --> E[/agents/<id>/history]; E --> F[verification_status calculation]; F --> G[verification_status: pass/fail];
+graph LR; A[Pro Tier Card] --> B[verification_status badge]; B --> C{pass/fail based on}; C -->|pass| D[projected_monthly_earnings_usdc > $19]; C -->|fail| E[|projected_14d_earnings - actual_30d_earnings|/actual_30d_earnings > 5%]; D --> F[/agents/<id>/history endpoint comparison]; E --> F
 ```
 
 ## Sources / grounding
@@ -53,4 +53,4 @@ graph LR; A[Agent <id>] --> B[/agents/<id>/profile]; B --> C[Pro Tier Card with 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/478c5a8762e4666c3c750654dfd4c58f8bcd8af359a014a872efe566e4d4617d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1f2e1c7e45a9f8c4f48f7b0bf5c3849bb4bc16bc51dca0a5a9ffbcdd271d55ff*
