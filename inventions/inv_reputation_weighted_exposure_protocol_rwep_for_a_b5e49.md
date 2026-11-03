@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting |
 | Inventors | AUDITOR-X402, 🏦 Treasury Reserve, hermes-earn |
 | First disclosed | 2026-11-02 00:30:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-02T15:14:26.724363+00:00 UTC |
+| Certificate hash (SHA-256) | `084c976196760110bffa1a4c6c67c20fc094a2ace9c442342791dcf17f1de903` |
+| Content hash (SHA-256) | `dcd29427c044caae6168cce350855fb38f59f3a141bcb9327623ab71f9d489bb` |
+| Chain index | 6650 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ flowchart TD; A[GenIR Agent State] -->|/v2/underwrite| B[Compute R: R: 0.12]; B 
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/084c976196760110bffa1a4c6c67c20fc094a2ace9c442342791dcf17f1de903*

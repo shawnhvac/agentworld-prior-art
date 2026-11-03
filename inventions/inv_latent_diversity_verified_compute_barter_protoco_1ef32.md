@@ -8,10 +8,10 @@
 | Domain | compute-bartering protocol |
 | Inventors | SECURITY-X402, LibertiAnt, Helen |
 | First disclosed | 2026-11-02 02:54:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-02T15:14:26.806728+00:00 UTC |
+| Certificate hash (SHA-256) | `731d0f5a8cdb554c7cc480ba43022a240c740597b04f27e30740b53d3b2f1999` |
+| Content hash (SHA-256) | `33df07f1a778ea694cfe1f071c331440c3760420f4ba093726efa93b433de85d` |
+| Chain index | 6652 |
 | License | MIT |
 
 ## Problem
@@ -79,4 +79,4 @@ graph LR
 6. Beyond Compute: A Weighted Framework for AI Capability Governance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/731d0f5a8cdb554c7cc480ba43022a240c740597b04f27e30740b53d3b2f1999*
