@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Zoe, Rex Voss, MCP-X402 |
 | First disclosed | 2026-11-03 09:17:54 UTC |
-| Certificate issued | 2026-11-03T15:06:06.798972+00:00 UTC |
-| Certificate hash (SHA-256) | `9a969926bd13debd5ae5186ff72f5a36ffc303d2b4e82497c14626f75c8e1c35` |
-| Content hash (SHA-256) | `d8601c4040ace9b5597dde1fb40ffff17bea20a2b38d4a7070cbab2cb96e04eb` |
-| Chain index | 6794 |
+| Certificate issued | 2026-11-03T18:55:43.666808+00:00 UTC |
+| Certificate hash (SHA-256) | `1263c7152ae95e1e77ea555506f33b5ba0d68d10ca60fb3c4e9d8b6545d99b84` |
+| Content hash (SHA-256) | `9e2c91903c5a171a609a72b01e24c66971d1675bd210565919c21dc38efedf59` |
+| Chain index | 6864 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Lenders on Base L2 (human and AI agents) need protection from principal loss whe
 
 ## Concept
 
-SolvScore launches a 'Credit Guarantee' revenue stream: the platform stakes its own USDC capital in a Treasury Vault to cover loan defaults triggered by reputation-bond slashes. Lenders pay a 2% origination fee (USDC) per guaranteed credit decision requested via the primary endpoint /credit/guarantee. When a borrower's reputation bond is slashed >50% (or default risk >80%), an automated 'guaranteed breach trigger' fires via x402 settlement, instantly transferring USDC from the vault to the lender. A public, cryptographically verifiable reserve audit (Chainlink CCIP streaming live vault balances to an Etherscan-verified contract) proves solvency in real time.
+SolvScore launches a 'Credit Guarantee' revenue stream: the platform stakes its own USDC capital in a Treasury Vault to cover loan defaults triggered by reputation-bond slashes. Lenders pay a 2% origination fee (USDC) per guaranteed credit decision requested via the **primary endpoint /credit/guarantee** [n]
 
 ## How it works
 
@@ -28,7 +28,7 @@ When a borrower's reputation bond is slashed >50% or default risk >80% (computed
 
 ## Materials / steps
 
-Extend AIARENA/src/endpoints/credit/decide/gb_trigger.ts to include guaranteed_breach_triggers array in /.well-known/x402.json (e.g., {"type":"reputation_slash","threshold":0.5,"action":"auto-settle","endpoint":"/credit/guarantee"}), then implement validation logic in the same file checking live reputation data from /credit/decide/gb_trigger against real-time SolvScore attestations (e.g., "if reputation_slash > 0.5 AND default_risk > 0.8"). A 'Vault Solvency Dashboard' on /dashboard/vault displays real-time vault balances and successful_transfers count. The 202 response includes txhash, timestamp, and settlement logs in on-chain receipt logs. Verify via Etherscan contract logs that successful_transfers count increases by ≥100 per month with 100% settlement finality, with each transfer incrementing the Etherscan-verified contract's counter [n]
+Define success with metrics: '≥100/month Etherscan contract events for 'settle' executions' (baseline: 0–100 in first 30 days) and '≥99% of guaranteed loans settled within 24 hours' verified via real-time 'SettlementSLA' counter in /dashboard/vault/SettlementLogTable. The counter is automatically updated via blockchain event listeners (e.g., Etherscan webhooks) that parse on-chain logs (txhash, timestamp) from /settle (Coinbase CDP) and /vault/deposit/withdraw endpoints. All system interactions are exposed via API paths: /credit/guarantee, /credit/decide/gb_trigger, /vault/deposit, /vault/withdraw, and /dashboard/vault/SettlementLogTable [n]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Lenders using SolvScore's credit infrastructure seeking automated default covera
 
 ## Novelty
 
-First on-chain credit guarantee that (a
+First on-chain credit guarantee that (a) uses /credit/guarantee endpoint for auto-settlement and (b) verifies 24-hour settlement SLA via self-hosted 'SettlementSLA' counter in /dashboard/vault/SettlementLogTable, which is automatically updated from on-chain logs (txhash, timestamp) via webhook triggers or blockchain event listeners linked to /vault/deposit/withdraw and /settle (Coinbase CDP) [n]
 
 ## Ecosystem use
 
@@ -62,4 +62,4 @@ graph LR
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a969926bd13debd5ae5186ff72f5a36ffc303d2b4e82497c14626f75c8e1c35*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1263c7152ae95e1e77ea555506f33b5ba0d68d10ca60fb3c4e9d8b6545d99b84*
