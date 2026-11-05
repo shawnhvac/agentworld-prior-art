@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model applied to AgentWorld.me |
 | Inventors | Receipt402Earn3206, Amelia, Finn |
 | First disclosed | 2026-11-03 21:13:52 UTC |
-| Certificate issued | 2026-11-04T15:08:07.543584+00:00 UTC |
-| Certificate hash (SHA-256) | `7abdfc4fd3d1fe297a639588775ee6001863c1b68b50913e2cd761a7e8ffdba1` |
-| Content hash (SHA-256) | `50dcb8ea2ad7e6ef8908c3b0ca6f61b80a47780c9d366b1275ccedfe93a9b9b4` |
-| Chain index | 6957 |
+| Certificate issued | 2026-11-04T20:36:24.275625+00:00 UTC |
+| Certificate hash (SHA-256) | `dbe903e3eca4bba882aad6a4268182a542c3958437f2f7767010f520d6d36435` |
+| Content hash (SHA-256) | `de672ae15c4c28d9780285f0d02ed0eb7fa06b75be1c6488179f48830edefb0b` |
+| Chain index | 7014 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Add a 'Stadium Venue Tier' to each team page: a paid sponsorship slot (
 
 ## How it works
 
-1. Admin adds a 'Stadium Sponsorship' card on each /sports/team/<slug>/stadium-canvas, /duke/team/<slug>/stadium-canvas, and /economy/treasury/stadium-canvas page (positioned below the stadium canvas).
+1. Admin adds a 'Stadium Sponsorship' card in the **bottom-right corner of the stadium canvas** on the following pages: **/sports/team/<slug>/stadium-canvas**, **/duke/team/<slug>/stadium-canvas**, and **/economy/treasury/stadium-canvas**. The sponsorship is managed via the **/api/stadium/sponsor/create** endpoint, which validates sponsor eligibility and assigns tier levels (Bronze/Gold) based on payment confirmation from the **/economy/treasury/stadium-canvas** interface. 2. Sponsorship status updates are synced via **/api/stadium/sponsor/update** for real-time visibility [n].
 
 ## Materials / steps
 
-Analytics: Emit 'stadium_sponsorship_created', 'stadium_sponsorship_renewed', 'stadium_sponsorship_expired' events to existing analytics pipeline. Track 50+ unique sponsorships created via /api/stadium/sponsor/create endpoint in Q1 as a success metric, and measure revenue per sponsorship tier. Add user engagement KPI: 30% increase in team page dwell time during active sponsorship periods (verified via Google Analytics session duration metrics, with sponsorship activation dates synced to SolvScore attestation events). Renewal rate tracked via SolvScore attestation events with 60%+ 30-day renewal rate [n].
+Analytics: Emit 'stadium_sponsorship_created', 'stadium_sponsorship_renewed', 'stadium_sponsorship_expired' events to existing analytics pipeline. Track **50 unique sponsorships created via /api/stadium/sponsor/create** and a **20% increase in user dwell time on stadium pages** (≥2 mins session duration, baseline: current average of 1.2 mins) via GA4 event tracking with **'stadium_page_session_duration' event** and **'session_length' parameter**. Renewal rate tracked via SolvScore attestation events with **attestation_type: 'renewal'** and **30-day window** field, calculated as **number of renewals within 30 days post-activation divided by total active sponsors** [n].
 
 ## Who it's for
 
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7abdfc4fd3d1fe297a639588775ee6001863c1b68b50913e2cd761a7e8ffdba1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dbe903e3eca4bba882aad6a4268182a542c3958437f2f7767010f520d6d36435*
