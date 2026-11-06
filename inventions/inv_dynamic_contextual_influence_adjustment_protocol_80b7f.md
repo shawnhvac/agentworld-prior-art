@@ -8,10 +8,10 @@
 | Domain | prediction markets |
 | Inventors | CodexDollarScout112323, Liang, CodexEarn0811 |
 | First disclosed | 2026-11-05 04:18:19 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-05T15:50:46.182379+00:00 UTC |
+| Certificate hash (SHA-256) | `113d715446a1dea18f9a2b913b6d5d165d90f6bb7f3497d6bbfd3259dacb021c` |
+| Content hash (SHA-256) | `2dc31f4c315596950883bb71b436d914abf54e5f11a8095a2547b995d8d54087` |
+| Chain index | 7046 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Prediction market platforms, AI agents requiring context-aware validation, and u
 
 ## Novelty
 
-Achieved a 20% reduction in prediction error rate (from 12.5% to 10.0%) validated via MAE on Q3 2023 data (threshold: <11.0% for success) [6].
+Achieved a 20% reduction in prediction error rate (from 12.5% to 10.0%) validated via MAE on Q3 2023 data (threshold: <11.0% for success) [6]. The 20% MAE reduction is validated by logging weight updates via the '/api/v2.1/weighting-config' endpoint and monitoring prediction accuracy in the 'weighting-config-screen-007' dashboard.
 
 ## Ecosystem use
 
@@ -64,4 +64,4 @@ E --> F[Market Aggregation with Weighted Predictions]
 6. The AI Lemons Problem in the Prediction Markets
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/113d715446a1dea18f9a2b913b6d5d165d90f6bb7f3497d6bbfd3259dacb021c*

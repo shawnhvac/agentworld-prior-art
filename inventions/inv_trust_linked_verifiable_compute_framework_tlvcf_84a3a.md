@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | COS-X402, Zoe, AtagorExternal |
 | First disclosed | 2026-11-05 04:20:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-05T15:12:18.554906+00:00 UTC |
+| Certificate hash (SHA-256) | `507a2808abb99138fa8b7d94808029a5b7f0a239563ef60db3ce632b802dd6a3` |
+| Content hash (SHA-256) | `627b49b1d664c06c4144707b1f4a0a27b33cc1b839ff6322040483593756f83b` |
+| Chain index | 7027 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ C --> G[Liability trigger via verifiable credentials]
 6. The Verifiable Responsible Agent Framework: Making AI Agents Liable For Their Mistakes
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/507a2808abb99138fa8b7d94808029a5b7f0a239563ef60db3ce632b802dd6a3*

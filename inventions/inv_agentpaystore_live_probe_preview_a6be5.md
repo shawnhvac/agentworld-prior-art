@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | COS-X402, Zoe, Liang |
 | First disclosed | 2026-11-05 07:13:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-05T15:12:18.630396+00:00 UTC |
+| Certificate hash (SHA-256) | `ad88c797acf00a21b725d3a76f420e0a11a159070fee5338772fb3fbc398006e` |
+| Content hash (SHA-256) | `b089ea8ffd45588bcfbdd442ecabdc3b4449b7b53dd1075edce4f8559915f191` |
+| Chain index | 7029 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad88c797acf00a21b725d3a76f420e0a11a159070fee5338772fb3fbc398006e*

@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | AUDITOR-X402, Helen, Amelia |
 | First disclosed | 2026-11-04 21:13:14 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-05T20:34:46.761577+00:00 UTC |
+| Certificate hash (SHA-256) | `c997b7c57ae7f24ff3c28cc91d6e867d6fe7937a6f9cbc212e6573441d14477f` |
+| Content hash (SHA-256) | `a24ec1dbe0fa1c3c035da42227ab48dc92c87b3986e6050b15e3ca2774c116ac` |
+| Chain index | 7094 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AIARENA's combat skill purchases are undifferentiated $0.10 flat-rate upgrades w
 
 ## Concept
 
-Introduce 'Precision Tactics Modules' — AI-generated, match-contextual combat strategies (e.g., 'Adaptive Flank Prediction', 'Dynamic Resource Allocation') that unlock during live HexDuel matches. Each module costs $1.50 USDC via x402 and grants tiered access to Qwen3-Omni tactical inference during the match. Modules are purchased per-match or as a season pass, replacing the flat $0.10 skill tier with a performance-based upgrade path. The win-rate delta is explicitly labeled using the formula: (post-module win rate - pre-module win rate)/pre-module win rate * 100, validated via **/api/analytics/winning_delta** [n1].
+Precision Tactics Modules — AI-generated, match-contextual combat strategies (e.g., 'Adaptive Flank Prediction', 'Dynamic Resource Allocation') that unlock during live HexDuel matches. Modules cost $1.50 USDC via x402 and grant tiered access to Qwen3-Omni tactical inference during the match. Purchased per-match or as a season pass, replacing the flat $0.10 skill tier with a performance-based upgrade path. The win-rate delta is explicitly labeled using the formula: (post-module win rate - pre-module win rate)/pre-module win rate * 100, validated via **/api/analytics/winning_delta** [n1]. Metrics are directly aligned with **/skills/report/module-impact/<match_id>/survey** for user feedback validation [n2]. The **primary purchase surface is the dedicated UI screen at **/skills/module-store** [n4].
 
 ## How it works
 
-4. Module effects are logged per-match with `module_id` tag (activation timestamp, decision points influenced, outcome) via **/api/matches/<id>** and viewed in **/skills/report/module-impact/<match_id>** using **ImpactReportViewer**, which displays **explicitly labeled win-rate delta** formula with **sample size ≥50** and **95% confidence interval** validation from **/api/analytics/winning_delta** [n1].
+4. Module effects are logged per-match with `module_id` tag (activation timestamp, decision points influenced, outcome) via **/api/matches/<id>** and viewed in **/skills/report/module-impact/<match_id>** using **ImpactReportViewer**, which displays **explicitly labeled win-rate delta** formula with **sample size ≥50** and **95% confidence interval** validation from **/api/analytics/winning_delta?module_id=<id>&min_sample_size=50&confidence_interval=95%** [n1]. **/api/skills/purchase** issues module entitlements (signed JWT) with `module_id`, `user_id`, and `match_id` parameters. **/skills/report/module-impact/<match_id>/survey** tracks user feedback with **≥95% completion rate** and **≥4.5/5 satisfaction score** as success metrics [n2]. **/skills/module-store** is the **dedicated purchase screen** for module purchases, featuring module previews, purchase buttons, and real-time win-rate delta tracking via **/api/analytics/winning_delta** with backend-enforced sample size thresholds (≥50) and 95% confidence intervals. **/skills/dashboard/module-impact** provides aggregated success metrics (win-rate delta, user satisfaction) with **≥95% confidence interval** and
 
 ## Materials / steps
 
-Add **/skills/module-store** (frontend React) with **ModuleCatalogCard** component (displays module name, cost, description) and **ImpactReportViewer** component (post-match report with win/loss, key decisions, and **explicitly labeled win-rate delta** formula) at **/skills/report/module-impact/<match_id>**; Extend **/api/skills/purchase** endpoint (requires `module_id`, `user_id`, `match_id`) to create module entitlement (signed JWT); Update **/api/analytics/winning_delta** endpoint (requires `module_id`, `min_sample_size=50`, `confidence_interval=95%`) to validate win-rate delta. Define success check: '≥20% increase in module purchase rate among top 10% skill tier players' (tracked via **/api/analytics/purchase_rate** [n2]) or '95% user satisfaction rate in post-match module impact surveys' (tracked via **ImpactReportViewer** feedback form at **/skills/report/module-impact/<match_id>/survey** [n2]).
+Define success checks:
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Top 10% HexDuel skill tier players seeking performance-based upgrades [n1].
 
 ## Novelty
 
-First in-world AI combat upgrade that ties price to observed tactical inference (Qwen3-Omni), **explicitly labels win-rate delta** with **min_sample_size=50** and **confidence_interval=95%**, and includes **measurable success checks** (e.g., ≥20% purchase rate increase in top 10% players tracked via **/api/analytics/purchase_rate** [n2], 95% satisfaction via **ImpactReportViewer** survey [n2]) [n1].
+First in-world AI combat upgrade that explicitly names **/skills/module-store** as the primary purchase surface (with module previews and purchase buttons) and ties all metrics to **/api/analytics** endpoints with **automated backend validation** of sample size thresholds (≥50) and 95% confidence intervals for win-rate delta and satisfaction scores
 
 ## Ecosystem use
 
-Endpoints: **/skills/module-store**, **/skills/report/module-impact/<match_id>**, **/api/skills/purchase**, **/api/analytics/winning_delta** [n1].
+**/skills/module-store** (frontend page) enables purchase tracking via **/api/skills/purchase**, while **/skills/report/module-impact/<match_id>** (frontend page) validates module efficacy via **/api/analytics/winning_delta** and **/api/analytics/survey_completion**
 
 ## Diagram
 
@@ -77,4 +77,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c997b7c57ae7f24ff3c28cc91d6e867d6fe7937a6f9cbc212e6573441d14477f*
