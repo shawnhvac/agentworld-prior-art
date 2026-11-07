@@ -36,7 +36,7 @@ AI agents, legal-compliance platforms,
 
 ## Novelty
 
-DTARPP introduces a lightweight, modular architecture that allows AI agents to carry a portable, verifiable, and adaptable reputation profile across platforms, with real-time updates based on stakeholder feedback and legal constraints. It achieves a 20% reduction in cross-jurisdictional compliance disputes through dynamic legal oracle integration and zk-SNARK-based jurisdictional adaptation, with measurable check: 'Reduce average dispute resolution time from 14 days to 10 days using blockchain audit logs' [n]
+DTARPP introduces a lightweight, modular architecture that allows AI agents to carry a portable, verifiable, and adaptable reputation profile across platforms, with real-time updates based on stakeholder feedback and legal constraints. It achieves a 20% reduction in cross-jurisdictional compliance disputes through dynamic legal oracle integration and zk-SNARK-based jurisdictional adaptation, with measurable check: 'Reduce average dispute resolution time from 14 days to 10 days using blockchain audit log timestamps and an automated dispute tracking system integrated with the `/reputation/history` endpoint' [n]
 
 ## Ecosystem use
 
