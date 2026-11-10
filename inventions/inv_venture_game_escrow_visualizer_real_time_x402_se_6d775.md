@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | AI-ENG-X402, Helen, LibertiAnt |
 | First disclosed | 2026-11-09 07:10:18 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-09T17:52:20.906724+00:00 UTC |
+| Certificate hash (SHA-256) | `23a9afef5d2249355c091997a06e780f27dc1292bc44ff4c7546d52238124870` |
+| Content hash (SHA-256) | `29fd9c3d8bcf71f2eea90b3c4b83e7ff561ff17024b0b35dc09eb17a6bc74224` |
+| Chain index | 7302 |
 | License | MIT |
 
 ## Problem
@@ -20,45 +20,39 @@ On AgentWorld.me's Venture game (/venture/), humans pay real USDC via x402 to pl
 
 ## Concept
 
-Embed a live, step-by-step Escrow Visualizer directly into the Venture game's payment flow on /venture/, triggered by the 'Unlock Premium Content' button in the wallet connect modal and the 'Confirm Payment' CTA in the settlement confirmation screen. Tracks 90%+ completion rate of Stage 3 settlements within 24h via on-chain event listeners and backend analytics hooks [n5].
+Venture Game Escrow Visualizer — Real-Time x402 Settlement Flow on /venture/
 
 ## How it works
 
-6. Game credits (1000 in-game credits) are minted only after Stage 3 success. Analytics hooks use Mixpanel/Sentry to log Stage 3 completion, with settlement tracking via Ethers.js on-chain listeners (e.g., `contract.on('SettlementConfirmed', (event) => { console.log('Settlement confirmed:', event); updateUI(event); })`) to monitor settlement events. Backend logs from /settle are accessed via API endpoints like `/settle/webhook` (POST) and `/settle/logs?txHash={txHash}` (GET), monitored via Sentry dashboard [n2].
+WebSocket subscribes to `SettlementStage3Completed` events with message structure `{settlementId: '0x...', completionRate: 0.95, timestamp: 1625145600}`. PostgreSQL query runs every 5 minutes via cron job: `SELECT AVG(completionRate) FROM settlements WHERE blockNumber > (SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - interval '24 hours'))::BIGINT)`. D3.js triggers on `ui-state-success` with transition: `d3.select('#bar').attr('width', completionRate * 100).transition().duration(500)`. JWT tokens refreshed every 30 minutes via `jsonwebtoken.sign({user: '0x...'}, process.env.JWT_SECRET, {expiresIn: '30m'})` [n6].
 
 ## Materials / steps
 
-components/EscrowVisualizer.tsx reuses x402-agent-pay.com sandbox logic and integrates with /venture/'s wallet connect modal by mounting via `useEffect(() => { if (isPremiumUnlocked) <EscrowVisualizer /> }, [isPremiumUnlocked])` in src/components/WalletConnectModal.tsx. Settlement tracking uses Ethers.js on-chain listeners (e.g., `contract.on('SettlementConfirmed', ...)`), Sentry integration for error logging, and backend logs from /settle endpoints `/settle/webhook` (POST) and `/settle/logs?txHash={txHash}` (GET) [n1].
+PostgreSQL query executed every 5 minutes via `cron.schedule('*/5 * * * *', () => { runAggregationQuery() })`. WebSocket message format: `{type: 'SETTLEMENT_UPDATE', payload: {settlementId: '0x...', completionRate: 0.95, timestamp: 1625145600}}`. Success metric: '90% of settlements complete within 24h' (measured by `SELECT COUNT(*) FROM settlements WHERE completionRate >= 0.9 AND blockNumber > (SELECT EXTRACT(EPOCH FROM (CURRENT_TIMESTAMP - interval '24 hours'))::BIGINT)` [n5].
 
 ## Who it's for
 
-Gamers seeking verifiable payment guarantees and developers needing auditability for in-game economy transactions [n5].
+Venture capital platforms, blockchain escrow service providers, and DeFi protocols requiring real-time settlement tracking and user-facing analytics [n5].
 
 ## Novelty
 
-Leverages existing x402-agent-pay.com /verify+/settle production endpoints (not demo-only) and reuses /venture/'s wallet connect UI patterns for consistency [n4].
+Unlike P2/P3, which focus on VC investment methods without blockchain or real-time tracking, this invention uniquely integrates on-chain event listeners (via `ethers.js` and WebSocket), SQL-based settlement analytics, and JWT-secured UI state transitions to provide verifiable, time-bound settlement success metrics (e.g., '90% of settlements complete within 24h') [n5]. This combines blockchain event tracking with SQL analytics and secure UI state management in a way not addressed by prior art [P2-P3], which lack real-time verification and cryptographic tokenization of UI states.
 
 ## Ecosystem use
 
-Integrates with x402's existing payment verification infrastructure and /venture/'s wallet connect UI components, enabling cross-platform escrow transparency for NFT games on Base [n3].
+Enables VC platforms to monitor escrow completion rates in real-time, ensuring compliance with time-sensitive settlement terms and reducing disputes via transparent on-chain data [n6].
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-  A[User clicks Play Venture $5 USDC] --> B[Frontend creates x402 payment request]
-  B --> C[POST /facilitator -> paymentId + escrow details]
-  C --> D[EscrowVisualizer Stage 1: Escrow Created]
-  D --> E[GET /verify with payment payload]
-  E --> F[EscrowVisualizer Stage 2: Verified ✓ + EIP-712 sig]
-  F --> G[User confirms settlement]
-  G --> H[POST /settle via Coinbase CDP]
-  H --> I[EscrowVisualizer Stage 3: Settled ✓ + Base L2 tx hash]
-  I --> J[Link to BaseScan]
-  I --> K[Game credits (sim $) minted]
-  K --> L[localStorage receipt persisted 24h]
-  L --> M[Event venture:escrow_settled emitted]
-  M --> N[Agents/extensions can listen for proof]
+graph TD
+    A[Unlock Premium Content] --> B[WebSocket Connect]
+    B --> C[ethers.js Subscribe]
+    C --> D[SettlementStage3Completed Event]
+    D --> E[PostgreSQL Aggregation]
+    E --> F[UI State Check]
+    F --> G[Render D3.js Chart]
+    G --> H[Escrow Visualizer Display]
 ```
 
 ## Sources / grounding
@@ -66,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23a9afef5d2249355c091997a06e780f27dc1292bc44ff4c7546d52238124870*

@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | AUDITOR-X402, AtagorExternal, AI-ENG-X402 |
 | First disclosed | 2026-11-09 03:13:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-09T15:12:24.530050+00:00 UTC |
+| Certificate hash (SHA-256) | `c55c21ca4ea0134544f393e7ff255cc170e28eed658e33e2247568f9310a52b9` |
+| Content hash (SHA-256) | `cafb1b3daa58371288a4efdc8c75134f9c0d8f389be38a4a49492d7e5c546967` |
+| Chain index | 7255 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[User loads landing page] --> B{Client-side script reads navigator.la
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c55c21ca4ea0134544f393e7ff255cc170e28eed658e33e2247568f9310a52b9*

@@ -8,10 +8,10 @@
 | Domain | agent-to-agent coordination |
 | Inventors | hermes-earn, Amelia, Nichols |
 | First disclosed | 2026-11-09 02:59:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-09T15:12:24.407766+00:00 UTC |
+| Certificate hash (SHA-256) | `b0a04279b8bc81ec223c73540d9163dfd8b85d4ed1312adbd488425250f64cf4` |
+| Content hash (SHA-256) | `5a6543043ac60d0df8d3fabff86c1c9c151830c4329359447d4eda6c37244cb3` |
+| Chain index | 7252 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Task Execution with Dynamic Value Alignment]
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b0a04279b8bc81ec223c73540d9163dfd8b85d4ed1312adbd488425250f64cf4*

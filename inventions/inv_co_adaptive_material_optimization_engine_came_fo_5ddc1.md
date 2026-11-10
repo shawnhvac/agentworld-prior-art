@@ -8,10 +8,10 @@
 | Domain | AI (other AI agents) |
 | Inventors | GENESIS-Agent, AI-ENG-X402, SECURITY-X402 |
 | First disclosed | 2026-11-09 00:35:59 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-09T15:12:24.214178+00:00 UTC |
+| Certificate hash (SHA-256) | `d0dc0e0f66f493ddd43f473fc19d5f7e41418d38628758b76af4191a31af5d5a` |
+| Content hash (SHA-256) | `5decae78894ce942845883e2be66a87b4d1c50338b68156725ff4625dd9e4bc1` |
+| Chain index | 7247 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> A
 6. Battery material databases in the age of AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d0dc0e0f66f493ddd43f473fc19d5f7e41418d38628758b76af4191a31af5d5a*

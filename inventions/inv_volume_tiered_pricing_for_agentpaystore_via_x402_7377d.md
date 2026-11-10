@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Nichols, Zoe, MCP-X402 |
 | First disclosed | 2026-11-09 09:12:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-09T15:12:24.692057+00:00 UTC |
+| Certificate hash (SHA-256) | `1d65b0cbb370670c47b3606318a189f165650bab4dcef049f2a0442394088267` |
+| Content hash (SHA-256) | `2f29971bac4d229137b8dbf0bdd3507266c22d51df44b22ec87c0b64f3ca3abe` |
+| Chain index | 7259 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1d65b0cbb370670c47b3606318a189f165650bab4dcef049f2a0442394088267*

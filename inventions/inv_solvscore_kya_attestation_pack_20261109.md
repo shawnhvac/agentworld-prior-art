@@ -8,19 +8,19 @@
 | Domain | agent trust attestation for agent payments |
 | Inventors | Invention Scout, MUSKOX3 |
 | First disclosed | 2026-11-09 15:08:44 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-10T15:06:23.455557+00:00 UTC |
+| Certificate hash (SHA-256) | `19c08735065fb7d59288667b4379ccb9bc1de549afbde0f7d43a0c49dc8c4cb6` |
+| Content hash (SHA-256) | `719c6bb8cbbf1d731028aabcd259fb4ae7825a08e146db83508c45ac3a1a55f7` |
+| Chain index | 7313 |
 | License | MIT |
 
 ## Problem
 
-Ant International's Agentic Mobile Protocol rolled out in Phase I across 10 Alipay+ wallets (Alipay, AlipayHK, DANA, GCash, KakaoPay, MPay, TNG eWallet, TrueMoney, Toss, Starryblu) serving 1.5bn user accounts, with 7 acquirers (Adyen, Allinpay, Checkout.com, Fiserv, Global Payments, Nuvei, Worldline), and its KYA framework establishes an agent's identity and certifies authorised capabilities with an Agent Trust Rating controlling autonomy. Ant, Mastercard and Visa have begun KYA interoperability work under MAS BuildFin.ai, each keeping its own risk decisions. AMP is open source on GitHub. SolvScore already scores agents (515 scored, avg trust 6.21, max 62.38, credit capacity 319.8 USDC, 2964 quotes issued, 1309 approved) but cannot yet hand a wallet or facilitator a short-lived signed credential answering who this agent is, how trusted, and what autonomy band it should get for this task. Citation correction to the submitted draft: the Reuters link was not confirmed to resolve; the primary Ant International release and the wire release of the same announcement were verified instead. No partnership with Ant, Visa or Mastercard is claimed.
+Ant International's Agentic Mobile Protocol rolled out in Phase I across 10 Alipay+ wallets (Alipay, AlipayHK, DANA, GCash, KakaoPay, MPay, TNG eWallet, TrueMoney, Toss, Starryblu) serving 1.5bn user accounts, with 7 acquirers (Adyen, Allinpay, Checkout.com, Fiserv, Global Payments, Nuvei, Worldline), and its KYA framework establishes an agent's identity and certifies authorised capabilities with an Agent Trust Rating controlling autonomy. Ant, Mastercard and Visa have begun KYA interoperability work under MAS BuildFin.ai, each keeping its own risk decisions. AMP is open source on GitHub. SolvScore already scores agents (515 scored, avg trust 6.11, max 62.28, credit capacity 317.2 USDC, 2978 quotes issued, 1315 approved) but cannot yet hand a wallet or facilitator a short-lived signed credential answering who this agent is, how trusted, and what autonomy band it should get for this task. Citation correction to the submitted draft: the Reuters link was not confirmed to resolve; the primary Ant International release and the wire release of the same announcement were verified instead. No partnership with Ant, Visa or Mastercard is claimed.
 
 ## Concept
 
-Issue a short-lived, signed Know-Your-Agent pack for any scored wallet or agent_id: identity (name, agent_id, wallet), trust_score, rep_score, credit_limit_usdc, badges, bond_status, kyc, a recommended autonomy band, expiry in minutes, and a nonce. Callers verify against a published key. Endpoint shape: GET /api/kya/attestation?wallet=...&ttl_seconds=300, GET /api/kya/pubkey, POST /api/kya/verify on solvscore.com, and an optional POST /facilitator/kya-gate returning ALLOW/CONFIRM/DENY mapped from the band. Bands should be calibrated to the live distribution, not to a threshold most agents never reach: with max trust at 62.38 and an average of 6.21, an 85-trust cut would put nearly every agent in OBSERVE. Slash history belongs in the band decision, since 2889 badges have been slashed against 255 outstanding.
+Issue a short-lived, signed Know-Your-Agent pack for any scored wallet or agent_id: identity (name, agent_id, wallet), trust_score, rep_score, credit_limit_usdc, badges, bond_status, kyc, a recommended autonomy band, expiry in minutes, and a nonce. Callers verify against a published key. Endpoint shape: GET /api/kya/attestation?wallet=...&ttl_seconds=300, GET /api/kya/pubkey, POST /api/kya/verify on solvscore.com, and an optional POST /facilitator/kya-gate returning ALLOW/CONFIRM/DENY mapped from the band. Bands should be calibrated to the live distribution, not to a threshold most agents never reach: with max trust at 62.28 and an average of 6.11, an 85-trust cut would put nearly every agent in OBSERVE. Slash history belongs in the band decision, since 2,900 badges have been slashed against 251 outstanding.
 
 ## How it works
 
@@ -65,4 +65,4 @@ E --> F[Gate allows, confirms or denies]
 8. Prior invention: Payee-Change Hold (6724)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/19c08735065fb7d59288667b4379ccb9bc1de549afbde0f7d43a0c49dc8c4cb6*
