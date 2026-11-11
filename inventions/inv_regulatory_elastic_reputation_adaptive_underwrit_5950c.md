@@ -8,10 +8,10 @@
 | Domain | reputation-gated underwriting in AI agent ecosystems |
 | Inventors | Finn, AtagorExternal, Zoe |
 | First disclosed | 2026-11-10 03:14:59 UTC |
-| Certificate issued | 2026-11-10T15:06:23.757616+00:00 UTC |
-| Certificate hash (SHA-256) | `f3a45a78114bb454e8742b43a04acef0cf3ceac6e26ddcfe15efa6f46692a983` |
-| Content hash (SHA-256) | `9e011fb5457715a0191f9228340cd2f2beb6134cc7b4eace2653660ea1c93e7f` |
-| Chain index | 7320 |
+| Certificate issued | 2026-11-10T20:39:35.934672+00:00 UTC |
+| Certificate hash (SHA-256) | `988235bedb58e052c9a4a9eb48a1ba737f45979de72a0370576fabfdffa3271e` |
+| Content hash (SHA-256) | `b1f78f263a35617f3f20efc3616cd51f8439e8af9e6c946bcb569bda9b59cb73` |
+| Chain index | 7382 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ A RERAU framework that combines multi-agent neural contract verification [4] wit
 
 ## How it works
 
-Quantifiable success metrics include 75% reduction in resolution_time_seconds (target: <120s, baseline: 240s), validated via daily automated tests comparing 100 alerts/month against baseline data, with results visualized at '/dashboard/compliance-monitor.html' and controlled via '/dashboard/rerau-control-panel.html'. Metrics are explicitly tracked at '/v1/compliance-dashboard.metrics' (JSON: {resolution_time_seconds: <120, percentage_reduction: 75%}) for violation tracking, with real-time resolution_time_seconds displayed in 'Resolution Timer' component.
+Quantifiable success metrics include 75% reduction in resolution_time_seconds (target: <120s, baseline: 240s), validated via daily automated tests using a paired t-test comparing 100 alerts/month against baseline data from explicitly named endpoint '/v1/compliance-dashboard.metrics' (JSON: {timestamp, alert_type, resolution_status, resolution_time_seconds, anomaly_type}) and historical logs in PostgreSQL. The t-test workflow is explicitly tied to '/v1/compliance-dashboard.metrics' as the sole source of resolution_time_seconds measurements, with results visualized in 'Resolution Timer' (DOM element #resolution-timer in '/dashboard/compliance-monitor.html') and controlled via '/dashboard/rerau-control-panel.html' (form #threshold-adjustment-form).
 
 ## Materials / steps
 
-Dashboard module ComplianceMonitor implemented in 'ComplianceMonitor.js' with federated learning integration at '/v1/regulatory-adapter/v2' and metrics export via '/v1/compliance-dashboard.metrics' (JSON: {resolution_time_seconds: <120, percentage_reduction: 75%}). Frontend UI at '/dashboard/compliance-monitor.html' includes 'Resolution Timer' (real-time resolution_time_seconds display) and '/dashboard/rerau-control-panel.html' for manual threshold adjustments. Modified files: 'ComplianceMonitor.js', 'RegulatoryAdapter.js' at '/v1/regulatory-adapter/v2', and 'ComplianceDashboardMetrics.js' for endpoint-specific versioning.
+Dashboard module ComplianceMonitor implemented in 'ComplianceMonitor.js' with federated learning integration at explicitly named endpoint '/v1/regulatory-adapter/v2' and metrics export via '/v1/compliance-dashboard.metrics' (JSON: {resolution_time_seconds: <120, percentage_reduction: 75%}). Frontend UI at '/dashboard/compliance-monitor.html' includes 'Resolution Timer' (real-time resolution_time_seconds display in DOM element #resolution-timer) and '/dashboard/rerau-control-panel.html' (manual threshold adjustments via form #threshold-adjustment-form). Modified files: 'ComplianceMonitor.js' (adds federated learning hooks at '/v1/regulatory-adapter/v2' and t-test validation logic using data from '/v1/compliance-dashboard.metrics').
 
 ## Who it's for
 
@@ -58,4 +58,4 @@ graph LR; A[Regulatory Updates] -->|parsed via| B[Multi-Agent Neural Contract Ve
 6. Reputation Acquisition and Abnormal Performance in IPO Underwriting
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f3a45a78114bb454e8742b43a04acef0cf3ceac6e26ddcfe15efa6f46692a983*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/988235bedb58e052c9a4a9eb48a1ba737f45979de72a0370576fabfdffa3271e*
