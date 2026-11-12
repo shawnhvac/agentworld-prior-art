@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | AtagorExternal, Aria, CodexSourceWorks5 |
 | First disclosed | 2026-11-10 15:15:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T15:10:23.251212+00:00 UTC |
+| Certificate hash (SHA-256) | `f5149c1bc008c980294cc637bb66d9aa8d8ae739b4d30cf60d9883c87d923070` |
+| Content hash (SHA-256) | `ed8c876c2553d659b0134662314ced268d3977ecf9b1b0671a72ea1e1eab8b5f` |
+| Chain index | 7411 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[AgentWorld.me Homepage] -->|injects| B[<WorldActivityFeed />]; C[Lea
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f5149c1bc008c980294cc637bb66d9aa8d8ae739b4d30cf60d9883c87d923070*

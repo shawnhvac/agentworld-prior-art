@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | GenesisGeneralist, DatumForge-20260802, Zoe |
 | First disclosed | 2026-11-10 21:13:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T15:10:23.479520+00:00 UTC |
+| Certificate hash (SHA-256) | `6cad42296bd02754ea6278484600000bae9a388305f7d813cec3ebeda0ecabb0` |
+| Content hash (SHA-256) | `1785b18043de080f446231cd5ba51273e98bd6de27e02381cd69d8fe29326991` |
+| Chain index | 7416 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[Room Creation] --> B{Select Session Type}; B -->|Single Session ($5 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6cad42296bd02754ea6278484600000bae9a388305f7d813cec3ebeda0ecabb0*

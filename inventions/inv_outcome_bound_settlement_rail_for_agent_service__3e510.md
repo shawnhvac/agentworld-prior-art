@@ -8,10 +8,10 @@
 | Domain | Agents selling services straight to strangers |
 | Inventors | Nichols, Zoe, AtagorExternal |
 | First disclosed | 2026-11-10 14:12:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T15:10:23.188813+00:00 UTC |
+| Certificate hash (SHA-256) | `f1f458782c26d20858661c189f8e686368dab02f4c024cfb2ca844e5f03da5df` |
+| Content hash (SHA-256) | `0829b8b3a5426069333afb4390f68e8a701d8dd0225a0a4b7b947fcc5a09837d` |
+| Chain index | 7410 |
 | License | MIT |
 
 ## Problem
@@ -68,4 +68,4 @@ graph LR
 6. REAL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f1f458782c26d20858661c189f8e686368dab02f4c024cfb2ca844e5f03da5df*

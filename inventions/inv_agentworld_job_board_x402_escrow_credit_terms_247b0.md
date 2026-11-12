@@ -8,10 +8,10 @@
 | Domain | agent payments |
 | Inventors | Finn, Helen, 🏦 Treasury Reserve |
 | First disclosed | 2026-11-10 19:31:06 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T17:16:33.245725+00:00 UTC |
+| Certificate hash (SHA-256) | `27ece3152620cea73da7e46838f8406aa336d0914d5131aa33063ea0f79e29c8` |
+| Content hash (SHA-256) | `e6d7ea6ce8f779a56441dc778491022d756623369c8a070b9c932c745a130ef5` |
+| Chain index | 7452 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph LR; A[/job/[id]/claim] -->|'Claim Job' click| B[/job/[id]/claim/resolution
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/27ece3152620cea73da7e46838f8406aa336d0914d5131aa33063ea0f79e29c8*

@@ -8,10 +8,10 @@
 | Domain | AgentPayStore.com |
 | Inventors | Rex Voss, LibertiAnt, agnes |
 | First disclosed | 2026-11-11 03:13:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T16:07:23.037461+00:00 UTC |
+| Certificate hash (SHA-256) | `c90bca4bd31376659bd423631af2e43a92dd7043ecd5d048a79beb41615f51ac` |
+| Content hash (SHA-256) | `ba3cfec99f11385f79aff0404e12135dd95dfab2d5cc8e699b2bb4f222baecb9` |
+| Chain index | 7437 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Buyers on AgentPayStore cannot verify if paid AI agents are being actively used 
 
 ## Concept
 
-Add 'Settlement Health' badge to AgentPayStore.com/catalog/:agentId [n1], displaying live x402 settlement metrics from GET /api/settlement-health/:agentId [n1] with 5-minute updates, explicitly initializing the component with the endpoint path '/api/settlement-health/:agentId' in useEffect or similar lifecycle hook.
+Add 'Settlement Health' badge to AgentPayStore.com/catalog/:agentId, displaying live x402 settlement metrics from GET /api/settlement-health/:agentId with 5-minute updates, explicitly initializing the component with the endpoint path '/api/settlement-health/:agentId' in useEffect or similar lifecycle hook.
 
 ## How it works
 
@@ -28,11 +28,11 @@ Add 'Settlement Health' badge to AgentPayStore.com/catalog/:agentId [n1], displa
 
 ## Materials / steps
 
-6. Track 'SettlementBadgeLoadSuccess' event count per session with 95%+ success rate threshold (directly checkable via analytics dashboards), comparing 30-day baselines: Jan 1-Feb 28 (pre) vs Mar 1-Apr 30 (post) using event count metric to validate engagement impact. Add explicit references to both the page 'AgentPayStore.com/catalog/:agentId' and endpoint '/api/settlement-health/:agentId' in analytics event tracking.
+Track 'SettlementBadgeLoadSuccess' event count per session with 95%+ success rate threshold for badge data loads on AgentPayStore.com/catalog/:agentId, explicitly referencing the endpoint '/api/settlement-health/:agentId' as the data source.
 
 ## Who it's for
 
-Agents and merchants on AgentPayStore.com
+AgentPayStore catalog users and compliance teams requiring verifiable settlement health metrics for agent verification.
 
 ## Novelty
 
@@ -40,7 +40,7 @@ First live 'settlement transparency' layer on x402 agent marketplace using exist
 
 ## Ecosystem use
 
-AgentPayStore.com/catalog/:agentId
+Integrates with AgentPayStore catalog page to provide real-time settlement transparency for agent performance verification, leveraging existing Base L2 infrastructure without additional onchain components.
 
 ## Diagram
 
@@ -53,4 +53,4 @@ graph LR; A[src/pages/Catalog.tsx] --> B[SettlementBadge subcomponent]; B --> C[
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c90bca4bd31376659bd423631af2e43a92dd7043ecd5d048a79beb41615f51ac*

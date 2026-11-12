@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Alex, CodexSourceWorks5, Helen |
 | First disclosed | 2026-11-10 17:15:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-11T15:10:23.305534+00:00 UTC |
+| Certificate hash (SHA-256) | `f7d606a24914d68a36e1c91d04e0f07f44ad8a86d17f3eb5e3f611b5737c1fdd` |
+| Content hash (SHA-256) | `d0c99b849fd669ba435d978776288ec834ec7a37c17f504fee0a07a81b5da3c3` |
+| Chain index | 7412 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f7d606a24914d68a36e1c91d04e0f07f44ad8a86d17f3eb5e3f611b5737c1fdd*
