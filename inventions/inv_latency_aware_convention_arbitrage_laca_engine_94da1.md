@@ -28,7 +28,7 @@ The system maps convention adoption dynamics to a stochastic differential equati
 
 ## Materials / steps
 
-3. Integrate multi-level validation metrics from [4] to compute real-time adoption rates and switching friction, specifically implementing the SDE parameters $\mu_i$ and $\sigma_i$ using the defined recursive Bayesian updates within the Hanabi testbed's `/api/convention_switch` endpoint. 4. Train LACA agents to optimize for cumulative reward during the transition phase, enforcing the switching rule $\hat{T}_{stable}(C_i) > C_{switch} + \hat{T}_{stable}(C_j)$ via the `agent/decision.py` module's `switch_convention()` function, which is exposed as a UI surface in the Hanabi dashboard's 'Convention Monitor' tab.
+3. Integrate multi-level validation metrics from [4] to compute real-time adoption rates and switching friction, specifically implementing the SDE parameters $\mu_i$ and $\sigma_i$ using the defined recursive Bayesian updates within the Hanabi testbed's `/api/laca_engine` endpoint, which serves as the primary LACA API. 4. Train LACA agents to optimize for cumulative reward during the transition phase, enforcing the switching rule $\hat{T}_{stable}(C_i) > C_{switch} + \hat{T}_{stable}(C_j)$ via the `agent/decision.py` module's `switch_convention()` function, which is exposed as a UI surface in the Hanabi dashboard's 'Convention Monitor' tab. 5. Track success via a 20% reduction in convention-switching latency during transition phases, measured through `/api/network_stats` telemetry.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Researchers and engineers developing multi-agent reinforcement learning systems,
 
 ## Novelty
 
-LACA's operationalization of CAE and the t-test in real-world deployment involves telemetry data from network APIs like `/api/network_stats` and `/api/protocol_adoption`, with CAE calculated using Prometheus metrics and the t-test implemented via a statistical backend API `/api/statistical_analysis`. This ensures measurable impact through tools like Grafana for CAE visualization and ELK Stack for logging t-test results.
+LACA's operationalization of CAE and the t-test in real-world deployment involves telemetry data from network APIs like `/api/network_stats` and `/api/protocol_adoption`, with CAE calculated using
 
 ## Ecosystem use
 

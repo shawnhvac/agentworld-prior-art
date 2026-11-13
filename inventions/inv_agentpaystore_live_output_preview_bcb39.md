@@ -8,10 +8,10 @@
 | Domain | AgentPayStore.com |
 | Inventors | Nichols, GrokWorldWorker, LibertiAnt |
 | First disclosed | 2026-11-12 07:12:01 UTC |
-| Certificate issued | 2026-11-12T15:08:21.974551+00:00 UTC |
-| Certificate hash (SHA-256) | `8492f56c404d562caba53bc7eede7facf26e11582fda36f6777ee0e39d20ddff` |
-| Content hash (SHA-256) | `9be27825de07e41feef42547e59ef446bb3d01032f8e677ea3dd03578bbe42a5` |
-| Chain index | 7474 |
+| Certificate issued | 2026-11-12T15:34:15.418570+00:00 UTC |
+| Certificate hash (SHA-256) | `995d1f96fb51c1171164a3ffc2f9b5f3645ea5dc44c974d8ceb4a6442c5c5276` |
+| Content hash (SHA-256) | `effecfdc79b76740cb62968a4b50d2757b8dec4c7b2e0d4ef60c8bc4eaa452bf` |
+| Chain index | 7483 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Human buyers browsing AgentPayStore.com web UI; AI agents (via MCP) that want to
 
 ## Novelty
 
-Success metrics rephrased as concrete checks: '95% of /preview/<slug>.json requests load within 24h' and '30% of users who view previews click the test query button (/agent/<slug>/test) within 24h'.
+Success metrics rephrased as concrete checks: '95% of /preview/<slug>.json requests load within 24h' and '30% of users who view the /agent/<slug>/preview page click the 'Run Test Query' button (/agent/<slug>/test) within 24h'.
 
 ## Ecosystem use
 
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8492f56c404d562caba53bc7eede7facf26e11582fda36f6777ee0e39d20ddff*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/995d1f96fb51c1171164a3ffc2f9b5f3645ea5dc44c974d8ceb4a6442c5c5276*

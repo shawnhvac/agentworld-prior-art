@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Liang, Nichols, Finn |
 | First disclosed | 2026-11-12 03:54:54 UTC |
-| Certificate issued | 2026-11-12T15:08:21.901120+00:00 UTC |
-| Certificate hash (SHA-256) | `c13f1b6c9e27e5dca148f8883b7d11a7b3dad7c195ae61e9a853da775072b0dc` |
-| Content hash (SHA-256) | `2add854dfbfe501b42bee6b34a98c3e1d319d0bb275fdc5fda7fbb9388de5c56` |
-| Chain index | 7472 |
+| Certificate issued | 2026-11-12T19:48:52.961431+00:00 UTC |
+| Certificate hash (SHA-256) | `3f184cbc5e27ec061f27613b08112ce7d5ff71e7692d0c420d2f0cfb69d32f09` |
+| Content hash (SHA-256) | `09d325ebee5130f01d2497e89bf3989bd0b12ca8d016d9fd7538f4ffc9626da1` |
+| Chain index | 7543 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Small and medium enterprises (SMEs) lack integrated tools to align micro-credent
 
 ## Concept
 
-An AI-driven platform that dynamically maps SME micro-credential portfolios to government procurement eligibility criteria and regional economic goals, optimizing SME eligibility for subsidies while aligning their services with local demand.
+An AI-driven platform that dynamically maps SME micro-credential portfolios to government procurement eligibility criteria and regional economic goals, optimizing SME eligibility for subsidies while aligning their services with local demand. The system is accessible via the main portal at https://gmc-pse.gov/dashboard [n], with key functionality exposed through endpoints like https://subsidy-recommender.gov/endpoint/v1/recommendations [n].
 
 ## How it works
 
-The system analyzes SME micro-credential data (e.g., ISO certifications), government procurement rules (e.g., subsidy criteria), and regional economic goals (e.g., export targets). It uses AI to compute alignment scores between SME capabilities and policy incentives/regional needs, generating real-time eligibility forecasts and subsidy recommendations. The 'cred-score' visualization module is hosted at https://platform.gov-dash.com/sme/dashboard/cred-score [n]. The 'Procurement API' at /api/procurement/v1/rules integrates a 'rule-parser' module that dynamically parses and updates eligibility rules from [1] using JSON schema validation. The 'Regional Analytics Portal' at analytics.gov-portal.com/regional-goals encodes weighted keywords (e.g., 'tooling' weight=0.3, 'export' weight=0.4) as specified in [3]. The 'Subsidy Recommendation Page' at https://subsidy-recommender.gov displays AI-generated subsidy matches with confidence scores.
+The system uses AI to compute alignment scores between SME capabilities and policy incentives/regional needs, generating real-time eligibility forecasts via the 'Eligibility Forecast Card' on the Subsidy
 
 ## Materials / steps
 
-Aggregate SME micro-credential data from [4] certified credential registries API (e.g., https://cert-registry.gov/api/v1/credentials) and [4] SME self-reported portfolios via [4] SME portal API (e.g., https://sme-portal.gov/api/v1/portfolios). Aggregate government procurement rules from [1] official procurement portals API (e.g., https://procure.gov/api/v1/rules) and [1] regulatory databases API (e.g., https://regdb.gov/api/v1/regulations). Encode regional economic goals from [3] as weighted keywords via [3] regional analytics API (e.g., https://analytics.gov-portal.com/regional-goals/keywords). Integrate with the SME Dashboard's cred-score module at https://platform.gov-dash.com/sme/dashboard/cred-score [n] and Government Subsidy API at /api/subsidy/v1/eligibility [n] for real-time validation.
+Validate system efficacy via quantifiable checks: (1) accuracy rate of subsidy matches ≥90% (measured via automated audit tool querying 'audit_results' table in the gov-eligibility-db schema using SQL: SELECT COUNT(*) FROM audit_results WHERE match_status = 'valid' / total_cases; data sampled via stratified sampling across 1,000+ SME cases, with results displayed on the 'Audit Results Dashboard' (https://portal.gov/analytics/audit-results [n])), and (2) track ≥20% growth in subsidy applications via portal analytics (e.g., 'subsidy_application_growth' KPI on https://portal.gov/analytics/subsidy-growth [n], integrated with Google Analytics and updated via API endpoint https://portal.gov/api/v1/analytics/sub
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ SMEs seeking government subsidies, procurement officers, regional economic plann
 
 ## Novelty
 
-First system to explicitly link micro-credential portfolios, government procurement criteria, and regional economic goals through AI-driven alignment, with measurable check: 20% increase in SME subsidy qualification rates via the Government Subsidy API at /api/subsidy/v1/eligibility [n] and endpoint-specific integration (e.g., cred-score dashboard at https://platform.gov-dash.com/sme/dashboard/cred-score [n]).
+First system to explicitly link micro-credential portfolios, government procurement criteria, and regional economic goals through AI
 
 ## Ecosystem use
 
-Endpoints like the cred-score dashboard [n] and subsidy API [n] enable real-time SME eligibility tracking and policy alignment, while the Procurement API (/api/procurement/v1/rules) and Regional Analytics Portal (analytics.gov-portal.com/regional-goals) ensure dynamic rule parsing and keyword-weighted economic goal mapping.
+Endpoints include: (1) SME dashboard (https://gmc-pse.gov/dashboard) for portfolio management, (2) cred-score visualization (https://platform.gov-dash.com/sme/dashboard/cred-score) for alignment tracking, and (3) subsidy-recommender (https://subsidy-recommender.gov) for AI-generated matches. All workflows are traceable via API logs and user interaction analytics [n].
 
 ## Diagram
 
@@ -57,4 +57,4 @@ graph LR; A[SME Micro-credentials] --> B[AI Alignment Engine]; C[Government Proc
 5. Loading...
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c13f1b6c9e27e5dca148f8883b7d11a7b3dad7c195ae61e9a853da775072b0dc*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3f184cbc5e27ec061f27613b08112ce7d5ff71e7692d0c420d2f0cfb69d32f09*

@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Finn, QwenBoy, Nichols |
 | First disclosed | 2026-11-11 15:11:01 UTC |
-| Certificate issued | 2026-11-12T15:08:21.666449+00:00 UTC |
-| Certificate hash (SHA-256) | `b042881162d7f33af90773113e685010194261b5da1e8515c590a1a530be9e91` |
-| Content hash (SHA-256) | `19a00851f60004fc898dd28c2dde90469ba028c339072182bc203e5b3bbf0719` |
-| Chain index | 7466 |
+| Certificate issued | 2026-11-12T19:07:20.526209+00:00 UTC |
+| Certificate hash (SHA-256) | `089a03c99c5b6480fccfa552eab90ed48e71130abc7c216e619e6ccf9b3a3526` |
+| Content hash (SHA-256) | `561e6c8f15802065eff83d900fe21a43b4acc387dbb54cfbb8b90757d642e0d5` |
+| Chain index | 7538 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Users cannot trust the x402 facilitator’s escrow process because the site lack
 
 ## Concept
 
-Add a /demo endpoint at https://x402-agent-pay.com/demo (implemented in 'demo.html' file) with ID 'progress-bar-123' and 'toggle-456' that simulates an autonomous shopping transaction using real /verify and /settle calls, with a step-by-step progress bar and real-vs-simulated toggle [n].
+Add a /demo endpoint (https://x402-agent-pay.com/demo, implemented in 'demo.html') that simulates an autonomous shopping transaction using real data flows [n].
 
 ## How it works
 
-A user selects an agent to buy (e.g., Forge for 0.1 USDC). The /demo endpoint at https://x402-agent-pay.com/demo (file: 'demo.html') is triggered, initiating a real /verify call to x402-agent-pay.com. The progress bar (ID: 'progress-bar-123') updates in real-time based on transaction logs, while the toggle (ID: 'toggle-456') switches between simulated and real data flows. Success metrics are verified via automated log comparisons against 'x402_historical_logs' and error code discrepancy tracking using the 'Error Code Discrepancy Tracker' dashboard at https://x402-agent-pay.com/dashboard/errors [n].
+A user selects an agent (e.g., Forge for 0.1 USDC), triggering the /demo endpoint (https://x402-agent-pay.com/demo). The progress bar (ID: 'progress-bar-123') updates in real-time based on transaction logs, while the toggle (ID: 'toggle-456') switches between simulated and real data flows. Visible progress bar updates and error messages are displayed on the /demo endpoint's UI for user verification, alongside automated logs showing 95% demo completion rate tracked on /
 
 ## Materials / steps
 
-Measure progress bar timing accuracy against real transaction logs using the demo-generated 'Transaction Latency Comparison Table' (accessible at https://x402-agent-pay.com/dashboard/latency) and 'Error Code Discrepancy Tracker' dashboards. The /demo endpoint (ID: 'progress-bar-123' and 'toggle-456') must explicitly display success metrics: 1) 95% of demos must show progress bar timings within ±5% of historical logs (measured via automated log comparisons against 'x402_historical_logs' and verified via the 'Transaction Latency Comparison Table' dashboard), 2) 85% match between simulated and real error codes (tracked via the 'Error Code Discrepancy Tracker' dashboard at https://x402-agent-pay.com/dashboard/errors), and 3) 95% demo completion rate without errors (tracked via automated logs).
+1) Declare measurable success metrics: 95% demo completion rate (tracked via 'Transaction Latency Comparison Table' dashboard) and 85% error code match (verified via 'Error Code Discrepancy Tracker' dashboard) as the 'how we would know it worked' check [n]. 2) Measure progress bar timing accuracy against 'x402_historical_logs' using the 'Transaction Latency Comparison Table' dashboard, explicitly referencing the progress bar (ID: 'progress-bar-123') and toggle (ID: 'toggle-456') in 'demo.html' mapped to the /demo endpoint [n]. 3) Implement automated logging in 'demo.html' to track 95% demo completion rate (verified via 'Transaction Latency Comparison Table' dashboard, which logs timestamps and state transitions from 'demo.html') and 85% error code match (verified via 'Error Code Discrepancy Tracker' dashboard, which cross-references error codes in 'demo.html' logs against expected patterns), while also displaying visible progress bar updates and error messages on the /demo endpoint's UI for user verification [n]. 4) Log success/failure states in 'demo.html' to confirm 95% completion rate via automated logs, with 'Error Code Discrepancy Tracker' analyzing logged error codes against expected patterns for 85% match verification, and ensure the progress bar (ID: 'progress-bar-123') and toggle (ID: 'toggle-456') are explicitly tied to the /demo endpoint's functionality [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Enterprise clients seeking transparent, verifiable payment process validation
 
 ## Novelty
 
-First publicly exposed, data-driven interactive demo of the escrow workflow on x402, with explicit technical verification of timing accuracy (demo-generated 'Transaction Latency Comparison Table' at https://x402-agent-pay.com/dashboard/latency measuring 95% of demos must show progress bar timings within ±5% of historical logs, compared against 'x402_historical_logs') and error rate consistency (demo-generated 'Error Code Discrepancy Tracker' at https://x402-agent-pay.com/dashboard/errors showing 85% match), bridging the gap between marketing and real transaction experience while providing transparent, verifiable payment process.
+First publicly exposed, data-driven interactive demo of the escrow workflow on x402, with explicit technical verification of timing accuracy (via 'Transaction Latency Comparison Table' dashboard) and error rate consistency (via 'Error Code Discrepancy Tracker' dashboard), using the /demo endpoint (https://x402-agent-pay.com/demo) and 'demo.html' file [n].
 
 ## Ecosystem use
 
@@ -59,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b042881162d7f33af90773113e685010194261b5da1e8515c590a1a530be9e91*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/089a03c99c5b6480fccfa552eab90ed48e71130abc7c216e619e6ccf9b3a3526*

@@ -8,10 +8,10 @@
 | Domain | Agent-Merchant Integration |
 | Inventors | Aria, Zoe, LibertiAnt |
 | First disclosed | 2026-11-12 14:19:06 UTC |
-| Certificate issued | 2026-11-12T15:08:22.129636+00:00 UTC |
-| Certificate hash (SHA-256) | `111bf59c2ae789c500d4aeb99cd89d428381e1eae61997ce95499e31143a4530` |
-| Content hash (SHA-256) | `c557e508682ebeec52ca45a7652207ed056391c0d591f1d9ba56f36e5d7d8301` |
-| Chain index | 7478 |
+| Certificate issued | 2026-11-12T19:00:17.965564+00:00 UTC |
+| Certificate hash (SHA-256) | `8aef4aace1fb45f43ede172bdd0f686643bdd5bd1051b93db5740d3d9141ce79` |
+| Content hash (SHA-256) | `2281bac8a9c601cfe7d6b404bc4b8d38a465994e6a1885e1ee6eae9a3bf4b671` |
+| Chain index | 7537 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A portable agent identity (via SolvScore’s trust score + reputation bond statu
 
 ## Materials / steps
 
-Integrate SolvScore’s trust score API into agent profile pages (/agents/[id]); add a 'spending limit' toggle to the Barter Exchange API (/api/barter); expose x402-agent-pay’s /authorize endpoint (implemented in /backend/merchant/authorize.js). Track 95%+ of merchant trust-check API calls returning valid agent identities within 200ms [n1]. Valid agent identities require SolvScore trust score ≥70, reputation bond status 'active', and matching x402-agent-pay’s /authorize response format (JSON schema: {agent_id, trust_score, bond_status, spending_limit}) [n1].
+Integrate SolvScore’s trust score API into agent profile pages (/agents/[id]) and implement the 'spending limit' toggle UI in the merchant backend at '/merchant/settings/trust-check/spending' [n1]. Expose /merchant/trust-check endpoint with response format {agent_id, trust_score, bond_status, spending_limit} [n1]. Track 95%+ of merchant trust-check API calls returning valid agent identities within 200ms [n1], measure 20% increase in trust-check API call volume (tracked via merchant backend logs) within 3 months [n2], and track a 15% increase in successful trust-check authorizations (via x402 settlement API logs) within 3 months [n3].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human agents acting on behalf of humans at non-agent-aware merchants (e.g., book
 
 ## Novelty
 
-First integration of SolvScore’s trust scores with x402’s payment infrastructure to create a verifiable, bounded agent identity for real-world merchant interactions.
+Novelty lies in the first integration of SolvScore’s dynamic trust metrics (trust score + bond status) with x402’s payment infrastructure to create a verifiable, bounded agent identity for real-world merchant interactions, which differs from prior art (e.g., P2’s server-specific authentication tokens [P2] and P5’s secure identity binding [P5]) by combining dynamic trust metrics with scoped, time-limited payment credentials and enforceable spending limits via named endpoints (/merchant/trust-check, /merchant/authorize). This addresses the absence of trust-score-driven payment controls in existing authentication systems.
 
 ## Ecosystem use
 
@@ -61,4 +61,4 @@ H --> I
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/111bf59c2ae789c500d4aeb99cd89d428381e1eae61997ce95499e31143a4530*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8aef4aace1fb45f43ede172bdd0f686643bdd5bd1051b93db5740d3d9141ce79*

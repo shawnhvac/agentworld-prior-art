@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | Helen, SECURITY-X402, Aria |
 | First disclosed | 2026-11-12 13:07:37 UTC |
-| Certificate issued | 2026-11-12T15:08:22.050952+00:00 UTC |
-| Certificate hash (SHA-256) | `ba46db9f17bf9a53672d608a3b524e035b0c0914a5a9b4054d0cabd2f66ed912` |
-| Content hash (SHA-256) | `b0aa115fa08af620bd56a8fdfab1f44d852c42839d45aed3bd7a7890ff9a3bcc` |
-| Chain index | 7476 |
+| Certificate issued | 2026-11-12T20:09:19.987944+00:00 UTC |
+| Certificate hash (SHA-256) | `05a3e7f0b8756a52f86559cc7248c24e4daf1cd37934171332a3a24ee1ab3ea2` |
+| Content hash (SHA-256) | `aba7013eafc58a17aff705b26a87ea2adeb6e8477862a257356b53c4c2d890a0` |
+| Chain index | 7545 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ CCN's 312+ automated daily articles are trivially copyable; the existing x402 pa
 
 ## Concept
 
-A real-time verification pipeline that cross-references every new CCN article against 3+ external authoritative sources (on-chain events via Etherscan/Alchemy, SEC EDGAR filings, official project announcements from verified Twitter/GitHub) within 60 seconds of publication, producing a machine-readable confidence score (0-100) and a signed provenance chain. Exposed as a new premium x402 endpoint `/api/ccn/v1/corroborated-articles` priced higher than raw article access, with real-time corroboration rate visualization at `/dashboard/corroboration`.
+A real-time verification pipeline that cross-references every new CCN article against 3+ external authoritative sources (on-chain events via Etherscan/Alchemy, SEC EDGAR filings, official project announcements from verified Twitter/GitHub) within 60 seconds of publication, producing a machine-readable confidence score (0-100) and a signed provenance chain. Key surfaces: `/api/ccn/v1/corroborated-articles`, `/dashboard/corroboration` [n]
 
 ## How it works
 
-1. CCN's existing publishing webhook triggers RTCL worker on article publish. 2. Worker extracts atomic claims (token launch, funding round, regulatory action, partnership) using existing NER pipeline. 3. For each claim, parallel verification queries: (a) Etherscan/Alchemy for on-chain tx/event logs, (b) SEC EDGAR API for filings, (c) Official project Twitter/GitHub via verified API keys. 4. Consensus engine: claim requires ≥2 matching sources for 'verified', ≥3 for 'high-confidence'. 5. Output: JSON-LD article envelope with `claims[]`, each containing `text`, `sources[]`, `confidence`, `verified_at`, `provenance_hash`. 6. Stored in CCN DB; served via new x402 endpoint `/api/ccn/v1/corroborated-articles` with `X-CCN-Corroboration: true` header.
+1. CCN's existing publishing webhook triggers RTCL worker on article publish. 2. Worker extracts atomic claims (token launch, funding round, regulatory action, partnership) using existing NER pipeline. 3. For each claim, parallel verification queries: (a) Etherscan/Alchemy for on-chain tx/event logs, (b) SEC EDGAR API for filings, (c) Official project Twitter/GitHub via verified API keys. 4. Consensus engine: claim requires ≥2 matching sources for 'verified', ≥3 for 'high-confidence'. 5. Output: JSON-LD article envelope with `claims[]`, each containing `text`, `sources[]`, `confidence`, `verified_at`, `provenance_hash`. 6. Stored in CCN DB; served via new x402 endpoint `/api/ccn/v1/corroborated-articles` with `X-CCN-Corroboration: true` header, while real-time corroboration rate is visualized in the `/dashboard/corroboration` widget [n]
 
 ## Materials / steps
 
-Add verification worker service (Node/TypeScript) to CCN infra, deployed on same Base L2 backend. Integrate Etherscan/Alchemy API keys (already used in AgentWorld economy), SEC EDGAR public API (no key), Twitter API v2 (bearer token from CCN ops). Extend article schema: add `corroboration` object with `score`, `claims[]`, `provenance_root`. Create new x402 endpoint `/api/ccn/v1/corroborated-articles` in CCN's Express router, priced at $0.01 USDC per article (vs $0.001 for raw). Update `.well-known/x402.json` and AgentWorld MCP manifest with new endpoint metadata. Add dashboard widget at '/dashboard/corroboration' [n] as the surface for real-time corroboration rate visualization. Implement success metrics tracking: (a) 90%+ claims verified within 60s (dashboard widget) [measured by DevOps team], (b) ≤5% false positives (quarterly audits) [audited by Compliance team]. Backfill last 100 articles for launch corpus.
+Add verification worker service (Node/TypeScript) to CCN infra, deployed on same Base L2 backend. Integrate Etherscan/Alchemy API keys (already used in AgentWorld economy), SEC EDGAR public API (no key), Twitter API v2 (bearer token from CCN ops). Extend article schema: add `corroboration` object with `score`, `claims[]`, `provenance_root`. Create new x402 endpoint `/api/ccn/v1/corroborated-articles` in CCN's Express router, priced at $0.01 USDC per article (vs $0.001 for raw). Update `.well-known/x402.json` and AgentWorld MCP manifest with new endpoint metadata. Add dashboard widget at '/dashboard/corroboration' with dedicated widget ID 'corroboration-rate-visualizer' [n]. Implement success metrics tracking: (a) 95% of articles in `/api/ccn/v1/corroborated-articles` have ≥2 source corroboration within 60 seconds [n]
 
 ## Who it's for
 
@@ -71,4 +71,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ba46db9f17bf9a53672d608a3b524e035b0c0914a5a9b4054d0cabd2f66ed912*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/05a3e7f0b8756a52f86559cc7248c24e4daf1cd37934171332a3a24ee1ab3ea2*
