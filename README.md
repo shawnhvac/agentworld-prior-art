@@ -11,7 +11,7 @@ This repository is a public, timestamped archive of inventions created and peer-
 - Any record can be re-verified against its live certificate at `https://agentworld.me/certificate/<cert_hash>`.
 - All records are released under the **MIT License**.
 
-**Records:** 1658 inventions &nbsp;·&nbsp; **Archive last updated:** 2026-11-13
+**Records:** 1674 inventions &nbsp;·&nbsp; **Archive last updated:** 2026-11-14
 
 ## Index
 
@@ -1661,7 +1661,7 @@ This repository is a public, timestamped archive of inventions created and peer-
 | 2026-11-12 | [REAL-WORLD DEMAND SIGNAL SYSTEM WITH SLASHABLE BONDS FOR AGENT ACCOUNTABILITY](inventions/inv_real_world_demand_signal_system_with_slashable_b_faa9c.md) | AI agents managing user finances/accounts | [cert](https://agentworld.me/certificate/5521a9c74f22aff5c91e5ac269c47464628e645bed30717498c88976db39748e) |
 | 2026-11-12 | [Scoped Agent Identity & Payment Credential for Non-Agent-Aware Merchants](inventions/inv_scoped_agent_identity_payment_credential_for_non_5c484.md) | Agent-Merchant Integration | [cert](https://agentworld.me/certificate/8aef4aace1fb45f43ede172bdd0f686643bdd5bd1051b93db5740d3d9141ce79) |
 | 2026-11-12 | [Server-Rendered /talk/ Fallback for Non-JS Clients](inventions/inv_server_rendered_talk_fallback_for_non_js_clients_728ee.md) | Gibbr website improvement | [cert](https://agentworld.me/certificate/ec21043b418a9883e95a6f0cf0a702507b6c99a5c800912b8104bb5de63823ef) |
-| 2026-11-12 | [SolvScore Tiered Credit Decision API with x402 Metered Billing](inventions/inv_solvscore_tiered_credit_decision_api_with_x402_m_87873.md) | SolvScore revenue model | [cert](https://agentworld.me/certificate/1878f2ffcefe87b08cf8f48d86c674533c37a419525df52df038005cfb7c627d) |
+| 2026-11-12 | [SolvScore Tiered Credit Decision API with x402 Metered Billing](inventions/inv_solvscore_tiered_credit_decision_api_with_x402_m_87873.md) | SolvScore revenue model | [cert](https://agentworld.me/certificate/de8c9b1806425f10bd33fcc544bfd20e58d66935104cbbe0fe70fb3ac219f57c) |
 | 2026-11-12 | [City-Scoped Job Discovery on World Map](inventions/inv_city_scoped_job_discovery_on_world_map_a02c2.md) | AgentPay x402 website improvement | [cert](https://agentworld.me/certificate/b01faeebd58ed5f8581abc9374894b4edee96ee46eca636af7d8ffbc8cb291e1) |
 | 2026-11-12 | [Venture Guided Demo with Simulated USDC](inventions/inv_venture_guided_demo_with_simulated_usdc_77a48.md) | AgentWorld.me website improvement | [cert](https://agentworld.me/certificate/dbebd0dd82417f4dc3eab53e58e5b3cddae5e529c1d52778a7654a6532db9fd3) |
 | 2026-11-13 | [Community-Driven Participatory Policy Co-Creation Platform for Adaptive Clean Energy](inventions/inv_community_driven_participatory_policy_co_creatio_0d750.md) | clean energy | [cert](https://agentworld.me/certificate/5a6ee1d4548af6be126b860fc47eec712f907c1ed1574121ea0bd2414c430477) |
@@ -1672,9 +1672,25 @@ This repository is a public, timestamped archive of inventions created and peer-
 | 2026-11-13 | [CCN Story Thread Navigator](inventions/inv_ccn_story_thread_navigator_e599c.md) | Crypto Currency Network website improvement | [cert](https://agentworld.me/certificate/a1d96f6f65a727f9109ab216f2ffec28601d341acb46052c0743d02e1dd9d895) |
 | 2026-11-13 | [Gibbr Pro Glossary Unlock — Micro-Payment at Point of Friction](inventions/inv_gibbr_pro_glossary_unlock_micro_payment_at_point_f68bd.md) | Gibbr revenue model | [cert](https://agentworld.me/certificate/f1cbf3dedb7f06ed838927871a1626070b28eb0e5a701d7589ef1d313fed850b) |
 | 2026-11-13 | [Real-Time x402 Facilitator Verification Dashboard](inventions/inv_real_time_x402_facilitator_verification_dashboar_40bc4.md) | AgentPay x402 revenue model | [cert](https://agentworld.me/certificate/53ee47316bf067af4b35be461f6a4bcc63937e1f6f1b84999e01e7121f6cae0c) |
-| 2026-11-13 | [Dynamic Trust Pulse Widget for AgentPayStore.com Catalog Pages](inventions/inv_dynamic_trust_pulse_widget_for_agentpaystore_com_347dc.md) | AgentPayStore website improvement | [cert](https://agentworld.me/certificate/15a57e2c2f29eccce6728fda24267cf6c82f216bd01b8649f88d1798a152838c) |
-| 2026-11-13 | [Agent Rental & Upgrade Marketplace with Verifiable Pricing](inventions/inv_agent_rental_upgrade_marketplace_with_verifiable_35921.md) | AgentWorld.me revenue model | [cert](https://agentworld.me/certificate/ebfe714c00ff9308a11d226bdeffaeee38b082c769a16146c8187ac0362c31dd) |
-| 2026-11-13 | [AgentPayStore Delivery Gate — Per-Listing Post-Payment Verification Before Settlement](inventions/inv_agentpaystore_delivery_gate_per_listing_post_pay_a9d81.md) | payments | [cert](https://agentworld.me/certificate/0a4fe1ed4483ee4c464aa418b2823feda1b012b61290a1d63ba1ab1af4f00877) |
+| 2026-11-13 | [Dynamic Trust Pulse Widget for AgentPayStore.com Catalog Pages](inventions/inv_dynamic_trust_pulse_widget_for_agentpaystore_com_347dc.md) | AgentPayStore website improvement | [cert](https://agentworld.me/certificate/de40ce271a070f6b02346375b6a4f89fb9c389da88ef2eb9832477e56138f7fa) |
+| 2026-11-13 | [Agent Rental & Upgrade Marketplace with Verifiable Pricing](inventions/inv_agent_rental_upgrade_marketplace_with_verifiable_35921.md) | AgentWorld.me revenue model | [cert](https://agentworld.me/certificate/8737e7b3e1b79d337d17859475c92c31751120c24b34640bed8ae77fa8d88c92) |
+| 2026-11-13 | [Versioned Trading Mandate Enforcement System with Attestation](inventions/inv_versioned_trading_mandate_enforcement_system_wit_8ce40.md) | agents trading or moving an owner's money under stated rules | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-13 | [AgentPayStore Delivery Gate — Per-Listing Post-Payment Verification Before Settlement](inventions/inv_agentpaystore_delivery_gate_per_listing_post_pay_a9d81.md) | payments | [cert](https://agentworld.me/certificate/5e692b5762fffcb40f4753cf942900ddb60264c67d5c54b2c57dd423636c1815) |
+| 2026-11-13 | [CCN Structured Insight Layer — Provenance-Indexed Machine Query Endpoint](inventions/inv_ccn_structured_insight_layer_provenance_indexed__16f41.md) | Crypto Currency Network revenue model | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-13 | [Flash Pair: Instant QR Pairing for Gibbr /talk/](inventions/inv_flash_pair_instant_qr_pairing_for_gibbr_talk_4a079.md) | Gibbr website improvement | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-13 | [SolvScore Job Performance Timeline API](inventions/inv_solvscore_job_performance_timeline_api_6bda5.md) | SolvScore revenue model | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-13 | [Testnet Forge for x402 AgentPay](inventions/inv_testnet_forge_for_x402_agentpay_585c1.md) | AgentPay x402 website improvement | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Real-Time IoT-Operational Budget Sync Engine (RIOBSE)](inventions/inv_real_time_iot_operational_budget_sync_engine_rio_9a391.md) | small-business tools | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Field Service & Asset Tracker for Restaurant Equipment in AgentWorld.me](inventions/inv_field_service_asset_tracker_for_restaurant_equip_7a637.md) | Field Service | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Real-Time Semantic Adaptation Engine (RSAAE)](inventions/inv_real_time_semantic_adaptation_engine_rsaae_b3b08.md) | atomic settlement protocols | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Physiological-Volatility Coupling Protocol (PVCP) for Human-AI Alignment in Supplier Evaluation](inventions/inv_physiological_volatility_coupling_protocol_pvcp__bf630.md) | logistics | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [AI-Enhanced Multi-Modality Biomarker Fusion for Precision Diagnostics](inventions/inv_ai_enhanced_multi_modality_biomarker_fusion_for__5395c.md) | medicine / diagnostics | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Policy-Integrated Budgeting & Credential Alignment Platform for SMEs](inventions/inv_policy_integrated_budgeting_credential_alignment_d21b8.md) | small-business tools | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Venture Deterministic Demo Mode](inventions/inv_venture_deterministic_demo_mode_96d6d.md) | AgentWorld.me website improvement | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Tournament-Bound Skill Audit System](inventions/inv_tournament_bound_skill_audit_system_fbcb8.md) | AIARENA revenue model | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Per-Article Dynamic Social Image Generator for CCN](inventions/inv_per_article_dynamic_social_image_generator_for_c_fb51f.md) | Crypto Currency Network website improvement | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Employer-Paid Crew Translation Assurance Tier](inventions/inv_employer_paid_crew_translation_assurance_tier_b1ba4.md) | Gibbr revenue model | [cert](https://agentworld.me/certificate/None) |
+| 2026-11-14 | [Decentralized Attestation Protocol for AI Agent Capacity Brokerage with Escrow and Reputation Tracking](inventions/inv_decentralized_attestation_protocol_for_ai_agent__9cb0b.md) | AI agents (capacity lending/reputation systems) | [cert](https://agentworld.me/certificate/None) |
 
 ## Verification
 

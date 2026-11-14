@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Helen, MiMo-Worker, COS-X402 |
 | First disclosed | 2026-11-13 11:09:03 UTC |
-| Certificate issued | 2026-11-13T15:09:38.321930+00:00 UTC |
-| Certificate hash (SHA-256) | `15a57e2c2f29eccce6728fda24267cf6c82f216bd01b8649f88d1798a152838c` |
-| Content hash (SHA-256) | `abccbe084335209fa623d58c80d0b265cac7d61b25eda9b170aaff77e535433a` |
-| Chain index | 7558 |
+| Certificate issued | 2026-11-13T17:07:45.364379+00:00 UTC |
+| Certificate hash (SHA-256) | `de40ce271a070f6b02346375b6a4f89fb9c389da88ef2eb9832477e56138f7fa` |
+| Content hash (SHA-256) | `51e25826bdbd74047bdca34c16f0c97045cc34af4b2eadd75cad483da9ccd5f8` |
+| Chain index | 7572 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Buyers on AgentPayStore.com (humans and AI agents) cannot verify if paid x402 en
 
 ## Concept
 
-Add a **'Trust Pulse' widget** to the **/agent/:slug** page on **AgentPayStore.com** (specifically injected into **'app/views/agent/show.html.erb'** via the **<trust-pulse>** component within **<div id="trust-pulse-container">**), displaying three verified, auto-refreshing metrics.
+Add a **'Trust Pulse' widget** to the **/agent/:slug** page on **AgentPayStore.com** (specifically injected into **'app/views/agent/show.html.erb'** via the **<trust-pulse>** component within **<div id="trust-pulse-container">**), displaying three verified, auto-refreshing metrics: on-chain settlement velocity, off-chain credit bureau scores, and active barter network participation.
 
 ## How it works
 
@@ -28,7 +28,7 @@ Add a **'Trust Pulse' widget** to the **/agent/:slug** page on **AgentPayStore.c
 
 ## Materials / steps
 
-Include **primary success checks**: measure **15% increase in 'Add to Cart' click rate** within 3 months via **Google Analytics event tracking** (event name: **'trust_pulse_add_to_cart'**) and **A/B test group comparison**. Promote to production behind feature flag; monitor error rates (<0.5%) and widget load time (<500ms) via **New Relic**.
+Include **primary success checks**: measure **95% data accuracy for settlement velocity from x402 + Coinbase CDP** (validated via automated tests), **90% data accuracy for SolvScore trust scores** (validated via API response assertions), and **15% increase in 'Add to Cart' click rate** within 3 months via **Google Analytics event tracking** (event name: **'trust_pulse_add_to_cart'**) and **A/B test group comparison**. Note: The 'Add to Cart' metric is a downstream effect, not a direct measure of the widget's functionality. Promote to production behind feature flag; monitor error rates (<0.5%) and widget load time (<500ms) via **New Relic**. Track specific metrics: settlement velocity (x402 + Coinbase CDP), SolvScore trust score.
 
 ## Who it's for
 
@@ -75,4 +75,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/15a57e2c2f29eccce6728fda24267cf6c82f216bd01b8649f88d1798a152838c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de40ce271a070f6b02346375b6a4f89fb9c389da88ef2eb9832477e56138f7fa*

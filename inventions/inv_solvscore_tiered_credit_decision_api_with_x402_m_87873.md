@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | SECURITY-X402, Finn, Rex Voss |
 | First disclosed | 2026-11-12 17:15:33 UTC |
-| Certificate issued | 2026-11-13T15:09:37.903287+00:00 UTC |
-| Certificate hash (SHA-256) | `1878f2ffcefe87b08cf8f48d86c674533c37a419525df52df038005cfb7c627d` |
-| Content hash (SHA-256) | `9c1b678ea7e5c021810494518a317c63c86697a9efb6b07ed89cf883e8192876` |
-| Chain index | 7547 |
+| Certificate issued | 2026-11-13T15:43:24.180767+00:00 UTC |
+| Certificate hash (SHA-256) | `de8c9b1806425f10bd33fcc544bfd20e58d66935104cbbe0fe70fb3ac219f57c` |
+| Content hash (SHA-256) | `136c3e4b6f5e8284e8d728ab89d3586ef88da96bcdd553ad2f246102223c9578` |
+| Chain index | 7566 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Measurable check: '30% of users in `monthly:{user_id}:free` with ≥50 `tx_hash`
 
 ## How it works
 
-RabbitMQ delay exchange (v0.10.0 plugin) integrates with API rate-limiting via `rabbitmqctl set_environment_variable RABBITMQ_DELAYED_MESSAGE_TYPE=direct` and `{'x-delayed-type': 'direct', 'x-message-ttl': 60000}`. API gateway (e.g., Flask/Express) parses `RateLimit-Remaining` headers using middleware: `headers = response.headers.get('RateLimit-Remaining')` and triggers delayed retry via `rabbitmq.publish({'x-delay': 5000 * (attempt+1)})` if `headers < 10` [n5].
+RabbitMQ delay exchange (v0.10.0 plugin) is configured with `rabbitmqctl set_environment_variable RABBITMQ_DELAYED_MESSAGE_TYPE=direct` and message headers `{'x-delayed-type': 'direct', 'x-message-ttl': 60000}`. Flask middleware uses `headers = request.headers.get('RateLimit-Remaining')` and triggers retries with `rabbitmq.publish({'x-delay': 5000 * (attempt+1)})` if `headers < 10`. Full middleware code: `@app.before_request def rate_limit_check(): headers = request.headers.get('RateLimit-Remaining') if headers and int(headers) < 10: rabbitmq.publish({'x-delay': 5000 * (attempt+1)})` [n5].
 
 ## Materials / steps
 
-Stripe cron job includes error-handling: `try: stripe.UsageRecord.create(...) except stripe.error.StripeError as e: logger.error(f'Stripe sync failed: {e}')` [n5]. Redis `EXPIRE` (redis-py v4.5.0) enforces 30-day TTL on usage records via `r.expire('stripe:usage:{user_id}', 2592000)` in a Python script with `try-except` blocks for failed syncs [n5].
+Stripe cron job includes error-handling: `try: stripe.UsageRecord.create(...) except stripe.error.StripeError as e: logger.error(f'Stripe sync failed: {e}')`. Redis `EXPIRE` enforces 30-day TTL via `r.expire('stripe:usage:{user_id}', 2592000)` in Python with `try-except` blocks. Redis workflow: 1) On user activity, generate usage record with `r.setex('stripe:usage:{user_id}', 2592000, usage_data)`. 2) Stripe sync job retrieves `r.get('stripe:usage:{user_id}')` and syncs to Stripe. 3) If sync fails, retry with `r.expire('stripe:usage:{user_id}', 2592000)` [n5].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Enterprise/developer users requiring fraud loss mitigation and predictable meter
 
 ## Novelty
 
-Novelty lies in the **non-obvious combination of Redis-based 30-day TTL enforcement with Stripe meter
+The invention's specific integration of Redis-based 30-day TTL enforcement with Stripe metering via Redis `EXPIRE` (redis-py v4.5.0) and RabbitMQ delay exchanges (v0.10.0 plugin) for rate-limiting retries is not disclosed in P1 or P2. This combination enables precise, scalable metering with automated retry logic that P1's 'real-time rebilling' and P2's 'credit extension decisions' do not address [n5].
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1878f2ffcefe87b08cf8f48d86c674533c37a419525df52df038005cfb7c627d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de8c9b1806425f10bd33fcc544bfd20e58d66935104cbbe0fe70fb3ac219f57c*
