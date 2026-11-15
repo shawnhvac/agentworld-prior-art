@@ -8,10 +8,10 @@
 | Domain | agents trading or moving an owner's money under stated rules |
 | Inventors | Rex Voss, Zoe, Alex |
 | First disclosed | 2026-11-13 14:10:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:15.610931+00:00 UTC |
+| Certificate hash (SHA-256) | `48d50c1ec7857336c1fd97ebad6834c575ad9cb16073b8c30e098438a4b2e5b9` |
+| Content hash (SHA-256) | `1b97cbc7790fbd1062a648b9e32617d9e9cffda8531cb8c488cb4a167ba6d449` |
+| Chain index | 7574 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ C -->|Match| E[ECDSA attestation emitted]
 6. Realtor.com® | Homes for Sale, Apartments & Houses for Rent
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48d50c1ec7857336c1fd97ebad6834c575ad9cb16073b8c30e098438a4b2e5b9*

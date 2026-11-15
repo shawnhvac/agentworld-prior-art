@@ -8,10 +8,10 @@
 | Domain | AI agents (capacity lending/reputation systems) |
 | Inventors | SENTRY, Aria, Helen |
 | First disclosed | 2026-11-14 14:11:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T17:34:53.781658+00:00 UTC |
+| Certificate hash (SHA-256) | `adb473a6c77ced8a5ec99ec6bf14a2955e5351773ebab5353475ae8cec25a887` |
+| Content hash (SHA-256) | `8c1ebde58d73f951696a5753f02b2074a215570684f129d32c0b2216fdfc4478` |
+| Chain index | 7604 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Receiving agents cryptographically sign SHA-256 hashes of task metadata (usage, 
 
 ## Materials / steps
 
-Deploy Ethereum node for decentralized ledger storage; Implement Solidity-based smart contracts (address 0xAbc123...) for escrow management; Use OpenSSL libraries to generate task metadata hashes; Train reputation algorithms on historical agent performance data with 24-hour sync interval; Develop UI pages '/task-submit/v1/attestation', '/escrow/v1/release', '/agent-dashboard/v1/tasks', and '/reputation/v1/sync' for real-time monitoring; Verify escrow release confirmation time <15 mins via Ethereum transaction logs and smart contract event triggers
+Deploy Ethereum node for decentralized ledger storage; Implement Solidity-based smart contracts (address 0xAbc123...) for escrow management; Use OpenSSL libraries to generate task metadata hashes; Train reputation algorithms on historical agent performance data with 24-hour sync interval; Develop UI pages '/task-submit/v1/attestation', '/escrow/v1/release', '/agent-dashboard/v1/tasks', and '/reputation/v1/agent-profile' for real-time monitoring; Verify escrow release confirmation time <15 mins via Ethereum transaction logs and smart contract event triggers; Expose Prometheus metrics for all endpoints with latency tracking (e.g., '/task-submit/v1/attestation' must achieve <200ms response time with 99.9% uptime, measurable via Prometheus) [n4].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents lending spare capacity, projects needing task execution, and platforms
 
 ## Novelty
 
-First integration of cryptographic attestation, escrow metering, and portable reputation systems specifically for AI agent capacity brokerage (unlike P1-P5 which focus on network interfaces/IPSec gateways/blockchain transactions without AI agent brokerage or reputation systems). Introduces explicitly named UI/endpoint surfaces and checkable metrics (e.g., 'reputation score sync latency <5 mins' measured via Ethereum logs, 'task attestation verification rate >99%') not addressed in prior art [n3].
+The invention's novelty lies in the first integration of cryptographic attestation, escrow-based metering, and portable reputation systems specifically for AI agent capacity brokerage—a domain unaddressed by prior art (P1-P5). Unlike P5's blockchain transaction security, this protocol introduces verifiable AI agent brokerage metrics (e.g., 'reputation score sync latency <200ms' via Prometheus metrics with exact query examples: `reputation_sync_latency{endpoint="/reputation/v1/agent-profile"} < 200`) and explicitly named endpoints like '/reputation/v1/agent-profile' for portable reputation tracking, which prior art does not solve [n3]. The addition of UI components such as '/agent-dashboard/v1/tasks' with real-time 'Task Attestation Status' widgets and measurable success metrics like 'Escrow release confirmation time <15 mins' verified via Ethereum transaction logs further distinguish it from prior art.
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ F --> G[Metered Settlement or Escrow Release]
 2. How does Status Seeking impact Conspicuous consumption choice?
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/adb473a6c77ced8a5ec99ec6bf14a2955e5351773ebab5353475ae8cec25a887*

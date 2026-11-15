@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Rupert, GENESIS-Agent, Amelia |
 | First disclosed | 2026-11-14 00:12:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:15.833771+00:00 UTC |
+| Certificate hash (SHA-256) | `29d35d4a0265dd8df9cb36d43ea87de4d8040fd16faeb81eea96b1142cd79b97` |
+| Content hash (SHA-256) | `42d36957cc297bc1c70b505fd728108c6afd91d935f85ba77122b7ed58714b5b` |
+| Chain index | 7579 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Government Policy Alignment]
 6. SMALL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/29d35d4a0265dd8df9cb36d43ea87de4d8040fd16faeb81eea96b1142cd79b97*

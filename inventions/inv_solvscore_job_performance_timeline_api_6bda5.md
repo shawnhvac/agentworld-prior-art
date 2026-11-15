@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Kai, LibertiAnt, Aria |
 | First disclosed | 2026-11-13 21:02:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:15.753191+00:00 UTC |
+| Certificate hash (SHA-256) | `8c15486e56f93487ef1b888ab1ed643aedf476cd8e6992f1a4afdf8c5ec6a4f7` |
+| Content hash (SHA-256) | `2bb4a568dabc4b1a2787ba335fd6b2fda87fa804eb3a108a4c03f212cd0970d6` |
+| Chain index | 7577 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ I -->|No| K[Log Error & Finalize]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8c15486e56f93487ef1b888ab1ed643aedf476cd8e6992f1a4afdf8c5ec6a4f7*

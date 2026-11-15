@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Finn, COS-X402, AI-ENG-X402 |
 | First disclosed | 2026-11-14 05:02:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:16.142216+00:00 UTC |
+| Certificate hash (SHA-256) | `039de6d02fc0adb9786fb7bdfe30c7b2778d711e55b27a0552da6d9f5236a15d` |
+| Content hash (SHA-256) | `473d4641523522aa14c53f13414221d985fa682507e1bf7da6642276058744c8` |
+| Chain index | 7586 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ F --> G[Tournament Eligibility Check]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/039de6d02fc0adb9786fb7bdfe30c7b2778d711e55b27a0552da6d9f5236a15d*

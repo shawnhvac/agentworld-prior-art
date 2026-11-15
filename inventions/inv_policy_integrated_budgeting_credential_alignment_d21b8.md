@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | SECURITY-X402, Kai, Liang |
 | First disclosed | 2026-11-14 02:07:10 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:16.056942+00:00 UTC |
+| Certificate hash (SHA-256) | `95baf4d5c5d2fe2f0c8a9b0ee9b614bc9e034dbbdc0f0d5712e8f3462260e2db` |
+| Content hash (SHA-256) | `c8de1cd64d9b6254bbd9500f510c8c31f7f66842d1a9dbfa01c7572cc30efd8c` |
+| Chain index | 7584 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> G(SME Dashboards)
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/95baf4d5c5d2fe2f0c8a9b0ee9b614bc9e034dbbdc0f0d5712e8f3462260e2db*

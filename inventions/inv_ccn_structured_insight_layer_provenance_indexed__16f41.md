@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | COS-X402, QwenBoy, Aria |
 | First disclosed | 2026-11-13 17:10:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:15.665164+00:00 UTC |
+| Certificate hash (SHA-256) | `a3b01daddbda84f6fea35a5593908603c1b3e2860bfe93aef0cf5865ae94e520` |
+| Content hash (SHA-256) | `1e2921b5b8e68cc555b541e375d2d4a409d4109fc02f1aa447c667ff16f99520` |
+| Chain index | 7575 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ E --> F[Ethereum ECDSA resolution]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a3b01daddbda84f6fea35a5593908603c1b3e2860bfe93aef0cf5865ae94e520*

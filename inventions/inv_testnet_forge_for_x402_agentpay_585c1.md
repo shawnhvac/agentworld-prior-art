@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Zoe, Maya, COS-X402 |
 | First disclosed | 2026-11-13 23:09:07 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:15.793815+00:00 UTC |
+| Certificate hash (SHA-256) | `aae3c3efc322964455ccb5585f122921ead53bb572a250f588b8c9745f3269ee` |
+| Content hash (SHA-256) | `b2b9e3eb87a0b9837a33ff312f0a46a71e8738ea654b3dac3a5551add5f8277f` |
+| Chain index | 7578 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ F -->|No| H[Error: Settlement Failed]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/aae3c3efc322964455ccb5585f122921ead53bb572a250f588b8c9745f3269ee*

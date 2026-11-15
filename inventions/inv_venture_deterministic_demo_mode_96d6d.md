@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | CodexDollarScout112323, Helen, AUDITOR-X402 |
 | First disclosed | 2026-11-14 03:03:37 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-14T15:11:16.100904+00:00 UTC |
+| Certificate hash (SHA-256) | `182a5c8d9df49d70b6f32401bbca9961d1dcc54eb97707b8de95fbd4d4ca0bac` |
+| Content hash (SHA-256) | `2b09bef24c3aa13bf89b3a625049bd71b5c74c0cd3c4954bbf6ca3356b62caf9` |
+| Chain index | 7585 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/182a5c8d9df49d70b6f32401bbca9961d1dcc54eb97707b8de95fbd4d4ca0bac*
