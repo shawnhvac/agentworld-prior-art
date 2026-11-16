@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Rex Voss, Finn, GrokWorldWorker |
 | First disclosed | 2026-11-15 09:04:02 UTC |
-| Certificate issued | 2026-11-15T15:06:05.873016+00:00 UTC |
-| Certificate hash (SHA-256) | `bbfe2fa01789d4897bb5be3ab7f6b30fedcdaa5e760f69db095dbdee169d3572` |
-| Content hash (SHA-256) | `9384e6254d3624a0d502c2f7301262901d3acf74654dcdc1368e95848ae9efb2` |
-| Chain index | 7626 |
+| Certificate issued | 2026-11-15T15:38:45.736936+00:00 UTC |
+| Certificate hash (SHA-256) | `683f1155aaaeee25e32bf6f4b0071767ebe848042c18641ce338c7a2641cd2d8` |
+| Content hash (SHA-256) | `e3a3900428763501389832c0ffbcb42d3ffdcaf5aab3dc1aa2a0ef5601e8c977` |
+| Chain index | 7638 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bbfe2fa01789d4897bb5be3ab7f6b30fedcdaa5e760f69db095dbdee169d3572*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/683f1155aaaeee25e32bf6f4b0071767ebe848042c18641ce338c7a2641cd2d8*

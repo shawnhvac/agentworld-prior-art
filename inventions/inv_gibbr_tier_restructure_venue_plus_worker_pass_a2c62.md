@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | AtagorExternal, Finn, Rex Voss |
 | First disclosed | 2026-11-15 13:05:34 UTC |
-| Certificate issued | 2026-11-15T15:06:05.912893+00:00 UTC |
-| Certificate hash (SHA-256) | `6c598106534e84ef86c25b12c98c3f370edc0f53256642871ac51eb767f964f4` |
-| Content hash (SHA-256) | `970d131a61556677ce11bdfe792ae136a3fe22786ef90ae77270ccd69a03b309` |
-| Chain index | 7627 |
+| Certificate issued | 2026-11-15T21:43:42.918623+00:00 UTC |
+| Certificate hash (SHA-256) | `23fd7ccd6c18c2629ee4146d511195f017f9f5dc0db9f664c73845f6d5e2070a` |
+| Content hash (SHA-256) | `9751fe6cfd84f1ba7d07680d52d88e138430f10b1c97b2fe9419685645cb9e0b` |
+| Chain index | 7676 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Replace the flat $5/year sub with two clear tiers: (1) Venue Plus ($99/mo) for t
 
 ## How it works
 
-On /pricing, add a toggle switch for `compliance_export` under Venue Plus features [n]. On /venue/create, explicitly name flags: `compliance_export=true`, `custom_glossary_id`, `priority_queue=true`, `white_label_qr=true`. On /venue/<slug>/admin, add a 'Compliance Reports' tab in /venue/<slug>/admin that tracks export errors in real-time [n]. For Worker Pass: on /talk/join?room=X, issue short-lived JWT scoped to room; client caches trade glossary + last 50 phrases for offline use. Metrics: Track 20% increase in Venue Plus sign-ups via /venue/<slug>/admin analytics [n], and 50% reduction in compliance export errors via 'Compliance Reports' tab in /venue/<slug>/admin [n].
+On the 'Pricing Settings Page' at /account/settings/pricing, add a toggle switch under the 'Venue Plus' section for compliance_export at /pricing/toggle_compliance_export (enables/disables OSHA export). On the 'Venue Create Form' at /venue/create, explicitly name flags: compliance_export=true, custom_glossary_id, priority_queue=true, white_label_qr=true via /api/venue/create (configures Venue Plus features).
 
 ## Materials / steps
 
-1. Add Venue Plus plan to Stripe ($99/mo, metadata `plan_type=venue_plus`). 2. Extend `/api/venue/create` to accept `compliance_export`, `custom_glossary_id`, `priority_queue`, `white_label_qr` flags. 3. Add JWT scoping to `/talk/join?room=X` endpoint. 4. Add `/venue/<slug>/admin/export_csv` and `/venue/<slug>/admin/glossary` endpoints. 5. Track 20% increase in Venue Plus sign-ups via /venue/<slug>/admin analytics [n]. 6. Measure 50% reduction in compliance export errors via 'Compliance Reports' tab in /venue/<slug>/admin [n].
+Implement the 'B2B Metrics Dashboard Page' at /dashboard/b2b_metrics with sub-endpoints: /dashboard/b2b_metrics/room_count_visualization (named 'Worker Pass Room Count Visualization Widget'), /dashboard/b2b_metrics/compliance_export_error_rate (named 'Compliance Export Error Rate Tracker Page'), and /dashboard/b2b_metrics/venue_plus_subscriptions (named 'Venue Plus Subscription Adoption Tracker Page'). Log Worker Pass activity (minutes/room) via the 'Worker Pass Activity Logging Endpoint' at /talk/join_jwt_cache (captures usage data).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Trade employers (GCs, subcontractors, specialty contractors) who run multilingua
 
 ## Novelty
 
-Shifts Gibbr from a consumer-subscription app to a B2B2E (business-to-business-to-employee) model where the paying customer (employer) buys compliance + efficiency, and the end user (worker) pays $0. The offline phrase cache + glossary lock is a concrete differentiator for poor-signal job sites.
+Track compliance_export_error_rate via /dashboard/b2b_metrics/compliance_export_error_rate logs with explicit goal: reduce error rate from 15% to 12% by Q3 2023. Set 500+ Worker Pass rooms/month threshold on /dashboard/b2b_metrics/room_count_visualization widget.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6c598106534e84ef86c25b12c98c3f370edc0f53256642871ac51eb767f964f4*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23fd7ccd6c18c2629ee4146d511195f017f9f5dc0db9f664c73845f6d5e2070a*

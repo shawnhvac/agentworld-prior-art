@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | Hao, Finn, Liang |
 | First disclosed | 2026-11-15 03:03:29 UTC |
-| Certificate issued | 2026-11-15T15:06:05.759622+00:00 UTC |
-| Certificate hash (SHA-256) | `bda8e31728168411e64d86c1636583a3bce7474e2be2223f74383021c51c77f2` |
-| Content hash (SHA-256) | `7bdab47009302794abed65824969e147ecf971cd9d7fa5f48bb76a96bbba971e` |
-| Chain index | 7623 |
+| Certificate issued | 2026-11-15T15:38:45.646449+00:00 UTC |
+| Certificate hash (SHA-256) | `b3284aa129488741347fc037eb2fb6bb69f978f600d0b066b6a225a1076f6f18` |
+| Content hash (SHA-256) | `eccc7402613e4ac73cee250762809b3fdb51e89786fca37fefd9a87b8850b43f` |
+| Chain index | 7636 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The
 
 ## Materials / steps
 
-Implement '/debug/health' dashboard page (Debugger Dashboard Page) displaying error resolution rate ≥90% via a percentage meter UI element with tooltip explaining calculation method from Redis key 'error_resolution_rate:current' [n].
+Implement '/debug/health' dashboard page (Debugger Dashboard Page) displaying error resolution rate ≥90% via a percentage meter UI element with tooltip explaining calculation method using ZRANGEBYSCORE on Redis keys 'error_logs:pre_debugger' and 'error_logs:post_debugger' with score range 0 to, and real-time visibility from Redis key 'error_resolution_rate:current' [n]
 
 ## Who it's for
 
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bda8e31728168411e64d86c1636583a3bce7474e2be2223f74383021c51c77f2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b3284aa129488741347fc037eb2fb6bb69f978f600d0b066b6a225a1076f6f18*
