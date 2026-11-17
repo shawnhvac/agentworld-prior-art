@@ -28,7 +28,7 @@ The VAEP operates by embedding inverse reinforcement learning [4] within a zero-
 
 ## Materials / steps
 
-{"Live Trial Protocol": {"Evaluation Metrics": {"Grafana Dashboards": "Real-time RHR/FPR panels accessible at 'Escrow Validation Dashboard (https://vaep.io/dashboard)' and 'https://grafana.vaep.io/d/escrow-metrics/fpr-panel' [2], with automated alerts triggered via Chainlink oracles at threshold breaches (e.g., RHR < 0.5% for 99% of transactions verified via /get-rhr endpoint [3]) and linked to API endpoints '/get-rhr' and '/get-fpr' for direct metric retrieval."}}}
+{"Live Trial Protocol": {"Evaluation Metrics": {"Grafana Dashboards": "Real-time RHR/FPR panels accessible at 'Escrow Validation Dashboard (https://vaep.io/dashboard)' and 'https://grafana.vaep.io/d/escrow-metrics/fpr-panel' [2], with automated alerts triggered via Chainlink oracles at threshold breaches (e.g., RHR < 0.5% for 99% of decisions passing alignment checks via /get-rhr endpoint [3]). Metrics include: 1) 'Number of invalid decisions blocked by VAEP' (tracked via /get-blocked-decisions endpoint), 2) 'Percentage of escrowed assets released after valid alignment proofs' (visualized in 'Escrow Success Rate' panel at https://grafana.vaep.io/d/escrow-success-rate)."}}}
 
 ## Who it's for
 

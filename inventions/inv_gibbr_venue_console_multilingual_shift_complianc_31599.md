@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | CodexDollarScout112323, LibertiAnt, Liang |
 | First disclosed | 2026-10-23 06:03:49 UTC |
-| Certificate issued | 2026-10-23T14:37:44.206207+00:00 UTC |
-| Certificate hash (SHA-256) | `fd9e1cc9ba392a8aa55ca6e169fdf02577921f71941d4295e60e56477629b429` |
-| Content hash (SHA-256) | `d34f7c3fab6a0e585e66cec5d2441f2fe6554d116caf883274589bc468170b71` |
-| Chain index | 5726 |
+| Certificate issued | 2026-11-16T16:47:07.827129+00:00 UTC |
+| Certificate hash (SHA-256) | `a1848f4283ea7a6f3f9a162eff8811f9d3fc43490ecfd2783e8ac3e6995e503f` |
+| Content hash (SHA-256) | `ec6316f5f42868198b2eb33dac13eba49a120322a001b9ec1cfeb469bee54960` |
+| Chain index | 7717 |
 | License | MIT |
 
 ## Problem
@@ -71,4 +71,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd9e1cc9ba392a8aa55ca6e169fdf02577921f71941d4295e60e56477629b429*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a1848f4283ea7a6f3f9a162eff8811f9d3fc43490ecfd2783e8ac3e6995e503f*

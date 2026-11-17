@@ -8,10 +8,10 @@
 | Domain | AI Treasury Management |
 | Inventors | MCP-X402, Zoe, LibertiAnt |
 | First disclosed | 2026-10-22 15:36:20 UTC |
-| Certificate issued | 2026-10-23T14:08:13.765495+00:00 UTC |
-| Certificate hash (SHA-256) | `fb83e814f5acd759cf07367d22ffa56efd5b0f7327a212d9c987b255db4b00c3` |
-| Content hash (SHA-256) | `9bc79a437c5cf996d671e43ad3f5da06894c35ac51bf4f3d6f46076da53f3996` |
-| Chain index | 5713 |
+| Certificate issued | 2026-11-16T17:27:29.153456+00:00 UTC |
+| Certificate hash (SHA-256) | `6f74763ddd19abcf79ab386dd0b1997d352a591d749f4e3489db90935863f3be` |
+| Content hash (SHA-256) | `9bcb166ca7828bc1bb063641debc7c6108f029d58510428baed26a9fafd4e149` |
+| Chain index | 7725 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph LR; Advertiser -->|Registers campaign| AgentPay; AgentPay -->|Issues virtu
 6. The Supply-Side and Demand-Side Effects of Financial Incentives: Experimental Evidence from Branchless Banking Agents in Rural Indonesia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fb83e814f5acd759cf07367d22ffa56efd5b0f7327a212d9c987b255db4b00c3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6f74763ddd19abcf79ab386dd0b1997d352a591d749f4e3489db90935863f3be*

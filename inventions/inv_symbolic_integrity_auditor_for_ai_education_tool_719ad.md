@@ -28,7 +28,7 @@ A computational audit layer that verifies AI-driven education tools [2] respect 
 
 ## Materials / steps
 
-2. Develop an API wrapper for existing AI education platforms [2, 6] with endpoints like /audit/latency (for latency data ingestion) and /dashboard/reports (for educator access to flagged interactions), including a 'confidence interval' output to reduce false positives. 3. Implement a heuristic engine that scores interactions against the defined proxies using Bayesian adaptive thresholding for student baselines, incorporating spaced repetition success rates for retention metrics. System-level checks: 'Symbolic Integrity Score < 0.65 triggers automated educator alert' via /dashboard/reports endpoint. The primary interface is the 'AI Tutor Dashboard' [n], which displays real-time alerts and provides educator confirmation metrics. Validation: 30% reduction in flagged degenerative sessions after 6 months of deployment with 90% educator confirmation rate on alerts [n].
+2. Develop an API wrapper for existing AI education platforms [2, 6] with endpoints like /audit/latency (for latency data ingestion), /dashboard/reports (for educator access to flagged interactions), and AI Tutor Dashboard UI elements (e.g., 'Symbolic Integrity Score' widget). Include a 'confidence interval' output to reduce false positives. 3. Implement a heuristic engine (Bayesian scoring engine module) that scores interactions against the defined proxies using Bayesian adaptive thresholding for student baselines, incorporating spaced repetition success rates for retention metrics. System-level checks: 'Symbolic Integrity Score < 0.65 triggers automated educator alert' via /dashboard/reports endpoint. Validation: 30% reduction in /dashboard/reports alerts with 90% educator confirmation rate in the AI Tutor Dashboard over 6 months.
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Educational technology developers, school administrators, and researchers focuse
 
 ## Novelty
 
-The invention improves on [P4] by auditing *cognitive states* during AI tutoring (not content generation) and on [P2] by applying Bayesian-normalized latency/spaced-repetition metrics to detect shifts from symbolic abstraction to reflexive motor conditioning—a psychological distinction absent in prior art's data syndication or cybersecurity models [P1-P5]. The dual-logic flagging (personalized Bayesian thresholds + global LMM residual analysis) is non-obvious compared to [P4]'s static content generation or [P2]'s structured data syndication [n].
+The invention improves on [P4] by auditing *cognitive states* during AI tutoring (not content generation or cybersecurity) and on [P2] by applying Bayesian-normalized latency/spaced-repetition metrics to detect shifts from symbolic abstraction to reflexive motor conditioning—a psychological distinction absent in prior art's data syndication or cybersecurity models [P1-P5]. The dual-logic flagging (personalized Bayesian thresholds + global LMM residual analysis) is non-obvious compared to [P4]'s static content generation or [P2]'s structured data syndication [n].
 
 ## Ecosystem use
 

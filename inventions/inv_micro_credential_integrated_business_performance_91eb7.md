@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | Dieter_V2, Liang, AI-ENG-X402 |
 | First disclosed | 2026-11-08 00:57:56 UTC |
-| Certificate issued | 2026-11-08T15:08:56.721766+00:00 UTC |
-| Certificate hash (SHA-256) | `f8e861f153b684a7874860b462452832dfb645edd395485e36aa0a58e4a7cea9` |
-| Content hash (SHA-256) | `b2b7dd961b7e6ea964f92aeee28c3ecf50df9eadaf46c258a69984cfe8a06424` |
-| Chain index | 7203 |
+| Certificate issued | 2026-11-16T16:29:56.285648+00:00 UTC |
+| Certificate hash (SHA-256) | `11ca6d1f58132b05905ed94c2e250edd7f24697fc60a6c5de8b3161df8101486` |
+| Content hash (SHA-256) | `86472bcde8136e9b01320e6fb91c69e3ec15bf11b8928bf858c44d8b67b240d5` |
+| Chain index | 7712 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The platform integrates with SMEs' existing tools via APIs to collect data on op
 
 ## Materials / steps
 
-Develop a cloud-based platform with API integrations for budgeting tools [2] (e.g., '/api/budget-data' (Budget Data API, Page 2.3) → '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 2.1) for real-time verification and '/api/machine-tool-data' (Machine Tool Data API, Page 3.4) → '/api/process-machine-data' (Machine Data Processing Endpoint, Page 3.3) → '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 3.4) [5] for audit logging). Implement secure credential storage via '/api/store-credential' (Secure Credential Storage API, Page 3.5) and verification metrics tracked in '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 3.4) [5].
+Develop a cloud-based platform with API integrations for budgeting tools [2] using '/api/budget-data' (Budget Data API, Page 2.3) → '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 2.1) for real-time verification and '/api/machine-tool-data' (Machine Tool Data API, Page 3.4) → '/api/process-machine-data' (Machine Data Processing Endpoint, Page 3.3) → '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 3.4) [5] for audit logging. Implement secure credential storage via '/api/store-credential' (Secure Credential Storage API, Page 3.5) and verification metrics tracked in '/dashboard/procurement/audit' (Procurement Audit Dashboard, Page 4.2.1, Section 3.4) [5] with explicit mapping to endpoints like '/api/issue-credential' (Credential Issuance API, Page 3.2) and '/api/verify-credential' (Credential Verification API, Page 4.1).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Small and medium enterprises in manufacturing (e.g., machine tool users [1]) and
 
 ## Novelty
 
-Increase procurement partner verification rates by 30% within 6 months by measuring pre- and post-implementation verification rates via audit logs on '/dashboard/procurement/audit' (Page 4.2.1, Section 3.4) [5] and tracking time-to-verification metrics (e.g., average verification latency) using '/api/verify-credential' (Page 4.1) with before/after comparisons.
+Increase procurement partner verification rates by 30% within 6 months by measuring pre- and post-implementation verification rates via audit logs on '/dashboard/procurement/audit' (Page 4.2.1, Section 3.4) [5] with fields 'verification_rate_pre' and 'verification_rate_post', and track time-to-verification metrics (e.g., average latency < 2s) using '/api/verify-credential' (Page 4
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ E --> F[Procurement/Marketing Use [3]]
 6. Small | Nanoscience & Nanotechnology Journal | Wiley Online Library
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f8e861f153b684a7874860b462452832dfb645edd395485e36aa0a58e4a7cea9*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/11ca6d1f58132b05905ed94c2e250edd7f24697fc60a6c5de8b3161df8101486*

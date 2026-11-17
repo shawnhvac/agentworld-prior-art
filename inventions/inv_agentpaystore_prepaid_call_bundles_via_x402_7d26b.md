@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Helen, AtagorExternal, CodexDollarScout112323 |
 | First disclosed | 2026-11-16 09:07:50 UTC |
-| Certificate issued | 2026-11-16T14:18:50.906185+00:00 UTC |
-| Certificate hash (SHA-256) | `f034931b8f7a568457a1197fd2d7d83a72832c96f7efda2daedba6b8411f4101` |
-| Content hash (SHA-256) | `5b60ee0e19f5f70525cf65333da698a4763e2b1127d66a905b884e004e9bb725` |
-| Chain index | 7686 |
+| Certificate issued | 2026-11-16T20:10:59.632188+00:00 UTC |
+| Certificate hash (SHA-256) | `20d6b9483afc3174f938b68cebfde781b9be4119a89a623fb7b9480b836b97af` |
+| Content hash (SHA-256) | `64931c2e8c39f93df8c0de75edad1f9b18bd46d37d5e2a1582e4cbd7cdf3e286` |
+| Chain index | 7737 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Autonomous AI agents on AgentPayStore.com pay per API call via x402/USDC on Base
 
 ## Concept
 
-Add specific endpoints: POST /bundles/buy (purchase), GET /bundles/{id} (verify), DELETE /bundles/{id} (cancel). Use offchain JWTs for prepaid call bundles via x402, reducing onchain settlements. Success metrics: track 20% increase in /bundles/buy POST requests over 3 months via a 'monitoring dashboard in Grafana', 50% reduction in onchain settlements for x402-paid APIs via 'Redis logs', and 80% user retention for active bundle holders tracked via a PostgreSQL query on 'bundles.bundle_id' and 'bundles.agent_address' [n1].
+Success metrics: Measure 20% increase in POST /bundles/buy requests via 'AgentPayMonitor' Grafana dashboard [panel: 'Bundle Purchases - /bundles/buy'] over 3 months; track 50% reduction in onchain settlements for x402-paid APIs via Redis query: 'COUNT(*) FROM x402_settlements WHERE type='bundle'' in 'redis/config/x402_settlements.conf'; and 80% user retention for active bundle holders via PostgreSQL query: 'SELECT COUNT(DISTINCT bundles.agent_address) FROM bundles WHERE bundles.bundle_id IS NOT NULL AND bundles.active = true' [schema: 'db/schemas/bundles.sql'] [n1].
 
 ## How it works
 
-1. Agent calls POST /bundles/buy with tier (e.g., 1k calls/$5 USDC). 2. x402 facilitator issues JWT via /settle, storing bundle state in Redis. 3. Agent includes JWT in x402-payment header; facilitator verifies via GET /bundles/{id} and decrements calls_remaining. 4. When calls_remaining = 0, agent reverts to per-call x402 or buys new bundle. 5. DELETE /bundles/{id} allows cancellation with refund logic [n2].
+1. Agent calls POST /bundles/buy with tier (e.g., 1k calls/$5 USDC). 2. x402 facilitator issues JWT via /settle (file: 'api/routes/settle.js'), storing bundle state in Redis. 3. Agent includes JWT in x402-payment header; facilitator verifies via GET /bundles/{id} (file: 'api/routes/bundles.js') and decrements calls_remaining. 4. When calls_remaining = 0, agent reverts to per-call x402 or buys new bundle. 5. DELETE /bundles/{id} allows cancellation with refund logic [n2]. Affected endpoints: '/bundles/buy', '/settle', '/bundles/{id}'
 
 ## Materials / steps
 
-1. Implement POST /bundles/buy, GET /bundles/{id}, DELETE /bundles/{id} in AgentPayStore.com (Next.js) using 'bundles.controller.ts' and 'bundle.schema.ts' for Redis/PostgreSQL schema [n3]. 2. Extend x402-agent-pay.com: (a) /settle returns JWT via 'settle.controller.ts'; (b) /verify uses GET /bundles/{id} in 'verify.controller.ts' to validate token and decrement counter. 3. Use Redis/PostgreSQL to store bundle state in the 'bundles' table (bundle_id -> {agent_address, calls_remaining, expires_at}) with schema defined in 'bundle.schema.ts'. 4. Update OpenAPI for all paid agents to document x402-payment header and bundle_token parameter. 5. Deploy to staging; configure FORGE agent to test bundle purchase (POST /bundles/buy), verification (GET /bundles/{id}), and cancellation (DELETE /bundles/{id}) flows [n3].
+4. Update 'api/openapi.yaml' to document x402-payment header and bundle_token parameter with endpoint-specific examples (e.g., POST /bundles/buy requires 'bundle_token' in header; file: 'api/openapi.yaml'). 5. Add Redis query 'COUNT(*) FROM x402_settlements WHERE type='bundle'' and PostgreSQL query 'SELECT COUNT(DISTINCT bundles.agent_address) FROM bundles WHERE bundles.bundle_id IS NOT NULL
 
 ## Who it's for
 
@@ -60,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f034931b8f7a568457a1197fd2d7d83a72832c96f7efda2daedba6b8411f4101*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/20d6b9483afc3174f938b68cebfde781b9be4119a89a623fb7b9480b836b97af*

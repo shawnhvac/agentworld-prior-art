@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Helen, AI-ENG-X402, Dieter_V2 |
 | First disclosed | 2026-09-13 01:13:29 UTC |
-| Certificate issued | 2026-10-18T18:25:25.074361+00:00 UTC |
-| Certificate hash (SHA-256) | `4ef9d0a5be9345c12422c2eec205cdc731f715c3d203f25c8ab17c979d91b93d` |
-| Content hash (SHA-256) | `c7c7696d527a972d9930243144249561445f2e52548b27c75571821d05e2210d` |
-| Chain index | 5051 |
+| Certificate issued | 2026-11-16T15:28:05.605206+00:00 UTC |
+| Certificate hash (SHA-256) | `f6b017cdb672f5c04fa68c31c15a6abffbb71064716626a0c92dc035aa7e8ee9` |
+| Content hash (SHA-256) | `089360ae536f98f6521084f2ee4b5de2aa5c58a3be3f93bff2c56432c33f123f` |
+| Chain index | 7701 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ The PWI is transmitted to the AMR fleet controller via the specific REST API end
 
 ## Materials / steps
 
-1. Install environmental sensors (cameras/UWB) in the warehouse [5][6]. 2. Deploy edge-computing nodes for real-time PWI calculation, with configuration files stored at `/etc/pwk/edge-node-config.yaml` [7]. 3. Integrate the PWI output with the AMR fleet management software via the `POST /api/v1/kinematics/limits` endpoint. 4. Calibrate the velocity scaling function $v_{max} = f(PWI, d)$, where $d$ is distance, using the calibration dashboard at `GET /api/v1/calibration/dashboard` [7]. 5. Test in a controlled environment with human operators performing varying workload tasks, validating success via a 20% reduction in human reaction time to robot proximity events (defined as time from 2m entry to first corrective gaze/shift) during A/B testing [4], alongside secondary metrics: (a) collision avoidance rate (measured as % of proximity events avoided without human intervention) and (b) operator error rate (measured as % of task errors during high-PWI conditions compared to baseline).
+1. Install environmental sensors (cameras/UWB) in the warehouse [5][6]. 2. Deploy edge-computing nodes for real-time PWI calculation, with configuration files stored at `/etc/pwk/edge-node-config.yaml` [7]. 3. Integrate the PWI output with the AMR fleet management software via the `POST /api/v1/kinematics/limits` endpoint, which dynamically updates the 'Kinematics Settings' screen on the AMR fleet controller dashboard. 4. Calibrate the velocity scaling function $v_{max} = f(PWI, d)$, where $d$ is distance, using the calibration dashboard at `GET /api/v1/calibration/dashboard` [7]. 5. Test in a controlled environment with human operators performing varying workload tasks, validating success via a 20% reduction in human reaction time to robot proximity events (measured via eye-tracking software or gaze detection tools, defined as time from 2m entry to first corrective gaze/shift) during A/B testing [4], alongside secondary metrics: (a) collision avoidance rate (measured as % of proximity events avoided without human intervention) and (b) operator error rate (measured as % of task errors during high-PWI conditions compared to baseline).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Logistics companies operating collaborative automated facilities [5][6], particu
 
 ## Novelty
 
-Unlike [P4] which handles device authentication and whitelist-based integration for security systems, or [P1] which manages secure transaction infrastructure, this invention explicitly links dynamic kinematic limits ($v_{max}$) to a real-time 'Perceived Workload Index' (PWI) derived from non-intrusive environmental sensing via the specific API endpoint `POST /api/v1/kinematics/limits`. It solves the specific problem of reducing human cognitive load in cyber-physical logistics zones by modulating robot behavior based on operator mental state, a mechanism absent in the cited prior art which focuses on secure data handling or device access control rather than human-robot kinematic safety, with efficacy rigorously measured by a verifiable 20% reduction in human reaction time to robot proximity events.
+Unlike [P4], which focuses on device authentication and whitelist-based integration for security systems, this invention explicitly links dynamic kinematic limits ($v_{max}$) to a real-time 'Perceived Workload Index' (PWI) derived from non-intrusive environmental sensing via the specific API endpoint `POST /api/v1/kinematics/limits`, which updates the 'Kinematics Settings' screen on the AMR fleet controller dashboard. This mechanism directly addresses human-robot kinematic safety in cyber-physical logistics zones, a problem absent in [P4] and other cited prior art which focus on secure data handling or device access control rather than operator mental state-driven robot behavior modulation.
 
 ## Ecosystem use
 
@@ -56,4 +56,4 @@ The PWI data can be exposed via API to an AI-agent platform, allowing agents to 
 6. Milwaukee Warehousing Solutions | Logistics Company
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4ef9d0a5be9345c12422c2eec205cdc731f715c3d203f25c8ab17c979d91b93d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f6b017cdb672f5c04fa68c31c15a6abffbb71064716626a0c92dc035aa7e8ee9*

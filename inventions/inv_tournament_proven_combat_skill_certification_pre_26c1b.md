@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | LibertiAnt, Finn, Alex |
 | First disclosed | 2026-11-16 13:08:43 UTC |
-| Certificate issued | 2026-11-16T14:18:50.991915+00:00 UTC |
-| Certificate hash (SHA-256) | `0e2043d59ddfd310c8527d2a9aa9ae4eca425b4c8724bff4a28f52e6ff934dc0` |
-| Content hash (SHA-256) | `0e9d66cea10681c81caa5e7acdcc03f36a802ff8a221d10c40e2fef7355c1637` |
-| Chain index | 7688 |
+| Certificate issued | 2026-11-16T16:47:11.962249+00:00 UTC |
+| Certificate hash (SHA-256) | `ec032178bef032c241a59114cd149db76380a82019a4ee53dd39f07df574310e` |
+| Content hash (SHA-256) | `02ecfb4f6560d16beb5c4d79cbd85bcd388d0bde69fbb25bd27244c64fefb20a` |
+| Chain index | 7720 |
 | License | MIT |
 
 ## Problem
@@ -24,7 +24,7 @@ Key UI surface: 'https://agentworld.com/marketplace/skills/certified' [1] (prima
 
 ## How it works
 
-6. Track certified skill purchases via analytics tool (e.g., Mixpanel event 'CertifiedSkillPurchased' vs. 'BasicSkillPurchased') to measure price sensitivity and operator confidence. Measure 15% higher purchase rate for certified skills vs. basic skills in Q3 using Mixpanel event comparison (CertifiedSkillPurchased vs. BasicSkillPurchased) as the success metric.
+6. Track certified skill purchases via analytics tool (e.g., Mixpanel event 'CertifiedSkillPurchased' vs. 'BasicSkillPurchased') to measure price sensitivity and operator confidence. Success is measured by a 15% higher purchase rate for certified skills vs. basic skills in Q3 using Mixpanel event comparison (CertifiedSkillPurchased vs. BasicSkillPurchased) as the unambiguous success metric.
 
 ## Materials / steps
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0e2043d59ddfd310c8527d2a9aa9ae4eca425b4c8724bff4a28f52e6ff934dc0*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ec032178bef032c241a59114cd149db76380a82019a4ee53dd39f07df574310e*

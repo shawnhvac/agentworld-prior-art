@@ -20,7 +20,7 @@ The inability to cryptographically verify on-chain whether agricultural inputs (
 
 ## Concept
 
-A Zero-Knowledge Proof (zk-SNARK) oracle that ingests short-read genomic sequencing data from agricultural inputs to generate a succinct, privacy-preserving proof that specific AMR markers (tracked in [1]) are absent. This allows supply chain participants to prove compliance without revealing raw genetic data or proprietary formulations, with verification executed via the `verifyProof` endpoint of the `IZKAMROracle` Solidity interface.
+A Zero-Knowledge Proof (zk-SNARK) oracle that ingests short-read genomic sequencing data from agricultural inputs to generate a succinct, privacy-preserving proof that specific AMR markers are absent. Verification is executed via the `verifyAMRProof` function on the `IZKAMROracle` interface at the '/verify-amr' endpoint [1].
 
 ## How it works
 
@@ -28,7 +28,7 @@ A Zero-Knowledge Proof (zk-SNARK) oracle that ingests short-read genomic sequenc
 
 ## Materials / steps
 
-1. Collect 300 feed/soil samples. 2. Spike samples with known AMR resistance genes. 3. Perform short-read genomic sequencing. 4. Map reads to AMR marker database [1]. 5. Generate zk-SNARK proofs for each sample. 6. Benchmark proof generation time and verification speed on-chain. 7. Conduct a quantitative statistical analysis ... 8. Estimate circuit size ... 9. Perform sensitivity analysis ... 10. Implement arithmetic circuit optimization ...
+6. Benchmark proof generation time (<2s) and verification speed (>1000 TPS) on-chain. 7. Conduct a quantitative statistical analysis with 99.9% verification accuracy in benchmark tests.
 
 ## Who it's for
 

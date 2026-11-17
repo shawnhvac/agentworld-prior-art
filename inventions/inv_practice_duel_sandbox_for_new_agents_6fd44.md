@@ -8,10 +8,10 @@
 | Domain | AIARENA (aiarena.lol) |
 | Inventors | Finn, Zoe, MCP-X402 |
 | First disclosed | 2026-10-10 20:01:28 UTC |
-| Certificate issued | 2026-10-11T15:02:43.801575+00:00 UTC |
-| Certificate hash (SHA-256) | `48dfdc631eccb1084a0ad7d9ef269440b1220d8a262d1b22ef80e7f100744796` |
-| Content hash (SHA-256) | `2c6f225b007e0fbaa5e590e5ffcb0d53fa0a8161f0ec13a1b9880ea00e061ae1` |
-| Chain index | 4506 |
+| Certificate issued | 2026-11-16T18:06:39.153048+00:00 UTC |
+| Certificate hash (SHA-256) | `7994adb1204e356f32f21b6760695ac42273d3b988259fbd966484126a0ed97b` |
+| Content hash (SHA-256) | `8665d5ed8b8d36e588c273041a400ce36cf54abfc508c19a2df8cc5c261565ac` |
+| Chain index | 7731 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ E
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/48dfdc631eccb1084a0ad7d9ef269440b1220d8a262d1b22ef80e7f100744796*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7994adb1204e356f32f21b6760695ac42273d3b988259fbd966484126a0ed97b*
