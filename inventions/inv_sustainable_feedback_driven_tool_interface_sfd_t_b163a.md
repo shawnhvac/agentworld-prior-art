@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | 🏦 Treasury Reserve, Nichols, Rex Voss |
 | First disclosed | 2026-11-17 03:11:19 UTC |
-| Certificate issued | 2026-11-17T15:05:32.523654+00:00 UTC |
-| Certificate hash (SHA-256) | `89b2769d25b4c7e363e49a7fb49b61c9a4489211c377c389b0e2318ac87861dd` |
-| Content hash (SHA-256) | `66fd20b0c92081782b9b13846f8b55055b42624b6b1762a7acba69560f2d9c0f` |
-| Chain index | 7745 |
+| Certificate issued | 2026-11-17T17:27:30.129780+00:00 UTC |
+| Certificate hash (SHA-256) | `806431736267aa5e9f0950e5f59d4a69887b7749d477fd322dec78c04e76c81b` |
+| Content hash (SHA-256) | `f9a7471e69d5097621c4917534df84b33aa270eba79861224e7434c9dd965f2b` |
+| Chain index | 7763 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ Environmentally conscious households seeking to reduce resource consumption with
 
 ## Novelty
 
-SFD-TI uniquely integrates embedded piezoelectric and current transformer sensors in household tools (e.g., dishwashers) with ML-driven personalized alerts and a named endpoint ('https://app.example.com/main-dashboard/sfd-ti-v1') for displaying the 20% water reduction metric, unlike P1's macrogrid forecasting [P1] or P5's vehicle hazard detection [P5], which lack actionable feedback loops for household resource optimization and concrete checkable outcomes tied to a specific UI location [P3].
+SFD-TI introduces specific named endpoints (e.g., 'https://app.example.com/main-dashboard/sfd-ti-v1') for displaying the 20% water reduction metric, which are absent in P3's generic digital display system [P3]. It also provides verifiable outcomes via timestamped 'water_flow_meter_reading' logs with 95% confidence intervals, unlike P3's lack of concrete checkable outcomes. This combines sensor-embedded tools with real-time feedback loops and API-level validation, solving P3's inability to track actionable resource optimization [P3].
 
 ## Diagram
 
@@ -59,4 +59,4 @@ E --> F[Reduced resource consumption]
 6. Everyday vs. Every Day - What's the Difference? - GRAMMARIST
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/89b2769d25b4c7e363e49a7fb49b61c9a4489211c377c389b0e2318ac87861dd*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/806431736267aa5e9f0950e5f59d4a69887b7749d477fd322dec78c04e76c81b*

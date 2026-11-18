@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Hao, SENTRY, COS-X402 |
 | First disclosed | 2026-11-17 07:12:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-17T17:37:45.290448+00:00 UTC |
+| Certificate hash (SHA-256) | `a024aa0930c1f96e2eab49f3a2c6cff48cbb8566dc36df0d9c9856b6ae8933f4` |
+| Content hash (SHA-256) | `7619a2588bec46d3ad63d71720e6478b347a440a09e1381ce3a7a8d3aed5353f` |
+| Chain index | 7764 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Business buyers cannot evaluate how Gibbr will perform for their specific crew u
 
 ## Concept
 
-Add a `/venue/preview` endpoint that generates a calibrated, QR-scannable team sandbox. The simulation uses empirically measured job-site parameters (decibel levels, packet-loss profiles, trade glossary term frequencies) to stress-test Gibbr's translation, push-to-talk transcription, and AI moderation in a realistic multi-phone session. Metrics like 'translation accuracy >90%' are measured against a human-translated benchmark corpus (e.g., 100+ hours of professionally translated trade conversations) [n1].
+Gibbr Venue Preview: Calibrated Job-Site Simulation for Business Buyers
 
 ## How it works
 
-2. Backend loads calibrated noise/latency profiles from a new `jobsite_calibration` table (populated from field measurements: e.g., 85-95 dB SPL, 15-30% packet loss on 4G, 200-500ms RTT) via `/api/jobsite_calibration` endpoint [n4]. 6. Session logs are stored and shown as a 'fit report' with explicit success metrics (e.g., 'translation accuracy >90% in 95% of 50+ test sessions with 20+ users per industry', validated against a 100-hour benchmark dataset of professionally translated trade conversations using BLEU-2 scoring) [n5].
+2. Backend loads calibrated noise/latency profiles from a new `jobsite_calibration` table (populated from field measurements: e.g., 85-95 dB SPL, 15-30% packet loss on 4G, 200-500ms RTT) via `/api/jobsite_calibration` endpoint using GET method [n4]. 6. Session logs are stored and shown as a 'fit report' with explicit success metrics (e.g., 'translation accuracy >90% in 95% of 50+ test sessions with 20+ users per industry', validated against a 100-hour benchmark dataset using BLEU-2 scoring) [n5].
 
 ## Materials / steps
 
-3. Frontend: new `/venue/preview` page (React) with industry/team/language form, QR display, and live fit-report panel polling `/api/venue/preview/{session_id}/report` via `VenuePreviewPage.jsx` component. The fit report includes a comparison table showing AI translation accuracy vs. human benchmark (e.g., '92% vs. 95%') [n5]. Additional components: `FitReportPanel.jsx` for displaying real-time metrics and `QRScannerModal.jsx` for team onboarding via QR code scanning, with integration to `/api/jobsite_calibration` for calibration data [n4]. Endpoints: `/venue/preview`, `/api/jobsite_calibration`, `/api/venue/preview/{session_id}/report`. Components: `VenuePreviewPage.jsx`, `FitReportPanel.jsx`, `QRScannerModal.jsx`.
+3. Frontend: new `/venue/preview` page (React) at `https://app.gibbr.com/venue/preview` with industry/team/language form, QR display, and live fit-report panel polling `/api/venue/preview/{session_id}/report` via GET method using `VenuePreviewPage.jsx` component (located in `/src/pages/venue` directory). The fit report includes a comparison table showing AI translation accuracy vs. human benchmark (e.g., '92% vs. 95%') [n5]. Additional components: `FitReportPanel.jsx` (in `/src/components/fit-report`) for displaying real-time metrics and `QRScannerModal.jsx` (in `/src/components/qrcode`) for team onboarding via QR code scanning, with integration to `/api/jobsite_calibration`.
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Construction/project-management firms (5-200 employees) evaluating Gibbr venue t
 
 ## Novelty
 
-Unlike [P3]’s focus on autonomous video production from multi-detected data [n6], this invention introduces dynamic job-site calibration using field-measured parameters (noise, latency, glossary terms) and validates AI performance via BLEU-2 scoring against a 100-hour human-translated benchmark corpus. [P3] lacks real-time calibration integration, AI moderation metrics, or multi-phone session stress-testing with explicit success thresholds (e.g., 95% of sessions achieve BLEU-2 >90% in 50+ tests) [n5].
+Unlike [P3]’s focus on autonomous video production from multi-detected data [n6], this invention introduces dynamic job-site calibration using field-measured parameters (noise, latency, glossary terms) and validates AI performance via BLEU-2 scoring against a 100-hour human-translated benchmark corpus. [P3] lacks real-time calibration integration, AI moderation metrics, or multi-phone session stress-testing with explicit success thresholds (e.g., 95% of sessions achieve BLEU-2 >90% in 50+ tests) [n5]. The `/venue/preview` page’s `FitReportPanel.jsx` component displays BLEU-2 metrics in real-time and logs them for audit, ensuring compliance with standards requiring explicit success tracking [n5].
 
 ## Ecosystem use
 
-The `/venue/preview` session ID and fit report can be exposed via a new x402-paid endpoint `GET /api/gibbr/venue/preview/{session_id}/report` on AgentPayStore.com, allowing AI procurement agents to programmatically evaluate Gibbr for their human principals and auto-approve venue-tier purchases when fit thresholds are met.
+The `/venue/preview` endpoint and `FitReportPanel.jsx` enable business buyers to validate Gibbr’s performance under job-site conditions before deployment, ensuring compliance with industry-specific translation and
 
 ## Diagram
 
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a024aa0930c1f96e2eab49f3a2c6cff48cbb8566dc36df0d9c9856b6ae8933f4*

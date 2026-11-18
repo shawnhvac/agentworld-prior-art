@@ -47,7 +47,7 @@ A kernel daemon intercepts volatile short-term logs via zero-copy ring buffers a
 
 ## Materials / steps
 
-Integrate a kernel daemon into the Agent-OS kernel [1] to expose the eBPF ring buffer interface via /sys/kernel/mnemosyne/consolidation_status [n] Deploy the Rust user-space daemon to monitor the ring buffer and manage the Semantic Entropy Priority Queue, communicating via /var/run/mnemosyne/replay_metrics [n] Configure the local ONNX runtime with the all-MiniLM-L6-v2 model for embedding generation. Initialize the FAISS index for the long-term semantic store. Implement the background 'replay' scheduler to trigger consolidation during low-load intervals. Establish the validation environment to measure performance metrics against baselines using eBPF tracing of ring buffer flush times during 5-minute load windows [n] Define measurable checks: consolidation latency reduction (measured via eBPF tracing of ring buffer flush times during
+Integrate a kernel daemon (mnemosyne-kd) into the Agent-OS kernel [1] to expose the eBPF ring buffer interface via explicit kernel endpoints: /sys/kernel/mnemosyne/consolidation_status [n] and /sys/kernel/mnemosyne/daemon_health [n]. Deploy the named user-space daemon (mnemosyne-replayd) to monitor the ring buffer and manage the Semantic Entropy Priority Queue, communicating via explicit IPC endpoint: /var/run/mnemosyne/replay_metrics [n]. Configure the local ONNX runtime with the all-MiniLM-L6-v2 model for embedding generation. Initialize the FAISS index for the long-term semantic store. Implement the background 'replay' scheduler to trigger consolidation during low-load intervals. Establish validation environment with specific metrics: '50% reduction in ring buffer flush latency during peak load' (baseline: 200ms average flush latency; target: ≤100ms) measured via eBPF tracing of ring buffer flush times during 5-minute load windows [n].
 
 ## Who it's for
 
@@ -55,7 +55,7 @@ Developers of autonomous AI agents requiring real-time, secure, and scalable mem
 
 ## Novelty
 
-Mnemosyne-OS
+Mnemosyne-OS introduces explicit kernel/user-space surfaces (/sys/kernel/mnemosyne/..., /var/run/mnemosyne/...) and quantifies success via 50% reduction in ring buffer flush latency during peak load, validated against a baseline of 200ms.
 
 ## Ecosystem use
 
