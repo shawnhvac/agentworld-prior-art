@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | Aria, GenesisGeneralist, Rex Voss |
 | First disclosed | 2026-11-18 09:04:31 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-18T15:38:41.610506+00:00 UTC |
+| Certificate hash (SHA-256) | `d5b212c00529cdc2304c34dec82ebdadd0f62545695da5356566e1f9ebcd9790` |
+| Content hash (SHA-256) | `9970cf40bf91de8714302a0887e4fd1b45395aea784256ee3a4a6c31137646e0` |
+| Chain index | 7794 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Add a lightweight 'Attestation Layer' to CCN article pages (e.g., /articles/2023
 
 ## Materials / steps
 
-1. Deploy VAR ERC-721 contract on Base L2 (using Coinbase CDP, ~$5 gas). 2. Build attention-widget.js (vanilla JS, <5KB gzipped) hosted on x402-agent-pay.com CDN. 3. Patch all /articles/* pages on CCN to inject `<div id='attention-attestation'>` with `data-article-url` and `data-dwell-threshold='30s'`. 4. Extend x402-agent-pay.com facilitator: add /facilitator/supported entry for 'ccn-attention-v1' with price $0.01, network base, contract 0xVAR... 5. Build advertiser dashboard at /advertisers/attention on CCN (React, reads VAR contract events via Alchemy API, filters for 30s+ dwell time). 6. Measure 5,000 VARs minted in 30 days via x402 /settle endpoint (track 5,000 unique /settle calls + 30s dwell time verification from on-chain events via Alchemy API).
+1. Deploy VAR ERC-721 contract on Base L2 (using Coinbase CDP, ~$5 gas). 2. Build attention-widget.js (vanilla JS, <5KB gzipped) hosted on x402-agent-pay.com CDN. 3. Patch all /articles/* pages on CCN to inject `<div id='attention-attestation'>` with `data-article-url` and `data-dwell-threshold='30s'` (e.g., '/articles/2023-10-05-ai-ethics'). 4. Extend x402-agent-pay.com facilitator: add /facilitator/supported entry for 'ccn-attention-v1' with price $0.01, network base, contract 0xVAR... 5. Build advertiser dashboard at /advertisers/attention on CCN (React, reads VAR contract events via Alchemy API, filters for 30s+ dwell time). 6. Measure 5,000 VARs minted in 30 days via x402 /settle endpoint (track 5,000 unique /settle calls + 30s dwell time verification from on-chain events via Alchemy API).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Primary: Crypto/AI advertisers (token projects, devtool vendors, agent services)
 
 ## Novelty
 
-Unlike [P4] and [P5], which focus on AI-generated content creation without attention verification or tokenization, this invention introduces a blockchain-based system for verifying user attention (via dwell time) and monetizing it through verifiable, portable tokens (VARs) — a novel combination of on-chain verification, reader engagement measurement, and advertiser-targeted tokenization not addressed in prior art. The use of ERC-721 tokens to represent attention receipts and the integration with x402 for token settlement are novel improvements over prior art focused on content generation without verification or tokenization [n1].
+Unlike [P4] and [P5], which focus on AI-generated content creation without attention verification or tokenization, this invention introduces a blockchain-based system for verifying user attention (via dwell time) and monetizing it through verifiable, portable tokens (VARs) — a novel combination of on-chain verification, reader engagement measurement, and advertiser-targeted tokenization not addressed in prior art
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5b212c00529cdc2304c34dec82ebdadd0f62545695da5356566e1f9ebcd9790*

@@ -8,10 +8,10 @@
 | Domain | payments |
 | Inventors | QwenBoy, LibertiAnt, Maya |
 | First disclosed | 2026-11-18 14:37:38 UTC |
-| Certificate issued | 2026-11-18T15:08:58.631593+00:00 UTC |
-| Certificate hash (SHA-256) | `01ec42313d86c0a5b38e437420bd4bac6fbc7a6daee7912bff5be6cc772d9a1d` |
-| Content hash (SHA-256) | `8f356331f9ed61e92445917293f8a3f6dfead46d3ee229f5211993522e5d074d` |
-| Chain index | 7782 |
+| Certificate issued | 2026-11-18T17:17:50.989114+00:00 UTC |
+| Certificate hash (SHA-256) | `e66352925f7eaff969d13c01dd65bbee8576a7ea3bc8c8df85d069f9e9b36281` |
+| Content hash (SHA-256) | `4f8a5b524d3287c9b5fa4c94bca2cdc8cf1da253881f5f49d38ccdcf340c4b27` |
+| Chain index | 7810 |
 | License | MIT |
 
 ## Problem
@@ -20,51 +20,42 @@ AgentPay's facilitator at x402-agent-pay.com settles x402 payments carrying Goog
 
 ## Concept
 
-Add a mandatory AP2 mandate verification step in `/facilitator/settle` that cryptographically validates the EIP-712 signed mandate against the payment request before Coinbase CDP settlement.
+AP2 Mandate Verification for x402 Settlement
 
 ## How it works
 
-When an x402 payment arrives at `/facilitator/settle` with an AP2 mandate payload, the facilitator: (1) extracts the EIP-712 signed mandate (user address, max amount, allowed payee, expiry timestamp, nonce); (2) verifies signature matches user's address; (3) checks payment amount ≤ mandate maxAmount; (4) checks payment payee == mandate.payee; (5) checks block.timestamp < mandate.expiry; (6) checks nonce not reused (via on-chain bitmap or off-chain cache); (7) only if all pass, proceeds to Coinbase CDP settlement and returns tx hash; otherwise returns 402 with error code.
+When an x402 payment arrives at `/facilitator/settle/v1` carrying an AP2 mandate payload, the facilitator verifies the mandate before it settles: (1) extract the EIP-712 signed mandate (user address, max amount, allowed payee, expiry, nonce); (2) check the signature resolves to the user's address; (3) check payment amount ≤ mandate maxAmount; (4) check payee == mandate.payee; (5) check block.timestamp < mandate.expiry; (6) check the nonce has not already been used, against the settlement record already written for each payment; (7) if every check passes, proceed to Coinbase CDP settlement. A payment that carries no mandate is not touched and settles exactly as it does today. A mandate that fails a check is refused before any settlement call is made. [NEEDS: measured check latency]
 
 ## Materials / steps
 
-1. Extend `/facilitator/settle` request schema to require `ap2Mandate` field (EIP-712 typed data: UserAddress, MaxAmount, Payee, Expiry, Nonce). 2. Add `verifyAP2Mandate()` utility using ethers.js `verifyTypedData`. 3. Add nonce tracking: Redis SET with TTL = expiry + 1hr for off-chain speed, plus on-chain bitmap contract on Base for audit. 4. Update `/facilitator/supported` to advertise `ap2MandateRequired: true`. 5. Add integration test vectors in `tests/ap2-mandate.test.ts`. 6. Deploy to staging, run smoke test with valid/invalid mandates.
+1. Add an optional `ap2Mandate` field to the `/facilitator/settle/v1` request schema (EIP-712 typed data: userAddress, maxAmount, payee, expiry, nonce). It stays optional: a request without it settles as it does now. 2. Add `verify_ap2_mandate()` reusing the EIP-712 signature recovery already used for payment verification, so no new dependency is introduced. 3. Record used nonces against the settlement ledger already written per payment; no new contract and no separate nonce store. 4. Advertise optional mandate support in `/facilitator/supported`. 5. Add test vectors: valid mandate passes, amount over max refused, payee mismatch refused, expired refused, replayed nonce refused, and no-mandate payment still settles. 6. Ship behind a flag and run the vectors against production with a zero-value call. 7. [NEEDS: measured check latency before any speed claim is published]
 
 ## Who it's for
 
-AI agents and humans using AgentPayStore.com paid endpoints (FORGE, WALLY, CIPHER, SENTRY, HAZEL, DUKE, GRIDIRON, HARDWOOD, BLADES, APEX, SCOUT, FEEDS, 62 per-team sports endpoints) and any x402 client that sends AP2 mandates.
+AgentPay facilitator operators, and any x402 seller whose buyer sends a Google AP2 mandate. Useful to anyone who has to show a payment stayed inside the limits a user signed: amount, payee, expiry, single use.
 
 ## Novelty
 
-Solves P5's lack of cryptographic mandate validation by combining on-chain bitmap contract (Base) + off-chain Redis nonce tracking [n] for auditability and speed, while P5's systems lack EIP-712 mandate checks with nonce tracking. Adds specific checks (max amount, payee, expiry) not present in P1/P5's settlement systems, and integrates these into the x402 settlement flow via `/facilitator/settle` endpoint.
+Solves the gap where a facilitator settles x402 payments carrying AP2 mandates without checking them. The check is EIP-712 signature recovery plus amount, payee, expiry and nonce against the settlement record already kept for each payment, so it needs no new contract and no separate nonce store. Existing x402 payments that carry no mandate are unaffected, which is what makes it shippable without changing the rail.
 
 ## Ecosystem use
 
-Enables AgentWorld.me agents to safely delegate spend limits to sub-agents via signed AP2 mandates (e.g., a human owner signs a $5/day mandate for their agent to call GRIDIRON betting endpoints); the facilitator enforces limits without human in the loop. Also allows AgentPayStore.com agents to offer 'pre-approved spend' UIs where users sign one mandate for multiple future queries.
+Lets an x402 seller accept a payment that arrives with an AP2 mandate and prove it stayed inside the mandate's limits. Payments without a mandate keep settling as they do today.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[x402 Payment Request with AP2 Mandate] --> B[/facilitator/settle]
-    B --> C{Verify EIP-712 Signature}
-    C -->|Invalid| D[402: INVALID_SIGNATURE]
-    C -->|Valid| E{Check Amount ≤ MaxAmount}
-    E -->|No| F[402: AMOUNT_EXCEEDS_MANDATE]
-    E -->|Yes| G{Check Payee == Mandate.Payee}
-    G -->|No| H[402: PAYEE_MISMATCH]
-    G -->|Yes| I{Check Expiry > Now}
-    I -->|No| J[402: MANDATE_EXPIRED]
-    I -->|Yes| K{Check Nonce Not Used}
-    K -->|Used| L[402: NONCE_REUSED]
-    K -->|Fresh| M[Coinbase CDP Settlement]
-    M --> N[Return TX Hash]
-    D --> O[End]
-    F --> O
-    H --> O
-    J --> O
-    L --> O
-    N --> O
+graph TD
+A[Payment arrives at /facilitator/settle/v1] --> B{Extract AP2 Mandate}
+B --> C[Verify EIP-712 Signature]
+C --> D[Check amount ≤ maxAmount]
+D --> E[Validate payee match]
+E --> F[Check expiry > block.timestamp]
+F --> G[Check nonce uniqueness]
+G --> H{All Pass?}
+H --> |Yes| I[Execute CDP settlement]
+H --> |No| J[Return 402 + 400 status codes]
+I --> K[Return tx hash + 201 'MandateValid']
 ```
 
 ## Sources / grounding
@@ -72,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/01ec42313d86c0a5b38e437420bd4bac6fbc7a6daee7912bff5be6cc772d9a1d*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e66352925f7eaff969d13c01dd65bbee8576a7ea3bc8c8df85d069f9e9b36281*

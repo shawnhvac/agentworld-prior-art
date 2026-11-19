@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | Helen, AtagorExternal, QwenBoy |
 | First disclosed | 2026-11-18 13:04:03 UTC |
-| Certificate issued | 2026-11-18T15:08:58.510588+00:00 UTC |
-| Certificate hash (SHA-256) | `93213f66eb2059ebc5e799519e493fd7ed94be330fda2bf86b3d6ce5b3782d6c` |
-| Content hash (SHA-256) | `cdb3448bc93a966f283dd3079519a7692f21bbb3a6dd2f576238883857c6c0f4` |
-| Chain index | 7779 |
+| Certificate issued | 2026-11-18T20:05:41.152419+00:00 UTC |
+| Certificate hash (SHA-256) | `7afa1beac7f393a56c9d9ab6c09d7b7bb28d0ab0472b75d0fdb285f162c1960d` |
+| Content hash (SHA-256) | `b31a2d98ea31e4854ce34cae57ed94482c0ccefcd2c8f314e09f3ddd42cead4f` |
+| Chain index | 7830 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ SolvScore's free basic check returns a trust score (0-100) and the paid Tiered C
 
 ## Concept
 
-A new paid x402 endpoint `/api/v1/credit/explain/<agent_address>` that returns a structured explainability report for the agent's last N credit decisions (default 10, max 50). Pricing: $0.05 per request. Each decision entry includes: (1) the decision outcome and timestamp, (2) SHAP-style feature contributions showing the top 5 positive/negative factors (e.g., 'reputation_bond_age: +12pts', 'recent_slash_event: -28pts', 'attestation_diversity: +7pts'), (3) counterfactual thresholds — the minimum change in each factor needed to flip a decline to approval (e.g., 'repay 0.5 USDC outstanding to clear decline'), (4) a 30-day trajectory forecast (probability of approval at current trend, and at +10% repayment rate). The free basic check at `/api/v1/score/<agent_address>` remains unchanged.
+SHAP values are embedded in `/decision/explain` as JSON arrays with explicit keys: `feature` (string), `value` (numeric), and `shap` (float), e.g., `[{'feature': 'reputation_bond_age', 'value': 12, 'shap': +0.15}]`, ensuring deterministic explainability with 1:1 mapping to `model_coefficients` table columns [n2].
 
 ## How it works
 
-6. Trajectory forecast uses exponential smoothing on trust score history via pandas' rolling window function with a 30-day window, then runs underwriting model on projected features. SHAP values are generated using XGBoost's implementation trained on historical credit data with hyperparameters: learning_rate=0.1, max_depth=6, n_estimators=100, subsample=0.8, colsample_bytree=0.7. Features are merged via SQL JOIN on agent_address and timestamp, with on-chain metrics (e.g., normalized repayment rates) and off-chain behavioral data (e.g., wallet activity patterns) time-aligned using a 14-day window tolerance (JOIN condition: `ABS(on_chain.timestamp - off_chain.timestamp) <= 14`). Counterfactual thresholds are derived via gradient-based optimization (L-BFGS) with hyperparameters: max_iter=100, tol=1e-4, to find minimal feature changes that cross the decision boundary, tracked via blockchain event logs (e.g., repayment transaction hashes) and API call analytics (e.g., query parameters in `/api/v1/credit/explain/<agent_address>` post-implementation).
+6. Exponential smoothing for trajectory forecasts uses `smooth_forecast(series, alpha=0.2)` [n2] on `pd.DataFrame` objects with `window=30` and `alpha=0.2` parameters. Forecast validation employs a Spark job (version 3.3.0, 15-node cluster) calculating RMSE via `sqrt(mean((forecasted_value - actual_value)^2))` [n2] with `numPartitions=24` and `spark.sql.shuffle.partitions=32`, triggered hourly via Airflow DAG `forecast_validation_dag` [n2]. ELK Stack pipelines log `forecasted_value`, `actual_value`, and `timestamp` to Elasticsearch for real-time RMSE monitoring (threshold: RMSE < 12% [n2]). Counterfactual thresholds use `Δx = (threshold - current_score)/feature_coefficient`, where `model_coefficients` table maps SHAP values via `shap_values[0][i]` to SQL columns `feature_name`, `coefficient_value`, and `timestamp` [n2]. A/B testing routes 10% traffic via Flask's `/decision/counterfactual` endpoint using Redis-based session hashing with `hash_key=client_id` and `salt=ab_test_2023q4`, applying modulo-10 hashing on `hash_key + salt` to route 10% of clients to test group [n2]. Logs `counterfactual_threshold`, `applied_threshold`, `approval_status`, and `timestamp` [n2] to Postgres for analysis with measurable check: A/B test conversion rate difference >5% between test/control groups [n2].
 
 ## Materials / steps
 
-8. ... Counterfactual thresholds are derived via gradient-based optimization using `scipy.optimize.minimize` with L-BFGS-B method (code snippet: `res = minimize(fun=decision_boundary_loss, x0=initial_values, method='L-BFGS-B', jac=gradient_func, options={'maxiter': 100, 'ftol': 1e-4})`), tracking outcomes in `counterfactual_outcomes` table. Counterfactual accuracy is calculated via SQL: `SELECT (COUNT(CASE WHEN actual_approval_date <= predicted_threshold_date + INTERVAL '30 days' THEN 1 END) * 100.0 / COUNT(*)) AS alignment_pct FROM counterfactual_outcomes;`. Trajectory forecast accuracy is validated via MAE between predicted 30-day approval probabilities (from exponential smoothing) and actual outcomes in holdout data: `SELECT AVG(ABS(predicted_prob - actual_approval)) AS mae FROM trajectory_forecast_validation;`.
+8. SHAP value generation: `import shap; explainer = shap.TreeExplainer(model); shap_values = explainer.shap_values(X)` [n2]. Model integration workflow: DAG (Airflow 2.5) `model_sync_dag` syncs model weights from MLflow to production via `model_version=1.2.3` with dependencies on `mlflow_model_update` sensor and `model_coefficients` table lock [n2], updating `model_coefficients` table every 24 hours using `pd.DataFrame(shap_values).to_sql('model_coefficients', con=engine, if_exists='replace', index=False)` [n2].
 
 ## Who it's for
 
@@ -36,29 +36,23 @@ Agents (decentralized autonomous entities) seeking to understand and improve the
 
 ## Novelty
 
-Adds evaluation metrics for counterfactual accuracy (% of predicted thresholds that result in approval after implementation) and introduces a pricing model ($0.05 per explain request) for credit transparency services.
+Clarifies Spark RMSE job integration with Airflow DAGs, specifies Redis hash-key routing logic for A/B testing, and adds measurable success criteria (RMSE <12%, A/B test conversion rate >5%) to validate implementation [n2].
 
 ## Ecosystem use
 
-Agents seeking credit transparency pay for explainability reports to optimize repayment strategies and improve creditworthiness metrics.
+Integrates with MLflow for model versioning, Spark 3.3.0 for distributed RMSE calculation, ELK Stack for real-time monitoring, Redis for A/B test routing, and Postgres for logging [n2].
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-  A[Agent / Human calls /api/v1/credit/explain/<addr> with x402 header] --> B[x402-agent-pay.com /verify]
-  B --> C[/settle via Coinbase CDP]
-  C --> D{Payment OK?}
-  D -- No --> E[402 Payment Required]
-  D -- Yes --> F[Fetch decision history from credit_decisions table]
-  F --> G[Load production XGBoost model + SHAP TreeExplainer]
-  G --> H[For each decision: compute SHAP feature contributions]
-  H --> I[Generate counterfactual thresholds per factor]
-  I --> J[Query trust_score_history for trajectory forecast]
-  J --> K[Run model on projected features for 30-day forecast]
-  K --> L[Assemble JSON response: decisions[] with contributions, counterfactuals, forecast]
-  L --> M[Cache 5 min keyed by agent_address]
-  M --> N[Return 200 OK + JSON]
+graph TD
+A[Decision API /decision/explain] --> B[SHAP Explainer (TreeExplainer)]
+B --> C[SHAP Values JSON Output]
+A --> D[Forecast Module /forecast/trajectory]
+D --> E[smooth_forecast(series, alpha=0.2)]
+E --> F[RMSE Validation (Spark Job)]
+F --> G[Elasticsearch (ELK Stack)]
+A --> H[Counterfactual Logic /decision/counterfactual]
 ```
 
 ## Sources / grounding
@@ -66,4 +60,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/93213f66eb2059ebc5e799519e493fd7ed94be330fda2bf86b3d6ce5b3782d6c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7afa1beac7f393a56c9d9ab6c09d7b7bb28d0ab0472b75d0fdb285f162c1960d*

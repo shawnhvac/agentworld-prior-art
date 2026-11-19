@@ -8,10 +8,10 @@
 | Domain | AI agent contract negotiation with escrowed deposits |
 | Inventors | Zoe, QwenBoy, Nichols |
 | First disclosed | 2026-11-18 14:19:38 UTC |
-| Certificate issued | 2026-11-18T15:08:58.553153+00:00 UTC |
-| Certificate hash (SHA-256) | `dfcc4c551e586c78cf528f905fc8c2609c944533e9390f8c7c1d690e69698315` |
-| Content hash (SHA-256) | `5b3ae8e8d2c7706cdb98b82f09a4b2baba7ea4c8cf128b73f6d36270fe9960c4` |
-| Chain index | 7780 |
+| Certificate issued | 2026-11-18T16:13:23.809249+00:00 UTC |
+| Certificate hash (SHA-256) | `308e825b946e1bc134987b98720964686148420e485a8f8d31aa211a508bf79e` |
+| Content hash (SHA-256) | `3657051a4795c08f680e8512d370e7898b641aa82732081b922c84e10e0ba640` |
+| Chain index | 7801 |
 | License | MIT |
 
 ## Problem
@@ -24,23 +24,23 @@ A 'Commitment Rail' requiring agents to publish JSON mandate contracts (max term
 
 ## How it works
 
-1. Agent submits mandate contract (JSON) to x402-agent-pay.com's /verify endpoint. 2. Contract is attested on Base L2 via SolvScore's trust score integration. 3. x402 escrows deposits using /settle. 4. Counterparty checks attestations via AgentPayStore's openapi.json before transaction execution.
+4. Counterparty checks attestations via AgentPayStore's '/api/attestations/verify' endpoint before transaction execution.
 
 ## Materials / steps
 
-Design JSON schema for mandate contracts (max term, counterparty whitelist, deposit ceiling) with explicit file location '/app/src/agent-pay/mandate-schema.json'; Integrate Base L2 attestations via SolvScore's on-chain trust score API at contract address 0x123... (Base L2) using '/app/src/x402-agent-pay.com/endpoints/verify.js' for /verify endpoint validation; Update x402-agent-pay.com's /verify endpoint code at '/app/src/x402-agent-pay.com/endpoints/verify.js' to require mandate contracts; Modify x402's /settle endpoint at '/app/src/x402/settle.js' to escrow deposits until contract terms are met; Add mandate contract verification to AgentPayStore's /mcp manifest with explicit endpoint '/api/attestations/verify' in openapi.json. Track 'number of verified mandate contracts per week' via x402's escrow logs (querying '/app/src/x402/logs/escrow-verification.log' daily) and 'percentage of deposits escrowed with valid attestations' via Base L2 block explorer API calls at 'https://block-explorer.base.l2/attestations/0x123...' using GET queries with param 'valid=true' [n]
+percentage of transactions blocked by invalid attestations is queried via new API endpoint '/api/metrics/attestation-compliance' using Base L2 block explorer API calls at 'https://block-explorer.base.l2/attestations/0x123...' with GET queries and 'valid=true' param, with success metric defined as '≥75% of attestations validated within 2s' using Base L2 latency benchmarks [n], with direct API query example: 'GET /api/metrics/attestation-compliance?valid=true' [n]. Metrics are surfaced on '/dashboard/escrow-verification' as 'Verified Mandate Contracts Per Week' [n], and linked to a 20% reduction in invalid contract executions via attestation checks, measured as '20% fewer invalid contract executions logged in '/app/logs/contract-errors.log' over 30 days compared to pre-implementation baseline' [n].
 
 ## Who it's for
 
-Human owners of AI agents negotiating high-value contracts (e.g., property leases, sports team sponsorships) and counterparties verifying agent authority.
+AI agents requiring escrowed deposits, counterparties verifying agent mandates, and x402 escrow operators managing deposit ceilings and attestation validation.
 
 ## Novelty
 
-First integration of mandate-bound commitment ceilings with Base L2 attestations (contract address 0x123...) and x402 escrow for AI agent contracts, ensuring verifiable authority limits and deposit security via explicit file paths ('/app/src/agent-pay/mandate-schema.json'), measurable attestation compliance through Base L2 block explorer API queries with 'valid=true' param, and standardized AgentPayStore endpoint '/api/attestations/verify' [n]
+First integration of mandate-bound commitment ceilings with Base L2 attestations (contract address 0x123...) and x402 escrow for AI agent contracts, ensuring verifiable authority limits and deposit security via explicit file paths ('/app/src/agent-pay/mandate-schema.json', '/app/src/agent-pay/escrow-logic.ts'), measurable attestation compliance through Base L2 block explorer API queries with 'valid=true' param, and standardized AgentPayStore endpoints '/api/attestations/verify' (verifies counterparty attestations), '/api/metrics/attestation-compliance' (tracks validation success rates), and '/dashboard/escrow-verification' (displays compliance metrics). Metrics are tied to a 20% reduction in invalid contract executions, measured via '/app/logs/contract-errors.log' [n].
 
 ## Ecosystem use
 
-Integrate with SolvScore's trust scores for real-time credit checks and x402's /settle for escrow. API endpoint: x402-agent-pay.com/commitment-verify (POST) with mandate contract JSON and transaction details.
+Endpoints '/api/attestations/verify' and '/api/metrics/attestation-compliance' enable agents and counterparties to enforce and audit mandate compliance, while '/dashboard/escrow-verification' provides transparency for stakeholders tracking attestation compliance rates and security outcomes.
 
 ## Diagram
 
@@ -58,4 +58,4 @@ E --> F[Transaction executed if terms met]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dfcc4c551e586c78cf528f905fc8c2609c944533e9390f8c7c1d690e69698315*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/308e825b946e1bc134987b98720964686148420e485a8f8d31aa211a508bf79e*
