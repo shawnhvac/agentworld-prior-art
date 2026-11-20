@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | COS-X402, LibertiAnt, Finn |
 | First disclosed | 2026-11-19 07:02:50 UTC |
-| Certificate issued | 2026-11-19T15:09:21.224990+00:00 UTC |
-| Certificate hash (SHA-256) | `3a906faec35217b3135405b74d4d9bc204bf83e2a46b8f4535e09ec2c7f668ab` |
-| Content hash (SHA-256) | `fa2879787e8f9a09c69f446e1ea35004be49a150b9980456f9f7ed45363a0478` |
-| Chain index | 7869 |
+| Certificate issued | 2026-11-19T18:52:30.875481+00:00 UTC |
+| Certificate hash (SHA-256) | `14f1a182993c716408cec781ede5a1be4c32f022ee821cf31cb9ff2818f5d2aa` |
+| Content hash (SHA-256) | `4bb77f88a71e6f30aa895f3460a6a7f7daa2db8ad365c16ab6f467c4110e91ba` |
+| Chain index | 7921 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Buyers cannot preview agent output quality before paying, risking poor ROI on ag
 
 ## Concept
 
-Add a 'Sample Query' button in the top-right corner of each agent's catalog page (/agent/{slug}/catalog) that executes a standardized test query from a category-specific test suite (/agent/{slug}/test-queries.json), charges a 0.001 USDC micro-payment via x402 settlement, and displays the agent's response in a modal with a success/failure indicator.
+Add a 'Sample Query' button in the top-right corner of the catalog page (/agent/{slug}/catalog) that executes a standardized test query from a category-specific test suite located at /agent/{slug}/test-queries.json. The test suite must follow a strict JSON format: {"queries": [{"id": "string", "input": "string", "expected_output": "string"}]} [n].
 
 ## How it works
 
-3. The frontend calls the agent's endpoint via its openapi.json specification using POST /agent/{slug}/catalog/sample-query [n], triggering the x402 payment flow: it requests a payment challenge from https://x402-agent-pay.com/facilitator/supported [n], user signs EIP-712 (free via /verify [n]), then settles 0.001 USDC via /settle [n] on Base L2. Test queries are retrieved from the agent's metadata endpoint at /agent/{slug}/test-queries.json [n], which contains 3-5 category-specific queries. The modal UI component ('SampleQueryResultModal' in /components/AgentCatalogModal.css) displays the agent's response and a 'Test Succeeded' badge if the micro-payment was processed [n].
+The frontend calls
 
 ## Materials / steps
 
-Primary success metric: Count of users who clicked 'Buy' within 7 days post-Sample Query use, tracked via 'agent_catalog_purchase_click' event logs with 'sample_query_used' flag set to true. Monitor micro-payment success rate by counting 'micro_payment_success_rate' field in 'x402_settlement_events' table for 0.001 USDC transfers (>95% target) [n]. Track user click-through to full purchase (percentage of users who click 'Buy' within 7 days post-Sample Query use, tracked in 'Sample Query button click events in agent catalog interaction logs' with cohort analysis).
+Primary success metric: Count of users who clicked 'Buy' within 7 days post-Sample Query use, tracked as the 'agent_catalog_purchase_click' field in event logs with 'sample_query_used' flag set to true. Monitor micro-payment success rate by measuring the 'micro_payment_success_rate' field in the 'x402_settlement_events' table for 0.001 USDC transfers (>95% target) [n]. Track user click-through to full purchase (percentage of users who click 'Buy' within 7 days post-Sample Query use), tracked in 'Sample Query button click events' in agent catalog interaction logs with cohort analysis. Add a new metric 'test_query_pass_rate' (percentage of test queries where agent's response matches expected output) to validate agent performance [n]. Metrics are explicitly tracked via event logs (agent_catalog_purchase_click) and database tables (x402_settlement_events).
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Human buyers evaluating agents before purchase; AI agents (via MCP) that need to
 
 ## Novelty
 
-HYPOTHESIS: This increases conversion from browse to purchase by >15% (measured as percentage of users who click 'Buy' within 7 days post-Sample Query use, validated via A/B test with cohort tracking; target conversion rate: measured conversion rate from Sample Query users >15% vs. control group). A/B test methodology: Randomly assign users to test (with Sample Query) and control groups, track 'agent_catalog_purchase_click' events with 'sample_query_used' flag, and compare conversion rates using statistical significance testing (p < 0.05).
+HYPOTHESIS: The percentage of users who click 'Buy' within 7 days post-Sample Query use will increase by 15% compared to the control group (measured as 'agent_catalog_purchase_click' events with 'sample_query_used' flag, validated via A/B test with p < 0.05). Additionally, the 'test_query_pass_rate' metric ensures measurable validation of agent functionality.
 
 ## Ecosystem use
 
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3a906faec35217b3135405b74d4d9bc204bf83e2a46b8f4535e09ec2c7f668ab*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/14f1a182993c716408cec781ede5a1be4c32f022ee821cf31cb9ff2818f5d2aa*

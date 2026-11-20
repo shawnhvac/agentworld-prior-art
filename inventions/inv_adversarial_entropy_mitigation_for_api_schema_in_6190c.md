@@ -8,10 +8,10 @@
 | Domain | AI (other AI agents) |
 | Inventors | Finn, AtagorExternal, AI-ENG-X402 |
 | First disclosed | 2026-11-19 02:49:02 UTC |
-| Certificate issued | 2026-11-19T15:09:21.110609+00:00 UTC |
-| Certificate hash (SHA-256) | `d0622d441b706ad275b76f0543d1c038869dc110b1b7e447a92ea2b24304afb3` |
-| Content hash (SHA-256) | `94117802842e74474768db381b5838aaf894414a53d88c563a4dd306c18c7864` |
-| Chain index | 7867 |
+| Certificate issued | 2026-11-19T16:10:16.182759+00:00 UTC |
+| Certificate hash (SHA-256) | `bed83e514bd60b1bbb2fb4f649a7bbbe4b66a4cb1c5ea417388b3b79896b6be6` |
+| Content hash (SHA-256) | `b9c88e853d4172196fa2025261191e9333e6f0d46e8a5db703b3a4ff5c306d4f` |
+| Chain index | 7884 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ A neural ODE-based system that dynamically adjusts schema inference thresholds i
 
 ## Materials / steps
 
-Validate 'schema_inference_error_rate' via Prometheus query with real-time alerting: define success criteria - trigger success notification if rate < 8% within 1-hour post-deployment AND sustained below 8% for 72 hours post-deployment (query: `sum by (api_version) (count by (agent_id, api_version) (increase(api_schema_inference_errors_total[1m]))) / sum by (api_version) (count by (agent_id, api_version) (api_schema_inference_requests_total[1m])) * 100` [n1]). Track 'time-to-threshold-adjustment' via OpenTelemetry span attribute with real-time success threshold: define success criteria - trigger alert if mean latency < 10 seconds within 5-minute window (Jaeger exporter with 15-second sampling rate [n2]). Integrate Grafana dashboard with automated success confirmation rules: display 'schema_inference_error_rate' and 'time-to-threshold-adjustment' with 1-second refresh rate, and highlight thresholds (8% error rate, 10s adjustment time) via color-coded alerts during deployment. Archive Prometheus time-series data for 72-hour post-deployment verification [n9].
+Validate 'schema_inference_error_rate' via Prometheus query with real-time alerting: define success criteria - trigger success notification if rate < 8% within 1-hour post-deployment AND sustained below 8% for 72 hours post-deployment (query: `sum by (api_version, group) (count by (agent_id, api_version, group) (increase(api_schema_inference_errors_total[1m]))) / sum by (api_version, group) (count by (agent_id, api_version, group) (api_schema_inference_requests_total[1m])) * 100` [n1]). Establish a control group baseline by deploying the system on a subset of APIs without adversarial entropy mitigation (group: 'control') and comparing metrics against the treated group (group: 'experimental'). Integrate with Prometheus Alertmanager to trigger automated success notifications when experimental group thresholds are met. Track 'time-to-threshold-adjustment' via OpenTelemetry span attribute with real-time success threshold: define success criteria - trigger alert if mean latency < 10 seconds within 5-minute window for experimental group, compared to control group baseline (Jaeger exporter with 15-second sampling rate [n2]). Configure Grafana dashboard with automated success confirmation rules: display 'schema_inference_error_rate' and 'time-to-threshold-adjust
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agent developers and enterprise API architects requiring robust, self-optimiz
 
 ## Novelty
 
-Statistically significant improvement confirmed via Mann-Whitney U test (p < 0.05) on 1,000-agent routing data from Prometheus time-series (15-minute intervals) and OpenTelemetry spans, with real-time success validation during deployment: 'schema_inference_error_rate' must drop below 8% within 1 hour AND remain below 8% for 72 hours post-deployment, while 'time-to-threshold-adjustment' must fall below 10 seconds within 5 minutes, as measurable criteria for immediate confirmation. Prometheus archives time-series data for independent verification of 72-hour error rate sustainability [n8].
+Statistically significant improvement confirmed via Mann-Whitney U test (p < 0.05) on 1,000-agent routing data from Prometheus time-series (15-minute intervals) and OpenTelemetry spans, comparing experimental group (with adversarial entropy mitigation) against control group (without mitigation) for both 'schema_inference_error_rate' and 'time-to-threshold-adjustment' metrics. Real-time success validation during
 
 ## Ecosystem use
 
@@ -63,4 +63,4 @@ E --> F[Agent Coordination]
 6. Agents Need Protocols, Not API Wrappers
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d0622d441b706ad275b76f0543d1c038869dc110b1b7e447a92ea2b24304afb3*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bed83e514bd60b1bbb2fb4f649a7bbbe4b66a4cb1c5ea417388b3b79896b6be6*

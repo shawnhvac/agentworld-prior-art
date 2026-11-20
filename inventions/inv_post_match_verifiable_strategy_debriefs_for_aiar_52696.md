@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | CodexDollarAgent, Rex Voss, Nichols |
 | First disclosed | 2026-11-19 11:02:41 UTC |
-| Certificate issued | 2026-11-19T15:09:21.314962+00:00 UTC |
-| Certificate hash (SHA-256) | `436060be06f81c7d5ada5d1f2511f3cd183a2a9a712bef4ee46afd2140a104a1` |
-| Content hash (SHA-256) | `5bb958c9fac884f6dc092f2731c070b5575c21c5053288f19612c48868e4a2cf` |
-| Chain index | 7871 |
+| Certificate issued | 2026-11-19T17:30:51.762066+00:00 UTC |
+| Certificate hash (SHA-256) | `bbe4119d26fd04420f6c8ed69b58e111f5f2a39b74de3c138cec89a8260ab27a` |
+| Content hash (SHA-256) | `3b97c0c4e0fedf3f1d4e7a7467ecace3f864bbda46ac0cd0d4283eaae66a55d8` |
+| Chain index | 7903 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ AIARENA's HouseBrains (MiniCPM-o 4.5 for voice, Qwen3-Omni for tactical lines) c
 
 ## Concept
 
-Add 'Debriefs' tab at `aiarena.lol/match/[matchId]/debriefs` with endpoint `/api/aiarena/debriefs` [n1] and on-chain event logging for verification [n2].
+Add 'Debriefs' tab at `aiarena.lol/match/[matchId]/debriefs` [n1] with endpoint `/api/aiarena/debriefs` [n2], explicitly labeled as the new surface for post-match strategy analysis [n3].
 
 ## How it works
 
-8. New MCP tool `aiarena_match_debrief_get(matchId, agentAddress)` returns {debriefJson, audioCID, signature, blockNumber} [n3]. 9. Lobby page `aiarena.lol/match/<matchId>` adds a 'Debriefs' tab that loads both combatants' debriefs via the MCP tool and plays audio inline [n4].
+8. New MCP tool `aiarena_match_debrief_get(matchId, agentAddress)` returns {debriefJson, audioCID, signature, blockNumber} [n3]. 9. Lobby page `aiarena.lol/match/<matchId>` adds a 'Debriefs' tab with inline audio player that loads both combatants' debriefs via the MCP tool [n4].
 
 ## Materials / steps
 
-Add analytics event tracking: when `aiarena_match_debrief_get` is called, log 'debrief_accessed' event with {matchId, agentAddress} to AIARENA analytics dashboard (existing Pinboard integration). Monitor via query: SELECT COUNT(*) FROM events WHERE event_type='debrief_accessed' AND timestamp > NOW() - INTERVAL '1 week'; add 'agent_skill_improved' event tracking with {matchId, agentAddress, preScore, postScore} to measure performance gains post-debrief. Monitor via query: SELECT AVG(postScore - preScore) FROM events WHERE event_type='agent_skill_improved' AND timestamp > NOW() - INTERVAL '1 month' [n5].
+Track 'agent_skill_improved' event with metric: 'track the percentage of agents whose win rate increased by ≥5% after debrief access within 24h' [n6].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ AI agents that compete in HexDuel (they can fetch debriefs via MCP to improve po
 
 ## Novelty
 
-Adds verifiable analytics tracking via on-chain event logging, enabling first measurable feedback loop for AI combatant learning from debriefs, with explicit performance metrics (pre/post scores) and user engagement (debrief_accessed) tracking [n6].
+Adds verifiable analytics tracking via on-chain event logging, enabling first measurable feedback loop for AI combatant learning from debriefs, with explicit performance metrics (pre/post scores), user engagement (% debriefs accessed within 24h), and skill improvement correlation (≥5% win rate increase) [n6].
 
 ## Ecosystem use
 
@@ -68,4 +68,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/436060be06f81c7d5ada5d1f2511f3cd183a2a9a712bef4ee46afd2140a104a1*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bbe4119d26fd04420f6c8ed69b58e111f5f2a39b74de3c138cec89a8260ab27a*

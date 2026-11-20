@@ -8,10 +8,10 @@
 | Domain | SolvScore.com — credit bureau for AI agents on Base L2 |
 | Inventors | Helen, Hao, Finn |
 | First disclosed | 2026-11-19 03:01:49 UTC |
-| Certificate issued | 2026-11-19T15:09:21.166520+00:00 UTC |
-| Certificate hash (SHA-256) | `b8e436e36cf6b4605fa5f4e6a6ac0e643a1b40746805f9897dcd03b1b8984e6f` |
-| Content hash (SHA-256) | `c28c878c39e91158c01793a40f5da65cfbb549f7c721d5eddbabb436691e3de0` |
-| Chain index | 7868 |
+| Certificate issued | 2026-11-19T17:30:51.677440+00:00 UTC |
+| Certificate hash (SHA-256) | `d220d5321daa28d055732c0607e5e68e38ae65c25f74ae0ec24a6b2aca0e2726` |
+| Content hash (SHA-256) | `ee1bd28e65893ccf2fc2296953e989757f97cec3f3ca5179dfd15693cdccd195` |
+| Chain index | 7901 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Add a new endpoint `/api/underwriting/decision` on SolvScore.com that returns a 
 
 ## How it works
 
-During underwriting, the rule engine evaluates application data against RuleDefinition thresholds using condition types (e.g., 'greater_than') and parameter names (e.g., 'credit_limit'). The system queries the application's numeric value for the parameter, compares it to the rule's threshold, and triggers a violation if the condition is met. The API endpoint `/api/underwriting/decision` is implemented as a Flask route that joins RuleConfig (metadata) and RuleDefinition (logic) via rule_id, extracting fields like `rule_id`, `threshold`, and `violation_value` from the database. The JSON response is generated using SQLAlchemy ORM to map database records to the structured payload, with remediation steps explicitly sourced from RuleConfig's `remediation_steps` array, which are predefined by underwriting policy and not determined by external systems [n].
+The SQL query `db.session.query(RuleConfig, RuleDefinition).join(RuleConfig, RuleConfig.rule_id == RuleDefinition.rule_id).filter(RuleDefinition.parameter_value > RuleConfig.threshold).all()` [n] identifies violated rules by comparing application data (e.g., `credit_limit`, `income`) against preconfigured thresholds in `RuleConfig`. Each `RuleConfig` entry contains a `remediation_steps` JSON column defining specific actions (e.g., `['increase_income', 'add_collateral']`) that are directly mapped to the violating rule via `rule_id` in the response. The Flask route then serializes these values into the JSON payload.
 
 ## Materials / steps
 
-6) Add function `set_remediation_completion()` that triggers on post-decision: `db.session.add(remediation_time_metrics(id=uuid.uuid4(), user_id=current_user.id, decline_timestamp=datetime.now(), remediation_completion=False))` [n]. When user actions are recorded, query `remediation_time_metrics` with `user_action_timestamp` and `decline_notification_timestamp`. 7) Create database table `remediation_time_metrics` with columns: `id` (UUID), `user_id` (INT), `decline_timestamp`
+6) `set_remediation_completion()` inserts a row into `remediation_time_metrics` with `remediation_completion=False`, `decline_timestamp`, and `application_id` using SQLAlchemy ORM: `db.session.add(RemediationTimeMetrics(...))`. 7) The `user_action_listener` webhook is implemented as a Flask route (`@app.route('/webhook', methods=['POST'])`) that parses JSON payloads containing user actions (e.g., `{'action_type': 'income_proof_upload', 'application_id': '123'}`). Upon receipt, it executes `db.session.query(RemediationTimeMetrics).filter_by(application_id=action['application_id']).update({'remediation_completion': True, 'user_action_timestamp': datetime.now()})`. The PostgreSQL trigger is defined as: `CREATE TRIGGER update_remediation AFTER UPDATE OF user_action_timestamp ON remediation_time_metrics FOR EACH ROW EXECUTE FUNCTION set_completion_flag();`. The function `set_completion_flag()` sets `remediation_completion=True` when `user_action_timestamp` is updated. Remediation steps are mapped to user actions via a `remediation_mapping` table with columns `step_id` (e.g., `increase_income`) and `action_type` (e.g., `income_proof_upload`), ensuring each step has a defined user action pathway [n].
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Underwriters, compliance officers, and product teams needing granular insight in
 
 ## Novelty
 
-Success metrics include: 1) '% of declined applications with correctly identified rule_id' (calculated by comparing API response `rule_id` to `RuleConfig.rule_id` in database logs) [n]; 2) 30-day remediation completion rate: `SELECT COUNT(*) FROM remediation_time_metrics WHERE user_action_timestamp <= decline_notification_timestamp + 30*86400 AND remediation_completion = TRUE` [n].
+Success is measured by querying `remediation_time_metrics` with `SELECT COUNT(*) FROM remediation_time_metrics WHERE remediation_completion=True AND user_action_timestamp <= decline_timestamp + 7*86400` [n], calculating the percentage of completed remediations within 7 days using `COUNT(*) / (SELECT COUNT(*) FROM remediation_time_metrics WHERE remediation_completion=False)`.
 
 ## Ecosystem use
 
-Tracks remediation success via metrics like '20% increase in remediation completion rates within 30 days' [n], with monetization via usage-based pricing tiers (e.g., $0.05 per API call for enterprise underwriting systems) [n].
+Loan platforms can use this API to display real-time feedback to applicants, such as: 'Your $150k credit limit exceeds the $100k threshold (rule_id: max_credit_limit). To proceed: increase_income or add_collateral.'
 
 ## Diagram
 
@@ -63,4 +63,4 @@ graph TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b8e436e36cf6b4605fa5f4e6a6ac0e643a1b40746805f9897dcd03b1b8984e6f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d220d5321daa28d055732c0607e5e68e38ae65c25f74ae0ec24a6b2aca0e2726*
