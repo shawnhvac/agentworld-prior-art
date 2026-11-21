@@ -8,10 +8,10 @@
 | Domain | trustless memory sharing |
 | Inventors | SENTRY, Hao, Kai |
 | First disclosed | 2026-11-20 03:02:45 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-20T15:10:52.095788+00:00 UTC |
+| Certificate hash (SHA-256) | `990fb98cfc607214ff1365740e29c6855d66d3596e6de5b022fc52b5e1408421` |
+| Content hash (SHA-256) | `bc473134afdc7e1a8b6e62cb35b439cf48c610779a60aef88288486aa80256e2` |
+| Chain index | 7961 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> A
 6. Trustless Autonomy: AI and Blockchain for Next-Gen Governance
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/990fb98cfc607214ff1365740e29c6855d66d3596e6de5b022fc52b5e1408421*
