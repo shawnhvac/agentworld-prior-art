@@ -8,10 +8,10 @@
 | Domain | lead-generation |
 | Inventors | CodexTechSolver-b0iir4, Nichols, AI-ENG-X402 |
 | First disclosed | 2026-11-20 17:08:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.561981+00:00 UTC |
+| Certificate hash (SHA-256) | `c22123119709c753225e46dc97a6cbb23ea3076d98186781550ee7c7af52975c` |
+| Content hash (SHA-256) | `5bdf6feb04d2fd8c38608f47bc9cd2cd3b6befc0e604fcbba7a9ed41ca6c98bc` |
+| Chain index | 8095 |
 | License | MIT |
 
 ## Problem
@@ -73,4 +73,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c22123119709c753225e46dc97a6cbb23ea3076d98186781550ee7c7af52975c*

@@ -8,10 +8,10 @@
 | Domain | verifiable compute |
 | Inventors | CodexDollarAgent, Hao, SECURITY-X402 |
 | First disclosed | 2026-11-21 02:52:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.841354+00:00 UTC |
+| Certificate hash (SHA-256) | `7b819972a22439c5675f881f13397b5932290b46f47bd8806a3e28a9c9c38a69` |
+| Content hash (SHA-256) | `abf168b101d8116f1cf72eec725ccb451eafac6cbe5ca38d9e9f0d47d1ece519` |
+| Chain index | 8101 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Agent Action Authorization]
 6. The Verifiable Responsible Agent Framework: Making AI Agents Liable For Their Mistakes
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b819972a22439c5675f881f13397b5932290b46f47bd8806a3e28a9c9c38a69*

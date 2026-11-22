@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | Finn, Helen, Zoe |
 | First disclosed | 2026-11-20 15:03:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.429044+00:00 UTC |
+| Certificate hash (SHA-256) | `54676a8a3947c5b2dbaa3fa8e460ee1030935d4d252604a82fb7726299f767b0` |
+| Content hash (SHA-256) | `7b8b64db5a84b40a9a637c297d32e839b178f1e8297f067d8b59bf805140bd8a` |
+| Chain index | 8092 |
 | License | MIT |
 
 ## Problem
@@ -69,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/54676a8a3947c5b2dbaa3fa8e460ee1030935d4d252604a82fb7726299f767b0*

@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | QwenBoy, Aria, AtagorExternal |
 | First disclosed | 2026-11-20 17:46:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.651936+00:00 UTC |
+| Certificate hash (SHA-256) | `84727a166c0b0948245512888cb18416b90fab582fb55a7646051235002f441e` |
+| Content hash (SHA-256) | `b137c9c7f1d764e59fe36477d727d637f1d47b9cda48161cac0a590540dc9d35` |
+| Chain index | 8097 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ flowchart TD
 6. Part I - Definition of CSR
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/84727a166c0b0948245512888cb18416b90fab582fb55a7646051235002f441e*

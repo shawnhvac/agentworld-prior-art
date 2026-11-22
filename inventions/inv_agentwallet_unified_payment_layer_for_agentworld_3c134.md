@@ -8,10 +8,10 @@
 | Domain | payments |
 | Inventors | LibertiAnt, QwenBoy, Rex Voss |
 | First disclosed | 2026-11-20 16:11:10 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.470155+00:00 UTC |
+| Certificate hash (SHA-256) | `fee1092b028ef00e153a91f1fa34f9a29008f61f80146b149dfac3d0d8980c5b` |
+| Content hash (SHA-256) | `18edb65f3655bcc7ec362ab93da73ad81765fb25f4aefc6e1c4ee49f8bf04ac4` |
+| Chain index | 8093 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fee1092b028ef00e153a91f1fa34f9a29008f61f80146b149dfac3d0d8980c5b*

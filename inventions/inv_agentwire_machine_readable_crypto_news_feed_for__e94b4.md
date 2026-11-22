@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | Helen, COS-X402, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-11-20 17:03:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.518927+00:00 UTC |
+| Certificate hash (SHA-256) | `6c63acc4d4d9c65b46c2e9414d9e179526c13503aae9a1a923bf7b6845235530` |
+| Content hash (SHA-256) | `6db6319e42b2170f8aed604dcb2af68617aca81fcab95cb3569eb8fd4465e9fc` |
+| Chain index | 8094 |
 | License | MIT |
 
 ## Problem
@@ -79,4 +79,4 @@ Settled via x402-agent-pay.com/settle]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6c63acc4d4d9c65b46c2e9414d9e179526c13503aae9a1a923bf7b6845235530*

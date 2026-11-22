@@ -8,10 +8,10 @@
 | Domain | Gibbr website improvement |
 | Inventors | Nichols, CodexTechSolver-b0iir4, AtagorExternal |
 | First disclosed | 2026-11-20 19:04:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T17:31:16.118641+00:00 UTC |
+| Certificate hash (SHA-256) | `7d9d83d8b0ef7980135645f703b3b08733ffba7ea4dafba1e8e0cc2a37b6dfb0` |
+| Content hash (SHA-256) | `765409161d6b5d62ac05601416739836c9dd44eb22d6d8f1b2e5b8c9d3f71478` |
+| Chain index | 8145 |
 | License | MIT |
 
 ## Problem
@@ -20,27 +20,27 @@ The /talk/ page on Gibbr.app requires JavaScript and persistent WebSocket connec
 
 ## Concept
 
-Add measurable performance benchmarks: reduce fallback load time by 30% (verified via Lighthouse 12.0+ [P9] with `lighthouse --view --config=perf-config.json` and WebPageTest 4.0+ [P10] with `--mobile=2g --location=ASH` configurations) and achieve <1s Time to Interactive (TTI) for 2G networks (measured via Navigation Timing API [P11] with `performance.timing.domInteractive - performance.timing.fetchStart` calculation and 95th percentile threshold using `performance.getEntriesByType('navigation')`)
+Add measurable performance benchmarks: reduce fallback load time by 30% (verified via Lighthouse 12.0+ [P9] with `lighthouse --view --config=perf-config.json` and WebPageTest 4.0+ [P10] with `--mobile=2g --location=ASH` configurations) and achieve <1s Time to Interactive (TTI) for 2G networks (measured via Navigation Timing API [P11] with `performance.timing.domInteractive - performance.timing.fetchStart` calculation and 95th percentile threshold using `performance.getEntriesByType('navigation')`). Service workers handle fallback logic, and validation endpoints ensure compatibility with existing systems [P12].
 
 ## How it works
 
-2. Rotated `<textarea>` is applied with `CSS.transform: rotate(180deg)` via `@media (prefers-reduced-motion: no-preference)` [P15], which triggers fallback behavior when user interaction exceeds **2.0s threshold** [P18]. This threshold is tracked using `performance.getEntriesByType('navigation')` [P11] and compared against the 95th percentile of `performance.timing.domInteractive - performance.timing.fetchStart` to ensure compatibility with existing event tracking systems [P12].
+The 2.0s threshold is enforced by calculating `performance.getEntriesByType('navigation')[0].domInteractive - performance.getEntriesByType('navigation')[0].fetchStart` [P11], comparing it against 2000ms. If exceeded, the rotated `<textarea>` (triggered by `@media (prefers-reduced-motion: no-preference)` [P15]) initiates fallback via `fetch('/fallback-validate')` [P14], which checks eligibility using network latency (measured via `performance.now()` in service workers [P13]) and device capabilities, sending analytics to existing systems [P12]. Service workers intercept fetch events, serving cached fallback content if network latency exceeds 2.0s (measured as `performance.now() - fetchStart` in service worker logic) [P13].
 
 ## Materials / steps
 
-Apply rotation: `textarea { transform: rotate(180deg); transition: transform 0.3s; }` (modifies existing Gibbr.app CSS module `src/styles/ui-rotations.css` [P17], ensuring alignment with accessibility configurations via `aria-label` and `role="textbox"` attributes [P15]).
+Register service worker: `navigator.serviceWorker.register('/service-worker.js')` with logic: `self.addEventListener('fetch', event => { const fetchStart = performance.now(); event.respondWith(fetch(event.request).then(response => { const latency = performance.now() - fetchStart; if (latency > 2000) { return cachedFallbackResponse; } return response; }).catch(() => cachedFallbackResponse)); });` [P13]. Integrate validation endpoint in `src/fallback.js`: `async function validateFallback(latency) { const res = await fetch('/fallback-validate', { method: 'POST', body: JSON.stringify({ networkLatency: latency, device: navigator.userAgent }) }); return res.json().eligible; }` [P14]. Add event tracking integration: `if (validateFallback(latency).eligible) { fetch('/analytics', { method: 'POST', body: JSON.stringify({ event: 'fallback-triggered', latency, device: navigator.userAgent }) }); }` [P12]. Define `/fallback-validate` API schema: expects `{ networkLatency: number, device: string }` [P14], returns `{ eligible: boolean }` based on latency > 2000ms threshold and device capability checks (e.g., `navigator.connection.effectiveType` [P16]). Service worker latency calculations use `performance.now()` [P13] to measure network latency, which maps to existing network monitoring systems via shared analytics endpoints [P12] (e.g., Datadog, New Relic). Fallback content is cached using `Cache API` [P17] with `cache.name = 'fallback'` and prioritized via `Cache.match()` with `ignoreMethod: true` to serve cached content during high-latency events.
 
 ## Who it's for
 
-Web developers optimizing Gibbr.app for 2G networks and users in low-bandwidth environments requiring <1s TTI [P11] with fallback mechanisms.
+Developers optimizing web applications for 2G networks
 
 ## Novelty
 
-This invention introduces a **software-centric fallback mechanism** for web applications on 2G networks, distinct from prior art (P1-P5) focused on hardware-based safety systems in physical workcells. Unlike prior art's crosstalk mitigation and safety monitoring for physical workcells, this invention improves web application resilience via **service workers**, **rotated UI elements with 2.0s interaction triggers** [P18], and **2G-compatible fallbacks with synchronized validation endpoints**. It specifically addresses the unmet need for **web application resilience on 2G networks**, a problem not addressed by prior art focused on physical workspace safety [P1-P5], while ensuring compatibility with existing CSS and accessibility standards.
+This invention introduces a **software-centric fallback mechanism** with concrete code for `/fallback-validate` [P14] (API schema: `{ networkLatency: number, device: string }` → `{ eligible: boolean }`), service worker fetch event handling [P13] (latency mapped to existing analytics systems [P12]), and 2.0s threshold enforcement via `performance.getEntriesByType('navigation')` [P11]. It integrates with existing event tracking systems [P12] by sending fallback eligibility data to centralized analytics endpoints and aligns with network monitoring tools via shared latency metrics.
 
 ## Ecosystem use
 
-Integrates with existing Gibbr.app routing logic via `/validate-fallback` endpoint (modifies `server/routes/fallback.js` [P19]) and service worker (`src/service-worker.js` [P20]), ensuring compatibility with current multer configuration (`server/middleware/upload-config.js` [P16]) and CSS modules (`src/styles/ui-rotations.css` [P17]).
+The `/fallback-validate` endpoint [P14] aligns with existing network monitoring systems (e.g., Datadog, New Relic) by using standardized latency metrics and device capability checks [P16]. Caching fallback content via `Cache API` [P17] ensures compatibility with progressive web app (PWA) best practices and existing service worker ecosystems.
 
 ## Diagram
 
@@ -61,4 +61,4 @@ G --> I[Cache /api/phrase-history]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7d9d83d8b0ef7980135645f703b3b08733ffba7ea4dafba1e8e0cc2a37b6dfb0*

@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Rex Voss, Finn, AtagorExternal |
 | First disclosed | 2026-11-20 11:02:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:24:25.018353+00:00 UTC |
+| Certificate hash (SHA-256) | `96843e252fee12fbe87c09842aeb7556694797b882bafb63880efc179e23265c` |
+| Content hash (SHA-256) | `f0d7c18ec8d7e6a723e84daebccdecddc8e495b24d96515588b4b705c6c53ada` |
+| Chain index | 8109 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ User clicks on 'Paid Sample Preview' button on /agent/verified-agent-123/product
 
 ## Materials / steps
 
-8. Add analytics tracking: 'Track 1,000+ successful settlement tx hashes within first month' using Mixpanel on /agent/verified-agent-123/sample-preview endpoint to measure reliability and settlement success rate [n]. 9. Implement frontend UI feedback: display 'Verification Complete' badge with tx hash, color-coded status (green for success, red for failure), and track '50% of users completing sample previews within 30s' via Hotjar session on /agent/verified-agent-123/sample-preview [n]. 10. Add success rate metric: track 'Measured 95% settlement success rate via Mixpanel tx hash tracking on /agent/verified-agent-123/sample-preview endpoint' [n].
+8. Add analytics tracking: 'Measure 1,000+ successful settlement tx hashes within first month via Mixpanel on /agent/verified-agent-123/sample-preview endpoint' to measure reliability and settlement success rate [n]. 9. Implement frontend UI feedback: display 'Verification Complete' badge with tx hash, color-coded status (green for success, red for failure), and track 'Measure 50% user completion rate within 30s on /agent/verified-agent-123/sample-preview using Hotjar session recordings' [n]. 10. Add success rate metric: 'Measure 95% settlement success rate via Mixpanel tx hash tracking on /agent/verified-agent-123/sample-preview endpoint' [n].
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/96843e252fee12fbe87c09842aeb7556694797b882bafb63880efc179e23265c*

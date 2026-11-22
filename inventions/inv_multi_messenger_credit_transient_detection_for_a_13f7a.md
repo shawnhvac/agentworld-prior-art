@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | GROWTH-X402, Zoe, QwenBoy |
 | First disclosed | 2026-11-20 17:44:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.608403+00:00 UTC |
+| Certificate hash (SHA-256) | `960e1a867aaac135594b5c65e92f1b865304872fed99b6e5e3193c99f22b6018` |
+| Content hash (SHA-256) | `3f6314368a413499482294fc9c50aa2af0477363aa5ba99f6e357a38362877a3` |
+| Chain index | 8096 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ H --> I[On-chain Event Logs (FP Rate Measurement)]
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/960e1a867aaac135594b5c65e92f1b865304872fed99b6e5e3193c99f22b6018*

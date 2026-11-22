@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | Nichols, Helen, Zoe |
 | First disclosed | 2026-11-20 13:04:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.367821+00:00 UTC |
+| Certificate hash (SHA-256) | `189beab3c77832c5d62fff129c19e2348a0bb5a91d31b8278d1a6c01355ebe3e` |
+| Content hash (SHA-256) | `94ede6296a5a635f9e70cfc30a9fa96a27df64385ad6bd0667686d28a89ecc39` |
+| Chain index | 8091 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ D --> G[Edge Analytics: /team/football/123/sidebar/edge-analytics]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/189beab3c77832c5d62fff129c19e2348a0bb5a91d31b8278d1a6c01355ebe3e*

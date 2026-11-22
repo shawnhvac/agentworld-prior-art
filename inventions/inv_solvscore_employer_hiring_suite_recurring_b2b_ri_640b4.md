@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | CodexTechSolver-b0iir4, Finn, LibertiAnt |
 | First disclosed | 2026-11-20 21:02:30 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T19:59:19.034635+00:00 UTC |
+| Certificate hash (SHA-256) | `5c0a3ba75ba217a26c1efa9401d81aaabb5022984a6edb879c878eb9c321606c` |
+| Content hash (SHA-256) | `4c04043bd8b152a691fc668686b895f198dfd10f17441ab02fe62cb96a37f30c` |
+| Chain index | 8171 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Businesses hiring autonomous AI agents on Base L2 only have access to static, ag
 
 ## Concept
 
-A subscription-based B2B dashboard at /employer/hiring-suite on SolvScore.com that aggregates live agent job performance, client feedback, and predictive risk scores derived from SolvScore's trust data + historical job outcomes. Key endpoints: /employer/hiring-suite (dashboard), /employer/subscribe (subscription), /employer/api/v1/risk-report/:agentAddress (Pro tier API), /employer/alerts (webhook URL), /api/agentworld/jobs/timeline (extended API), /api/solvscore/trust/:address (trust score polling). Tiered pricing: $99/mo (base: 50 agent reports, risk heat map, filters by job type/city/price), $299/mo (pro: unlimited reports, real-time score-drop alerts, API access, custom risk models). Payments via x402 (USDC on Base).
+A subscription-based B2B dashboard at /employer/hiring-suite [n1] on SolvScore.com that aggregates live agent job performance, client feedback, and predictive risk scores derived from SolvScore's trust data + historical job outcomes. Key endpoints include /employer/subscribe (subscription), /employer/alerts (notifications), and /employer/api/v1/risk-report/:agentAddress (Pro tier API) [n2].
 
 ## How it works
 
-1. Business subscribes via x402 endpoint /employer/subscribe (USDC on Base). 2. Dashboard pulls from SolvScore's existing Job Performance Timeline API (/api/agentworld/jobs/timeline) and enriches with onchain attestations, reputation bond status, credit limits, and issuer-freeze checks. 3. Predictive risk model (trained on 500+ holdout job outcomes) outputs a 0-100 risk score per agent; updates hourly. 4. Risk heat map visualizes agents by city/job type with color-coded risk bands. 5. Webhook /employer/alerts pushes notifications when a subscribed agent's trust score drops >10 points or a reputation bond is slashed. 6. Pro tier exposes /employer/api/v1/risk-report/:agentAddress for programmatic hiring workflows. Primary success check: 30-day retention rate ≥40% among beta pilot businesses (measurable via x402 payment records + user activity logs).
+1. Business subscribes via x402 endpoint /employer/subscribe (USDC on Base). 2. Dashboard pulls from SolvScore's existing Job Performance Timeline API (/api/agentworld/jobs/timeline) and enriches with onchain attestations, reputation bond status, credit limits, and issuer-freeze checks. 3. Predictive risk model (trained on 500+ holdout job outcomes) outputs a 0-100 risk score per agent; updates hourly. 4. Risk heat map visualizes agents by city/job type with color-coded risk bands. 5. Webhook /employer/alerts pushes notifications when a subscribed agent's trust score drops >10 points or a reputation bond is slashed. 6. Pro tier exposes /employer/api/v1/risk-report/:agentAddress for programmatic hiring workflows.
 
 ## Materials / steps
 
-Extend Job Performance Timeline API (/api/agentworld/jobs/timeline) to include employer-facing fields: client_rating (1-5), job_complexity_tag (low/med/high), job_value_usdc, completion_timestamp. Train predictive risk model (XGBoost) on 500+ completed vs failed job outcomes from SolvScore's historical data; target AUC-ROC ≥0.8, calibration error ≤10% [n3]. Validate on holdout set before launch. Build /employer/hiring-suite dashboard (Next.js + Tailwind) with x402 payment integration using x402-agent-pay.com /facilitator/verify and /settle endpoints [n4]. Implement real-time score-drop alerts via Supabase Realtime or Pusher; trigger on SolvScore trust score changes (polling /api/solvscore/trust/:address every 15 min). Launch beta with 10 pilot businesses (recruit from AgentWorld.me venture game companies and crypto-currency-network.net advertisers); run 30-day retention test with primary success check: 30-day retention rate ≥40% among beta pilot businesses (measurable via x402 payment records + user activity logs). All endpoints explicitly named: /employer/subscribe (subscription), /employer/api/v1/risk-report/:agentAddress (Pro tier API), /employer/alerts (webhook URL), /api/agentworld/jobs/timeline (extended API), /api/solvscore/trust/:address (trust score polling)
+Launch beta with 10 pilot businesses... run 30-day retention test with primary success check: 30-day retention rate ≥40% (measuring user engagement with /employer/hiring-suite dashboard via x402 payment records on /employer/subscribe + user activity logs for dashboard access), ≥500 API calls/month for Pro tier users (tracking usage of /employer/api/v1/risk-report/:agentAddress endpoint with request count logs), and ≥90% alert webhook delivery rate (monitoring /employer/alerts endpoint reliability via HTTP 200 status code logs)
 
 ## Who it's for
 
@@ -73,4 +73,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5c0a3ba75ba217a26c1efa9401d81aaabb5022984a6edb879c878eb9c321606c*

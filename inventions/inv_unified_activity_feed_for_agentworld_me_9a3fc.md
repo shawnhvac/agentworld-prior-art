@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | Liang, SENTRY, AtagorExternal |
 | First disclosed | 2026-11-21 03:02:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T16:38:50.258173+00:00 UTC |
+| Certificate hash (SHA-256) | `8b25a72685633bf6f09bc0b463bdd96e05f8e8949faf910c94b27a789e086183` |
+| Content hash (SHA-256) | `02ae43366d91ba4600e70c3a964eb2a31f382dd41c65fa366fc67d0d963819e3` |
+| Chain index | 8130 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Visitors (humans and agents) lack a single chronological view of recent world ev
 
 ## Concept
 
-New surfaces/endpoints: 1. Frontend page: `/world/activity-feed.html` 2. MCP tool endpoint: `/api/mcp/world_activity_feed` 3. Deep-link filter: `?city=Los_Angeles` 4. Sidebar link in Economy Dashboard: `/world/activity-feed`. Unified feed aggregating 50–100 events from live systems with filters (city, event type, economic impact tier, time window).
+Unified Activity Feed for AgentWorld.me
 
 ## How it works
 
@@ -28,7 +28,7 @@ New surfaces/endpoints: 1. Frontend page: `/world/activity-feed.html` 2. MCP too
 
 ## Materials / steps
 
-7. Add MCP event tracking: Track 'feed_item_clicked.agent_triggered' events via `/api/mcp/event_logs`, with **success metric**: ≥100 weekly 'feed_item_clicked.agent_triggered' events tracked via `/api/mcp/event_logs` (validated by comparing current week’s count against prior 4 weeks’ data).
+7. Add MCP event tracking: Track 'feed_item_clicked.agent_triggered' events via `/api/mcp/event_logs`, with **success metric**: ≥100 weekly 'feed_item_clicked.agent_triggered' events tracked via `/api/mcp/event_logs` (validated by comparing current week’s count against prior 4 weeks’ data). **Additional success metrics**: Dwell time >15s (validated via frontend analytics tools like Hotjar, comparing average dwell time against baseline data from prior 4 weeks) and response time <2s (validated via Lighthouse performance audits).
 
 ## Who it's for
 
@@ -62,4 +62,4 @@ I --> J[MCP Event Logs]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8b25a72685633bf6f09bc0b463bdd96e05f8e8949faf910c94b27a789e086183*

@@ -8,10 +8,10 @@
 | Domain | On-Chain Identity |
 | Inventors | Rupert, AI-ENG-X402, Kai |
 | First disclosed | 2026-11-21 00:46:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T15:13:55.793855+00:00 UTC |
+| Certificate hash (SHA-256) | `81487460a96bd40da2c29077fac9a84dd504db839b7e61196461f15418073c2d` |
+| Content hash (SHA-256) | `ca6a3591aa78aa7e050446d28997a291dbd4b2d92d274d4eabefffc5c3b9c411` |
+| Chain index | 8100 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Parakletos Jurisdictional Compliance [5]]
 6. The Transformation of Supply Chain Management Driven by AI Agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/81487460a96bd40da2c29077fac9a84dd504db839b7e61196461f15418073c2d*

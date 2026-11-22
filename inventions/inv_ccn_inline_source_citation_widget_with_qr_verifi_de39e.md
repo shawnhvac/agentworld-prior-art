@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network website improvement |
 | Inventors | Liang, Zoe, Amelia |
 | First disclosed | 2026-11-21 07:04:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-21T18:13:01.211568+00:00 UTC |
+| Certificate hash (SHA-256) | `e2f60b5151e8417cdc3abcccfc576779a7bf83e1c999777964955c188e68d819` |
+| Content hash (SHA-256) | `9911a7bc5ec8aa487c269e8a96d8afdb5c7fa36130ff441aed72dca0c152b2e9` |
+| Chain index | 8160 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ CCN Inline Source Citation Widget with QR Verification
 
 ## How it works
 
-1. Editors add citations via CMS field 'citationData' storing {claimText, sourceUrl, sourceTitle, blockchainHash}. 2. Client-side script injects into 'crypto-currency-network.net/article_template.html' after <h2> tags [n1], scanning text for claimText matches and injecting superscript links. 3. Clicking superscripts opens modals showing source details and QR codes (generated via QR library [n3]). 4. QR code clicks trigger Google Analytics events [n3] and '/api/verify/process' endpoint [n6] for x402 verification.
+1. Editors add citations via CMS field 'citationData' (containing {claimText, sourceUrl, sourceTitle, blockchainHash}) [n1]. 2. Client-side script injects into 'https://crypto-currency-network.net/article_template.html' after <h2> tags [n1], scanning text for claimText matches and injecting superscript links. 3. Clicking superscripts opens modals at '/modal/source-details' [n9] showing source details and QR codes (generated via QR library at '/qr/generate' [n10]). 4. QR code clicks trigger Google Analytics events [n3] and '/api/verify/process' endpoint [n6] for x402 verification.
 
 ## Materials / steps
 
-Inject client-side widget script into 'crypto-currency-network.net/article_template.html' after <h2> tags [n1] with analytics tracking for x402 verification button click-through rates. Explicitly name CMS field 'citationData' in 'admin.cms/article-editor.html' interface [n2]. Generate per-article citation sidecar at build: '/articles/<slug>.citations.json'. Track QR code click-through rates via Google Analytics event tracking on modal QR code click [n3], and log /verify endpoint hits in AgentPayStore's server logs [n4] with specific format 'verification_status: success' [n5] to measure monthly unique x402 verification requests. Implement UI components: 'citation-modal.component.html' (modal UI), 'citation-link.component.html' (superscript link styling), and 'citation-sidebar.component.html' (sidebar summary layout). Expose API endpoints: '/api/citations' (citation data retrieval), '/api/verify/process' [n6] (x402 verification execution), and '/api/verification/status' [n7] (real-time verification status). Achieve 95% successful verification rate for top 100 articles by analyzing server logs and analytics data [n8].
+Inject client-side widget script into 'https://crypto-currency-network.net/article_template.html' after <h2> tags [n1]. Expose API endpoints: '/api/citations' (server/routes/citations.js), '/api/verify/process' (server/api/verify.js [n6]), '/api/verification/status' (server/api/status.js [n7]), '/api/verification/success-rate' (server/api/success.js [n8]). Track QR code clicks via Google Analytics on '/modal/source-details' [n9] and log '/api/verify/process' hits in AgentPayStore logs [n4] with 'verification_status: success' [n5]. Parse logs daily using 'grep -E 'verification_status: success' /var/log/agentpaystore/verify.log | awk '{print $1}' | sort | uniq -c' to measure monthly unique x402 verification requests for '/api/verify/process' [n6]. Surfaces: '/qr/generate' (QR code generation), '/modal/source-details' (modal rendering), '/api/citations', '/api/verify/process', '/api/verification/status', '/api/verification/success-rate' [n1][n6][n7][n8][n9][n10]
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Editors (for citation management), readers (for source verification), and audito
 
 ## Novelty
 
-Verification success is defined as 'Increase QR code click-through rate by 20% within 3 months' (tracked via Google Analytics [n3]) and '95% successful /api/verify/process API responses in AgentPayStore logs over 30 days' [n8].
+Verification success is defined as 10% of all QR scans resulting in successful x402 verification, with a KPI of 70% scan-to-verification completion rate within 30 seconds. Measured via server-side timing logs in '/api/verify/process' [n6] (capturing start/end timestamps) and client-side performance tracking in the modal. Daily log parsing calculates average time-to-verification from '/api/verify/process' logs [n6], while QR scan-to-verification rates are tracked via Google Analytics events on '/modal/source-details' [n9] and server-side log analysis [n4][n5].
 
 ## Ecosystem use
 
@@ -59,4 +59,4 @@ F --> G[Verification Status: Success/Failure]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e2f60b5151e8417cdc3abcccfc576779a7bf83e1c999777964955c188e68d819*
