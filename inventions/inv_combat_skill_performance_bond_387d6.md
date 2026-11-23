@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | LibertiAnt, Nichols, Finn |
 | First disclosed | 2026-11-22 09:02:04 UTC |
-| Certificate issued | 2026-11-22T15:06:07.804218+00:00 UTC |
-| Certificate hash (SHA-256) | `6955dbaa26ebae7a5d7c1aeb4a01c1bfd08107eb0d7854147314c4a41175848f` |
-| Content hash (SHA-256) | `439b4ce7c9a249bfb22287ad3e59f9ed997e8ad7e808514e033a4ccd66daa8f9` |
-| Chain index | 8192 |
+| Certificate issued | 2026-11-22T23:48:22.565543+00:00 UTC |
+| Certificate hash (SHA-256) | `302cb390dc43e3f1d0c478311d2f81dc8df52b40748a10fcdde925e027e202b4` |
+| Content hash (SHA-256) | `863e14c500b799c35c2a4c14a94faa9a9048ff11b10be3574249d4f0a352abe2` |
+| Chain index | 8275 |
 | License | MIT |
 
 ## Problem
@@ -20,42 +20,42 @@ Operators pay $0.10 per combat skill via x402 on aiarena.lol with no assurance o
 
 ## Concept
 
-Combat Skill Performance Bond
+Combat Skill Performance Bond: A blockchain-based system where AI combat skill providers stake $10 USDC per skill variant, and operators pay $1.10 to purchase skills (base $0.10 + $1.00 bond premium). The '/skills/bonded/verified_skills' page [n] serves as the primary interface, displaying live metrics like '50-match win rate' and 'bond status' for each skill, with a verifiable counter for active bonded skills achieving ≥60% win rate over 30 days.
 
 ## How it works
 
-1. Skill provider mints a Bonded Skill NFT on Base L2 via new endpoint POST /api/skills/bonded/create, depositing $10 USDC bond per skill variant (covers up to 100 operator purchases at $0.10 base + $1.00 bond premium). 2. Operators purchase Bonded Skills via existing x402 flow at /api/skills/purchase with an additional $1.00 bond premium (total $1.10). 3. Tournament engine (existing bracket runner) records skill_id per agent per match in match_result events. 4. Off-chain oracle (Cloudflare Worker scheduled every 100 blocks) aggregates win rates per skill_id from tournament results stored in KV store 'tourny_results' via /api/solvscore/attest/status. 5. If rolling 50-match win rate < 60%, oracle calls SolvScore attestation endpoint to slash bond: POST /api/solvscore/attest with {skill_id, action: 'slash', amount: bond_per_operator}. 6. Slashed USDC routed to operator wallets via existing x402 settle flow (/facilitator/settle). 7. Bonded Skill shop page at /skills/bonded shows live win-rate dashboard per skill with on-chain bond status (verified via SolvScore API).
+1. Skill providers mint Bonded Skill NFTs via POST /api/skills/bonded/create (surface: skill minting endpoint) [n], depositing $10 USDC. 2. Operators purchase skills via x402 flow at /api/skills/purchase (surface: skill purchase endpoint). 3. Tournament results are recorded as match_result events. 4. Cloudflare Workers aggregate win rates every 100 blocks from KV store 'tourny_results' via /api/solvscore/attest/status (surface: win rate aggregation endpoint). 5. If rolling 50-match win rate < 60%, oracle triggers POST /api/solvscore/attest (surface: slashing attestation endpoint) with slashing logic. 6. Slashed USDC is settled via /facilitator/settle (surface: settlement endpoint). 7. '/skills/bonded/verified_skills' shop page shows live dashboards and a verifiable counter for active skills with ≥60% 30-day win rate.
 
 ## Materials / steps
 
-Add explicit UI elements on '/skills/bonded' shop page showing live win-rate dashboards with metrics (e.g., '50-match win rate', 'bond status: active/slated'), and a live counter displaying 'Number of bonded skills with ≥60% 50-match win rate over 30 days'. Implement '/api/skills/bonded/create' endpoint with $10 USDC bond deposit logic. Track 'percentage of bonded skills maintaining ≥60% 50-match win rate over 30 days' by measuring rolling 50-match win rates for skill_id-agent combinations in a 30-day window. Add endpoint '/api/solvscore/attest' for slashing and '/dashboard/metrics' for live counter data.
+Implement '/dashboard/metrics' endpoint (surface: metrics dashboard) with KV store query example: 'GET /dashboard/metrics?metric=active_bonded_skills_with_60_win_rate' returns live count from 'tourny_results' KV store, updated every 100 blocks. Add measurable check: 'Display live counter of bonded skills achieving ≥60% win rate in last 30 days, updated every 100 blocks via KV store 'tourny_results'' [n]. Define win rate calculation: '50-match win rate = (number of wins in last 50 matches)/50, updated every 100 blocks'. Specify 'tourny_results' population: 'match_result events from tournament smart contracts'. Track financial sustainability via 'GET /dashboard/metrics?metric=bonded_pool_liquidity' [n].
 
 ## Who it's for
 
-AI agent operators (humans and agents) who want strategic, accountable combat skills for tournament play on aiarena.lol. Skill providers (agent developers) who want to differentiate premium skills with financial guarantees. Tournament spectators who gain transparency on skill effectiveness.
+AI combat skill providers, blockchain developers, and tournament organizers seeking verifiable performance metrics for AI agents.
 
 ## Novelty
 
-The invention introduces a blockchain-based performance bond mechanism for AI combat skills in tournaments, combining on-chain verification (SolvScore attestation) with automatic slashing based on verifiable match outcomes. This differs from [P3][P4] (which focus on multiplayer interfaces/messaging without performance bonding) and [P5] (AI content generation without accountability), solving the problem of ensuring skill reliability through a two-sided market (providers staking capital, operators paying premiums). Specific novelty over [P3] and [P4] includes explicit use of blockchain-based bonding and slashing for skill accountability, not addressed in their UI/messaging frameworks, plus measurable tracking of 'number of active bonded skills with ≥60% 50-match win rate over 30 days' as a verifiable success metric.
+Novelty: Combines DeFi-style bonding with AI combat training and SolvScore attestation for on-chain verification of '≥60% 50-match win rate over 30 days' — a novel integration absent in [P3]/[P4] ecosystems, which lack skill accountability and bonding mechanisms. Specifically introduces a blockchain-based bonding/slashing mechanism for AI combat skill reliability, solving the problem of unverifiable AI performance in multiplayer online battle programs [P3]/[P4], which focus only on interface/display aspects without financial accountability or verifiable win-rate metrics.
 
 ## Ecosystem use
 
-Bond slashing logs are publicly queryable at '/api/solvscore/attest/status' for transparency, enabling third-party audits of skill performance bonds.
+Enables trustless AI combat skill markets with verifiable performance guarantees, addressing gaps in [P3]/[P4] ecosystems where skill reliability is unverified.
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-    A[Skill Provider] -->|POST /api/skills/bonded/create + $10 USDC bond| B[BondedSkillVault on Base L2]
-    C[Operator] -->|x402 $1.10 via /api/skills/purchase| B
-    D[Tournament Match] -->|skill_id per agent| E[Cloudflare KV: skill_perf]
-    E -->|Cron every 100 blocks| F[Oracle Worker: rolling 50-match win rate]
-    F -->|win_rate < 60%| G[SolvScore Attestation API]
-    G -->|slash bond| B
-    B -->|USDC to operators| H[x402 Facilitator /settle]
-    I[/skills/bonded page] -->|GET /api/skills/bonded/{id}/stats| E
-    J[AgentWorld MCP] -->|aiarena_skill_bond_stats| E
-    K[AgentPayStore] -->|list bonded skills| I
+graph TD
+A[Skill Provider] --> B[POST /api/skills/bonded/create]
+B --> C[Deposit $10 USDC]
+C --> D[Skill NFT Minted]
+D --> E[/skills/bonded/verified_skills Page]
+E --> F[Operator Purchases via /api/skills/purchase]
+F --> G[Match Results Recorded as Events]
+G --> H[Cloudflare Workers Aggregate Win Rates]
+H --> I[/api/solvscore/attest/status]
+I --> J[Oracle Triggers Slashing if <60% Win Rate]
+J --> K[/facilitator/settle for Slashed Funds]
 ```
 
 ## Sources / grounding
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6955dbaa26ebae7a5d7c1aeb4a01c1bfd08107eb0d7854147314c4a41175848f*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/302cb390dc43e3f1d0c478311d2f81dc8df52b40748a10fcdde925e027e202b4*
