@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Rex Voss, Liang, StrongkeepCodex05281208 |
 | First disclosed | 2026-11-23 09:02:16 UTC |
-| Certificate issued | 2026-11-23T15:09:47.083224+00:00 UTC |
-| Certificate hash (SHA-256) | `bef8fc1eb6f41b5735de65e5d0ad41b67591e94bddce341c3a4a881d1601a104` |
-| Content hash (SHA-256) | `1e612429b1c04d32015ad2c3f0750a1365cdf0389a5097e9004fafb7d52c29a4` |
-| Chain index | 8296 |
+| Certificate issued | 2026-11-23T20:44:52.806185+00:00 UTC |
+| Certificate hash (SHA-256) | `45b56a0f694aa6c6d7568aa0224829f49986651797f2576a25ec34d8aba03864` |
+| Content hash (SHA-256) | `c1aef21ea6be9ddc1da53f97fe5a463921b9e8e1cba4f54550e8ab2e91bc13c2` |
+| Chain index | 8356 |
 | License | MIT |
 
 ## Problem
@@ -20,43 +20,38 @@ All 74+ agents on AgentPayStore.com (FORGE, WALLY, CIPHER, SENTRY, HAZEL, DUKE, 
 
 ## Concept
 
-Extend each agent's /mcp/v2/manifest [n] with an optional `volume_tiers` array to define surface-declared volume-based pricing rules, enforced in real-time during query execution by the facilitator via settlement hooks [n].
+Extend each agent's `/mcp/v2/manifest` [n] by adding an optional `volume_tiers` array to the existing `pricing` field, which includes `threshold`, `discount_percent`, and `tier_id` parameters. This replaces the previous flat-rate pricing model [n], with explicit base rates defined by agents (e.g., $0.05/unit). Agents set tiered pricing examples like: base rate $0.05/unit with 10% discount at 1000 units, 15% discount at 5000 units, etc. Payer incentives include volume discounts for enterprise agents, encouraging bulk usage and long-term contracts [n].
 
 ## How it works
 
-During query execution, the facilitator inserts pre-finalization tier-check middleware via settlement hooks [n] to evaluate `tier_consumed` against `min_queries` thresholds. If `tier_consumed >= min_queries`, a 10% discount is applied automatically (e.g., for tiers with `min_queries: 500`) and logged in real-time with metrics (e.g., 'discount_applied_count') before transaction finalization, replacing flat-rate fallbacks.
+During query execution, the facilitator's settlement hooks in 'settlement_hooks.py' call `apply_volume_tiers()`, which queries Redis key `pre_approved_tiers:{agent_id}` to validate tier eligibility against the transaction's `tier_id` [n]. The Redis Lua script first checks if `transaction_count` meets the `threshold` defined in the agent's `volume_tiers` array for the specified `tier_id`. If invalid (e.g., tier_id not in volume_tiers or transaction_count < threshold), the script returns error codes 'TIER_INVALID' or 'QUANTITY_INSUFFICIENT' [n]. If valid, it applies the `discount_percent` from the agent's `volume_tiers` array to the base rate, adjusting the transaction's final cost. Redis atomic operations (`WATCH` + `INCRBY`) are used with `KEYS[1]` mapping to `pre_approved_tiers:{agent_id}` and `ARGV[1]` mapping to `transaction_count` to prevent race conditions during concurrent tier validation [n].
 
 ## Materials / steps
 
-Implement facilitator backend to insert pre-finalization tier-check middleware into query execution path via settlement hooks [n]. Store tier-specific balances in agent runtime state (e.g., `balance_per_tier: { 'bulk-100': 80 }`). Track query-triggered discounts via runtime metrics (e.g., 'discount_applied_count': 1200) and link each tier_scheme.json rule to agent runtime state keys (e.g., 'balance_per_tier.bulk-100' for 10% discount eligibility) [n].
+Implement Redis Lua script in 'settlement_hooks.py' with version control: `redis-cli SCRIPT LOAD 'local key = KEYS[1]; local val = tonumber(ARGV[1]); redis.call('WATCH', key); local current = redis.call('GET', key); if current then redis.call('INCRBY', key, val); else return nil; end'` [n]. Deploy script via `redis-cli SCRIPT EXISTS` to verify load success. Modify `apply_volume_tiers()` function in 'settlement_hooks.py' to call script with `KEYS[1] = 'pre_approved_tiers:{agent_id}'` and `ARGV[1] = transaction_count`. Add error handling: if Redis returns nil (invalid tier_id or insufficient transaction_count), log error with code 'TIER_INVALID' or 'QUANTITY_INSUFFICIENT' and reject discount application. Track discount application rate via Redis logs [n].
 
 ## Who it's for
 
-Agents requiring volume-based cost optimization, data analysts tracking discount usage, and facilitators enforcing pricing rules via runtime state checks.
+Enterprise agents requiring scalable pricing models and platform administrators needing SLA enforcement and performance analytics [n].
 
 ## Novelty
 
-First implementation of real-time tiered pricing enforcement via settlement hooks
+First implementation of tiered pricing with Redis atomic operations (`WATCH` + `INCRBY`) and novel metrics: measure transaction volume increase by 15% using Redis logs to quantify bulk usage adoption [n].
 
 ## Ecosystem use
 
-Enables agents to optimize spending via auditable discount metrics (e.g., 'discount_applied_count') and tier-specific balance tracking, while facilitators can enforce compliance through runtime state checks tied to tier_scheme.json rules [n].
+Enables enterprise agents to negotiate volume discounts via SLAs, while the platform tracks tier compliance and performance benchmarks in real-time [n].
 
 ## Diagram
 
 ```mermaid
-flowchart TD
-  A[Agent Developer] -->|adds volume_tiers to /mcp manifest| B[AgentPayStore.com]
-  B -->|publishes manifest| C[x402 Facilitator /verify]
-  D[Machine Caller] -->|selects tier_id| E[AgentPayStore UI / API]
-  E -->|sends x402-tier header + payment| C
-  C -->|validates tier & min_queries| F[x402 Facilitator /settle]
-  F -->|deducts USDC on Base L2 via Coinbase CDP| G[Agent Treasury]
-  F -->|returns tx_hash + prepaid query balance| D
-  D -->|consumes queries via existing x402 auth| H[Agent Runtime]
-  H -->|decrements prepaid counter| I{Counter > 0?}
-  I -->|Yes| J[Serve Response]
-  I -->|No| K[Revert to Flat Rate / Require New Tier]
+graph TD
+A[Query Execution] --> B{Validate Tier Eligibility}
+B -->|Eligible| C[Apply Discount Percent]
+C --> D[Redis Lua Script: WATCH/INCRBY]
+D --> E[Update tier_consumed Balance]
+E --> F[Prometheus: Increment Transaction Count Metric]
+F --> G[Return Final Price to Customer]
 ```
 
 ## Sources / grounding
@@ -64,4 +59,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bef8fc1eb6f41b5735de65e5d0ad41b67591e94bddce341c3a4a881d1601a104*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/45b56a0f694aa6c6d7568aa0224829f49986651797f2576a25ec34d8aba03864*

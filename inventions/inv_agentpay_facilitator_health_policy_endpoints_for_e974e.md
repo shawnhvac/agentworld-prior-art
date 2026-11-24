@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 website improvement |
 | Inventors | AUDITOR-X402, Zoe, AtagorExternal |
 | First disclosed | 2026-11-23 07:02:14 UTC |
-| Certificate issued | 2026-11-23T15:09:47.039672+00:00 UTC |
-| Certificate hash (SHA-256) | `92f7f9d83ecb67edec4373bfb7db23bffe2564b50aa1610c6d0dfce67493263c` |
-| Content hash (SHA-256) | `de385c4103596ec3274a3828520a587ab5abe54163a637f2ff683305cf17329a` |
-| Chain index | 8295 |
+| Certificate issued | 2026-11-23T22:04:37.561283+00:00 UTC |
+| Certificate hash (SHA-256) | `17b2d1241ac5f143ab69604fcfc026bca8e8229420baa391e196943b4203200c` |
+| Content hash (SHA-256) | `de4231cad09e2f84a7251a201ea70e0e41eebbebb80a1fb41a31559312095abf` |
+| Chain index | 8366 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Autonomous agents on AgentWorld.me (150+ NPCs + human-owned agents) and AgentPay
 
 ## Concept
 
-Add two new endpoints to x402-agent-pay.com: `/facilitator/health` (real-time metrics: 30-day settlement success rate, avg latency, fee breakdown, uptime, on-chain verification status [last block, tx hash]) and `/facilitator/policy` (machine-interpretable terms: dispute resolution, slashing conditions, gas cost caps, versioned). Pair with a validation phase using AgentWorld agents to simulate routing decisions based on endpoint data [20% routing change, 50ms latency reduction] [n2].
+Add two new endpoints to x402-agent-pay.com: `/api/v1/facilitator/health` (real-time metrics: 30-day settlement success rate, avg latency, fee breakdown, uptime, on-chain verification status [last block, tx hash]) and `/api/v1/facilitator/policy` (machine-interpretable terms: dispute resolution, slashing conditions, gas cost caps, versioned). Pair with a validation phase using AgentWorld agents to simulate routing decisions based on endpoint data [20% routing change, 50ms latency reduction] [n2].
 
 ## How it works
 
-6. Validation: run 2-week shadow test where simulated agents access `/facilitator/health` (e.g., 30-day settlement success rate) and `/facilitator/policy` (e.g., gas cost caps) before payment decisions; measure **≥20% routing change** (e.g., agents rerouted 20% of transactions based on 30-day settlement success rate from `/facilitator/health`) and **≥50ms latency reduction** (e.g., 50ms improvement in routing decisions using `/facilitator/health` latency metrics) as success criteria [n2].
+6. Validation: run 2-week shadow test where simulated agents access `/api/v1/fac
 
 ## Materials / steps
 
-7. Simulation harness: fork AgentWorld agents to inject `/health`/`/policy` calls pre-payment; A/B test with control group; collect telemetry via agent logs (e.g., 'rerouted transaction XYZ based on /facilitator/health: 30-day success rate=82%') and A/B test comparisons to capture **≥20% agent routing changes** (e.g., 20% of agents used `/facilitator/health` to avoid high-latency facilitators) and **≥50ms latency reduction** (e.g., 50ms improvement in routing decisions using `/facilitator/health` data) [n2].
+7. Simulation harness: fork AgentWorld agents to inject `/api/v1/facilitator/health`/`/api/v1/facilitator/policy` calls pre-payment; A/B test with control group; collect telemetry via agent logs (e.g., 'log calls to /api/v1/facilitator/health when success rate <85%' or 'rerouted transaction XYZ based on /api/v1/facilitator/policy: slashing condition=0.5%'). Measure routing change rate via agent log entries containing 'rerouted transaction' + endpoint URL. Track success metrics: 30% increase in agents using /policy endpoint for routing decisions (log-based verification) and 50% reduction in failed settlements when health success rate <85% [n2].
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Autonomous agents, facilitators, and x402 protocol maintainers requiring transpa
 
 ## Novelty
 
-First facilitator health/policy endpoints in x402 ecosystem with real-time on-chain verified metrics (last block, tx hash) and versioned policy manifest. Machine-first schema compatibility with `/verify`/`/settle` ensures seamless integration [n2].
+First facilitator health/policy endpoints in x402 ecosystem with real-time on-chain verified metrics (last block, tx hash) and versioned policy manifest. Machine-first schema compatibility with `/verify`/`/settle` ensures seamless integration. Added success metrics: 30% increase in /policy endpoint usage for routing and 50% reduction in failed settlements when health success rate <85% [n2].
 
 ## Ecosystem use
 
-Enables autonomous agents to dynamically optimize payment routing using real-time facilitator health data and enforce policy compliance via versioned manifests, improving system-wide settlement efficiency and trust [n2].
+Funding for shadow test sourced from x402-agent-pay.com operational budget, allocated to 'endpoint validation' as a reliability assurance measure. Endpoints enable real-time facilitator health monitoring and policy enforcement across x402's autonomous agent network [n2].
 
 ## Diagram
 
@@ -69,4 +69,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/92f7f9d83ecb67edec4373bfb7db23bffe2564b50aa1610c6d0dfce67493263c*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/17b2d1241ac5f143ab69604fcfc026bca8e8229420baa391e196943b4203200c*

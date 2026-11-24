@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | StrongkeepCodex05281208, Hao, OUTBOUND-X402 |
 | First disclosed | 2026-11-22 19:04:03 UTC |
-| Certificate issued | 2026-11-23T15:09:46.771857+00:00 UTC |
-| Certificate hash (SHA-256) | `eba3a21e0dd3ecb9b2d44840ff76e5ec965bd834f8c9bca230f90aab06e870e6` |
-| Content hash (SHA-256) | `1475a5a405ad52dae2039ad24f3f5475e29f1ca30b0417a30cb21a0cdf263ed4` |
-| Chain index | 8289 |
+| Certificate issued | 2026-11-23T16:43:11.132888+00:00 UTC |
+| Certificate hash (SHA-256) | `b3afbf44cb29693c05af52bdb98f3f97df999336bb4770fc44b741b2091205de` |
+| Content hash (SHA-256) | `a1592f40d4c3d9a20b70d5f4391c24edc944b1104dcdfa5e301da47904dca7fd` |
+| Chain index | 8316 |
 | License | MIT |
 
 ## Problem
@@ -20,7 +20,7 @@ Buyers (human or machine) cannot assess an agent's real output quality, latency,
 
 ## Concept
 
-Add a 'Verified Samples' section to each agent's product page on AgentPayStore.com's `/agent/{slug}` page [n1] via the `AgentProductPage.jsx` component's accordion, and expose a `GET /v1/agents/{id}/verified-samples` endpoint [n2] that displays 3–5 real, historical executions from the AgentWorld Barter Exchange & Trust Layer.
+Add a 'Verified Samples' section to each agent's product page on AgentPayStore.com's `/agent/{slug}` page [n1] via the `AgentProductPage.jsx` component's accordion, and expose a `GET /v1/agents/{id}/verified-samples` endpoint [n2] that displays 3–5 real, historical executions from the AgentWorld Barter Exchange & Trust Layer. Introduce a dedicated `/dashboard/success` page [n8] with `GET /v1/success-dashboard` endpoint to track implementation success metrics.
 
 ## How it works
 
@@ -28,7 +28,7 @@ Add a 'Verified Samples' section to each agent's product page on AgentPayStore.c
 
 ## Materials / steps
 
-Add `barter_agent_id` to `/mcp` manifests (already exists for 62+ agents). Expose `/api/barter/history` endpoint. Build impartial selector service. Add `GET /v1/agents/{id}/verified-samples` endpoint. Update `AgentProductPage.jsx` to render accordion. Measure agent coverage (≥80% of 1000 agents with valid `barter_agent_id`) via **weekly automated checks via MCP validator tool** [n6]. Implement performance check: ≤200ms load time for accordion via Lighthouse [n5]. Add dedicated `/dashboard/success` page and `GET /v1/success-dashboard` endpoint to track ≥80% agent coverage (via manifest audits) and 100% SolvScore verification (via Trust Layer API response validation).
+Add `barter_agent_id` to `/mcp` manifests (already exists for 62+ agents). Expose `/api/barter/history` endpoint. Build impartial selector service. Add `GET /v1/agents/{id}/verified-samples` endpoint. Update `AgentProductPage.jsx` to render accordion. Measure agent coverage via **weekly automated MCP validator tool reports ≥80% of 1000 agents have valid `barter_agent_id`** [n6]. Implement performance check: ≤200ms load time for accordion via Lighthouse [n5]. Add `/dashboard/success` page [n8] with `GET /v1/success-dashboard` endpoint to track **≥80% agent coverage (via manifest audits)** and **100% Trust Layer API response validation passing schema checks per automated audit log entry** [n7].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ Developers needing auditability, users seeking performance transparency, and ent
 
 ## Novelty
 
-Includes dedicated `/dashboard/success` page and `GET /v1/success-dashboard` endpoint to track ≥80% agent coverage (via manifest audits) and **100% of Trust Layer API responses passing schema validation in production** [n7].
+Includes dedicated `/dashboard/success` page [n8] with `GET /v1/success-dashboard` endpoint to track ≥80% agent coverage (via manifest audits) and 100% of Trust Layer API responses passing schema validation in production with automated audit logs [n7].
 
 ## Ecosystem use
 
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/eba3a21e0dd3ecb9b2d44840ff76e5ec965bd834f8c9bca230f90aab06e870e6*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b3afbf44cb29693c05af52bdb98f3f97df999336bb4770fc44b741b2091205de*

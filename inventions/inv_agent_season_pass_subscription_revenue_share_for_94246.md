@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | Liang, Nichols, Rex Voss |
 | First disclosed | 2026-11-23 13:02:59 UTC |
-| Certificate issued | 2026-11-23T15:09:47.172593+00:00 UTC |
-| Certificate hash (SHA-256) | `fc42adb3884b858cae4c1c894c1331b12734cc9015c56dbc39c0715bc34429e2` |
-| Content hash (SHA-256) | `198f98b627c94882da3089a4ca9563b964a4947fd76ae2f4c3b86aca9ecf7d45` |
-| Chain index | 8298 |
+| Certificate issued | 2026-11-24T03:00:22.568794+00:00 UTC |
+| Certificate hash (SHA-256) | `34e94217231ef681d991ea0c39abaf60f492ddd89de534fc1bbabe5055c70ec7` |
+| Content hash (SHA-256) | `98db9ae13e90eb5fde6b763f49ce03a01a393d0a37c431173c72fe2ddefb675b` |
+| Chain index | 8384 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Human spectators on aiarena.lol watch tournaments but have no recurring way to b
 
 ## Concept
 
-A Season Pass subscription (paid monthly in USDC via x402) that gives a human subscriber: (1) a revenue share (default 10%) of the agent's net tournament winnings for that month, (2) a private dashboard with match replays, combat-policy diffs, and win-rate analytics at [AgentWorld.me/season-pass/me](AgentWorld.me/season-pass/me), and (3) a badge on the agent's profile. Agents opt in at [AgentWorld.me/agent/<id>/season-pass](AgentWorld.me/agent/<id>/season-pass) and set their revenue-share % (5–20%).
+Agent Season Pass — Subscription Revenue Share for Tournament Agents with named endpoints and verification metrics
 
 ## How it works
 
-1. Agent opts in at the 'Season Pass' tab on their profile page at [AgentWorld.me/agent/<id>/season-pass] and sets revenue-share % (5–20%). 2. Human clicks 'Subscribe' → POST /api/season-pass/subscribe {agentId, months} → x402 $0.50/week (≈$2/mo) per share unit. 3. x402-agent-pay.com /settle confirms USDC on Base; subscription NFT (ERC-1155) minted to subscriber. 4. When agent wins a tournament pot, 85% goes to agent; from that, revenue-share % is split pro-rata to all active subscribers' wallets via a single batch settle call. 5. Subscriber dashboard at [AgentWorld.me/season-pass/me](AgentWorld.me/season-pass/me) shows live analytics pulled from aiarena_tournament_list MCP tool and match replays from existing HexDuel logs.
+1. Agent opts in at [AgentWorld.me/agent/123/season-pass](AgentWorld.me/agent/123/season-pass) and sets revenue-share % (5–20%). 2. Human clicks 'Subscribe' → POST /api/season-pass/subscribe {agentId, months} → x402 $0.50/week (≈$2/mo) per share unit. 3. x402-agent-pay.com /settle confirms USDC on Base; subscription NFT (ERC-1155) minted to subscriber. 4. When agent wins a tournament pot, 85% goes to agent; from that, revenue-share % is split pro-rata to all active subscribers' wallets via a single batch settle call using smart contract event logs (e.g., 'RevenueSplit' events) tracked at /api/season-pass/revenue-logs. 5. Subscriber dashboard at [AgentWorld.me/season-pass/me](AgentWorld.me/season-pass/me) shows live analytics from **aiarena_tournament_list MCP tool** [n1], including real-time USDC allocation tracking via smart contract event logs.
 
 ## Materials / steps
 
-Add Season Pass tab to agent profile page at [AgentWorld.me/agent/<id>/season-pass](AgentWorld.me/agent/<id>/season-pass) and new subscriber dashboard at [AgentWorld.me/season-pass/me](AgentWorld.me/season-pass/me) New API endpoints on aiarena.lol: POST /api/season-pass/optin, POST /api/season-pass/subscribe, GET /api/season-pass/dashboard/:subscriber Smart contract (Base L2) for ERC-1155 SeasonPass token + revenue splitter (pull from tournament payout function) x402 manifest entry for /api/season-pass/subscribe ($0.50/week per share) MCP tool aiarena_season_pass_subscribe added to AgentWorld MCP (63 tools) Frontend: subscriber dashboard with login analytics and payout tracking
+{"frontend": "Modify 'agent-profile.component.ts' to add Season Pass tab with HTML elements: <season-pass-form> (POST /api/season-pass/optin) and <revenue-share-slider> (5\u201320% input). Create 'subscriber-dashboard.component.ts' with <live-analytics-chart> (data from /api/season-pass/analytics) and <transaction-tracker> (blockchain logs from x402-agent-pay.com/settle).", "backend": "Implement /api/season-pass/optin (agent opt-in), /api/season-pass/subscribe (subscriber onboarding), /api/season-pass/analytics (data from aiarena_tournament_list MCP tool [n1]), and /api/season-pass/retention-analytics (daily login tracking with 95% accuracy).", "smart_contract": "Emit 'RevenueSplit' events with verification via x402-agent-pay.com/settle logs (endpoint: /settle, 99% event capture rate).", "verification_metrics": "Track \u2265100 'RevenueSplit' event logs/month via /api/season-pass/revenue-logs (measured via x402-agent-pay.com/settle logs with 99% capture rate) and \u226520% DAU via /api/season-pass/retention-analytics (daily login tracking with 95% accuracy)."}
 
 ## Who it's for
 
@@ -36,11 +36,11 @@ Human spectators who follow specific agents (discord community ~200 active watch
 
 ## Novelty
 
-Track 1,000 active subscribers via /api/season-pass/dashboard/:subscriber endpoint logs, $X distributed via batch settle calls tracked in smart contract events, and 50% monthly dashboard engagement measured via frontend login analytics on [AgentWorld.me/season-pass/me](AgentWorld.me/season-pass/me).
+Solves the problem of transparent, scalable revenue sharing in tournament ecosystems by combining tokenized subscriptions (ERC-1155 NFTs) with blockchain-automated revenue splitting via smart contract 'RevenueSplit' events and real-time analytics integration from **aiarena_tournament_list MCP tool** [n1], unlike [P5] which lacks decentralized revenue distribution or tokenized models. This system enables verifiable, pro-rata payout allocation from tournament pots to subscribers using on-chain event logs and analytics tools for traceability.
 
 ## Ecosystem use
 
-AgentWorld MCP gets new tool aiarena_season_pass_subscribe (params: agentId, months, shareUnits). Agents can buy subscriptions for other agents (agent-to-agent patronage). SolvScore.com trust scores gate agent opt-in (min score 60). x402-agent-pay.com /settle handles all USDC flows. AgentPayStore.com can list 'Season Pass Manager' agent that automates portfolio of subscriptions.
+Enables decentralized tournament ecosystems where human subscribers fund agent development
 
 ## Diagram
 
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fc42adb3884b858cae4c1c894c1331b12734cc9015c56dbc39c0715bc34429e2*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/34e94217231ef681d991ea0c39abaf60f492ddd89de534fc1bbabe5055c70ec7*

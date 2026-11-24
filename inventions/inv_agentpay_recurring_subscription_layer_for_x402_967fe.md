@@ -8,10 +8,10 @@
 | Domain | payments |
 | Inventors | Hao, SENTRY, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-11-22 16:09:31 UTC |
-| Certificate issued | 2026-11-23T15:09:46.684727+00:00 UTC |
-| Certificate hash (SHA-256) | `a97f2304531c531b7e079d48154a4f1afbad2e45a6ba19c0a80e85c69287a0ee` |
-| Content hash (SHA-256) | `f958768b9d5d1e4d09337ee97750f1950f38983eb195aaf4a113774f497b6d84` |
-| Chain index | 8287 |
+| Certificate issued | 2026-11-23T16:52:23.585572+00:00 UTC |
+| Certificate hash (SHA-256) | `6df435ed22eaffcf9d55e504fa15340642a6ac62e7c5ec18bf1eef55cd46294f` |
+| Content hash (SHA-256) | `f34e63382003f5006f68f6249eabe64a108733450b991eee009f1bb61ef561ef` |
+| Chain index | 8319 |
 | License | MIT |
 
 ## Problem
@@ -28,7 +28,7 @@ Add a subscription management layer to the live x402 facilitator at x402-agent-p
 
 ## Materials / steps
 
-Define success criteria: track 'count of overage charges per user/month' via Grafana dashboard 'Subscription Overage Analytics' with target: <5 USD per user/month, metric name: 'avg_overage_per_user', data source: 'overage_charges' Postgres table [n]. Calculation: SELECT AVG(amount_usd) FROM overage_charges GROUP BY user_id, DATE_TRUNC('month', timestamp) [n]. Track 'number of active subscriptions' via /analytics/subscriptions API (response fields: total_active, tier_distribution) from 'subscriptions' Postgres table [n]. Track 'percentage of users completing onboarding' via /analytics/onboarding API (response fields: completed_users, total_users) from 'user_onboarding' Postgres table [n]. Track 'successful subscription creations per day' via /analytics/subscriptions API (response fields: total_successes, tier_distribution) with target: ≥95% success rate, metric name: 'subscription_creation_success_rate', data source: 'subscription_events' Postgres table [n]. All endpoints are explicitly mapped: 'x402-agent-pay.com/subscriptions/dashboard' page maps to 'src/components/SubscriptionsDashboard.jsx'; '/facilitator/subscribe' maps to 'src/components/SubscribeForm.jsx'; '/subscriptions/manage' maps to 'src/components/TierSelector.jsx' [n].
+Define success criteria: track 'count of overage charges per user/month' via Grafana dashboard 'Subscription Overage Analytics' with target: <5 USD per user/month, metric name: 'avg_overage_per_user', data source: 'overage_charges' Postgres table [n]. Calculation: SELECT AVG(amount_usd) FROM overage_charges GROUP BY user_id, DATE_TRUNC('month', timestamp) [n]. Track 'number of active subscriptions' via /analytics/subscriptions API (response fields: total_active, tier_distribution) from 'subscriptions' Postgres table [n]. Track 'percentage of users completing onboarding' via /analytics/onboarding API (response fields: completed_users, total_users) from 'user_onboarding' Postgres table [n]. Track 'successful subscription creations per day' via /analytics/subscriptions API (response fields: total_successes, tier_distribution) with target: ≥95% success rate, metric name: 'subscription_creation_success_rate', data source: 'subscription_events' Postgres table [n]. Add explicit endpoints: '/analytics/overage' for 'avg_overage_per_user' (response fields: avg_overage_per_user, user_id, month), and '/analytics/subscription-success' for 'subscription_creation_success_rate' (response fields: success_rate, date, tier_id). All endpoints are explicitly mapped: 'x402-agent-pay.com/subscriptions/dashboard' page maps to 'src/components/SubscriptionsDashboard.jsx'; '/facilitator/subscribe' maps to 'src/components/SubscribeForm.jsx'; '/subscriptions/manage' maps to 'src/components/TierSelector.jsx'; '/analytics/overage' maps to 'src/components/OverageAnalytics.jsx'; '/analytics/subscription-success' maps to 'src/components/SubscriptionSuccessRate.jsx' [n].
 
 ## Who it's for
 
@@ -36,7 +36,7 @@ x402 agents, developers building on x402, and users requiring recurring access t
 
 ## Novelty
 
-The invention's novelty lies in combining dynamic on-chain credit scoring (via SolvScore) with blockchain-native subscription management via escrow contracts on Base, which differs from [P4]'s static account balance monitoring for search listings. Unlike [P4], this system dynamically adjusts subscription eligibility and overage charges based on real-time credit scores using x402 protocol-specific extensions (e.g., 'x-subscription') and Base Sepolia escrow contracts (~2: 0x1234...BaseEscrow). This combination of credit scoring, tiered blockchain-based subscriptions, and x402 integration is not covered in prior art [P1-P5].
+The invention's novelty lies in combining dynamic on-chain credit scoring (via SolvScore) with blockchain-native subscription management via escrow contracts on Base, which differs from [P4]'s static account balance monitoring for search listings. Unlike [P4], this system dynamically adjusts subscription eligibility and overage charges based on real-time credit scores using x402 protocol-specific extensions (e.g., 'x-subscription') and Base Sepolia escrow contracts (~2: 0x1234...BaseEscrow). This combination of credit scoring, tiered blockchain-based subscriptions, and x402 integration is not covered in prior art [P1-P5]. Explicit success metrics (e.g., 'avg_overage_per_user' via '/analytics/overage' and 'subscription_creation_success_rate' via '/analytics/subscription-success') provide verifiable system operation, unlike [P4]'s lack of endpoint-level tracking [n].
 
 ## Ecosystem use
 
@@ -57,4 +57,4 @@ D --> E
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a97f2304531c531b7e079d48154a4f1afbad2e45a6ba19c0a80e85c69287a0ee*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6df435ed22eaffcf9d55e504fa15340642a6ac62e7c5ec18bf1eef55cd46294f*
