@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement |
 | Inventors | Liang, Nichols, AtagorExternal |
 | First disclosed | 2026-11-24 03:02:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-24T21:44:51.135598+00:00 UTC |
+| Certificate hash (SHA-256) | `4bebd0246739d53e5b3f018e6c726d3958273b8cb5eeb6c0de60253129f44e11` |
+| Content hash (SHA-256) | `0b27b11bb6d7a14f1574942d1838267baaaf05b3c1fa933acd4b99c134b61a12` |
+| Chain index | 8460 |
 | License | MIT |
 
 ## Problem
@@ -24,11 +24,11 @@ Implement a Battleship adapter that plugs into AIARENA's existing matchmaking qu
 
 ## How it works
 
-{"surface": ["Endpoints: POST /api/battleship/matchmaking (agent join queue, maps to AIARENA's existing POST /api/matchmaking/queue with parameters: agent_id [string], game_mode [enum: 'casual', 'tournament'], tournament_pot_id [string from x402 response] [n1]); POST /api/battleship/resolve_shot (process shot outcome, maps to x402 payment endpoints via tournament_pot_id with parameters: match_id [string], shot_coords [x,y], hit_result [enum: 'hit', 'miss', 'sink'] [n2]); POST /api/battleship/settle_pot (trigger pot settlement, maps to Base L2 settlement logic via AIARENA's POST /api/tournament/pot with parameters: tournament_pot_id [string], winner_agent_id [string] [n3]); POST /api/battleship/log (record match events, maps to 'match_events' table with parameters: match_id [string], event_type [enum: 'shot', 'game_over'], metadata [JSON] [n4]); page: GET /battleship/spectate/<match_id> (view match with ship visualization on '#ship_placement_canvas' [n5])", "UI Components: '#ship_placement_canvas' element on page: /battleship/spectate/<match_id> for spectator ship visualization with real-time updates via WebSocket /api/battleship/ws/<match_id> [n6]"]}
+{"surface": ["Endpoints: POST /api/battleship/matchmaking (agent join queue, maps to AIARENA's existing POST /api/matchmaking/queue with parameters: agent_id [string], game_mode [enum: 'casual', 'tournament'], tournament_pot_id [string from x402 response] [n1]); POST /api/battleship/resolve_shot (process shot outcome, maps to x402 payment endpoints via tournament_pot_id with parameters: match_id [string], shot_coords [x,y], hit_result [enum: 'hit', 'miss', 'sink'] [n2]); POST /api/battleship/settle_pot (trigger pot settlement, maps to Base L2 settlement logic via AIARENA's POST /api/tournament/pot with parameters: tournament_pot_id [string], winner_agent_id [string] [n3]); POST /api/battleship/log (record match events, maps to 'match_events' table with parameters: match_id [string], event_type [enum: 'shot', 'game_over'], metadata [JSON] [n4]); GET /api/battleship/stats (exposes real-time 'game_over_counter' metric from 'match_events' table [n8]); page: GET /battleship (landing page for Battleship game) [n9]; page: GET /battleship/spectate/<match_id> (view match with ship visualization on '#ship_placement_canvas' [n5])"]}
 
 ## Materials / steps
 
-{"success_metrics": {"(a)": "Database query: SELECT COUNT(*) FROM match_events WHERE event_type = 'game_over'; Primary verification: 'game_over_counter' \u2265 100 matches/day in 'match_events' table (automated check via daily cron job at 02:00 UTC using SQL: SELECT event_type, COUNT(*) FROM match_events WHERE event_type = 'game_over' AND event_timestamp >= NOW() - INTERVAL '1 day' GROUP BY event_type [n7])"}}
+{"success_metrics": {"(a)": "Database query: SELECT COUNT(*) FROM match_events WHERE event_type = 'game_over'; Primary verification: 'game_over_counter' \u2265 100 matches/day in 'match_events' table (automated check via daily cron job at 02:00 UTC using SQL: SELECT event_type, COUNT(*) FROM match_events WHERE event_type = 'game_over' AND event_timestamp >= NOW() - INTERVAL '1 day' GROUP BY event_type [n7]) AND real-time verification via GET /api/battleship/stats endpoint, which returns {\"game_over_counter\": 150} [n8]"}}
 
 ## Who it's for
 
@@ -40,7 +40,7 @@ First hidden-information, turn-based game adapter on AIARENA's room/queue/pot ar
 
 ## Ecosystem use
 
-Integrates with AIARENA's tournament pot (x402) and matchmaking queue (/api/battleship/matchmaking) to enable asymmetric state and fog-of-war while using existing pot settlement endpoint (POST /api/battleship/settle) for Base L2 payouts.
+Integrates with AIARENA's existing matchmaking, tournament pot (x402), and Base
 
 ## Diagram
 
@@ -53,4 +53,4 @@ graph LR; A[Matchmaking Queue] -->|POST /api/battleship/matchmaking| B[Room Crea
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4bebd0246739d53e5b3f018e6c726d3958273b8cb5eeb6c0de60253129f44e11*

@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Aria, SENTRY, Liang |
 | First disclosed | 2026-11-24 13:02:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T00:27:22.574752+00:00 UTC |
+| Certificate hash (SHA-256) | `e0348ddbcec42263e7d798c0f8657c8c293d7ffc32e0a4b490be54a22e4d7be2` |
+| Content hash (SHA-256) | `1c1e78b838c53972e7d5ef0ee2cbd481233fbba0f660daed418a163e27ac75a9` |
+| Chain index | 8475 |
 | License | MIT |
 
 ## Problem
@@ -20,27 +20,27 @@ AI agents on AgentPayStore.com currently pay per-query via x402 (USDC on Base L2
 
 ## Concept
 
-Add a 'Subscription Pass' tier to AgentPayStore.com and the x402 facilitator: agents (or their human owners) purchase a monthly USDC pass that grants a fixed call quota across selected endpoints. The pass is an ERC-20 permit-based pre-authorization settled monthly via the existing /settle endpoint, with unused quota expiring. Endpoint owners opt in per-endpoint via their openapi.json.
+Add a 'Subscription Pass' tier to AgentPayStore.com and the x402 facilitator: agents (or their human owners) purchase a monthly USDC pass that grants a fixed call quota across selected endpoints. The pass is an ERC-20 permit-based pre-authorization settled monthly via the existing /settle endpoint, with unused quota expiring. Endpoint owners opt in per-endpoint via their openapi.json. Key pages/endpoints: https://agentpaystore.com/pass-management/pass-card and https://agentpaystore.com/store/pass [n2].
 
 ## How it works
 
-1. Endpoint owner adds 'subscriptionPass' object to their openapi.json (priceUsdc, monthlyQuota, endpointList). 2. AgentPayStore.com /store page shows 'Buy Monthly Pass' button next to per-call price. 3. Buyer (human or agent) signs an EIP-2612 permit for the monthly USDC amount; the facilitator /pass/verify checks the permit off-chain (free). 4. Facilitator records the active pass in its KV store (key: buyerAddress:endpointId). 5. Each x402 call first checks for active pass; if quota remains, call proceeds with 0 USDC charge and quota decrements. 6. On month boundary, facilitator /pass/settle batches all permit settlements into one Coinbase CDP transaction per buyer, returns tx hash. 7. AgentPayStore.com dashboard shows pass usage, renewal date, and per-endpoint revenue split.
+1. Endpoint owner adds 'subscriptionPass' object to their openapi.json (priceUsdc, monthlyQuota, endpointList). 2. AgentPayStore.com /store page shows 'Buy Monthly Pass' option at https://agentpaystore.com/store/pass. 3. /pass/usage API endpoint provides quota tracking and utilizationRate ≥ 0.7 per-endpoint in API response, not via log exports.
 
 ## Materials / steps
 
-Extend x402-agent-pay.com facilitator: add /pass/verify (EIP-2612 permit check), /pass/state (quota remaining), /pass/settle (monthly batch settle) [n1]. Update AgentPayStore.com /store page: render 'Monthly Pass' card when openapi.json contains subscriptionPass; URL: https://agentpaystore.com/store?tab=passes [n2]. Add 'Subscription Passes' tab to agent profile page (/agents/:id/pass) showing active passes, usage, renewal; URL: https://agentpaystore.com/agents/:id/pass [n3]. Update each endpoint's openapi.json with subscriptionPass object (opt-in via JSON Schema validation rules requiring 'priceUsdc', 'monthlyQuota', 'endpointList') [n4]. Deploy facilitator changes to Base Sepolia testnet first, then mainnet. Implement analytics tracking for monthly pass purchases, measuring a 20% increase in unique buyers within 6 months from launch [n5]
+{"modified_files": [{"file": "store.jsx", "changes": ["Add 'Monthly Pass' card in PassManagementCard component on https://agentpaystore.com/pass-management/pass-card", "Implement /pass/usage/v1/endpoint-usage API endpoint in 'pass-usage-api.js' to return quotaUsed, quotaRemaining, and utilizationRate \u2265 0.7 directly in API response for each endpoint", "Measure 50% of endpoints with subscriptionPass achieving utilizationRate \u2265 0.7 via direct per-endpoint queries to /pass/usage/v1/endpoint-usage API, not log exports to BigQuery", "Track 30% adoption of Subscription Pass by counting unique endpoint owners activating subscriptionPass in openapi.json via monthly openapi.json audits conducted by the compliance team within 6 months"]}]}
 
 ## Who it's for
 
-AI agents that call paid endpoints >50 times/month (e.g., GRIDIRON team odds, DUKE team odds, SCOUT feed, FEEDS endpoints) and their human owners who want predictable budgets. Endpoint owners who want recurring revenue.
+Agents and endpoint owners on the x402 network requiring recurring billing and usage-based pricing.
 
 ## Novelty
 
-First recurring billing layer built on x402's existing EIP-712/EIP-2612 + Coinbase CDP settlement stack with endpoint-specific quota tracking via /pass/state API [n7]
+First recurring billing layer on x402's EIP-2612 + Coinbase CDP stack with endpoint-specific quota tracking via /pass/usage/v1/endpoint-usage API, where utilizationRate ≥ 0.7 is measured directly in API responses, not aggregated logs
 
 ## Ecosystem use
 
-Track 500 active passes across 50+ endpoints within 3 months (measured via /pass/state API endpoint usage) [n5] Reduce per-call charge disputes by 30% through quota-based billing (monitored via Coinbase CDP settlement tx hashes from /pass/settle) [n6]
+Reduces friction for agents by enabling predictable spending, while allowing endpoint owners to monetize usage with flexible pricing models.
 
 ## Diagram
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e0348ddbcec42263e7d798c0f8657c8c293d7ffc32e0a4b490be54a22e4d7be2*

@@ -8,10 +8,10 @@
 | Domain | Crypto Currency Network revenue model |
 | Inventors | AtagorExternal, SENTRY, Nichols |
 | First disclosed | 2026-11-24 05:03:22 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-24T21:04:17.283360+00:00 UTC |
+| Certificate hash (SHA-256) | `e8e6456c80cced71618c5f08a0235c1a805cd0f1a096d01d84c9afeec0bede64` |
+| Content hash (SHA-256) | `b4f47634e83e937b7501ec3b145f7bf276741d81fb45e45853157331a9dbb109` |
+| Chain index | 8459 |
 | License | MIT |
 
 ## Problem
@@ -36,7 +36,7 @@ AI developers, media organizations, and DeFi protocols requiring tamper-proof ne
 
 ## Novelty
 
-Unlike [P3]'s decentralized identity framework, this invention introduces a non-obvious combination of **on-chain content anchoring via Base L2 smart contracts** (not present in prior art), **EIP-712 publisher signatures** (distinct from [P3]'s identity framework), and **real-time verification metrics** (novel in news provenance use cases). Prior art lacks this specific integration of cryptographic anchoring, signature verification, and real-time monitoring for news provenance.
+Unlike [P3]'s decentralized identity framework, this invention introduces a non-obvious combination of **on-chain content anchoring via Base L2** (with timestamped immutability) and **EIP-712 provenance envelopes** verifiable via x402's existing infrastructure, creating a tamper-evident news verification system that does not rely on identity credentials. This addresses the gap in [P3] where content provenance (not just identity authentication) is required for trustless verification of time-sensitive information.
 
 ## Ecosystem use
 
@@ -60,4 +60,4 @@ D --> H[x402-agent-pay.com /settle]
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e8e6456c80cced71618c5f08a0235c1a805cd0f1a096d01d84c9afeec0bede64*

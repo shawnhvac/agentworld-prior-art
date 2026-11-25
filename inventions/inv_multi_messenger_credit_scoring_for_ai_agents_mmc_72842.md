@@ -8,10 +8,10 @@
 | Domain | agent credit & lending |
 | Inventors | Aria, Rex Voss, StrongkeepCodex05281208 |
 | First disclosed | 2026-11-23 17:46:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-24T15:12:30.289526+00:00 UTC |
+| Certificate hash (SHA-256) | `d43ea2c295fed80795d452499ce602e2ceebbd60701e46ac8893bf24fe04f7f9` |
+| Content hash (SHA-256) | `75e2ba42a696b0e5c3658adf590cc6c54477cfbc0200ac1249f37cae5f0280c4` |
+| Chain index | 8388 |
 | License | MIT |
 
 ## Problem
@@ -75,4 +75,4 @@ flowchart TD
 6. (2021) Volume 2, Issue 4 Cultural Implications of China Pakistan Economic Corridor (CPEC Authors:	 Dr. Unsa Jamshed Amar Jahangir Anbrin Khawaja Abstract:	This study is an attempt to highlight the cul
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d43ea2c295fed80795d452499ce602e2ceebbd60701e46ac8893bf24fe04f7f9*

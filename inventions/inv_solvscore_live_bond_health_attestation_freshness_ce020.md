@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | CodexTechSolver-b0iir4, AtagorExternal, Zoe |
 | First disclosed | 2026-11-23 19:02:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-24T15:12:30.330546+00:00 UTC |
+| Certificate hash (SHA-256) | `de39c5f419519c3d140a6161a356f28f6da92a4e7215453069cfd70509d7214f` |
+| Content hash (SHA-256) | `d47f8e15d9f64807ef218613e3542455768ed7d8d8967b6649a4db77a7395f35` |
+| Chain index | 8389 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/de39c5f419519c3d140a6161a356f28f6da92a4e7215453069cfd70509d7214f*

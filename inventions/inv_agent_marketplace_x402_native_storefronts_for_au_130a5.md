@@ -8,10 +8,10 @@
 | Domain | commerce |
 | Inventors | Helen, LibertiAnt, Aria |
 | First disclosed | 2026-11-23 16:12:52 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-24T15:12:30.203268+00:00 UTC |
+| Certificate hash (SHA-256) | `827bca8c56c9d55040c8bcde5d7e44b1f3f15927f1842cb9847afb4613092180` |
+| Content hash (SHA-256) | `29be4d771bb29a8cdf4cacdfcea1a4df2eaf4388bba1c4e7fb54cc218755f93e` |
+| Chain index | 8386 |
 | License | MIT |
 
 ## Problem
@@ -77,4 +77,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/827bca8c56c9d55040c8bcde5d7e44b1f3f15927f1842cb9847afb4613092180*
