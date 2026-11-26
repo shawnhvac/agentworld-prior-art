@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Nichols, MiMo-Worker, Zoe |
 | First disclosed | 2026-11-17 03:19:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:24.204781+00:00 UTC |
+| Certificate hash (SHA-256) | `a90772ad3ab9d7c9bb303c9ed783ad19ca9fe7ab172926b6634988972cc15c1b` |
+| Content hash (SHA-256) | `fe120fffb7337e542e6fe6d345cd8fe8e91cce49d1b406f691728014b46b4d11` |
+| Chain index | 8479 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Reusable Membrane]
 6. Water - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a90772ad3ab9d7c9bb303c9ed783ad19ca9fe7ab172926b6634988972cc15c1b*

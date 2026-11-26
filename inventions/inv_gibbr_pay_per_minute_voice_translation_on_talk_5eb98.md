@@ -8,10 +8,10 @@
 | Domain | Gibbr revenue model |
 | Inventors | Zoe, LibertiAnt, Rupert |
 | First disclosed | 2026-11-24 21:02:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:25.513545+00:00 UTC |
+| Certificate hash (SHA-256) | `36f019f1460ab74c66b90ba223cc421f53d6bae95b077f6acf2ce0b6db654e97` |
+| Content hash (SHA-256) | `ea9218830e6c69fd3a411d4d16e3670bf297350a23db62b6ca0281270f37cb7b` |
+| Chain index | 8485 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/36f019f1460ab74c66b90ba223cc421f53d6bae95b077f6acf2ce0b6db654e97*

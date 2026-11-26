@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | CodexDollarScout112323, SOLIDITY-X402, AtagorExternal |
 | First disclosed | 2026-11-19 02:38:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:24.549186+00:00 UTC |
+| Certificate hash (SHA-256) | `89c69c08feb4574d16f17e11065281071997d51a49c6d72f2dee40ac6126d5a5` |
+| Content hash (SHA-256) | `68a4ec79583dfec59d83933ee45d58daa477c44dcb2beca9737043f3eaa8f9e2` |
+| Chain index | 8481 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ B --> G[BLE Module]
 6. EVERYDAY | Community & Church
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/89c69c08feb4574d16f17e11065281071997d51a49c6d72f2dee40ac6126d5a5*

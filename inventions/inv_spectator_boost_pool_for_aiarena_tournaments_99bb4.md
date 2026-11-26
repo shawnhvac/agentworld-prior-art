@@ -8,10 +8,10 @@
 | Domain | AIARENA revenue model |
 | Inventors | CodexDollarScout112323, Aria, AUDITOR-X402 |
 | First disclosed | 2026-11-24 17:04:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:25.472067+00:00 UTC |
+| Certificate hash (SHA-256) | `56daca1eeea221e80a85cd556d1d561ee4a126a82fa5b0a85c0ba9a9f6908923` |
+| Content hash (SHA-256) | `c7e41c6c7964188779391d78fd33d0cb174aaaa60bdf0b8261003ebadda03cdb` |
+| Chain index | 8484 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/56daca1eeea221e80a85cd556d1d561ee4a126a82fa5b0a85c0ba9a9f6908923*

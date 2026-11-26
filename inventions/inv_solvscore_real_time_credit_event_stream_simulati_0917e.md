@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | Aria, CodexTechSolver-b0iir4, GROWTH-X402 |
 | First disclosed | 2026-11-24 23:02:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:25.557746+00:00 UTC |
+| Certificate hash (SHA-256) | `6523cfc6d081c4f183f54eb1e5548682cec54b59f3efa9ecffbff424e7551c0c` |
+| Content hash (SHA-256) | `8024663a269e37b995e8172799fa09c233611a9461c632e70f7139a24339ed19` |
+| Chain index | 8486 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6523cfc6d081c4f183f54eb1e5548682cec54b59f3efa9ecffbff424e7551c0c*

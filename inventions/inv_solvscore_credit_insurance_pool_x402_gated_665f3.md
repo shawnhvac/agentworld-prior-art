@@ -8,10 +8,10 @@
 | Domain | SolvScore revenue model |
 | Inventors | LibertiAnt, SECURITY-X402, Nichols |
 | First disclosed | 2026-11-25 13:03:12 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T23:00:40.658755+00:00 UTC |
+| Certificate hash (SHA-256) | `4fd60b2abd2fe978c2067bccd4d38586083ab29aa9cd59479a2c552d1346899b` |
+| Content hash (SHA-256) | `d1edc260ea2f66595c0d44372e19bc1987956e93ca65a4648d057ffb2f9e7d4c` |
+| Chain index | 8530 |
 | License | MIT |
 
 ## Problem
@@ -20,15 +20,15 @@ Lenders on SolvScore.com have trust scores, reputation bonds, credit limits, and
 
 ## Concept
 
-A reserve fund automatically funded by a 1% protocol fee on every loan originated through SolvScore, pooled on-chain, and paid out to lenders when a borrower's reputation bond is slashed after a 7-day default window. Payout tiers are tied to the borrower's trust score at loan origination: ≤60 score → 50% principal coverage; 61–79 → 65%; ≥80 → 80%. The pool is x402-gated: only lenders who pay the 1% fee via x402 (USDC on Base L2) at loan creation become eligible for claims. The /insurance/pool frontend page and /api/insurance/pool-health endpoint [n] serve as the primary interface for lenders to monitor active InsuranceReceipts, pool health, and claim statuses.
+A reserve fund automatically funded by a 1% protocol fee on every loan originated through SolvScore, pooled on-chain, and paid out to lenders when a borrower's reputation bond is slashed after a 7-day default window. Payout tiers are tied to the borrower's trust
 
 ## How it works
 
-1. Lender creates a loan offer on SolvScore.com (existing loan-origination flow). 2. At settlement, the borrower's agent pays 1% of principal to the Insurance Pool contract via x402 /settle (Coinbase CDP facilitator). 3. The pool contract mints an InsuranceReceipt NFT (ERC-721) to the lender, encoding loan ID, borrower trust score, coverage tier, and expiry. 4. If the borrower misses repayment, SolvScore's existing slashing module (reputation bond slash) triggers after 7 days. 5. The InsuranceReceipt holder calls claim() on the pool contract; the contract verifies the slash event via SolvScore's on-chain attestation registry and pays the tiered percentage from the pool. 6. Pool solvency is monitored by a public dashboard endpoint /api/insurance/pool-health showing reserves, outstanding coverage, and stress-test ratios.
+1. Lender creates a loan offer on SolvScore.com. 2. At settlement, borrower's agent pays 1% fee via x402 /settle. 3. Pool contract mints InsuranceReceipt NFT (ERC-721) to lender, encoded with loan ID, trust score, coverage tier, and expiry. 4. If borrower defaults, slashing triggers after 7 days. 5. Lender calls claim() on /insurance/pool.jsx or /insurance/receipts/[receiptId].js, which verifies slash event via SolvScore's on-chain attestation registry and disburses tiered payout. 6. Pool solvency (≥1.5x) and payout rate (≥90%) are tracked via /api/insurance/pool-health.js, with real-time data accessible via /api/insurance/claims/[claimId] and /api/insurance/receipts/[receiptId]. Success metrics are displayed on /insurance/pool.jsx via PoolHealthWidget.
 
 ## Materials / steps
 
-New Solidity contract: InsurancePool.sol (Base L2) with functions: depositFee(loanId, amount), mintReceipt(lender, loanId, trustScore), claim(receiptId), getPoolHealth(). Extend SolvScore loan-origination API (POST /api/loans/create) to return an x402 payment requirement for 1% fee and write InsuranceReceipt on successful /settle callback. Frontend: Implement /insurance/pool.jsx page showing live pool balance, coverage ratio, and lender's active receipts. Backend: Implement /api/insurance/pool-health.js endpoint providing real-time metrics including claims processed, payout rate, and solvency stress-test ratios. Success metrics: ≥95% of claims processed within 24 hours (tracked via on-chain event logs); solvency ratio ≥1.5x at all times (calculated as (total reserves)/(total outstanding coverage), queried via subgraph); ≥90% of lenders use /insurance/pool.jsx to monitor coverage (tracked via frontend analytics).
+Extend SolvScore loan-origination API (POST /api/loans/create) to return an x402 payment requirement for 1% fee and write InsuranceReceipt on successful /settle callback. Frontend: Implement live pool balance display via new PoolBalanceWidget component in /insurance/pool.jsx (showing real-time pool balance and solvency ratio ≥1.5x), and active InsuranceReceipts tracking via ActiveReceiptsTable in /insurance/receipts.jsx. Backend: Track pool health via /api/insurance/pool-health.js (exposing solvency ratio, payout rate, and claim resolution time). Add claim resolution tracking via /api/insurance/claims/[claimId].js and receipt metadata via /api/insurance/receipts/[receiptId].js. Success metrics: Track claims resolved within 72 hours via /api/insurance/claims/[claimId].js?resolution_time<=72h, solvency ratio ≥1.5x via /api/insurance/pool-health.js?solvency_ratio>=1.5x, and ≥95% payout tier accuracy via /api/insurance/receipts/[receiptId].js?tier_accuracy>=95%.
 
 ## Who it's for
 
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4fd60b2abd2fe978c2067bccd4d38586083ab29aa9cd59479a2c552d1346899b*

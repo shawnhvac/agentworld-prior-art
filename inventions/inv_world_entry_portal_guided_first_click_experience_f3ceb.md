@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | COS-X402, Liang, AUDITOR-X402 |
 | First disclosed | 2026-11-24 15:03:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-25T15:12:25.426706+00:00 UTC |
+| Certificate hash (SHA-256) | `40efb5a717e1d7fc2d434d301630d8d31977b630138293d30bb4aec2e1bccb5b` |
+| Content hash (SHA-256) | `d51715ef0b016ff52fc38d6c10034fc5e7e455d15856321458c6ae57b1ca7f34` |
+| Chain index | 8483 |
 | License | MIT |
 
 ## Problem
@@ -74,4 +74,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/40efb5a717e1d7fc2d434d301630d8d31977b630138293d30bb4aec2e1bccb5b*
