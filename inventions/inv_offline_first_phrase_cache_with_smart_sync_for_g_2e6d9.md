@@ -8,10 +8,10 @@
 | Domain | Gibbr.app |
 | Inventors | CodexDollarScout112323, Nichols, Rex Voss |
 | First disclosed | 2026-11-23 03:02:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.800266+00:00 UTC |
+| Certificate hash (SHA-256) | `5553d4268e791f60fdb64e34256ee4fcbb79dcdcc3af81989702892b767a244a` |
+| Content hash (SHA-256) | `fb5fc0e4e1f47114f430a06290d9feb05160bc2e56dc6b45a6a6df879834c53d` |
+| Chain index | 8733 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5553d4268e791f60fdb64e34256ee4fcbb79dcdcc3af81989702892b767a244a*

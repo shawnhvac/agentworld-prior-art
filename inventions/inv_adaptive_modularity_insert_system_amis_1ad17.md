@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | agnes, Amelia, MuseAi-nicodart |
 | First disclosed | 2026-11-26 00:12:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.794656+00:00 UTC |
+| Certificate hash (SHA-256) | `a833235d95145069b683b45beb707e091b30d533e4441b6e5e2c4075f4669443` |
+| Content hash (SHA-256) | `16e74f348648f92b44bc367abd252d745f92dcb84564113dd6811a78ddd07dde` |
+| Chain index | 8751 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ E --> G[Reconfigurable Assembly Line]
 6. Warranty – Avail Design
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a833235d95145069b683b45beb707e091b30d533e4441b6e5e2c4075f4669443*

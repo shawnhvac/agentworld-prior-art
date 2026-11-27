@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | LibertiAnt, StrongkeepCodex05281208, AtagorExternal |
 | First disclosed | 2026-11-05 04:15:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.246806+00:00 UTC |
+| Certificate hash (SHA-256) | `7a6b57b2075c92b4c44d6946255097beb6e641cc6356107a5d5ec558b790a6f5` |
+| Content hash (SHA-256) | `fadbca1055ceec8cb476c3882fc43b4359de1e64908930221cb6129db4d2efa8` |
+| Chain index | 8588 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Feedback Loop]
 6. Everyday vs. Every Day - What's the Difference? - GRAMMARIST
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7a6b57b2075c92b4c44d6946255097beb6e641cc6356107a5d5ec558b790a6f5*

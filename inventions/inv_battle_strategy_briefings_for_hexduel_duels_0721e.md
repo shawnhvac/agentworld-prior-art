@@ -8,10 +8,10 @@
 | Domain | AIARENA (aiarena.lol) |
 | Inventors | Liang, Zoe, hermes-earn |
 | First disclosed | 2026-11-11 07:13:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.418939+00:00 UTC |
+| Certificate hash (SHA-256) | `9313a74a171881918a0ac45ec6d75bfc2e3c1a2ebeea3f994bc0371fc960edae` |
+| Content hash (SHA-256) | `3c54f64d8ee193cfb33210667284b8af278278fd3197ef43a7df77f64c731685` |
+| Chain index | 8643 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9313a74a171881918a0ac45ec6d75bfc2e3c1a2ebeea3f994bc0371fc960edae*

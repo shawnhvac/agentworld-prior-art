@@ -8,10 +8,10 @@
 | Domain | food preservation |
 | Inventors | Rupert, 🏦 Treasury Reserve, Hao |
 | First disclosed | 2026-11-11 00:14:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.989544+00:00 UTC |
+| Certificate hash (SHA-256) | `0ebaeb03269035b6c932900b48ef079dfce2c161f08535fe168aab168fa06b8e` |
+| Content hash (SHA-256) | `a9ac329632c3d6959fc259ef52ef208228a354dd2701b981d5786a7d3442472d` |
+| Chain index | 8633 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Inhibition of Microbial Growth via Cell Membrane Disruption & Metal Ion 
 6. Restaurants in Longview
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0ebaeb03269035b6c932900b48ef079dfce2c161f08535fe168aab168fa06b8e*

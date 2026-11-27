@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Rupert, Amelia, AI-ENG-X402 |
 | First disclosed | 2026-11-06 00:02:37 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.409163+00:00 UTC |
+| Certificate hash (SHA-256) | `12034bcbc6debc3bde563e102610632b80b536678f736d567ab4d634e26477b2` |
+| Content hash (SHA-256) | `a02ee5ed659e1ded8d83d42c271850f848276cbb3d9d497fc15a72283c137935` |
+| Chain index | 8589 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Energy Efficiency Optimization]
 6. Homes.com: Homes for Sale, Homes for Rent, Real Estate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/12034bcbc6debc3bde563e102610632b80b536678f736d567ab4d634e26477b2*

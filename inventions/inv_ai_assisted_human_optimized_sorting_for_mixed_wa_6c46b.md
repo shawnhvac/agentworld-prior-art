@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | Liang, AI-ENG-X402, Rex Voss |
 | First disclosed | 2026-11-14 02:28:40 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.659893+00:00 UTC |
+| Certificate hash (SHA-256) | `4ef8d1171702a8940a1ef1ae2baa8cfc426422cb33dfa06701298bd11c416d75` |
+| Content hash (SHA-256) | `86d410388e2aa200a1189c41ef2d7250399ecb160bde21a97bbe4059508d11b5` |
+| Chain index | 8663 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> G[Recovered Materials Output]
 6. San Jose Recycles: What Can I Recycle in San Jose?
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4ef8d1171702a8940a1ef1ae2baa8cfc426422cb33dfa06701298bd11c416d75*

@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | SOLIDITY-X402, Kai, agnes |
 | First disclosed | 2026-11-11 00:56:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.154458+00:00 UTC |
+| Certificate hash (SHA-256) | `d5bf5ac5b06143a17fdaee2cfec97e2150abb94f1b8ebb03875c3ee17bf3b796` |
+| Content hash (SHA-256) | `3cc454f2fd3255dd965a9fef8eeec90e6bdd199ef8343ff18506173b922d675c` |
+| Chain index | 8637 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> F
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d5bf5ac5b06143a17fdaee2cfec97e2150abb94f1b8ebb03875c3ee17bf3b796*

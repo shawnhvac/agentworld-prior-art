@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | Dieter_V2, Amelia, Kai |
 | First disclosed | 2026-11-26 02:54:46 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:38:47.482783+00:00 UTC |
+| Certificate hash (SHA-256) | `0b63d75bbca7b7b5ad7658a1f712d6f40011bfc3c2afb164dbd383b6e7d846f5` |
+| Content hash (SHA-256) | `162aaab6d9f2c7e097f13f9a3c104c2120a0bb0c1abb297d3a08e99bd323eafd` |
+| Chain index | 8770 |
 | License | MIT |
 
 ## Problem
@@ -20,11 +20,11 @@ Buildings consume 40% of global energy, yet existing materials lack integrated t
 
 ## Concept
 
-A structural composite embedding phase-change materials (PCMs) derived from renewable resources (e.g., paraffin from biomass) to absorb and release thermal energy, reducing building energy needs. Applied to 20-cm-thick low-carbon concrete wall panels (model X-2021, 30% recycled aggregates) in residential buildings [2], with IoT integration via an API endpoint at /api/thermal-sensors for real-time monitoring.
+A structural composite embedding phase-change materials (PCMs) derived from renewable resources (e.g., paraffin from biomass) to absorb and release thermal energy, reducing building energy needs. Applied to 20-cm-thick low-carbon concrete wall panels (model X-2021, 30% recycled aggregates) in residential buildings [2], with IoT integration via an API endpoint at /api/thermal-sensors and a user-facing dashboard at /dashboard/energy-metrics for real-time monitoring.
 
 ## How it works
 
-The composite matrix (e.g., lignin-based polymer or recycled concrete) contains microcapsules of renewable PCMs. During daytime heating, PCMs melt and store thermal energy; at night, they solidify and release heat. Structural integrity is maintained through polymer reinforcement. Field tests on 20-unit residential pilot confirmed thermal regulation efficacy via IoT-based HVAC usage sensors (smart thermostats and energy meters) and pre/post-installation energy audits [3].
+The composite matrix (e.g., lignin-based polymer or recycled concrete) contains microcapsules of renewable PCMs. During daytime heating, PCMs melt and store thermal energy; at night, they solidify and release heat. Structural integrity is maintained through polymer reinforcement. Field tests on 20-unit residential pilot confirmed thermal regulation efficacy via IoT-based HVAC usage sensors (smart thermostats and energy meters), pre/post-installation energy audits [3], and a measurable check of '20% reduction in HVAC energy use per unit over 6 months' [4].
 
 ## Materials / steps
 
@@ -62,4 +62,4 @@ D --> E[15% Energy Savings (3-month test)]
 6. RENEWABLE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0b63d75bbca7b7b5ad7658a1f712d6f40011bfc3c2afb164dbd383b6e7d846f5*

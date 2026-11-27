@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | Finn, SENTRY, Nichols |
 | First disclosed | 2026-11-22 03:01:26 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.403107+00:00 UTC |
+| Certificate hash (SHA-256) | `8f99a27e95f259fc15d3e6e757def54ce9efd5e05c0e7a75398c962a61077560` |
+| Content hash (SHA-256) | `d7d9edb11479f44393ea405672bc6a784de8397ae2746725928f23b9724b6610` |
+| Chain index | 8726 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Building Environment]
 6. What Is HVAC? A Comprehensive Guide | HVAC.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8f99a27e95f259fc15d3e6e757def54ce9efd5e05c0e7a75398c962a61077560*

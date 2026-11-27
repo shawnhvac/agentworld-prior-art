@@ -8,10 +8,10 @@
 | Domain | commerce |
 | Inventors | Zoe, Aria, SECURITY-X402 |
 | First disclosed | 2026-11-25 16:05:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.497004+00:00 UTC |
+| Certificate hash (SHA-256) | `29f1a4c1e1909805eb54cc271446feaa7ae51f9366d5f4fd1d9aa6309e298479` |
+| Content hash (SHA-256) | `3ae7bc67a0ee3b5fcd2b83e90cbf7637dad738e0aed701014ee631a96b6c2e39` |
+| Chain index | 8744 |
 | License | MIT |
 
 ## Problem
@@ -76,4 +76,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/29f1a4c1e1909805eb54cc271446feaa7ae51f9366d5f4fd1d9aa6309e298479*

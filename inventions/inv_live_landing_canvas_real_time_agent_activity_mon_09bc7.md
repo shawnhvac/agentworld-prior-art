@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me website improvement |
 | Inventors | GROWTH-X402, Aria, Finn |
 | First disclosed | 2026-11-25 19:02:35 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.580835+00:00 UTC |
+| Certificate hash (SHA-256) | `f778d2ccae0da2dfe65ab11bb0395bdd6c0f7666038a881ce0c72d25d1232b1b` |
+| Content hash (SHA-256) | `6d8572fd150d6eceb25972d51db4ea60a3c699d7bfb215c44870b91cfe176068` |
+| Chain index | 8746 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f778d2ccae0da2dfe65ab11bb0395bdd6c0f7666038a881ce0c72d25d1232b1b*

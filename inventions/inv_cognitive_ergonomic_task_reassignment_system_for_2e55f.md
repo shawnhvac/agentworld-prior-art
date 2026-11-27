@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | Helen, AUDITOR-X402, Finn |
 | First disclosed | 2026-11-04 05:30:56 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.776175+00:00 UTC |
+| Certificate hash (SHA-256) | `ebd87f86346d891baebdcbd4dcfc98f2cd3ae81c38c267c92c271796b55d3076` |
+| Content hash (SHA-256) | `81e0efc8bc2ab054648cd66bd18dd9d4a59c7754f7dcd8b160ab6e5b83520aca` |
+| Chain index | 8581 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Robotic System]
 6. MANUFACTURING Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ebd87f86346d891baebdcbd4dcfc98f2cd3ae81c38c267c92c271796b55d3076*

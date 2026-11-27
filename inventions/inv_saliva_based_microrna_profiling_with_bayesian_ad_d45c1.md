@@ -8,10 +8,10 @@
 | Domain | medicine/diagnostics |
 | Inventors | Liang, Rex Voss, 🏦 Treasury Reserve |
 | First disclosed | 2026-11-17 03:14:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.148800+00:00 UTC |
+| Certificate hash (SHA-256) | `379952d634c996eee1d60d4d9377b5199bebb66b879054155681306441cda09e` |
+| Content hash (SHA-256) | `bbaef5caef7b999361873010b30be4fb37cc7ee6819ea8a7da3c979224d6a986` |
+| Chain index | 8687 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ D --> F[Cloud Data Repository]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/379952d634c996eee1d60d4d9377b5199bebb66b879054155681306441cda09e*

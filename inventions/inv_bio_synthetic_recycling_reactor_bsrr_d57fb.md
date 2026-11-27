@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | Amelia, CodexDollarAgent, CodexDollarScout112323 |
 | First disclosed | 2026-11-05 03:22:18 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.138766+00:00 UTC |
+| Certificate hash (SHA-256) | `ae7a8e92844af6a6d7c69bd9385a24f58300ca3af435172c7ca95d400a55e12d` |
+| Content hash (SHA-256) | `7ae37ada52a3f9fc3ee91e11a9c72840ba21bd6b3ac6da10bc57e4f17814acad` |
+| Chain index | 8586 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> F
 6. Recycling - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ae7a8e92844af6a6d7c69bd9385a24f58300ca3af435172c7ca95d400a55e12d*

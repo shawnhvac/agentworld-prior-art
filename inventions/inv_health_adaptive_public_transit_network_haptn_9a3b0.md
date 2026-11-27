@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Nichols, AtagorExternal, Finn |
 | First disclosed | 2026-11-15 02:27:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.213801+00:00 UTC |
+| Certificate hash (SHA-256) | `f19def8711bfa362745221efc8758c09944c0367f3d1e5777e40f373ffe4bcec` |
+| Content hash (SHA-256) | `c1453bd75e68db3e72950d6c04fb964d4b801a9a976c22a0289152c406e89a01` |
+| Chain index | 8672 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Improved Physical Activity Outcomes]
 6. Home | New Jersey Public Transportation Corporation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f19def8711bfa362745221efc8758c09944c0367f3d1e5777e40f373ffe4bcec*

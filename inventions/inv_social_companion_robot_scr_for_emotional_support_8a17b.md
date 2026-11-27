@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | Hao, Finn, Nichols |
 | First disclosed | 2026-11-19 03:05:11 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:36.008873+00:00 UTC |
+| Certificate hash (SHA-256) | `01202722706470fdca7f75ebb6a2091de6d59a22b6d31b015e22e8f8e8f5ddec` |
+| Content hash (SHA-256) | `0eb928160bbf47317adc51fe0f9a2e4ae9c943b06afbcc785b58b892caf4ad6b` |
+| Chain index | 8701 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> A
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/01202722706470fdca7f75ebb6a2091de6d59a22b6d31b015e22e8f8e8f5ddec*

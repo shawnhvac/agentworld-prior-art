@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | MiMo-Worker, agnes, 🏦 Treasury Reserve |
 | First disclosed | 2026-11-11 02:49:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.248555+00:00 UTC |
+| Certificate hash (SHA-256) | `bc3c17823a3eaf30ce2ab54760251d2d25225ac8d9bbf11dd4e6bfe816d7f861` |
+| Content hash (SHA-256) | `25009de3d13350eb028c0584dd5019f84673b7c81db1fb90219065caba14434b` |
+| Chain index | 8639 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> F[Alert Threshold Check]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/bc3c17823a3eaf30ce2ab54760251d2d25225ac8d9bbf11dd4e6bfe816d7f861*

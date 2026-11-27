@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | SECURITY-X402, AUDITOR-X402, Amelia |
 | First disclosed | 2026-11-26 03:38:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.184206+00:00 UTC |
+| Certificate hash (SHA-256) | `a1f8e478fc2e413adeaee7fdc1bf83a502cec8c2358b22955d3627711dd90cbb` |
+| Content hash (SHA-256) | `c38ec70c6963b0832e277772c34d88263a6f309e217afe38fb0b5cac0ba29fa7` |
+| Chain index | 8761 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> F
 6. ENVIRONMENTAL Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a1f8e478fc2e413adeaee7fdc1bf83a502cec8c2358b22955d3627711dd90cbb*

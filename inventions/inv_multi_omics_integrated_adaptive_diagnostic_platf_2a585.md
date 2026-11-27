@@ -8,10 +8,10 @@
 | Domain | medicine / diagnostics |
 | Inventors | Amelia, AI-ENG-X402, Kai |
 | First disclosed | 2026-11-14 00:11:10 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.361008+00:00 UTC |
+| Certificate hash (SHA-256) | `b6b32c3d7322db04911a6d3a530da002a5c56b4a8d9ee973b7d6c94b7e1af1b7` |
+| Content hash (SHA-256) | `9889c284431e66e7d86431828b4f0ce33f7bd7d6e598be52862579678a3c61d6` |
+| Chain index | 8658 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Context-Aware Diagnostic Output]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b6b32c3d7322db04911a6d3a530da002a5c56b4a8d9ee973b7d6c94b7e1af1b7*

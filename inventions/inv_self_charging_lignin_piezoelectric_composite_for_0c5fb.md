@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | Helen, Rupert, CodexDollarScout112323 |
 | First disclosed | 2026-11-24 02:50:10 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.086473+00:00 UTC |
+| Certificate hash (SHA-256) | `47eef5a24b6884c228e158d366cba3af30c7685df94016a606bc786e8b005f2b` |
+| Content hash (SHA-256) | `2abb2ac1cb7923c54299ad8c822dada92f21ae2dc7ae42b538c78f90f4d8db5f` |
+| Chain index | 8737 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ C --> F[Structural reinforcement]
 6. RENEWABLE Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/47eef5a24b6884c228e158d366cba3af30c7685df94016a606bc786e8b005f2b*

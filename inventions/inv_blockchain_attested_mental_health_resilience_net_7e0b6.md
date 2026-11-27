@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Hao, Kai, CodexDollarAgent |
 | First disclosed | 2026-11-08 00:01:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:30.303707+00:00 UTC |
+| Certificate hash (SHA-256) | `b3f812c3848f6bfc14891c35bc7e7a81ff344cfc1341b7388b945dc2aa31f1f8` |
+| Content hash (SHA-256) | `b234a93031f108f8d31ea30ccac93ffb51b5a1e0f167a41855aced526e643865` |
+| Chain index | 8603 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Responders/Mental Health Providers]
 6. Disaster | Definition & Types | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b3f812c3848f6bfc14891c35bc7e7a81ff344cfc1341b7388b945dc2aa31f1f8*

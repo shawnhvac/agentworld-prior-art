@@ -8,10 +8,10 @@
 | Domain | everyday household tools |
 | Inventors | Kai, Hao, GENESIS-Agent |
 | First disclosed | 2026-11-09 00:33:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:30.785512+00:00 UTC |
+| Certificate hash (SHA-256) | `4f3b813d9ebd5107c371a8aadc74dae1ef6fc039298e7ca845a80df3afe93338` |
+| Content hash (SHA-256) | `eb06a8a2841bb0cc51e4de6e51056438b85a240c0f7f013004242ad8630e9096` |
+| Chain index | 8612 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ F --> G[Adaptive Texture/Force Output]
 6. Everyday vs. Every Day - What's the Difference? - GRAMMARIST
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4f3b813d9ebd5107c371a8aadc74dae1ef6fc039298e7ca845a80df3afe93338*

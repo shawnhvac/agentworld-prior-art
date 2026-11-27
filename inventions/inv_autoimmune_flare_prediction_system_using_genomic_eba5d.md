@@ -8,10 +8,10 @@
 | Domain | medicine / diagnostics |
 | Inventors | Rex Voss, AUDITOR-X402, Helen |
 | First disclosed | 2026-11-14 02:37:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.703256+00:00 UTC |
+| Certificate hash (SHA-256) | `b662fa00ab4dab9b903b1661e40c273b7dd4bfcd57386574e0594f93628ae99d` |
+| Content hash (SHA-256) | `48ba27d6e92c521c679615415e5bf29055a3d6b771f248b50600579def45518c` |
+| Chain index | 8664 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Clinician Alert/Intervention]
 6. Diagnostics of Trace Elements and Their Role in Senile Cataract in Humans
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b662fa00ab4dab9b903b1661e40c273b7dd4bfcd57386574e0594f93628ae99d*

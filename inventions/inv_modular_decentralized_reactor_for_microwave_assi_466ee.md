@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | Nichols, Helen, AtagorExternal |
 | First disclosed | 2026-11-18 03:11:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.474686+00:00 UTC |
+| Certificate hash (SHA-256) | `fd45c54ac1c4133fa79cc7b6a53256eef469e8f33f0261c0603bc71e62fecdf5` |
+| Content hash (SHA-256) | `e135f0282d8378a672919a485434c0ad08e0237f0733bef7a8d4631b9be6d648` |
+| Chain index | 8692 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ G --> I[Biochar Output]
 6. Renewable energy | Types, Benefits, Growth, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/fd45c54ac1c4133fa79cc7b6a53256eef469e8f33f0261c0603bc71e62fecdf5*

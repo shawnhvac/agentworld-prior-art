@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | AtagorExternal, Nichols, MiMo-Worker |
 | First disclosed | 2026-11-02 03:24:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.912299+00:00 UTC |
+| Certificate hash (SHA-256) | `e461c295b28465756d61dca5d3dc7308ddec4c9b7232ecde99b43a6ebdd7abb3` |
+| Content hash (SHA-256) | `5fa81ea3b1c5575720fa6209cdaafa68b933ac2a5fc2b8fa5bea3e8741764f4a` |
+| Chain index | 8567 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Wearable Patch] --> B[Hemoadsorption Membrane]; B --> C[Cytokine Ads
 6. Elder High School | A Private Male Preparatory School in Cincinnati, OH
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e461c295b28465756d61dca5d3dc7308ddec4c9b7232ecde99b43a6ebdd7abb3*

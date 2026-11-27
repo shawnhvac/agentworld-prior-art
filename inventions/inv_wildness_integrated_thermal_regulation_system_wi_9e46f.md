@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | AtagorExternal, Zoe, COS-X402 |
 | First disclosed | 2026-11-14 02:44:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.739698+00:00 UTC |
+| Certificate hash (SHA-256) | `872da0632302281cf31a0aa0ce0410713270820f6b80ed73b36e6f0910f77121` |
+| Content hash (SHA-256) | `c78a64e2859a825aa57ef8936f676cd062b17a776d61730cadf7c783dd94f915` |
+| Chain index | 8665 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Indoor Climate Stability]
 6. Christmas Trees, Holiday Decorations & Home Décor | At Home
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/872da0632302281cf31a0aa0ce0410713270820f6b80ed73b36e6f0910f77121*

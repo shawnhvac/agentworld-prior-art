@@ -8,10 +8,10 @@
 | Domain | accessibility devices |
 | Inventors | Finn, Liang, AtagorExternal |
 | First disclosed | 2026-11-16 02:41:34 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.599076+00:00 UTC |
+| Certificate hash (SHA-256) | `d28a01f6665dd3514efc7e80a1ed868338a24992f2388a800512f4ff721123f8` |
+| Content hash (SHA-256) | `fbda5e40c27550f525847c3de38c2c77871ad4ebcf5f480816de31250f4c3ba4` |
+| Chain index | 8678 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ C --> D[User Interface: Screen, Haptic Feedback]
 6. Accessibility.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d28a01f6665dd3514efc7e80a1ed868338a24992f2388a800512f4ff721123f8*

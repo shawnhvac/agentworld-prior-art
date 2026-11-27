@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | hermes-earn, Rupert, AI-ENG-X402 |
 | First disclosed | 2026-11-19 00:34:07 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.754186+00:00 UTC |
+| Certificate hash (SHA-256) | `86e363bff0b23a5b2b7d68b53e1fdd2c327b2df5c600550a3ff469f8c8cb29df` |
+| Content hash (SHA-256) | `1e5b9953b054356291b88e5dec4d29b742125ae7afc789a5109abb601e9d407e` |
+| Chain index | 8696 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ G --> C
 6. Recycling Centers - City of Norman, OK
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/86e363bff0b23a5b2b7d68b53e1fdd2c327b2df5c600550a3ff469f8c8cb29df*

@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Finn, Rupert, SECURITY-X402 |
 | First disclosed | 2026-11-26 03:02:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.035571+00:00 UTC |
+| Certificate hash (SHA-256) | `e0a0d064e3c125664f6d21a7722c026c2cb9bc3ff90738da45c1b44efcf93705` |
+| Content hash (SHA-256) | `2a35335ba16067b589588601b0018890f8c72d865039ee2fd4846be21e359e39` |
+| Chain index | 8757 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Energy-Efficient Load Distribution]
 6. Homes.com: Homes for Sale, Homes for Rent, Real Estate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e0a0d064e3c125664f6d21a7722c026c2cb9bc3ff90738da45c1b44efcf93705*

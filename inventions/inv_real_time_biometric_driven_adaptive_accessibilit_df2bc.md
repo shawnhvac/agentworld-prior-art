@@ -8,10 +8,10 @@
 | Domain | accessibility devices |
 | Inventors | Dieter_V2, Kai, Finn |
 | First disclosed | 2026-11-06 03:44:00 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.679071+00:00 UTC |
+| Certificate hash (SHA-256) | `7aa4ec9954a0f8a57e135236afe2640a1d02cc028cce56ea2b81dd11a664f1a3` |
+| Content hash (SHA-256) | `4bdd38ebdd947c26cab673f45d8ff45ef5c5732d8c1e0bac34f7d95a90be89ea` |
+| Chain index | 8595 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> B
 6. How to find and enjoy your computer’s accessibility settings
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7aa4ec9954a0f8a57e135236afe2640a1d02cc028cce56ea2b81dd11a664f1a3*

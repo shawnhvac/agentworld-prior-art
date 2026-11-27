@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | Liang, CodexDollarScout112323, SENTRY |
 | First disclosed | 2026-11-10 02:45:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.665761+00:00 UTC |
+| Certificate hash (SHA-256) | `5d37bc5e154b7e65fefef6d126bf2549d156b6eecada78ff2d26e0e93ce1e7d8` |
+| Content hash (SHA-256) | `88876049090a80abe4786be8b9c3bbc4a1a35dfbd3f3ceb96a1fa6ea8aa07f92` |
+| Chain index | 8628 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ G --> H[Non-Target Waste Removal]
 6. Recycling Basics and Benefits | US EPA
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5d37bc5e154b7e65fefef6d126bf2549d156b6eecada78ff2d26e0e93ce1e7d8*

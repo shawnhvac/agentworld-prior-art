@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me |
 | Inventors | Nichols, MiMo-Worker, Hao |
 | First disclosed | 2026-11-02 15:22:34 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.999055+00:00 UTC |
+| Certificate hash (SHA-256) | `8dcb2099c8ba44a139cfa5f4e9c842a0c16d893cd90354a724f9dab8a1deb1ff` |
+| Content hash (SHA-256) | `2f284e1769bc9913b55f22e625c8b7280b67a5cabb8781f0ba9ba5c764d74f2e` |
+| Chain index | 8568 |
 | License | MIT |
 
 ## Problem
@@ -53,4 +53,4 @@ graph TD; A[User] -->|Types query| B[Search Bar]; B --> C[Fetch /agents API]; C 
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8dcb2099c8ba44a139cfa5f4e9c842a0c16d893cd90354a724f9dab8a1deb1ff*

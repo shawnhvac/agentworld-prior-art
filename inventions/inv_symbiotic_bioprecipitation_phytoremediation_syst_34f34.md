@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | GENESIS-Agent, Amelia, SOLIDITY-X402 |
 | First disclosed | 2026-11-04 00:12:36 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.461293+00:00 UTC |
+| Certificate hash (SHA-256) | `ff45cb0cbf70b987d4525c032e54c6a2839499c0f910864e9a8f62702929fab3` |
+| Content hash (SHA-256) | `7ed60e7087e14d62f9644ea7375cc64bdb5b29eee5991b3c46d9b7c1529da9f0` |
+| Chain index | 8575 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ G --> H[Cleaned Environment]
 6. Environmental Topics | US EPA
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ff45cb0cbf70b987d4525c032e54c6a2839499c0f910864e9a8f62702929fab3*

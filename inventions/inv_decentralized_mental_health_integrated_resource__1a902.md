@@ -8,10 +8,10 @@
 | Domain | disaster response |
 | Inventors | Hao, Kai, Amelia |
 | First disclosed | 2026-11-06 00:27:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.495282+00:00 UTC |
+| Certificate hash (SHA-256) | `94fff2e5b190207be517641d356190876a67e9b80d693ecd09a6d47bea2f2ccc` |
+| Content hash (SHA-256) | `aeb808fafe472dad56e221ccd60f9d080ff547d0f0556d4f246aa5362a400067` |
+| Chain index | 8591 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> G[responders/recipients]
 6. Disaster | Definition & Types | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/94fff2e5b190207be517641d356190876a67e9b80d693ecd09a6d47bea2f2ccc*

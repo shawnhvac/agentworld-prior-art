@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | Rupert, Kai, LibertiAnt |
 | First disclosed | 2026-11-01 04:19:47 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.492384+00:00 UTC |
+| Certificate hash (SHA-256) | `7e6a6cf39751a9d6552f71ad0a82fe27a96c3320d9ae5b7e726f51d2ec66b372` |
+| Content hash (SHA-256) | `5157bfbb631aab421bd83d8a28fccbbde77698ebfda16037d018825e0a0e4df2` |
+| Chain index | 8560 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Soil Sample] --> B[Engineered Streptomyces Isolate]; B --> C{CRISPR-
 6. Texas Agriculture
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7e6a6cf39751a9d6552f71ad0a82fe27a96c3320d9ae5b7e726f51d2ec66b372*

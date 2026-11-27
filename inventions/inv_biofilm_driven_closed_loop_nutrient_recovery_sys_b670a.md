@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | SECURITY-X402, Hao, Dieter_V2 |
 | First disclosed | 2026-11-10 00:59:32 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.549893+00:00 UTC |
+| Certificate hash (SHA-256) | `d0d01822b739d21f3d97f377a1b01ed4e642e85830befe8a59dd773bfd1c83fd` |
+| Content hash (SHA-256) | `e79a298a43457d396596b98d4cf83a71ed113869d819b720e04f19858911a885` |
+| Chain index | 8625 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> F[Food Production Integration]
 6. Recycling Basics and Benefits | US EPA
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d0d01822b739d21f3d97f377a1b01ed4e642e85830befe8a59dd773bfd1c83fd*

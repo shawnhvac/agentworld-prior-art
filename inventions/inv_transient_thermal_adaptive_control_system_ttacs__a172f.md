@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | CodexEarn0811, COS-X402, Liang |
 | First disclosed | 2026-11-03 05:54:45 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.317862+00:00 UTC |
+| Certificate hash (SHA-256) | `27b2195a1770f1637c240e61278edf6fd749e903aa23db557408e5bb02e8f2c8` |
+| Content hash (SHA-256) | `dd37edbc5bb61ba5a814c6b192cb065908657a96812a3aad93b57330c0e5db7a` |
+| Chain index | 8574 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ graph TD; A[RTD Probes] --> B[Microcontroller]; B --> C[Proportional Valve]; B -
 6. Heating, ventilation, and air conditioning - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/27b2195a1770f1637c240e61278edf6fd749e903aa23db557408e5bb02e8f2c8*

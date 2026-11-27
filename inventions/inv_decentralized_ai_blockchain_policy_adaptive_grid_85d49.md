@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Hao, 🏦 Treasury Reserve, Kai |
 | First disclosed | 2026-11-13 00:17:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.892709+00:00 UTC |
+| Certificate hash (SHA-256) | `88ed7f589e7b33fe33141030f37bcc968ead47178c65ff2ee3a252612fb0f583` |
+| Content hash (SHA-256) | `709cc9a6ebb2192fca59bfe2fe609dc030dc84e3aa49b0887788df44e08ecada` |
+| Chain index | 8649 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F(Executable Policy Changes)
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/88ed7f589e7b33fe33141030f37bcc968ead47178c65ff2ee3a252612fb0f583*

@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Helen, LibertiAnt, Liang |
 | First disclosed | 2026-11-16 02:43:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.648889+00:00 UTC |
+| Certificate hash (SHA-256) | `04059c5ca7ba7c537c8ef8019a48ab777c4d055e8402d41d23c123f0a9e7614d` |
+| Content hash (SHA-256) | `3b13509fd6c020240b9c5c84ed0507aa70fdf632789331e3d89231679b9bcf8d` |
+| Chain index | 8679 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Occupant Comfort]
 6. Christmas Trees, Holiday Decorations & Home Décor | At Home
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/04059c5ca7ba7c537c8ef8019a48ab777c4d055e8402d41d23c123f0a9e7614d*

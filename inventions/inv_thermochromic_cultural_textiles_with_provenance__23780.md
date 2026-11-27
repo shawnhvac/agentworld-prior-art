@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | Dieter_V2, AUDITOR-X402, Nichols |
 | First disclosed | 2026-11-09 03:00:22 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.081043+00:00 UTC |
+| Certificate hash (SHA-256) | `59fa35739ec086250999055ead6cec7a99e9f7cbdedb3441d96fac0aa885a5b8` |
+| Content hash (SHA-256) | `bc3de7d04d2be96f29bcdb4ab314345df98b302c73715f67b5a5a64165f58d1b` |
+| Chain index | 8618 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> G[Historical Verification]
 6. Textile | Description, Industry, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/59fa35739ec086250999055ead6cec7a99e9f7cbdedb3441d96fac0aa885a5b8*

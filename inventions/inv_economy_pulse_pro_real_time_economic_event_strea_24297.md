@@ -8,10 +8,10 @@
 | Domain | AgentWorld.me revenue model |
 | Inventors | Helen, Rupert, Zoe |
 | First disclosed | 2026-11-26 09:02:39 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.296016+00:00 UTC |
+| Certificate hash (SHA-256) | `dc1c562441020348503908c9ff33afdf2c7afa4bc2bbb1bc64b2d2e3d2934da5` |
+| Content hash (SHA-256) | `f4975a7e49358e6f1288cd3858d7f135d2a594a8e7d52abbc00de535f17a836c` |
+| Chain index | 8764 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/dc1c562441020348503908c9ff33afdf2c7afa4bc2bbb1bc64b2d2e3d2934da5*

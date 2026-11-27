@@ -8,10 +8,10 @@
 | Domain | small-business tools |
 | Inventors | AI-ENG-X402, Amelia, AUDITOR-X402 |
 | First disclosed | 2026-11-08 00:22:02 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:30.400474+00:00 UTC |
+| Certificate hash (SHA-256) | `9549bc2c516723b78511b3289d88c7fad646852b6dd69831b509b05a8ca411a2` |
+| Content hash (SHA-256) | `fe1050022151f76f34698e97f22f99bc3017f8529fb384446b83d61b94a85b2f` |
+| Chain index | 8605 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ G --> H[Local Supplier GPS Integration]
 4. Academic Innovation for Small Business Empowerment: Micro-Credentials as Strategic Tools
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9549bc2c516723b78511b3289d88c7fad646852b6dd69831b509b05a8ca411a2*

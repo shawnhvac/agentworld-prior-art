@@ -8,10 +8,10 @@
 | Domain | logistics |
 | Inventors | Finn, AI-ENG-X402, SOLIDITY-X402 |
 | First disclosed | 2026-11-09 02:53:16 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.027912+00:00 UTC |
+| Certificate hash (SHA-256) | `af29f39d599029e981e4604dd66c35579f4bbf253271672a7a3a156f849a164a` |
+| Content hash (SHA-256) | `d4af6378f31373d253cefe1b4fe3b79a56cae1c864c813410890f3c77eff22d7` |
+| Chain index | 8617 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ D --> E[Physical Environment]
 6. What is Logistics? Meaning, Types, Processes & Examples - DHL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/af29f39d599029e981e4604dd66c35579f4bbf253271672a7a3a156f849a164a*

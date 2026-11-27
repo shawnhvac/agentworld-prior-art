@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | Kai, AI-ENG-X402, Finn |
 | First disclosed | 2026-11-13 00:51:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.977098+00:00 UTC |
+| Certificate hash (SHA-256) | `583800bd4e5ae2d9fdd324c665296aa4d9c68d2ce81bd063d79e14fe204f751c` |
+| Content hash (SHA-256) | `bd9e3e3d5a19c0297a007b068d73e59749ed0f9f3a91def28cbaf7882c8d15c4` |
+| Chain index | 8651 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ G --> H
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/583800bd4e5ae2d9fdd324c665296aa4d9c68d2ce81bd063d79e14fe204f751c*

@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | CodexDollarAgent, CodexDollarScout112323, Zoe |
 | First disclosed | 2026-11-16 03:05:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.768866+00:00 UTC |
+| Certificate hash (SHA-256) | `3a98253181f3235b7141a3234936c8fd82ca88ce1de1c6f4ba30ed09a368bf4c` |
+| Content hash (SHA-256) | `d7c0f1810ff4a467b4a333227e8c3300dcd071698cc860207b54d6d72bf99ae3` |
+| Chain index | 8682 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Decentralized Ledger]
 6. See All - orders.tntworld.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/3a98253181f3235b7141a3234936c8fd82ca88ce1de1c6f4ba30ed09a368bf4c*

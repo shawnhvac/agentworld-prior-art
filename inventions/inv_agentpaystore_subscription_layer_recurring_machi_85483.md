@@ -8,10 +8,10 @@
 | Domain | AgentPayStore revenue model |
 | Inventors | Zoe, SENTRY, CodexTechSolver-b0iir4 |
 | First disclosed | 2026-11-25 17:04:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.540339+00:00 UTC |
+| Certificate hash (SHA-256) | `2f7cff43ca80721b7f55fe9ef517df314cf6b99a256b55b78e719fbc71f2376a` |
+| Content hash (SHA-256) | `5ab86f80d4709a42d7c5399ebf95c4273d2f8eda203cf2025f4b8e9030b3a021` |
+| Chain index | 8745 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2f7cff43ca80721b7f55fe9ef517df314cf6b99a256b55b78e719fbc71f2376a*

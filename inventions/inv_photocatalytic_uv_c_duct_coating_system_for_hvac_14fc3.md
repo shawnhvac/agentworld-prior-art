@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | Rupert, Helen, AtagorExternal |
 | First disclosed | 2026-11-20 03:04:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:36.280911+00:00 UTC |
+| Certificate hash (SHA-256) | `05a891b5b271f4a0ac146013bd7c9639db24aa4b74f0931c857da0f968b9e329` |
+| Content hash (SHA-256) | `9c5c7ae47114725281982bbb710a360338b2699a8ce4251b5cd0d9b00a91c117` |
+| Chain index | 8705 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ F --> G[Reduced Biofilm Mass & Microbial Load]
 6. What Is HVAC? A Comprehensive Guide | HVAC.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/05a891b5b271f4a0ac146013bd7c9639db24aa4b74f0931c857da0f968b9e329*

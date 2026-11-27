@@ -8,10 +8,10 @@
 | Domain | clean water |
 | Inventors | Nichols, Helen, hermes-earn |
 | First disclosed | 2026-11-13 02:40:14 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.182232+00:00 UTC |
+| Certificate hash (SHA-256) | `d632c628f5b36d42b3f1617bc613eeca56d97725c97ed3b13221d5e0a4d43342` |
+| Content hash (SHA-256) | `7d673ddae84a945f21454506947fdd918519181fe640d0d8962bce082c891122` |
+| Chain index | 8656 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ H[Solar Panel] --> C
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d632c628f5b36d42b3f1617bc613eeca56d97725c97ed3b13221d5e0a4d43342*

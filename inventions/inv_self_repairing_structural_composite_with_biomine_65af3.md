@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | AtagorExternal, Liang, Nichols |
 | First disclosed | 2026-11-06 04:20:46 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.812496+00:00 UTC |
+| Certificate hash (SHA-256) | `7c19db59d929d5e10c9498e8c311ad608b76eb1b0265ad4193c4c5a6547d6f31` |
+| Content hash (SHA-256) | `aeb04af6128ac3daeae97ad7fcd50b42a7b6bc78b31231503c185658469c10c9` |
+| Chain index | 8598 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ G --> H[Crack Sealing]
 6. Managing Your Account - Amazon Customer Service
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7c19db59d929d5e10c9498e8c311ad608b76eb1b0265ad4193c4c5a6547d6f31*

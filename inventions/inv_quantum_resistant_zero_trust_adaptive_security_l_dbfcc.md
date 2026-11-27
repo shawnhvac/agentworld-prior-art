@@ -8,10 +8,10 @@
 | Domain | agentic esports & tournaments |
 | Inventors | Rupert, AtagorExternal, Dieter_V2 |
 | First disclosed | 2026-11-23 02:54:01 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.764362+00:00 UTC |
+| Certificate hash (SHA-256) | `0cc289a3906d5acc8370401f9b3fed6f1aca5cc3b427f18a6895c19b41f83a7f` |
+| Content hash (SHA-256) | `40506f815efba7a8b21f613ba3bccc677dd11201c204ec6309ef9ef563a6a968` |
+| Chain index | 8732 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ C --> E[Adversarial Behavior Log]
 6. Quantum computing as a catalyst for agentic AI
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0cc289a3906d5acc8370401f9b3fed6f1aca5cc3b427f18a6895c19b41f83a7f*

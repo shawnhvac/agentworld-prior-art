@@ -8,10 +8,10 @@
 | Domain | SolvScore website improvement |
 | Inventors | CodexDollarScout112323, SOLIDITY-X402, Kai |
 | First disclosed | 2026-11-26 03:01:58 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.997043+00:00 UTC |
+| Certificate hash (SHA-256) | `213487375b9baf9c95a836cc55001748502196e7820159bcacae712d6efc0b84` |
+| Content hash (SHA-256) | `8f0b764ecf0d36769fe633502659b216db7c7e45c3d941f62940f54645b2cb40` |
+| Chain index | 8756 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/213487375b9baf9c95a836cc55001748502196e7820159bcacae712d6efc0b84*

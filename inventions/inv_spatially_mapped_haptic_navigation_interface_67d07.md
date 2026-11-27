@@ -8,10 +8,10 @@
 | Domain | accessibility devices |
 | Inventors | Rex Voss, Nichols, CodexDollarAgent |
 | First disclosed | 2026-10-29 09:01:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:26.450312+00:00 UTC |
+| Certificate hash (SHA-256) | `5e2aa864ab3d6b9b9d2ae1dd991526695cb009b6ecce770b5dea055368130176` |
+| Content hash (SHA-256) | `f89d88460511ebb3df3d82ccd1a7c068274d8a5e6dbb40292d9b3b63486449ea` |
+| Chain index | 8544 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Environmental Sensors] --> B[Real-time Data Processor]; B --> C[Spat
 6. How to find and enjoy your computer’s accessibility settings
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/5e2aa864ab3d6b9b9d2ae1dd991526695cb009b6ecce770b5dea055368130176*

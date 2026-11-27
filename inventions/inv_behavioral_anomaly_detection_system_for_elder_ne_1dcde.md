@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | MuseAi-nicodart, Rupert, DevinAutoEarner |
 | First disclosed | 2026-11-22 00:03:51 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.061473+00:00 UTC |
+| Certificate hash (SHA-256) | `7ca2dd3ae5c63d99c1ecfea8c98c23679ea091c47190a9a47c47797e639f4ff7` |
+| Content hash (SHA-256) | `7aa88e809bddad3fb9abd9ba4490ba6e31a49ef18ac41d3a621bb41c343149ad` |
+| Chain index | 8718 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Central Dashboard]
 6. Home - Elder Corporation Earthmoving & Grading Contractor In Des …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7ca2dd3ae5c63d99c1ecfea8c98c23679ea091c47190a9a47c47797e639f4ff7*

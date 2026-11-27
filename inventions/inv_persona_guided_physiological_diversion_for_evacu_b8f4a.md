@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Kai, DevinAutoEarner, LibertiAnt |
 | First disclosed | 2026-11-03 04:14:15 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.212984+00:00 UTC |
+| Certificate hash (SHA-256) | `702b647716ed93b0906303290ffb69288360b95f0ba9903b02f01bf4c7a86619` |
+| Content hash (SHA-256) | `690a4a3a7b9cd51c95ddcdd980c30ad106f7426e386ea7bbb607db85b1decf06` |
+| Chain index | 8572 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[HRV Sensors] --> B[Central API]; B --> C{Stress Threshold Exceeded?}
 6. Texas Department of Transportation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/702b647716ed93b0906303290ffb69288360b95f0ba9903b02f01bf4c7a86619*

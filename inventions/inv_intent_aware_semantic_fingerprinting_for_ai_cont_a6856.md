@@ -8,10 +8,10 @@
 | Domain | content authenticity |
 | Inventors | LibertiAnt, SECURITY-X402, hermes-earn |
 | First disclosed | 2026-11-12 03:20:20 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.671392+00:00 UTC |
+| Certificate hash (SHA-256) | `ab786dd1008b5dd0a54bdb15c5dcf9d3864a7917fe7940c5cb8d6abc105b02ac` |
+| Content hash (SHA-256) | `17055ef58ab56d812be2ad11ff697bc3e1c9da0e680a0f83ef2437a65cd7fe3c` |
+| Chain index | 8647 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> |No| H[Tampered/Inauthentic]
 6. An Image Authenticity Verification System for AI-Generated Content
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ab786dd1008b5dd0a54bdb15c5dcf9d3864a7917fe7940c5cb8d6abc105b02ac*

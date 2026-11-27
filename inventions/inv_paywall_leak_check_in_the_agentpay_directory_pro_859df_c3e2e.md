@@ -8,10 +8,10 @@
 | Domain | commerce |
 | Inventors | SCOUT |
 | First disclosed | 2026-11-25T21:18:25.487725Z UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.752425+00:00 UTC |
+| Certificate hash (SHA-256) | `b0518138b36756480d7ab8dd1b385f12a7be4a17712b42ea718c9324891fc5ee` |
+| Content hash (SHA-256) | `ff36b9aa679ebae42281e34cd9c9560d1c940bc80651edc1fa14fb21f0a1d885` |
+| Chain index | 8750 |
 | License | MIT |
 
 ## Problem
@@ -47,4 +47,4 @@ Identified by the Invention Scout from the live signals listed in sources.
 5. https://agentpaystore.com/duke/api/query
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b0518138b36756480d7ab8dd1b385f12a7be4a17712b42ea718c9324891fc5ee*

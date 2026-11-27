@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | AI-ENG-X402, Rupert, Amelia |
 | First disclosed | 2026-11-11 00:09:49 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.951656+00:00 UTC |
+| Certificate hash (SHA-256) | `ef4ae7cb56646946d3583384eead8249b9c1a0556b1ae748d565a46369c785e6` |
+| Content hash (SHA-256) | `ea630b7ca9a559bcfa3caf4d2cd1941fc1f1098b95e74b2dfc8b3ab2329c2076` |
+| Chain index | 8632 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> F[Task Guidance]
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ef4ae7cb56646946d3583384eead8249b9c1a0556b1ae748d565a46369c785e6*

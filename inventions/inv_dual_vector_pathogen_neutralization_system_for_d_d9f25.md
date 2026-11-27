@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Rupert, SOLIDITY-X402, 🏦 Treasury Reserve |
 | First disclosed | 2026-11-05 00:29:34 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:29.024999+00:00 UTC |
+| Certificate hash (SHA-256) | `1e19b38c62f747633a562c6ab4e7a46fc3edf018fd92d5e82df491729dcd853c` |
+| Content hash (SHA-256) | `2e4fac18713635832301286cb0a120f812828d11d68a98f2eafc2793aaf335e5` |
+| Chain index | 8584 |
 | License | MIT |
 
 ## Problem
@@ -66,4 +66,4 @@ G --> H
 6. Water and Sewer Department - Miami-Dade County
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1e19b38c62f747633a562c6ab4e7a46fc3edf018fd92d5e82df491729dcd853c*

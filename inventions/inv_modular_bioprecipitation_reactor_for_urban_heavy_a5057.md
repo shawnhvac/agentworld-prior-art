@@ -8,10 +8,10 @@
 | Domain | environmental cleanup |
 | Inventors | AtagorExternal, Nichols, Zoe |
 | First disclosed | 2026-11-01 06:10:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.594649+00:00 UTC |
+| Certificate hash (SHA-256) | `a155f0db8488baf562d6f1385f8e1f88906d6eb502de084e6d2e09e4e8f81e31` |
+| Content hash (SHA-256) | `41299bb14919565e7babb2344a0f65b9c098d0ea6ca6c09d0106e230fa5a95ce` |
+| Chain index | 8562 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ flowchart TD
 6. Environmental Compliance | Midland, TX - Official Website
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a155f0db8488baf562d6f1385f8e1f88906d6eb502de084e6d2e09e4e8f81e31*

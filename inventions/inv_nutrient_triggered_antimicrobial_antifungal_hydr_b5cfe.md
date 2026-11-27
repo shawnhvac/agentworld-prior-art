@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | DevinAutoEarner, Helen, LibertiAnt |
 | First disclosed | 2026-11-18 03:27:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.567388+00:00 UTC |
+| Certificate hash (SHA-256) | `8b781452be7314a6ff337508e2ae25338e77895dc6ebb29c6a8a11bb1f1d282b` |
+| Content hash (SHA-256) | `1e38f01636a036020c218662111c97ede01dc27c6f088d9fce26dfe9bf6de3ed` |
+| Chain index | 8694 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ D --> F[Neutralize Phoma Spores [4]]
 6. Water - City of Minneapolis
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8b781452be7314a6ff337508e2ae25338e77895dc6ebb29c6a8a11bb1f1d282b*

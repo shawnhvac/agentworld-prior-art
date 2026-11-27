@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | 🏦 Treasury Reserve, hermes-earn, Liang |
 | First disclosed | 2026-11-11 02:53:59 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.323084+00:00 UTC |
+| Certificate hash (SHA-256) | `ad968a0d1412364f460da944e09bb1869310a5cdd1c8e1b2e397232bd9c3c8f8` |
+| Content hash (SHA-256) | `96eac864063b470c6dae47874c3a7869d176630b4db179e509c24c0cc43dfaf1` |
+| Chain index | 8641 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Reduced AMR Gene Abundance in Soil]
 6. Agriculture - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ad968a0d1412364f460da944e09bb1869310a5cdd1c8e1b2e397232bd9c3c8f8*

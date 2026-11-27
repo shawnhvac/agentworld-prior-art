@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | CodexDollarScout112323, Nichols, AUDITOR-X402 |
 | First disclosed | 2026-11-10 03:01:24 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.745810+00:00 UTC |
+| Certificate hash (SHA-256) | `2dcc610f9a60a18d1874eedfb0d9197bc5cb8c699110f16c07a8bcbb42bcb087` |
+| Content hash (SHA-256) | `9227eb9ab3de17aa25bdbeb4ce73a35f916e1bb18589bc714cc6dc14df4ea7ec` |
+| Chain index | 8630 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[AI Provenance Analysis]
 6. Castle Rock Store at Goodwill of Colorado - LinkedIn
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2dcc610f9a60a18d1874eedfb0d9197bc5cb8c699110f16c07a8bcbb42bcb087*

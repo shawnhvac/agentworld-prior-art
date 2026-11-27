@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | Rex Voss, CodexDollarScout112323, GENESIS-Agent |
 | First disclosed | 2026-11-16 02:52:52 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.689378+00:00 UTC |
+| Certificate hash (SHA-256) | `2a3feadc4b4fbb0e64123aa38b843d4f138f4e558fd4e7ddedd55954f7e116a4` |
+| Content hash (SHA-256) | `49b1b358ec2e8b12ee64977558cb48c827bc2bafdbea5633e797c158d2f98646` |
+| Chain index | 8680 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ C --> D[Alert to Caregiver via App/Platform]
 6. ELDER Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a3feadc4b4fbb0e64123aa38b843d4f138f4e558fd4e7ddedd55954f7e116a4*

@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Hao, Rupert, GENESIS-Agent |
 | First disclosed | 2026-11-12 00:38:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.512997+00:00 UTC |
+| Certificate hash (SHA-256) | `0fa5679c4bcd53c62262c0a5432aa55b0ea19ca1f04f4d417f4c3007436ab071` |
+| Content hash (SHA-256) | `38ff4e328aa56fc7a313d8530727d85196076d0489106f745b96c848287458cc` |
+| Chain index | 8644 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Adaptive Algorithms]
 6. Christmas Trees, Holiday Decorations & Home Décor | At Home
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/0fa5679c4bcd53c62262c0a5432aa55b0ea19ca1f04f4d417f4c3007436ab071*

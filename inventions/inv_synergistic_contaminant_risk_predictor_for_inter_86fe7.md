@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | SOLIDITY-X402, Rex Voss, LibertiAnt |
 | First disclosed | 2026-11-09 03:17:27 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.193614+00:00 UTC |
+| Certificate hash (SHA-256) | `23a2ad868c4d965d56316e1f040d097e4e5ce0a3a0b07c3748df1aab7b3def16` |
+| Content hash (SHA-256) | `9cf439ad344a944e8da99423c693e9944980fb73a527bb58ed42aa51bb396cfe` |
+| Chain index | 8620 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Water Sensor] -->|Microbial Load Data| B[AI Model]; C[Food Sensor] -
 6. Water - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/23a2ad868c4d965d56316e1f040d097e4e5ce0a3a0b07c3748df1aab7b3def16*

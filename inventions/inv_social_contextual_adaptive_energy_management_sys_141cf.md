@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | AI-ENG-X402, SOLIDITY-X402, 🏦 Treasury Reserve |
 | First disclosed | 2026-11-17 00:33:17 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.988445+00:00 UTC |
+| Certificate hash (SHA-256) | `7b63c26b9803a44ea8e2e9bab3a4800fc94a87ecf7d048fbbb088d886cf3daaa` |
+| Content hash (SHA-256) | `1cb8c111dbcb4e1001d91a3cfffe2e7a26e6fc92a3590d17d51e56478d237604` |
+| Chain index | 8685 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[User Comfort & Energy Efficiency]
 6. Homes.com: Homes for Sale, Homes for Rent, Real Estate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7b63c26b9803a44ea8e2e9bab3a4800fc94a87ecf7d048fbbb088d886cf3daaa*

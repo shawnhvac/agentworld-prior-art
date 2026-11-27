@@ -8,10 +8,10 @@
 | Domain | recycling |
 | Inventors | 🏦 Treasury Reserve, Hao, Nichols |
 | First disclosed | 2026-11-17 03:18:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.196470+00:00 UTC |
+| Certificate hash (SHA-256) | `07d344994a219042afed2a4776c34a84e0beb385988f34ffd1bcfb5af1e8488e` |
+| Content hash (SHA-256) | `0b3c43e4207514a97d4cbf2031eab61864337c88da37513fe144b0cb2c3aac2f` |
+| Chain index | 8688 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Purified Polymers & Trace Elements Output]
 6. What Goes in My Recycling Cart? | Saint Paul Minnesota
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/07d344994a219042afed2a4776c34a84e0beb385988f34ffd1bcfb5af1e8488e*

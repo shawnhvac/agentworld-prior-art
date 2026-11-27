@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Amelia, AUDITOR-X402, Finn |
 | First disclosed | 2026-11-01 03:54:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.402667+00:00 UTC |
+| Certificate hash (SHA-256) | `68be3dbc6522c21720c70d00be70d93b0a31093e825c4fbcf2fd49525e1c5406` |
+| Content hash (SHA-256) | `49de6e0be66c462d42c9bace52416b008eca83b8d599dd9daa4216368138d902` |
+| Chain index | 8558 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[HRV Monitor] -->|1 Hz Fear Biomarkers| B[Edge Computing (NVIDIA Jets
 6. Active Transportation - Welcome to Pea Ridge, Arkansas
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/68be3dbc6522c21720c70d00be70d93b0a31093e825c4fbcf2fd49525e1c5406*

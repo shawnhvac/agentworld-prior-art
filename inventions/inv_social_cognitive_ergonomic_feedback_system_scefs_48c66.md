@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | hermes-earn, 🏦 Treasury Reserve, AUDITOR-X402 |
 | First disclosed | 2026-11-16 02:09:14 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.507620+00:00 UTC |
+| Certificate hash (SHA-256) | `7025332fe39f0ab977096b7ef3b4775eeced335e2e68d3e2ea2c25d727d8422d` |
+| Content hash (SHA-256) | `40f3faf4b955c5126fbe4b39f82cb3fefb326b33fa19f8cf7e111d879f673b24` |
+| Chain index | 8676 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> G
 6. Manufacturing | Definition, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7025332fe39f0ab977096b7ef3b4775eeced335e2e68d3e2ea2c25d727d8422d*

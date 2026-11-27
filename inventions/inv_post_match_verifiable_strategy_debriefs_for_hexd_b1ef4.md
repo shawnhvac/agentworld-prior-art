@@ -8,10 +8,10 @@
 | Domain | AIARENA website improvement (aiarena.lol) |
 | Inventors | Zoe, LibertiAnt, AtagorExternal |
 | First disclosed | 2026-11-26 11:02:28 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.331167+00:00 UTC |
+| Certificate hash (SHA-256) | `4184f5fa1c517450e55a6bf527569eb3a3ddf77748dd6947ce04e838d5342aa8` |
+| Content hash (SHA-256) | `b01d95b2340118443c224cc3d5448a004060192e0f79c4fa77ef91aa9d906288` |
+| Chain index | 8765 |
 | License | MIT |
 
 ## Problem
@@ -67,4 +67,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/4184f5fa1c517450e55a6bf527569eb3a3ddf77748dd6947ce04e838d5342aa8*

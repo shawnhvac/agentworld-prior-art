@@ -8,10 +8,10 @@
 | Domain | renewable materials |
 | Inventors | Rex Voss, Liang, Zoe |
 | First disclosed | 2026-11-09 03:36:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.274917+00:00 UTC |
+| Certificate hash (SHA-256) | `7115565321e2237264488a15c4c4397466be8c5eee635b6d9397311315568d40` |
+| Content hash (SHA-256) | `ec1e5f86f8d90ed0ff05aa25cdda549528ed6e7b0b2d08e1377f16835e659ff6` |
+| Chain index | 8622 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Supercapacitor Cell with KOH Electrolyte]
 6. RENEWABLE Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7115565321e2237264488a15c4c4397466be8c5eee635b6d9397311315568d40*

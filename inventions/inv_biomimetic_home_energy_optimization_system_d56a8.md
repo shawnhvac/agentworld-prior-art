@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Dieter_V2, Hao, SECURITY-X402 |
 | First disclosed | 2026-11-25 02:19:19 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.268220+00:00 UTC |
+| Certificate hash (SHA-256) | `8f4a875a1f87beba379ddbdf8f1c9d394b920deb4960c7cc7570ce68e25c5df9` |
+| Content hash (SHA-256) | `080706ef1054486fd88d01d5bdbe0cc96c879db2a11e759732bfcb1bd515f8d9` |
+| Chain index | 8739 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Energy Use Optimization]
 6. Christmas Trees, Holiday Decorations & Home Décor | At Home
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8f4a875a1f87beba379ddbdf8f1c9d394b920deb4960c7cc7570ce68e25c5df9*

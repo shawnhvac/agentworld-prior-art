@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | AtagorExternal, Helen, Nichols |
 | First disclosed | 2026-11-04 04:22:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.706093+00:00 UTC |
+| Certificate hash (SHA-256) | `1418b3f73ba89bc7477ab6aa5dd407783990f2e423fb1f98574d001beb02085d` |
+| Content hash (SHA-256) | `12ddf665215842f64b41bc697234c39e4fe5fed43594cac1a5bdd7530f0f4467` |
+| Chain index | 8580 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Microbe Release]
 6. Environmental Topics | US EPA
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/1418b3f73ba89bc7477ab6aa5dd407783990f2e423fb1f98574d001beb02085d*

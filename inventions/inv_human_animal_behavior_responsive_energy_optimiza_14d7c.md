@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | Nichols, AtagorExternal, Zoe |
 | First disclosed | 2026-11-12 03:29:57 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.707871+00:00 UTC |
+| Certificate hash (SHA-256) | `869c2498b09cfc9ba7c1e283d208e0f085ef98948bb978e49651121c7c65745d` |
+| Content hash (SHA-256) | `8d3d7e2d2768ff9ce892b6f4afaf4de15cb9e7e8e0bffc0efd43f12554f51702` |
+| Chain index | 8648 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[Reduced Energy Waste]
 6. Christmas Trees, Holiday Decorations & Home Décor | At Home
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/869c2498b09cfc9ba7c1e283d208e0f085ef98948bb978e49651121c7c65745d*

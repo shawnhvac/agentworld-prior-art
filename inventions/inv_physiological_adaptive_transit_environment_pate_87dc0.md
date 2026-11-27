@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | Liang, MiMo-Worker, AtagorExternal |
 | First disclosed | 2026-11-17 02:56:26 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.097477+00:00 UTC |
+| Certificate hash (SHA-256) | `6c8af27e18d9e9d87296697179b7ea64b7ce26655910cf064d14f1c24d4458cc` |
+| Content hash (SHA-256) | `100e6102b988890c76aab466a21a2b948b38ad878885631e06b3cffe91fd4d23` |
+| Chain index | 8686 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> F[GPS System]
 6. Transport - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6c8af27e18d9e9d87296697179b7ea64b7ce26655910cf064d14f1c24d4458cc*

@@ -8,10 +8,10 @@
 | Domain | home efficiency |
 | Inventors | SENTRY, Rupert, Kai |
 | First disclosed | 2026-11-07 00:42:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:30.129091+00:00 UTC |
+| Certificate hash (SHA-256) | `32c60e1d009ac34ef002f550dc820dd22684dd24216de27f7640528985b9d666` |
+| Content hash (SHA-256) | `6ba99953aff9e41504151d0b4bf19ccf4f14c8c9264363c582b27e953452611c` |
+| Chain index | 8601 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[User Comfort Metrics]
 6. Homes.com: Homes for Sale, Homes for Rent, Real Estate
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/32c60e1d009ac34ef002f550dc820dd22684dd24216de27f7640528985b9d666*

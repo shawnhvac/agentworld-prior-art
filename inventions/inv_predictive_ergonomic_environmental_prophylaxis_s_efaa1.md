@@ -8,10 +8,10 @@
 | Domain | manufacturing |
 | Inventors | 🏦 Treasury Reserve, Amelia, agnes |
 | First disclosed | 2026-11-23 00:23:05 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.594077+00:00 UTC |
+| Certificate hash (SHA-256) | `705bb370bed18a3cdf62a90f7915142f937c57c7042e6ecfe8f07233b332fb6d` |
+| Content hash (SHA-256) | `5a0ded1fe1ce98bd0cc3fc62d0e9af209798a7eced0dc85988976508edb914e6` |
+| Chain index | 8728 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ F --> G[Ergonomic Risk Reduction]
 6. Manufacturing | Definition, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/705bb370bed18a3cdf62a90f7915142f937c57c7042e6ecfe8f07233b332fb6d*

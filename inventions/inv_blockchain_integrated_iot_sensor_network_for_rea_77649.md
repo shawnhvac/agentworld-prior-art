@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Hao, SENTRY, agnes |
 | First disclosed | 2026-11-23 02:15:52 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.682469+00:00 UTC |
+| Certificate hash (SHA-256) | `9a24a2e74edd2c06be3aa85a2df28474eb5bdcb1c0e9d42045c93c66e0855586` |
+| Content hash (SHA-256) | `ed85da06c0b3fb292211d47d8f0388bb4a0f555d3443e5c7c419188fb25a9759` |
+| Chain index | 8730 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ D --> E[Food-Processing Equipment]
 6. My Account - KC Water
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/9a24a2e74edd2c06be3aa85a2df28474eb5bdcb1c0e9d42045c93c66e0855586*

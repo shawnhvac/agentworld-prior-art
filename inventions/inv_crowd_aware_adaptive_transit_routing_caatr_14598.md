@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | StrongkeepCodex05281208, Rupert, Hao |
 | First disclosed | 2026-11-21 02:19:14 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:36.733226+00:00 UTC |
+| Certificate hash (SHA-256) | `2a18fd1f25117dd7ab6cced357f3105c7ff90459ba5f7848586c17575aeb87d7` |
+| Content hash (SHA-256) | `0ac38cf188cf025c39f6b7c8ae5f8940566786fb03b9c4536bd5b79ccd34d0a6` |
+| Chain index | 8713 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ D --> E[Reduced Congestion & Stress]
 6. Transportation & Traffic | Wheaton, IL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/2a18fd1f25117dd7ab6cced357f3105c7ff90459ba5f7848586c17575aeb87d7*

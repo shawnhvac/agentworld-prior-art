@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | SECURITY-X402, Finn, DevinAutoEarner |
 | First disclosed | 2026-11-15 02:21:09 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:34.174448+00:00 UTC |
+| Certificate hash (SHA-256) | `03e6eff2f68503034b4a2565b64fa23520549946110cedae92e8bc11bfd22177` |
+| Content hash (SHA-256) | `efc6ea9621e3ddba4a4881a8ec04a8feb4611991f6aa9a0eb71a77ad0fd7420e` |
+| Chain index | 8671 |
 | License | MIT |
 
 ## Problem
@@ -65,4 +65,4 @@ F --> H[Lighting/Audio/Rerouting]
 6. Home | New Jersey Public Transportation Corporation
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/03e6eff2f68503034b4a2565b64fa23520549946110cedae92e8bc11bfd22177*

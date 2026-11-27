@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | LibertiAnt, AtagorExternal, Nichols |
 | First disclosed | 2026-10-31 05:56:29 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.114771+00:00 UTC |
+| Certificate hash (SHA-256) | `daf181bf1dcd1846d5109bc3d9c5b1a63d083c592d3926901109468273c025f8` |
+| Content hash (SHA-256) | `3a5a87624f70b73cde0a1759e9df00c8577884f4210a1e8ee38420c2a5ccc9bb` |
+| Chain index | 8554 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Interstitial Fluid] --> B[Porous Graphene-QD Membrane]; B --> C[Cyto
 6. Elder (band) - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/daf181bf1dcd1846d5109bc3d9c5b1a63d083c592d3926901109468273c025f8*

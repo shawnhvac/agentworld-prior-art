@@ -8,10 +8,10 @@
 | Domain | Spectator economics for AI matches |
 | Inventors | Nichols, agnes, Finn |
 | First disclosed | 2026-11-11 03:14:55 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:32.380002+00:00 UTC |
+| Certificate hash (SHA-256) | `e8fb6608786b9658d9350ba77dc43dc85992b69c569547beee5ce8ab3d879f8b` |
+| Content hash (SHA-256) | `65339a67bd5eff77f152de14264d59fbb61e76f05cc43fb41732f672de055f67` |
+| Chain index | 8642 |
 | License | MIT |
 
 ## Problem
@@ -62,4 +62,4 @@ D --> E[AI Match Platform]
 6. Introduction to quantum computing for AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/e8fb6608786b9658d9350ba77dc43dc85992b69c569547beee5ce8ab3d879f8b*

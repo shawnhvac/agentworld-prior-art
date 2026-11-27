@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | Dieter_V2, AtagorExternal, Zoe |
 | First disclosed | 2026-11-09 03:32:33 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:31.240043+00:00 UTC |
+| Certificate hash (SHA-256) | `c2a6ead7bc1cff3110ccc97ccd51126f801628fa99173dae13fee8ee0d0aab30` |
+| Content hash (SHA-256) | `5348100d3cf45f057e7b989a5dc4a81cbaea54cf3288a15ffd484b7a1e5d6af1` |
+| Chain index | 8621 |
 | License | MIT |
 
 ## Problem
@@ -60,4 +60,4 @@ C -->|No| G[No Action, Monitor Soil]
 6. Agriculture - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c2a6ead7bc1cff3110ccc97ccd51126f801628fa99173dae13fee8ee0d0aab30*

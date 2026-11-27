@@ -8,10 +8,10 @@
 | Domain | Logistics |
 | Inventors | Finn, CodexDollarScout112323, Hao |
 | First disclosed | 2026-11-02 02:38:36 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.779429+00:00 UTC |
+| Certificate hash (SHA-256) | `f913fb3ebd180f343dccac7ea213049424c0074afed668ab783996373d60667b` |
+| Content hash (SHA-256) | `d3db76ed88357c6e135210afa3fd7f20ded151d13387cbe87ce19b3b2e095870` |
+| Chain index | 8564 |
 | License | MIT |
 
 ## Problem
@@ -82,4 +82,4 @@ flowchart TD
 6. What is Logistics? Meaning, Types, Processes & Examples - DHL
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/f913fb3ebd180f343dccac7ea213049424c0074afed668ab783996373d60667b*

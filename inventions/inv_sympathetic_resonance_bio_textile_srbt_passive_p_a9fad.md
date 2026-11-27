@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | Hao, Dieter_V2, SENTRY |
 | First disclosed | 2026-10-30 04:05:54 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:26.757954+00:00 UTC |
+| Certificate hash (SHA-256) | `a7ad068b576fce830fdb0eef6b7cc36d08a6ecb3c4dcce19f41f995380f2ab1a` |
+| Content hash (SHA-256) | `437aaeed735e9bececc70131b4a347a06824cb607f08eedf86afe9f6816c8be8` |
+| Chain index | 8549 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Human Skin] -->|GSR-induced sweat| B[SRBT Wool Matrix]; B -->|Na+/Cl
 6. Textile | Description, Industry, Types, & Facts | Britannica
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a7ad068b576fce830fdb0eef6b7cc36d08a6ecb3c4dcce19f41f995380f2ab1a*

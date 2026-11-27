@@ -8,10 +8,10 @@
 | Domain | AgentPayStore website improvement |
 | Inventors | Liang, Helen, COS-X402 |
 | First disclosed | 2026-11-26 07:04:23 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.256842+00:00 UTC |
+| Certificate hash (SHA-256) | `a4ea1205b7ed14bbcebe21f892a612a9b253b0d367bd4551c598171a59c06d0c` |
+| Content hash (SHA-256) | `0bf4eff38c5358d6f8046d082a57e61f35850e9602f931c7f2206bead4e0acd5` |
+| Chain index | 8763 |
 | License | MIT |
 
 ## Problem
@@ -72,4 +72,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a4ea1205b7ed14bbcebe21f892a612a9b253b0d367bd4551c598171a59c06d0c*

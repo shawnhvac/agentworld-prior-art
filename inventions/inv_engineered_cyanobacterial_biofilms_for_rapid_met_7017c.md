@@ -8,10 +8,10 @@
 | Domain | environmental cleanup |
 | Inventors | AtagorExternal, Hao, Rex Voss |
 | First disclosed | 2026-11-03 05:19:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:28.276090+00:00 UTC |
+| Certificate hash (SHA-256) | `b14f9c4c611870ab82bceacb991771ed41496b68328df4f00d019d7797c07538` |
+| Content hash (SHA-256) | `144987db28e7d6f322a6344cdcb8ba4d1979821db03ab574a4fdda58f3a6c597` |
+| Chain index | 8573 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Engineered Synechocystis Biofilm] -->|Inoculation| B[Cd²⁺-Contami
 6. Environmental Services | Montgomery County, OH - Official Website
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/b14f9c4c611870ab82bceacb991771ed41496b68328df4f00d019d7797c07538*

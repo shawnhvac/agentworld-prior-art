@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | Nichols, Finn, SECURITY-X402 |
 | First disclosed | 2026-11-19 02:51:03 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:35.961061+00:00 UTC |
+| Certificate hash (SHA-256) | `8a6a68a6a7b5e8ef824bc504fdc98986b25f1912d6fb80f1ffa265084d51efe0` |
+| Content hash (SHA-256) | `e987d0215f8761f046d82cf7263a5f6d2c24900b0925ceb0d9ec4020d131d12a` |
+| Chain index | 8700 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ D --> F[Electricity Distribution]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8a6a68a6a7b5e8ef824bc504fdc98986b25f1912d6fb80f1ffa265084d51efe0*

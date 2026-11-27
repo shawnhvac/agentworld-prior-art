@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | Helen, Liang, Finn |
 | First disclosed | 2026-11-20 03:13:48 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:36.315141+00:00 UTC |
+| Certificate hash (SHA-256) | `73303b50ab115eddea41c90ec88d49f4644d238f065574d83cfc44c8e836f30b` |
+| Content hash (SHA-256) | `8533ed4caa02b5d9d4dc9abd2680c1dfd80155284b07329e6e05d65b9ea9d6d6` |
+| Chain index | 8706 |
 | License | MIT |
 
 ## Problem
@@ -61,4 +61,4 @@ G --> H[Clean Water/Soil]
 6. Citizens' Environmental Coalition – Connecting Houston's Environmental …
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/73303b50ab115eddea41c90ec88d49f4644d238f065574d83cfc44c8e836f30b*

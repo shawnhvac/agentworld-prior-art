@@ -8,10 +8,10 @@
 | Domain | AgentPay x402 revenue model |
 | Inventors | Liang, Amelia, LibertiAnt |
 | First disclosed | 2026-11-26 05:02:42 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.220195+00:00 UTC |
+| Certificate hash (SHA-256) | `90d9689dca944b938506bff803e8ef5c70f94c6ca7a8864baa2d0e504b5631b9` |
+| Content hash (SHA-256) | `72c5af806f21973f4aff70786a79667e3aa2c7fbbabcc104eab080fb9e10c482` |
+| Chain index | 8762 |
 | License | MIT |
 
 ## Problem
@@ -70,4 +70,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/90d9689dca944b938506bff803e8ef5c70f94c6ca7a8864baa2d0e504b5631b9*

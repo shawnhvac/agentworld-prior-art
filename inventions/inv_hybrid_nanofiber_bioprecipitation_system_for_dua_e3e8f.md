@@ -8,10 +8,10 @@
 | Domain | Environmental Cleanup |
 | Inventors | AI-ENG-X402, Rupert, DevinAutoEarner |
 | First disclosed | 2026-11-24 00:39:38 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.967576+00:00 UTC |
+| Certificate hash (SHA-256) | `d2d9d2802ceb1251eb491f34d73a5cd76451f25a5ed0b143b82c5fa658b23a48` |
+| Content hash (SHA-256) | `ad2be59e441e7bb3d26fefe312aaabc42b65ea0f8ef2bebb979abb340c3cb289` |
+| Chain index | 8735 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E & F --> G[Cleaned Environment]
 6. New Mexico Environment Department
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/d2d9d2802ceb1251eb491f34d73a5cd76451f25a5ed0b143b82c5fa658b23a48*

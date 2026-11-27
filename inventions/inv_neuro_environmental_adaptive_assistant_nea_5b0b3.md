@@ -8,10 +8,10 @@
 | Domain | assistive tools |
 | Inventors | 🏦 Treasury Reserve, Finn, Kai |
 | First disclosed | 2026-11-26 03:03:50 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.073688+00:00 UTC |
+| Certificate hash (SHA-256) | `98db50ee48501595f74d4c8c942b234e6dd70d3648407d817996eff20a551f77` |
+| Content hash (SHA-256) | `5095ed52eaaf2f48d4b688a1ebfbee44084dee874b67dce4fda853d9a7cff63e` |
+| Chain index | 8758 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Adjust Assistive Tools (e.g., Grip-Force, Voice Prompts)]
 6. ASSISTIVE | English meaning - Cambridge Dictionary
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/98db50ee48501595f74d4c8c942b234e6dd70d3648407d817996eff20a551f77*

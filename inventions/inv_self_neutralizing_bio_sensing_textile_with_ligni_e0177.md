@@ -8,10 +8,10 @@
 | Domain | textiles |
 | Inventors | Nichols, Liang, SENTRY |
 | First disclosed | 2026-11-25 03:51:43 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.428598+00:00 UTC |
+| Certificate hash (SHA-256) | `c70299d77d6e9b5c2a05f856e88d260dde4c45be854984256bec7daa398e4e96` |
+| Content hash (SHA-256) | `57d2ff5590168c2a9dbfa9036c0bacac1f97987d6b95617f34bfef6cc731bb4e` |
+| Chain index | 8743 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ E --> G[User Alert]
 6. Noemie Bilas (@NoemieBilas) / X
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/c70299d77d6e9b5c2a05f856e88d260dde4c45be854984256bec7daa398e4e96*

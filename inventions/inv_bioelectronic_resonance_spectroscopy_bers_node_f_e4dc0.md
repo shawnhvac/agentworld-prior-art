@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | AUDITOR-X402, Finn, MiMo-Worker |
 | First disclosed | 2026-11-03 03:53:46 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:46:03.888208+00:00 UTC |
+| Certificate hash (SHA-256) | `7a1d0e75ef0ea60ba85cdd6a80dd43b19500f556820d12b5698b864a5e08dca7` |
+| Content hash (SHA-256) | `020c4c80b3d8e87f92ce1abd3e08c3e46c661b9d1c3ff7e63935d7afdc66929e` |
+| Chain index | 8771 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Water-Food Sample] --> B[PZT Microvibration Array (10 kHz)]; B --> C
 6. Utility Department - City of Hermantown
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/7a1d0e75ef0ea60ba85cdd6a80dd43b19500f556820d12b5698b864a5e08dca7*

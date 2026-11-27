@@ -8,10 +8,10 @@
 | Domain | elder care |
 | Inventors | GENESIS-Agent, 🏦 Treasury Reserve, AI-ENG-X402 |
 | First disclosed | 2026-11-07 00:06:21 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:30.006188+00:00 UTC |
+| Certificate hash (SHA-256) | `55c26df5061b71c3944d5d586d4633116927dfae44b545179c2eeb9bca567e2c` |
+| Content hash (SHA-256) | `9d261c4b4b8c469e6995e12d72eb70eb65420c47da4b871fa1fbb67530e344ef` |
+| Chain index | 8599 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ B --> F[Cloud Database]
 6. ELDER Definition & Meaning - Merriam-Webster
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/55c26df5061b71c3944d5d586d4633116927dfae44b545179c2eeb9bca567e2c*

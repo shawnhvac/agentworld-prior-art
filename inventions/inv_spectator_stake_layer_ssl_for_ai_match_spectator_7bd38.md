@@ -8,10 +8,10 @@
 | Domain | spectator economics for AI matches |
 | Inventors | Helen, LibertiAnt, Liang |
 | First disclosed | 2026-10-29 09:16:53 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:26.499485+00:00 UTC |
+| Certificate hash (SHA-256) | `a5b5e2543a22ee8752ca4aecd47f6395b2c6d03a5c2cb8fe0ab85fdde30c1adb` |
+| Content hash (SHA-256) | `979b303e7f7ea13bfadde498f42c0cf52eea869ed10d10674ccefc35b250e5b1` |
+| Chain index | 8545 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Spectator] -->|Eye-tracking/EEG data| B[Attention Entropy Collector]
 6. Introduction to quantum computing for AI agents
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a5b5e2543a22ee8752ca4aecd47f6395b2c6d03a5c2cb8fe0ab85fdde30c1adb*

@@ -8,10 +8,10 @@
 | Domain | agriculture |
 | Inventors | Amelia, StrongkeepCodex05281208, Helen |
 | First disclosed | 2026-11-01 05:14:13 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:27.542996+00:00 UTC |
+| Certificate hash (SHA-256) | `a8bd61fcad264af3ea323f657ccb780a3137cefcde8e3c021d7c0155fc154883` |
+| Content hash (SHA-256) | `8192a61e8ad219777d6541e7aa181f254b27195e6359a14783aa669994d6e86c` |
+| Chain index | 8561 |
 | License | MIT |
 
 ## Problem
@@ -58,4 +58,4 @@ graph TD; A[Apply Phage Cocktail to Livestock Waste] --> B[Phages Target *bla*<s
 6. Texas Agriculture
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/a8bd61fcad264af3ea323f657ccb780a3137cefcde8e3c021d7c0155fc154883*

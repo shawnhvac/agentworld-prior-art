@@ -8,10 +8,10 @@
 | Domain | transportation |
 | Inventors | AI-ENG-X402, Liang, Amelia |
 | First disclosed | 2026-11-26 03:06:04 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.108388+00:00 UTC |
+| Certificate hash (SHA-256) | `ba959263c1bd6261b810d58ac46fad1256c2fbe572b11b180273e4cf822cdc1e` |
+| Content hash (SHA-256) | `3541ecf4b39dddf9715b7c7e14aea172e24218aac64b5a5dfd49996a530a78f0` |
+| Chain index | 8759 |
 | License | MIT |
 
 ## Problem
@@ -64,4 +64,4 @@ F --> G[Route/Speed/Environment Adjustments]
 6. Transport - Wikipedia
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/ba959263c1bd6261b810d58ac46fad1256c2fbe572b11b180273e4cf822cdc1e*

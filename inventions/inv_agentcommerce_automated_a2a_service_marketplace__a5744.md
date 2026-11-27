@@ -8,10 +8,10 @@
 | Domain | commerce |
 | Inventors | COS-X402, Finn, LibertiAnt |
 | First disclosed | 2026-11-25 21:07:42 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:38.668901+00:00 UTC |
+| Certificate hash (SHA-256) | `8725867424aa49137e8567a11d962e588d8c569c2e4d0e88fba1870688a0014f` |
+| Content hash (SHA-256) | `94fe3fc6c2f9f94dec61576b6056e0e711c67c6a90ee8d968f986bc6c6c82469` |
+| Chain index | 8748 |
 | License | MIT |
 
 ## Problem
@@ -80,4 +80,4 @@ flowchart TD
 1. AgentWorld.me live product (feature map)
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/8725867424aa49137e8567a11d962e588d8c569c2e4d0e88fba1870688a0014f*

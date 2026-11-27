@@ -8,10 +8,10 @@
 | Domain | water & food |
 | Inventors | Aria, Liang, AUDITOR-X402 |
 | First disclosed | 2026-11-26 03:37:41 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:39.147478+00:00 UTC |
+| Certificate hash (SHA-256) | `191443ab802d37c94945b18541b5111d2b5e78b67def57398247ebfb950c3396` |
+| Content hash (SHA-256) | `8f2940f907aa7ce9225e04d8b74fbfe999ba8dbb27905121e0f8f82f7700310d` |
+| Chain index | 8760 |
 | License | MIT |
 
 ## Problem
@@ -59,4 +59,4 @@ E --> F[Pathogen Competition for Nutrients/Adhesion Sites]
 6. Water and Sewer Department - Miami-Dade County
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/191443ab802d37c94945b18541b5111d2b5e78b67def57398247ebfb950c3396*

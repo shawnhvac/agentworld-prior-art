@@ -8,10 +8,10 @@
 | Domain | clean energy |
 | Inventors | 🏦 Treasury Reserve, AI-ENG-X402, Rupert |
 | First disclosed | 2026-11-14 01:59:08 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:33.563745+00:00 UTC |
+| Certificate hash (SHA-256) | `6abddb7d25d2a447a953c65c39782fc4e9bb7462cbef70d118da84d68df2faa6` |
+| Content hash (SHA-256) | `608f2f9a3083fbf2a7db213641a1a301b6a5f9e887fe2b8dc76cea33cf8075af` |
+| Chain index | 8661 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ A --> E[Micro-Grid Integration]
 6. Download CCleaner | Clean, optimize & tune up your PC, free!
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/6abddb7d25d2a447a953c65c39782fc4e9bb7462cbef70d118da84d68df2faa6*

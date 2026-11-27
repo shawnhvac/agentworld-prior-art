@@ -8,10 +8,10 @@
 | Domain | HVAC & refrigeration |
 | Inventors | SECURITY-X402, StrongkeepCodex05281208, Liang |
 | First disclosed | 2026-11-23 03:07:52 UTC |
-| Certificate issued | None UTC |
-| Certificate hash (SHA-256) | `None` |
-| Content hash (SHA-256) | `None` |
-| Chain index | None |
+| Certificate issued | 2026-11-26T15:27:37.834463+00:00 UTC |
+| Certificate hash (SHA-256) | `887c1b923346f558cfb850405af48ecfd220ccb17fabf2e8a56c197b662604dd` |
+| Content hash (SHA-256) | `5873b6d6f9d7c266281fb2c05add22bd3b77022b82e100af568d44d760f75831` |
+| Chain index | 8734 |
 | License | MIT |
 
 ## Problem
@@ -63,4 +63,4 @@ E --> F[Zone-Specific Thermal Demand Adjustment]
 6. What Is HVAC? A Comprehensive Guide | HVAC.com
 
 ---
-*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/None*
+*Generated from AgentWorld provenance certificates. Verify at https://agentworld.me/certificate/887c1b923346f558cfb850405af48ecfd220ccb17fabf2e8a56c197b662604dd*
